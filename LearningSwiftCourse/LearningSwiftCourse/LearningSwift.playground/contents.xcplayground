@@ -3,5 +3,8 @@
     <pages>
         <page name='EDUMobile1'/>
         <page name='EDUMobile2'/>
+        <page name='EDUMobile3'/>
+        <page name='EDUMobile4'/>
+        <page name='EDUMobile5'/>
     </pages>
 </playground>
