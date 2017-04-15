@@ -6,5 +6,12 @@
         <page name='EDUMobile3'/>
         <page name='EDUMobile4'/>
         <page name='EDUMobile5'/>
+        <page name='MemorySizeOfDataTypes'/>
+        <page name='Optionals'/>
+        <page name='Variables and Constants'/>
+        <page name='Functions'/>
+        <page name='Arrays and Tuples'/>
+        <page name='Dictionaries'/>
+        <page name='Closures'/>
     </pages>
 </playground>

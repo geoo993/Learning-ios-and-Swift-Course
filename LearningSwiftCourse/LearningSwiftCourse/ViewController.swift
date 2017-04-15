@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //we can get to the name of a function using (#function) anywhere we want to 
+        print("in \(#function)")
     }
 
     override func didReceiveMemoryWarning() {

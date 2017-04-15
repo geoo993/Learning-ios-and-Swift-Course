@@ -13,6 +13,7 @@ let os = "iOS"      //use constants for everything else!
 
 version = 8
 
+
 var fullVersion = os + " " + String(version)
 
 //explicit typing
