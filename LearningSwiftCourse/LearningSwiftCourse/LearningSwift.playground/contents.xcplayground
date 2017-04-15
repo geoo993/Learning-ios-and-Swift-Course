@@ -13,5 +13,18 @@
         <page name='Arrays and Tuples'/>
         <page name='Dictionaries'/>
         <page name='Closures'/>
+        <page name='Enumerations'/>
+        <page name='Structures'/>
+        <page name='Classes'/>
+        <page name='PropertiesAndMethods'/>
+        <page name='GettersAndSetters'/>
+        <page name='Inheritance'/>
+        <page name='UpcastingAndDowncasting'/>
+        <page name='Observables'/>
+        <page name='Observables2'/>
+        <page name='Observables+Scan'/>
+        <page name='Observable+Gestures'/>
+        <page name='MapAndFlatMap'/>
+        <page name='Protocols'/>
     </pages>
 </playground>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered' executeOnSourceChanges='false'>
+    <pages>
+        <page name='Index'/>
+        <page name='apply'/>
+        <page name='cascade'/>
+        <page name='catchErrorJustComplete'/>
+        <page name='distinct'/>
+        <page name='ignore'/>
+        <page name='mapTo'/>
+        <page name='materialize'/>
+        <page name='not'/>
+        <page name='once'/>
+        <page name='pausable'/>
+        <page name='repeatWithBehavior'/>
+        <page name='retryWithBehavior'/>
+        <page name='unwrap'/>
+    </pages>
+</playground>
