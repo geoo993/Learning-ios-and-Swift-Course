@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */; };
-		C72E27A71E9ED9EB0064E01B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27A61E9ED9EB0064E01B /* ViewController.swift */; };
+		C72E27A71E9ED9EB0064E01B /* ColorChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27A61E9ED9EB0064E01B /* ColorChangeViewController.swift */; };
 		C72E27AA1E9ED9EB0064E01B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E27A81E9ED9EB0064E01B /* Main.storyboard */; };
 		C72E27AC1E9ED9EB0064E01B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72E27AB1E9ED9EB0064E01B /* Assets.xcassets */; };
 		C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */; };
@@ -22,6 +22,8 @@
 		C77E83331EA25F4F000AC715 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83001EA25F08000AC715 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C77E83361EA25F4F000AC715 /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; };
 		C77E83371EA25F4F000AC715 /* RxSwiftExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */ = {isa = PBXBuildFile; fileRef = C7C951731EA3E08D005DFE3B /* Architecture.png */; };
+		C7C9518E1EA40DD6005DFE3B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C9518D1EA40DD6005DFE3B /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,7 +266,7 @@
 /* Begin PBXFileReference section */
 		C72E27A11E9ED9EB0064E01B /* LearningSwiftCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningSwiftCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C72E27A61E9ED9EB0064E01B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C72E27A61E9ED9EB0064E01B /* ColorChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangeViewController.swift; sourceTree = "<group>"; };
 		C72E27A91E9ED9EB0064E01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C72E27AB1E9ED9EB0064E01B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C72E27AE1E9ED9EB0064E01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -279,6 +281,8 @@
 		C77E82D61EA25EF5000AC715 /* RxSwiftExt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxSwiftExt.xcodeproj; path = ../Carthage/Checkouts/RxSwiftExt/RxSwiftExt.xcodeproj; sourceTree = "<group>"; };
 		C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = ../Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
 		C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxGesture.xcodeproj; path = ../Carthage/Checkouts/RxGesture/RxGesture/RxGesture.xcodeproj; sourceTree = "<group>"; };
+		C7C951731EA3E08D005DFE3B /* Architecture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Architecture.png; sourceTree = "<group>"; };
+		C7C9518D1EA40DD6005DFE3B /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,12 +339,14 @@
 			isa = PBXGroup;
 			children = (
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
-				C72E27A61E9ED9EB0064E01B /* ViewController.swift */,
+				C7C9518D1EA40DD6005DFE3B /* FirstViewController.swift */,
+				C72E27A61E9ED9EB0064E01B /* ColorChangeViewController.swift */,
 				C72E27A81E9ED9EB0064E01B /* Main.storyboard */,
 				C72E27AB1E9ED9EB0064E01B /* Assets.xcassets */,
 				C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */,
 				C72E27B01E9ED9EB0064E01B /* Info.plist */,
 				C72E27D21E9EDA0C0064E01B /* LearningSwift.playground */,
+				C7C9515B1EA3E022005DFE3B /* Resources */,
 			);
 			path = LearningSwiftCourse;
 			sourceTree = "<group>";
@@ -417,6 +423,14 @@
 				C77E83291EA25F18000AC715 /* RxGesture.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C7C9515B1EA3E022005DFE3B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C7C951731EA3E08D005DFE3B /* Architecture.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -729,6 +743,7 @@
 			files = (
 				C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */,
 				C72E27AC1E9ED9EB0064E01B /* Assets.xcassets in Resources */,
+				C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */,
 				C72E27AA1E9ED9EB0064E01B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,7 +769,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C72E27A71E9ED9EB0064E01B /* ViewController.swift in Sources */,
+				C7C9518E1EA40DD6005DFE3B /* FirstViewController.swift in Sources */,
+				C72E27A71E9ED9EB0064E01B /* ColorChangeViewController.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
