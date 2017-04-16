@@ -20,11 +20,14 @@
         <page name='GettersAndSetters'/>
         <page name='Inheritance'/>
         <page name='UpcastingAndDowncasting'/>
+        <page name='Protocols'/>
         <page name='Observables'/>
         <page name='Observables2'/>
+        <page name='Observables3'/>
         <page name='Observables+Scan'/>
         <page name='Observable+Gestures'/>
-        <page name='MapAndFlatMap'/>
-        <page name='Protocols'/>
+        <page name='FilterMapAndFlatMap'/>
+        <page name='Arrays'/>
+        <page name='WalletExample'/>
     </pages>
 </playground>

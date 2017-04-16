@@ -30,17 +30,24 @@ struct Scalar : Scalable {
 
 struct Matrix1D : Scalable {
     var matrix:[Double]
+    var matrix3x3:[Double]
     
-    init(matrix:[Double]) {
+    init(matrix:[Double], matrix3x3:[Double]) {
         self.matrix = matrix
+        self.matrix3x3 = matrix3x3
     }
     
-    //define a subscript:
+    //define a subscript of self, which is Matrix1D:
     subscript (index:Int) -> Double {
         //read only, get not required:
         return matrix[index]
     }
     
+//    subscript (idx:Int) -> Double {
+//        //read only, get not required:
+//        return matrix3x3[idx]
+//    }
+  
     func scaleBy(value: Double) -> Any {
         var product:[Double] = Array()
         for i in 0 ..< matrix.count {
@@ -48,10 +55,11 @@ struct Matrix1D : Scalable {
         }
         return product
     }
+ 
 }
 
 let myScalar = Scalar(value: 4)
-let myMatrix = Matrix1D(matrix: [1.0, 2.0, 3.0, 4.0])
+let myMatrix = Matrix1D(matrix: [1.0, 2.0, 3.0, 4.0],matrix3x3: [6.0, 7.0])
 
 myScalar.scaleBy(value: 3)
 myMatrix.scaleBy(value: 4)

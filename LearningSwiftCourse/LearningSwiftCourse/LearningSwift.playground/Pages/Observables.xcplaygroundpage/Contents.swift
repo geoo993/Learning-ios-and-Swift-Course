@@ -11,10 +11,7 @@ import RxSwift
 //subcribe always come last after all the tranformation given to a subscription
 //observable sequences can be created using arrays, dictionairies, list , sets etc... 
 //you can create observable sequences by simply adding -toObservable() - next to any sequence i.e array, set , dictionary etc...
-//filter always takes a closure i.e {}, its argumenet is based on the element of the sequence (i.e. string, int). the filter takes the element of the sequence and retuns a bool based on the argument of the filter
-//map mainly transforms elements
-//flatmap does the tranformation of observables sequences
-// DoOn, DoOnNext and SubscribeNext are side effect function, were to want to pass on instructions
+
 //https://blog.autsoft.hu/rxswift-on-ios-where-to-start-the-adventure/
 //https://libraries.io/carthage/ReactiveX%2FRxSwift/3.0.1@swift-3
 //use rx marbels http://rxmarbles.com/
@@ -174,3 +171,31 @@ let arr = Observable.from([1,2,3,4,5,6])
     }) { () -> Void in
         // We disposed this subscription
 }
+
+
+
+//VARIABLES
+let x = Variable(2)
+let y = Variable(3)
+
+let g = Variable(6.7)
+let h = Variable("7.6")
+
+let z =  
+    Observable
+        .combineLatest( x.asObservable(), y.asObservable()) { $0 + $1 }
+
+z.subscribe(onNext: { $0
+    print("z = \($0)") 
+})
+
+x.value = 3
+y.value = 10
+
+let j = Observable.combineLatest(g.asObservable(), h.asObservable()) { $0 + Double($1)! }
+
+
+j.subscribe(onNext: { $0
+    print("j = \($0)")
+})
+
