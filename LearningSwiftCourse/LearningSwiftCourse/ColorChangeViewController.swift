@@ -14,13 +14,11 @@ class ColorChangeViewController: UIViewController {
         dismiss(animated: true) { 
             print("view controller dismissed")
         }
-        
     }
     
     
     @IBOutlet weak var colorView: UIView!
     var colorViewText : String!
-    
     
     var colorViewDuplicate : UIView!
     
@@ -84,6 +82,14 @@ class ColorChangeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("view did appear")
+        
+        let label = UILabel(frame: CGRect(x: 0,y:0, width: 200, height: 30))
+        label.text = colorViewText
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.textColor = UIColor.white
+        colorView.addSubview(label)
+        label.center = CGPoint(x:colorView.frame.width / 2, y: colorView.frame.height / 2)
     }
     
     //will be called every time thte view is displayed
@@ -91,17 +97,10 @@ class ColorChangeViewController: UIViewController {
         super.viewWillAppear(animated)
         print("view will appear")
         
-        let label = UILabel(frame: CGRect(x: 0,y:0, width: 200, height: 30))
-        label.text = colorViewText
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.textColor = UIColor.white
-        label.center = CGPoint(x:colorView.frame.width / 2, y: colorView.frame.height / 2)
-        colorView.addSubview(label)
-        
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        
         print("view did disappear")
     }
     override func viewWillDisappear(_ animated: Bool) {

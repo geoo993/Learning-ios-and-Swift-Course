@@ -8,11 +8,50 @@
 
 import UIKit
 
-class RootViewController: UIViewController {
+class RootViewController: UIViewController, UITextViewDelegate  {
 
+    
+    @IBAction func homeBarItem(_ sender: UIBarButtonItem) {
+        
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+        
+    }
+    
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    @IBOutlet weak var showDetailButton: UIButton!
+    
+    @IBOutlet weak var buttonDone: UIButton!
+    
+    @IBAction func dismissKeyboard(_ sender: UIButton) {
+        
+        textView.resignFirstResponder()
+        
+        //disable done button again
+        sender.isEnabled = false
+        
+        //re-enable the show detail button
+        showDetailButton.isEnabled = true
+        
+        //downcast
+        let navController = navigationController as! NavigationViewController
+        navController.model.enteredString = textView.text
+        print(navController.model.enteredString)
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        buttonDone.isEnabled = true
+        showDetailButton.isEnabled = false
+        print("entered editing mode")
+    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        textView.text = ""
+        textView.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -33,45 +72,20 @@ class RootViewController: UIViewController {
     */
     
     func hideRemoveNavigationbarItems(){
-//        self.navigationController?.isNavigationBarHidden = true
-//        self.navigationItem.title = ""
-//        self.navigationItem.rightBarButtonItem?.title = ""
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationItem.title = ""
+        self.navigationItem.rightBarButtonItem?.title = ""
         
     }
-    func setupNavigationbarItems(){
+    func enableNavigationbarItems(){
         
-        //self.navigationController?.isNavigationBarHidden = false
-        
-        //self.navigationController?.navigationBar.backgroundColor = UIColor.white
-        //self.navigationController?.navigationBar.barTintColor = UIColor.white
-        //self.navigationController?.navigationBar.isOpaque = true
-        
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-//        self.navigationController?.navigationBar.isTranslucent = true
-//        self.navigationController?.view.backgroundColor = UIColor.clear
-//        
-//        
-//        self.navigationItem.hidesBackButton = true
-//        self.navigationItem.backBarButtonItem?.isEnabled = false
-//        
-//        self.navigationItem.title = "Games"
-//        //self.navigationItem.titleView = UIImageView(image: UIImage(named: ""))
-//        
-//        //Barbutton with text
-//        self.navigationItem.rightBarButtonItem = nil
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Back To Reading", style: .plain, target: self, action: #selector(rightMenuButtonTapped(sender:)))
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.title = "Red View"
         
     }
-    
-    func rightMenuButtonTapped(sender: UIBarButtonItem) {
-        print("\nRight Navigation Bar Item tapped")
-        //self.navigationController?.popToRootViewController(animated: true)  
-//        hideRemoveNavigationbarItems()
-//        backToPage = true
-//        if let navController = self.navigationController {
-//            navController.popViewController(animated: true)
-//        }
+  
+    deinit {
+        print("Navigation controller is \(#function)")
     }
 
 }

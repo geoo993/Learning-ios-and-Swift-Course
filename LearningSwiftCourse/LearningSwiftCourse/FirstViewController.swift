@@ -10,6 +10,15 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBAction func homeButton(_ sender: UIButton) {
+        if let nav = self.navigationController {
+            nav.popViewController(animated: true)
+        } else {
+            dismiss(animated: true) { 
+                print("view controller dismissed, now going to home page")
+            }
+        }
+    }
     
     @IBOutlet weak var textField: UITextField!
     
@@ -43,6 +52,10 @@ class FirstViewController: UIViewController {
              }
         }
      
+    }
+    
+    deinit {
+        print("Colors View controller is \(#function)")
     }
     
 

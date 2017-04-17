@@ -61,6 +61,10 @@ class MetricViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
+    deinit {
+        print("Metric View controller is \(#function)")
+    }
+    
     /*
     // MARK: - Navigation
 

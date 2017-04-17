@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Model {
+class TabBarModel {
     
     var inches:Double
     
@@ -33,6 +33,6 @@ class Model {
     }
     
     deinit {
-        print("Exiting Model \(#function)")
+        print("Exiting Tab Bar Model \(#function)")
     }
 }

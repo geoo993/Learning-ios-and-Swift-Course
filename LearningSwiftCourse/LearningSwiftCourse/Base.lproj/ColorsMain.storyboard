@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="V4r-6z-OC5">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,35 +13,46 @@
         <!--First View Controller-->
         <scene sceneID="ypZ-6k-gOq">
             <objects>
-                <viewController id="V4r-6z-OC5" customClass="FirstViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="V4r-6z-OC5" customClass="FirstViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h9f-7n-iBM"/>
                         <viewControllerLayoutGuide type="bottom" id="bER-hZ-eg7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="31Q-B0-dy1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f83-bD-whk">
-                                <rect key="frame" x="86" y="89" width="203" height="30"/>
+                                <rect key="frame" x="56" y="89" width="208" height="30"/>
                                 <state key="normal" title="Show Colors View Controller"/>
                                 <connections>
                                     <segue destination="I78-ae-Wbm" kind="show" identifier="toColorsViewControllerSegue" id="44N-L6-BpE"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Something" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ilF-1Q-2nD">
-                                <rect key="frame" x="123.5" y="318" width="128.5" height="30"/>
+                                <rect key="frame" x="95.5" y="269" width="129" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WK-mj-pqI">
+                                <rect key="frame" x="116" y="518" width="88" height="30"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="homeButton:" destination="V4r-6z-OC5" eventType="touchUpInside" id="iqf-8C-90z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0WK-mj-pqI" firstAttribute="centerX" secondItem="31Q-B0-dy1" secondAttribute="centerX" id="1gD-FU-agU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0WK-mj-pqI" secondAttribute="trailing" constant="100" id="8QU-u6-It5"/>
                             <constraint firstItem="f83-bD-whk" firstAttribute="centerX" secondItem="31Q-B0-dy1" secondAttribute="centerX" id="LCn-UZ-fnZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="f83-bD-whk" secondAttribute="trailing" constant="70" id="Xp3-AH-eVS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f83-bD-whk" secondAttribute="trailing" constant="40" id="Xp3-AH-eVS"/>
+                            <constraint firstItem="0WK-mj-pqI" firstAttribute="leading" secondItem="31Q-B0-dy1" secondAttribute="leadingMargin" constant="100" id="Zse-VZ-Ftv"/>
+                            <constraint firstItem="bER-hZ-eg7" firstAttribute="top" secondItem="0WK-mj-pqI" secondAttribute="bottom" constant="20" id="cLy-hC-4Oz"/>
                             <constraint firstItem="f83-bD-whk" firstAttribute="top" secondItem="h9f-7n-iBM" secondAttribute="bottom" constant="69" id="dch-Qc-GnP"/>
-                            <constraint firstItem="f83-bD-whk" firstAttribute="leading" secondItem="31Q-B0-dy1" secondAttribute="leadingMargin" constant="70" id="eKu-Jz-RE3"/>
+                            <constraint firstItem="f83-bD-whk" firstAttribute="leading" secondItem="31Q-B0-dy1" secondAttribute="leadingMargin" constant="40" id="eKu-Jz-RE3"/>
                             <constraint firstItem="ilF-1Q-2nD" firstAttribute="centerY" secondItem="31Q-B0-dy1" secondAttribute="centerY" id="tgp-3T-xEk"/>
                             <constraint firstItem="ilF-1Q-2nD" firstAttribute="centerX" secondItem="31Q-B0-dy1" secondAttribute="centerX" id="z2H-Uo-ORf"/>
                         </constraints>
@@ -57,21 +68,21 @@
         <!--Color Change View Controller-->
         <scene sceneID="3Ob-uZ-L49">
             <objects>
-                <viewController id="I78-ae-Wbm" customClass="ColorChangeViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ColorChangeViewController" id="I78-ae-Wbm" customClass="ColorChangeViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IeR-qG-3Ge"/>
                         <viewControllerLayoutGuide type="bottom" id="Xer-ca-awx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xh9-3K-Bvh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sz2-f1-KAo">
-                                <rect key="frame" x="86" y="233" width="202" height="200"/>
+                                <rect key="frame" x="56" y="233" width="208" height="102"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yDK-En-OHJ">
-                                <rect key="frame" x="86" y="120" width="203" height="29"/>
+                                <rect key="frame" x="56" y="120" width="208" height="29"/>
                                 <segments>
                                     <segment title="Red"/>
                                     <segment title="Green"/>
@@ -81,16 +92,15 @@
                                     <action selector="changeColor:" destination="I78-ae-Wbm" eventType="valueChanged" id="oYZ-TK-VIj"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mp4-xy-X60">
-                                <rect key="frame" x="164" y="598" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mp4-xy-X60">
+                                <rect key="frame" x="116" y="518" width="88" height="30"/>
                                 <state key="normal" title="Show"/>
                                 <connections>
                                     <action selector="showHide:" destination="I78-ae-Wbm" eventType="touchUpInside" id="0a9-Ca-P6o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOH-IV-lKU">
-                                <rect key="frame" x="171" y="20" width="32" height="30"/>
+                                <rect key="frame" x="144" y="20" width="32" height="30"/>
                                 <state key="normal" title="EXIT"/>
                                 <connections>
                                     <action selector="exitButton:" destination="I78-ae-Wbm" eventType="touchUpInside" id="moM-bh-y5Q"/>
@@ -100,14 +110,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sz2-f1-KAo" firstAttribute="centerX" secondItem="Xh9-3K-Bvh" secondAttribute="centerX" id="6h4-GV-ONQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yDK-En-OHJ" secondAttribute="trailing" constant="70" id="A9D-qe-c9i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yDK-En-OHJ" secondAttribute="trailing" constant="40" id="A9D-qe-c9i"/>
+                            <constraint firstItem="Mp4-xy-X60" firstAttribute="leading" secondItem="Xh9-3K-Bvh" secondAttribute="leadingMargin" constant="100" id="D2B-kA-UHb"/>
                             <constraint firstItem="sz2-f1-KAo" firstAttribute="top" secondItem="IeR-qG-3Ge" secondAttribute="bottom" constant="213" id="D2c-Ux-EQk"/>
                             <constraint firstItem="sz2-f1-KAo" firstAttribute="centerY" secondItem="Xh9-3K-Bvh" secondAttribute="centerY" id="NpI-wi-Hxj"/>
                             <constraint firstItem="fOH-IV-lKU" firstAttribute="centerX" secondItem="Xh9-3K-Bvh" secondAttribute="centerX" id="P8W-uP-dJa"/>
                             <constraint firstItem="fOH-IV-lKU" firstAttribute="top" secondItem="IeR-qG-3Ge" secondAttribute="bottom" id="S7A-BF-l9t"/>
-                            <constraint firstItem="yDK-En-OHJ" firstAttribute="leading" secondItem="Xh9-3K-Bvh" secondAttribute="leadingMargin" constant="70" id="asg-Cl-hGu"/>
-                            <constraint firstItem="sz2-f1-KAo" firstAttribute="leading" secondItem="Xh9-3K-Bvh" secondAttribute="leadingMargin" constant="70" id="eeF-dp-fAo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mp4-xy-X60" secondAttribute="trailing" constant="100" id="SoL-SE-i39"/>
+                            <constraint firstItem="yDK-En-OHJ" firstAttribute="leading" secondItem="Xh9-3K-Bvh" secondAttribute="leadingMargin" constant="40" id="asg-Cl-hGu"/>
+                            <constraint firstItem="Mp4-xy-X60" firstAttribute="centerX" secondItem="Xh9-3K-Bvh" secondAttribute="centerX" id="dN7-CE-pFw"/>
+                            <constraint firstItem="sz2-f1-KAo" firstAttribute="leading" secondItem="Xh9-3K-Bvh" secondAttribute="leadingMargin" constant="40" id="eeF-dp-fAo"/>
                             <constraint firstItem="yDK-En-OHJ" firstAttribute="top" secondItem="IeR-qG-3Ge" secondAttribute="bottom" constant="100" id="elN-g7-LPy"/>
+                            <constraint firstItem="Xer-ca-awx" firstAttribute="top" secondItem="Mp4-xy-X60" secondAttribute="bottom" constant="20" id="jIQ-lD-Ff0"/>
                         </constraints>
                     </view>
                     <connections>

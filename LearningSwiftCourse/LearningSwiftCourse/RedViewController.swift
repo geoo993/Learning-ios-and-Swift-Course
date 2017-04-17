@@ -10,6 +10,31 @@ import UIKit
 
 class RedViewController: UIViewController {
 
+    @IBOutlet weak var charactersLabel: UILabel!
+    
+    @IBOutlet weak var wordsLabel: UILabel!
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //downcasting and getting the data from the navigation controller's model:
+        let navController = navigationController as! NavigationViewController
+        charactersLabel.text = "\(navController.model.numLetters())"
+        wordsLabel.text = "\(navController.model.numWords())"
+        
+        displayIndex(navController.model.index())
+    }
+    
+    func displayIndex(_ index: [String:Int] ){
+        var textViewIndexString:String = ""
+        for word in index.keys {
+            textViewIndexString += "\(word) : \(index[word]!)\n"
+        }
+        textView.text = textViewIndexString
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Red View"

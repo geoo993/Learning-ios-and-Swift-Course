@@ -28,8 +28,24 @@
 		C77E83331EA25F4F000AC715 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83001EA25F08000AC715 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C77E83361EA25F4F000AC715 /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; };
 		C77E83371EA25F4F000AC715 /* RxSwiftExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C7AE47ED1EA4FCE600C2096E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE47EC1EA4FCE600C2096E /* Model.swift */; };
+		C7AE47ED1EA4FCE600C2096E /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE47EC1EA4FCE600C2096E /* TabBarModel.swift */; };
 		C7AE48041EA4FE7D00C2096E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48031EA4FE7D00C2096E /* TabBarViewController.swift */; };
+		C7AE48061EA51E8600C2096E /* NavBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48051EA51E8600C2096E /* NavBarModel.swift */; };
+		C7AE48901EA5327300C2096E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AE488F1EA5327300C2096E /* Main.storyboard */; };
+		C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48911EA5328B00C2096E /* MainViewController.swift */; };
+		C7AE489E1EA54D6B00C2096E /* MediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE489D1EA54D6B00C2096E /* MediaTableViewController.swift */; };
+		C7AE48A01EA5500600C2096E /* TableViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AE489F1EA5500600C2096E /* TableViewMain.storyboard */; };
+		C7AE48A21EA5509B00C2096E /* TableViewNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48A11EA5509B00C2096E /* TableViewNavigationViewController.swift */; };
+		C7AE48A61EA5531A00C2096E /* ChosenMediaDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48A31EA5531A00C2096E /* ChosenMediaDetailedViewController.swift */; };
+		C7AE48A71EA5531A00C2096E /* ChosenMediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48A41EA5531A00C2096E /* ChosenMediaTableViewController.swift */; };
+		C7AE48AF1EA5550B00C2096E /* MediaLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48AA1EA5550B00C2096E /* MediaLayers.swift */; };
+		C7AE48B01EA5550B00C2096E /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48AB1EA5550B00C2096E /* MediaTableViewCell.swift */; };
+		C7AE48B11EA5550B00C2096E /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48AC1EA5550B00C2096E /* MediaType.swift */; };
+		C7AE48B21EA5550B00C2096E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48AD1EA5550B00C2096E /* Product.swift */; };
+		C7AE48B31EA5550B00C2096E /* ProductLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48AE1EA5550B00C2096E /* ProductLine.swift */; };
+		C7AE48D51EA563A400C2096E /* Math+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48D21EA563A400C2096E /* Math+Ext.swift */; };
+		C7AE48D61EA563A400C2096E /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48D31EA563A400C2096E /* UIImage+Ext.swift */; };
+		C7AE48D71EA563A400C2096E /* UIKit+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48D41EA563A400C2096E /* UIKit+Ext.swift */; };
 		C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */ = {isa = PBXBuildFile; fileRef = C7C951731EA3E08D005DFE3B /* Architecture.png */; };
 		C7C9518E1EA40DD6005DFE3B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C9518D1EA40DD6005DFE3B /* FirstViewController.swift */; };
 		C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */; };
@@ -296,8 +312,24 @@
 		C77E82D61EA25EF5000AC715 /* RxSwiftExt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxSwiftExt.xcodeproj; path = ../Carthage/Checkouts/RxSwiftExt/RxSwiftExt.xcodeproj; sourceTree = "<group>"; };
 		C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = ../Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
 		C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxGesture.xcodeproj; path = ../Carthage/Checkouts/RxGesture/RxGesture/RxGesture.xcodeproj; sourceTree = "<group>"; };
-		C7AE47EC1EA4FCE600C2096E /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C7AE47EC1EA4FCE600C2096E /* TabBarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		C7AE48031EA4FE7D00C2096E /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		C7AE48051EA51E8600C2096E /* NavBarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarModel.swift; sourceTree = "<group>"; };
+		C7AE488F1EA5327300C2096E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C7AE48911EA5328B00C2096E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C7AE489D1EA54D6B00C2096E /* MediaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTableViewController.swift; sourceTree = "<group>"; };
+		C7AE489F1EA5500600C2096E /* TableViewMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TableViewMain.storyboard; sourceTree = "<group>"; };
+		C7AE48A11EA5509B00C2096E /* TableViewNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewNavigationViewController.swift; sourceTree = "<group>"; };
+		C7AE48A31EA5531A00C2096E /* ChosenMediaDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChosenMediaDetailedViewController.swift; sourceTree = "<group>"; };
+		C7AE48A41EA5531A00C2096E /* ChosenMediaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChosenMediaTableViewController.swift; sourceTree = "<group>"; };
+		C7AE48AA1EA5550B00C2096E /* MediaLayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaLayers.swift; sourceTree = "<group>"; };
+		C7AE48AB1EA5550B00C2096E /* MediaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
+		C7AE48AC1EA5550B00C2096E /* MediaType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
+		C7AE48AD1EA5550B00C2096E /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		C7AE48AE1EA5550B00C2096E /* ProductLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductLine.swift; sourceTree = "<group>"; };
+		C7AE48D21EA563A400C2096E /* Math+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Math+Ext.swift"; sourceTree = "<group>"; };
+		C7AE48D31EA563A400C2096E /* UIImage+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		C7AE48D41EA563A400C2096E /* UIKit+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Ext.swift"; sourceTree = "<group>"; };
 		C7C951731EA3E08D005DFE3B /* Architecture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Architecture.png; sourceTree = "<group>"; };
 		C7C9518D1EA40DD6005DFE3B /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
@@ -356,10 +388,14 @@
 		C72E27A31E9ED9EB0064E01B /* LearningSwiftCourse */ = {
 			isa = PBXGroup;
 			children = (
+				C7AE48D11EA5638800C2096E /* Extensions */,
+				C7AE48961EA54C4100C2096E /* TableExample */,
 				C765C2731EA4E6C000F5FE90 /* NavBarExample */,
 				C765C26E1EA4E03600F5FE90 /* TabBarExample */,
 				C765C26D1EA4E02700F5FE90 /* ColorsExample */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
+				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
+				C7AE488F1EA5327300C2096E /* Main.storyboard */,
 				C72E27AB1E9ED9EB0064E01B /* Assets.xcassets */,
 				C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */,
 				C72E27B01E9ED9EB0064E01B /* Info.plist */,
@@ -403,7 +439,7 @@
 				C7AE48031EA4FE7D00C2096E /* TabBarViewController.swift */,
 				C765C2711EA4E09F00F5FE90 /* EnglishViewController.swift */,
 				C765C26F1EA4E08600F5FE90 /* MetricViewController.swift */,
-				C7AE47EC1EA4FCE600C2096E /* Model.swift */,
+				C7AE47EC1EA4FCE600C2096E /* TabBarModel.swift */,
 				C765C26B1EA4DFD400F5FE90 /* TabBarMain.storyboard */,
 			);
 			name = TabBarExample;
@@ -415,6 +451,7 @@
 				C765C27C1EA4E79B00F5FE90 /* RootViewController.swift */,
 				C765C27A1EA4E77000F5FE90 /* NavigationViewController.swift */,
 				C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */,
+				C7AE48051EA51E8600C2096E /* NavBarModel.swift */,
 				C765C2741EA4E6E000F5FE90 /* NavBarMain.storyboard */,
 			);
 			name = NavBarExample;
@@ -474,6 +511,41 @@
 				C77E83291EA25F18000AC715 /* RxGesture.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C7AE48961EA54C4100C2096E /* TableExample */ = {
+			isa = PBXGroup;
+			children = (
+				C7AE48A11EA5509B00C2096E /* TableViewNavigationViewController.swift */,
+				C7AE48A31EA5531A00C2096E /* ChosenMediaDetailedViewController.swift */,
+				C7AE48A41EA5531A00C2096E /* ChosenMediaTableViewController.swift */,
+				C7AE489D1EA54D6B00C2096E /* MediaTableViewController.swift */,
+				C7AE48A91EA554FA00C2096E /* Model */,
+				C7AE489F1EA5500600C2096E /* TableViewMain.storyboard */,
+			);
+			name = TableExample;
+			sourceTree = "<group>";
+		};
+		C7AE48A91EA554FA00C2096E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7AE48AA1EA5550B00C2096E /* MediaLayers.swift */,
+				C7AE48AB1EA5550B00C2096E /* MediaTableViewCell.swift */,
+				C7AE48AC1EA5550B00C2096E /* MediaType.swift */,
+				C7AE48AD1EA5550B00C2096E /* Product.swift */,
+				C7AE48AE1EA5550B00C2096E /* ProductLine.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C7AE48D11EA5638800C2096E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C7AE48D21EA563A400C2096E /* Math+Ext.swift */,
+				C7AE48D31EA563A400C2096E /* UIImage+Ext.swift */,
+				C7AE48D41EA563A400C2096E /* UIKit+Ext.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		C7C9515B1EA3E022005DFE3B /* Resources */ = {
@@ -792,6 +864,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7AE48A01EA5500600C2096E /* TableViewMain.storyboard in Resources */,
+				C7AE48901EA5327300C2096E /* Main.storyboard in Resources */,
 				C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */,
 				C765C26C1EA4DFD400F5FE90 /* TabBarMain.storyboard in Resources */,
 				C72E27AC1E9ED9EB0064E01B /* Assets.xcassets in Resources */,
@@ -822,15 +896,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7AE47ED1EA4FCE600C2096E /* Model.swift in Sources */,
+				C7AE47ED1EA4FCE600C2096E /* TabBarModel.swift in Sources */,
+				C7AE489E1EA54D6B00C2096E /* MediaTableViewController.swift in Sources */,
 				C765C27B1EA4E77000F5FE90 /* NavigationViewController.swift in Sources */,
+				C7AE48D51EA563A400C2096E /* Math+Ext.swift in Sources */,
+				C7AE48A71EA5531A00C2096E /* ChosenMediaTableViewController.swift in Sources */,
 				C7C9518E1EA40DD6005DFE3B /* FirstViewController.swift in Sources */,
+				C7AE48B21EA5550B00C2096E /* Product.swift in Sources */,
 				C72E27A71E9ED9EB0064E01B /* ColorChangeViewController.swift in Sources */,
+				C7AE48B11EA5550B00C2096E /* MediaType.swift in Sources */,
 				C765C27D1EA4E79B00F5FE90 /* RootViewController.swift in Sources */,
 				C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */,
+				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
+				C7AE48A61EA5531A00C2096E /* ChosenMediaDetailedViewController.swift in Sources */,
+				C7AE48061EA51E8600C2096E /* NavBarModel.swift in Sources */,
 				C765C2721EA4E09F00F5FE90 /* EnglishViewController.swift in Sources */,
+				C7AE48D61EA563A400C2096E /* UIImage+Ext.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
+				C7AE48B31EA5550B00C2096E /* ProductLine.swift in Sources */,
 				C7AE48041EA4FE7D00C2096E /* TabBarViewController.swift in Sources */,
+				C7AE48B01EA5550B00C2096E /* MediaTableViewCell.swift in Sources */,
+				C7AE48D71EA563A400C2096E /* UIKit+Ext.swift in Sources */,
+				C7AE48A21EA5509B00C2096E /* TableViewNavigationViewController.swift in Sources */,
+				C7AE48AF1EA5550B00C2096E /* MediaLayers.swift in Sources */,
 				C765C2701EA4E08600F5FE90 /* MetricViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

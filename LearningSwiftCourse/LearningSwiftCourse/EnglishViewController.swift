@@ -60,6 +60,9 @@ class EnglishViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    deinit {
+        print("English View controller is \(#function)")
+    }
 
     /*
     // MARK: - Navigation
