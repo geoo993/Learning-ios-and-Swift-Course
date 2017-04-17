@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */; };
 		C72E27A71E9ED9EB0064E01B /* ColorChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27A61E9ED9EB0064E01B /* ColorChangeViewController.swift */; };
-		C72E27AA1E9ED9EB0064E01B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E27A81E9ED9EB0064E01B /* Main.storyboard */; };
+		C72E27AA1E9ED9EB0064E01B /* ColorsMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E27A81E9ED9EB0064E01B /* ColorsMain.storyboard */; };
 		C72E27AC1E9ED9EB0064E01B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72E27AB1E9ED9EB0064E01B /* Assets.xcassets */; };
 		C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */; };
 		C72E27BA1E9ED9EB0064E01B /* LearningSwiftCourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27B91E9ED9EB0064E01B /* LearningSwiftCourseTests.swift */; };
 		C72E27C51E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */; };
+		C765C26C1EA4DFD400F5FE90 /* TabBarMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C765C26B1EA4DFD400F5FE90 /* TabBarMain.storyboard */; };
+		C765C2701EA4E08600F5FE90 /* MetricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C26F1EA4E08600F5FE90 /* MetricViewController.swift */; };
+		C765C2721EA4E09F00F5FE90 /* EnglishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C2711EA4E09F00F5FE90 /* EnglishViewController.swift */; };
+		C765C2751EA4E6E000F5FE90 /* NavBarMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C765C2741EA4E6E000F5FE90 /* NavBarMain.storyboard */; };
+		C765C27B1EA4E77000F5FE90 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C27A1EA4E77000F5FE90 /* NavigationViewController.swift */; };
+		C765C27D1EA4E79B00F5FE90 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C27C1EA4E79B00F5FE90 /* RootViewController.swift */; };
 		C77E832A1EA25F4F000AC715 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83271EA25F18000AC715 /* RxGesture.framework */; };
 		C77E832B1EA25F4F000AC715 /* RxGesture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83271EA25F18000AC715 /* RxGesture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C77E832E1EA25F4F000AC715 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82F81EA25F08000AC715 /* RxSwift.framework */; };
@@ -22,8 +28,11 @@
 		C77E83331EA25F4F000AC715 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83001EA25F08000AC715 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C77E83361EA25F4F000AC715 /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; };
 		C77E83371EA25F4F000AC715 /* RxSwiftExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7AE47ED1EA4FCE600C2096E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE47EC1EA4FCE600C2096E /* Model.swift */; };
+		C7AE48041EA4FE7D00C2096E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48031EA4FE7D00C2096E /* TabBarViewController.swift */; };
 		C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */ = {isa = PBXBuildFile; fileRef = C7C951731EA3E08D005DFE3B /* Architecture.png */; };
 		C7C9518E1EA40DD6005DFE3B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C9518D1EA40DD6005DFE3B /* FirstViewController.swift */; };
+		C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -267,7 +276,7 @@
 		C72E27A11E9ED9EB0064E01B /* LearningSwiftCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningSwiftCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C72E27A61E9ED9EB0064E01B /* ColorChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangeViewController.swift; sourceTree = "<group>"; };
-		C72E27A91E9ED9EB0064E01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C72E27A91E9ED9EB0064E01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ColorsMain.storyboard; sourceTree = "<group>"; };
 		C72E27AB1E9ED9EB0064E01B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C72E27AE1E9ED9EB0064E01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C72E27B01E9ED9EB0064E01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -278,11 +287,20 @@
 		C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSwiftCourseUITests.swift; sourceTree = "<group>"; };
 		C72E27C61E9ED9EB0064E01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72E27D21E9EDA0C0064E01B /* LearningSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningSwift.playground; sourceTree = "<group>"; };
+		C765C26B1EA4DFD400F5FE90 /* TabBarMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBarMain.storyboard; sourceTree = "<group>"; };
+		C765C26F1EA4E08600F5FE90 /* MetricViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricViewController.swift; sourceTree = "<group>"; };
+		C765C2711EA4E09F00F5FE90 /* EnglishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnglishViewController.swift; sourceTree = "<group>"; };
+		C765C2741EA4E6E000F5FE90 /* NavBarMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NavBarMain.storyboard; sourceTree = "<group>"; };
+		C765C27A1EA4E77000F5FE90 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		C765C27C1EA4E79B00F5FE90 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C77E82D61EA25EF5000AC715 /* RxSwiftExt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxSwiftExt.xcodeproj; path = ../Carthage/Checkouts/RxSwiftExt/RxSwiftExt.xcodeproj; sourceTree = "<group>"; };
 		C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = ../Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
 		C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxGesture.xcodeproj; path = ../Carthage/Checkouts/RxGesture/RxGesture/RxGesture.xcodeproj; sourceTree = "<group>"; };
+		C7AE47EC1EA4FCE600C2096E /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C7AE48031EA4FE7D00C2096E /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C7C951731EA3E08D005DFE3B /* Architecture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Architecture.png; sourceTree = "<group>"; };
 		C7C9518D1EA40DD6005DFE3B /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,10 +356,10 @@
 		C72E27A31E9ED9EB0064E01B /* LearningSwiftCourse */ = {
 			isa = PBXGroup;
 			children = (
+				C765C2731EA4E6C000F5FE90 /* NavBarExample */,
+				C765C26E1EA4E03600F5FE90 /* TabBarExample */,
+				C765C26D1EA4E02700F5FE90 /* ColorsExample */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
-				C7C9518D1EA40DD6005DFE3B /* FirstViewController.swift */,
-				C72E27A61E9ED9EB0064E01B /* ColorChangeViewController.swift */,
-				C72E27A81E9ED9EB0064E01B /* Main.storyboard */,
 				C72E27AB1E9ED9EB0064E01B /* Assets.xcassets */,
 				C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */,
 				C72E27B01E9ED9EB0064E01B /* Info.plist */,
@@ -367,6 +385,39 @@
 				C72E27C61E9ED9EB0064E01B /* Info.plist */,
 			);
 			path = LearningSwiftCourseUITests;
+			sourceTree = "<group>";
+		};
+		C765C26D1EA4E02700F5FE90 /* ColorsExample */ = {
+			isa = PBXGroup;
+			children = (
+				C7C9518D1EA40DD6005DFE3B /* FirstViewController.swift */,
+				C72E27A61E9ED9EB0064E01B /* ColorChangeViewController.swift */,
+				C72E27A81E9ED9EB0064E01B /* ColorsMain.storyboard */,
+			);
+			name = ColorsExample;
+			sourceTree = "<group>";
+		};
+		C765C26E1EA4E03600F5FE90 /* TabBarExample */ = {
+			isa = PBXGroup;
+			children = (
+				C7AE48031EA4FE7D00C2096E /* TabBarViewController.swift */,
+				C765C2711EA4E09F00F5FE90 /* EnglishViewController.swift */,
+				C765C26F1EA4E08600F5FE90 /* MetricViewController.swift */,
+				C7AE47EC1EA4FCE600C2096E /* Model.swift */,
+				C765C26B1EA4DFD400F5FE90 /* TabBarMain.storyboard */,
+			);
+			name = TabBarExample;
+			sourceTree = "<group>";
+		};
+		C765C2731EA4E6C000F5FE90 /* NavBarExample */ = {
+			isa = PBXGroup;
+			children = (
+				C765C27C1EA4E79B00F5FE90 /* RootViewController.swift */,
+				C765C27A1EA4E77000F5FE90 /* NavigationViewController.swift */,
+				C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */,
+				C765C2741EA4E6E000F5FE90 /* NavBarMain.storyboard */,
+			);
+			name = NavBarExample;
 			sourceTree = "<group>";
 		};
 		C77E82D51EA25E3B000AC715 /* Dependencies */ = {
@@ -742,9 +793,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */,
+				C765C26C1EA4DFD400F5FE90 /* TabBarMain.storyboard in Resources */,
 				C72E27AC1E9ED9EB0064E01B /* Assets.xcassets in Resources */,
+				C765C2751EA4E6E000F5FE90 /* NavBarMain.storyboard in Resources */,
 				C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */,
-				C72E27AA1E9ED9EB0064E01B /* Main.storyboard in Resources */,
+				C72E27AA1E9ED9EB0064E01B /* ColorsMain.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,9 +822,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7AE47ED1EA4FCE600C2096E /* Model.swift in Sources */,
+				C765C27B1EA4E77000F5FE90 /* NavigationViewController.swift in Sources */,
 				C7C9518E1EA40DD6005DFE3B /* FirstViewController.swift in Sources */,
 				C72E27A71E9ED9EB0064E01B /* ColorChangeViewController.swift in Sources */,
+				C765C27D1EA4E79B00F5FE90 /* RootViewController.swift in Sources */,
+				C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */,
+				C765C2721EA4E09F00F5FE90 /* EnglishViewController.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
+				C7AE48041EA4FE7D00C2096E /* TabBarViewController.swift in Sources */,
+				C765C2701EA4E08600F5FE90 /* MetricViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,12 +887,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C72E27A81E9ED9EB0064E01B /* Main.storyboard */ = {
+		C72E27A81E9ED9EB0064E01B /* ColorsMain.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C72E27A91E9ED9EB0064E01B /* Base */,
 			);
-			name = Main.storyboard;
+			name = ColorsMain.storyboard;
 			sourceTree = "<group>";
 		};
 		C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */ = {

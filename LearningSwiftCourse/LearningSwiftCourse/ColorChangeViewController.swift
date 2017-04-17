@@ -91,8 +91,9 @@ class ColorChangeViewController: UIViewController {
         super.viewWillAppear(animated)
         print("view will appear")
         
-        let label = UILabel(frame: CGRect(x: 0,y:0, width: 100, height: 30))
+        let label = UILabel(frame: CGRect(x: 0,y:0, width: 200, height: 30))
         label.text = colorViewText
+        label.numberOfLines = 0
         label.textAlignment = .center
         label.textColor = UIColor.white
         label.center = CGPoint(x:colorView.frame.width / 2, y: colorView.frame.height / 2)
