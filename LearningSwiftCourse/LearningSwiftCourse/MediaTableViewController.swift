@@ -30,6 +30,7 @@ class MediaTableViewController: UITableViewController {
         self.navigationItem.title = "Media"
         
         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -140,10 +141,13 @@ class MediaTableViewController: UITableViewController {
   
         guard 
             let indexPath : IndexPath = self.tableView.indexPathForSelectedRow as IndexPath?,
-            let destinationViewController = segue.destination as? 
-                //ProductTableViewController 
+            let tableViewController = segue.destination as? UITableViewController,
+            let destinationViewController = tableViewController as? 
             ChosenMediaTableViewController
-            else { print("Cant Find Product Table View Controller or index path is wrong"); return }
+            else { 
+                print("Cant Find Product Table View Controller or index path is wrong"); 
+                return 
+        }
         
         destinationViewController.chosenMediaTitle = MediaLayers.layers[indexPath.row]
         

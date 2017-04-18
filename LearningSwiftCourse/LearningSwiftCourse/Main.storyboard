@@ -24,6 +24,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hde-hc-WiD">
                                 <rect key="frame" x="56" y="92" width="208" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Color Change Example"/>
                                 <connections>
                                     <segue destination="nsB-wP-ajI" kind="show" identifier="" id="ZY4-rr-vMw"/>
@@ -31,6 +32,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCo-Rn-IUa">
                                 <rect key="frame" x="56" y="162" width="208" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Navigation Bar Example"/>
                                 <connections>
                                     <segue destination="rmP-nS-sG7" kind="show" identifier="" id="teI-BE-Dd1"/>
@@ -38,6 +40,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hf6-6q-ARb">
                                 <rect key="frame" x="56" y="232" width="208" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Tab Bar Example"/>
                                 <connections>
                                     <segue destination="I6b-4W-71Y" kind="show" identifier="" id="FnP-B0-UuQ"/>
@@ -45,6 +48,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I03-BH-AUL">
                                 <rect key="frame" x="56" y="302" width="208" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Table View Example"/>
                                 <connections>
                                     <segue destination="KgH-Rl-rox" kind="show" id="lGw-py-a6U"/>
