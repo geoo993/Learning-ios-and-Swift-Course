@@ -46,15 +46,15 @@ class Product {
     var rating : ProductRating
     var year : Int
     var genres : [Genres]
-    
+   
     init(title: String, description : String, imageName: String, year: Int, rating: ProductRating , genres: [Genres])
     {
         self.title = title
         self.description = description
         if let img = UIImage(named: imageName) {
-            image = img
+            self.image = img
         }else {
-            image = UIImage(named: "noImage") ?? UIImage() 
+            self.image = UIImage(named: "noImage") ?? UIImage() 
         }
         self.year = year
         self.rating = rating
@@ -62,5 +62,29 @@ class Product {
         
     }
     
+    init(title: String, description : String, image: UIImage?, year: Int, rating: ProductRating , genres: [Genres])
+    {
+        self.title = title
+        self.description = description
+        if let img = image {
+            self.image = img
+        }else {
+            self.image = UIImage(named: "noImage") ?? UIImage() 
+        }
+        self.year = year
+        self.rating = rating
+        self.genres = genres
+        
+    }
+    
+    
+}
+
+
+extension Product {
+    
+    var titleFirstLetter: String {
+        return String(self.title[self.title.startIndex]).uppercased()
+    }
     
 }

@@ -17,7 +17,7 @@ class MediaTableViewController: UITableViewController {
         }
         
     }
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +30,7 @@ class MediaTableViewController: UITableViewController {
         self.navigationItem.rightBarButtonItems?[0] = self.editButtonItem
        
     }
+    
    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -77,6 +78,8 @@ class MediaTableViewController: UITableViewController {
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         cell.selectionStyle = UITableViewCellSelectionStyle.blue
         tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+        
+        cell.tag = indexPath.row
         
         let media = MediaLayers.mediaTypes[indexPath.row]
         let img = media.image.imageWithSize(size: CGSize(width: 100,height: 100), extraMargin: 0)

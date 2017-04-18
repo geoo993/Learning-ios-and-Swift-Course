@@ -22,7 +22,26 @@ class AddMediaViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet var textfieldNewItemTitle:UITextField!
     
-    @IBAction func textfieldDoneEditing(_ sender:UITextField) {
+    @IBAction func textfieldNewItemTitleDoneEditing(_ sender:UITextField) {
+        //dismiss the keyboard:
+        sender.resignFirstResponder()
+        
+        if let titleText = textfieldNewItemTitle.text {
+        
+            textviewNewItemDescriptionText.text = "New title called \(titleText)"
+        }
+        textviewNewItemDescriptionText.resignFirstResponder()
+    }
+    
+    @IBOutlet var textfieldNewItemURL:UITextField!
+    
+    @IBAction func textfieldNewItemURLDoneEditing(_ sender:UITextField) {
+        
+        guard let urlString = sender.text, let url = URL(string: urlString) else { 
+            print("No URL Found")
+            return 
+        }
+        imageviewNewItemImage.downloadedFrom(url: url)
         
         //dismiss the keyboard:
         sender.resignFirstResponder()
@@ -45,23 +64,25 @@ class AddMediaViewController: UIViewController, UITextViewDelegate {
         
         delegate?.newEntryAdded(newEntryTitle: titleText, newEntryImage: image, newEntryDscription: descriptionText)
         navigationController?.popViewController(animated: true) 
-        //navigationController?.popToRootViewController(animated: true)
     }
     
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        okayButtonObject.isEnabled = false
-        print("entered editing mode")
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        okayButtonObject.isEnabled = true
-        print("exiting editing mode")
-    }
+//    func textViewDidBeginEditing(_ textView: UITextView) {
+//        okayButtonObject.isEnabled = false
+//    }
+//    
+//    func textViewDidEndEditing(_ textView: UITextView) {
+//        okayButtonObject.isEnabled = true
+//        textView.resignFirstResponder()
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         textviewNewItemDescriptionText.delegate = self
+        
+        //remove this later
+        textviewNewItemDescriptionText.isEditable = false
+        textviewNewItemDescriptionText.isSelectable = false
         // Do any additional setup after loading the view.
     }
 

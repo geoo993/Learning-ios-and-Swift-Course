@@ -4,10 +4,14 @@
 //
 //  Created by GEORGE QUENTIN on 15/10/2016.
 //  Copyright © 2016 GEORGE QUENTIN. All rights reserved.
+//  //section sorted from http://stackoverflow.com/questions/41646933/how-do-you-sort-data-in-a-tableview-alphabetically-by-section-using-a-custom-mod
 //
+//  rounded uitable view
+//  http://stackoverflow.com/questions/6216839/how-to-add-spacing-between-uitableviewcell
 
 import Foundation
 import UIKit
+
 
 class ChosenMediaTableViewController: UITableViewController, AddingDelegate 
 {
@@ -15,7 +19,16 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate
     var media = String()
     var chosenMediaTitle = String()
     var productShown = [Bool]()
+    var sections = [[Product]]()
  
+ 
+    func updateSections() {
+        sections = MediaLayers.sortedFirstLetters.map { firstLetter in
+                return MediaLayers.getProducts
+                    .filter { $0.titleFirstLetter == firstLetter } // only names with the same first letter in title
+                    .sorted { $0.title < $1.title } // sort them
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +45,10 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate
         self.navigationItem.rightBarButtonItems?[0] = self.editButtonItem
         //self.navigationItem.rightBarButtonItems?[1].isEnabled = true
         //self.navigationItem.rightBarButtonItems?[1].tintColor = nil
+        
+        updateSections()
     }
-  
-
-   
+ 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -49,23 +62,51 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate
     }
     
     // MARK: - AddingDelegate
-    
     func newEntryAdded(newEntryTitle:String, newEntryImage: UIImage, newEntryDscription: String) {
-        //model.data.append(newEntry)
         print("title added: \(newEntryTitle), description added: \(newEntryDscription)")
+        
+        let product = Product(title: newEntryTitle, description: newEntryDscription, image: newEntryImage, year: 2010, rating: ProductRating.Ok, genres: [Genres.None])
+        
+        MediaLayers.getProducts.append(product)
+        updateSections()
+        self.tableView.reloadData() 
     }
-    
-    
-    // MARK: - Table view data source
-    
+
+    // MARK: - Table view data source and Side List in tableview
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return sections.count
     }
+    
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return MediaLayers.sortedFirstLetters //Side Section title
+    }
+    
+    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        return index
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        return MediaLayers.sortedFirstLetters[section]
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        
+        return MediaLayers.sortedFirstLetters[section]
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30 /*section == 0 ? 0 : 30 // section 1 and above have 50 section height */
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
+    }
+
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return MediaLayers.getProducts.count
+        return sections[section].count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,7 +122,10 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate
         cell.selectionStyle = UITableViewCellSelectionStyle.blue
         tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
         
-        let product = MediaLayers.getProducts[indexPath.row]
+        cell.tag = indexPath.row
+        
+        let product = sections[indexPath.section][indexPath.row]
+        
         cell.titleLabel.text = "\(product.title) (\(product.year))"
         
         cell.descriptionLabel.text = product.description
@@ -114,7 +158,8 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate
         
         if editingStyle == .delete {
             
-            MediaLayers.getProducts.remove(at: indexPath.row)
+            sections[indexPath.section].remove(at: indexPath.row)
+            //MediaLayers.getProducts.remove(at: indexPath.row)
             // Delete the row from the data source
             self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
             
@@ -127,9 +172,10 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         
-        let product = MediaLayers.getProducts[fromIndexPath.row]
-        MediaLayers.getProducts.remove(at: fromIndexPath.row)
-        MediaLayers.getProducts.insert(product, at: to.row)
+        let product = sections[fromIndexPath.section][fromIndexPath.row]
+        sections[fromIndexPath.section].remove(at: fromIndexPath.row)
+        sections[to.section].insert(product, at: to.row)
+        
         self.tableView.reloadData()
     }
 
@@ -169,9 +215,6 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate
     }
  
     
-    
-
-    
     //performSegueWithIdentifier(identifier: "", sender: AnyObject?)
     // MARK: - Navigation
     
@@ -192,10 +235,11 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate
                         print("Cannot go to Detailed Media View Controller or index path is wrong"); return 
                     }
                     
+                    let product = sections[indexPath.section][indexPath.row]
                     destinationViewController.heading = chosenMediaTitle
-                    destinationViewController.titleText = MediaLayers.getProducts[indexPath.row].title
-                    destinationViewController.image = MediaLayers.getProducts[indexPath.row].image
-                    destinationViewController.descriptionText = MediaLayers.getProducts[indexPath.row].description
+                    destinationViewController.titleText = product.title
+                    destinationViewController.image = product.image
+                    destinationViewController.descriptionText = product.description
                     print("Show details")
                 case "AddMediaSegue":
                     

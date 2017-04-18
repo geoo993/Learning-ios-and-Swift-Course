@@ -19,6 +19,16 @@ class MediaLayers: NSObject {
     
     static var getProducts = [Product]()
     
+    static var sortedFirstLetters: [String] {
+        // all the first letters in your data
+        let firstLetters = getProducts.map { $0.titleFirstLetter }
+        // some letters appear multiple times, let's remove duplicates
+        let uniqueFirstLetters = Array(Set(firstLetters))
+        // sort them
+        // this is your index
+        return uniqueFirstLetters.sorted()
+    }
+    
     static func chosingMedia (mediaChosen: String) -> ProductLine? {
         
         switch mediaChosen {
@@ -39,3 +49,5 @@ class MediaLayers: NSObject {
     }
     
 }
+
+
