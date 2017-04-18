@@ -24,20 +24,17 @@ class MediaTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
         self.navigationItem.title = "Media"
-        
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItems?[0] = self.editButtonItem
+       
     }
-
+   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.tableView.reloadData()
-        
     }
     
     
@@ -46,11 +43,7 @@ class MediaTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
+    // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
@@ -62,44 +55,6 @@ class MediaTableViewController: UITableViewController {
         return "Media Footer"
     }
     
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    
-
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        
-        let product = MediaLayers.mediaTypes[fromIndexPath.row]
-        MediaLayers.mediaTypes.remove(at: fromIndexPath.row)
-        MediaLayers.mediaTypes.insert(product, at: to.row)
-        
-        self.tableView.reloadData()
-    }
-    
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
-         if editingStyle == .delete {
-            
-            MediaLayers.mediaTypes.remove(at: indexPath.row)
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
-            
-         } else if editingStyle == .insert {
-         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-         }    
-     }
- 
-
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
@@ -108,12 +63,12 @@ class MediaTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return MediaLayers.mediaTypes.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
@@ -132,6 +87,47 @@ class MediaTableViewController: UITableViewController {
         return cell
     }
     
+    // Override to support conditional editing of the table view.
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    
+    // Override to support conditional rearranging of the table view.
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the item to be re-orderable.
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            MediaLayers.mediaTypes.remove(at: indexPath.row)
+            // Delete the row from the data source
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }    
+    }
+
+    // Override to support rearranging the table view.
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        
+        let product = MediaLayers.mediaTypes[fromIndexPath.row]
+        MediaLayers.mediaTypes.remove(at: fromIndexPath.row)
+        MediaLayers.mediaTypes.insert(product, at: to.row)
+        
+        self.tableView.reloadData()
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -141,7 +137,7 @@ class MediaTableViewController: UITableViewController {
   
         guard 
             let indexPath : IndexPath = self.tableView.indexPathForSelectedRow as IndexPath?,
-            let tableViewController = segue.destination as? UITableViewController,
+            let tableViewController = segue.destination as? UITableViewController,//makeing sure that it is a UITableViewController
             let destinationViewController = tableViewController as? 
             ChosenMediaTableViewController
             else { 

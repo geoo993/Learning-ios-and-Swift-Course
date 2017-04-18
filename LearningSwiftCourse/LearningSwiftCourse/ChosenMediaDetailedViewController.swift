@@ -24,7 +24,7 @@ class ChosenMediaDetailedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // self.view.backgroundColor = UIColor.randomColor()
+        //self.view.backgroundColor = UIColor.randomColor()
 
         self.navigationItem.title = heading
     

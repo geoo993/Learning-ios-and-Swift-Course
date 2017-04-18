@@ -46,6 +46,7 @@
 		C7AE48D51EA563A400C2096E /* Math+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48D21EA563A400C2096E /* Math+Ext.swift */; };
 		C7AE48D61EA563A400C2096E /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48D31EA563A400C2096E /* UIImage+Ext.swift */; };
 		C7AE48D71EA563A400C2096E /* UIKit+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48D41EA563A400C2096E /* UIKit+Ext.swift */; };
+		C7AE48DF1EA6141200C2096E /* AddMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48DE1EA6141200C2096E /* AddMediaViewController.swift */; };
 		C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */ = {isa = PBXBuildFile; fileRef = C7C951731EA3E08D005DFE3B /* Architecture.png */; };
 		C7C9518E1EA40DD6005DFE3B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C9518D1EA40DD6005DFE3B /* FirstViewController.swift */; };
 		C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */; };
@@ -330,6 +331,7 @@
 		C7AE48D21EA563A400C2096E /* Math+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Math+Ext.swift"; sourceTree = "<group>"; };
 		C7AE48D31EA563A400C2096E /* UIImage+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 		C7AE48D41EA563A400C2096E /* UIKit+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Ext.swift"; sourceTree = "<group>"; };
+		C7AE48DE1EA6141200C2096E /* AddMediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMediaViewController.swift; sourceTree = "<group>"; };
 		C7C951731EA3E08D005DFE3B /* Architecture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Architecture.png; sourceTree = "<group>"; };
 		C7C9518D1EA40DD6005DFE3B /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 		C7AE48961EA54C4100C2096E /* TableExample */ = {
 			isa = PBXGroup;
 			children = (
+				C7AE48DE1EA6141200C2096E /* AddMediaViewController.swift */,
 				C7AE48A11EA5509B00C2096E /* TableViewNavigationViewController.swift */,
 				C7AE48A31EA5531A00C2096E /* ChosenMediaDetailedViewController.swift */,
 				C7AE48A41EA5531A00C2096E /* ChosenMediaTableViewController.swift */,
@@ -918,6 +921,7 @@
 				C7AE48B01EA5550B00C2096E /* MediaTableViewCell.swift in Sources */,
 				C7AE48D71EA563A400C2096E /* UIKit+Ext.swift in Sources */,
 				C7AE48A21EA5509B00C2096E /* TableViewNavigationViewController.swift in Sources */,
+				C7AE48DF1EA6141200C2096E /* AddMediaViewController.swift in Sources */,
 				C7AE48AF1EA5550B00C2096E /* MediaLayers.swift in Sources */,
 				C765C2701EA4E08600F5FE90 /* MetricViewController.swift in Sources */,
 			);
