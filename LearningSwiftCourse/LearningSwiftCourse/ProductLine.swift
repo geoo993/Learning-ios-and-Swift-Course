@@ -111,7 +111,31 @@ class ProductLine {
     class func tvSeries () -> ProductLine
     {
         var products = [Product]()
-        products.append(Product(title: "No TV Series", description: "Sorry Can't Compile ",imageName: "", year: 0, rating: ProductRating.Unrated, genres: [Genres.None]))
+//        products.append(Product(title: "No TV Series", description: "Sorry Can't Compile ",imageName: "", year: 0, rating: ProductRating.Unrated, genres: [Genres.None]))
+//        
+        products.append(Product(title: "Billions", 
+                                description: "U.S. Attorney Chuck Rhoades goes after hedge fund king, Bobby \"Axe\" Axelrod in a battle between two powerful New York figures.",  imageName: "billions", year: 2016, rating: ProductRating.Brilliant, genres: [Genres.Drama]))
+        
+        products.append(Product(title: "Homeland", description: "A bipolar CIA operative becomes convinced a prisoner of war has been turned by al-Qaeda and is planning to carry out a terrorist attack on American soil.",imageName: "homeland", year: 2011, rating: ProductRating.Outstanding, genres: [Genres.Crime, Genres.Drama]))
+        
+        products.append(Product(title: "Vikings", description: "The world of the Vikings is brought to life through the journey of Ragnar Lothbrok, the first Viking to emerge from Norse legend and onto the pages of history - a man on the edge of myth.",imageName: "vikings", year: 2013, rating: ProductRating.Excellent, genres: [Genres.Action,Genres.Drama, Genres.History]))
+        
+        products.append(Product(title: "Game of Thrones", description: "Nine noble families fight for control over the mythical lands of Westeros; A forgotten race returns after being dormant for thousands of years.",imageName: "gameofthrones", year: 2011, rating: ProductRating.Outstanding, genres: [Genres.Adventure, Genres.Drama,Genres.Fantasy]))
+        
+        products.append(Product(title: "Breaking Bad", description: "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",imageName: "breakingbad", year: 2008, rating: ProductRating.Brilliant, genres: [Genres.Crime,Genres.Drama, Genres.Thriller]))
+        
+        products.append(Product(title: "House of Cards", description: "A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.",imageName: "houseofcards", year: 2013, rating: ProductRating.Excellent, genres: [Genres.Drama]))
+        
+        products.append(Product(title: "Scandal", description: "A former White House Communications Director starts her own crisis management firm only to realize her clients are not the only ones with secrets.",imageName: "scandal", year: 2012, rating: ProductRating.Outstanding, genres: [Genres.Drama, Genres.Thriller]))
+        
+        products.append(Product(title: "Westworld", description: "Set at the intersection of the near future and the reimagined past, explore a world in which every human appetite, no matter how noble or depraved, can be indulged without consequence.",imageName: "westworld", year: 2016, rating: ProductRating.Outstanding, genres: [Genres.Drama,Genres.SciFi]))
+        
+        products.append(Product(title: "Preacher", description: "After a supernatural event at his church, a preacher enlists the help of a vampire to find God.",imageName: "preacher", year: 2016, rating: ProductRating.Excellent, genres: [Genres.Adventure,Genres.Drama,Genres.Fantasy]))
+        
+        products.append(Product(title: "24", description: "Jack Bauer, Director of Field Ops for the Counter-Terrorist Unit of Los Angeles, races against the clock to subvert terrorist plots and save his nation from ultimate disaster.",imageName: "24series", year: 2001, rating: ProductRating.Brilliant, genres: [Genres.Action,Genres.Crime,Genres.Drama]))
+        
+        products.append(Product(title: "Prison Break", description: "Due to a political conspiracy, an innocent man is sent to death row and his only hope is his brother, who makes it his mission to deliberately get himself sent to the same prison in order to break the both of them out, from the inside.",imageName: "prisonbreak", year: 2005, rating: ProductRating.Outstanding, genres: [Genres.Action,Genres.Crime,Genres.Drama]))
+        
         return ProductLine(productType: "TV Series", includedProducts: products)
     }
     

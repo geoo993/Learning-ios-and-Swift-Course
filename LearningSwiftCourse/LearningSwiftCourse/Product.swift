@@ -29,12 +29,15 @@ public enum Genres
     case Drama
     case Action
     case Horror
+    case History
     case Comedy
     case Animation
     case Romance
     case Thriller
     case Family
+    case Fantasy
     case Sport
+    case SciFi
     case Documentary
 }
 
