@@ -9,41 +9,11 @@
 import UIKit
 
 class MainViewController: UIViewController
-//, UITextFieldDelegate 
 {
 
-    
-    
-//    @IBOutlet weak var maintextfield: UITextField!
-//    
-//    
-//    @IBAction func mainTextfieldAction(_ sender: UITextField) {
-//    }
-//    
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        
-//        //self.view.endEditing(true)
-//        print("REturnnn")
-//        
-//        if (textField.returnKeyType == UIReturnKeyType.next) {
-//            // tab forward logic here
-//            return true
-//        }
-//        else if (textField.returnKeyType == UIReturnKeyType.go) {
-//            // submit action here
-//            return true
-//        }
-//
-//        
-//        return true
-//        
-//    }
-//    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.maintextfield.delegate = self
         
         self.view.backgroundColor = UIColor.randomColor()
         // Do any additional setup after loading the view.
