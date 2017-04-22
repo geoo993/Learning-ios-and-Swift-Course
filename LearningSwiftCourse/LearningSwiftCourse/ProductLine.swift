@@ -52,6 +52,8 @@ class ProductLine {
         
         products.append(Product(title: "Woman In Gold", description: "Sixty years after fleeing Vienna, Maria Altmann (Helen Mirren), an elderly Jewish woman, attempts to reclaim family possessions that were seized by the Nazis. Among them is a famous portrait of Maria's beloved Aunt Adele: Gustave Klimt's \"Portrait of Adele Bloch-Bauer I.\" With the help of young lawyer Randy Schoeberg (Ryan Reynolds), Maria embarks upon a lengthy legal battle to recover this painting and several others, but it will not be easy, for Austria considers them national treasures.",imageName: "WomanInGold", year: 2015, rating: ProductRating.Outstanding, genres: [Genres.Biography]))
         
+        products.append(Product(title: "The Founder", description: "The story of Ray Kroc, a salesman who turned two brothers' innovative fast food eatery, McDonald's, into one of the biggest restaurant businesses in the world with a combination of ambition, persistence, and ruthlessness.",imageName: "thefounder", year: 2016, rating: ProductRating.Excellent, genres: [Genres.Biography]))
+        
         products.append(Product(title: "Ali", description: "",imageName: "Ali", year: 2001, rating: ProductRating.Unrated, genres: [Genres.None]))
         products.append(Product(title: "A Few Good Men", description: "",imageName: "AFewGoodMen", year: 1992, rating: ProductRating.Unrated, genres: [Genres.None]))
         
