@@ -14,6 +14,18 @@
 		C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */; };
 		C72E27BA1E9ED9EB0064E01B /* LearningSwiftCourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27B91E9ED9EB0064E01B /* LearningSwiftCourseTests.swift */; };
 		C72E27C51E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */; };
+		C74217341EC1C27C0007B4C3 /* ScrollViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74217331EC1C27C0007B4C3 /* ScrollViewMain.storyboard */; };
+		C74217361EC1C7A60007B4C3 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74217351EC1C7A60007B4C3 /* ScrollViewController.swift */; };
+		C74217381EC1C8520007B4C3 /* slides_info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C74217371EC1C8520007B4C3 /* slides_info.plist */; };
+		C742173A1EC1CA400007B4C3 /* SlidesInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74217391EC1CA400007B4C3 /* SlidesInfoModel.swift */; };
+		C742173C1EC1CF650007B4C3 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C742173B1EC1CF650007B4C3 /* Slide.swift */; };
+		C742173E1EC1CF740007B4C3 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = C742173D1EC1CF740007B4C3 /* Slide.xib */; };
+		C74217CA1EC1F11A0007B4C3 /* UIImage+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74217C91EC1F11A0007B4C3 /* UIImage+GIF.swift */; };
+		C74217CC1EC1F32B0007B4C3 /* slide19.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74217CB1EC1F32B0007B4C3 /* slide19.gif */; };
+		C74217CE1EC1F34C0007B4C3 /* slide15.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74217CD1EC1F34C0007B4C3 /* slide15.gif */; };
+		C74217D01EC1F36A0007B4C3 /* slide16.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74217CF1EC1F36A0007B4C3 /* slide16.gif */; };
+		C74217D21EC1F37A0007B4C3 /* slide18.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74217D11EC1F37A0007B4C3 /* slide18.gif */; };
+		C74217D61EC1F4090007B4C3 /* slide17.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74217D51EC1F4090007B4C3 /* slide17.gif */; };
 		C765C26C1EA4DFD400F5FE90 /* TabBarMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C765C26B1EA4DFD400F5FE90 /* TabBarMain.storyboard */; };
 		C765C2701EA4E08600F5FE90 /* MetricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C26F1EA4E08600F5FE90 /* MetricViewController.swift */; };
 		C765C2721EA4E09F00F5FE90 /* EnglishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C2711EA4E09F00F5FE90 /* EnglishViewController.swift */; };
@@ -305,6 +317,18 @@
 		C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSwiftCourseUITests.swift; sourceTree = "<group>"; };
 		C72E27C61E9ED9EB0064E01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72E27D21E9EDA0C0064E01B /* LearningSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningSwift.playground; sourceTree = "<group>"; };
+		C74217331EC1C27C0007B4C3 /* ScrollViewMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScrollViewMain.storyboard; sourceTree = "<group>"; };
+		C74217351EC1C7A60007B4C3 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		C74217371EC1C8520007B4C3 /* slides_info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = slides_info.plist; sourceTree = "<group>"; };
+		C74217391EC1CA400007B4C3 /* SlidesInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidesInfoModel.swift; sourceTree = "<group>"; };
+		C742173B1EC1CF650007B4C3 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		C742173D1EC1CF740007B4C3 /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		C74217C91EC1F11A0007B4C3 /* UIImage+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+GIF.swift"; sourceTree = "<group>"; };
+		C74217CB1EC1F32B0007B4C3 /* slide19.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = slide19.gif; sourceTree = "<group>"; };
+		C74217CD1EC1F34C0007B4C3 /* slide15.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = slide15.gif; sourceTree = "<group>"; };
+		C74217CF1EC1F36A0007B4C3 /* slide16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = slide16.gif; sourceTree = "<group>"; };
+		C74217D11EC1F37A0007B4C3 /* slide18.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = slide18.gif; sourceTree = "<group>"; };
+		C74217D51EC1F4090007B4C3 /* slide17.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = slide17.gif; sourceTree = "<group>"; };
 		C765C26B1EA4DFD400F5FE90 /* TabBarMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBarMain.storyboard; sourceTree = "<group>"; };
 		C765C26F1EA4E08600F5FE90 /* MetricViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricViewController.swift; sourceTree = "<group>"; };
 		C765C2711EA4E09F00F5FE90 /* EnglishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnglishViewController.swift; sourceTree = "<group>"; };
@@ -396,6 +420,7 @@
 				C7AE48961EA54C4100C2096E /* TableExample */,
 				C765C2731EA4E6C000F5FE90 /* NavBarExample */,
 				C765C26E1EA4E03600F5FE90 /* TabBarExample */,
+				C74217161EC1C0200007B4C3 /* ScrollViewExample */,
 				C765C26D1EA4E02700F5FE90 /* ColorsExample */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
@@ -425,6 +450,24 @@
 				C72E27C61E9ED9EB0064E01B /* Info.plist */,
 			);
 			path = LearningSwiftCourseUITests;
+			sourceTree = "<group>";
+		};
+		C74217161EC1C0200007B4C3 /* ScrollViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				C74217331EC1C27C0007B4C3 /* ScrollViewMain.storyboard */,
+				C74217351EC1C7A60007B4C3 /* ScrollViewController.swift */,
+				C74217391EC1CA400007B4C3 /* SlidesInfoModel.swift */,
+				C74217371EC1C8520007B4C3 /* slides_info.plist */,
+				C742173B1EC1CF650007B4C3 /* Slide.swift */,
+				C742173D1EC1CF740007B4C3 /* Slide.xib */,
+				C74217CD1EC1F34C0007B4C3 /* slide15.gif */,
+				C74217CF1EC1F36A0007B4C3 /* slide16.gif */,
+				C74217D51EC1F4090007B4C3 /* slide17.gif */,
+				C74217D11EC1F37A0007B4C3 /* slide18.gif */,
+				C74217CB1EC1F32B0007B4C3 /* slide19.gif */,
+			);
+			name = ScrollViewExample;
 			sourceTree = "<group>";
 		};
 		C765C26D1EA4E02700F5FE90 /* ColorsExample */ = {
@@ -550,6 +593,7 @@
 				C7AE48D31EA563A400C2096E /* UIImage+Ext.swift */,
 				C7AE48D41EA563A400C2096E /* UIKit+Ext.swift */,
 				C78B2CE61EA6C74D00DB3967 /* UIImageView+Ext.swift */,
+				C74217C91EC1F11A0007B4C3 /* UIImage+GIF.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -873,10 +917,18 @@
 				C7AE48A01EA5500600C2096E /* TableViewMain.storyboard in Resources */,
 				C7AE48901EA5327300C2096E /* Main.storyboard in Resources */,
 				C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */,
+				C74217341EC1C27C0007B4C3 /* ScrollViewMain.storyboard in Resources */,
+				C74217CE1EC1F34C0007B4C3 /* slide15.gif in Resources */,
+				C74217D01EC1F36A0007B4C3 /* slide16.gif in Resources */,
+				C742173E1EC1CF740007B4C3 /* Slide.xib in Resources */,
+				C74217D21EC1F37A0007B4C3 /* slide18.gif in Resources */,
+				C74217D61EC1F4090007B4C3 /* slide17.gif in Resources */,
 				C765C26C1EA4DFD400F5FE90 /* TabBarMain.storyboard in Resources */,
 				C72E27AC1E9ED9EB0064E01B /* Assets.xcassets in Resources */,
+				C74217381EC1C8520007B4C3 /* slides_info.plist in Resources */,
 				C765C2751EA4E6E000F5FE90 /* NavBarMain.storyboard in Resources */,
 				C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */,
+				C74217CC1EC1F32B0007B4C3 /* slide19.gif in Resources */,
 				C72E27AA1E9ED9EB0064E01B /* ColorsMain.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -903,6 +955,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7AE47ED1EA4FCE600C2096E /* TabBarModel.swift in Sources */,
+				C742173A1EC1CA400007B4C3 /* SlidesInfoModel.swift in Sources */,
 				C7AE489E1EA54D6B00C2096E /* MediaTableViewController.swift in Sources */,
 				C765C27B1EA4E77000F5FE90 /* NavigationViewController.swift in Sources */,
 				C7AE48D51EA563A400C2096E /* Math+Ext.swift in Sources */,
@@ -911,15 +964,18 @@
 				C7AE48B21EA5550B00C2096E /* Product.swift in Sources */,
 				C72E27A71E9ED9EB0064E01B /* ColorChangeViewController.swift in Sources */,
 				C78B2CE71EA6C74D00DB3967 /* UIImageView+Ext.swift in Sources */,
+				C74217CA1EC1F11A0007B4C3 /* UIImage+GIF.swift in Sources */,
 				C7AE48B11EA5550B00C2096E /* MediaType.swift in Sources */,
 				C765C27D1EA4E79B00F5FE90 /* RootViewController.swift in Sources */,
 				C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */,
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
+				C74217361EC1C7A60007B4C3 /* ScrollViewController.swift in Sources */,
 				C7AE48A61EA5531A00C2096E /* ChosenMediaDetailedViewController.swift in Sources */,
 				C7AE48061EA51E8600C2096E /* NavBarModel.swift in Sources */,
 				C765C2721EA4E09F00F5FE90 /* EnglishViewController.swift in Sources */,
 				C7AE48D61EA563A400C2096E /* UIImage+Ext.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
+				C742173C1EC1CF650007B4C3 /* Slide.swift in Sources */,
 				C7AE48B31EA5550B00C2096E /* ProductLine.swift in Sources */,
 				C7AE48041EA4FE7D00C2096E /* TabBarViewController.swift in Sources */,
 				C7AE48B01EA5550B00C2096E /* MediaTableViewCell.swift in Sources */,

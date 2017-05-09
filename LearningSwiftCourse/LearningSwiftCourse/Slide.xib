@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Slide" customModule="LearningSwiftCourse">
+            <connections>
+                <outlet property="backgroundImage" destination="AOx-SA-Ln7" id="BEg-x9-XID"/>
+                <outlet property="descriptionLabel" destination="thY-7n-wcD" id="9XI-G7-fm5"/>
+                <outlet property="titleLabel" destination="qxT-f7-BSb" id="6xx-zg-fAt"/>
+                <outlet property="view" destination="iN0-l3-epB" id="b45-yY-h7F"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slide0" translatesAutoresizingMaskIntoConstraints="NO" id="AOx-SA-Ln7">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxT-f7-BSb">
+                    <rect key="frame" x="40" y="120" width="295" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Eep-Zd-Hok"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thY-7n-wcD">
+                    <rect key="frame" x="40" y="164" width="295" height="203"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.66666666669999997" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <size key="shadowOffset" width="1" height="0.0"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="AOx-SA-Ln7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6L2-jc-Ocj"/>
+                <constraint firstAttribute="trailing" secondItem="thY-7n-wcD" secondAttribute="trailing" constant="40" id="CB6-y5-tp3"/>
+                <constraint firstAttribute="trailing" secondItem="AOx-SA-Ln7" secondAttribute="trailing" id="ISj-NA-IVI"/>
+                <constraint firstItem="thY-7n-wcD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="Mil-Zp-b3H"/>
+                <constraint firstItem="qxT-f7-BSb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="120" id="VWm-j5-c3F"/>
+                <constraint firstAttribute="bottom" secondItem="AOx-SA-Ln7" secondAttribute="bottom" id="W16-2n-rFe"/>
+                <constraint firstItem="qxT-f7-BSb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="XuA-QT-QZb"/>
+                <constraint firstItem="AOx-SA-Ln7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="b4E-gd-Y7S"/>
+                <constraint firstAttribute="bottom" secondItem="thY-7n-wcD" secondAttribute="bottom" constant="300" id="hQs-TE-79g"/>
+                <constraint firstItem="thY-7n-wcD" firstAttribute="top" secondItem="qxT-f7-BSb" secondAttribute="bottom" id="hkf-pR-UrO"/>
+                <constraint firstAttribute="trailing" secondItem="qxT-f7-BSb" secondAttribute="trailing" constant="40" id="nYI-3d-mpX"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="103.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="slide0" width="750" height="667"/>
+    </resources>
+</document>

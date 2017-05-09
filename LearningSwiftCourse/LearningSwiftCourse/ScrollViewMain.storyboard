@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jDQ-4e-wVF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scroll View Controller-->
+        <scene sceneID="iin-pN-HIN">
+            <objects>
+                <viewController storyboardIdentifier="ScrollViewController" id="jDQ-4e-wVF" customClass="ScrollViewController" customModule="LearningSwiftCourse" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9wE-eO-fXF"/>
+                        <viewControllerLayoutGuide type="bottom" id="uD6-2K-zfZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rnz-2Q-O4J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VXL-DL-Rqb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jDQ-4e-wVF" id="gYe-Js-bNO"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="T76-18-XRz">
+                                <rect key="frame" x="167.5" y="627" width="40" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="9Ki-wQ-LSd"/>
+                                    <constraint firstAttribute="height" constant="20" id="mga-UT-wSH"/>
+                                </constraints>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uD6-2K-zfZ" firstAttribute="top" secondItem="T76-18-XRz" secondAttribute="bottom" constant="20" id="5Zs-vM-JKO"/>
+                            <constraint firstAttribute="trailing" secondItem="VXL-DL-Rqb" secondAttribute="trailing" id="JMn-5N-Xwg"/>
+                            <constraint firstItem="VXL-DL-Rqb" firstAttribute="top" secondItem="Rnz-2Q-O4J" secondAttribute="top" id="T9S-IA-pb6"/>
+                            <constraint firstItem="VXL-DL-Rqb" firstAttribute="leading" secondItem="Rnz-2Q-O4J" secondAttribute="leading" id="dfT-3s-u4n"/>
+                            <constraint firstItem="uD6-2K-zfZ" firstAttribute="top" secondItem="VXL-DL-Rqb" secondAttribute="bottom" id="hht-i5-b0u"/>
+                            <constraint firstItem="T76-18-XRz" firstAttribute="centerX" secondItem="Rnz-2Q-O4J" secondAttribute="centerX" id="wMG-gw-GcV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="T76-18-XRz" id="36Y-pY-UYi"/>
+                        <outlet property="scrollView" destination="VXL-DL-Rqb" id="TP8-b8-9Hc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XI4-oH-67r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63.200000000000003" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
