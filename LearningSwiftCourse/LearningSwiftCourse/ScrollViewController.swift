@@ -60,6 +60,7 @@ class ScrollViewController: UIViewController {
             
             scrollView.addSubview(slide)
             slidesViews.append(slide)
+            
         }
         
         
@@ -104,20 +105,31 @@ extension ScrollViewController: UIScrollViewDelegate {
         let currentPage = Int(scrollView.contentOffset.x / UIScreen.main.bounds.size.width )
         pageControl.currentPage = currentPage
         
-        zoom(currentPage)
+//        for i in 0..<slidesViews.count {
+//            
+//            UIView.animate(withDuration: 0.0, delay: 0.0, options: [.beginFromCurrentState],
+//               animations: {[weak self] in
+//                self?.slidesViews[i].backgroundImage.transform = CGAffineTransform.identity 
+//            }, completion: { [weak self] _ in
+//                guard let this = self else { return }
+//                this.slidesViews[i].backgroundImage.layer.removeAllAnimations()
+//                this.slidesViews[i].backgroundImage.layoutIfNeeded()
+//            })
+//            
+//        }
+     
+        //zoom(currentPage)
     }
     
     func zoom (_ page:Int){
         
         //zoom in effect
         let imageView = slidesViews[page].backgroundImage
-        
+    
         UIView.animate(withDuration: 10.0, delay: 0.2, options: [.curveEaseInOut], animations: { 
-            
             imageView?.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }) { (isCompleted) in
             UIView.animate(withDuration: 10.0, delay: 0.2, options: [.curveEaseInOut], animations: { 
-                
                 imageView?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }) { (isCompleted) in
                 self.zoom(page)
@@ -128,7 +140,8 @@ extension ScrollViewController: UIScrollViewDelegate {
     
     //Parralax Effect
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let percent = Double(scrollView.contentOffset.x / scrollView.contentSize.width)
+//        let percent = Double(scrollView.contentOffset.x / scrollView.contentSize.width)
+      
 //        for i in 0..<slidesViews.count {
 //            let slide = slidesViews[i]
 //            let offset = Double(slide.backgroundImage.frame.size.width - UIScreen.main.bounds.size.width) / Double(slidesViews.count - 1)
