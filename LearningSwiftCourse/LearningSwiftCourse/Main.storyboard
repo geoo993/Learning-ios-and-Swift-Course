@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SSa-7R-bPp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SSa-7R-bPp">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hde-hc-WiD">
-                                <rect key="frame" x="56" y="92" width="208" height="30"/>
+                                <rect key="frame" x="56" y="50" width="208" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Color Change Example"/>
                                 <connections>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCo-Rn-IUa">
-                                <rect key="frame" x="56" y="162" width="208" height="30"/>
+                                <rect key="frame" x="56" y="110" width="208" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Navigation Bar Example"/>
                                 <connections>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hf6-6q-ARb">
-                                <rect key="frame" x="56" y="232" width="208" height="30"/>
+                                <rect key="frame" x="56" y="170" width="208" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Tab Bar Example"/>
                                 <connections>
@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I03-BH-AUL">
-                                <rect key="frame" x="56" y="302" width="208" height="30"/>
+                                <rect key="frame" x="56" y="230" width="208" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Table View Example"/>
                                 <connections>
@@ -55,29 +55,40 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQQ-gu-8qL">
-                                <rect key="frame" x="40" y="372" width="240" height="30"/>
+                                <rect key="frame" x="40" y="290" width="240" height="30"/>
                                 <state key="normal" title="Scroll View Parallax Effect"/>
                                 <connections>
                                     <segue destination="BZO-KN-9lZ" kind="show" id="Nb4-yV-7z8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qV2-nQ-O3r">
+                                <rect key="frame" x="56" y="350" width="208" height="30"/>
+                                <state key="normal" title="Audio Example"/>
+                                <connections>
+                                    <segue destination="Wxh-zS-m4p" kind="show" id="Lne-3d-q7F"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="I03-BH-AUL" firstAttribute="top" secondItem="hf6-6q-ARb" secondAttribute="bottom" constant="40" id="1rm-wo-zzJ"/>
+                            <constraint firstItem="I03-BH-AUL" firstAttribute="top" secondItem="hf6-6q-ARb" secondAttribute="bottom" constant="30" id="1rm-wo-zzJ"/>
+                            <constraint firstItem="qV2-nQ-O3r" firstAttribute="top" secondItem="EQQ-gu-8qL" secondAttribute="bottom" constant="30" id="5b5-so-mGc"/>
                             <constraint firstItem="EQQ-gu-8qL" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leading" constant="40" id="BsB-ZT-qRl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JCo-Rn-IUa" secondAttribute="trailing" constant="40" id="GJF-K2-SZM"/>
                             <constraint firstItem="hde-hc-WiD" firstAttribute="centerX" secondItem="rXk-rH-ayn" secondAttribute="centerX" id="GT8-8c-ab2"/>
-                            <constraint firstItem="hde-hc-WiD" firstAttribute="top" secondItem="xtQ-Az-Nk0" secondAttribute="bottom" constant="72" id="HEc-vo-L0n"/>
+                            <constraint firstItem="hde-hc-WiD" firstAttribute="top" secondItem="xtQ-Az-Nk0" secondAttribute="bottom" constant="30" id="HEc-vo-L0n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="I03-BH-AUL" secondAttribute="trailing" constant="40" id="Hmc-AX-DHj"/>
-                            <constraint firstItem="EQQ-gu-8qL" firstAttribute="top" secondItem="I03-BH-AUL" secondAttribute="bottom" constant="40" id="Ht0-Hx-8qO"/>
+                            <constraint firstItem="EQQ-gu-8qL" firstAttribute="top" secondItem="I03-BH-AUL" secondAttribute="bottom" constant="30" id="Ht0-Hx-8qO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qV2-nQ-O3r" secondAttribute="trailing" constant="40" id="Jt6-SM-Lvg"/>
                             <constraint firstItem="EQQ-gu-8qL" firstAttribute="centerX" secondItem="rXk-rH-ayn" secondAttribute="centerX" id="LcJ-Ew-fAx"/>
+                            <constraint firstItem="qV2-nQ-O3r" firstAttribute="centerX" secondItem="rXk-rH-ayn" secondAttribute="centerX" id="LkO-Oa-Y4n"/>
                             <constraint firstItem="I03-BH-AUL" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leadingMargin" constant="40" id="P6p-Qi-ABi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hde-hc-WiD" secondAttribute="trailing" constant="40" id="UmI-up-fZM"/>
-                            <constraint firstItem="hf6-6q-ARb" firstAttribute="top" secondItem="JCo-Rn-IUa" secondAttribute="bottom" constant="40" id="Z9P-6Z-tSu"/>
+                            <constraint firstItem="qV2-nQ-O3r" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leadingMargin" constant="40" id="XyB-WD-Bsj"/>
+                            <constraint firstItem="hf6-6q-ARb" firstAttribute="top" secondItem="JCo-Rn-IUa" secondAttribute="bottom" constant="30" id="Z9P-6Z-tSu"/>
                             <constraint firstItem="hf6-6q-ARb" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leadingMargin" constant="40" id="acR-Pj-sa4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hf6-6q-ARb" secondAttribute="trailing" constant="40" id="bDU-IF-lIJ"/>
-                            <constraint firstItem="JCo-Rn-IUa" firstAttribute="top" secondItem="hde-hc-WiD" secondAttribute="bottom" constant="40" id="em5-3E-ox7"/>
+                            <constraint firstItem="JCo-Rn-IUa" firstAttribute="top" secondItem="hde-hc-WiD" secondAttribute="bottom" constant="30" id="em5-3E-ox7"/>
                             <constraint firstItem="JCo-Rn-IUa" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leadingMargin" constant="40" id="hjf-OF-PZ3"/>
                             <constraint firstItem="I03-BH-AUL" firstAttribute="centerX" secondItem="rXk-rH-ayn" secondAttribute="centerX" id="l49-oT-0gI"/>
                             <constraint firstItem="JCo-Rn-IUa" firstAttribute="centerX" secondItem="rXk-rH-ayn" secondAttribute="centerX" id="o7t-GE-vUJ"/>
@@ -136,6 +147,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mx8-KB-oKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="847" y="184"/>
+        </scene>
+        <!--AudioCheckViewController-->
+        <scene sceneID="tHZ-WM-JZz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AudioMain" referencedIdentifier="AudioCheckViewController" id="Wxh-zS-m4p" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Akf-Fj-orU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810" y="368"/>
         </scene>
     </scenes>
 </document>

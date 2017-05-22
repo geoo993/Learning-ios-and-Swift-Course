@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio Check View Controller-->
+        <scene sceneID="hYP-KT-lXw">
+            <objects>
+                <viewController storyboardIdentifier="AudioCheckViewController" id="Umt-4T-bvW" customClass="AudioCheckViewController" customModule="LearningSwiftCourse" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fUw-Nk-jtw"/>
+                        <viewControllerLayoutGuide type="bottom" id="alj-Iw-EeZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0MN-oY-Nia">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53u-oc-EQR" userLabel="Play">
+                                <rect key="frame" x="146" y="120" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="dTq-cs-5ni"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="playicon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQF-At-Fjc" userLabel="Pause">
+                                <rect key="frame" x="146" y="240" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="iDG-5g-yKl"/>
+                                </constraints>
+                                <state key="normal" image="pauseicon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6et-QA-v0n" userLabel="Restart">
+                                <rect key="frame" x="146" y="360" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="fax-MO-A63"/>
+                                </constraints>
+                                <state key="normal" image="replayicon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtA-VT-3ow">
+                                <rect key="frame" x="146" y="480" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Yp6-VV-y86"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="stopicon"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NQF-At-Fjc" firstAttribute="leading" secondItem="0MN-oY-Nia" secondAttribute="leadingMargin" constant="130" id="3Fz-UN-40D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FtA-VT-3ow" secondAttribute="trailing" constant="133" id="3zh-2i-9X4"/>
+                            <constraint firstItem="FtA-VT-3ow" firstAttribute="leading" secondItem="0MN-oY-Nia" secondAttribute="leadingMargin" constant="130" id="EKe-zI-a5r"/>
+                            <constraint firstItem="NQF-At-Fjc" firstAttribute="top" secondItem="53u-oc-EQR" secondAttribute="bottom" constant="40" id="EwB-8m-MLZ"/>
+                            <constraint firstItem="53u-oc-EQR" firstAttribute="leading" secondItem="0MN-oY-Nia" secondAttribute="leadingMargin" constant="130" id="K3h-LJ-uAz"/>
+                            <constraint firstItem="6et-QA-v0n" firstAttribute="leading" secondItem="0MN-oY-Nia" secondAttribute="leadingMargin" constant="130" id="Kzf-kn-hfX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6et-QA-v0n" secondAttribute="trailing" constant="133" id="Lpz-d5-bhw"/>
+                            <constraint firstItem="FtA-VT-3ow" firstAttribute="top" secondItem="6et-QA-v0n" secondAttribute="bottom" constant="40" id="NkX-6b-9QS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="53u-oc-EQR" secondAttribute="trailing" constant="133" id="bca-Ms-qLg"/>
+                            <constraint firstItem="6et-QA-v0n" firstAttribute="top" secondItem="NQF-At-Fjc" secondAttribute="bottom" constant="40" id="hMM-wg-tjZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NQF-At-Fjc" secondAttribute="trailing" constant="133" id="tRv-Jg-7Bg"/>
+                            <constraint firstItem="53u-oc-EQR" firstAttribute="top" secondItem="fUw-Nk-jtw" secondAttribute="bottom" constant="100" id="vB1-9T-mhx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pause" destination="NQF-At-Fjc" id="eXz-LA-qjb"/>
+                        <outlet property="play" destination="53u-oc-EQR" id="43w-ga-8rT"/>
+                        <outlet property="restart" destination="6et-QA-v0n" id="vy9-0b-zs3"/>
+                        <outlet property="stop" destination="FtA-VT-3ow" id="fcD-OH-F4N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2h9-Zl-1RW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-41" y="-133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pauseicon" width="240" height="240"/>
+        <image name="playicon" width="240" height="240"/>
+        <image name="replayicon" width="240" height="240"/>
+        <image name="stopicon" width="240" height="240"/>
+    </resources>
+</document>

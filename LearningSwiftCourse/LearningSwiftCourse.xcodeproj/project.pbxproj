@@ -62,6 +62,9 @@
 		C7AE48DF1EA6141200C2096E /* AddMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48DE1EA6141200C2096E /* AddMediaViewController.swift */; };
 		C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */ = {isa = PBXBuildFile; fileRef = C7C951731EA3E08D005DFE3B /* Architecture.png */; };
 		C7C9518E1EA40DD6005DFE3B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C9518D1EA40DD6005DFE3B /* FirstViewController.swift */; };
+		C7E387DC1ED2F2DC000DCE15 /* AudioCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E387DB1ED2F2DC000DCE15 /* AudioCheckViewController.swift */; };
+		C7E387DE1ED2F2FF000DCE15 /* AudioMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E387DD1ED2F2FF000DCE15 /* AudioMain.storyboard */; };
+		C7E387E01ED2F5A9000DCE15 /* brooks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C7E387DF1ED2F5A9000DCE15 /* brooks.mp3 */; };
 		C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -360,6 +363,10 @@
 		C7AE48DE1EA6141200C2096E /* AddMediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMediaViewController.swift; sourceTree = "<group>"; };
 		C7C951731EA3E08D005DFE3B /* Architecture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Architecture.png; sourceTree = "<group>"; };
 		C7C9518D1EA40DD6005DFE3B /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		C7E387DB1ED2F2DC000DCE15 /* AudioCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioCheckViewController.swift; sourceTree = "<group>"; };
+		C7E387DD1ED2F2FF000DCE15 /* AudioMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioMain.storyboard; sourceTree = "<group>"; };
+		C7E387DF1ED2F5A9000DCE15 /* brooks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = brooks.mp3; sourceTree = "<group>"; };
+		C7E3886E1ED3055F000DCE15 /* LearningSwiftCourse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearningSwiftCourse.entitlements; sourceTree = "<group>"; };
 		C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -400,6 +407,7 @@
 				C72E27B81E9ED9EB0064E01B /* LearningSwiftCourseTests */,
 				C72E27C31E9ED9EB0064E01B /* LearningSwiftCourseUITests */,
 				C72E27A21E9ED9EB0064E01B /* Products */,
+				C7E3886B1ED3055F000DCE15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -416,7 +424,9 @@
 		C72E27A31E9ED9EB0064E01B /* LearningSwiftCourse */ = {
 			isa = PBXGroup;
 			children = (
+				C7E3886E1ED3055F000DCE15 /* LearningSwiftCourse.entitlements */,
 				C7AE48D11EA5638800C2096E /* Extensions */,
+				C7E387C51ED2F2B2000DCE15 /* AudioExample */,
 				C7AE48961EA54C4100C2096E /* TableExample */,
 				C765C2731EA4E6C000F5FE90 /* NavBarExample */,
 				C765C26E1EA4E03600F5FE90 /* TabBarExample */,
@@ -606,6 +616,23 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		C7E387C51ED2F2B2000DCE15 /* AudioExample */ = {
+			isa = PBXGroup;
+			children = (
+				C7E387DB1ED2F2DC000DCE15 /* AudioCheckViewController.swift */,
+				C7E387DF1ED2F5A9000DCE15 /* brooks.mp3 */,
+				C7E387DD1ED2F2FF000DCE15 /* AudioMain.storyboard */,
+			);
+			name = AudioExample;
+			sourceTree = "<group>";
+		};
+		C7E3886B1ED3055F000DCE15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -681,6 +708,14 @@
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 4Q93294747;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+						};
 					};
 					C72E27B41E9ED9EB0064E01B = {
 						CreatedOnToolsVersion = 8.3.1;
@@ -919,10 +954,12 @@
 				C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */,
 				C74217341EC1C27C0007B4C3 /* ScrollViewMain.storyboard in Resources */,
 				C74217CE1EC1F34C0007B4C3 /* slide15.gif in Resources */,
+				C7E387DE1ED2F2FF000DCE15 /* AudioMain.storyboard in Resources */,
 				C74217D01EC1F36A0007B4C3 /* slide16.gif in Resources */,
 				C742173E1EC1CF740007B4C3 /* Slide.xib in Resources */,
 				C74217D21EC1F37A0007B4C3 /* slide18.gif in Resources */,
 				C74217D61EC1F4090007B4C3 /* slide17.gif in Resources */,
+				C7E387E01ED2F5A9000DCE15 /* brooks.mp3 in Resources */,
 				C765C26C1EA4DFD400F5FE90 /* TabBarMain.storyboard in Resources */,
 				C72E27AC1E9ED9EB0064E01B /* Assets.xcassets in Resources */,
 				C74217381EC1C8520007B4C3 /* slides_info.plist in Resources */,
@@ -958,6 +995,7 @@
 				C742173A1EC1CA400007B4C3 /* SlidesInfoModel.swift in Sources */,
 				C7AE489E1EA54D6B00C2096E /* MediaTableViewController.swift in Sources */,
 				C765C27B1EA4E77000F5FE90 /* NavigationViewController.swift in Sources */,
+				C7E387DC1ED2F2DC000DCE15 /* AudioCheckViewController.swift in Sources */,
 				C7AE48D51EA563A400C2096E /* Math+Ext.swift in Sources */,
 				C7AE48A71EA5531A00C2096E /* ChosenMediaTableViewController.swift in Sources */,
 				C7C9518E1EA40DD6005DFE3B /* FirstViewController.swift in Sources */,
