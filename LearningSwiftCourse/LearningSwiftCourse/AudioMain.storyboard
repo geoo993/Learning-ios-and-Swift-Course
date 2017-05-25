@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,56 +20,71 @@
                         <viewControllerLayoutGuide type="bottom" id="alj-Iw-EeZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0MN-oY-Nia">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53u-oc-EQR" userLabel="Play">
-                                <rect key="frame" x="146" y="120" width="80" height="80"/>
+                                <rect key="frame" x="130" y="70" width="60" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="dTq-cs-5ni"/>
+                                    <constraint firstAttribute="width" secondItem="53u-oc-EQR" secondAttribute="height" multiplier="1:1" id="WYq-CJ-6LD"/>
+                                    <constraint firstAttribute="height" constant="60" id="wme-YV-PHC"/>
+                                    <constraint firstAttribute="width" constant="60" id="z2p-cC-J6h"/>
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="playicon"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQF-At-Fjc" userLabel="Pause">
-                                <rect key="frame" x="146" y="240" width="80" height="80"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="iDG-5g-yKl"/>
-                                </constraints>
-                                <state key="normal" image="pauseicon"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6et-QA-v0n" userLabel="Restart">
-                                <rect key="frame" x="146" y="360" width="80" height="80"/>
+                                <rect key="frame" x="130" y="270" width="60" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="fax-MO-A63"/>
+                                    <constraint firstAttribute="width" secondItem="6et-QA-v0n" secondAttribute="height" multiplier="1:1" id="egl-tf-mb8"/>
+                                    <constraint firstAttribute="width" constant="60" id="g2t-nE-WgM"/>
+                                    <constraint firstAttribute="height" constant="60" id="tLq-Un-wqA"/>
                                 </constraints>
                                 <state key="normal" image="replayicon"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qw1-0z-eZe">
+                                <rect key="frame" x="136" y="528" width="48" height="30"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="homebutton:" destination="Umt-4T-bvW" eventType="touchUpInside" id="pen-AA-ueJ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtA-VT-3ow">
-                                <rect key="frame" x="146" y="480" width="80" height="80"/>
+                                <rect key="frame" x="130" y="370" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Yp6-VV-y86"/>
+                                    <constraint firstAttribute="width" secondItem="FtA-VT-3ow" secondAttribute="height" multiplier="1:1" id="LQK-92-Efw"/>
+                                    <constraint firstAttribute="width" constant="60" id="NUM-eg-AHG"/>
+                                    <constraint firstAttribute="height" constant="60" id="mnQ-6b-X57"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="stopicon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQF-At-Fjc" userLabel="Pause">
+                                <rect key="frame" x="130" y="170" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="60j-fI-eHT"/>
+                                    <constraint firstAttribute="width" secondItem="NQF-At-Fjc" secondAttribute="height" multiplier="1:1" id="Pfe-4S-DJn"/>
+                                    <constraint firstAttribute="height" constant="60" id="QY8-gi-MNP"/>
+                                </constraints>
+                                <state key="normal" image="pauseicon"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NQF-At-Fjc" firstAttribute="leading" secondItem="0MN-oY-Nia" secondAttribute="leadingMargin" constant="130" id="3Fz-UN-40D"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FtA-VT-3ow" secondAttribute="trailing" constant="133" id="3zh-2i-9X4"/>
-                            <constraint firstItem="FtA-VT-3ow" firstAttribute="leading" secondItem="0MN-oY-Nia" secondAttribute="leadingMargin" constant="130" id="EKe-zI-a5r"/>
-                            <constraint firstItem="NQF-At-Fjc" firstAttribute="top" secondItem="53u-oc-EQR" secondAttribute="bottom" constant="40" id="EwB-8m-MLZ"/>
-                            <constraint firstItem="53u-oc-EQR" firstAttribute="leading" secondItem="0MN-oY-Nia" secondAttribute="leadingMargin" constant="130" id="K3h-LJ-uAz"/>
-                            <constraint firstItem="6et-QA-v0n" firstAttribute="leading" secondItem="0MN-oY-Nia" secondAttribute="leadingMargin" constant="130" id="Kzf-kn-hfX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6et-QA-v0n" secondAttribute="trailing" constant="133" id="Lpz-d5-bhw"/>
-                            <constraint firstItem="FtA-VT-3ow" firstAttribute="top" secondItem="6et-QA-v0n" secondAttribute="bottom" constant="40" id="NkX-6b-9QS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="53u-oc-EQR" secondAttribute="trailing" constant="133" id="bca-Ms-qLg"/>
-                            <constraint firstItem="6et-QA-v0n" firstAttribute="top" secondItem="NQF-At-Fjc" secondAttribute="bottom" constant="40" id="hMM-wg-tjZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NQF-At-Fjc" secondAttribute="trailing" constant="133" id="tRv-Jg-7Bg"/>
-                            <constraint firstItem="53u-oc-EQR" firstAttribute="top" secondItem="fUw-Nk-jtw" secondAttribute="bottom" constant="100" id="vB1-9T-mhx"/>
+                            <constraint firstItem="Qw1-0z-eZe" firstAttribute="leading" secondItem="0MN-oY-Nia" secondAttribute="leadingMargin" constant="120" id="5pT-wC-viU"/>
+                            <constraint firstItem="6et-QA-v0n" firstAttribute="centerX" secondItem="0MN-oY-Nia" secondAttribute="centerX" id="AOp-iC-tSP"/>
+                            <constraint firstItem="53u-oc-EQR" firstAttribute="top" secondItem="fUw-Nk-jtw" secondAttribute="bottom" constant="50" id="Ec9-eV-8j8"/>
+                            <constraint firstItem="FtA-VT-3ow" firstAttribute="centerX" secondItem="0MN-oY-Nia" secondAttribute="centerX" id="Ino-jI-1Qs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qw1-0z-eZe" secondAttribute="trailing" constant="120" id="TcM-uC-QdM"/>
+                            <constraint firstItem="alj-Iw-EeZ" firstAttribute="top" secondItem="Qw1-0z-eZe" secondAttribute="bottom" constant="10" id="cwS-vX-QWx"/>
+                            <constraint firstItem="NQF-At-Fjc" firstAttribute="centerX" secondItem="0MN-oY-Nia" secondAttribute="centerX" id="dCY-Na-lIB"/>
+                            <constraint firstItem="Qw1-0z-eZe" firstAttribute="centerX" secondItem="0MN-oY-Nia" secondAttribute="centerX" id="enR-3l-LQQ"/>
+                            <constraint firstItem="6et-QA-v0n" firstAttribute="top" secondItem="NQF-At-Fjc" secondAttribute="bottom" constant="40" id="gfg-jA-1YW"/>
+                            <constraint firstItem="NQF-At-Fjc" firstAttribute="top" secondItem="53u-oc-EQR" secondAttribute="bottom" constant="40" id="mEG-b7-spq"/>
+                            <constraint firstItem="FtA-VT-3ow" firstAttribute="top" secondItem="6et-QA-v0n" secondAttribute="bottom" constant="40" id="r76-OF-lby"/>
+                            <constraint firstItem="53u-oc-EQR" firstAttribute="centerX" secondItem="0MN-oY-Nia" secondAttribute="centerX" id="t0N-jr-goC"/>
                         </constraints>
                     </view>
                     <connections>

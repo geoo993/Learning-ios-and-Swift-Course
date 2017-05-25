@@ -10,35 +10,37 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
 
-    var model:TabBarModel!
-    var homeViewController: MainViewController!
+    var model:TabBarModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         model = TabBarModel()
         // Do any additional setup after loading the view.
-        
-        homeViewController = MainViewController()
-        self.viewControllers?.append(homeViewController)
-        let item3 = UITabBarItem(title: "Home", image: nil, tag: 2)
-        homeViewController.tabBarItem = item3
-        
-        self.homeViewController = nil
+       
     }
 
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         //This method will be called when user changes tab.
         
         if (item.title == "Home"){
-            self.removeFromParentViewController()
-            self.homeViewController = nil
             dismiss(animated: true) { 
-                self.viewControllers?.remove(at: 2)
+                self.viewControllers?.removeAll()
                 print("tab bar controller dismissed, now going to home page")
             }
             
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let emptyViewController = EmptyViewController()
+        self.viewControllers?.append(emptyViewController)
+        
+        let item3 = UITabBarItem(title: "Home", image: nil, tag: 2)
+        emptyViewController.tabBarItem = item3
+            
     }
    
     override func didReceiveMemoryWarning() {
@@ -48,7 +50,7 @@ class TabBarViewController: UITabBarController {
     
 
     deinit {
-        print("Tab Bar controller is \(#function)")
+        print("Tab Bar view controller is \(#function)")
     }
     
     /*

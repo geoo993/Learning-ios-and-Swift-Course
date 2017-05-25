@@ -15,6 +15,13 @@ class ScrollViewController: UIViewController {
     
     @IBOutlet weak var pageControl: UIPageControl!
     
+    @IBAction func homebutton(_ sender: Any) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -83,6 +90,10 @@ class ScrollViewController: UIViewController {
         
         //This way the first slide will also begin to animate the Zoom effect
         scrollViewDidEndDecelerating(scrollView)
+    }
+    
+    deinit {
+        print("Scroll view controller is \(#function)")
     }
     
     

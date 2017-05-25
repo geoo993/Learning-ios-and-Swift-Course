@@ -22,56 +22,131 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beachimage" translatesAutoresizingMaskIntoConstraints="NO" id="AOa-Yc-2qD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hde-hc-WiD">
                                 <rect key="frame" x="56" y="50" width="208" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Color Change Example"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <state key="normal" title="Color Change Example">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="nsB-wP-ajI" kind="show" identifier="" id="ZY4-rr-vMw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCo-Rn-IUa">
                                 <rect key="frame" x="56" y="110" width="208" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Navigation Bar Example"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <state key="normal" title="Navigation Bar Example">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="rmP-nS-sG7" kind="show" identifier="" id="teI-BE-Dd1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hf6-6q-ARb">
                                 <rect key="frame" x="56" y="170" width="208" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Tab Bar Example"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <state key="normal" title="Tab Bar Example">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="I6b-4W-71Y" kind="show" identifier="" id="FnP-B0-UuQ"/>
+                                    <segue destination="I6b-4W-71Y" kind="show" identifier="tabbarviewsegue" id="FnP-B0-UuQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I03-BH-AUL">
                                 <rect key="frame" x="56" y="230" width="208" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Table View Example"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <state key="normal" title="Table View Example">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="KgH-Rl-rox" kind="show" id="lGw-py-a6U"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQQ-gu-8qL">
                                 <rect key="frame" x="40" y="290" width="240" height="30"/>
-                                <state key="normal" title="Scroll View Parallax Effect"/>
+                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <state key="normal" title="Scroll View Parallax Effect">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="BZO-KN-9lZ" kind="show" id="Nb4-yV-7z8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qV2-nQ-O3r">
                                 <rect key="frame" x="56" y="350" width="208" height="30"/>
-                                <state key="normal" title="Audio Example"/>
+                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <state key="normal" title="Audio Example">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="Wxh-zS-m4p" kind="show" id="Lne-3d-q7F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYI-de-8Zf">
+                                <rect key="frame" x="56" y="410" width="208" height="30"/>
+                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <state key="normal" title="Carousel Views Example">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="2sO-Yp-iS1" kind="show" id="7p4-1T-X24"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoM-2K-nrs">
+                                <rect key="frame" x="56" y="480" width="208" height="30"/>
+                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <state key="normal" title="BBC iPlayer Example">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dHi-sb-Nxr" kind="show" id="oMO-jo-tDv"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="H40-NY-4NP" firstAttribute="top" secondItem="AOa-Yc-2qD" secondAttribute="bottom" id="1h6-jW-krc"/>
                             <constraint firstItem="I03-BH-AUL" firstAttribute="top" secondItem="hf6-6q-ARb" secondAttribute="bottom" constant="30" id="1rm-wo-zzJ"/>
+                            <constraint firstItem="AOa-Yc-2qD" firstAttribute="centerY" secondItem="rXk-rH-ayn" secondAttribute="centerY" id="3cY-fg-6cV"/>
                             <constraint firstItem="qV2-nQ-O3r" firstAttribute="top" secondItem="EQQ-gu-8qL" secondAttribute="bottom" constant="30" id="5b5-so-mGc"/>
                             <constraint firstItem="EQQ-gu-8qL" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leading" constant="40" id="BsB-ZT-qRl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JCo-Rn-IUa" secondAttribute="trailing" constant="40" id="GJF-K2-SZM"/>
@@ -82,25 +157,40 @@
                             <constraint firstAttribute="trailingMargin" secondItem="qV2-nQ-O3r" secondAttribute="trailing" constant="40" id="Jt6-SM-Lvg"/>
                             <constraint firstItem="EQQ-gu-8qL" firstAttribute="centerX" secondItem="rXk-rH-ayn" secondAttribute="centerX" id="LcJ-Ew-fAx"/>
                             <constraint firstItem="qV2-nQ-O3r" firstAttribute="centerX" secondItem="rXk-rH-ayn" secondAttribute="centerX" id="LkO-Oa-Y4n"/>
+                            <constraint firstItem="PoM-2K-nrs" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leadingMargin" constant="40" id="Mtx-QF-zxK"/>
                             <constraint firstItem="I03-BH-AUL" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leadingMargin" constant="40" id="P6p-Qi-ABi"/>
+                            <constraint firstItem="lYI-de-8Zf" firstAttribute="top" secondItem="qV2-nQ-O3r" secondAttribute="bottom" constant="30" id="T1Q-jT-Gck"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hde-hc-WiD" secondAttribute="trailing" constant="40" id="UmI-up-fZM"/>
                             <constraint firstItem="qV2-nQ-O3r" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leadingMargin" constant="40" id="XyB-WD-Bsj"/>
                             <constraint firstItem="hf6-6q-ARb" firstAttribute="top" secondItem="JCo-Rn-IUa" secondAttribute="bottom" constant="30" id="Z9P-6Z-tSu"/>
+                            <constraint firstItem="AOa-Yc-2qD" firstAttribute="centerX" secondItem="rXk-rH-ayn" secondAttribute="centerX" id="a9g-R1-THT"/>
                             <constraint firstItem="hf6-6q-ARb" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leadingMargin" constant="40" id="acR-Pj-sa4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hf6-6q-ARb" secondAttribute="trailing" constant="40" id="bDU-IF-lIJ"/>
+                            <constraint firstItem="AOa-Yc-2qD" firstAttribute="top" secondItem="rXk-rH-ayn" secondAttribute="top" id="bz0-Y7-dqX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lYI-de-8Zf" secondAttribute="trailing" constant="40" id="cQC-nS-0Ry"/>
                             <constraint firstItem="JCo-Rn-IUa" firstAttribute="top" secondItem="hde-hc-WiD" secondAttribute="bottom" constant="30" id="em5-3E-ox7"/>
+                            <constraint firstItem="lYI-de-8Zf" firstAttribute="centerX" secondItem="rXk-rH-ayn" secondAttribute="centerX" id="fm3-dz-GqC"/>
+                            <constraint firstAttribute="trailing" secondItem="AOa-Yc-2qD" secondAttribute="trailing" id="gXu-u1-Isq"/>
                             <constraint firstItem="JCo-Rn-IUa" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leadingMargin" constant="40" id="hjf-OF-PZ3"/>
+                            <constraint firstItem="PoM-2K-nrs" firstAttribute="top" secondItem="lYI-de-8Zf" secondAttribute="bottom" constant="40" id="htr-1R-mry"/>
+                            <constraint firstItem="lYI-de-8Zf" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leadingMargin" constant="40" id="kGB-mB-zhk"/>
                             <constraint firstItem="I03-BH-AUL" firstAttribute="centerX" secondItem="rXk-rH-ayn" secondAttribute="centerX" id="l49-oT-0gI"/>
+                            <constraint firstItem="AOa-Yc-2qD" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leading" id="lvD-NI-qeV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PoM-2K-nrs" secondAttribute="trailing" constant="40" id="nVL-yu-SKR"/>
                             <constraint firstItem="JCo-Rn-IUa" firstAttribute="centerX" secondItem="rXk-rH-ayn" secondAttribute="centerX" id="o7t-GE-vUJ"/>
                             <constraint firstAttribute="trailing" secondItem="EQQ-gu-8qL" secondAttribute="trailing" constant="40" id="s6X-rO-yB1"/>
+                            <constraint firstItem="PoM-2K-nrs" firstAttribute="centerX" secondItem="rXk-rH-ayn" secondAttribute="centerX" id="tRS-V4-7gg"/>
                             <constraint firstItem="hde-hc-WiD" firstAttribute="leading" secondItem="rXk-rH-ayn" secondAttribute="leadingMargin" constant="40" id="w66-4w-6tK"/>
                             <constraint firstItem="hf6-6q-ARb" firstAttribute="centerX" secondItem="rXk-rH-ayn" secondAttribute="centerX" id="zJ1-15-Kvj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainImageView" destination="AOa-Yc-2qD" id="dpe-4U-n6M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5YW-ch-RDG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.199999999999999" y="-76.011994002998506"/>
+            <point key="canvasLocation" x="-24.375" y="-76.056338028169009"/>
         </scene>
         <!--FirstViewController-->
         <scene sceneID="4c5-04-MPy">
@@ -154,7 +244,26 @@
                 <viewControllerPlaceholder storyboardName="AudioMain" referencedIdentifier="AudioCheckViewController" id="Wxh-zS-m4p" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Akf-Fj-orU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810" y="368"/>
+            <point key="canvasLocation" x="873" y="285"/>
+        </scene>
+        <!--CarouselViewController-->
+        <scene sceneID="mZf-q1-2J7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CarouselMain" referencedIdentifier="CarouselViewController" id="2sO-Yp-iS1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yih-aT-O2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="427"/>
+        </scene>
+        <!--BBCiPlayerViewController-->
+        <scene sceneID="NeZ-YH-Ryu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BBCiPlayerMain" referencedIdentifier="BBCiPlayerViewController" id="dHi-sb-Nxr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K8W-EC-kSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="458"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="beachimage" width="768" height="1280"/>
+    </resources>
 </document>

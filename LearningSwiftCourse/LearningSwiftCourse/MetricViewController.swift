@@ -25,7 +25,7 @@ class MetricViewController: UIViewController {
         if let strCentimeters = sender.text {
             //convert text to double and send to the model
             let centimetersTextInDouble = NSString(string: strCentimeters).doubleValue
-            tabs.model.centimeters = centimetersTextInDouble
+            tabs.model?.centimeters = centimetersTextInDouble
             
             //update the view's controls
             update()
@@ -34,9 +34,12 @@ class MetricViewController: UIViewController {
     }
     
     func update(){
-        centimetersTextfield.text = String(format: "%f", tabs.model.centimeters)
-        metersLabel.text = String(format: "%f", tabs.model.meters)
-        kilometersLabel.text = String(format: "%f", tabs.model.kilometers)
+        
+        if let model = tabs.model {
+            centimetersTextfield.text = String(format: "%f", model.centimeters)
+            metersLabel.text = String(format: "%f", model.meters)
+            kilometersLabel.text = String(format: "%f", model.kilometers)
+        }
     }
     
     override func viewDidLoad() {

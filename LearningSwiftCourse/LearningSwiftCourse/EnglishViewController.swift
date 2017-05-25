@@ -26,7 +26,7 @@ class EnglishViewController: UIViewController {
         
             //convert text to double and send to the model:
             let inchesInDouble = NSString(string: strInches).doubleValue
-            tabs.model.inches = inchesInDouble
+            tabs.model?.inches = inchesInDouble
             
             //update the view's controls
             update()
@@ -42,9 +42,11 @@ class EnglishViewController: UIViewController {
     }
 
     func update(){
-        inchesTextfield.text = String(format: "%f", tabs.model.inches)
-        feetLabel.text = String(format: "%f", tabs.model.feet)
-        milesLabel.text = String(format: "%f", tabs.model.miles)
+        if let model = tabs.model {
+            inchesTextfield.text = String(format: "%f", model.inches)
+            feetLabel.text = String(format: "%f", model.feet)
+            milesLabel.text = String(format: "%f", model.miles)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

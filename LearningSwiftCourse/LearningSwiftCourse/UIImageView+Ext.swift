@@ -83,37 +83,27 @@ extension UIImageView {
         
         
     }
+      
+    func blurImage()
+    {
+        let _ = self.subviews.filter({ $0 is UIVisualEffectView }).map({ $0.removeFromSuperview() })
+        
+        var blurEffect:UIBlurEffect = UIBlurEffect()
+        if #available(iOS 10.0, *) { //iOS 10.0 and above
+            blurEffect = UIBlurEffect(style: UIBlurEffectStyle.prominent)//prominent,regular,extraLight, light, dark
+        } else { //iOS 8.0 and above
+            blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark) //extraLight, light, dark
+        }
+        
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
+        
+        //self.addSubview(blurEffectView)
+        self.insertSubview(blurEffectView, at: 0) 
+        
+    }
     
-    
-    /*
-     // Creating a session object with the default configuration.
-     // You can read more about it here https://developer.apple.com/reference/foundation/urlsessionconfiguration
-     let session = URLSession(configuration: .default)
-     
-     // Define a download task. The download task will download the contents of the URL as a Data object and then you can do what you wish with that data.
-     let downloadPicTask = session.dataTask(with: catPictureURL) { (data, response, error) in
-     // The download has finished.
-     if let e = error {
-     print("Error downloading cat picture: \(e)")
-     } else {
-     // No errors found.
-     // It would be weird if we didn't have a response, so check for that too.
-     if let res = response as? HTTPURLResponse {
-     print("Downloaded cat picture with response code \(res.statusCode)")
-     if let imageData = data {
-     // Finally convert that Data into an image and do what you wish with it.
-     let image = UIImage(data: imageData)
-     // Do something with your image.
-     self.imageviewNewItemImage.image = image
-     } else {
-     print("Couldn't get image: Image is nil")
-     }
-     } else {
-     print("Couldn't get response code for some reason")
-     }
-     }
-     }
-     downloadPicTask.resume()
-     */
     
 }

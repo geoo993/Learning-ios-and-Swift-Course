@@ -14,13 +14,21 @@ import RxCocoa
 class AudioCheckViewController: UIViewController {
 
     
-    var audioPlayer = AVAudioPlayer()
+    var audioPlayer : AVAudioPlayer?
     var bgColor = UIColor.red
     
     @IBOutlet weak var play: UIButton!
     @IBOutlet weak var pause: UIButton!
     @IBOutlet weak var restart: UIButton!
     @IBOutlet weak var stop: UIButton!
+    
+    @IBAction func homebutton(_ sender: Any) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+        
+    }
+    
     
     let disposeBag = DisposeBag()
     
@@ -30,6 +38,10 @@ class AudioCheckViewController: UIViewController {
         bgColor = UIColor.randomColor()
         view.backgroundColor = bgColor
         
+        if (audioPlayer == nil){
+            audioPlayer = AVAudioPlayer()
+        }
+        
         do {
           
             guard let path = Bundle.main.path(forResource: "brooks", ofType: "mp3") else {
@@ -37,7 +49,7 @@ class AudioCheckViewController: UIViewController {
                 return
             }
             audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: path ))
-            audioPlayer.prepareToPlay()
+            audioPlayer?.prepareToPlay()
             
             let audioSession = AVAudioSession.sharedInstance()
             do {
@@ -54,7 +66,7 @@ class AudioCheckViewController: UIViewController {
         play.rx.tap
         .subscribe(onNext: { [weak self] tap in
             guard let this = self else { return }
-            this.audioPlayer.play()
+            this.audioPlayer?.play()
                 
         }).addDisposableTo(disposeBag)
         
@@ -62,10 +74,13 @@ class AudioCheckViewController: UIViewController {
         pause.rx.tap
         .subscribe(onNext: { [weak self] tap in
             guard let this = self else { return }
-            if this.audioPlayer.isPlaying {
-                this.audioPlayer.pause()
-            }else{
-                
+            
+            if let isPlaying = (this.audioPlayer?.isPlaying) {
+                if isPlaying {
+                    this.audioPlayer?.pause()
+                }else{
+                    
+                }
             }
             
         }).addDisposableTo(disposeBag)
@@ -75,12 +90,14 @@ class AudioCheckViewController: UIViewController {
         .subscribe(onNext: { [weak self] tap in
             guard let this = self else { return }
             
-            if this.audioPlayer.isPlaying {
-                //this.audioPlayer.stop()
-                this.audioPlayer.currentTime = 0
-                this.audioPlayer.play()
-            }else{
-                this.audioPlayer.play()
+            if let isPlaying = (this.audioPlayer?.isPlaying) {
+                if isPlaying {
+                    //this.audioPlayer.stop()
+                    this.audioPlayer?.currentTime = 0
+                    this.audioPlayer?.play()
+                }else{
+                    this.audioPlayer?.play()
+                }
             }
         }).addDisposableTo(disposeBag)
         
@@ -89,11 +106,13 @@ class AudioCheckViewController: UIViewController {
         .subscribe(onNext: { [weak self] tap in
             guard let this = self else { return }
             
-            if this.audioPlayer.isPlaying {
-                this.audioPlayer.stop()
-                this.audioPlayer.currentTime = 0
-            }else{
-                this.audioPlayer.currentTime = 0
+            if let isPlaying = (this.audioPlayer?.isPlaying) {
+                if isPlaying {
+                    this.audioPlayer?.stop()
+                    this.audioPlayer?.currentTime = 0
+                }else{
+                    this.audioPlayer?.currentTime = 0
+                }
             }
         }).addDisposableTo(disposeBag)
         
@@ -104,7 +123,20 @@ class AudioCheckViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if audioPlayer != nil {
+            audioPlayer?.stop()
+            audioPlayer = nil
+        }
+    }
 
+    
+    deinit {
+        print("Audio view controller is \(#function)")
+    }
+    
     /*
     // MARK: - Navigation
 
