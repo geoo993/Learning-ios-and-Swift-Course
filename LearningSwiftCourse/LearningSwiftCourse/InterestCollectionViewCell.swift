@@ -35,7 +35,13 @@ public class InterestCollectionViewCell: UICollectionViewCell {
     
     public override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
         
+        self.layer.cornerRadius = 10
+        self.clipsToBounds = true
     }
     
 }

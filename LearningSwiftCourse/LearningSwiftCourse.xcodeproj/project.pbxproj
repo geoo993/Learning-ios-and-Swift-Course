@@ -40,6 +40,7 @@
 		C76E5C7B1ED639E500E2C4D3 /* CarouselMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76E5C7A1ED639E500E2C4D3 /* CarouselMain.storyboard */; };
 		C76E5C7D1ED6500B00E2C4D3 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C7C1ED6500B00E2C4D3 /* Interest.swift */; };
 		C76E5C801ED65C7400E2C4D3 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C7F1ED65C7400E2C4D3 /* InterestCollectionViewCell.swift */; };
+		C76E5EC21ED706ED00E2C4D3 /* UISearchBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5EC11ED706ED00E2C4D3 /* UISearchBar+Ext.swift */; };
 		C77E832A1EA25F4F000AC715 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83271EA25F18000AC715 /* RxGesture.framework */; };
 		C77E832B1EA25F4F000AC715 /* RxGesture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83271EA25F18000AC715 /* RxGesture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C77E832E1EA25F4F000AC715 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82F81EA25F08000AC715 /* RxSwift.framework */; };
@@ -356,6 +357,7 @@
 		C76E5C7A1ED639E500E2C4D3 /* CarouselMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CarouselMain.storyboard; sourceTree = "<group>"; };
 		C76E5C7C1ED6500B00E2C4D3 /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		C76E5C7F1ED65C7400E2C4D3 /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
+		C76E5EC11ED706ED00E2C4D3 /* UISearchBar+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Ext.swift"; sourceTree = "<group>"; };
 		C77E82D61EA25EF5000AC715 /* RxSwiftExt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxSwiftExt.xcodeproj; path = ../Carthage/Checkouts/RxSwiftExt/RxSwiftExt.xcodeproj; sourceTree = "<group>"; };
 		C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = ../Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
 		C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxGesture.xcodeproj; path = ../Carthage/Checkouts/RxGesture/RxGesture/RxGesture.xcodeproj; sourceTree = "<group>"; };
@@ -649,6 +651,7 @@
 				C76E5B461ED59FED00E2C4D3 /* UIView+Ext.swift */,
 				C76E5C711ED60AFC00E2C4D3 /* UIApplication+Ext.swift */,
 				C76E5C731ED60B6E00E2C4D3 /* UIWindow+Ext.swift */,
+				C76E5EC11ED706ED00E2C4D3 /* UISearchBar+Ext.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1060,6 +1063,7 @@
 				C7AE48A71EA5531A00C2096E /* ChosenMediaTableViewController.swift in Sources */,
 				C7C9518E1EA40DD6005DFE3B /* FirstViewController.swift in Sources */,
 				C7AE48B21EA5550B00C2096E /* Product.swift in Sources */,
+				C76E5EC21ED706ED00E2C4D3 /* UISearchBar+Ext.swift in Sources */,
 				C72E27A71E9ED9EB0064E01B /* ColorChangeViewController.swift in Sources */,
 				C78B2CE71EA6C74D00DB3967 /* UIImageView+Ext.swift in Sources */,
 				C74217CA1EC1F11A0007B4C3 /* UIImage+GIF.swift in Sources */,

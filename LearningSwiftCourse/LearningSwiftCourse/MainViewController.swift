@@ -13,6 +13,10 @@ class MainViewController: UIViewController
 
     @IBOutlet weak var mainImageView: UIImageView!
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

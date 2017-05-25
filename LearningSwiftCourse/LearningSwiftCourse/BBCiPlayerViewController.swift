@@ -10,6 +10,12 @@ import UIKit
 
 class BBCiPlayerViewController: UIViewController {
 
+    @IBAction func homebutton(_ sender: Any) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.randomColor()
@@ -22,7 +28,14 @@ class BBCiPlayerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+  
+    override func viewDidLayoutSubviews()
+    {
+        super.viewDidLayoutSubviews()
+    }
+   
+    
+    
     /*
     // MARK: - Navigation
 
@@ -33,4 +46,8 @@ class BBCiPlayerViewController: UIViewController {
     }
     */
 
+    deinit {
+        print("BBCiPlayer view controller is \(#function)")
+    }
+    
 }
