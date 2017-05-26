@@ -67,6 +67,7 @@ class CarouselViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     override func viewDidLayoutSubviews()
     {
         super.viewDidLayoutSubviews()
@@ -225,6 +226,7 @@ extension CarouselViewController: UITableViewDelegate {
         if doScrollToCell{
             
             let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+            
             let itemWidth = screenWidth - (contentInset.left * 2)
             let cellWidthIncludingSpacing = itemWidth + layout.minimumLineSpacing
             

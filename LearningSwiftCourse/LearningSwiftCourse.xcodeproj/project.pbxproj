@@ -26,6 +26,11 @@
 		C74217D01EC1F36A0007B4C3 /* slide16.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74217CF1EC1F36A0007B4C3 /* slide16.gif */; };
 		C74217D21EC1F37A0007B4C3 /* slide18.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74217D11EC1F37A0007B4C3 /* slide18.gif */; };
 		C74217D61EC1F4090007B4C3 /* slide17.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74217D51EC1F4090007B4C3 /* slide17.gif */; };
+		C74939841ED7747100555D31 /* InspirationalFilmsMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74939831ED7747100555D31 /* InspirationalFilmsMain.storyboard */; };
+		C74939861ED774C200555D31 /* InspirationalFilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74939851ED774C200555D31 /* InspirationalFilmsViewController.swift */; };
+		C749398A1ED7808000555D31 /* InspirationalFilmsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74939891ED7808000555D31 /* InspirationalFilmsCollectionViewCell.swift */; };
+		C749398D1ED782D500555D31 /* InspirationalFilms.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749398C1ED782D500555D31 /* InspirationalFilms.swift */; };
+		C749398F1ED7840D00555D31 /* InspirationalFilmsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749398E1ED7840D00555D31 /* InspirationalFilmsInfo.swift */; };
 		C765C26C1EA4DFD400F5FE90 /* TabBarMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C765C26B1EA4DFD400F5FE90 /* TabBarMain.storyboard */; };
 		C765C2701EA4E08600F5FE90 /* MetricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C26F1EA4E08600F5FE90 /* MetricViewController.swift */; };
 		C765C2721EA4E09F00F5FE90 /* EnglishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C2711EA4E09F00F5FE90 /* EnglishViewController.swift */; };
@@ -50,6 +55,7 @@
 		C77E83361EA25F4F000AC715 /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; };
 		C77E83371EA25F4F000AC715 /* RxSwiftExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C78B2CE71EA6C74D00DB3967 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B2CE61EA6C74D00DB3967 /* UIImageView+Ext.swift */; };
+		C7ACB3871ED8C0B8008B0E82 /* InspirationalFilmsImagesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ACB3861ED8C0B8008B0E82 /* InspirationalFilmsImagesScrollView.swift */; };
 		C7AE47ED1EA4FCE600C2096E /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE47EC1EA4FCE600C2096E /* TabBarModel.swift */; };
 		C7AE48041EA4FE7D00C2096E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48031EA4FE7D00C2096E /* TabBarViewController.swift */; };
 		C7AE48061EA51E8600C2096E /* NavBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48051EA51E8600C2096E /* NavBarModel.swift */; };
@@ -343,6 +349,11 @@
 		C74217CF1EC1F36A0007B4C3 /* slide16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = slide16.gif; sourceTree = "<group>"; };
 		C74217D11EC1F37A0007B4C3 /* slide18.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = slide18.gif; sourceTree = "<group>"; };
 		C74217D51EC1F4090007B4C3 /* slide17.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = slide17.gif; sourceTree = "<group>"; };
+		C74939831ED7747100555D31 /* InspirationalFilmsMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InspirationalFilmsMain.storyboard; sourceTree = "<group>"; };
+		C74939851ED774C200555D31 /* InspirationalFilmsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsViewController.swift; sourceTree = "<group>"; };
+		C74939891ED7808000555D31 /* InspirationalFilmsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsCollectionViewCell.swift; sourceTree = "<group>"; };
+		C749398C1ED782D500555D31 /* InspirationalFilms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilms.swift; sourceTree = "<group>"; };
+		C749398E1ED7840D00555D31 /* InspirationalFilmsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsInfo.swift; sourceTree = "<group>"; };
 		C765C26B1EA4DFD400F5FE90 /* TabBarMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBarMain.storyboard; sourceTree = "<group>"; };
 		C765C26F1EA4E08600F5FE90 /* MetricViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricViewController.swift; sourceTree = "<group>"; };
 		C765C2711EA4E09F00F5FE90 /* EnglishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnglishViewController.swift; sourceTree = "<group>"; };
@@ -362,6 +373,7 @@
 		C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = ../Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
 		C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxGesture.xcodeproj; path = ../Carthage/Checkouts/RxGesture/RxGesture/RxGesture.xcodeproj; sourceTree = "<group>"; };
 		C78B2CE61EA6C74D00DB3967 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		C7ACB3861ED8C0B8008B0E82 /* InspirationalFilmsImagesScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsImagesScrollView.swift; sourceTree = "<group>"; };
 		C7AE47EC1EA4FCE600C2096E /* TabBarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		C7AE48031EA4FE7D00C2096E /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C7AE48051EA51E8600C2096E /* NavBarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarModel.swift; sourceTree = "<group>"; };
@@ -455,6 +467,7 @@
 				C74217161EC1C0200007B4C3 /* ScrollViewExample */,
 				C765C26D1EA4E02700F5FE90 /* ColorsExample */,
 				C76E5C771ED639A500E2C4D3 /* CarouselViewsExample */,
+				C749396D1ED7729D00555D31 /* InspirationalFilmsExample */,
 				C7E8B1721ED454ED00FC912F /* BBCiPlayerExample */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
@@ -502,6 +515,26 @@
 				C74217CB1EC1F32B0007B4C3 /* slide19.gif */,
 			);
 			name = ScrollViewExample;
+			sourceTree = "<group>";
+		};
+		C749396D1ED7729D00555D31 /* InspirationalFilmsExample */ = {
+			isa = PBXGroup;
+			children = (
+				C749398B1ED7823200555D31 /* Model */,
+				C7ACB3701ED8C075008B0E82 /* Views */,
+				C74939851ED774C200555D31 /* InspirationalFilmsViewController.swift */,
+				C74939831ED7747100555D31 /* InspirationalFilmsMain.storyboard */,
+			);
+			name = InspirationalFilmsExample;
+			sourceTree = "<group>";
+		};
+		C749398B1ED7823200555D31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C749398C1ED782D500555D31 /* InspirationalFilms.swift */,
+				C749398E1ED7840D00555D31 /* InspirationalFilmsInfo.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		C765C26D1EA4E02700F5FE90 /* ColorsExample */ = {
@@ -612,6 +645,15 @@
 				C77E83291EA25F18000AC715 /* RxGesture.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C7ACB3701ED8C075008B0E82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C74939891ED7808000555D31 /* InspirationalFilmsCollectionViewCell.swift */,
+				C7ACB3861ED8C0B8008B0E82 /* InspirationalFilmsImagesScrollView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		C7AE48961EA54C4100C2096E /* TableExample */ = {
@@ -1025,6 +1067,7 @@
 				C7E8B18B1ED4552A00FC912F /* BBCiPlayerMain.storyboard in Resources */,
 				C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */,
 				C74217CC1EC1F32B0007B4C3 /* slide19.gif in Resources */,
+				C74939841ED7747100555D31 /* InspirationalFilmsMain.storyboard in Resources */,
 				C72E27AA1E9ED9EB0064E01B /* ColorsMain.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1060,7 +1103,9 @@
 				C7E387DC1ED2F2DC000DCE15 /* AudioCheckViewController.swift in Sources */,
 				C76E5C761ED6326A00E2C4D3 /* EmptyViewController.swift in Sources */,
 				C7AE48D51EA563A400C2096E /* Math+Ext.swift in Sources */,
+				C7ACB3871ED8C0B8008B0E82 /* InspirationalFilmsImagesScrollView.swift in Sources */,
 				C7AE48A71EA5531A00C2096E /* ChosenMediaTableViewController.swift in Sources */,
+				C749398A1ED7808000555D31 /* InspirationalFilmsCollectionViewCell.swift in Sources */,
 				C7C9518E1EA40DD6005DFE3B /* FirstViewController.swift in Sources */,
 				C7AE48B21EA5550B00C2096E /* Product.swift in Sources */,
 				C76E5EC21ED706ED00E2C4D3 /* UISearchBar+Ext.swift in Sources */,
@@ -1070,6 +1115,7 @@
 				C7AE48B11EA5550B00C2096E /* MediaType.swift in Sources */,
 				C765C27D1EA4E79B00F5FE90 /* RootViewController.swift in Sources */,
 				C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */,
+				C74939861ED774C200555D31 /* InspirationalFilmsViewController.swift in Sources */,
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
 				C74217361EC1C7A60007B4C3 /* ScrollViewController.swift in Sources */,
 				C7AE48A61EA5531A00C2096E /* ChosenMediaDetailedViewController.swift in Sources */,
@@ -1079,6 +1125,7 @@
 				C76E5C801ED65C7400E2C4D3 /* InterestCollectionViewCell.swift in Sources */,
 				C7E8B1891ED4551600FC912F /* BBCiPlayerViewController.swift in Sources */,
 				C76E5C721ED60AFC00E2C4D3 /* UIApplication+Ext.swift in Sources */,
+				C749398D1ED782D500555D31 /* InspirationalFilms.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
 				C76E5B471ED59FED00E2C4D3 /* UIView+Ext.swift in Sources */,
 				C742173C1EC1CF650007B4C3 /* Slide.swift in Sources */,
@@ -1090,6 +1137,7 @@
 				C7AE48DF1EA6141200C2096E /* AddMediaViewController.swift in Sources */,
 				C7AE48AF1EA5550B00C2096E /* MediaLayers.swift in Sources */,
 				C765C2701EA4E08600F5FE90 /* MetricViewController.swift in Sources */,
+				C749398F1ED7840D00555D31 /* InspirationalFilmsInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1270,6 +1318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.lexilabs.LearningSwiftCourse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1284,6 +1333,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.lexilabs.LearningSwiftCourse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

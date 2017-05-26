@@ -65,7 +65,7 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate
     func newEntryAdded(newEntryTitle:String, newEntryImage: UIImage, newEntryDscription: String) {
         print("title added: \(newEntryTitle), description added: \(newEntryDscription)")
         
-        let product = Product(title: newEntryTitle, description: newEntryDscription, image: newEntryImage, year: 2010, rating: ProductRating.Ok, genres: [Genres.None])
+        let product = Product(title: newEntryTitle, description: newEntryDscription, image: newEntryImage, year: 2010, rating: Rating.Ok, genres: [Genres.None])
         
         MediaLayers.getProducts.append(product)
         updateSections()

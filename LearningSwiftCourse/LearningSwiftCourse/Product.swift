@@ -9,36 +9,36 @@
 import Foundation
 import UIKit
 
-public enum ProductRating
+public enum Rating : String
 {
-    case Unrated
-    case Average
-    case Ok
-    case Good
-    case Excellent
-    case Brilliant
-    case Outstanding
+    case Unrated = "Unrated"
+    case Average = "Average" 
+    case Ok = "Ok"
+    case Good = "Good"
+    case Excellent = "Excellent"
+    case Brilliant = "Brilliant"
+    case Outstanding = "Outstanding"
 }
 
-public enum Genres
+public enum Genres : String
 {
-    case None
-    case Biography
-    case Crime
-    case Adventure
-    case Drama
-    case Action
-    case Horror
-    case History
-    case Comedy
-    case Animation
-    case Romance
-    case Thriller
-    case Family
-    case Fantasy
-    case Sport
-    case SciFi
-    case Documentary
+    case None = "None"
+    case Biography = "Biography"
+    case Crime = "Crime"
+    case Adventure = "Adventure"
+    case Drama = "Drama"
+    case Action = "Action"
+    case Horror = "Horror"
+    case History = "History"
+    case Comedy = "Comedy"
+    case Animation = "Animation"
+    case Romance = "Romance"
+    case Thriller = "Thriller"
+    case Family = "Family"
+    case Fantasy = "Fantasy"
+    case Sport = "Sport"
+    case SciFi = "SciFi"
+    case Documentary = "Documentary"
 }
 
 class Product {
@@ -46,11 +46,11 @@ class Product {
     var title: String
     var description : String
     var image : UIImage
-    var rating : ProductRating
+    var rating : Rating
     var year : Int
     var genres : [Genres]
    
-    init(title: String, description : String, imageName: String, year: Int, rating: ProductRating , genres: [Genres])
+    init(title: String, description : String, imageName: String, year: Int, rating: Rating , genres: [Genres])
     {
         self.title = title
         self.description = description
@@ -65,7 +65,7 @@ class Product {
         
     }
     
-    init(title: String, description : String, image: UIImage?, year: Int, rating: ProductRating , genres: [Genres])
+    init(title: String, description : String, image: UIImage?, year: Int, rating: Rating , genres: [Genres])
     {
         self.title = title
         self.description = description
