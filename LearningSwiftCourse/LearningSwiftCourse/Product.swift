@@ -39,6 +39,8 @@ public enum Genres : String
     case Sport = "Sport"
     case SciFi = "SciFi"
     case Documentary = "Documentary"
+    case Mystery = "Mystery"
+    case War = "War"
 }
 
 class Product {
