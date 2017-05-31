@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "TheFinestHours.jpg",
+      "filename" : "LordOfWar.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "TheFinestHours-1.jpg",
       "scale" : "2x"
     },
     {
