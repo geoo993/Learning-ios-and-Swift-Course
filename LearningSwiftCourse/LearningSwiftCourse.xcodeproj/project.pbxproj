@@ -94,6 +94,8 @@
 		C7EB75F81EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB75F71EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift */; };
 		C7F45E9E1EE41D20005CF986 /* TheWordsParkIntro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C7F45E9D1EE41377005CF986 /* TheWordsParkIntro.mp4 */; };
 		C7F45EA01EE41D9B005CF986 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F45E9F1EE41D9B005CF986 /* String+Ext.swift */; };
+		C7F45F4F1EE4BAFA005CF986 /* StorySmartiesMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7F45F4E1EE4BAFA005CF986 /* StorySmartiesMain.storyboard */; };
+		C7F45F511EE4BB18005CF986 /* StorySmartiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F45F501EE4BB18005CF986 /* StorySmartiesViewController.swift */; };
 		C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -446,6 +448,8 @@
 		C7EB75F71EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsLabelsScrollView.swift; sourceTree = "<group>"; };
 		C7F45E9D1EE41377005CF986 /* TheWordsParkIntro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = TheWordsParkIntro.mp4; path = ../../../../Desktop/InspirationslFilmsWithSubs/TheWords2012/TheWordsParkIntro.mp4; sourceTree = "<group>"; };
 		C7F45E9F1EE41D9B005CF986 /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		C7F45F4E1EE4BAFA005CF986 /* StorySmartiesMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StorySmartiesMain.storyboard; sourceTree = "<group>"; };
+		C7F45F501EE4BB18005CF986 /* StorySmartiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySmartiesViewController.swift; sourceTree = "<group>"; };
 		C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -515,6 +519,7 @@
 				C76E5C771ED639A500E2C4D3 /* CarouselViewsExample */,
 				C749396D1ED7729D00555D31 /* InspirationalFilmsExample */,
 				C7E8B1721ED454ED00FC912F /* VideoPlayerExample */,
+				C7F45F371EE4BAB7005CF986 /* StorySmartiesDesign */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
 				C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */,
@@ -804,6 +809,15 @@
 				C7F45E9D1EE41377005CF986 /* TheWordsParkIntro.mp4 */,
 			);
 			name = Videos;
+			sourceTree = "<group>";
+		};
+		C7F45F371EE4BAB7005CF986 /* StorySmartiesDesign */ = {
+			isa = PBXGroup;
+			children = (
+				C7F45F501EE4BB18005CF986 /* StorySmartiesViewController.swift */,
+				C7F45F4E1EE4BAFA005CF986 /* StorySmartiesMain.storyboard */,
+			);
+			name = StorySmartiesDesign;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1154,6 +1168,7 @@
 				C74217D61EC1F4090007B4C3 /* slide17.gif in Resources */,
 				C7E387E01ED2F5A9000DCE15 /* brooks.mp3 in Resources */,
 				C765C26C1EA4DFD400F5FE90 /* TabBarMain.storyboard in Resources */,
+				C7F45F4F1EE4BAFA005CF986 /* StorySmartiesMain.storyboard in Resources */,
 				C72E27AC1E9ED9EB0064E01B /* Assets.xcassets in Resources */,
 				C76E5C7B1ED639E500E2C4D3 /* CarouselMain.storyboard in Resources */,
 				C74217381EC1C8520007B4C3 /* slides_info.plist in Resources */,
@@ -1193,6 +1208,7 @@
 				C781C8B01EE2BB9D00DC9A7B /* Dictionary+Ext.swift in Sources */,
 				C7AE489E1EA54D6B00C2096E /* MediaTableViewController.swift in Sources */,
 				C76E5C791ED639D400E2C4D3 /* CarouselViewController.swift in Sources */,
+				C7F45F511EE4BB18005CF986 /* StorySmartiesViewController.swift in Sources */,
 				C76E5C7D1ED6500B00E2C4D3 /* Interest.swift in Sources */,
 				C765C27B1EA4E77000F5FE90 /* NavigationViewController.swift in Sources */,
 				C7E387DC1ED2F2DC000DCE15 /* AudioCheckViewController.swift in Sources */,

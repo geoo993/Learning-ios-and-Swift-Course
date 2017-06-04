@@ -16,6 +16,7 @@ private let reuseIdentifier = "MainCell"
 class MainCollectionViewController: UICollectionViewController {
 
     var views: [String: String] = [
+                           "StorySmartiesViewController":"StorySmartiesMain",
                            "VideoPlayerViewController":"VideoPlayerMain",
                            "AudioCheckViewController": "AudioMain",
                            "TableViewNavigationViewController": "TableViewMain",
