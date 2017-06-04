@@ -89,9 +89,11 @@
 		C7E387E01ED2F5A9000DCE15 /* brooks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C7E387DF1ED2F5A9000DCE15 /* brooks.mp3 */; };
 		C7E45A101EE2EEA300F7015C /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E45A0F1EE2EEA300F7015C /* UIButton+Ext.swift */; };
 		C7E45A281EE351BB00F7015C /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E45A271EE351BB00F7015C /* UITextField+Ext.swift */; };
-		C7E8B1891ED4551600FC912F /* BBCiPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E8B1881ED4551600FC912F /* BBCiPlayerViewController.swift */; };
-		C7E8B18B1ED4552A00FC912F /* BBCiPlayerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E8B18A1ED4552A00FC912F /* BBCiPlayerMain.storyboard */; };
+		C7E8B1891ED4551600FC912F /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E8B1881ED4551600FC912F /* VideoPlayerViewController.swift */; };
+		C7E8B18B1ED4552A00FC912F /* VideoPlayerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E8B18A1ED4552A00FC912F /* VideoPlayerMain.storyboard */; };
 		C7EB75F81EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB75F71EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift */; };
+		C7F45E9E1EE41D20005CF986 /* TheWordsParkIntro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C7F45E9D1EE41377005CF986 /* TheWordsParkIntro.mp4 */; };
+		C7F45EA01EE41D9B005CF986 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F45E9F1EE41D9B005CF986 /* String+Ext.swift */; };
 		C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -439,9 +441,11 @@
 		C7E3886E1ED3055F000DCE15 /* LearningSwiftCourse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearningSwiftCourse.entitlements; sourceTree = "<group>"; };
 		C7E45A0F1EE2EEA300F7015C /* UIButton+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		C7E45A271EE351BB00F7015C /* UITextField+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
-		C7E8B1881ED4551600FC912F /* BBCiPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBCiPlayerViewController.swift; sourceTree = "<group>"; };
-		C7E8B18A1ED4552A00FC912F /* BBCiPlayerMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BBCiPlayerMain.storyboard; sourceTree = "<group>"; };
+		C7E8B1881ED4551600FC912F /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		C7E8B18A1ED4552A00FC912F /* VideoPlayerMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoPlayerMain.storyboard; sourceTree = "<group>"; };
 		C7EB75F71EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsLabelsScrollView.swift; sourceTree = "<group>"; };
+		C7F45E9D1EE41377005CF986 /* TheWordsParkIntro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = TheWordsParkIntro.mp4; path = ../../../../Desktop/InspirationslFilmsWithSubs/TheWords2012/TheWordsParkIntro.mp4; sourceTree = "<group>"; };
+		C7F45E9F1EE41D9B005CF986 /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -510,17 +514,17 @@
 				C765C26D1EA4E02700F5FE90 /* ColorsExample */,
 				C76E5C771ED639A500E2C4D3 /* CarouselViewsExample */,
 				C749396D1ED7729D00555D31 /* InspirationalFilmsExample */,
-				C7E8B1721ED454ED00FC912F /* BBCiPlayerExample */,
+				C7E8B1721ED454ED00FC912F /* VideoPlayerExample */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
 				C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */,
 				C7BE65E31EE2A23E00A05286 /* MainCollectionViewCell.swift */,
 				C7AE488F1EA5327300C2096E /* Main.storyboard */,
 				C72E27AB1E9ED9EB0064E01B /* Assets.xcassets */,
+				C7C9515B1EA3E022005DFE3B /* Resources */,
 				C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */,
 				C72E27B01E9ED9EB0064E01B /* Info.plist */,
 				C72E27D21E9EDA0C0064E01B /* LearningSwift.playground */,
-				C7C9515B1EA3E022005DFE3B /* Resources */,
 			);
 			path = LearningSwiftCourse;
 			sourceTree = "<group>";
@@ -745,6 +749,7 @@
 				C7BE66F91EE2B30F00A05286 /* UIColor+Ext.swift */,
 				C7E45A0F1EE2EEA300F7015C /* UIButton+Ext.swift */,
 				C7E45A271EE351BB00F7015C /* UITextField+Ext.swift */,
+				C7F45E9F1EE41D9B005CF986 /* String+Ext.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -761,6 +766,7 @@
 		C7C9515B1EA3E022005DFE3B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C7F45E861EE41357005CF986 /* Videos */,
 				C7C951731EA3E08D005DFE3B /* Architecture.png */,
 			);
 			name = Resources;
@@ -783,13 +789,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C7E8B1721ED454ED00FC912F /* BBCiPlayerExample */ = {
+		C7E8B1721ED454ED00FC912F /* VideoPlayerExample */ = {
 			isa = PBXGroup;
 			children = (
-				C7E8B1881ED4551600FC912F /* BBCiPlayerViewController.swift */,
-				C7E8B18A1ED4552A00FC912F /* BBCiPlayerMain.storyboard */,
+				C7E8B1881ED4551600FC912F /* VideoPlayerViewController.swift */,
+				C7E8B18A1ED4552A00FC912F /* VideoPlayerMain.storyboard */,
 			);
-			name = BBCiPlayerExample;
+			name = VideoPlayerExample;
+			sourceTree = "<group>";
+		};
+		C7F45E861EE41357005CF986 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				C7F45E9D1EE41377005CF986 /* TheWordsParkIntro.mp4 */,
+			);
+			name = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1133,6 +1147,7 @@
 				C74217341EC1C27C0007B4C3 /* ScrollViewMain.storyboard in Resources */,
 				C74217CE1EC1F34C0007B4C3 /* slide15.gif in Resources */,
 				C7E387DE1ED2F2FF000DCE15 /* AudioMain.storyboard in Resources */,
+				C7F45E9E1EE41D20005CF986 /* TheWordsParkIntro.mp4 in Resources */,
 				C74217D01EC1F36A0007B4C3 /* slide16.gif in Resources */,
 				C742173E1EC1CF740007B4C3 /* Slide.xib in Resources */,
 				C74217D21EC1F37A0007B4C3 /* slide18.gif in Resources */,
@@ -1143,7 +1158,7 @@
 				C76E5C7B1ED639E500E2C4D3 /* CarouselMain.storyboard in Resources */,
 				C74217381EC1C8520007B4C3 /* slides_info.plist in Resources */,
 				C765C2751EA4E6E000F5FE90 /* NavBarMain.storyboard in Resources */,
-				C7E8B18B1ED4552A00FC912F /* BBCiPlayerMain.storyboard in Resources */,
+				C7E8B18B1ED4552A00FC912F /* VideoPlayerMain.storyboard in Resources */,
 				C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */,
 				C74217CC1EC1F32B0007B4C3 /* slide19.gif in Resources */,
 				C74939841ED7747100555D31 /* InspirationalFilmsMain.storyboard in Resources */,
@@ -1204,10 +1219,11 @@
 				C765C2721EA4E09F00F5FE90 /* EnglishViewController.swift in Sources */,
 				C7AE48D61EA563A400C2096E /* UIImage+Ext.swift in Sources */,
 				C76E5C801ED65C7400E2C4D3 /* InterestCollectionViewCell.swift in Sources */,
-				C7E8B1891ED4551600FC912F /* BBCiPlayerViewController.swift in Sources */,
+				C7E8B1891ED4551600FC912F /* VideoPlayerViewController.swift in Sources */,
 				C76E5C721ED60AFC00E2C4D3 /* UIApplication+Ext.swift in Sources */,
 				C7BE67861EE2B72900A05286 /* Generic+Ext.swift in Sources */,
 				C7E45A101EE2EEA300F7015C /* UIButton+Ext.swift in Sources */,
+				C7F45EA01EE41D9B005CF986 /* String+Ext.swift in Sources */,
 				C749398D1ED782D500555D31 /* InspirationalFilms.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
 				C7E45A281EE351BB00F7015C /* UITextField+Ext.swift in Sources */,

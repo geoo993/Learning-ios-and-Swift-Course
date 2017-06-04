@@ -152,7 +152,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buk-VM-vGN">
                                 <rect key="frame" x="56" y="440" width="208" height="30"/>
                                 <size key="titleShadowOffset" width="0.0" height="0.5"/>
-                                <state key="normal" title="BBC iPlayer Example">
+                                <state key="normal" title="Video Player Example">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -359,10 +359,10 @@
             </objects>
             <point key="canvasLocation" x="578" y="427"/>
         </scene>
-        <!--BBCiPlayerViewController-->
+        <!--VideoPlayerViewController-->
         <scene sceneID="eYt-VZ-D0s">
             <objects>
-                <viewControllerPlaceholder storyboardName="BBCiPlayerMain" referencedIdentifier="BBCiPlayerViewController" id="iQ4-77-cEr" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="VideoPlayerMain" referencedIdentifier="VideoPlayerViewController" id="iQ4-77-cEr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Zx-jA-GT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-314" y="455"/>

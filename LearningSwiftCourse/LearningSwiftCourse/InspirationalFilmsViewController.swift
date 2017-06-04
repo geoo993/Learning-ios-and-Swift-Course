@@ -9,8 +9,9 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import AVKit
+import AVFoundation
 import IBAnimatable
-
 
 @IBDesignable
 class InspirationalFilmsViewController: UIViewController {
@@ -25,11 +26,11 @@ class InspirationalFilmsViewController: UIViewController {
     
     //Mark: - InspirationalFilms sorted
     var currentFilmIndex = 0
+    
     var inspirationalFilms : [InspirationalFilms] = {
         return InspirationalFilms
             .sortedInspirationalFilms()
     }()
-    
     
     
     //Mark: - Set cell width and content inset
@@ -45,6 +46,16 @@ class InspirationalFilmsViewController: UIViewController {
     //Mark: - Scroll view elements
     var scrollOffset = CGPoint.zero
     
+    //Mark: - Video Player
+    var videoPlayer: AVPlayer?
+    var videoPlayerLayer :  AVPlayerLayer?
+    
+    //Mark: - Colors
+    var dashboardTextsColor = UIColor(hex: "white")
+    var selectedColor = UIColor(hex: "White")
+    var unselectedColor = UIColor(hex: "clear")
+    
+    
     //Mark: - @IBOutlets and @IBAction
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var homebutton: AnimatableButton!
@@ -59,10 +70,6 @@ class InspirationalFilmsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var dashboardTextsColor = UIColor(hex: "white")
-    var selectedColor = UIColor(hex: "White")
-    var unselectedColor = UIColor(hex: "clear")
-    
     @IBOutlet weak var filmsLabelsScrollView: InspirationalFilmsLabelsScrollView!
     @IBOutlet weak var inspirationalFilmsTitle: UILabel!
     @IBOutlet weak var inspirationalFilmsYear: UILabel!
@@ -74,9 +81,11 @@ class InspirationalFilmsViewController: UIViewController {
     @IBOutlet weak var inspirationalFilmsPlayButton: AnimatableButton!
     
     var toggletoImageOrVideo = false
+    var imagesSelected = false
     @IBOutlet weak var inspirationalFilmsImagesView: UIView!
     @IBOutlet weak var inspirationalFilmsImagesButton: AnimatableButton!
    
+    var videosSelected = false
     @IBOutlet weak var inspirationalFilmsVideosView: UIView!
     @IBOutlet weak var inspirationalFilmsVideosButton: AnimatableButton!
    
@@ -135,8 +144,11 @@ class InspirationalFilmsViewController: UIViewController {
             currentFilmIndex = index
             setFilmInfoLabel(film)
             setFilmScrollImages(film)
-            setFilmScrollVideos(film)
             updateCellsBorder()
+            
+            toggletoImageOrVideo = false
+            setToggleToVideoOrImage(toggle: toggletoImageOrVideo)
+            
         }else{
             print("Cannot access film")
         }
@@ -164,52 +176,98 @@ class InspirationalFilmsViewController: UIViewController {
     }
     
     func setFilmScrollImages(_ film: InspirationalFilms){
-        
+        for sv in filmsMediaScrollView.subviews { sv.removeFromSuperview() }
         let _ = filmsMediaScrollView.subviews.filter({ $0 is UIImageView }).map({ $0.removeFromSuperview() })
+        
         film.setFeatureImages()
         let images = film.featuredImages
         let imageViewBounds = UIScreen.main.bounds
         let numberOfImages = images.count
         
-        //reset scrollView content size
-        filmsMediaScrollView.contentSize = CGSize(width: imageViewBounds.size.width, height: filmsMediaScrollView.bounds.size.height)
-        
-        //set the page control numbers of pages
-        filmsMediaPageControl.numberOfPages = numberOfImages
-        filmsMediaPageControl.currentPage = 0
-        
-        //build our slides
-        for i in 0..<numberOfImages{
-        
-            let inspirationalFilmsImageView = UIImageView(frame: filmsMediaScrollView.bounds)
-            inspirationalFilmsImageView.frame.origin.x = CGFloat(i) * imageViewBounds.size.width
+        if numberOfImages > 0 {
             
-            if let image = images[i] {
-                inspirationalFilmsImageView.image = image
-            }else{
-                inspirationalFilmsImageView.image = UIImage(named: "noImage") ?? UIImage() 
+            //reset scrollView content size
+            filmsMediaScrollView.contentSize = CGSize(width: imageViewBounds.size.width, height: filmsMediaScrollView.bounds.size.height)
+            
+            //set the page control numbers of pages
+            filmsMediaPageControl.numberOfPages = numberOfImages
+            filmsMediaPageControl.currentPage = 0
+            
+            //build our slides
+            for i in 0..<numberOfImages{
+            
+                let inspirationalFilmsImageView = UIImageView(frame: filmsMediaScrollView.bounds)
+                inspirationalFilmsImageView.frame.origin.x = CGFloat(i) * imageViewBounds.size.width
+                
+                if let image = images[i] {
+                    inspirationalFilmsImageView.image = image
+                }else{
+                    inspirationalFilmsImageView.image = UIImage(named: "noImage") ?? UIImage() 
+                }
+                inspirationalFilmsImageView.backgroundColor = UIColor.clear
+                inspirationalFilmsImageView.contentMode = .scaleAspectFit
+                filmsMediaScrollView.addSubview(inspirationalFilmsImageView)
             }
-            inspirationalFilmsImageView.backgroundColor = UIColor.clear
-            inspirationalFilmsImageView.contentMode = .scaleAspectFit
-            filmsMediaScrollView.addSubview(inspirationalFilmsImageView)
+            
+            //calculate the content width
+            let contentWidth = imageViewBounds.size.width * CGFloat(numberOfImages)
+            
+            //set scrollView content size
+            filmsMediaScrollView.contentSize = CGSize(width: contentWidth, height: filmsMediaScrollView.bounds.size.height)
+            
+            filmsLabelsScrollView.contentSize = CGSize(width: filmsLabelsScrollView.contentSize.width, height: 0)
+            
+            filmsMediaPageControl.isHidden =  (numberOfImages > 20 || numberOfImages <= 1) ? true : false
+            
+            stopVideoPlayer()
+            clearMediaArea()
         }
-        
-        //calculate the content width
-        let contentWidth = imageViewBounds.size.width * CGFloat(numberOfImages)
-        
-        //set scrollView content size
-        filmsMediaScrollView.contentSize = CGSize(width: contentWidth, height: filmsMediaScrollView.bounds.size.height)
-        
-        filmsLabelsScrollView.contentSize = CGSize(width: filmsLabelsScrollView.contentSize.width, height: 0)
-        
-        toggletoImageOrVideo = false
-        setToggletoVideoOrImage(toggle: toggletoImageOrVideo)
-        
-        filmsMediaPageControl.isHidden =  (numberOfImages > 20 || numberOfImages <= 1) ? true : false
-        
     }
     
     func setFilmScrollVideos(_ film: InspirationalFilms){
+        for sv in filmsMediaScrollView.subviews { sv.removeFromSuperview() }
+        let _ = filmsMediaScrollView.subviews.filter({ $0 is UIImageView }).map({ $0.removeFromSuperview() })
+        
+        film.setFeatureVideos()
+        
+        let videos = film.featuredVideos
+        let videoViewBounds = UIScreen.main.bounds
+        let numberOfVideos = videos.count
+        
+        if numberOfVideos > 0{
+            
+            //reset scrollView content size
+            filmsMediaScrollView.contentSize = CGSize(width: videoViewBounds.size.width, height: filmsMediaScrollView.bounds.size.height)
+            
+            //set the page control numbers of pages
+            filmsMediaPageControl.numberOfPages = numberOfVideos
+            filmsMediaPageControl.currentPage = 0
+            
+            
+            //build our slides
+            for i in 0..<numberOfVideos{
+                
+                let inspirationalFilmsVideoView = UIImageView(frame: filmsMediaScrollView.bounds)
+                inspirationalFilmsVideoView.frame.origin.x = CGFloat(i) * videoViewBounds.size.width
+                
+                inspirationalFilmsVideoView.backgroundColor = UIColor.clear
+                inspirationalFilmsVideoView.contentMode = .scaleAspectFit
+                filmsMediaScrollView.addSubview(inspirationalFilmsVideoView)
+                
+            }
+            
+            //calculate the content width
+            let contentWidth = videoViewBounds.size.width * CGFloat(numberOfVideos)
+            
+            //set scrollView content size
+            filmsMediaScrollView.contentSize = CGSize(width: contentWidth, height: filmsMediaScrollView.bounds.size.height)
+            
+            filmsLabelsScrollView.contentSize = CGSize(width: filmsLabelsScrollView.contentSize.width, height: 0)
+            
+            filmsMediaPageControl.isHidden =  (numberOfVideos > 20 || numberOfVideos <= 1) ? true : false
+            
+            
+        }
         
     }
    
@@ -372,6 +430,14 @@ extension InspirationalFilmsViewController : UIScrollViewDelegate{
         if let scrol = (scrollView) as? InspirationalFilmsMediaScrollView {
             let currentPage = Int(scrol.contentOffset.x / UIScreen.main.bounds.size.width )
             filmsMediaPageControl.currentPage = currentPage
+            
+            stopVideoPlayer()
+            
+            let currentFilm = inspirationalFilms[currentFilmIndex]
+            if currentFilm.maxVideos > 0 && toggletoImageOrVideo {
+                let currentFilmVideo = currentFilm.featuredVideos[filmsMediaPageControl.currentPage]
+                playVideo(videoURL: currentFilmVideo)
+            }
         }
       
     }
@@ -380,20 +446,99 @@ extension InspirationalFilmsViewController : UIScrollViewDelegate{
         
          if let scrol = (scrollView) as? InspirationalFilmsLabelsScrollView {
             self.filmsLabelsScrollView.contentSize = CGSize(width: scrol.contentSize.width, height: 0)
-        
         }
     }
      
 }
 
-// MARK: - UIButton Actions
+//Mark: - Play Video extension
 extension InspirationalFilmsViewController {
     
-    func disablePlay(){
+    func clearMediaArea() {
+        
+        for view in filmsMediaScrollView.subviews {
+            view.layer.sublayers = nil
+            
+            if let count = view.layer.sublayers?.count, count > 0 { 
+                for layer: CALayer in view.layer.sublayers! {
+                    layer.removeFromSuperlayer()
+                }
+            }
+        }
+        
+        let _ = videoPlayerLayer?.sublayers?.map({ $0.removeFromSuperlayer() })
+        videoPlayerLayer?.removeFromSuperlayer()
+        videoPlayerLayer = nil
+        videoPlayer = nil
         
     }
     
-    func updatePlayButton(color: UIColor, colorInverse: UIColor){
+    func playVideo(videoURL: String)
+    {
+        clearMediaArea()
+        
+        let videoView = filmsMediaScrollView.subviews[filmsMediaPageControl.currentPage]
+        videoView.layer.zPosition = 0;
+        
+        if let url = URL(string: videoURL) {
+        
+            //let item = AVPlayerItem(url: url)
+            //let player = AVPlayer(playerItem: item)
+            
+            videoPlayer = AVPlayer(url: url)
+            videoPlayer?.actionAtItemEnd = .none
+            //videoPlayer?.isMuted = true
+            
+            videoPlayerLayer =  AVPlayerLayer(player: videoPlayer)
+            videoPlayerLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+            videoPlayerLayer?.zPosition = -1
+            
+            videoPlayerLayer?.frame = videoView.bounds
+            videoPlayerLayer?.backgroundColor = UIColor.clear.cgColor
+            videoPlayerLayer?.videoGravity = AVLayerVideoGravityResizeAspect
+            videoView.backgroundColor = UIColor.clear
+            //self.videoView.layer.addSublayer(playerLayer!)
+            videoView.layer.insertSublayer(videoPlayerLayer!, at: 0)
+            
+        }
+        
+    }
+    
+    func playVideoPlayer() {
+        if (videoPlayer?.currentItem != nil) {
+            videoPlayer?.play()
+        }
+    }
+    
+    func pauseVideoPlayer() {
+        videoPlayer?.pause()
+    }
+    
+    func stopVideoPlayer() {
+        pauseVideoPlayer()
+        rewindVideoPlayer()
+        
+        playSelected = false
+        let color = playSelected ? selectedColor : unselectedColor
+        let colorInverse = playSelected ? UIColor.blue : dashboardTextsColor 
+        let img = playSelected ? UIImage(named:"stopicon2") : UIImage(named:"startplaying")
+        UIView.animate(withDuration: 0.2) { 
+            self.updatePlayButton(image: img!, color: color, colorInverse: colorInverse)
+        }
+    }
+    
+    func rewindVideoPlayer() {
+        videoPlayer?.seek(to: CMTime(seconds: 0, preferredTimescale: 1))
+    }
+    
+}
+
+// MARK: - UIButton Actions
+extension InspirationalFilmsViewController {
+    
+ 
+    func updatePlayButton(image: UIImage, color: UIColor, colorInverse: UIColor){
+        self.inspirationalFilmsPlayButton.setImage(image, for: .normal)
         UIView.animate(withDuration: 0.2) { 
             self.inspirationalFilmsPlayView.backgroundColor = color
             self.inspirationalFilmsPlayButton.backgroundColor = color
@@ -409,9 +554,9 @@ extension InspirationalFilmsViewController {
         }
     }
     
-    func setToggletoVideoOrImage(toggle: Bool){
+    func setToggleToVideoOrImage(toggle: Bool){
         
-        
+        let currentFilm = inspirationalFilms[currentFilmIndex]
         if toggle{//videos
             UIView.animate(withDuration: 0.2) { 
                 self.inspirationalFilmsImagesView.backgroundColor = self.unselectedColor
@@ -421,15 +566,30 @@ extension InspirationalFilmsViewController {
                 self.inspirationalFilmsVideosView.backgroundColor = self.selectedColor.withAlphaComponent(0.4)
                 self.inspirationalFilmsVideosButton.backgroundColor = self.selectedColor.withAlphaComponent(0.2) 
                 self.inspirationalFilmsVideosButton.tintColor = UIColor.blue
+                
             }
+            
+            if (videosSelected ){
+                
+                self.setFilmScrollVideos(currentFilm)
+                
+                if currentFilm.maxVideos > 0 { 
+                    let currentFilmVideo = currentFilm.featuredVideos[filmsMediaPageControl.currentPage]
+                    playVideo(videoURL: currentFilmVideo)
+                }
+                
+                videosSelected = false
+            }
+            imagesSelected = true
+            
         }else {//images
             
             playSelected = false
             let color = playSelected ? selectedColor : unselectedColor
             let colorInverse = playSelected ? UIColor.blue : dashboardTextsColor 
-            
+            let img = playSelected ? UIImage(named:"stopicon2") : UIImage(named:"startplaying")
             UIView.animate(withDuration: 0.2) { 
-                self.updatePlayButton(color: color, colorInverse: colorInverse)
+                self.updatePlayButton(image: img!, color: color, colorInverse: colorInverse)
                 self.inspirationalFilmsImagesView.backgroundColor = self.selectedColor.withAlphaComponent(0.4)
                 self.inspirationalFilmsImagesButton.backgroundColor = self.selectedColor.withAlphaComponent(0.2) 
                 self.inspirationalFilmsImagesButton.tintColor = UIColor.blue
@@ -438,17 +598,23 @@ extension InspirationalFilmsViewController {
                 self.inspirationalFilmsVideosButton.backgroundColor = self.unselectedColor
                 self.inspirationalFilmsVideosButton.tintColor = self.dashboardTextsColor
             }
+            
+            if (imagesSelected ){
+                self.setFilmScrollImages(currentFilm)
+                imagesSelected = false
+            }
+            videosSelected = true
         }
     }
     
     @IBAction func inspirationalFilmsImagesButtonAction(_ sender: AnimatableButton) {
         toggletoImageOrVideo = false
-        setToggletoVideoOrImage(toggle: toggletoImageOrVideo)
+        setToggleToVideoOrImage(toggle: toggletoImageOrVideo)
     }
     
     @IBAction func inspirationalFilmsVideosButtonAction(_ sender: AnimatableButton) {
         toggletoImageOrVideo = true
-        setToggletoVideoOrImage(toggle: toggletoImageOrVideo)
+        setToggleToVideoOrImage(toggle: toggletoImageOrVideo)
     }
     
     
@@ -458,11 +624,20 @@ extension InspirationalFilmsViewController {
     
     @IBAction func inspirationalFilmsPlayButtonActionTouchInside(_ sender: AnimatableButton) {
         
+        
         if toggletoImageOrVideo {
             playSelected = !playSelected
             let color = playSelected ? selectedColor.withAlphaComponent(0.4) : unselectedColor
             let colorInverse = playSelected ? UIColor.blue : dashboardTextsColor 
-            updatePlayButton(color: color, colorInverse: colorInverse)
+            let img = playSelected ? UIImage(named:"stopicon2") : UIImage(named:"startplaying") 
+            
+            if playSelected {
+                playVideoPlayer()
+            }else{
+                pauseVideoPlayer()
+            }
+            
+            updatePlayButton(image: img!, color: color, colorInverse: colorInverse)
         }
     }
     
@@ -472,7 +647,15 @@ extension InspirationalFilmsViewController {
             playSelected = !playSelected
             let color = playSelected ? selectedColor.withAlphaComponent(0.4) : unselectedColor
             let colorInverse = playSelected ? UIColor.blue : dashboardTextsColor
-            updatePlayButton(color: color, colorInverse: colorInverse)
+            let img = playSelected ? UIImage(named:"stopicon2") : UIImage(named:"startplaying")
+            
+            if playSelected {
+                playVideoPlayer()
+            }else{
+                pauseVideoPlayer()
+            }
+            
+            updatePlayButton(image: img!, color: color, colorInverse: colorInverse)
         }
     }
     
@@ -480,6 +663,7 @@ extension InspirationalFilmsViewController {
     @IBAction func inspirationalFilmsLoveButtonActionTouchDown(_ sender: AnimatableButton) {
         
     }
+    
     @IBAction func inspirationalFilmsLoveButtonActionTouchInside(_ sender: AnimatableButton) {
        
         loveSelected = !loveSelected

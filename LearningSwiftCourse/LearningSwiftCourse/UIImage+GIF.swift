@@ -13,6 +13,18 @@ import ImageIO
 
 extension UIImage {
     
+    static func setImageFromURl(stringImageUrl urlString: String) -> UIImage? {
+        
+        var img : UIImage? = UIImage(named: "noImage") 
+        
+        if let url = URL(string: urlString) {
+            if let data = try? Data(contentsOf: url) {
+                img = UIImage(data: data)
+            }
+        }
+        return img  
+    }
+    
     public class func gifImageWithData(data: CFData) -> UIImage? {
         guard let source = CGImageSourceCreateWithData(data, nil) else {
             print("image doesn't exist")
