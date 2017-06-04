@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import IBAnimatable
 
+@IBDesignable
 class InspirationalFilmsCollectionViewCell: UICollectionViewCell {
     
     var inspirationalFilm : InspirationalFilms! {
@@ -16,12 +18,10 @@ class InspirationalFilmsCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    @IBOutlet weak var inspirationalFilmsCoverImageButton: UIButton!
-    @IBAction func inspirationalFilmsCoverImageButtonAction(_ sender: UIButton) {
-       
+    @IBOutlet weak var inspirationalFilmsCoverImageButton: AnimatableButton!
+    @IBAction func inspirationalFilmsCoverImageButtonAction(_ sender: AnimatableButton) {
         InspirationalFilmsViewController.updateInspirationalFilm.onNext(inspirationalFilm.title)
     }
-    
     
     public func updateUI(){
         inspirationalFilmsCoverImageButton.setImage(inspirationalFilm.coverImage, for: .normal)

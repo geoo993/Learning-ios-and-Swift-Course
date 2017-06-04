@@ -6,12 +6,38 @@
 //  Copyright © 2017 LEXI LABS. All rights reserved.
 //
 
+import IBAnimatable
 import UIKit
 
-private let reuseIdentifier = "Cell"
 
+private let reuseIdentifier = "MainCell"
+
+@IBDesignable
 class MainCollectionViewController: UICollectionViewController {
 
+    var views: [String: String] = [
+                           //"BBCiPlayerViewController":"BBCiPlayerMain",
+                           "AudioCheckViewController": "AudioMain",
+                           "TableViewNavigationViewController": "TableViewMain",
+                           "TabBarViewController": "TabBarMain",
+                           "NavigationViewController": "NavBarMain",
+                           "ColorsViewController": "ColorsMain",
+                           "ScrollViewController": "ScrollViewMain",
+                           "CarouselViewController": "CarouselMain",
+                           "InspirationalFilmsViewController": "InspirationalFilmsMain",
+                           ]
+    
+    //Mark: - Collection view 
+    @IBOutlet var mainCollectionView: UICollectionView!
+    
+    
+    //Mark: - Set cell width and content inset
+    var cellColorName = [String]()
+    var contentInset = UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10) 
+    var screenWidth : CGFloat = {
+        return UIScreen.main.bounds.width
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,9 +45,12 @@ class MainCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+        cellColorName = UIColor.cssString.take(views.count)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,38 +72,62 @@ class MainCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return views.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
+        
         // Configure the cell
-    
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? MainCollectionViewCell 
+            else {
+            return MainCollectionViewCell()
+        }
+        
+        let color = UIColor(hex: cellColorName[indexPath.row])
+        cell.backgroundColor = color
+        
+        cell.cellImageView.backgroundColor = color
+        cell.cellImageView.image = UIImage(named: "appDev_icon") ?? UIImage()
+        
         return cell
     }
 
     // MARK: UICollectionViewDelegate
 
-    /*
+    
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-    */
-
-    /*
+    
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-    */
+    
+    //did select item (cell) with tap gesture
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        //let bundleIdentifier =  Bundle.main.bundleIdentifier
+        let defaultBundleID = "co.lexilabs.LearningSwiftCourse"
+        let bundle = Bundle(identifier: defaultBundleID)
+        let view = views.getKeyString(index: indexPath.row)
+        if let storyBoardName = views[view] {
+        
+            let storyboard = UIStoryboard(name: storyBoardName, bundle: bundle) 
+            let vc = storyboard.instantiateViewController(withIdentifier: view)
+            self.present(vc, animated: true, completion: nil)
+            
+        }
+     
+        
+    }
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
@@ -91,4 +144,26 @@ class MainCollectionViewController: UICollectionViewController {
     }
     */
 
+    
+    deinit {
+        print("Main view controller is \(#function)")
+    }
+    
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension MainCollectionViewController : UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize { 
+        
+        let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout 
+        let itemWidth = layout?.itemSize.width ?? 120 //screenWidth - (contentInset.left * 2)
+        let itemHeight = layout?.itemSize.height ?? 100
+        
+        return CGSize(width: itemWidth , height: itemHeight) 
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return contentInset
+    }
 }

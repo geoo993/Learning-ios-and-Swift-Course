@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TYC-OA-v6D">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,55 +19,56 @@
                         <viewControllerLayoutGuide type="bottom" id="OIM-Th-GbI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3GE-E4-SAX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunsetbeach" translatesAutoresizingMaskIntoConstraints="NO" id="3Wd-Jo-gDq">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pvj-Qo-t1y">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="t5Z-RV-p6n">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Film" showsSearchResultsButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8sc-MI-o4A">
-                                            <rect key="frame" x="40" y="20" width="280" height="44"/>
+                                            <rect key="frame" x="40" y="20" width="374" height="44"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="searchField.textColor">
-                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <outlet property="delegate" destination="TYC-OA-v6D" id="iGV-YZ-RpG"/>
                                             </connections>
                                         </searchBar>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km6-GI-9Z7" userLabel="Home">
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km6-GI-9Z7" userLabel="Home" customClass="AnimatableButton" customModule="IBAnimatable">
                                             <rect key="frame" x="12" y="30" width="25" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="MZp-ue-3pR"/>
                                                 <constraint firstAttribute="width" constant="25" id="Qrs-Br-sk6"/>
                                             </constraints>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <state key="normal" image="homeicon"/>
                                             <connections>
-                                                <action selector="homebutton:" destination="TYC-OA-v6D" eventType="touchUpInside" id="hfs-Dh-tyk"/>
+                                                <action selector="homebuttonAction:" destination="TYC-OA-v6D" eventType="touchUpInside" id="E63-Tp-2Lc"/>
                                             </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1MX-sg-zRa">
-                                            <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                            <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Fs-OV-PY5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="257.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
                                                     <subviews>
-                                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hi-rF-xMu" userLabel="Films Images Scroll View" customClass="InspirationalFilmsImagesScrollView" customModule="LearningSwiftCourse">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="257.5"/>
+                                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hi-rF-xMu" userLabel="Films Media Scroll View" customClass="InspirationalFilmsMediaScrollView" customModule="LearningSwiftCourse">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="TYC-OA-v6D" id="rxx-pb-3BC"/>
                                                             </connections>
                                                         </scrollView>
-                                                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LPH-N9-iqb" userLabel="Films Images Page Control">
-                                                            <rect key="frame" x="140" y="237.5" width="40" height="10"/>
+                                                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LPH-N9-iqb" userLabel="Films Media Page Control">
+                                                            <rect key="frame" x="187" y="342" width="40" height="10"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="4CH-Xe-Xsz"/>
                                                                 <constraint firstAttribute="height" constant="10" id="gW3-rf-G2k"/>
@@ -84,11 +85,11 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgE-Lc-qRM">
-                                                    <rect key="frame" x="0.0" y="257.5" width="320" height="113.5"/>
+                                                    <rect key="frame" x="0.0" y="362" width="414" height="137.66666666666663"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFJ-qS-t6s" userLabel="Title Label">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="8sX-Il-0fL"/>
                                                             </constraints>
@@ -97,24 +98,34 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fqc-oc-9c2">
-                                                            <rect key="frame" x="0.0" y="31" width="320" height="51.5"/>
+                                                            <rect key="frame" x="0.0" y="31" width="414" height="75.666666666666629"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy4-5M-RIh">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="79.5" height="51.5"/>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy4-5M-RIh" userLabel="Play View">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="75.666666666666629"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jps-ul-63r" userLabel="Play Button">
-                                                                            <rect key="frame" x="25" y="10" width="29.5" height="31.5"/>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jps-ul-63r" userLabel="Play Button" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                                            <rect key="frame" x="25" y="10" width="52.666666666666671" height="55.666666666666629"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="Jps-ul-63r" secondAttribute="height" multiplier="29:31" id="Ag4-Jx-QNu"/>
                                                                             </constraints>
                                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <state key="normal" image="startplaying"/>
+                                                                            <state key="selected" image="startplaying"/>
+                                                                            <state key="highlighted" image="startplaying"/>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
                                                                             <connections>
-                                                                                <action selector="inspirationalFilmsPlayButtonAction:" destination="TYC-OA-v6D" eventType="touchUpInside" id="G3S-m4-MXU"/>
+                                                                                <action selector="inspirationalFilmsPlayButtonActionTouchDown:" destination="TYC-OA-v6D" eventType="touchDown" id="AHM-he-fx1"/>
+                                                                                <action selector="inspirationalFilmsPlayButtonActionTouchInside:" destination="TYC-OA-v6D" eventType="touchUpInside" id="Hpg-nj-NpQ"/>
+                                                                                <action selector="inspirationalFilmsPlayButtonActionTouchOutside:" destination="TYC-OA-v6D" eventType="touchUpOutside" id="20f-ef-Rra"/>
                                                                             </connections>
                                                                         </button>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="trailing" secondItem="Jps-ul-63r" secondAttribute="trailing" constant="25" id="0vd-7Y-IV9"/>
                                                                         <constraint firstItem="Jps-ul-63r" firstAttribute="leading" secondItem="cy4-5M-RIh" secondAttribute="leading" constant="25" id="5iT-cx-b4v"/>
@@ -124,19 +135,21 @@
                                                                         <constraint firstItem="Jps-ul-63r" firstAttribute="top" secondItem="cy4-5M-RIh" secondAttribute="top" constant="10" id="ytg-Cg-b7t"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7h-S4-JIA">
-                                                                    <rect key="frame" x="80.5" y="0.0" width="79" height="51.5"/>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7h-S4-JIA" userLabel="Images View">
+                                                                    <rect key="frame" x="103.66666666666666" y="0.0" width="102.99999999999997" height="75.666666666666629"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKj-TS-vCA" userLabel="Images Button">
-                                                                            <rect key="frame" x="26" y="16" width="27" height="19.5"/>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKj-TS-vCA" userLabel="Images Button" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                                            <rect key="frame" x="25.999999999999986" y="16" width="51" height="43.666666666666629"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <state key="normal" image="imageicon"/>
+                                                                            <state key="selected" image="imageicon"/>
+                                                                            <state key="highlighted" image="imageicon"/>
                                                                             <connections>
                                                                                 <action selector="inspirationalFilmsImagesButtonAction:" destination="TYC-OA-v6D" eventType="touchUpInside" id="MBC-vF-qrz"/>
                                                                             </connections>
                                                                         </button>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstItem="yKj-TS-vCA" firstAttribute="centerX" secondItem="w7h-S4-JIA" secondAttribute="centerX" id="fL3-9C-M2h"/>
                                                                         <constraint firstItem="yKj-TS-vCA" firstAttribute="centerY" secondItem="w7h-S4-JIA" secondAttribute="centerY" id="gYb-ov-YJB"/>
@@ -146,19 +159,22 @@
                                                                         <constraint firstItem="yKj-TS-vCA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="w7h-S4-JIA" secondAttribute="top" constant="16" id="tFZ-Rx-rwb"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkt-sg-SLe">
-                                                                    <rect key="frame" x="160.5" y="0.0" width="79.5" height="51.5"/>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkt-sg-SLe" userLabel="Videos View">
+                                                                    <rect key="frame" x="207.66666666666669" y="0.0" width="102.66666666666669" height="75.666666666666629"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mho-Re-7cl" userLabel="Video Button">
-                                                                            <rect key="frame" x="26" y="12" width="27.5" height="27.5"/>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mho-Re-7cl" userLabel="Video Button" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                                            <rect key="frame" x="26" y="12" width="50.666666666666657" height="51.666666666666629"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <state key="normal" image="videoIcon"/>
+                                                                            <state key="selected" image="videoIcon"/>
+                                                                            <state key="highlighted" image="videoIcon"/>
                                                                             <connections>
                                                                                 <action selector="inspirationalFilmsVideosButtonAction:" destination="TYC-OA-v6D" eventType="touchUpInside" id="xXd-xA-QMp"/>
                                                                             </connections>
                                                                         </button>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstItem="Mho-Re-7cl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xkt-sg-SLe" secondAttribute="top" constant="12" id="0oa-HC-FHc"/>
                                                                         <constraint firstItem="Mho-Re-7cl" firstAttribute="centerX" secondItem="xkt-sg-SLe" secondAttribute="centerX" id="NgP-4j-oV6"/>
@@ -168,26 +184,36 @@
                                                                         <constraint firstItem="Mho-Re-7cl" firstAttribute="centerY" secondItem="xkt-sg-SLe" secondAttribute="centerY" id="oVG-yi-mA2"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Njl-fC-T0g">
-                                                                    <rect key="frame" x="241" y="0.0" width="79" height="51.5"/>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Njl-fC-T0g" userLabel="Love View">
+                                                                    <rect key="frame" x="311.33333333333326" y="0.0" width="102.66666666666669" height="75.666666666666629"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHs-la-o97" userLabel="Love Button">
-                                                                            <rect key="frame" x="29" y="15" width="21" height="21.5"/>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHs-la-o97" userLabel="Love Button" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                                            <rect key="frame" x="23" y="10" width="57.666666666666686" height="55.666666666666629"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <state key="normal" image="hearticon"/>
+                                                                            <state key="selected" image="hearticon"/>
+                                                                            <state key="highlighted" image="hearticon"/>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
                                                                             <connections>
-                                                                                <action selector="inspirationalFilmsLoveButtonAction:" destination="TYC-OA-v6D" eventType="touchUpInside" id="bPW-D0-W3B"/>
+                                                                                <action selector="inspirationalFilmsLoveButtonActionTouchDown:" destination="TYC-OA-v6D" eventType="touchDown" id="pLh-yw-tS4"/>
+                                                                                <action selector="inspirationalFilmsLoveButtonActionTouchInside:" destination="TYC-OA-v6D" eventType="touchUpInside" id="ItG-c9-fUl"/>
+                                                                                <action selector="inspirationalFilmsLoveButtonActionTouchOutside:" destination="TYC-OA-v6D" eventType="touchUpOutside" id="p9Q-Ii-4eK"/>
                                                                             </connections>
                                                                         </button>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <constraints>
-                                                                        <constraint firstItem="tHs-la-o97" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Njl-fC-T0g" secondAttribute="leading" constant="29" id="3oc-xp-lRM"/>
-                                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tHs-la-o97" secondAttribute="trailing" constant="29" id="7gG-fo-MYU"/>
-                                                                        <constraint firstItem="tHs-la-o97" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Njl-fC-T0g" secondAttribute="top" constant="15" id="NzC-xb-23E"/>
+                                                                        <constraint firstItem="tHs-la-o97" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Njl-fC-T0g" secondAttribute="leading" constant="22" id="3oc-xp-lRM"/>
+                                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tHs-la-o97" secondAttribute="trailing" constant="22" id="7gG-fo-MYU"/>
+                                                                        <constraint firstItem="tHs-la-o97" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Njl-fC-T0g" secondAttribute="top" constant="10" id="NzC-xb-23E"/>
                                                                         <constraint firstItem="tHs-la-o97" firstAttribute="centerX" secondItem="Njl-fC-T0g" secondAttribute="centerX" id="hUt-y7-wsB"/>
                                                                         <constraint firstItem="tHs-la-o97" firstAttribute="centerY" secondItem="Njl-fC-T0g" secondAttribute="centerY" id="iQe-m0-HjY"/>
-                                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tHs-la-o97" secondAttribute="bottom" constant="15" id="o2u-TQ-AYy"/>
+                                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tHs-la-o97" secondAttribute="bottom" constant="10" id="o2u-TQ-AYy"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
@@ -203,21 +229,21 @@
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bdC-KF-pdg">
-                                                            <rect key="frame" x="0.0" y="83.5" width="320" height="30"/>
+                                                            <rect key="frame" x="0.0" y="107.66666666666663" width="414" height="30"/>
                                                             <subviews>
-                                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-a2-YwY">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-a2-YwY" customClass="InspirationalFilmsLabelsScrollView" customModule="LearningSwiftCourse">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ady-4F-Juq" userLabel="Year Label">
-                                                                            <rect key="frame" x="0.0" y="5" width="80" height="0.0"/>
+                                                                            <rect key="frame" x="0.0" y="5" width="55" height="0.0"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Mk1-g6-Tc5"/>
+                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="Mk1-g6-Tc5"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2W-TE-w92" userLabel="Genres Label">
-                                                                            <rect key="frame" x="80" y="5" width="135" height="0.0"/>
+                                                                            <rect key="frame" x="55" y="5" width="135" height="0.0"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="k2v-jS-nGn"/>
                                                                             </constraints>
@@ -225,7 +251,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4X-ux-Da3" userLabel="Rating Label">
-                                                                            <rect key="frame" x="215" y="5" width="100" height="0.0"/>
+                                                                            <rect key="frame" x="190" y="5" width="100" height="0.0"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Bsu-un-KO7"/>
                                                                             </constraints>
@@ -233,7 +259,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstItem="V4X-ux-Da3" firstAttribute="leading" secondItem="g2W-TE-w92" secondAttribute="trailing" id="0Yf-If-nSF"/>
                                                                         <constraint firstAttribute="trailing" secondItem="V4X-ux-Da3" secondAttribute="trailing" constant="5" id="2Jc-kn-6kZ"/>
@@ -246,6 +272,9 @@
                                                                         <constraint firstItem="g2W-TE-w92" firstAttribute="top" secondItem="pTv-a2-YwY" secondAttribute="top" constant="5" id="jWa-Jg-1Bl"/>
                                                                         <constraint firstItem="V4X-ux-Da3" firstAttribute="top" secondItem="pTv-a2-YwY" secondAttribute="top" constant="5" id="yUl-WY-s2R"/>
                                                                     </constraints>
+                                                                    <connections>
+                                                                        <outlet property="delegate" destination="TYC-OA-v6D" id="AjC-si-F2d"/>
+                                                                    </connections>
                                                                 </scrollView>
                                                             </subviews>
                                                             <constraints>
@@ -272,7 +301,7 @@
                                                     </constraints>
                                                 </view>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="twT-Vj-jH9">
-                                                    <rect key="frame" x="0.0" y="371" width="320" height="133"/>
+                                                    <rect key="frame" x="0.0" y="499.66666666666657" width="414" height="172.33333333333343"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="twT-Vj-jH9" secondAttribute="height" multiplier="320:133" id="6BJ-RO-0SU"/>
@@ -285,15 +314,26 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="InspirationalFilmsCollectionViewCell" reuseIdentifier="Films Cell" id="iU8-NW-XJ1" customClass="InspirationalFilmsCollectionViewCell" customModule="LearningSwiftCourse">
-                                                            <rect key="frame" x="10" y="6.5" width="90" height="120"/>
+                                                            <rect key="frame" x="10" y="26.333333333333332" width="90" height="120"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="120"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C35-hF-NrG" userLabel="Inspirational Films Cover Image Button">
+                                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C35-hF-NrG" userLabel="Inspirational Films Cover Image Button" customClass="AnimatableButton" customModule="IBAnimatable">
                                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="120"/>
                                                                         <state key="normal" image="AFewGoodMen"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="10"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="2"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <action selector="inspirationalFilmsCoverImageButtonAction:" destination="iU8-NW-XJ1" eventType="touchUpInside" id="giM-a6-LkW"/>
                                                                         </connections>
@@ -362,15 +402,21 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="twT-Vj-jH9" id="VFu-UJ-onG"/>
-                        <outlet property="filmsImagesPageControl" destination="LPH-N9-iqb" id="Sbo-6c-Vi9"/>
-                        <outlet property="filmsImagesScrollView" destination="2hi-rF-xMu" id="2ON-7e-qOW"/>
+                        <outlet property="filmsLabelsScrollView" destination="pTv-a2-YwY" id="yL4-Yb-wa9"/>
+                        <outlet property="filmsMediaPageControl" destination="LPH-N9-iqb" id="frt-4U-gVc"/>
+                        <outlet property="filmsMediaScrollView" destination="2hi-rF-xMu" id="brY-Zr-Xy8"/>
+                        <outlet property="homebutton" destination="km6-GI-9Z7" id="C7W-R4-N5F"/>
                         <outlet property="inspirationalFilmsGenres" destination="g2W-TE-w92" id="RIE-2R-57p"/>
                         <outlet property="inspirationalFilmsImagesButton" destination="yKj-TS-vCA" id="8Fz-nz-9go"/>
+                        <outlet property="inspirationalFilmsImagesView" destination="w7h-S4-JIA" id="EJq-bT-116"/>
                         <outlet property="inspirationalFilmsLoveButton" destination="tHs-la-o97" id="fwg-Il-XTl"/>
+                        <outlet property="inspirationalFilmsLoveView" destination="Njl-fC-T0g" id="l3f-RH-Pg5"/>
                         <outlet property="inspirationalFilmsPlayButton" destination="Jps-ul-63r" id="x9B-jB-jOC"/>
+                        <outlet property="inspirationalFilmsPlayView" destination="cy4-5M-RIh" id="2bG-1n-PLs"/>
                         <outlet property="inspirationalFilmsRating" destination="V4X-ux-Da3" id="yV6-4m-jzG"/>
                         <outlet property="inspirationalFilmsTitle" destination="RFJ-qS-t6s" id="ZwD-Su-6KQ"/>
                         <outlet property="inspirationalFilmsVideosButton" destination="Mho-Re-7cl" id="3ed-ck-O4A"/>
+                        <outlet property="inspirationalFilmsVideosView" destination="xkt-sg-SLe" id="xOY-CW-fiq"/>
                         <outlet property="inspirationalFilmsYear" destination="Ady-4F-Juq" id="eGS-ow-U9c"/>
                         <outlet property="searchBar" destination="8sc-MI-o4A" id="67f-IK-8Fk"/>
                     </connections>
@@ -382,7 +428,7 @@
     </scenes>
     <resources>
         <image name="AFewGoodMen" width="500" height="750"/>
-        <image name="hearticon" width="50" height="48"/>
+        <image name="hearticon" width="64" height="64"/>
         <image name="homeicon" width="512" height="512"/>
         <image name="imageicon" width="303" height="240"/>
         <image name="startplaying" width="100" height="100"/>

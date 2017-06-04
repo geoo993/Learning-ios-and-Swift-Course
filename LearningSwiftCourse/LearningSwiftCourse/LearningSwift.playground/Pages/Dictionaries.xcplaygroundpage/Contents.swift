@@ -26,12 +26,22 @@ var intNames = Dictionary<Int, String>()
 intNames[42] = "forty two"
 intNames[6] = "six"
 intNames[7] = "seven"
+intNames[27] = "seven"
 
 //these values are added as optionals:
 print("\(intNames[42]) divided by \(intNames[6]) equals \(intNames[42/6])")
 
 //use explicit unwrapping:
 print("\(intNames[42]!) divided by \(intNames[6]!) equals \(intNames[42/6]!)")
+
+let val = intNames.first { (key,value) -> Bool in
+    return value == "seven"
+}
+
+print(val?.key)
+
+let keysOfValue = intNames.filter { $1 == "seven" }.map { $0.0 }
+print("found keys of value of dictionary: \(keysOfValue)")
 
 //remove all elements:
 intNames = [:]
@@ -40,7 +50,9 @@ intNames = [:]
 intNames[-5] = "negative five"
 intNames.removeValue(forKey: -5)
 
-print(intNames.isEmpty)
+
+
+print("isEmpty:", intNames.isEmpty)
 
 //using an array for a dictionary's values:
 //the type of counting is Dictionary<String, [String]>

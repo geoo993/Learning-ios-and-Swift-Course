@@ -1,5 +1,5 @@
 //
-//  InspirationalFilmsImagesScrollView.swift
+//  InspirationalFilmsMediaScrollView.swift
 //  LearningSwiftCourse
 //
 //  Created by GEORGE QUENTIN on 26/05/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InspirationalFilmsImagesScrollView: UIScrollView {
+class InspirationalFilmsMediaScrollView: UIScrollView {
 
     /*
     // Only override draw() if you perform custom drawing.

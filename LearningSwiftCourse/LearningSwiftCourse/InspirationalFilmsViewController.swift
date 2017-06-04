@@ -9,7 +9,10 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import IBAnimatable
 
+
+@IBDesignable
 class InspirationalFilmsViewController: UIViewController {
 
     public static var updateInspirationalFilm = BehaviorSubject(value: "")
@@ -21,11 +24,12 @@ class InspirationalFilmsViewController: UIViewController {
     }
     
     //Mark: - InspirationalFilms sorted
+    var currentFilmIndex = 0
     var inspirationalFilms : [InspirationalFilms] = {
         return InspirationalFilms
-            .inspirationalFilmsList()
-            .sorted { $0.title.localizedCaseInsensitiveCompare($1.title) == ComparisonResult.orderedAscending }
+            .sortedInspirationalFilms()
     }()
+    
     
     
     //Mark: - Set cell width and content inset
@@ -43,74 +47,116 @@ class InspirationalFilmsViewController: UIViewController {
     
     //Mark: - @IBOutlets and @IBAction
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBAction func homebutton(_ sender: Any) {
+    @IBOutlet weak var homebutton: AnimatableButton!
+    @IBAction func homebuttonAction(_ sender: Any) {
         dismiss(animated: true) { 
             print("Inspirational Films view controller dismissed, now going to home page")
         }
     }
     
-    @IBOutlet weak var filmsImagesScrollView: InspirationalFilmsImagesScrollView!
-    @IBOutlet weak var filmsImagesPageControl: UIPageControl!
+    @IBOutlet weak var filmsMediaScrollView: InspirationalFilmsMediaScrollView!
+    @IBOutlet weak var filmsMediaPageControl: UIPageControl!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var dashboardTextsColor = UIColor(hex: "white")
+    var selectedColor = UIColor(hex: "White")
+    var unselectedColor = UIColor(hex: "clear")
+    
+    @IBOutlet weak var filmsLabelsScrollView: InspirationalFilmsLabelsScrollView!
     @IBOutlet weak var inspirationalFilmsTitle: UILabel!
     @IBOutlet weak var inspirationalFilmsYear: UILabel!
     @IBOutlet weak var inspirationalFilmsGenres: UILabel!
     @IBOutlet weak var inspirationalFilmsRating: UILabel!
     
-    @IBOutlet weak var inspirationalFilmsPlayButton: UIButton!
-    @IBAction func inspirationalFilmsPlayButtonAction(_ sender: UIButton) {
-        
-    }
-    @IBOutlet weak var inspirationalFilmsImagesButton: UIButton!
-    @IBAction func inspirationalFilmsImagesButtonAction(_ sender: UIButton) {
-        
-    }
+    var playSelected = false
+    @IBOutlet weak var inspirationalFilmsPlayView: UIView!
+    @IBOutlet weak var inspirationalFilmsPlayButton: AnimatableButton!
     
-    @IBOutlet weak var inspirationalFilmsVideosButton: UIButton!
-    @IBAction func inspirationalFilmsVideosButtonAction(_ sender: UIButton) {
-        
-    }
-    @IBOutlet weak var inspirationalFilmsLoveButton: UIButton!
-    @IBAction func inspirationalFilmsLoveButtonAction(_ sender: UIButton) {
-        
-    }
+    var toggletoImageOrVideo = false
+    @IBOutlet weak var inspirationalFilmsImagesView: UIView!
+    @IBOutlet weak var inspirationalFilmsImagesButton: AnimatableButton!
+   
+    @IBOutlet weak var inspirationalFilmsVideosView: UIView!
+    @IBOutlet weak var inspirationalFilmsVideosButton: AnimatableButton!
+   
+    var loveSelected = false
+    @IBOutlet weak var inspirationalFilmsLoveView: UIView!
+    @IBOutlet weak var inspirationalFilmsLoveButton: AnimatableButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        setUpSearchbar()
+        updateDashBoardText()
         
         InspirationalFilmsViewController.updateInspirationalFilm
         .subscribe(onNext: { [weak self] (filmTitle) in
             guard let this = self else { return }
             this.setFilm(filmTitle)
+            
         }).addDisposableTo(disposeBag)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        setFilm(inspirationalFilms.first?.title)
+    }
+    
+    func updateDashBoardText(){
+        setUpSearchbar()
+        homebutton.tintColor = dashboardTextsColor
+        inspirationalFilmsTitle.textColor = dashboardTextsColor
+        inspirationalFilmsYear.textColor = dashboardTextsColor
+        inspirationalFilmsGenres.textColor = dashboardTextsColor
+        inspirationalFilmsRating.textColor = dashboardTextsColor
+        inspirationalFilmsPlayButton.tintColor = dashboardTextsColor
+        inspirationalFilmsImagesButton.tintColor = dashboardTextsColor
+        inspirationalFilmsVideosButton.tintColor = dashboardTextsColor 
+        inspirationalFilmsLoveButton.tintColor = dashboardTextsColor
         
-        if let film = inspirationalFilms.first {
+    }
+    
+    func setUpSearchbar(){
+        
+        //searchBar.backgroundColor = UIColor(hex: "Orange")
+        let color = dashboardTextsColor.withAlphaComponent(0.5)
+        searchBar.textField?.placeHolderColor = color
+        searchBar.textField?.placeHolderMagnifyingGlassColor = color
+        searchBar.textColor = dashboardTextsColor
+    }
+    
+    func setFilm(_ title: String?){
+        
+        if let filmTitle = title, 
+            let film = InspirationalFilms.getCurrentFilm(filmTitle, sorted: true), 
+            let index = InspirationalFilms.getSelectedFilmIndex(film: film, sorted: true) {
+            currentFilmIndex = index
             setFilmInfoLabel(film)
             setFilmScrollImages(film)
+            setFilmScrollVideos(film)
+            updateCellsBorder()
+        }else{
+            print("Cannot access film")
         }
         
     }
     
-    func getCurrentFilm(_ title: String) -> InspirationalFilms? {
-        return inspirationalFilms.filter{ $0.title == title }.first
-    }
-    
-    func setFilm(_ title:String){
-        if let film = getCurrentFilm(title) {
-            setFilmInfoLabel(film)
-            setFilmScrollImages(film)
+    func updateCellsBorder() {
+        if let visibleCells = (self.collectionView.visibleCells as? [InspirationalFilmsCollectionViewCell]) {
+            for cell in visibleCells{
+                let indexPath = self.collectionView.indexPath(for: cell) 
+                let borderWidth : CGFloat = (currentFilmIndex == indexPath?.row) ? 2 : 0
+                cell.inspirationalFilmsCoverImageButton.borderWidth = borderWidth
+                cell.inspirationalFilmsCoverImageButton.borderColor = dashboardTextsColor
+            }
         }
     }
     
     func setFilmInfoLabel(_ film: InspirationalFilms){
         inspirationalFilmsTitle.text = film.title
-        inspirationalFilmsYear.text = "\(film.filmInfo.year)  "
+        inspirationalFilmsYear.text = "\(film.filmInfo.year)"
         inspirationalFilmsGenres.text = "   |   " + film.filmInfo.genres
             .map { $0.rawValue }.joined(separator: ", ") 
         inspirationalFilmsRating.text = "   |   " + film.filmInfo.rating.rawValue
@@ -119,23 +165,23 @@ class InspirationalFilmsViewController: UIViewController {
     
     func setFilmScrollImages(_ film: InspirationalFilms){
         
-        let _ = filmsImagesScrollView.subviews.filter({ $0 is UIImageView }).map({ $0.removeFromSuperview() })
+        let _ = filmsMediaScrollView.subviews.filter({ $0 is UIImageView }).map({ $0.removeFromSuperview() })
         film.setFeatureImages()
         let images = film.featuredImages
         let imageViewBounds = UIScreen.main.bounds
         let numberOfImages = images.count
         
         //reset scrollView content size
-        filmsImagesScrollView.contentSize = CGSize(width: imageViewBounds.size.width, height: filmsImagesScrollView.bounds.size.height)
+        filmsMediaScrollView.contentSize = CGSize(width: imageViewBounds.size.width, height: filmsMediaScrollView.bounds.size.height)
         
         //set the page control numbers of pages
-        filmsImagesPageControl.numberOfPages = numberOfImages
-        filmsImagesPageControl.currentPage = 0
+        filmsMediaPageControl.numberOfPages = numberOfImages
+        filmsMediaPageControl.currentPage = 0
         
         //build our slides
         for i in 0..<numberOfImages{
         
-            let inspirationalFilmsImageView = UIImageView(frame: filmsImagesScrollView.bounds)
+            let inspirationalFilmsImageView = UIImageView(frame: filmsMediaScrollView.bounds)
             inspirationalFilmsImageView.frame.origin.x = CGFloat(i) * imageViewBounds.size.width
             
             if let image = images[i] {
@@ -145,17 +191,27 @@ class InspirationalFilmsViewController: UIViewController {
             }
             inspirationalFilmsImageView.backgroundColor = UIColor.clear
             inspirationalFilmsImageView.contentMode = .scaleAspectFit
-            filmsImagesScrollView.addSubview(inspirationalFilmsImageView)
+            filmsMediaScrollView.addSubview(inspirationalFilmsImageView)
         }
         
         //calculate the content width
         let contentWidth = imageViewBounds.size.width * CGFloat(numberOfImages)
         
         //set scrollView content size
-        filmsImagesScrollView.contentSize = CGSize(width: contentWidth, height: filmsImagesScrollView.bounds.size.height)
+        filmsMediaScrollView.contentSize = CGSize(width: contentWidth, height: filmsMediaScrollView.bounds.size.height)
+        
+        filmsLabelsScrollView.contentSize = CGSize(width: filmsLabelsScrollView.contentSize.width, height: 0)
+        
+        toggletoImageOrVideo = false
+        setToggletoVideoOrImage(toggle: toggletoImageOrVideo)
+        
+        filmsMediaPageControl.isHidden =  (numberOfImages > 20 || numberOfImages <= 1) ? true : false
         
     }
     
+    func setFilmScrollVideos(_ film: InspirationalFilms){
+        
+    }
    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -200,7 +256,7 @@ extension InspirationalFilmsViewController : UISearchBarDelegate {
      */
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        guard let touch:UITouch = touches.first else
+        guard let _:UITouch = touches.first else
         {
             return;
         }
@@ -279,6 +335,9 @@ extension InspirationalFilmsViewController : UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilmsStoryBoard.cellIdentifier, for: indexPath) as? InspirationalFilmsCollectionViewCell else {
             return InspirationalFilmsCollectionViewCell()
         }
+        let borderWidth : CGFloat = (currentFilmIndex == indexPath.row) ? 2 : 0
+        cell.inspirationalFilmsCoverImageButton.borderWidth = borderWidth
+        cell.inspirationalFilmsCoverImageButton.borderColor = dashboardTextsColor
         cell.inspirationalFilm = inspirationalFilms[indexPath.item]
         
         return cell
@@ -286,13 +345,15 @@ extension InspirationalFilmsViewController : UICollectionViewDataSource {
     
 }
 
+
 // MARK: - UICollectionViewDelegateFlowLayout
 extension InspirationalFilmsViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize { 
         
+        let autoResize = CGFloat.overrideSizeF(size: 1.2)
         let itemWidth = screenWidth * 0.3
-        let itemHeight = (collectionView.contentSize.height * 0.9) 
+        let itemHeight = (collectionView.contentSize.height * autoResize) 
         
         return CGSize(width: itemWidth , height: itemHeight) 
     }
@@ -308,13 +369,134 @@ extension InspirationalFilmsViewController : UIScrollViewDelegate{
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         //update the page controls with the current page number
         
-        if let scrol = (scrollView) as? InspirationalFilmsImagesScrollView {
+        if let scrol = (scrollView) as? InspirationalFilmsMediaScrollView {
             let currentPage = Int(scrol.contentOffset.x / UIScreen.main.bounds.size.width )
-            filmsImagesPageControl.currentPage = currentPage
+            filmsMediaPageControl.currentPage = currentPage
         }
-        
+      
     }
+  
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+         if let scrol = (scrollView) as? InspirationalFilmsLabelsScrollView {
+            self.filmsLabelsScrollView.contentSize = CGSize(width: scrol.contentSize.width, height: 0)
+        
+        }
+    }
+     
 }
 
+// MARK: - UIButton Actions
+extension InspirationalFilmsViewController {
+    
+    func disablePlay(){
+        
+    }
+    
+    func updatePlayButton(color: UIColor, colorInverse: UIColor){
+        UIView.animate(withDuration: 0.2) { 
+            self.inspirationalFilmsPlayView.backgroundColor = color
+            self.inspirationalFilmsPlayButton.backgroundColor = color
+            self.inspirationalFilmsPlayButton.tintColor = colorInverse
+        }
+    }
+    func updateLoveButton(color: UIColor, colorInverse: UIColor){
+        
+        UIView.animate(withDuration: 0.2) { 
+            self.inspirationalFilmsLoveView.backgroundColor = color
+            self.inspirationalFilmsLoveButton.backgroundColor = color
+            self.inspirationalFilmsLoveButton.tintColor = colorInverse
+        }
+    }
+    
+    func setToggletoVideoOrImage(toggle: Bool){
+        
+        
+        if toggle{//videos
+            UIView.animate(withDuration: 0.2) { 
+                self.inspirationalFilmsImagesView.backgroundColor = self.unselectedColor
+                self.inspirationalFilmsImagesButton.backgroundColor = self.unselectedColor
+                self.inspirationalFilmsImagesButton.tintColor = self.dashboardTextsColor
+                
+                self.inspirationalFilmsVideosView.backgroundColor = self.selectedColor.withAlphaComponent(0.4)
+                self.inspirationalFilmsVideosButton.backgroundColor = self.selectedColor.withAlphaComponent(0.2) 
+                self.inspirationalFilmsVideosButton.tintColor = UIColor.blue
+            }
+        }else {//images
+            
+            playSelected = false
+            let color = playSelected ? selectedColor : unselectedColor
+            let colorInverse = playSelected ? UIColor.blue : dashboardTextsColor 
+            
+            UIView.animate(withDuration: 0.2) { 
+                self.updatePlayButton(color: color, colorInverse: colorInverse)
+                self.inspirationalFilmsImagesView.backgroundColor = self.selectedColor.withAlphaComponent(0.4)
+                self.inspirationalFilmsImagesButton.backgroundColor = self.selectedColor.withAlphaComponent(0.2) 
+                self.inspirationalFilmsImagesButton.tintColor = UIColor.blue
+                
+                self.inspirationalFilmsVideosView.backgroundColor = self.unselectedColor
+                self.inspirationalFilmsVideosButton.backgroundColor = self.unselectedColor
+                self.inspirationalFilmsVideosButton.tintColor = self.dashboardTextsColor
+            }
+        }
+    }
+    
+    @IBAction func inspirationalFilmsImagesButtonAction(_ sender: AnimatableButton) {
+        toggletoImageOrVideo = false
+        setToggletoVideoOrImage(toggle: toggletoImageOrVideo)
+    }
+    
+    @IBAction func inspirationalFilmsVideosButtonAction(_ sender: AnimatableButton) {
+        toggletoImageOrVideo = true
+        setToggletoVideoOrImage(toggle: toggletoImageOrVideo)
+    }
+    
+    
+    @IBAction func inspirationalFilmsPlayButtonActionTouchDown(_ sender: AnimatableButton) {
+       
+    }
+    
+    @IBAction func inspirationalFilmsPlayButtonActionTouchInside(_ sender: AnimatableButton) {
+        
+        if toggletoImageOrVideo {
+            playSelected = !playSelected
+            let color = playSelected ? selectedColor.withAlphaComponent(0.4) : unselectedColor
+            let colorInverse = playSelected ? UIColor.blue : dashboardTextsColor 
+            updatePlayButton(color: color, colorInverse: colorInverse)
+        }
+    }
+    
+    @IBAction func inspirationalFilmsPlayButtonActionTouchOutside(_ sender: AnimatableButton) {
+        
+        if toggletoImageOrVideo {
+            playSelected = !playSelected
+            let color = playSelected ? selectedColor.withAlphaComponent(0.4) : unselectedColor
+            let colorInverse = playSelected ? UIColor.blue : dashboardTextsColor
+            updatePlayButton(color: color, colorInverse: colorInverse)
+        }
+    }
+    
+    
+    @IBAction func inspirationalFilmsLoveButtonActionTouchDown(_ sender: AnimatableButton) {
+        
+    }
+    @IBAction func inspirationalFilmsLoveButtonActionTouchInside(_ sender: AnimatableButton) {
+       
+        loveSelected = !loveSelected
+        let color = loveSelected ? selectedColor.withAlphaComponent(0.4) : unselectedColor
+        let colorInverse = loveSelected ? UIColor.red : dashboardTextsColor
+        updateLoveButton(color: color, colorInverse: colorInverse)
+    }
+    
+    @IBAction func inspirationalFilmsLoveButtonActionTouchOutside(_ sender: AnimatableButton) {
+        
+        loveSelected = !loveSelected      
+        let color = loveSelected ? selectedColor.withAlphaComponent(0.4) : unselectedColor
+        let colorInverse = loveSelected ? UIColor.red : dashboardTextsColor 
+        updateLoveButton(color: color, colorInverse: colorInverse)
+    }
+   
+    
+}
 
 
