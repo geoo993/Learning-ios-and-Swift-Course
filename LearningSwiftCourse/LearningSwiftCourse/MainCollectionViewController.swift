@@ -16,7 +16,7 @@ private let reuseIdentifier = "MainCell"
 class MainCollectionViewController: UICollectionViewController {
 
     var views: [String: String] = [
-                           "StorySmartiesViewController":"StorySmartiesMain",
+                           "IntroScreenViewController":"StorySmartiesMain",
                            "VideoPlayerViewController":"VideoPlayerMain",
                            "AudioCheckViewController": "AudioMain",
                            "TableViewNavigationViewController": "TableViewMain",
@@ -119,11 +119,11 @@ class MainCollectionViewController: UICollectionViewController {
         let defaultBundleID = "co.lexilabs.LearningSwiftCourse"
         let bundle = Bundle(identifier: defaultBundleID)
         let view = views.getKeyString(index: indexPath.row)
-        if let storyBoardName = views[view] {
+        if let storyBoardName = views[view] { 
         
             let storyboard = UIStoryboard(name: storyBoardName, bundle: bundle) 
             let vc = storyboard.instantiateViewController(withIdentifier: view)
-            self.present(vc, animated: true, completion: nil)
+            present(vc, animated: true, completion: nil)
             
         }
      

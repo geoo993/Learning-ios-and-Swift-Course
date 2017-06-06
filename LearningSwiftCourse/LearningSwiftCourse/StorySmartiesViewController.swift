@@ -21,10 +21,8 @@ class StorySmartiesViewController: UIViewController {
         {
         case 0:
             print("Read selected")
-        //show popular view
         case 1:
             print("Listen selected")
-        //show history view
         case 2:
             
             dismiss(animated: true) { 
@@ -37,6 +35,10 @@ class StorySmartiesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = UIColor.randomColor()
+        //let range = NSMakeRange(myTextView.text.characters.count - 1, 0)
+        //myTextView.scrollRangeToVisible(range)
         
         myTextView.text = "Wilf had a cat. Seated around him were Biff, Chip, Kipper and Sally. A top hat was on the table. He held the cat in one hand and with the other placed a cloth. Chip looked at the hat with a smile. He was wearing a stripped jumper and beige trousers. Biff wore her hair in a pony-tail tied together with a yellow and red-spotted bow."
         // Do any additional setup after loading the view.
@@ -59,6 +61,7 @@ class StorySmartiesViewController: UIViewController {
     */
 
     deinit {
+        
         print("Story Smarties view controller is \(#function)")
     }
     

@@ -14,17 +14,19 @@ public class InterestCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var interestTitleLabel: UILabel!
     @IBOutlet weak var interestFeaturedImageView: UIImageView!
     
-    var interest : Interest! {
+    var interestTitle : String! {
         didSet{
-            updateUI()
+            interestTitleLabel.text = interestTitle
         }
     }
     
-    public func updateUI(){
-        interestTitleLabel.text = interest.title
-        interestFeaturedImageView.image = interest.featuredImage
+    var interestFeatureImage : UIImage! {
+        didSet{
+            interestFeaturedImageView.image = interestFeatureImage
+        }
     }
     
+  
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder) 
     }

@@ -59,16 +59,16 @@
                                             <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Fs-OV-PY5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="362.33333333333331"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
                                                     <subviews>
                                                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hi-rF-xMu" userLabel="Films Media Scroll View" customClass="InspirationalFilmsMediaScrollView" customModule="LearningSwiftCourse">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="362.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="TYC-OA-v6D" id="rxx-pb-3BC"/>
                                                             </connections>
                                                         </scrollView>
                                                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LPH-N9-iqb" userLabel="Films Media Page Control">
-                                                            <rect key="frame" x="187" y="342.33333333333331" width="40" height="10"/>
+                                                            <rect key="frame" x="187" y="342" width="40" height="10"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="4CH-Xe-Xsz"/>
                                                                 <constraint firstAttribute="height" constant="10" id="gW3-rf-G2k"/>
@@ -85,7 +85,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgE-Lc-qRM">
-                                                    <rect key="frame" x="0.0" y="362.33333333333326" width="414" height="137.66666666666669"/>
+                                                    <rect key="frame" x="0.0" y="362" width="414" height="138"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFJ-qS-t6s" userLabel="Title Label">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
@@ -98,13 +98,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fqc-oc-9c2">
-                                                            <rect key="frame" x="0.0" y="31" width="414" height="75.666666666666686"/>
+                                                            <rect key="frame" x="0.0" y="31" width="414" height="76"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy4-5M-RIh" userLabel="Play View">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="75.666666666666686"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="103" height="76"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jps-ul-63r" userLabel="Play Button" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                                            <rect key="frame" x="25" y="10" width="52.666666666666671" height="55.666666666666686"/>
+                                                                            <rect key="frame" x="25" y="10" width="53" height="56"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="Jps-ul-63r" secondAttribute="height" multiplier="29:31" id="Ag4-Jx-QNu"/>
@@ -136,10 +136,10 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7h-S4-JIA" userLabel="Images View">
-                                                                    <rect key="frame" x="103.66666666666666" y="0.0" width="102.99999999999997" height="75.666666666666686"/>
+                                                                    <rect key="frame" x="104" y="0.0" width="103" height="76"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKj-TS-vCA" userLabel="Images Button" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                                            <rect key="frame" x="25.999999999999986" y="16" width="51" height="43.666666666666686"/>
+                                                                            <rect key="frame" x="26" y="16" width="51" height="44"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <state key="normal" image="imageicon"/>
@@ -160,10 +160,10 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkt-sg-SLe" userLabel="Videos View">
-                                                                    <rect key="frame" x="207.66666666666669" y="0.0" width="102.66666666666669" height="75.666666666666686"/>
+                                                                    <rect key="frame" x="208" y="0.0" width="102" height="76"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mho-Re-7cl" userLabel="Video Button" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                                            <rect key="frame" x="26" y="12" width="50.666666666666657" height="51.666666666666686"/>
+                                                                            <rect key="frame" x="26" y="12" width="50" height="52"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <state key="normal" image="videoIcon"/>
@@ -185,10 +185,10 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Njl-fC-T0g" userLabel="Love View">
-                                                                    <rect key="frame" x="311.33333333333326" y="0.0" width="102.66666666666669" height="75.666666666666686"/>
+                                                                    <rect key="frame" x="311" y="0.0" width="103" height="76"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHs-la-o97" userLabel="Love Button" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                                            <rect key="frame" x="23" y="10" width="57.666666666666686" height="55.666666666666686"/>
+                                                                            <rect key="frame" x="23" y="10" width="58" height="56"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <state key="normal" image="hearticon"/>
@@ -229,7 +229,7 @@
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bdC-KF-pdg">
-                                                            <rect key="frame" x="0.0" y="107.66666666666669" width="414" height="30"/>
+                                                            <rect key="frame" x="0.0" y="108" width="414" height="30"/>
                                                             <subviews>
                                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTv-a2-YwY" customClass="InspirationalFilmsLabelsScrollView" customModule="LearningSwiftCourse">
                                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>

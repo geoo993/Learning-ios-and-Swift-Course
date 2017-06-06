@@ -60,6 +60,7 @@ class InspirationalFilmsViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var homebutton: AnimatableButton!
     @IBAction func homebuttonAction(_ sender: Any) {
+        
         dismiss(animated: true) { 
             print("Inspirational Films view controller dismissed, now going to home page")
         }
@@ -298,7 +299,19 @@ class InspirationalFilmsViewController: UIViewController {
         static let cellIdentifier = "Films Cell"
     }
     
+    func clearAll(){
+        videoPlayer = nil
+        videoPlayerLayer = nil
+        for sv in view.subviews {
+            sv.removeFromSuperview()
+        }
+        view.removeFromSuperview()
+    }
+    
     deinit {
+        
+        clearAll()
+        // perform the deinitialization
         print("Inspirational view controller is \(#function)")
     }
     

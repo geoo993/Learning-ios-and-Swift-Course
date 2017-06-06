@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CarouselViewController: UIViewController {
 
     //Mark: - @IBOutlets and @IBAction
@@ -28,13 +29,32 @@ class CarouselViewController: UIViewController {
     }
     
     @IBAction func homebutton(_ sender: Any) {
+        
         dismiss(animated: true) { 
             print("view controller dismissed, now going to home page")
         }
     }
     
     //Mark: - UICollectionviewDataSource
-    var interests = Interest.createInterest()
+    //var interests : [Interest]?
+    var interest : Interest?
+    var interestTitles : [String]?
+    var interestDescription : [String]?
+    var interestFeatureImages : [UIImage]?
+    
+    func setupInterests(){
+        
+        if interest == nil {
+            interest = Interest()
+            
+            
+            if let interests = interest?.createInterest() {
+                interestTitles = interests.map{ $0.title } 
+                interestDescription  = interests.map{ $0.description } 
+                interestFeatureImages = interests.map{ $0.featuredImage } 
+            }
+        }
+    }
     
     //Mark: - Status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -58,6 +78,8 @@ class CarouselViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupInterests()
+        
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.randomColor()
         definesPresentationContext = true
@@ -66,6 +88,15 @@ class CarouselViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+       
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        clearAll()
     }
     
     override func viewDidLayoutSubviews()
@@ -87,6 +118,18 @@ class CarouselViewController: UIViewController {
     
     struct StoryBoard{
         static let cellIdentifier = "Interest Cell"
+    }
+    
+    
+    func clearAll(){
+        interest = nil
+        interestTitles = nil
+        interestDescription  = nil
+        interestFeatureImages = nil
+        for sv in view.subviews {
+            sv.removeFromSuperview()
+        }
+        view.removeFromSuperview()
     }
     
     deinit {
@@ -146,13 +189,11 @@ extension CarouselViewController : UISearchBarDelegate {
     }
   
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        //tableView.isHidden = true
+
+        let texts = interestTitles?
+            .filter( { $0.lowercased().contains( searchText.lowercased() )}) ?? [String]()
         
-        let text  = interests
-            .filter( { $0.title.lowercased().contains( searchText.lowercased() )})
-            .map{ $0.title }
-        
-        searchBarFiltered = text
+        searchBarFiltered = texts
         
         if(searchBarFiltered.count == 0){
             searchActive = false;
@@ -181,7 +222,7 @@ extension CarouselViewController: UITableViewDataSource {
         if(searchActive) {
             return searchBarFiltered.count
         }
-        return interests.count
+        return interestTitles?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -191,7 +232,7 @@ extension CarouselViewController: UITableViewDataSource {
         if(searchActive){
             cell.textLabel?.text = searchBarFiltered[indexPath.row]
         } else {
-            cell.textLabel?.text = interests[indexPath.row].title
+            cell.textLabel?.text = interestTitles?[indexPath.row]
         }
         cell.textLabel?.font = searchBar.textFont
 
@@ -214,12 +255,15 @@ extension CarouselViewController: UITableViewDelegate {
         var doScrollToCell = false
         var doScrollIndex = 0
         
-        for (index,item) in interests.enumerated() {
-            
-            if (searchBar.text == item.title){
-                doScrollToCell = true
-                doScrollIndex = index
-                break
+        if let allInterest = interestTitles {
+        
+            for (index,item) in allInterest.enumerated() {
+                
+                if (searchBar.text == item){
+                    doScrollToCell = true
+                    doScrollIndex = index
+                    break
+                }
             }
         }
         
@@ -251,7 +295,7 @@ extension CarouselViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return interests.count
+        return interestTitles?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -260,7 +304,8 @@ extension CarouselViewController : UICollectionViewDataSource {
             return InterestCollectionViewCell()
         }
         
-        cell.interest = interests[indexPath.item]
+        cell.interestTitle = interestTitles?[indexPath.item]
+        cell.interestFeatureImage = interestFeatureImages?[indexPath.item]
         
         return cell
     }
@@ -304,6 +349,22 @@ extension CarouselViewController : UIScrollViewDelegate{
         
         targetContentOffset.pointee = scrollOffset
         
+    }
+    
+}
+
+extension CarouselViewController {
+    
+    func createInterest() -> [Interest]
+    {
+        return [ 
+            Interest(title: "We Love Traveling Around the World", description: "We Love backpack and adventures! We walked to Artartica yesterday, and camped with some cute pinguines, and talked about this wonderful app idea.", featuredImage: UIImage(named: "SnowyCartoonCave")),
+            Interest(title: "Romance Stories", description: "We Love romantic stories, We Spend all our day taking care of every precious little things we still have available in this extraordary world. We just want to keep empowering people to continue to love one another.", featuredImage: UIImage(named: "pexels")),
+            Interest(title: "We Love Games", description: "We Love playing and jaming together in our games room! Playing board games, drinking, laughing, going against each other and enjoying some the most amazing games of our current generation.", featuredImage: UIImage(named: "autumnlandscape")),
+            Interest(title: "We Love Racing", description: "Cars and aircrafts and boats are our favourite racing vehicles. We love going to the mountains racing down the curvy slides and dangling along the coastline with our racers. Totally Amazing!", featuredImage: UIImage(named: "desert")),
+            Interest(title: "I Love Words", description: "I wrote a book once about my lover and the child we had. It was the greatest book I've ever written and it turned out to be the greatest fictional story ever written. Even though the words in that book explained the tradegy that happened throughout my short loving time with my wife.", featuredImage: UIImage(named: "treesfallredleaves"))
+            
+        ]
     }
     
 }

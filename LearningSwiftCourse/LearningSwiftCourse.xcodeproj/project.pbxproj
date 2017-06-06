@@ -56,6 +56,9 @@
 		C77E83371EA25F4F000AC715 /* RxSwiftExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C781C8B01EE2BB9D00DC9A7B /* Dictionary+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C781C8AF1EE2BB9D00DC9A7B /* Dictionary+Ext.swift */; };
 		C78B2CE71EA6C74D00DB3967 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B2CE61EA6C74D00DB3967 /* UIImageView+Ext.swift */; };
+		C79635331EE553E800AA11B0 /* SummaryScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79635321EE553E800AA11B0 /* SummaryScreenViewController.swift */; };
+		C796354B1EE5540000AA11B0 /* IntroScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796354A1EE5540000AA11B0 /* IntroScreenViewController.swift */; };
+		C79635D71EE5A01100AA11B0 /* IntroScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79635D61EE5A01100AA11B0 /* IntroScreenTableViewCell.swift */; };
 		C7ACB3871ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ACB3861ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift */; };
 		C7AE47ED1EA4FCE600C2096E /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE47EC1EA4FCE600C2096E /* TabBarModel.swift */; };
 		C7AE48041EA4FE7D00C2096E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48031EA4FE7D00C2096E /* TabBarViewController.swift */; };
@@ -410,6 +413,9 @@
 		C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxGesture.xcodeproj; path = ../Carthage/Checkouts/RxGesture/RxGesture/RxGesture.xcodeproj; sourceTree = "<group>"; };
 		C781C8AF1EE2BB9D00DC9A7B /* Dictionary+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ext.swift"; sourceTree = "<group>"; };
 		C78B2CE61EA6C74D00DB3967 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		C79635321EE553E800AA11B0 /* SummaryScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryScreenViewController.swift; sourceTree = "<group>"; };
+		C796354A1EE5540000AA11B0 /* IntroScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenViewController.swift; sourceTree = "<group>"; };
+		C79635D61EE5A01100AA11B0 /* IntroScreenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenTableViewCell.swift; sourceTree = "<group>"; };
 		C7ACB3861ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsMediaScrollView.swift; sourceTree = "<group>"; };
 		C7AE47EC1EA4FCE600C2096E /* TabBarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		C7AE48031EA4FE7D00C2096E /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -814,6 +820,9 @@
 		C7F45F371EE4BAB7005CF986 /* StorySmartiesDesign */ = {
 			isa = PBXGroup;
 			children = (
+				C79635321EE553E800AA11B0 /* SummaryScreenViewController.swift */,
+				C796354A1EE5540000AA11B0 /* IntroScreenViewController.swift */,
+				C79635D61EE5A01100AA11B0 /* IntroScreenTableViewCell.swift */,
 				C7F45F501EE4BB18005CF986 /* StorySmartiesViewController.swift */,
 				C7F45F4E1EE4BAFA005CF986 /* StorySmartiesMain.storyboard */,
 			);
@@ -1204,9 +1213,11 @@
 			files = (
 				C7AE47ED1EA4FCE600C2096E /* TabBarModel.swift in Sources */,
 				C76E5C741ED60B6E00E2C4D3 /* UIWindow+Ext.swift in Sources */,
+				C796354B1EE5540000AA11B0 /* IntroScreenViewController.swift in Sources */,
 				C742173A1EC1CA400007B4C3 /* SlidesInfoModel.swift in Sources */,
 				C781C8B01EE2BB9D00DC9A7B /* Dictionary+Ext.swift in Sources */,
 				C7AE489E1EA54D6B00C2096E /* MediaTableViewController.swift in Sources */,
+				C79635D71EE5A01100AA11B0 /* IntroScreenTableViewCell.swift in Sources */,
 				C76E5C791ED639D400E2C4D3 /* CarouselViewController.swift in Sources */,
 				C7F45F511EE4BB18005CF986 /* StorySmartiesViewController.swift in Sources */,
 				C76E5C7D1ED6500B00E2C4D3 /* Interest.swift in Sources */,
@@ -1237,6 +1248,7 @@
 				C76E5C801ED65C7400E2C4D3 /* InterestCollectionViewCell.swift in Sources */,
 				C7E8B1891ED4551600FC912F /* VideoPlayerViewController.swift in Sources */,
 				C76E5C721ED60AFC00E2C4D3 /* UIApplication+Ext.swift in Sources */,
+				C79635331EE553E800AA11B0 /* SummaryScreenViewController.swift in Sources */,
 				C7BE67861EE2B72900A05286 /* Generic+Ext.swift in Sources */,
 				C7E45A101EE2EEA300F7015C /* UIButton+Ext.swift in Sources */,
 				C7F45EA01EE41D9B005CF986 /* String+Ext.swift in Sources */,

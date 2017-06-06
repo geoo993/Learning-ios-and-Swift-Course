@@ -17,6 +17,16 @@ class Interest {
     var numberOfPosts : Int
     var featuredImage : UIImage!
     
+    
+    init ()
+    {
+        self.title = ""
+        self.description = ""
+        self.numberOfMembers = 1
+        self.numberOfPosts = 1
+        self.featuredImage = nil
+    }
+    
     init(title: String, description : String, featuredImage : UIImage!)
     {
         self.title = title
@@ -27,7 +37,7 @@ class Interest {
         
     }
     
-    static func createInterest() -> [Interest]
+    func createInterest() -> [Interest]
     {
         return [ 
             Interest(title: "We Love Traveling Around the World", description: "We Love backpack and adventures! We walked to Artartica yesterday, and camped with some cute pinguines, and talked about this wonderful app idea.", featuredImage: UIImage(named: "SnowyCartoonCave")),
