@@ -104,5 +104,43 @@ public extension UIView {
         }else { return UIImage() }
     }
     
+    func blurNewView(newChild: UIView){
+        let parent = self
+        
+        // Blur Effect
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = parent.bounds
+        parent.addSubview(blurEffectView)
+        
+        // Vibrancy Effect
+        let vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect)
+        let vibrancyEffectView = UIVisualEffectView(effect: vibrancyEffect)
+        vibrancyEffectView.frame = parent.bounds
+        
+        // Add label to the vibrancy view
+        vibrancyEffectView.contentView.addSubview(newChild)
+        
+        // Add the vibrancy view to the blur view
+        blurEffectView.contentView.addSubview(vibrancyEffectView)
+    }
+    
+    
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
+    }
+    
+    func addBorder(mask: CAShapeLayer, borderColor: UIColor, borderWidth: CGFloat) {
+        let borderLayer = CAShapeLayer()
+        borderLayer.path = mask.path
+        borderLayer.fillColor = UIColor.clear.cgColor
+        borderLayer.strokeColor = borderColor.cgColor
+        borderLayer.lineWidth = borderWidth
+        borderLayer.frame = bounds
+        layer.addSublayer(borderLayer)
+    }
     
 }

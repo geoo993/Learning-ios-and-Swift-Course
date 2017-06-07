@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IntroScreenTableViewCell: UITableViewCell {
+class SummaryViewTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!

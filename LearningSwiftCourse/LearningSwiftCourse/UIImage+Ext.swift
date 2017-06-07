@@ -9,10 +9,6 @@
 import Foundation
 import UIKit
 
-
-
-
-
 extension UIImage {
     
     /// Resizes an image to the specified size.

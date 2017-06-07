@@ -16,7 +16,7 @@ private let reuseIdentifier = "MainCell"
 class MainCollectionViewController: UICollectionViewController {
 
     var views: [String: String] = [
-                           "IntroScreenViewController":"StorySmartiesMain",
+                           "StorySmartiesViewController":"StorySmartiesMain",
                            "VideoPlayerViewController":"VideoPlayerMain",
                            "AudioCheckViewController": "AudioMain",
                            "TableViewNavigationViewController": "TableViewMain",
@@ -53,7 +53,26 @@ class MainCollectionViewController: UICollectionViewController {
         
         
     }
-
+    
+    /*
+    func findAllControllers()
+    {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        if let viewControllers = appDelegate.window?.rootViewController?.presentedViewController
+        {
+            // Array of all viewcontroller even after presented
+        }
+        else if let viewControllers = appDelegate.window?.rootViewController?.childViewControllers
+        {
+            // Array of all viewcontroller after push  
+            viewControllers.flatMap{ print($0) }
+        }
+        
+    }
+ */
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

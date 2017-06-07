@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70C84B31EE703F50098A62F /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C7C1ED6500B00E2C4D3 /* Interest.swift */; };
+		C70C84DD1EE760F50098A62F /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C84DC1EE760F50098A62F /* SummaryView.swift */; };
 		C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */; };
 		C72E27A71E9ED9EB0064E01B /* ColorChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27A61E9ED9EB0064E01B /* ColorChangeViewController.swift */; };
 		C72E27AA1E9ED9EB0064E01B /* ColorsMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E27A81E9ED9EB0064E01B /* ColorsMain.storyboard */; };
@@ -31,6 +33,9 @@
 		C749398A1ED7808000555D31 /* InspirationalFilmsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74939891ED7808000555D31 /* InspirationalFilmsCollectionViewCell.swift */; };
 		C749398D1ED782D500555D31 /* InspirationalFilms.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749398C1ED782D500555D31 /* InspirationalFilms.swift */; };
 		C749398F1ED7840D00555D31 /* InspirationalFilmsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749398E1ED7840D00555D31 /* InspirationalFilmsInfo.swift */; };
+		C74C99FF1EE87C14001E4FFE /* AirbnbMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74C99FE1EE87C14001E4FFE /* AirbnbMain.storyboard */; };
+		C74C9A011EE87C68001E4FFE /* AirbnbTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C9A001EE87C68001E4FFE /* AirbnbTableViewController.swift */; };
+		C74C9A031EE87C98001E4FFE /* AirbnbData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C9A021EE87C98001E4FFE /* AirbnbData.swift */; };
 		C765C26C1EA4DFD400F5FE90 /* TabBarMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C765C26B1EA4DFD400F5FE90 /* TabBarMain.storyboard */; };
 		C765C2701EA4E08600F5FE90 /* MetricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C26F1EA4E08600F5FE90 /* MetricViewController.swift */; };
 		C765C2721EA4E09F00F5FE90 /* EnglishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C2711EA4E09F00F5FE90 /* EnglishViewController.swift */; };
@@ -43,7 +48,6 @@
 		C76E5C761ED6326A00E2C4D3 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C751ED6326A00E2C4D3 /* EmptyViewController.swift */; };
 		C76E5C791ED639D400E2C4D3 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C781ED639D400E2C4D3 /* CarouselViewController.swift */; };
 		C76E5C7B1ED639E500E2C4D3 /* CarouselMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76E5C7A1ED639E500E2C4D3 /* CarouselMain.storyboard */; };
-		C76E5C7D1ED6500B00E2C4D3 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C7C1ED6500B00E2C4D3 /* Interest.swift */; };
 		C76E5C801ED65C7400E2C4D3 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C7F1ED65C7400E2C4D3 /* InterestCollectionViewCell.swift */; };
 		C76E5EC21ED706ED00E2C4D3 /* UISearchBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5EC11ED706ED00E2C4D3 /* UISearchBar+Ext.swift */; };
 		C77E832A1EA25F4F000AC715 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83271EA25F18000AC715 /* RxGesture.framework */; };
@@ -56,9 +60,7 @@
 		C77E83371EA25F4F000AC715 /* RxSwiftExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C781C8B01EE2BB9D00DC9A7B /* Dictionary+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C781C8AF1EE2BB9D00DC9A7B /* Dictionary+Ext.swift */; };
 		C78B2CE71EA6C74D00DB3967 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B2CE61EA6C74D00DB3967 /* UIImageView+Ext.swift */; };
-		C79635331EE553E800AA11B0 /* SummaryScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79635321EE553E800AA11B0 /* SummaryScreenViewController.swift */; };
-		C796354B1EE5540000AA11B0 /* IntroScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796354A1EE5540000AA11B0 /* IntroScreenViewController.swift */; };
-		C79635D71EE5A01100AA11B0 /* IntroScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79635D61EE5A01100AA11B0 /* IntroScreenTableViewCell.swift */; };
+		C79635D71EE5A01100AA11B0 /* SummaryViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79635D61EE5A01100AA11B0 /* SummaryViewTableViewCell.swift */; };
 		C7ACB3871ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ACB3861ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift */; };
 		C7AE47ED1EA4FCE600C2096E /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE47EC1EA4FCE600C2096E /* TabBarModel.swift */; };
 		C7AE48041EA4FE7D00C2096E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48031EA4FE7D00C2096E /* TabBarViewController.swift */; };
@@ -95,7 +97,6 @@
 		C7E8B1891ED4551600FC912F /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E8B1881ED4551600FC912F /* VideoPlayerViewController.swift */; };
 		C7E8B18B1ED4552A00FC912F /* VideoPlayerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E8B18A1ED4552A00FC912F /* VideoPlayerMain.storyboard */; };
 		C7EB75F81EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB75F71EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift */; };
-		C7F45E9E1EE41D20005CF986 /* TheWordsParkIntro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C7F45E9D1EE41377005CF986 /* TheWordsParkIntro.mp4 */; };
 		C7F45EA01EE41D9B005CF986 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F45E9F1EE41D9B005CF986 /* String+Ext.swift */; };
 		C7F45F4F1EE4BAFA005CF986 /* StorySmartiesMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7F45F4E1EE4BAFA005CF986 /* StorySmartiesMain.storyboard */; };
 		C7F45F511EE4BB18005CF986 /* StorySmartiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F45F501EE4BB18005CF986 /* StorySmartiesViewController.swift */; };
@@ -362,6 +363,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C70C84DC1EE760F50098A62F /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		C72E27A11E9ED9EB0064E01B /* LearningSwiftCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningSwiftCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C72E27A61E9ED9EB0064E01B /* ColorChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangeViewController.swift; sourceTree = "<group>"; };
@@ -393,6 +395,9 @@
 		C74939891ED7808000555D31 /* InspirationalFilmsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C749398C1ED782D500555D31 /* InspirationalFilms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilms.swift; sourceTree = "<group>"; };
 		C749398E1ED7840D00555D31 /* InspirationalFilmsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsInfo.swift; sourceTree = "<group>"; };
+		C74C99FE1EE87C14001E4FFE /* AirbnbMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AirbnbMain.storyboard; sourceTree = "<group>"; };
+		C74C9A001EE87C68001E4FFE /* AirbnbTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbTableViewController.swift; sourceTree = "<group>"; };
+		C74C9A021EE87C98001E4FFE /* AirbnbData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbData.swift; sourceTree = "<group>"; };
 		C765C26B1EA4DFD400F5FE90 /* TabBarMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBarMain.storyboard; sourceTree = "<group>"; };
 		C765C26F1EA4E08600F5FE90 /* MetricViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricViewController.swift; sourceTree = "<group>"; };
 		C765C2711EA4E09F00F5FE90 /* EnglishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnglishViewController.swift; sourceTree = "<group>"; };
@@ -413,9 +418,7 @@
 		C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxGesture.xcodeproj; path = ../Carthage/Checkouts/RxGesture/RxGesture/RxGesture.xcodeproj; sourceTree = "<group>"; };
 		C781C8AF1EE2BB9D00DC9A7B /* Dictionary+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ext.swift"; sourceTree = "<group>"; };
 		C78B2CE61EA6C74D00DB3967 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
-		C79635321EE553E800AA11B0 /* SummaryScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryScreenViewController.swift; sourceTree = "<group>"; };
-		C796354A1EE5540000AA11B0 /* IntroScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenViewController.swift; sourceTree = "<group>"; };
-		C79635D61EE5A01100AA11B0 /* IntroScreenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenTableViewCell.swift; sourceTree = "<group>"; };
+		C79635D61EE5A01100AA11B0 /* SummaryViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewTableViewCell.swift; sourceTree = "<group>"; };
 		C7ACB3861ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsMediaScrollView.swift; sourceTree = "<group>"; };
 		C7AE47EC1EA4FCE600C2096E /* TabBarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		C7AE48031EA4FE7D00C2096E /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -452,7 +455,6 @@
 		C7E8B1881ED4551600FC912F /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		C7E8B18A1ED4552A00FC912F /* VideoPlayerMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoPlayerMain.storyboard; sourceTree = "<group>"; };
 		C7EB75F71EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsLabelsScrollView.swift; sourceTree = "<group>"; };
-		C7F45E9D1EE41377005CF986 /* TheWordsParkIntro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = TheWordsParkIntro.mp4; path = ../../../../Desktop/InspirationslFilmsWithSubs/TheWords2012/TheWordsParkIntro.mp4; sourceTree = "<group>"; };
 		C7F45E9F1EE41D9B005CF986 /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		C7F45F4E1EE4BAFA005CF986 /* StorySmartiesMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StorySmartiesMain.storyboard; sourceTree = "<group>"; };
 		C7F45F501EE4BB18005CF986 /* StorySmartiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySmartiesViewController.swift; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 				C7E3886E1ED3055F000DCE15 /* LearningSwiftCourse.entitlements */,
 				C7AE48D11EA5638800C2096E /* Extensions */,
 				C7E387C51ED2F2B2000DCE15 /* AudioExample */,
+				C74C99E71EE87BBE001E4FFE /* AirbnbExample */,
 				C7AE48961EA54C4100C2096E /* TableExample */,
 				C765C2731EA4E6C000F5FE90 /* NavBarExample */,
 				C765C26E1EA4E03600F5FE90 /* TabBarExample */,
@@ -594,6 +597,16 @@
 				C749398E1ED7840D00555D31 /* InspirationalFilmsInfo.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		C74C99E71EE87BBE001E4FFE /* AirbnbExample */ = {
+			isa = PBXGroup;
+			children = (
+				C74C9A001EE87C68001E4FFE /* AirbnbTableViewController.swift */,
+				C74C9A021EE87C98001E4FFE /* AirbnbData.swift */,
+				C74C99FE1EE87C14001E4FFE /* AirbnbMain.storyboard */,
+			);
+			name = AirbnbExample;
 			sourceTree = "<group>";
 		};
 		C765C26D1EA4E02700F5FE90 /* ColorsExample */ = {
@@ -812,7 +825,6 @@
 		C7F45E861EE41357005CF986 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				C7F45E9D1EE41377005CF986 /* TheWordsParkIntro.mp4 */,
 			);
 			name = Videos;
 			sourceTree = "<group>";
@@ -820,10 +832,9 @@
 		C7F45F371EE4BAB7005CF986 /* StorySmartiesDesign */ = {
 			isa = PBXGroup;
 			children = (
-				C79635321EE553E800AA11B0 /* SummaryScreenViewController.swift */,
-				C796354A1EE5540000AA11B0 /* IntroScreenViewController.swift */,
-				C79635D61EE5A01100AA11B0 /* IntroScreenTableViewCell.swift */,
+				C79635D61EE5A01100AA11B0 /* SummaryViewTableViewCell.swift */,
 				C7F45F501EE4BB18005CF986 /* StorySmartiesViewController.swift */,
+				C70C84DC1EE760F50098A62F /* SummaryView.swift */,
 				C7F45F4E1EE4BAFA005CF986 /* StorySmartiesMain.storyboard */,
 			);
 			name = StorySmartiesDesign;
@@ -1170,7 +1181,7 @@
 				C74217341EC1C27C0007B4C3 /* ScrollViewMain.storyboard in Resources */,
 				C74217CE1EC1F34C0007B4C3 /* slide15.gif in Resources */,
 				C7E387DE1ED2F2FF000DCE15 /* AudioMain.storyboard in Resources */,
-				C7F45E9E1EE41D20005CF986 /* TheWordsParkIntro.mp4 in Resources */,
+				C74C99FF1EE87C14001E4FFE /* AirbnbMain.storyboard in Resources */,
 				C74217D01EC1F36A0007B4C3 /* slide16.gif in Resources */,
 				C742173E1EC1CF740007B4C3 /* Slide.xib in Resources */,
 				C74217D21EC1F37A0007B4C3 /* slide18.gif in Resources */,
@@ -1213,14 +1224,12 @@
 			files = (
 				C7AE47ED1EA4FCE600C2096E /* TabBarModel.swift in Sources */,
 				C76E5C741ED60B6E00E2C4D3 /* UIWindow+Ext.swift in Sources */,
-				C796354B1EE5540000AA11B0 /* IntroScreenViewController.swift in Sources */,
 				C742173A1EC1CA400007B4C3 /* SlidesInfoModel.swift in Sources */,
 				C781C8B01EE2BB9D00DC9A7B /* Dictionary+Ext.swift in Sources */,
 				C7AE489E1EA54D6B00C2096E /* MediaTableViewController.swift in Sources */,
-				C79635D71EE5A01100AA11B0 /* IntroScreenTableViewCell.swift in Sources */,
+				C79635D71EE5A01100AA11B0 /* SummaryViewTableViewCell.swift in Sources */,
 				C76E5C791ED639D400E2C4D3 /* CarouselViewController.swift in Sources */,
 				C7F45F511EE4BB18005CF986 /* StorySmartiesViewController.swift in Sources */,
-				C76E5C7D1ED6500B00E2C4D3 /* Interest.swift in Sources */,
 				C765C27B1EA4E77000F5FE90 /* NavigationViewController.swift in Sources */,
 				C7E387DC1ED2F2DC000DCE15 /* AudioCheckViewController.swift in Sources */,
 				C76E5C761ED6326A00E2C4D3 /* EmptyViewController.swift in Sources */,
@@ -1246,16 +1255,19 @@
 				C765C2721EA4E09F00F5FE90 /* EnglishViewController.swift in Sources */,
 				C7AE48D61EA563A400C2096E /* UIImage+Ext.swift in Sources */,
 				C76E5C801ED65C7400E2C4D3 /* InterestCollectionViewCell.swift in Sources */,
+				C74C9A011EE87C68001E4FFE /* AirbnbTableViewController.swift in Sources */,
 				C7E8B1891ED4551600FC912F /* VideoPlayerViewController.swift in Sources */,
+				C70C84B31EE703F50098A62F /* Interest.swift in Sources */,
 				C76E5C721ED60AFC00E2C4D3 /* UIApplication+Ext.swift in Sources */,
-				C79635331EE553E800AA11B0 /* SummaryScreenViewController.swift in Sources */,
 				C7BE67861EE2B72900A05286 /* Generic+Ext.swift in Sources */,
 				C7E45A101EE2EEA300F7015C /* UIButton+Ext.swift in Sources */,
 				C7F45EA01EE41D9B005CF986 /* String+Ext.swift in Sources */,
 				C749398D1ED782D500555D31 /* InspirationalFilms.swift in Sources */,
+				C70C84DD1EE760F50098A62F /* SummaryView.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
 				C7E45A281EE351BB00F7015C /* UITextField+Ext.swift in Sources */,
 				C76E5B471ED59FED00E2C4D3 /* UIView+Ext.swift in Sources */,
+				C74C9A031EE87C98001E4FFE /* AirbnbData.swift in Sources */,
 				C742173C1EC1CF650007B4C3 /* Slide.swift in Sources */,
 				C7AE48B31EA5550B00C2096E /* ProductLine.swift in Sources */,
 				C7BE65E41EE2A23E00A05286 /* MainCollectionViewCell.swift in Sources */,

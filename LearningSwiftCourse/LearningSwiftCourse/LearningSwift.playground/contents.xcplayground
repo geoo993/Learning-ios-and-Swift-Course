@@ -26,8 +26,9 @@
         <page name='Observables3'/>
         <page name='Observables+Scan'/>
         <page name='Observable+Gestures'/>
-        <page name='FilterMapAndFlatMap'/>
         <page name='Arrays'/>
         <page name='WalletExample'/>
+        <page name='FilterReduceMapAndFlatMap'/>
+        <page name='Weak and Strong'/>
     </pages>
 </playground>
