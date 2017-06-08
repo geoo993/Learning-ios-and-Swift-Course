@@ -64,10 +64,11 @@ class StorySmartiesViewController: UIViewController {
                    "ommited","ommited","ommited","ommited","ommited","ommited"]
     
     func loadSettingsView(){
+        self.view.addSubview(summaryView)
         
         let heightToSee : CGFloat = 40
         let width = self.view.frame.size.width
-        let height = self.view.frame.size.height * 0.92
+        let height = self.view.frame.size.height * 0.925
         let frame = CGRect(x: 0, y: -height + heightToSee, width: width, height: height)
         
         summaryView.frame = frame

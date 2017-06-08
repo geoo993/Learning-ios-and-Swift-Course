@@ -28,6 +28,8 @@ class MainCollectionViewController: UICollectionViewController {
                            "CarouselViewController": "CarouselMain",
                            "InspirationalFilmsViewController": "InspirationalFilmsMain",
                            "SWRevealViewController" : "AirbnbMain",
+                           "PopUpNavigationController": "PopUpMain",
+                           "SideBarMenuViewController" : "SideBarMenuMain"
                            ]
     
     //Mark: - Collection view 

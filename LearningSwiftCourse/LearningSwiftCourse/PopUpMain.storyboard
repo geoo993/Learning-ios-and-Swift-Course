@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pop Up View Controller-->
+        <scene sceneID="T2L-oE-iQv">
+            <objects>
+                <viewController storyboardIdentifier="PopUpViewController" id="qwA-k1-9oJ" customClass="PopUpViewController" customModule="LearningSwiftCourse" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GeW-r8-pzl"/>
+                        <viewControllerLayoutGuide type="bottom" id="0EP-9l-qb3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pBa-bR-Wj1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="palmtreesunset" translatesAutoresizingMaskIntoConstraints="NO" id="RGj-zA-zxR" userLabel="bg Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Gv-a5-lop">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Q2U-q9-T1H">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OoS-rh-gAy">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="3xa-5j-lQn">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="light"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="t9A-lB-0Hk">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="amX-tV-Da2">
+                            <connections>
+                                <action selector="homeItem:" destination="qwA-k1-9oJ" id="l0r-wM-yVV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jkY-FH-N42">
+                            <connections>
+                                <action selector="addItem:" destination="qwA-k1-9oJ" id="LPY-RL-NNs"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="leftBarButtonItem" destination="amX-tV-Da2" id="8pb-QK-15F"/>
+                            <outlet property="rightBarButtonItem" destination="jkY-FH-N42" id="dXn-bV-Q70"/>
+                        </connections>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addItemPopUpView" destination="1hC-Pf-G4j" id="gvY-9Z-int"/>
+                        <outlet property="visualEffectView" destination="2Gv-a5-lop" id="fet-Gs-GpX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRU-Hz-RI5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="1hC-Pf-G4j" customClass="AnimatableView" customModule="IBAnimatable">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF1-6t-Qnp">
+                            <rect key="frame" x="50" y="20" width="100" height="21.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="g5c-NY-gOw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbs-5Z-K5m">
+                            <rect key="frame" x="70" y="110" width="60" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="xNJ-k0-C4k"/>
+                            </constraints>
+                            <state key="normal" title="Done"/>
+                            <connections>
+                                <action selector="doneButton:" destination="qwA-k1-9oJ" eventType="touchUpInside" id="hXW-Dp-QAT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.6008914877300614" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="OF1-6t-Qnp" firstAttribute="top" secondItem="1hC-Pf-G4j" secondAttribute="top" constant="20" id="3kv-rv-PqD"/>
+                        <constraint firstItem="lbs-5Z-K5m" firstAttribute="centerX" secondItem="1hC-Pf-G4j" secondAttribute="centerX" id="9dX-Um-hxC"/>
+                        <constraint firstItem="OF1-6t-Qnp" firstAttribute="centerX" secondItem="1hC-Pf-G4j" secondAttribute="centerX" id="RML-O5-sMP"/>
+                        <constraint firstAttribute="bottom" secondItem="lbs-5Z-K5m" secondAttribute="bottom" constant="10" id="s7f-EH-TRo"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="668" y="69"/>
+        </scene>
+        <!--Pop Up Navigation Controller-->
+        <scene sceneID="iTI-rg-Vue">
+            <objects>
+                <navigationController storyboardIdentifier="PopUpNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="oFe-fh-0dg" customClass="PopUpNavigationController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MQz-3O-usg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qwA-k1-9oJ" kind="relationship" relationship="rootViewController" id="xFH-kh-4og"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQh-An-kuA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-328.125" y="68.661971830985919"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="palmtreesunset" width="500" height="750"/>
+    </resources>
+</document>

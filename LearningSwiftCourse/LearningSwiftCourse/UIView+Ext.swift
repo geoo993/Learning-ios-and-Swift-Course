@@ -104,11 +104,15 @@ public extension UIView {
         }else { return UIImage() }
     }
     
-    func blurNewView(newChild: UIView){
+    func AddBlurEffectOnView(effect: UIBlurEffectStyle){
+        let parent = self
+        
+    }
+    func blurNewView(newChild: UIView, effect: UIBlurEffectStyle){
         let parent = self
         
         // Blur Effect
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffect = UIBlurEffect(style: effect)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = parent.bounds
         parent.addSubview(blurEffectView)
