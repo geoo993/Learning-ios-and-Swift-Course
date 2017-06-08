@@ -18,8 +18,6 @@ class SummaryView: UIView {
     }
     */
     
-    @IBOutlet weak var backImageView: UIImageView!
-    
     var animator : UIDynamicAnimator? = nil
     var containerBoundary : UICollisionBehavior!
     var snapBehavior : UISnapBehavior!

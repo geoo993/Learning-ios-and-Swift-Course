@@ -26,10 +26,10 @@ class AirbnbData {
     }
     
     let places = [
-        Entry(title: "Bridge", description: "", featuredImage: "GoldenGateBridge"),
-        Entry(title: "Mountain", description: "", featuredImage: "naturemountain"),
-        Entry(title: "Village", description: "", featuredImage: "snowvillage"),
-        Entry(title: "North Beach", description: "", featuredImage: "NorthBeachSunset")
+        Entry(title: "San Francisco", description: "San Francisco Golden Gate Bridge", featuredImage: "GoldenGateBridge"),
+        Entry(title: "Snow Mountain", description: "Popular Destination", featuredImage: "naturemountain"),
+        Entry(title: "Village", description: "Family Destination", featuredImage: "snowvillage"),
+        Entry(title: "Bahamas", description: "North Beach Sunset", featuredImage: "NorthBeachSunset")
     ]
 
 }

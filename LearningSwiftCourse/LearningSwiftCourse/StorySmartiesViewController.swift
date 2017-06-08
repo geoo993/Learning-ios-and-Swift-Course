@@ -6,13 +6,21 @@
 //  Copyright © 2017 LEXI LABS. All rights reserved.
 //
 //slide menu from:: https://www.youtube.com/watch?v=PyYrLy8kTYg
+//https://www.youtube.com/watch?v=K1qrk6XOuIU&t=1350s
+//https://www.youtube.com/watch?v=rafJcqqyS1E
+//https://www.youtube.com/watch?v=oXRiwl7gf3I
+//https://stackoverflow.com/questions/35221408/swift-move-uiview-on-slide-gesture
 
 import UIKit
+
+
+class StorySmartiesRevealViewController: SWRevealViewController{
+    
+}
 
 class StorySmartiesViewController: UIViewController {
     
     ////Mark - main app outlets 
-    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var myTextView: UITextView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -76,15 +84,26 @@ class StorySmartiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.randomColor()
-        
-        myTextView.text = "Wilf had a cat. Seated around him were Biff, Chip, Kipper and Sally. A top hat was on the table. He held the cat in one hand and with the other placed a cloth. Chip looked at the hat with a smile. He was wearing a stripped jumper and beige trousers. Biff wore her hair in a pony-tail tied together with a yellow and red-spotted bow."
+        //view.backgroundColor = UIColor.randomColor()
       
-        
-        backgroundImageView.blurImage()
         loadSettingsView()
+        
+        setupSWRevealViewController()
+        
     }
 
+    func setupSWRevealViewController (){
+        if revealViewController() != nil {
+            revealViewController().rearViewRevealWidth = 200
+//            menuButton.target = revealViewController()
+//            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        }else{
+            print("reveal is nil")
+        }
+        
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -167,7 +186,6 @@ class StorySmartiesViewController: UIViewController {
 
   
     func clearAll(){
-        backgroundImageView = nil
         myImageView = nil
         myTextView = nil
         segmentedControl = nil
@@ -176,10 +194,14 @@ class StorySmartiesViewController: UIViewController {
         omittedWordsScrollView = nil
         panelView = nil
         tableView = nil
-        for sv in view.subviews {
-            sv.removeFromSuperview()
+        
+        if view != nil {
+            for sv in view.subviews {
+                sv.removeFromSuperview()
+            }
+            
+            view.removeFromSuperview()
         }
-        view.removeFromSuperview()
     }
     
     

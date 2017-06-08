@@ -89,6 +89,14 @@
 		C7BE67861EE2B72900A05286 /* Generic+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE67851EE2B72900A05286 /* Generic+Ext.swift */; };
 		C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */ = {isa = PBXBuildFile; fileRef = C7C951731EA3E08D005DFE3B /* Architecture.png */; };
 		C7C9518E1EA40DD6005DFE3B /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C9518D1EA40DD6005DFE3B /* ColorsViewController.swift */; };
+		C7CB1EB61EE8817600EA7329 /* AirbnbPlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB1EB51EE8817600EA7329 /* AirbnbPlacesTableViewCell.swift */; };
+		C7CB1ECE1EE8878600EA7329 /* AirbnbNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB1ECD1EE8878600EA7329 /* AirbnbNavigationController.swift */; };
+		C7CB1ED21EE8905D00EA7329 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CB1ED11EE8905D00EA7329 /* SWRevealViewController.m */; };
+		C7CB1ED51EE8995100EA7329 /* AirbnbMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB1ED41EE8995100EA7329 /* AirbnbMenuTableViewController.swift */; };
+		C7CB1F611EE8B6BD00EA7329 /* StorySmartiesMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB1F601EE8B6BD00EA7329 /* StorySmartiesMenuTableViewController.swift */; };
+		C7CB1F651EE92F7C00EA7329 /* StorySmartiesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB1F641EE92F7C00EA7329 /* StorySmartiesMenuViewController.swift */; };
+		C7CB1F671EE9385200EA7329 /* StorySmartiesBookShelfCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB1F661EE9385200EA7329 /* StorySmartiesBookShelfCollectionViewController.swift */; };
+		C7CB1F6A1EE938AE00EA7329 /* StorySmartiesBookShelfCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB1F691EE938AE00EA7329 /* StorySmartiesBookShelfCollectionViewCell.swift */; };
 		C7E387DC1ED2F2DC000DCE15 /* AudioCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E387DB1ED2F2DC000DCE15 /* AudioCheckViewController.swift */; };
 		C7E387DE1ED2F2FF000DCE15 /* AudioMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E387DD1ED2F2FF000DCE15 /* AudioMain.storyboard */; };
 		C7E387E01ED2F5A9000DCE15 /* brooks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C7E387DF1ED2F5A9000DCE15 /* brooks.mp3 */; };
@@ -446,6 +454,16 @@
 		C7BE67851EE2B72900A05286 /* Generic+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generic+Ext.swift"; sourceTree = "<group>"; };
 		C7C951731EA3E08D005DFE3B /* Architecture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Architecture.png; sourceTree = "<group>"; };
 		C7C9518D1EA40DD6005DFE3B /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		C7CB1EB51EE8817600EA7329 /* AirbnbPlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbPlacesTableViewCell.swift; sourceTree = "<group>"; };
+		C7CB1ECD1EE8878600EA7329 /* AirbnbNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbNavigationController.swift; sourceTree = "<group>"; };
+		C7CB1ECF1EE8905C00EA7329 /* LearningSwiftCourse-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearningSwiftCourse-Bridging-Header.h"; sourceTree = "<group>"; };
+		C7CB1ED01EE8905D00EA7329 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C7CB1ED11EE8905D00EA7329 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		C7CB1ED41EE8995100EA7329 /* AirbnbMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbMenuTableViewController.swift; sourceTree = "<group>"; };
+		C7CB1F601EE8B6BD00EA7329 /* StorySmartiesMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySmartiesMenuTableViewController.swift; sourceTree = "<group>"; };
+		C7CB1F641EE92F7C00EA7329 /* StorySmartiesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySmartiesMenuViewController.swift; sourceTree = "<group>"; };
+		C7CB1F661EE9385200EA7329 /* StorySmartiesBookShelfCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySmartiesBookShelfCollectionViewController.swift; sourceTree = "<group>"; };
+		C7CB1F691EE938AE00EA7329 /* StorySmartiesBookShelfCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySmartiesBookShelfCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7E387DB1ED2F2DC000DCE15 /* AudioCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioCheckViewController.swift; sourceTree = "<group>"; };
 		C7E387DD1ED2F2FF000DCE15 /* AudioMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioMain.storyboard; sourceTree = "<group>"; };
 		C7E387DF1ED2F5A9000DCE15 /* brooks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = brooks.mp3; sourceTree = "<group>"; };
@@ -517,6 +535,7 @@
 			isa = PBXGroup;
 			children = (
 				C7E3886E1ED3055F000DCE15 /* LearningSwiftCourse.entitlements */,
+				C7CB1ED31EE8906800EA7329 /* SWRevealViewController */,
 				C7AE48D11EA5638800C2096E /* Extensions */,
 				C7E387C51ED2F2B2000DCE15 /* AudioExample */,
 				C74C99E71EE87BBE001E4FFE /* AirbnbExample */,
@@ -529,6 +548,8 @@
 				C749396D1ED7729D00555D31 /* InspirationalFilmsExample */,
 				C7E8B1721ED454ED00FC912F /* VideoPlayerExample */,
 				C7F45F371EE4BAB7005CF986 /* StorySmartiesDesign */,
+				C7CB1FF51EE956C000EA7329 /* SideMenuExample */,
+				C7CB1FF61EE956DC00EA7329 /* TopMenuExample */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
 				C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */,
@@ -602,8 +623,11 @@
 		C74C99E71EE87BBE001E4FFE /* AirbnbExample */ = {
 			isa = PBXGroup;
 			children = (
+				C7CB1ECD1EE8878600EA7329 /* AirbnbNavigationController.swift */,
+				C7CB1ED41EE8995100EA7329 /* AirbnbMenuTableViewController.swift */,
 				C74C9A001EE87C68001E4FFE /* AirbnbTableViewController.swift */,
 				C74C9A021EE87C98001E4FFE /* AirbnbData.swift */,
+				C7CB1EB51EE8817600EA7329 /* AirbnbPlacesTableViewCell.swift */,
 				C74C99FE1EE87C14001E4FFE /* AirbnbMain.storyboard */,
 			);
 			name = AirbnbExample;
@@ -796,6 +820,57 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		C7CB1ED31EE8906800EA7329 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C7CB1ED01EE8905D00EA7329 /* SWRevealViewController.h */,
+				C7CB1ED11EE8905D00EA7329 /* SWRevealViewController.m */,
+				C7CB1ECF1EE8905C00EA7329 /* LearningSwiftCourse-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		C7CB1F621EE92F4600EA7329 /* SummaryView */ = {
+			isa = PBXGroup;
+			children = (
+				C79635D61EE5A01100AA11B0 /* SummaryViewTableViewCell.swift */,
+				C70C84DC1EE760F50098A62F /* SummaryView.swift */,
+			);
+			name = SummaryView;
+			sourceTree = "<group>";
+		};
+		C7CB1F631EE92F4F00EA7329 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				C7CB1F601EE8B6BD00EA7329 /* StorySmartiesMenuTableViewController.swift */,
+				C7CB1F641EE92F7C00EA7329 /* StorySmartiesMenuViewController.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		C7CB1F681EE9388700EA7329 /* BookShelf */ = {
+			isa = PBXGroup;
+			children = (
+				C7CB1F661EE9385200EA7329 /* StorySmartiesBookShelfCollectionViewController.swift */,
+				C7CB1F691EE938AE00EA7329 /* StorySmartiesBookShelfCollectionViewCell.swift */,
+			);
+			name = BookShelf;
+			sourceTree = "<group>";
+		};
+		C7CB1FF51EE956C000EA7329 /* SideMenuExample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SideMenuExample;
+			sourceTree = "<group>";
+		};
+		C7CB1FF61EE956DC00EA7329 /* TopMenuExample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TopMenuExample;
+			sourceTree = "<group>";
+		};
 		C7E387C51ED2F2B2000DCE15 /* AudioExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -832,9 +907,10 @@
 		C7F45F371EE4BAB7005CF986 /* StorySmartiesDesign */ = {
 			isa = PBXGroup;
 			children = (
-				C79635D61EE5A01100AA11B0 /* SummaryViewTableViewCell.swift */,
+				C7CB1F631EE92F4F00EA7329 /* Menu */,
+				C7CB1F621EE92F4600EA7329 /* SummaryView */,
+				C7CB1F681EE9388700EA7329 /* BookShelf */,
 				C7F45F501EE4BB18005CF986 /* StorySmartiesViewController.swift */,
-				C70C84DC1EE760F50098A62F /* SummaryView.swift */,
 				C7F45F4E1EE4BAFA005CF986 /* StorySmartiesMain.storyboard */,
 			);
 			name = StorySmartiesDesign;
@@ -915,6 +991,7 @@
 					C72E27A01E9ED9EB0064E01B = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 4Q93294747;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1240,6 +1317,7 @@
 				C7C9518E1EA40DD6005DFE3B /* ColorsViewController.swift in Sources */,
 				C7AE48B21EA5550B00C2096E /* Product.swift in Sources */,
 				C76E5EC21ED706ED00E2C4D3 /* UISearchBar+Ext.swift in Sources */,
+				C7CB1F651EE92F7C00EA7329 /* StorySmartiesMenuViewController.swift in Sources */,
 				C72E27A71E9ED9EB0064E01B /* ColorChangeViewController.swift in Sources */,
 				C78B2CE71EA6C74D00DB3967 /* UIImageView+Ext.swift in Sources */,
 				C74217CA1EC1F11A0007B4C3 /* UIImage+GIF.swift in Sources */,
@@ -1247,10 +1325,13 @@
 				C765C27D1EA4E79B00F5FE90 /* RootViewController.swift in Sources */,
 				C7BE66FA1EE2B30F00A05286 /* UIColor+Ext.swift in Sources */,
 				C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */,
+				C7CB1ECE1EE8878600EA7329 /* AirbnbNavigationController.swift in Sources */,
 				C74939861ED774C200555D31 /* InspirationalFilmsViewController.swift in Sources */,
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
 				C74217361EC1C7A60007B4C3 /* ScrollViewController.swift in Sources */,
+				C7CB1ED51EE8995100EA7329 /* AirbnbMenuTableViewController.swift in Sources */,
 				C7AE48A61EA5531A00C2096E /* ChosenMediaDetailedViewController.swift in Sources */,
+				C7CB1F6A1EE938AE00EA7329 /* StorySmartiesBookShelfCollectionViewCell.swift in Sources */,
 				C7AE48061EA51E8600C2096E /* NavBarModel.swift in Sources */,
 				C765C2721EA4E09F00F5FE90 /* EnglishViewController.swift in Sources */,
 				C7AE48D61EA563A400C2096E /* UIImage+Ext.swift in Sources */,
@@ -1262,11 +1343,13 @@
 				C7BE67861EE2B72900A05286 /* Generic+Ext.swift in Sources */,
 				C7E45A101EE2EEA300F7015C /* UIButton+Ext.swift in Sources */,
 				C7F45EA01EE41D9B005CF986 /* String+Ext.swift in Sources */,
+				C7CB1F611EE8B6BD00EA7329 /* StorySmartiesMenuTableViewController.swift in Sources */,
 				C749398D1ED782D500555D31 /* InspirationalFilms.swift in Sources */,
 				C70C84DD1EE760F50098A62F /* SummaryView.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
 				C7E45A281EE351BB00F7015C /* UITextField+Ext.swift in Sources */,
 				C76E5B471ED59FED00E2C4D3 /* UIView+Ext.swift in Sources */,
+				C7CB1EB61EE8817600EA7329 /* AirbnbPlacesTableViewCell.swift in Sources */,
 				C74C9A031EE87C98001E4FFE /* AirbnbData.swift in Sources */,
 				C742173C1EC1CF650007B4C3 /* Slide.swift in Sources */,
 				C7AE48B31EA5550B00C2096E /* ProductLine.swift in Sources */,
@@ -1275,9 +1358,11 @@
 				C7AE48B01EA5550B00C2096E /* MediaTableViewCell.swift in Sources */,
 				C7BE65E21EE2A22900A05286 /* MainCollectionViewController.swift in Sources */,
 				C7AE48D71EA563A400C2096E /* UIKit+Ext.swift in Sources */,
+				C7CB1ED21EE8905D00EA7329 /* SWRevealViewController.m in Sources */,
 				C7AE48A21EA5509B00C2096E /* TableViewNavigationViewController.swift in Sources */,
 				C7AE48DF1EA6141200C2096E /* AddMediaViewController.swift in Sources */,
 				C7AE48AF1EA5550B00C2096E /* MediaLayers.swift in Sources */,
+				C7CB1F671EE9385200EA7329 /* StorySmartiesBookShelfCollectionViewController.swift in Sources */,
 				C765C2701EA4E08600F5FE90 /* MetricViewController.swift in Sources */,
 				C7EB75F81EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift in Sources */,
 				C749398F1ED7840D00555D31 /* InspirationalFilmsInfo.swift in Sources */,
@@ -1460,11 +1545,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4Q93294747;
 				INFOPLIST_FILE = LearningSwiftCourse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.lexilabs.LearningSwiftCourse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LearningSwiftCourse/LearningSwiftCourse-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1475,11 +1563,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4Q93294747;
 				INFOPLIST_FILE = LearningSwiftCourse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.lexilabs.LearningSwiftCourse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LearningSwiftCourse/LearningSwiftCourse-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

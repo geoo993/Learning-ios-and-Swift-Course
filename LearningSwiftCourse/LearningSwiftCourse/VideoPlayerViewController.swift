@@ -18,10 +18,11 @@ class VideoPlayerViewController: UIViewController {
         }
     }
     
-    let videoURL = "https://s3.eu-west-2.amazonaws.com/inspirationalfilmsscenes/TheWordsParkIntro.mp4"
+    let videoURL = "https://s3.eu-west-2.amazonaws.com/inspirationalfilmsscenes/TheWords/TheWords1.mp4"
     let playerViewController = AVPlayerViewController()
     var player: AVPlayer?
     var playerLayer :  AVPlayerLayer?
+    var url : URL?
     @IBOutlet weak var videoView: UIView!
     
     @IBAction func playButtonAction(_ sender: UIButton) {
@@ -98,20 +99,24 @@ class VideoPlayerViewController: UIViewController {
         
         if let path = moviePath{
             
-            let url = NSURL.fileURL(withPath: path)
-            //let url = URL(string: videoURL)
+            url = URL.init(fileURLWithPath: path) 
             
-            //let item = AVPlayerItem(url: url)
-            //let player = AVPlayer(playerItem: item)
+        }else{
+            url = URL(string: videoURL)
             
-            player = AVPlayer(url: url)
-            player?.actionAtItemEnd = .none
-            //player?.isMuted = true
-            
-            
-            //useLayer()
-            useViewController()
         }
+        
+        //let item = AVPlayerItem(url: url)
+        //let player = AVPlayer(playerItem: item)
+        
+        player = AVPlayer(url: url!)
+        player?.actionAtItemEnd = .none
+        //player?.isMuted = true
+        
+        
+        //useLayer()
+        useViewController()
+        
         
     }
     

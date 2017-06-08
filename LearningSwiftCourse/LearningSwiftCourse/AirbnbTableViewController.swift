@@ -5,21 +5,45 @@
 //  Created by GEORGE QUENTIN on 07/06/2017.
 //  Copyright © 2017 LEXI LABS. All rights reserved.
 //
+//https://www.youtube.com/watch?v=xp6zpHACVbI
+//https://www.youtube.com/watch?v=H7t6OBQMoNw
+//https://www.youtube.com/watch?v=8EFfPT3UeWs
+//https://www.youtube.com/watch?v=K1qrk6XOuIU&t=1350s
 
 import UIKit
 
 class AirbnbTableViewController: UITableViewController {
 
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBAction func menuButtonAction(_ sender: UIBarButtonItem) {
+        
+    }
+    
+    @IBOutlet weak var searchButton: UIBarButtonItem!
+    @IBAction func searchButtonAction(_ sender: UIBarButtonItem) {
+     
+    }
+    
     let airbnbData = AirbnbData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //self.tableView.separatorStyle = .none
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        if revealViewController() != nil {
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        }else{
+            print("reveal is nil")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,9 +65,15 @@ class AirbnbTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "places cell", for: indexPath)
-
-        // Configure the cell...
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "places cell", for: indexPath) as? AirbnbPlacesTableViewCell else {
+            return AirbnbPlacesTableViewCell()
+        }
+        
+        let place = airbnbData.places[indexPath.row]
+        
+        cell.headingLabel.text = place.title
+        cell.subheadingLabel.text = place.description
+        cell.bgImageView.image = UIImage(named: place.featuredImage) ?? UIImage()
 
         return cell
     }

@@ -16,7 +16,8 @@ private let reuseIdentifier = "MainCell"
 class MainCollectionViewController: UICollectionViewController {
 
     var views: [String: String] = [
-                           "StorySmartiesViewController":"StorySmartiesMain",
+        
+                           "StorySmartiesRevealViewController":"StorySmartiesMain",
                            "VideoPlayerViewController":"VideoPlayerMain",
                            "AudioCheckViewController": "AudioMain",
                            "TableViewNavigationViewController": "TableViewMain",
@@ -26,6 +27,7 @@ class MainCollectionViewController: UICollectionViewController {
                            "ScrollViewController": "ScrollViewMain",
                            "CarouselViewController": "CarouselMain",
                            "InspirationalFilmsViewController": "InspirationalFilmsMain",
+                           "SWRevealViewController" : "AirbnbMain",
                            ]
     
     //Mark: - Collection view 
