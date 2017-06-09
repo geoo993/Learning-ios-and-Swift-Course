@@ -21,14 +21,14 @@ class MainCollectionViewController: UICollectionViewController {
     
     var views: [String: String] = [
         
-                           "StorySmartiesRevealViewController":"StorySmartiesMain",
+                           //"StorySmartiesRevealViewController":"StorySmartiesMain",
                            //"VideoPlayerViewController":"VideoPlayerMain",
                            //"AudioCheckViewController": "AudioMain",
                            //"TableViewNavigationViewController": "TableViewMain",
                            //"TabBarViewController": "TabBarMain",
                            //"NavigationViewController": "NavBarMain",
                            //"ColorsViewController": "ColorsMain",
-                           //"ScrollViewController": "ScrollViewMain",
+                           "ScrollViewController": "ScrollViewMain",
                            //"CarouselViewController": "CarouselMain",
                            //"InspirationalFilmsViewController": "InspirationalFilmsMain",
                            //"AirbnbRevealViewController" : "AirbnbMain",
@@ -153,7 +153,7 @@ class MainCollectionViewController: UICollectionViewController {
         
             let storyboard = UIStoryboard(name: storyBoardName, bundle: bundle) 
             let vc = storyboard.instantiateViewController(withIdentifier: view)
-            vc.transitioningDelegate = self
+            //vc.transitioningDelegate = self
             present(vc, animated: true, completion: nil)
             
         }

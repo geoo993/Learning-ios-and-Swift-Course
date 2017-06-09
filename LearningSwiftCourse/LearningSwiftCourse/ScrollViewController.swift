@@ -5,13 +5,16 @@
 //  Created by GEORGE QUENTIN on 09/05/2017.
 //  Copyright © 2017 LEXI LABS. All rights reserved.
 //
+//https://www.youtube.com/watch?v=w3AlRaYwEjg
+//https://www.youtube.com/watch?v=8PWjo1Di620
 
 import UIKit
+import EasyAnimation
 
 class ScrollViewController: UIViewController {
 
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var mainScrollView: UIScrollView!
     
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -20,6 +23,9 @@ class ScrollViewController: UIViewController {
             print("view controller dismissed, now going to home page")
         }
     }
+    
+    var animationChain : EAAnimationFuture?
+    var previousPage : Int = 0
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -35,9 +41,9 @@ class ScrollViewController: UIViewController {
         pageControl.numberOfPages = info.count
         
         //set the scrollView properties
-        scrollView.isPagingEnabled = true
-        scrollView.bounces = false
-        scrollView.delegate = self
+        mainScrollView.isPagingEnabled = true
+        mainScrollView.bounces = false
+        mainScrollView.delegate = self
         
         
         //Build Slides View
@@ -65,21 +71,22 @@ class ScrollViewController: UIViewController {
                 
             }
             
+            slide.clipsToBounds = true
+            slide.layer.masksToBounds = true
             slide.titleLabel.text = slides[i].title
             slide.descriptionLabel.text = slides[i].description
             
-            scrollView.addSubview(slide)
+            mainScrollView.addSubview(slide)
             slidesViews.append(slide)
             
         }
-        
         
         //calculate the content width
         let contentWidth = UIScreen.main.bounds.size.width * CGFloat(slides.count)
         
         
         //set scrollView content size
-        scrollView.contentSize = CGSize(width: contentWidth, height: UIScreen.main.bounds.size.height)
+        mainScrollView.contentSize = CGSize(width: contentWidth, height: UIScreen.main.bounds.size.height)
     }
     
     
@@ -92,7 +99,7 @@ class ScrollViewController: UIViewController {
         super.viewDidAppear(animated)
         
         //This way the first slide will also begin to animate the Zoom effect
-        scrollViewDidEndDecelerating(scrollView)
+        scrollViewDidEndDecelerating(mainScrollView)
     }
     
     deinit {
@@ -116,51 +123,40 @@ extension ScrollViewController: UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         //update the page controls with the current page number
-        let currentPage = Int(scrollView.contentOffset.x / UIScreen.main.bounds.size.width )
+        let currentPage = Int(mainScrollView.contentOffset.x / UIScreen.main.bounds.size.width )
         pageControl.currentPage = currentPage
         
-//        for i in 0..<slidesViews.count {
-//            
-//            UIView.animate(withDuration: 0.0, delay: 0.0, options: [.beginFromCurrentState],
-//               animations: {[weak self] in
-//                self?.slidesViews[i].backgroundImage.transform = CGAffineTransform.identity 
-//            }, completion: { [weak self] _ in
-//                guard let this = self else { return }
-//                this.slidesViews[i].backgroundImage.layer.removeAllAnimations()
-//                this.slidesViews[i].backgroundImage.layoutIfNeeded()
-//            })
-//            
-//        }
-     
-        //zoom(currentPage)
-    }
-    
-    func zoom (_ page:Int){
-        
         //zoom in effect
-        let imageView = slidesViews[page].backgroundImage
-    
-        UIView.animate(withDuration: 10.0, delay: 0.2, options: [.curveEaseInOut], animations: { 
-            imageView?.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        }) { (isCompleted) in
-            UIView.animate(withDuration: 10.0, delay: 0.2, options: [.curveEaseInOut], animations: { 
-                imageView?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-            }) { (isCompleted) in
-                self.zoom(page)
-            }
-        }
+        let imageView = slidesViews[currentPage].backgroundImage
         
+        animationChain = 
+            UIView.animateAndChain(
+                withDuration: 10.0, 
+                delay: 0.2, 
+                options: [.curveEaseInOut], 
+                animations: {
+                imageView?.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+                imageView?.layoutIfNeeded()
+            }, completion: nil).animate(withDuration: 10.0, animations: {
+                imageView?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            })
+        previousPage = currentPage
     }
     
-    //Parralax Effect
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let percent = Double(scrollView.contentOffset.x / scrollView.contentSize.width)
       
-//        for i in 0..<slidesViews.count {
-//            let slide = slidesViews[i]
-//            let offset = Double(slide.backgroundImage.frame.size.width - UIScreen.main.bounds.size.width) / Double(slidesViews.count - 1)
-//            slide.backgroundImage.frame.origin.x = CGFloat(-( (percent * offset) ))
-//        }
+        for i in 0..<self.slidesViews.count {
+            
+            animationChain?.cancelAnimationChain({ 
+                let slide = self.slidesViews[i]
+                slide.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                slide.layer.removeAllAnimations()
+                slide.frame.origin.x = CGFloat(i) * UIScreen.main.bounds.size.width
+                slide.layoutIfNeeded()
+            })
+            
+            animationChain = nil
+        }
         
     }
 }

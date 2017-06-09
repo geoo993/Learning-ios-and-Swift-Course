@@ -58,8 +58,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mainScrollView" destination="VXL-DL-Rqb" id="Kiw-ho-PVv"/>
                         <outlet property="pageControl" destination="T76-18-XRz" id="36Y-pY-UYi"/>
-                        <outlet property="scrollView" destination="VXL-DL-Rqb" id="TP8-b8-9Hc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XI4-oH-67r" userLabel="First Responder" sceneMemberID="firstResponder"/>

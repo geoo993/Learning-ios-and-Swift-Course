@@ -131,6 +131,8 @@
 		C7E8B1891ED4551600FC912F /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E8B1881ED4551600FC912F /* VideoPlayerViewController.swift */; };
 		C7E8B18B1ED4552A00FC912F /* VideoPlayerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E8B18A1ED4552A00FC912F /* VideoPlayerMain.storyboard */; };
 		C7EB75F81EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB75F71EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift */; };
+		C7F1FE1E1EEB5CD7002F3641 /* EasyAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F1FE051EEB5CCF002F3641 /* EasyAnimation.framework */; };
+		C7F1FE1F1EEB5CD7002F3641 /* EasyAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7F1FE051EEB5CCF002F3641 /* EasyAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7F45EA01EE41D9B005CF986 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F45E9F1EE41D9B005CF986 /* String+Ext.swift */; };
 		C7F45F4F1EE4BAFA005CF986 /* StorySmartiesMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7F45F4E1EE4BAFA005CF986 /* StorySmartiesMain.storyboard */; };
 		C7F45F511EE4BB18005CF986 /* StorySmartiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F45F501EE4BB18005CF986 /* StorySmartiesViewController.swift */; };
@@ -376,6 +378,27 @@
 			remoteGlobalIDString = AE6B01541C2A082300950BB2;
 			remoteInfo = IBAnimatable;
 		};
+		C7F1FE041EEB5CCF002F3641 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 403482541B8E01ED006C3C7C;
+			remoteInfo = EasyAnimation;
+		};
+		C7F1FE061EEB5CCF002F3641 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 72A03EF91C29784A002DA467;
+			remoteInfo = "EasyAnimation tvOS";
+		};
+		C7F1FE201EEB5CD7002F3641 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 403482531B8E01ED006C3C7C;
+			remoteInfo = EasyAnimation;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -386,6 +409,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C77E83371EA25F4F000AC715 /* RxSwiftExt.framework in Embed Frameworks */,
+				C7F1FE1F1EEB5CD7002F3641 /* EasyAnimation.framework in Embed Frameworks */,
 				C77E83331EA25F4F000AC715 /* RxCocoa.framework in Embed Frameworks */,
 				C77E832F1EA25F4F000AC715 /* RxSwift.framework in Embed Frameworks */,
 				C7BE65DC1EE29CE000A05286 /* IBAnimatable.framework in Embed Frameworks */,
@@ -525,6 +549,7 @@
 		C7E8B1881ED4551600FC912F /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		C7E8B18A1ED4552A00FC912F /* VideoPlayerMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoPlayerMain.storyboard; sourceTree = "<group>"; };
 		C7EB75F71EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsLabelsScrollView.swift; sourceTree = "<group>"; };
+		C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EasyAnimation.xcodeproj; path = ../Carthage/Checkouts/EasyAnimation/EasyAnimation.xcodeproj; sourceTree = "<group>"; };
 		C7F45E9F1EE41D9B005CF986 /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		C7F45F4E1EE4BAFA005CF986 /* StorySmartiesMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StorySmartiesMain.storyboard; sourceTree = "<group>"; };
 		C7F45F501EE4BB18005CF986 /* StorySmartiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySmartiesViewController.swift; sourceTree = "<group>"; };
@@ -536,6 +561,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7F1FE1E1EEB5CD7002F3641 /* EasyAnimation.framework in Frameworks */,
 				C76E0CE81EE9ECB300A66E94 /* MapKit.framework in Frameworks */,
 				C77E83361EA25F4F000AC715 /* RxSwiftExt.framework in Frameworks */,
 				C77E83321EA25F4F000AC715 /* RxCocoa.framework in Frameworks */,
@@ -771,6 +797,7 @@
 		C77E82D51EA25E3B000AC715 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */,
 				C7BE65BD1EE29CCC00A05286 /* IBAnimatable.xcodeproj */,
 				C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */,
 				C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */,
@@ -1000,6 +1027,15 @@
 			name = VideoPlayerExample;
 			sourceTree = "<group>";
 		};
+		C7F1FE001EEB5CCF002F3641 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7F1FE051EEB5CCF002F3641 /* EasyAnimation.framework */,
+				C7F1FE071EEB5CCF002F3641 /* EasyAnimation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C7F45E861EE41357005CF986 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
@@ -1039,6 +1075,7 @@
 				C77E83351EA25F4F000AC715 /* PBXTargetDependency */,
 				C77E83391EA25F4F000AC715 /* PBXTargetDependency */,
 				C7BE65DE1EE29CE000A05286 /* PBXTargetDependency */,
+				C7F1FE211EEB5CD7002F3641 /* PBXTargetDependency */,
 			);
 			name = LearningSwiftCourse;
 			productName = LearningSwiftCourse;
@@ -1131,6 +1168,10 @@
 			productRefGroup = C72E27A21E9ED9EB0064E01B /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = C7F1FE001EEB5CCF002F3641 /* Products */;
+					ProjectRef = C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */;
+				},
 				{
 					ProductGroup = C7BE65BE1EE29CCC00A05286 /* Products */;
 					ProjectRef = C7BE65BD1EE29CCC00A05286 /* IBAnimatable.xcodeproj */;
@@ -1348,6 +1389,20 @@
 			remoteRef = C7BE65C41EE29CCD00A05286 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		C7F1FE051EEB5CCF002F3641 /* EasyAnimation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EasyAnimation.framework;
+			remoteRef = C7F1FE041EEB5CCF002F3641 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7F1FE071EEB5CCF002F3641 /* EasyAnimation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EasyAnimation.framework;
+			remoteRef = C7F1FE061EEB5CCF002F3641 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1550,6 +1605,11 @@
 			isa = PBXTargetDependency;
 			name = IBAnimatable;
 			targetProxy = C7BE65DD1EE29CE000A05286 /* PBXContainerItemProxy */;
+		};
+		C7F1FE211EEB5CD7002F3641 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EasyAnimation;
+			targetProxy = C7F1FE201EEB5CD7002F3641 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
