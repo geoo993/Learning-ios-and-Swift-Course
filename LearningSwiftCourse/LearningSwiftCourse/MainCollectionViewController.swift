@@ -14,22 +14,28 @@ private let reuseIdentifier = "MainCell"
 
 @IBDesignable
 class MainCollectionViewController: UICollectionViewController {
-
+  
+    let customPresentAnimationController = CustomPresentAnimationController()
+    let customDismissAnimationController = CustomDismissAnimationController()
+    
+    
     var views: [String: String] = [
         
                            "StorySmartiesRevealViewController":"StorySmartiesMain",
-                           "VideoPlayerViewController":"VideoPlayerMain",
-                           "AudioCheckViewController": "AudioMain",
-                           "TableViewNavigationViewController": "TableViewMain",
-                           "TabBarViewController": "TabBarMain",
-                           "NavigationViewController": "NavBarMain",
-                           "ColorsViewController": "ColorsMain",
-                           "ScrollViewController": "ScrollViewMain",
-                           "CarouselViewController": "CarouselMain",
-                           "InspirationalFilmsViewController": "InspirationalFilmsMain",
-                           "SWRevealViewController" : "AirbnbMain",
-                           "PopUpNavigationController": "PopUpMain",
-                           "SideBarMenuViewController" : "SideBarMenuMain"
+                           //"VideoPlayerViewController":"VideoPlayerMain",
+                           //"AudioCheckViewController": "AudioMain",
+                           //"TableViewNavigationViewController": "TableViewMain",
+                           //"TabBarViewController": "TabBarMain",
+                           //"NavigationViewController": "NavBarMain",
+                           //"ColorsViewController": "ColorsMain",
+                           //"ScrollViewController": "ScrollViewMain",
+                           //"CarouselViewController": "CarouselMain",
+                           //"InspirationalFilmsViewController": "InspirationalFilmsMain",
+                           //"AirbnbRevealViewController" : "AirbnbMain",
+                           //"PopUpNavigationController": "PopUpMain",
+                           //"SideBarMenuViewController" : "SideBarMenuMain",
+                           //"SWRevealViewController" : "MultiSidedBarMenuMain",
+                           //"TopMenuNavigationController" : "TopMenuMain"
                            ]
     
     //Mark: - Collection view 
@@ -54,7 +60,6 @@ class MainCollectionViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
         cellColorName = UIColor.cssString.take(views.count)
-        
         
     }
     
@@ -135,6 +140,8 @@ class MainCollectionViewController: UICollectionViewController {
         return true
     }
     
+    
+    
     //did select item (cell) with tap gesture
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
@@ -146,12 +153,14 @@ class MainCollectionViewController: UICollectionViewController {
         
             let storyboard = UIStoryboard(name: storyBoardName, bundle: bundle) 
             let vc = storyboard.instantiateViewController(withIdentifier: view)
+            vc.transitioningDelegate = self
             present(vc, animated: true, completion: nil)
             
         }
      
         
     }
+    
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
@@ -189,5 +198,19 @@ extension MainCollectionViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return contentInset
+    }
+}
+
+extension MainCollectionViewController : UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        customPresentAnimationController.duration = 2.0
+        customPresentAnimationController.reverseSide = true
+        return customPresentAnimationController
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return customDismissAnimationController
     }
 }

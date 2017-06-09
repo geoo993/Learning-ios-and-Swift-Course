@@ -1,21 +1,15 @@
 //
-//  AirbnbNavigationController.swift
+//  TopMenuNavigationController.swift
 //  LearningSwiftCourse
 //
-//  Created by GEORGE QUENTIN on 07/06/2017.
+//  Created by GEORGE QUENTIN on 08/06/2017.
 //  Copyright © 2017 LEXI LABS. All rights reserved.
 //
 
 import UIKit
 
-class AirbnbRevealViewController: SWRevealViewController{
-    
-}
+class TopMenuNavigationController: UINavigationController {
 
-
-class AirbnbNavigationController: UINavigationController {
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

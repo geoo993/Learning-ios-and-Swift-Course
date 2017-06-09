@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C702136C1EEA19AC0066987D /* CustomDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C702136B1EEA19AC0066987D /* CustomDismissAnimationController.swift */; };
 		C70C84B31EE703F50098A62F /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C7C1ED6500B00E2C4D3 /* Interest.swift */; };
 		C70C84DD1EE760F50098A62F /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C84DC1EE760F50098A62F /* SummaryView.swift */; };
 		C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */; };
@@ -42,6 +43,20 @@
 		C765C2751EA4E6E000F5FE90 /* NavBarMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C765C2741EA4E6E000F5FE90 /* NavBarMain.storyboard */; };
 		C765C27B1EA4E77000F5FE90 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C27A1EA4E77000F5FE90 /* NavigationViewController.swift */; };
 		C765C27D1EA4E79B00F5FE90 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C27C1EA4E79B00F5FE90 /* RootViewController.swift */; };
+		C76E0CE81EE9ECB300A66E94 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76E0CE71EE9ECB300A66E94 /* MapKit.framework */; };
+		C76E0D031EE9EDDD00A66E94 /* MultiSidedBarMenuMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76E0D021EE9EDDD00A66E94 /* MultiSidedBarMenuMain.storyboard */; };
+		C76E0D091EE9EE6000A66E94 /* MultiSidedBarMenuControllerLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E0D041EE9EE6000A66E94 /* MultiSidedBarMenuControllerLeft.swift */; };
+		C76E0D0A1EE9EE6000A66E94 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E0D051EE9EE6000A66E94 /* NewsTableViewController.swift */; };
+		C76E0D0B1EE9EE6000A66E94 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E0D061EE9EE6000A66E94 /* NewsTableViewCell.swift */; };
+		C76E0D0C1EE9EE6000A66E94 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E0D071EE9EE6000A66E94 /* MapViewController.swift */; };
+		C76E0D0D1EE9EE6000A66E94 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E0D081EE9EE6000A66E94 /* PhotoViewController.swift */; };
+		C76E0D0F1EE9F97800A66E94 /* TopMenuMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76E0D0E1EE9F97800A66E94 /* TopMenuMain.storyboard */; };
+		C76E0D141EE9F98600A66E94 /* TopMenuNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E0D101EE9F98600A66E94 /* TopMenuNewsTableViewController.swift */; };
+		C76E0D151EE9F98600A66E94 /* TopMenuNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E0D111EE9F98600A66E94 /* TopMenuNewsTableViewCell.swift */; };
+		C76E0D161EE9F98600A66E94 /* TopMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E0D121EE9F98600A66E94 /* TopMenuTableViewController.swift */; };
+		C76E0D171EE9F98600A66E94 /* TopMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E0D131EE9F98600A66E94 /* TopMenuTableViewCell.swift */; };
+		C76E0D191EE9F9E900A66E94 /* TopMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E0D181EE9F9E900A66E94 /* TopMenuNavigationController.swift */; };
+		C76E0D1B1EE9FB9A00A66E94 /* MultiSidedBarMenuControllerRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E0D1A1EE9FB9A00A66E94 /* MultiSidedBarMenuControllerRight.swift */; };
 		C76E5B471ED59FED00E2C4D3 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5B461ED59FED00E2C4D3 /* UIView+Ext.swift */; };
 		C76E5C721ED60AFC00E2C4D3 /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C711ED60AFC00E2C4D3 /* UIApplication+Ext.swift */; };
 		C76E5C741ED60B6E00E2C4D3 /* UIWindow+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C731ED60B6E00E2C4D3 /* UIWindow+Ext.swift */; };
@@ -60,6 +75,7 @@
 		C77E83371EA25F4F000AC715 /* RxSwiftExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C781C8B01EE2BB9D00DC9A7B /* Dictionary+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C781C8AF1EE2BB9D00DC9A7B /* Dictionary+Ext.swift */; };
 		C78B2CE71EA6C74D00DB3967 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B2CE61EA6C74D00DB3967 /* UIImageView+Ext.swift */; };
+		C78DD5151EEA098A00EF5E64 /* AnimationControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DD5141EEA098A00EF5E64 /* AnimationControllerManager.swift */; };
 		C79635D71EE5A01100AA11B0 /* SummaryViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79635D61EE5A01100AA11B0 /* SummaryViewTableViewCell.swift */; };
 		C7ACB3871ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ACB3861ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift */; };
 		C7AE47ED1EA4FCE600C2096E /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE47EC1EA4FCE600C2096E /* TabBarModel.swift */; };
@@ -81,6 +97,9 @@
 		C7AE48D61EA563A400C2096E /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48D31EA563A400C2096E /* UIImage+Ext.swift */; };
 		C7AE48D71EA563A400C2096E /* UIKit+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48D41EA563A400C2096E /* UIKit+Ext.swift */; };
 		C7AE48DF1EA6141200C2096E /* AddMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48DE1EA6141200C2096E /* AddMediaViewController.swift */; };
+		C7B589E61EEAA70C006C85E9 /* CustomNavigationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B589E41EEAA70C006C85E9 /* CustomNavigationAnimationController.swift */; };
+		C7B589E71EEAA70C006C85E9 /* CustomInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B589E51EEAA70C006C85E9 /* CustomInteractionController.swift */; };
+		C7B589FF1EEAAADA006C85E9 /* CustomPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B589FE1EEAAADA006C85E9 /* CustomPresentAnimationController.swift */; };
 		C7BE65DB1EE29CE000A05286 /* IBAnimatable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BE65C51EE29CCD00A05286 /* IBAnimatable.framework */; };
 		C7BE65DC1EE29CE000A05286 /* IBAnimatable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7BE65C51EE29CCD00A05286 /* IBAnimatable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7BE65E21EE2A22900A05286 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */; };
@@ -378,6 +397,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C702136B1EEA19AC0066987D /* CustomDismissAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDismissAnimationController.swift; sourceTree = "<group>"; };
 		C70C84DC1EE760F50098A62F /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		C72E27A11E9ED9EB0064E01B /* LearningSwiftCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningSwiftCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -419,6 +439,20 @@
 		C765C2741EA4E6E000F5FE90 /* NavBarMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NavBarMain.storyboard; sourceTree = "<group>"; };
 		C765C27A1EA4E77000F5FE90 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		C765C27C1EA4E79B00F5FE90 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		C76E0CE71EE9ECB300A66E94 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C76E0D021EE9EDDD00A66E94 /* MultiSidedBarMenuMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MultiSidedBarMenuMain.storyboard; sourceTree = "<group>"; };
+		C76E0D041EE9EE6000A66E94 /* MultiSidedBarMenuControllerLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSidedBarMenuControllerLeft.swift; sourceTree = "<group>"; };
+		C76E0D051EE9EE6000A66E94 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		C76E0D061EE9EE6000A66E94 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		C76E0D071EE9EE6000A66E94 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C76E0D081EE9EE6000A66E94 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		C76E0D0E1EE9F97800A66E94 /* TopMenuMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TopMenuMain.storyboard; sourceTree = "<group>"; };
+		C76E0D101EE9F98600A66E94 /* TopMenuNewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMenuNewsTableViewController.swift; sourceTree = "<group>"; };
+		C76E0D111EE9F98600A66E94 /* TopMenuNewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMenuNewsTableViewCell.swift; sourceTree = "<group>"; };
+		C76E0D121EE9F98600A66E94 /* TopMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMenuTableViewController.swift; sourceTree = "<group>"; };
+		C76E0D131EE9F98600A66E94 /* TopMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMenuTableViewCell.swift; sourceTree = "<group>"; };
+		C76E0D181EE9F9E900A66E94 /* TopMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMenuNavigationController.swift; sourceTree = "<group>"; };
+		C76E0D1A1EE9FB9A00A66E94 /* MultiSidedBarMenuControllerRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSidedBarMenuControllerRight.swift; sourceTree = "<group>"; };
 		C76E5B461ED59FED00E2C4D3 /* UIView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		C76E5C711ED60AFC00E2C4D3 /* UIApplication+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
 		C76E5C731ED60B6E00E2C4D3 /* UIWindow+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Ext.swift"; sourceTree = "<group>"; };
@@ -433,6 +467,7 @@
 		C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxGesture.xcodeproj; path = ../Carthage/Checkouts/RxGesture/RxGesture/RxGesture.xcodeproj; sourceTree = "<group>"; };
 		C781C8AF1EE2BB9D00DC9A7B /* Dictionary+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ext.swift"; sourceTree = "<group>"; };
 		C78B2CE61EA6C74D00DB3967 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		C78DD5141EEA098A00EF5E64 /* AnimationControllerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationControllerManager.swift; sourceTree = "<group>"; };
 		C79635D61EE5A01100AA11B0 /* SummaryViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewTableViewCell.swift; sourceTree = "<group>"; };
 		C7ACB3861ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsMediaScrollView.swift; sourceTree = "<group>"; };
 		C7AE47EC1EA4FCE600C2096E /* TabBarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
@@ -454,6 +489,9 @@
 		C7AE48D31EA563A400C2096E /* UIImage+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 		C7AE48D41EA563A400C2096E /* UIKit+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Ext.swift"; sourceTree = "<group>"; };
 		C7AE48DE1EA6141200C2096E /* AddMediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMediaViewController.swift; sourceTree = "<group>"; };
+		C7B589E41EEAA70C006C85E9 /* CustomNavigationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationAnimationController.swift; sourceTree = "<group>"; };
+		C7B589E51EEAA70C006C85E9 /* CustomInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInteractionController.swift; sourceTree = "<group>"; };
+		C7B589FE1EEAAADA006C85E9 /* CustomPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentAnimationController.swift; sourceTree = "<group>"; };
 		C7BE65BD1EE29CCC00A05286 /* IBAnimatable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IBAnimatable.xcodeproj; path = ../Carthage/Checkouts/IBAnimatable/IBAnimatable.xcodeproj; sourceTree = "<group>"; };
 		C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		C7BE65E31EE2A23E00A05286 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -498,6 +536,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C76E0CE81EE9ECB300A66E94 /* MapKit.framework in Frameworks */,
 				C77E83361EA25F4F000AC715 /* RxSwiftExt.framework in Frameworks */,
 				C77E83321EA25F4F000AC715 /* RxCocoa.framework in Frameworks */,
 				C77E832E1EA25F4F000AC715 /* RxSwift.framework in Frameworks */,
@@ -523,6 +562,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C70213831EEA1A680066987D /* TransitionAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				C7B589FE1EEAAADA006C85E9 /* CustomPresentAnimationController.swift */,
+				C702136B1EEA19AC0066987D /* CustomDismissAnimationController.swift */,
+				C7B589E41EEAA70C006C85E9 /* CustomNavigationAnimationController.swift */,
+				C7B589E51EEAA70C006C85E9 /* CustomInteractionController.swift */,
+			);
+			name = TransitionAnimations;
+			sourceTree = "<group>";
+		};
 		C72E27981E9ED9EB0064E01B = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +614,7 @@
 				C7F45F371EE4BAB7005CF986 /* StorySmartiesDesign */,
 				C7CB1FF51EE956C000EA7329 /* SideBarMenuExample */,
 				C7CB1FF61EE956DC00EA7329 /* TopMenuExample */,
+				C76E0D011EE9EDAC00A66E94 /* MultiSidedBarMenuExample */,
 				C7CB1FF71EE966A900EA7329 /* PopUpExample */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
@@ -571,6 +622,7 @@
 				C7BE65E31EE2A23E00A05286 /* MainCollectionViewCell.swift */,
 				C7AE488F1EA5327300C2096E /* Main.storyboard */,
 				C72E27AB1E9ED9EB0064E01B /* Assets.xcassets */,
+				C70213831EEA1A680066987D /* TransitionAnimations */,
 				C7C9515B1EA3E022005DFE3B /* Resources */,
 				C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */,
 				C72E27B01E9ED9EB0064E01B /* Info.plist */,
@@ -681,6 +733,20 @@
 				C765C2741EA4E6E000F5FE90 /* NavBarMain.storyboard */,
 			);
 			name = NavBarExample;
+			sourceTree = "<group>";
+		};
+		C76E0D011EE9EDAC00A66E94 /* MultiSidedBarMenuExample */ = {
+			isa = PBXGroup;
+			children = (
+				C76E0D1A1EE9FB9A00A66E94 /* MultiSidedBarMenuControllerRight.swift */,
+				C76E0D041EE9EE6000A66E94 /* MultiSidedBarMenuControllerLeft.swift */,
+				C76E0D051EE9EE6000A66E94 /* NewsTableViewController.swift */,
+				C76E0D061EE9EE6000A66E94 /* NewsTableViewCell.swift */,
+				C76E0D071EE9EE6000A66E94 /* MapViewController.swift */,
+				C76E0D081EE9EE6000A66E94 /* PhotoViewController.swift */,
+				C76E0D021EE9EDDD00A66E94 /* MultiSidedBarMenuMain.storyboard */,
+			);
+			name = MultiSidedBarMenuExample;
 			sourceTree = "<group>";
 		};
 		C76E5C771ED639A500E2C4D3 /* CarouselViewsExample */ = {
@@ -886,6 +952,13 @@
 		C7CB1FF61EE956DC00EA7329 /* TopMenuExample */ = {
 			isa = PBXGroup;
 			children = (
+				C76E0D101EE9F98600A66E94 /* TopMenuNewsTableViewController.swift */,
+				C76E0D111EE9F98600A66E94 /* TopMenuNewsTableViewCell.swift */,
+				C76E0D121EE9F98600A66E94 /* TopMenuTableViewController.swift */,
+				C76E0D131EE9F98600A66E94 /* TopMenuTableViewCell.swift */,
+				C76E0D181EE9F9E900A66E94 /* TopMenuNavigationController.swift */,
+				C78DD5141EEA098A00EF5E64 /* AnimationControllerManager.swift */,
+				C76E0D0E1EE9F97800A66E94 /* TopMenuMain.storyboard */,
 			);
 			name = TopMenuExample;
 			sourceTree = "<group>";
@@ -913,6 +986,7 @@
 		C7E3886B1ED3055F000DCE15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C76E0CE71EE9ECB300A66E94 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1285,6 +1359,7 @@
 				C7AE48901EA5327300C2096E /* Main.storyboard in Resources */,
 				C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */,
 				C74217341EC1C27C0007B4C3 /* ScrollViewMain.storyboard in Resources */,
+				C76E0D031EE9EDDD00A66E94 /* MultiSidedBarMenuMain.storyboard in Resources */,
 				C7CB1FF91EE966D100EA7329 /* PopUpMain.storyboard in Resources */,
 				C74217CE1EC1F34C0007B4C3 /* slide15.gif in Resources */,
 				C7E387DE1ED2F2FF000DCE15 /* AudioMain.storyboard in Resources */,
@@ -1298,6 +1373,7 @@
 				C7F45F4F1EE4BAFA005CF986 /* StorySmartiesMain.storyboard in Resources */,
 				C72E27AC1E9ED9EB0064E01B /* Assets.xcassets in Resources */,
 				C76E5C7B1ED639E500E2C4D3 /* CarouselMain.storyboard in Resources */,
+				C76E0D0F1EE9F97800A66E94 /* TopMenuMain.storyboard in Resources */,
 				C74217381EC1C8520007B4C3 /* slides_info.plist in Resources */,
 				C765C2751EA4E6E000F5FE90 /* NavBarMain.storyboard in Resources */,
 				C7E8B18B1ED4552A00FC912F /* VideoPlayerMain.storyboard in Resources */,
@@ -1334,12 +1410,17 @@
 				C76E5C741ED60B6E00E2C4D3 /* UIWindow+Ext.swift in Sources */,
 				C742173A1EC1CA400007B4C3 /* SlidesInfoModel.swift in Sources */,
 				C781C8B01EE2BB9D00DC9A7B /* Dictionary+Ext.swift in Sources */,
+				C76E0D161EE9F98600A66E94 /* TopMenuTableViewController.swift in Sources */,
 				C7AE489E1EA54D6B00C2096E /* MediaTableViewController.swift in Sources */,
 				C79635D71EE5A01100AA11B0 /* SummaryViewTableViewCell.swift in Sources */,
+				C76E0D1B1EE9FB9A00A66E94 /* MultiSidedBarMenuControllerRight.swift in Sources */,
+				C76E0D171EE9F98600A66E94 /* TopMenuTableViewCell.swift in Sources */,
 				C76E5C791ED639D400E2C4D3 /* CarouselViewController.swift in Sources */,
+				C76E0D0C1EE9EE6000A66E94 /* MapViewController.swift in Sources */,
 				C7F45F511EE4BB18005CF986 /* StorySmartiesViewController.swift in Sources */,
 				C765C27B1EA4E77000F5FE90 /* NavigationViewController.swift in Sources */,
 				C7E387DC1ED2F2DC000DCE15 /* AudioCheckViewController.swift in Sources */,
+				C76E0D151EE9F98600A66E94 /* TopMenuNewsTableViewCell.swift in Sources */,
 				C76E5C761ED6326A00E2C4D3 /* EmptyViewController.swift in Sources */,
 				C7AE48D51EA563A400C2096E /* Math+Ext.swift in Sources */,
 				C7ACB3871ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift in Sources */,
@@ -1352,14 +1433,18 @@
 				C72E27A71E9ED9EB0064E01B /* ColorChangeViewController.swift in Sources */,
 				C78B2CE71EA6C74D00DB3967 /* UIImageView+Ext.swift in Sources */,
 				C74217CA1EC1F11A0007B4C3 /* UIImage+GIF.swift in Sources */,
+				C76E0D0A1EE9EE6000A66E94 /* NewsTableViewController.swift in Sources */,
 				C7AE48B11EA5550B00C2096E /* MediaType.swift in Sources */,
 				C765C27D1EA4E79B00F5FE90 /* RootViewController.swift in Sources */,
 				C7BE66FA1EE2B30F00A05286 /* UIColor+Ext.swift in Sources */,
 				C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */,
 				C7CB1ECE1EE8878600EA7329 /* AirbnbNavigationController.swift in Sources */,
+				C7B589FF1EEAAADA006C85E9 /* CustomPresentAnimationController.swift in Sources */,
 				C7CB1FFB1EE96BE700EA7329 /* PopUpViewController.swift in Sources */,
 				C74939861ED774C200555D31 /* InspirationalFilmsViewController.swift in Sources */,
+				C76E0D141EE9F98600A66E94 /* TopMenuNewsTableViewController.swift in Sources */,
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
+				C76E0D0D1EE9EE6000A66E94 /* PhotoViewController.swift in Sources */,
 				C74217361EC1C7A60007B4C3 /* ScrollViewController.swift in Sources */,
 				C7CB1ED51EE8995100EA7329 /* AirbnbMenuTableViewController.swift in Sources */,
 				C7AE48A61EA5531A00C2096E /* ChosenMediaDetailedViewController.swift in Sources */,
@@ -1368,7 +1453,9 @@
 				C765C2721EA4E09F00F5FE90 /* EnglishViewController.swift in Sources */,
 				C7AE48D61EA563A400C2096E /* UIImage+Ext.swift in Sources */,
 				C76E5C801ED65C7400E2C4D3 /* InterestCollectionViewCell.swift in Sources */,
+				C702136C1EEA19AC0066987D /* CustomDismissAnimationController.swift in Sources */,
 				C74C9A011EE87C68001E4FFE /* AirbnbTableViewController.swift in Sources */,
+				C7B589E71EEAA70C006C85E9 /* CustomInteractionController.swift in Sources */,
 				C7E8B1891ED4551600FC912F /* VideoPlayerViewController.swift in Sources */,
 				C70C84B31EE703F50098A62F /* Interest.swift in Sources */,
 				C76E5C721ED60AFC00E2C4D3 /* UIApplication+Ext.swift in Sources */,
@@ -1376,8 +1463,10 @@
 				C7CB20071EE97DBA00EA7329 /* SideBarMenu.swift in Sources */,
 				C7E45A101EE2EEA300F7015C /* UIButton+Ext.swift in Sources */,
 				C7F45EA01EE41D9B005CF986 /* String+Ext.swift in Sources */,
+				C76E0D0B1EE9EE6000A66E94 /* NewsTableViewCell.swift in Sources */,
 				C7CB1F611EE8B6BD00EA7329 /* StorySmartiesMenuTableViewController.swift in Sources */,
 				C7CB1FFF1EE976C900EA7329 /* SideBarMenuViewController.swift in Sources */,
+				C76E0D191EE9F9E900A66E94 /* TopMenuNavigationController.swift in Sources */,
 				C749398D1ED782D500555D31 /* InspirationalFilms.swift in Sources */,
 				C70C84DD1EE760F50098A62F /* SummaryView.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
@@ -1387,15 +1476,18 @@
 				C7CB1EB61EE8817600EA7329 /* AirbnbPlacesTableViewCell.swift in Sources */,
 				C74C9A031EE87C98001E4FFE /* AirbnbData.swift in Sources */,
 				C742173C1EC1CF650007B4C3 /* Slide.swift in Sources */,
+				C78DD5151EEA098A00EF5E64 /* AnimationControllerManager.swift in Sources */,
 				C7AE48B31EA5550B00C2096E /* ProductLine.swift in Sources */,
 				C7BE65E41EE2A23E00A05286 /* MainCollectionViewCell.swift in Sources */,
 				C7AE48041EA4FE7D00C2096E /* TabBarViewController.swift in Sources */,
 				C7AE48B01EA5550B00C2096E /* MediaTableViewCell.swift in Sources */,
 				C7BE65E21EE2A22900A05286 /* MainCollectionViewController.swift in Sources */,
+				C76E0D091EE9EE6000A66E94 /* MultiSidedBarMenuControllerLeft.swift in Sources */,
 				C7AE48D71EA563A400C2096E /* UIKit+Ext.swift in Sources */,
 				C7CB1ED21EE8905D00EA7329 /* SWRevealViewController.m in Sources */,
 				C7AE48A21EA5509B00C2096E /* TableViewNavigationViewController.swift in Sources */,
 				C7AE48DF1EA6141200C2096E /* AddMediaViewController.swift in Sources */,
+				C7B589E61EEAA70C006C85E9 /* CustomNavigationAnimationController.swift in Sources */,
 				C7AE48AF1EA5550B00C2096E /* MediaLayers.swift in Sources */,
 				C7CB1F671EE9385200EA7329 /* StorySmartiesBookShelfCollectionViewController.swift in Sources */,
 				C765C2701EA4E08600F5FE90 /* MetricViewController.swift in Sources */,

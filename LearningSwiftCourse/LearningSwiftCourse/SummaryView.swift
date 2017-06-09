@@ -25,6 +25,7 @@ class SummaryView: UIView {
     var gravityBehavior : UIGravityBehavior!
     var panGesture : UIPanGestureRecognizer!
     
+    var heightToSee : CGFloat = 60
     var maxHeight : CGFloat? = nil
     var superViewHeight : CGFloat? = nil
     
@@ -59,7 +60,6 @@ class SummaryView: UIView {
     }
     func configureContainerBoundary (){
         let containerBoundaryWidth = UIScreen.main.bounds.size.width
-        let heightToSee : CGFloat = 40
         let upperContainerBoundary = (-self.frame.size.height + heightToSee)
         containerBoundary.addBoundary(withIdentifier: ("upperBoundary" as NSCopying) , from: CGPoint(x:0,y:upperContainerBoundary), to: CGPoint(x:containerBoundaryWidth,y:upperContainerBoundary))
         

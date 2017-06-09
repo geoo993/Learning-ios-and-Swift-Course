@@ -13,7 +13,7 @@ import Foundation
 import UIKit
 
 
-class ChosenMediaTableViewController: UITableViewController, AddingDelegate 
+class ChosenMediaTableViewController: UITableViewController, AddingDelegate, UINavigationControllerDelegate 
 {
 
     var media = String()
@@ -21,7 +21,9 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate
     var productShown = [Bool]()
     var sections = [[Product]]()
  
- 
+    let customNavigationAnimationController = CustomNavigationAnimationController()
+    let customInteractionController = CustomInteractionController()
+    
     func updateSections() {
         sections = MediaLayers.sortedFirstLetters.map { firstLetter in
                 return MediaLayers.getProducts
@@ -35,7 +37,7 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate
         
         // Uncomment the following line to preserve selection between presentations
          //self.clearsSelectionOnViewWillAppear = false
-        
+        self.navigationController?.delegate = self
         self.navigationItem.title = media
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension 
@@ -214,7 +216,6 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate
         
     }
  
-    
     //performSegueWithIdentifier(identifier: "", sender: AnyObject?)
     // MARK: - Navigation
     
@@ -262,4 +263,22 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate
  
     
     
+}
+
+extension ChosenMediaTableViewController: UIViewControllerTransitioningDelegate 
+{
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if operation == .push {
+            customInteractionController.attachToViewController(toVC)
+        }
+        customNavigationAnimationController.reverse = operation == .pop
+        return customNavigationAnimationController
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return customInteractionController.transitionInProgress ? customInteractionController : nil
+    }
+    
+
 }

@@ -66,13 +66,14 @@ class StorySmartiesViewController: UIViewController {
     func loadSettingsView(){
         self.view.addSubview(summaryView)
         
-        let heightToSee : CGFloat = 40
+        let heightToSee : CGFloat = 60
         let width = self.view.frame.size.width
         let height = self.view.frame.size.height * 0.925
         let frame = CGRect(x: 0, y: -height + heightToSee, width: width, height: height)
         
         summaryView.frame = frame
         summaryView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        summaryView.heightToSee = heightToSee
         summaryView.translatesAutoresizingMaskIntoConstraints = true
         summaryView.maxHeight = height
         summaryView.superViewHeight = self.view.bounds.size.height

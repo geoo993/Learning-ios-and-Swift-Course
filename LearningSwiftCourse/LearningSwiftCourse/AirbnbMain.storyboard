@@ -247,10 +247,10 @@
             </objects>
             <point key="canvasLocation" x="2103" y="148"/>
         </scene>
-        <!--Reveal View Controller-->
+        <!--Airbnb Reveal View Controller-->
         <scene sceneID="COb-xD-dpZ">
             <objects>
-                <viewController storyboardIdentifier="SWRevealViewController" id="Ajd-YZ-JET" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AirbnbRevealViewController" id="Ajd-YZ-JET" customClass="AirbnbRevealViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cfS-xj-2XS"/>
                         <viewControllerLayoutGuide type="bottom" id="Zeh-dI-Chx"/>
@@ -295,6 +295,6 @@
         <image name="menualt" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xm1-Pe-RB9"/>
+        <segue reference="g1R-XL-aBM"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,18 +11,19 @@ import UIKit
 import IBAnimatable
 
 @IBDesignable
-class PopUpViewController: UIViewController {
+class PopUpViewController: UIViewController  {
 
-    
+   
     @IBOutlet var addItemPopUpView: AnimatableView!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     
     @IBAction func homeItem(_ sender: UIBarButtonItem) {
+        
         dismiss(animated: true) { 
             print("view controller dismissed, now going to home page")
         }
     }
-    
+
     @IBAction func addItem(_ sender: UIBarButtonItem) {
         animateIn()
     }
