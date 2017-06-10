@@ -104,10 +104,7 @@ public extension UIView {
         }else { return UIImage() }
     }
     
-    func AddBlurEffectOnView(effect: UIBlurEffectStyle){
-        let parent = self
-        
-    }
+    
     func blurNewView(newChild: UIView, effect: UIBlurEffectStyle){
         let parent = self
         
@@ -145,6 +142,44 @@ public extension UIView {
         borderLayer.lineWidth = borderWidth
         borderLayer.frame = bounds
         layer.addSublayer(borderLayer)
+    }
+    
+    func fadeIn(_ duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
+        UIView.animate(withDuration: duration, delay: delay, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            self.alpha = 1.0
+        }, completion: completion)  }
+    
+    func fadeOut(_ duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, completion: @escaping (Bool) -> Void = {(finished: Bool) -> Void in}) {
+        UIView.animate(withDuration: duration, delay: delay, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            self.alpha = 0.0
+        }, completion: completion)
+    }
+    
+    // Recursive remove subviews and constraints
+    func removeSubviews() {
+        self.subviews.forEach({
+            if !($0 is UILayoutSupport) {
+                $0.removeSubviews()
+                $0.removeFromSuperview()
+            }
+        })
+        
+    }
+    
+    // Recursive remove subviews and constraints
+    func removeSubviewsAndConstraints() {
+        self.subviews.forEach({
+            $0.removeSubviewsAndConstraints()
+            $0.removeConstraints($0.constraints)
+            $0.removeFromSuperview()
+        })
+    }
+    
+    func removeEverything (){
+        while(self.subviews.count > 0) 
+        {
+            self.removeSubviewsAndConstraints()
+        }
     }
     
 }

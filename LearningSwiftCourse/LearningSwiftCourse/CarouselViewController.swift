@@ -79,7 +79,6 @@ class CarouselViewController: UIViewController {
             interestFeatureImages = interests?.map{ $0!.featuredImage } 
 
             interests = nil
-        
         }
         
     }
@@ -124,7 +123,6 @@ class CarouselViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        clearAll()
     }
     
     override func viewDidLayoutSubviews()
@@ -154,13 +152,11 @@ class CarouselViewController: UIViewController {
         interestTitles = nil
         interestDescription  = nil
         interestFeatureImages = nil
-        for sv in view.subviews {
-            sv.removeFromSuperview()
-        }
-        view.removeFromSuperview()
+        view.removeEverything()
     }
     
     deinit {
+        
         clearAll()
         print("Carousel view controller is \(#function)")
     }

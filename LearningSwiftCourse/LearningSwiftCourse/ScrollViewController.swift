@@ -18,7 +18,7 @@ class ScrollViewController: UIViewController {
     
     @IBOutlet weak var pageControl: UIPageControl!
     
-    @IBAction func homebutton(_ sender: Any) {
+    @IBAction func homebutton(_ sender: UIButton) {
         dismiss(animated: true) { 
             print("view controller dismissed, now going to home page")
         }
@@ -102,7 +102,14 @@ class ScrollViewController: UIViewController {
         scrollViewDidEndDecelerating(mainScrollView)
     }
     
+    func clearAll(){
+        animationChain?.cancelAnimationChain()
+        animationChain = nil
+        view.removeEverything()
+    }
+    
     deinit {
+        clearAll()
         print("Scroll view controller is \(#function)")
     }
     
@@ -147,8 +154,9 @@ extension ScrollViewController: UIScrollViewDelegate {
       
         for i in 0..<self.slidesViews.count {
             
-            animationChain?.cancelAnimationChain({ 
-                let slide = self.slidesViews[i]
+            animationChain?.cancelAnimationChain({ [weak self] _ in
+                guard let this = self else { return }
+                let slide = this.slidesViews[i]
                 slide.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 slide.layer.removeAllAnimations()
                 slide.frame.origin.x = CGFloat(i) * UIScreen.main.bounds.size.width

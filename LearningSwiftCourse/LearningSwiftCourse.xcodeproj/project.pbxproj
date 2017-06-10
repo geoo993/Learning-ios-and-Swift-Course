@@ -17,6 +17,8 @@
 		C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */; };
 		C72E27BA1E9ED9EB0064E01B /* LearningSwiftCourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27B91E9ED9EB0064E01B /* LearningSwiftCourseTests.swift */; };
 		C72E27C51E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */; };
+		C741B3F61EEBEEB500716E41 /* SlideShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C741B3F51EEBEEB500716E41 /* SlideShowViewController.swift */; };
+		C741B3F81EEBEECE00716E41 /* SlideShowMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C741B3F71EEBEECE00716E41 /* SlideShowMain.storyboard */; };
 		C74217341EC1C27C0007B4C3 /* ScrollViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74217331EC1C27C0007B4C3 /* ScrollViewMain.storyboard */; };
 		C74217361EC1C7A60007B4C3 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74217351EC1C7A60007B4C3 /* ScrollViewController.swift */; };
 		C74217381EC1C8520007B4C3 /* slides_info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C74217371EC1C8520007B4C3 /* slides_info.plist */; };
@@ -437,6 +439,8 @@
 		C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSwiftCourseUITests.swift; sourceTree = "<group>"; };
 		C72E27C61E9ED9EB0064E01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72E27D21E9EDA0C0064E01B /* LearningSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningSwift.playground; sourceTree = "<group>"; };
+		C741B3F51EEBEEB500716E41 /* SlideShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideShowViewController.swift; sourceTree = "<group>"; };
+		C741B3F71EEBEECE00716E41 /* SlideShowMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SlideShowMain.storyboard; sourceTree = "<group>"; };
 		C74217331EC1C27C0007B4C3 /* ScrollViewMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScrollViewMain.storyboard; sourceTree = "<group>"; };
 		C74217351EC1C7A60007B4C3 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		C74217371EC1C8520007B4C3 /* slides_info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = slides_info.plist; sourceTree = "<group>"; };
@@ -625,8 +629,9 @@
 			isa = PBXGroup;
 			children = (
 				C7E3886E1ED3055F000DCE15 /* LearningSwiftCourse.entitlements */,
-				C7CB1ED31EE8906800EA7329 /* SWRevealViewController */,
 				C7AE48D11EA5638800C2096E /* Extensions */,
+				C7CB1ED31EE8906800EA7329 /* SWRevealViewController */,
+				C741B3F41EEBEE8900716E41 /* SlideShowExample */,
 				C7E387C51ED2F2B2000DCE15 /* AudioExample */,
 				C74C99E71EE87BBE001E4FFE /* AirbnbExample */,
 				C7AE48961EA54C4100C2096E /* TableExample */,
@@ -673,6 +678,15 @@
 				C72E27C61E9ED9EB0064E01B /* Info.plist */,
 			);
 			path = LearningSwiftCourseUITests;
+			sourceTree = "<group>";
+		};
+		C741B3F41EEBEE8900716E41 /* SlideShowExample */ = {
+			isa = PBXGroup;
+			children = (
+				C741B3F51EEBEEB500716E41 /* SlideShowViewController.swift */,
+				C741B3F71EEBEECE00716E41 /* SlideShowMain.storyboard */,
+			);
+			name = SlideShowExample;
 			sourceTree = "<group>";
 		};
 		C74217161EC1C0200007B4C3 /* ScrollViewExample */ = {
@@ -1428,6 +1442,7 @@
 				C7F45F4F1EE4BAFA005CF986 /* StorySmartiesMain.storyboard in Resources */,
 				C72E27AC1E9ED9EB0064E01B /* Assets.xcassets in Resources */,
 				C76E5C7B1ED639E500E2C4D3 /* CarouselMain.storyboard in Resources */,
+				C741B3F81EEBEECE00716E41 /* SlideShowMain.storyboard in Resources */,
 				C76E0D0F1EE9F97800A66E94 /* TopMenuMain.storyboard in Resources */,
 				C74217381EC1C8520007B4C3 /* slides_info.plist in Resources */,
 				C765C2751EA4E6E000F5FE90 /* NavBarMain.storyboard in Resources */,
@@ -1476,6 +1491,7 @@
 				C765C27B1EA4E77000F5FE90 /* NavigationViewController.swift in Sources */,
 				C7E387DC1ED2F2DC000DCE15 /* AudioCheckViewController.swift in Sources */,
 				C76E0D151EE9F98600A66E94 /* TopMenuNewsTableViewCell.swift in Sources */,
+				C741B3F61EEBEEB500716E41 /* SlideShowViewController.swift in Sources */,
 				C76E5C761ED6326A00E2C4D3 /* EmptyViewController.swift in Sources */,
 				C7AE48D51EA563A400C2096E /* Math+Ext.swift in Sources */,
 				C7ACB3871ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift in Sources */,
