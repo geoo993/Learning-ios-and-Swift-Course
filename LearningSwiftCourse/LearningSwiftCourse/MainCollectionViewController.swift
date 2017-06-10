@@ -30,6 +30,8 @@ class MainCollectionViewController: UICollectionViewController {
                            //"ColorsViewController": "ColorsMain",
                            //"ScrollViewController": "ScrollViewMain",
                            "SlideShowViewController" : "SlideShowMain",
+                           //"ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
+                           "ParallaxViewController" : "ParallaxMain"
                            //"CarouselViewController": "CarouselMain",
                            //"InspirationalFilmsViewController": "InspirationalFilmsMain",
                            //"AirbnbRevealViewController" : "AirbnbMain",

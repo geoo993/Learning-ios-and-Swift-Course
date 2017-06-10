@@ -67,6 +67,14 @@
 		C76E5C7B1ED639E500E2C4D3 /* CarouselMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76E5C7A1ED639E500E2C4D3 /* CarouselMain.storyboard */; };
 		C76E5C801ED65C7400E2C4D3 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C7F1ED65C7400E2C4D3 /* InterestCollectionViewCell.swift */; };
 		C76E5EC21ED706ED00E2C4D3 /* UISearchBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5EC11ED706ED00E2C4D3 /* UISearchBar+Ext.swift */; };
+		C77920C11EEC6B8700BB6C52 /* ParallaxMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77920C01EEC6B8700BB6C52 /* ParallaxMain.storyboard */; };
+		C77920C31EEC6B9A00BB6C52 /* ParallaxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77920C21EEC6B9A00BB6C52 /* ParallaxViewController.swift */; };
+		C77920C51EEC6DBE00BB6C52 /* ParallaxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77920C41EEC6DBE00BB6C52 /* ParallaxTableViewCell.swift */; };
+		C77920C71EEC78B100BB6C52 /* ParallaxHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77920C61EEC78B100BB6C52 /* ParallaxHeaderView.swift */; };
+		C77920C91EEC791E00BB6C52 /* SlideShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77920C81EEC791E00BB6C52 /* SlideShowView.swift */; };
+		C77920CC1EEC8B3100BB6C52 /* ParallaxHeaderMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77920CB1EEC8B3100BB6C52 /* ParallaxHeaderMain.storyboard */; };
+		C77920CE1EEC8B5000BB6C52 /* ParallaxHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77920CD1EEC8B5000BB6C52 /* ParallaxHeaderTableViewCell.swift */; };
+		C77920D01EEC8B6A00BB6C52 /* ParallaxHeaderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77920CF1EEC8B6A00BB6C52 /* ParallaxHeaderTableViewController.swift */; };
 		C77E832A1EA25F4F000AC715 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83271EA25F18000AC715 /* RxGesture.framework */; };
 		C77E832B1EA25F4F000AC715 /* RxGesture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83271EA25F18000AC715 /* RxGesture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C77E832E1EA25F4F000AC715 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82F81EA25F08000AC715 /* RxSwift.framework */; };
@@ -490,6 +498,14 @@
 		C76E5C7C1ED6500B00E2C4D3 /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		C76E5C7F1ED65C7400E2C4D3 /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
 		C76E5EC11ED706ED00E2C4D3 /* UISearchBar+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Ext.swift"; sourceTree = "<group>"; };
+		C77920C01EEC6B8700BB6C52 /* ParallaxMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ParallaxMain.storyboard; sourceTree = "<group>"; };
+		C77920C21EEC6B9A00BB6C52 /* ParallaxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxViewController.swift; sourceTree = "<group>"; };
+		C77920C41EEC6DBE00BB6C52 /* ParallaxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxTableViewCell.swift; sourceTree = "<group>"; };
+		C77920C61EEC78B100BB6C52 /* ParallaxHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderView.swift; sourceTree = "<group>"; };
+		C77920C81EEC791E00BB6C52 /* SlideShowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideShowView.swift; sourceTree = "<group>"; };
+		C77920CB1EEC8B3100BB6C52 /* ParallaxHeaderMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ParallaxHeaderMain.storyboard; sourceTree = "<group>"; };
+		C77920CD1EEC8B5000BB6C52 /* ParallaxHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		C77920CF1EEC8B6A00BB6C52 /* ParallaxHeaderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderTableViewController.swift; sourceTree = "<group>"; };
 		C77E82D61EA25EF5000AC715 /* RxSwiftExt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxSwiftExt.xcodeproj; path = ../Carthage/Checkouts/RxSwiftExt/RxSwiftExt.xcodeproj; sourceTree = "<group>"; };
 		C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = ../Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
 		C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxGesture.xcodeproj; path = ../Carthage/Checkouts/RxGesture/RxGesture/RxGesture.xcodeproj; sourceTree = "<group>"; };
@@ -632,6 +648,8 @@
 				C7AE48D11EA5638800C2096E /* Extensions */,
 				C7CB1ED31EE8906800EA7329 /* SWRevealViewController */,
 				C741B3F41EEBEE8900716E41 /* SlideShowExample */,
+				C77920A81EEC6B4800BB6C52 /* ParallaxScrollExample */,
+				C77920CA1EEC8AF800BB6C52 /* ParallaxTableViewHeadingExample */,
 				C7E387C51ED2F2B2000DCE15 /* AudioExample */,
 				C74C99E71EE87BBE001E4FFE /* AirbnbExample */,
 				C7AE48961EA54C4100C2096E /* TableExample */,
@@ -684,6 +702,7 @@
 			isa = PBXGroup;
 			children = (
 				C741B3F51EEBEEB500716E41 /* SlideShowViewController.swift */,
+				C77920C81EEC791E00BB6C52 /* SlideShowView.swift */,
 				C741B3F71EEBEECE00716E41 /* SlideShowMain.storyboard */,
 			);
 			name = SlideShowExample;
@@ -806,6 +825,27 @@
 				C76E5C7C1ED6500B00E2C4D3 /* Interest.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		C77920A81EEC6B4800BB6C52 /* ParallaxScrollExample */ = {
+			isa = PBXGroup;
+			children = (
+				C77920C21EEC6B9A00BB6C52 /* ParallaxViewController.swift */,
+				C77920C41EEC6DBE00BB6C52 /* ParallaxTableViewCell.swift */,
+				C77920C01EEC6B8700BB6C52 /* ParallaxMain.storyboard */,
+			);
+			name = ParallaxScrollExample;
+			sourceTree = "<group>";
+		};
+		C77920CA1EEC8AF800BB6C52 /* ParallaxTableViewHeadingExample */ = {
+			isa = PBXGroup;
+			children = (
+				C77920CF1EEC8B6A00BB6C52 /* ParallaxHeaderTableViewController.swift */,
+				C77920CD1EEC8B5000BB6C52 /* ParallaxHeaderTableViewCell.swift */,
+				C77920C61EEC78B100BB6C52 /* ParallaxHeaderView.swift */,
+				C77920CB1EEC8B3100BB6C52 /* ParallaxHeaderMain.storyboard */,
+			);
+			name = ParallaxTableViewHeadingExample;
 			sourceTree = "<group>";
 		};
 		C77E82D51EA25E3B000AC715 /* Dependencies */ = {
@@ -1437,6 +1477,7 @@
 				C742173E1EC1CF740007B4C3 /* Slide.xib in Resources */,
 				C74217D21EC1F37A0007B4C3 /* slide18.gif in Resources */,
 				C74217D61EC1F4090007B4C3 /* slide17.gif in Resources */,
+				C77920CC1EEC8B3100BB6C52 /* ParallaxHeaderMain.storyboard in Resources */,
 				C7E387E01ED2F5A9000DCE15 /* brooks.mp3 in Resources */,
 				C765C26C1EA4DFD400F5FE90 /* TabBarMain.storyboard in Resources */,
 				C7F45F4F1EE4BAFA005CF986 /* StorySmartiesMain.storyboard in Resources */,
@@ -1448,6 +1489,7 @@
 				C765C2751EA4E6E000F5FE90 /* NavBarMain.storyboard in Resources */,
 				C7E8B18B1ED4552A00FC912F /* VideoPlayerMain.storyboard in Resources */,
 				C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */,
+				C77920C11EEC6B8700BB6C52 /* ParallaxMain.storyboard in Resources */,
 				C74217CC1EC1F32B0007B4C3 /* slide19.gif in Resources */,
 				C7CB20011EE976E500EA7329 /* SideBarMenuMain.storyboard in Resources */,
 				C74939841ED7747100555D31 /* InspirationalFilmsMain.storyboard in Resources */,
@@ -1501,6 +1543,7 @@
 				C7AE48B21EA5550B00C2096E /* Product.swift in Sources */,
 				C76E5EC21ED706ED00E2C4D3 /* UISearchBar+Ext.swift in Sources */,
 				C7CB1F651EE92F7C00EA7329 /* StorySmartiesMenuViewController.swift in Sources */,
+				C77920CE1EEC8B5000BB6C52 /* ParallaxHeaderTableViewCell.swift in Sources */,
 				C72E27A71E9ED9EB0064E01B /* ColorChangeViewController.swift in Sources */,
 				C78B2CE71EA6C74D00DB3967 /* UIImageView+Ext.swift in Sources */,
 				C74217CA1EC1F11A0007B4C3 /* UIImage+GIF.swift in Sources */,
@@ -1508,6 +1551,7 @@
 				C7AE48B11EA5550B00C2096E /* MediaType.swift in Sources */,
 				C765C27D1EA4E79B00F5FE90 /* RootViewController.swift in Sources */,
 				C7BE66FA1EE2B30F00A05286 /* UIColor+Ext.swift in Sources */,
+				C77920C71EEC78B100BB6C52 /* ParallaxHeaderView.swift in Sources */,
 				C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */,
 				C7CB1ECE1EE8878600EA7329 /* AirbnbNavigationController.swift in Sources */,
 				C7B589FF1EEAAADA006C85E9 /* CustomPresentAnimationController.swift in Sources */,
@@ -1517,6 +1561,7 @@
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
 				C76E0D0D1EE9EE6000A66E94 /* PhotoViewController.swift in Sources */,
 				C74217361EC1C7A60007B4C3 /* ScrollViewController.swift in Sources */,
+				C77920C91EEC791E00BB6C52 /* SlideShowView.swift in Sources */,
 				C7CB1ED51EE8995100EA7329 /* AirbnbMenuTableViewController.swift in Sources */,
 				C7AE48A61EA5531A00C2096E /* ChosenMediaDetailedViewController.swift in Sources */,
 				C7CB1F6A1EE938AE00EA7329 /* StorySmartiesBookShelfCollectionViewCell.swift in Sources */,
@@ -1531,6 +1576,8 @@
 				C70C84B31EE703F50098A62F /* Interest.swift in Sources */,
 				C76E5C721ED60AFC00E2C4D3 /* UIApplication+Ext.swift in Sources */,
 				C7BE67861EE2B72900A05286 /* Generic+Ext.swift in Sources */,
+				C77920D01EEC8B6A00BB6C52 /* ParallaxHeaderTableViewController.swift in Sources */,
+				C77920C31EEC6B9A00BB6C52 /* ParallaxViewController.swift in Sources */,
 				C7CB20071EE97DBA00EA7329 /* SideBarMenu.swift in Sources */,
 				C7E45A101EE2EEA300F7015C /* UIButton+Ext.swift in Sources */,
 				C7F45EA01EE41D9B005CF986 /* String+Ext.swift in Sources */,
@@ -1539,6 +1586,7 @@
 				C7CB1FFF1EE976C900EA7329 /* SideBarMenuViewController.swift in Sources */,
 				C76E0D191EE9F9E900A66E94 /* TopMenuNavigationController.swift in Sources */,
 				C749398D1ED782D500555D31 /* InspirationalFilms.swift in Sources */,
+				C77920C51EEC6DBE00BB6C52 /* ParallaxTableViewCell.swift in Sources */,
 				C70C84DD1EE760F50098A62F /* SummaryView.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
 				C7CB20031EE9775900EA7329 /* SideBarMenuTableViewController.swift in Sources */,

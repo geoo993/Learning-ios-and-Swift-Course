@@ -21,10 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3np-Nj-ym2" userLabel="container View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzN-QD-58n">
                                 <rect key="frame" x="135" y="528" width="50" height="30"/>
                                 <constraints>
@@ -32,24 +28,18 @@
                                 </constraints>
                                 <state key="normal" title="Home"/>
                                 <connections>
-                                    <action selector="homebutton:" destination="Kfj-cc-M3j" eventType="touchUpInside" id="NQJ-I3-2G8"/>
+                                    <action selector="homebuttonAction:" destination="Kfj-cc-M3j" eventType="touchUpInside" id="jzM-ma-RXv"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2Xb-ag-RHx" firstAttribute="top" secondItem="3np-Nj-ym2" secondAttribute="bottom" id="2va-le-KRL"/>
-                            <constraint firstItem="3np-Nj-ym2" firstAttribute="top" secondItem="kql-JF-p2M" secondAttribute="top" id="3aI-if-YZ2"/>
-                            <constraint firstAttribute="trailing" secondItem="3np-Nj-ym2" secondAttribute="trailing" id="Hoc-Hn-ShF"/>
-                            <constraint firstItem="3np-Nj-ym2" firstAttribute="leading" secondItem="kql-JF-p2M" secondAttribute="leading" id="Ht0-et-0Wl"/>
                             <constraint firstItem="UzN-QD-58n" firstAttribute="centerX" secondItem="kql-JF-p2M" secondAttribute="centerX" id="iS1-Mq-Bjn"/>
-                            <constraint firstItem="3np-Nj-ym2" firstAttribute="centerX" secondItem="kql-JF-p2M" secondAttribute="centerX" id="kLE-Fe-lad"/>
-                            <constraint firstItem="3np-Nj-ym2" firstAttribute="centerY" secondItem="kql-JF-p2M" secondAttribute="centerY" id="yuz-Ox-KJ1"/>
                             <constraint firstItem="2Xb-ag-RHx" firstAttribute="top" secondItem="UzN-QD-58n" secondAttribute="bottom" constant="10" id="z17-oV-ZNv"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="containerView" destination="3np-Nj-ym2" id="NLY-Va-wVq"/>
+                        <outlet property="homebutton" destination="UzN-QD-58n" id="KlW-PE-fVK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hG-RH-zXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
