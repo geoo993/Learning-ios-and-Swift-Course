@@ -15,8 +15,8 @@ private let reuseIdentifier = "MainCell"
 @IBDesignable
 class MainCollectionViewController: UICollectionViewController {
   
-    let customPresentAnimationController = CustomPresentAnimationController()
-    let customDismissAnimationController = CustomDismissAnimationController()
+    //let customPresentAnimationController = CustomPresentAnimationController()
+    //let customDismissAnimationController = CustomDismissAnimationController()
     
     
     var views: [String: String] = [
@@ -29,10 +29,11 @@ class MainCollectionViewController: UICollectionViewController {
                            //"NavigationViewController": "NavBarMain",
                            //"ColorsViewController": "ColorsMain",
                            //"ScrollViewController": "ScrollViewMain",
-                           "SlideShowViewController" : "SlideShowMain",
+                           //"SlideShowViewController" : "SlideShowMain",
                            //"ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
-                           "ParallaxViewController" : "ParallaxMain"
-                           //"CarouselViewController": "CarouselMain",
+                           "ParallaxViewController" : "ParallaxMain",
+                           "ImageViewerViewController" : "ImageViewerMain",
+                           "CarouselViewController": "CarouselMain",
                            //"InspirationalFilmsViewController": "InspirationalFilmsMain",
                            //"AirbnbRevealViewController" : "AirbnbMain",
                            //"PopUpNavigationController": "PopUpMain",
@@ -204,6 +205,7 @@ extension MainCollectionViewController : UICollectionViewDelegateFlowLayout {
     }
 }
 
+/*
 extension MainCollectionViewController : UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -217,3 +219,4 @@ extension MainCollectionViewController : UIViewControllerTransitioningDelegate {
         return customDismissAnimationController
     }
 }
+ */

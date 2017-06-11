@@ -20,7 +20,14 @@ extension UIImage {
     ///
     func imageWithSize(size: CGSize) -> UIImage {
         
-        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale);
+        if UIScreen.main.responds(to: #selector(NSDecimalNumberBehaviors.scale)){
+            UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale);
+        }
+        else
+        {
+            UIGraphicsBeginImageContext(size);
+        }
+        
         let rect = CGRect(x:0.0, y:0.0,width: size.width, height:size.height);
         draw(in: rect)
         guard let resultingImage = UIGraphicsGetImageFromCurrentImageContext() else { print("UIGraphicsGetImageFromCurrentImageContext is Nil "); return UIImage() };
@@ -52,5 +59,20 @@ extension UIImage {
         UIGraphicsEndImageContext();
         
         return resultingImage
+    }
+    
+    //Summon this function VVV
+    func resizeImageWithAspect(image: UIImage,scaledToMaxWidth width:CGFloat,maxHeight height :CGFloat)->UIImage
+    {
+        let oldWidth = image.size.width;
+        let oldHeight = image.size.height;
+        
+        let scaleFactor = (oldWidth > oldHeight) ? width / oldWidth : height / oldHeight
+        
+        let newHeight = oldHeight * scaleFactor
+        let newWidth = oldWidth * scaleFactor
+        let newSize = CGSize(width: newWidth, height: newHeight)
+        
+        return self.imageWithSize(size: newSize)
     }
 }
