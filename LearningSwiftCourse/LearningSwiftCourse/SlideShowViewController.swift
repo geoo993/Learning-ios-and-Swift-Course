@@ -16,7 +16,7 @@ class SlideShowViewController: UIViewController {
 
     
     var containerView : SlideShowView? = nil
-    let imageNames = ["seasunset", "blossomBlue", "blueMoon", "coralreef", "blueseabluesky"]
+    let imageNames = ["seasunset", "blossomBlue", "blueMoon", "coralreef", "blueseabluesky","beachimage","beachwater","darksunset","sunnysnowforest"]
    
     //Mark: - Status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {

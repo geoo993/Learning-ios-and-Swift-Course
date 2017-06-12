@@ -7,6 +7,7 @@
 //
 //https://stackoverflow.com/questions/42953360/swift-how-to-do-add-an-header-with-parallax-effect-to-tableview
 //https://stackoverflow.com/questions/31373775/how-do-i-create-a-parallax-effect-in-uitableview-with-uiimageview-in-their-proto
+//https://www.youtube.com/watch?v=_U-eXneUnQY
 
 import UIKit
 
