@@ -17,6 +17,10 @@ final class ParallaxHeaderView: UIView {
     fileprivate var containerView = UIView()
     fileprivate var containerLayoutConstraint = NSLayoutConstraint()
     
+    fileprivate var originalFrame = CGRect()
+    
+    fileprivate var headerBgColor = UIColor.red
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -24,9 +28,10 @@ final class ParallaxHeaderView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
-        
+        self.originalFrame = self.frame
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.backgroundColor = UIColor.red
+        containerView.backgroundColor = headerBgColor
+        self.backgroundColor = headerBgColor
         
         self.addSubview(containerView)
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[containerView]|",
@@ -50,7 +55,7 @@ final class ParallaxHeaderView: UIView {
         
         let imageView: UIImageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.backgroundColor = .white
+        imageView.backgroundColor = headerBgColor
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.image = UIImage(named: "YourImage")
@@ -83,11 +88,31 @@ final class ParallaxHeaderView: UIView {
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        containerLayoutConstraint.constant = scrollView.contentInset.top;
-        let offsetY = -(scrollView.contentOffset.y + scrollView.contentInset.top);
+        containerLayoutConstraint.constant = scrollView.contentInset.top
+        let yPosition = scrollView.contentOffset.y
+        let offsetY = -(yPosition + scrollView.contentInset.top)
+        
         containerView.clipsToBounds = offsetY <= 0
         bottomLayoutConstraint.constant = offsetY >= 0 ? 0 : -offsetY / 2
         heightLayoutConstraint.constant = max(offsetY + scrollView.contentInset.top, scrollView.contentInset.top)
         
+//        var headerFrame = self.frame
+//        
+//        // Adjust view
+//        if yPosition < 0 {
+//            headerFrame = CGRect(x: self.frame.origin.x,
+//                                 y: 0,
+//                                 width: self.frame.size.width,
+//                                 height: self.originalFrame.size.height - yPosition) //-- is positive
+//        }else{
+//            headerFrame = CGRect(x: self.frame.origin.x,
+//                                 y: 0,
+//                                 width: self.frame.size.width,
+//                                 height: self.originalFrame.size.height)
+//        }
+//        self.containerView.frame = headerFrame
+//        self.frame = headerFrame
+        
     }
+    
 }

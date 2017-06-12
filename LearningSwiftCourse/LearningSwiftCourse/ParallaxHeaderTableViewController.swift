@@ -70,6 +70,7 @@ class ParallaxHeaderTableViewController: UITableViewController {
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let headerView = self.tableView.tableHeaderView as! ParallaxHeaderView
         headerView.scrollViewDidScroll(scrollView: scrollView)
+       
     }
     
     // MARK: - Table view data source

@@ -53,5 +53,37 @@
             </objects>
             <point key="canvasLocation" x="-34" y="-266"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="c04-w0-Eyv">
+            <objects>
+                <viewController id="joH-M3-gkI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mUQ-vO-aY6"/>
+                        <viewControllerLayoutGuide type="bottom" id="33Q-ZZ-jkh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K3G-YM-H3h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="autumnlandscape" translatesAutoresizingMaskIntoConstraints="NO" id="vqd-e4-dVt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vqd-e4-dVt" firstAttribute="leading" secondItem="K3G-YM-H3h" secondAttribute="leading" id="9Eb-Qf-0pk"/>
+                            <constraint firstItem="33Q-ZZ-jkh" firstAttribute="top" secondItem="vqd-e4-dVt" secondAttribute="bottom" id="Suh-Ty-nuX"/>
+                            <constraint firstItem="vqd-e4-dVt" firstAttribute="top" secondItem="K3G-YM-H3h" secondAttribute="top" id="pBj-Yz-2qK"/>
+                            <constraint firstAttribute="trailing" secondItem="vqd-e4-dVt" secondAttribute="trailing" id="uon-mr-Xpv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSF-VC-ZUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783.20000000000005" y="-266.71664167916043"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="autumnlandscape" width="1920" height="1232"/>
+    </resources>
 </document>

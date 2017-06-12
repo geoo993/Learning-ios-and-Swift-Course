@@ -146,6 +146,10 @@
 		C7EB75F81EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB75F71EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift */; };
 		C7EFC8921EEDB80200AA3EFB /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EFC8701EEDB7F700AA3EFB /* Cartography.framework */; };
 		C7EFC8931EEDB80200AA3EFB /* Cartography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7EFC8701EEDB7F700AA3EFB /* Cartography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7EFC8EB1EEE9CD400AA3EFB /* PageViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EFC8EA1EEE9CD400AA3EFB /* PageViewMain.storyboard */; };
+		C7EFC8ED1EEE9D0D00AA3EFB /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EFC8EC1EEE9D0D00AA3EFB /* CustomPageViewController.swift */; };
+		C7EFC8EF1EEE9E4700AA3EFB /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EFC8EE1EEE9E4700AA3EFB /* WalkthroughViewController.swift */; };
+		C7EFC8F11EEED21300AA3EFB /* WalkthroughZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EFC8F01EEED21300AA3EFB /* WalkthroughZoomViewController.swift */; };
 		C7F1FE1E1EEB5CD7002F3641 /* EasyAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F1FE051EEB5CCF002F3641 /* EasyAnimation.framework */; };
 		C7F1FE1F1EEB5CD7002F3641 /* EasyAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7F1FE051EEB5CCF002F3641 /* EasyAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7F45EA01EE41D9B005CF986 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F45E9F1EE41D9B005CF986 /* String+Ext.swift */; };
@@ -628,6 +632,10 @@
 		C7E8B18A1ED4552A00FC912F /* VideoPlayerMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoPlayerMain.storyboard; sourceTree = "<group>"; };
 		C7EB75F71EE2E55D0094DE3D /* InspirationalFilmsLabelsScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsLabelsScrollView.swift; sourceTree = "<group>"; };
 		C7EFC8661EEDB7F700AA3EFB /* Cartography.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cartography.xcodeproj; path = ../Carthage/Checkouts/Cartography/Cartography.xcodeproj; sourceTree = "<group>"; };
+		C7EFC8EA1EEE9CD400AA3EFB /* PageViewMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PageViewMain.storyboard; sourceTree = "<group>"; };
+		C7EFC8EC1EEE9D0D00AA3EFB /* CustomPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
+		C7EFC8EE1EEE9E4700AA3EFB /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		C7EFC8F01EEED21300AA3EFB /* WalkthroughZoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughZoomViewController.swift; sourceTree = "<group>"; };
 		C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EasyAnimation.xcodeproj; path = ../Carthage/Checkouts/EasyAnimation/EasyAnimation.xcodeproj; sourceTree = "<group>"; };
 		C7F45E9F1EE41D9B005CF986 /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		C7F45F4E1EE4BAFA005CF986 /* StorySmartiesMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StorySmartiesMain.storyboard; sourceTree = "<group>"; };
@@ -726,8 +734,12 @@
 				C765C2731EA4E6C000F5FE90 /* NavBarExample */,
 				C765C26E1EA4E03600F5FE90 /* TabBarExample */,
 				C74217161EC1C0200007B4C3 /* ScrollViewExample */,
+				C7EFC8CD1EEE9CAD00AA3EFB /* PageViewExample */,
 				C765C26D1EA4E02700F5FE90 /* ColorsExample */,
 				C72BE6491EECA77F00A54EE2 /* ImageViewerExample */,
+				C7EFC8C61EEDFD0400AA3EFB /* ImageCropperExample */,
+				C7EFC8A81EEDECDC00AA3EFB /* NavigationDrawer */,
+				C7EFC8C51EEDEF1100AA3EFB /* SpringBasedDrawerExample */,
 				C76E5C771ED639A500E2C4D3 /* CarouselViewsExample */,
 				C749396D1ED7729D00555D31 /* InspirationalFilmsExample */,
 				C7E8B1721ED454ED00FC912F /* VideoPlayerExample */,
@@ -1164,6 +1176,38 @@
 				C7EFC87A1EEDB7F700AA3EFB /* Cartography-tvOS-tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C7EFC8A81EEDECDC00AA3EFB /* NavigationDrawer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NavigationDrawer;
+			sourceTree = "<group>";
+		};
+		C7EFC8C51EEDEF1100AA3EFB /* SpringBasedDrawerExample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SpringBasedDrawerExample;
+			sourceTree = "<group>";
+		};
+		C7EFC8C61EEDFD0400AA3EFB /* ImageCropperExample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ImageCropperExample;
+			sourceTree = "<group>";
+		};
+		C7EFC8CD1EEE9CAD00AA3EFB /* PageViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				C7EFC8EE1EEE9E4700AA3EFB /* WalkthroughViewController.swift */,
+				C7EFC8F01EEED21300AA3EFB /* WalkthroughZoomViewController.swift */,
+				C7EFC8EC1EEE9D0D00AA3EFB /* CustomPageViewController.swift */,
+				C7EFC8EA1EEE9CD400AA3EFB /* PageViewMain.storyboard */,
+			);
+			name = PageViewExample;
 			sourceTree = "<group>";
 		};
 		C7F1FE001EEB5CCF002F3641 /* Products */ = {
@@ -1607,6 +1651,7 @@
 				C7E387DE1ED2F2FF000DCE15 /* AudioMain.storyboard in Resources */,
 				C74C99FF1EE87C14001E4FFE /* AirbnbMain.storyboard in Resources */,
 				C74217D01EC1F36A0007B4C3 /* slide16.gif in Resources */,
+				C7EFC8EB1EEE9CD400AA3EFB /* PageViewMain.storyboard in Resources */,
 				C742173E1EC1CF740007B4C3 /* Slide.xib in Resources */,
 				C74217D21EC1F37A0007B4C3 /* slide18.gif in Resources */,
 				C74217D61EC1F4090007B4C3 /* slide17.gif in Resources */,
@@ -1672,6 +1717,7 @@
 				C7ACB3871ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift in Sources */,
 				C7AE48A71EA5531A00C2096E /* ChosenMediaTableViewController.swift in Sources */,
 				C749398A1ED7808000555D31 /* InspirationalFilmsCollectionViewCell.swift in Sources */,
+				C7EFC8EF1EEE9E4700AA3EFB /* WalkthroughViewController.swift in Sources */,
 				C7C9518E1EA40DD6005DFE3B /* ColorsViewController.swift in Sources */,
 				C7AE48B21EA5550B00C2096E /* Product.swift in Sources */,
 				C76E5EC21ED706ED00E2C4D3 /* UISearchBar+Ext.swift in Sources */,
@@ -1691,6 +1737,7 @@
 				C7CB1FFB1EE96BE700EA7329 /* PopUpViewController.swift in Sources */,
 				C74939861ED774C200555D31 /* InspirationalFilmsViewController.swift in Sources */,
 				C76E0D141EE9F98600A66E94 /* TopMenuNewsTableViewController.swift in Sources */,
+				C7EFC8ED1EEE9D0D00AA3EFB /* CustomPageViewController.swift in Sources */,
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
 				C76E0D0D1EE9EE6000A66E94 /* PhotoViewController.swift in Sources */,
 				C74217361EC1C7A60007B4C3 /* ScrollViewController.swift in Sources */,
@@ -1711,6 +1758,7 @@
 				C76E5C721ED60AFC00E2C4D3 /* UIApplication+Ext.swift in Sources */,
 				C7BE67861EE2B72900A05286 /* Generic+Ext.swift in Sources */,
 				C77920D01EEC8B6A00BB6C52 /* ParallaxHeaderTableViewController.swift in Sources */,
+				C7EFC8F11EEED21300AA3EFB /* WalkthroughZoomViewController.swift in Sources */,
 				C77920C31EEC6B9A00BB6C52 /* ParallaxViewController.swift in Sources */,
 				C7CB20071EE97DBA00EA7329 /* SideBarMenu.swift in Sources */,
 				C7E45A101EE2EEA300F7015C /* UIButton+Ext.swift in Sources */,

@@ -7,6 +7,8 @@
 //
 //https://stackoverflow.com/questions/41972578/how-to-implement-xcode-swift3-uiscrollview-image-zooming
 //https://stackoverflow.com/questions/38855581/zooming-into-an-image-from-users-touch-point-with-uiscrollview-in-swift
+//https://stackoverflow.com/questions/10759872/how-to-get-the-image-to-zoom-where-i-double-tapped
+//https://stackoverflow.com/questions/9008975/how-to-tap-to-zoom-and-double-tap-to-zoom-out-in-ios
 //https://github.com/villyg/PhotoSlideShow-Swift
 
 import UIKit
