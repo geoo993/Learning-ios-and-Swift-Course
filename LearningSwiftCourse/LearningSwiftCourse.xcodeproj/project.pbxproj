@@ -20,6 +20,9 @@
 		C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */; };
 		C72E27BA1E9ED9EB0064E01B /* LearningSwiftCourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27B91E9ED9EB0064E01B /* LearningSwiftCourseTests.swift */; };
 		C72E27C51E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */; };
+		C73977B21EEEEE91005C96C8 /* ImageCropperMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73977B11EEEEE91005C96C8 /* ImageCropperMain.storyboard */; };
+		C73977D01EEEEEC2005C96C8 /* ImageCropperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73977CF1EEEEEC2005C96C8 /* ImageCropperViewController.swift */; };
+		C73977D21EEEFFBE005C96C8 /* pListRequestPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */; };
 		C741B3F61EEBEEB500716E41 /* SlideShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C741B3F51EEBEEB500716E41 /* SlideShowViewController.swift */; };
 		C741B3F81EEBEECE00716E41 /* SlideShowMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C741B3F71EEBEECE00716E41 /* SlideShowMain.storyboard */; };
 		C74217341EC1C27C0007B4C3 /* ScrollViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74217331EC1C27C0007B4C3 /* ScrollViewMain.storyboard */; };
@@ -509,6 +512,9 @@
 		C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSwiftCourseUITests.swift; sourceTree = "<group>"; };
 		C72E27C61E9ED9EB0064E01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72E27D21E9EDA0C0064E01B /* LearningSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningSwift.playground; sourceTree = "<group>"; };
+		C73977B11EEEEE91005C96C8 /* ImageCropperMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageCropperMain.storyboard; sourceTree = "<group>"; };
+		C73977CF1EEEEEC2005C96C8 /* ImageCropperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperViewController.swift; sourceTree = "<group>"; };
+		C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pListRequestPermissions.swift; sourceTree = "<group>"; };
 		C741B3F51EEBEEB500716E41 /* SlideShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideShowViewController.swift; sourceTree = "<group>"; };
 		C741B3F71EEBEECE00716E41 /* SlideShowMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SlideShowMain.storyboard; sourceTree = "<group>"; };
 		C74217331EC1C27C0007B4C3 /* ScrollViewMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScrollViewMain.storyboard; sourceTree = "<group>"; };
@@ -748,15 +754,16 @@
 				C7CB1FF61EE956DC00EA7329 /* TopMenuExample */,
 				C76E0D011EE9EDAC00A66E94 /* MultiSidedBarMenuExample */,
 				C7CB1FF71EE966A900EA7329 /* PopUpExample */,
+				C70213831EEA1A680066987D /* TransitionAnimations */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
 				C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */,
 				C7BE65E31EE2A23E00A05286 /* MainCollectionViewCell.swift */,
 				C7AE488F1EA5327300C2096E /* Main.storyboard */,
 				C72E27AB1E9ED9EB0064E01B /* Assets.xcassets */,
-				C70213831EEA1A680066987D /* TransitionAnimations */,
 				C7C9515B1EA3E022005DFE3B /* Resources */,
 				C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */,
+				C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */,
 				C72E27B01E9ED9EB0064E01B /* Info.plist */,
 				C72E27D21E9EDA0C0064E01B /* LearningSwift.playground */,
 			);
@@ -1195,6 +1202,8 @@
 		C7EFC8C61EEDFD0400AA3EFB /* ImageCropperExample */ = {
 			isa = PBXGroup;
 			children = (
+				C73977CF1EEEEEC2005C96C8 /* ImageCropperViewController.swift */,
+				C73977B11EEEEE91005C96C8 /* ImageCropperMain.storyboard */,
 			);
 			name = ImageCropperExample;
 			sourceTree = "<group>";
@@ -1646,6 +1655,7 @@
 				C72BE6641EECA7F600A54EE2 /* ImageViewerMain.storyboard in Resources */,
 				C74217341EC1C27C0007B4C3 /* ScrollViewMain.storyboard in Resources */,
 				C76E0D031EE9EDDD00A66E94 /* MultiSidedBarMenuMain.storyboard in Resources */,
+				C73977B21EEEEE91005C96C8 /* ImageCropperMain.storyboard in Resources */,
 				C7CB1FF91EE966D100EA7329 /* PopUpMain.storyboard in Resources */,
 				C74217CE1EC1F34C0007B4C3 /* slide15.gif in Resources */,
 				C7E387DE1ED2F2FF000DCE15 /* AudioMain.storyboard in Resources */,
@@ -1738,10 +1748,12 @@
 				C74939861ED774C200555D31 /* InspirationalFilmsViewController.swift in Sources */,
 				C76E0D141EE9F98600A66E94 /* TopMenuNewsTableViewController.swift in Sources */,
 				C7EFC8ED1EEE9D0D00AA3EFB /* CustomPageViewController.swift in Sources */,
+				C73977D01EEEEEC2005C96C8 /* ImageCropperViewController.swift in Sources */,
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
 				C76E0D0D1EE9EE6000A66E94 /* PhotoViewController.swift in Sources */,
 				C74217361EC1C7A60007B4C3 /* ScrollViewController.swift in Sources */,
 				C72BE6661EED63E800A54EE2 /* ImageScrollView.swift in Sources */,
+				C73977D21EEEFFBE005C96C8 /* pListRequestPermissions.swift in Sources */,
 				C77920C91EEC791E00BB6C52 /* SlideShowView.swift in Sources */,
 				C7CB1ED51EE8995100EA7329 /* AirbnbMenuTableViewController.swift in Sources */,
 				C7AE48A61EA5531A00C2096E /* ChosenMediaDetailedViewController.swift in Sources */,

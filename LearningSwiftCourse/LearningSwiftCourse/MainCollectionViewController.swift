@@ -34,6 +34,7 @@ class MainCollectionViewController: UICollectionViewController {
                            "ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
                            "ParallaxViewController" : "ParallaxMain",
                            "ImageViewerViewController" : "ImageViewerMain",
+                           "ImageCropperViewController" : "ImageCropperMain",
                            //"CarouselViewController": "CarouselMain",
                            //"InspirationalFilmsViewController": "InspirationalFilmsMain",
                            //"AirbnbRevealViewController" : "AirbnbMain",

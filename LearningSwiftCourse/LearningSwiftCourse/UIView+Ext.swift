@@ -12,12 +12,21 @@ import UIKit
 
 public extension UIView {
     
-    public func snapShotImage() -> UIImage {
+    public func snapShotImage(withSize size: CGSize, opaque: Bool = false, offset :CGPoint = CGPoint.zero) -> UIImage {
         
         ///size, opaque, scale
-        UIGraphicsBeginImageContextWithOptions(frame.size, false, 1)
+        //UIGraphicsBeginImageContextWithOptions(size, false, 1)
+        
+        if UIScreen.main.responds(to: #selector(NSDecimalNumberBehaviors.scale)){
+            UIGraphicsBeginImageContextWithOptions(size, opaque, UIScreen.main.scale);
+        }
+        else
+        {
+            UIGraphicsBeginImageContext(size);
+        }
         
         guard let context = UIGraphicsGetCurrentContext() else { return UIImage() }
+        context.translateBy(x: -offset.x, y: -offset.y)
         
         layer.render(in: context)
         let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -34,7 +43,7 @@ public extension UIView {
             return UIImage()
         }
         
-        let image = self.snapShotImage()
+        let image = self.snapShotImage(withSize: self.frame.size)
         
         guard let source = image.cgImage else { return UIImage() }
         
@@ -77,7 +86,7 @@ public extension UIView {
             return UIImage()
         }
         
-        let image = self.snapShotImage()
+        let image = self.snapShotImage(withSize: self.frame.size)
         
         /// convert UIImage to CIImage
         let inputImage = CIImage(image: image)

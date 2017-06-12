@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HEt-TT-kd9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Cropper View Controller-->
+        <scene sceneID="Zr2-7d-ehD">
+            <objects>
+                <viewController storyboardIdentifier="ImageCropperViewController" id="HEt-TT-kd9" customClass="ImageCropperViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dsX-RD-QB3"/>
+                        <viewControllerLayoutGuide type="bottom" id="u4f-LK-rKL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X92-OI-E4A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgimage" translatesAutoresizingMaskIntoConstraints="NO" id="Pna-WK-Cyo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSH-3i-Z7l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Okc-1m-CzH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Cropper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2x-li-StN">
+                                            <rect key="frame" x="86" y="50" width="203" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="L9N-kc-1hl"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EgG-Hd-yVB">
+                                            <rect key="frame" x="28" y="174" width="320" height="320"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="320" id="bJG-HW-2qQ"/>
+                                                <constraint firstAttribute="width" constant="320" id="sf0-JS-YgD"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="HEt-TT-kd9" id="Xbb-Wd-rwf"/>
+                                            </connections>
+                                        </scrollView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOP-ga-4fq">
+                                            <rect key="frame" x="113" y="621" width="150" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ly6-aO-y4R"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="Crop And Save"/>
+                                            <connections>
+                                                <action selector="cropsaveButtonClicked:" destination="HEt-TT-kd9" eventType="touchUpInside" id="Smh-OX-7uT"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EgG-Hd-yVB" firstAttribute="centerX" secondItem="Okc-1m-CzH" secondAttribute="centerX" id="1ns-tH-MX9"/>
+                                        <constraint firstItem="bOP-ga-4fq" firstAttribute="centerX" secondItem="Okc-1m-CzH" secondAttribute="centerX" id="2NW-W0-JCS"/>
+                                        <constraint firstItem="O2x-li-StN" firstAttribute="top" secondItem="Okc-1m-CzH" secondAttribute="top" constant="50" id="HJg-hN-6IM"/>
+                                        <constraint firstItem="O2x-li-StN" firstAttribute="centerX" secondItem="Okc-1m-CzH" secondAttribute="centerX" id="XHH-0q-9NY"/>
+                                        <constraint firstAttribute="bottom" secondItem="bOP-ga-4fq" secondAttribute="bottom" constant="10" id="gOd-o6-w9s"/>
+                                        <constraint firstItem="EgG-Hd-yVB" firstAttribute="centerY" secondItem="Okc-1m-CzH" secondAttribute="centerY" id="m5V-jd-Udq"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pna-WK-Cyo" firstAttribute="centerX" secondItem="X92-OI-E4A" secondAttribute="centerX" id="44G-lH-Sxk"/>
+                            <constraint firstItem="Pna-WK-Cyo" firstAttribute="centerY" secondItem="X92-OI-E4A" secondAttribute="centerY" id="C7N-HK-S0o"/>
+                            <constraint firstItem="cSH-3i-Z7l" firstAttribute="centerY" secondItem="X92-OI-E4A" secondAttribute="centerY" id="FfN-OW-hZW"/>
+                            <constraint firstItem="cSH-3i-Z7l" firstAttribute="top" secondItem="X92-OI-E4A" secondAttribute="top" id="GAs-fP-O3o"/>
+                            <constraint firstAttribute="trailing" secondItem="Pna-WK-Cyo" secondAttribute="trailing" id="PAF-bD-rBS"/>
+                            <constraint firstAttribute="trailing" secondItem="cSH-3i-Z7l" secondAttribute="trailing" id="apF-sf-omA"/>
+                            <constraint firstItem="u4f-LK-rKL" firstAttribute="top" secondItem="Pna-WK-Cyo" secondAttribute="bottom" id="bji-ng-Pt0"/>
+                            <constraint firstItem="u4f-LK-rKL" firstAttribute="top" secondItem="cSH-3i-Z7l" secondAttribute="bottom" id="dJe-UZ-iSH"/>
+                            <constraint firstItem="Pna-WK-Cyo" firstAttribute="leading" secondItem="X92-OI-E4A" secondAttribute="leading" id="mKh-Zo-de5"/>
+                            <constraint firstItem="cSH-3i-Z7l" firstAttribute="centerX" secondItem="X92-OI-E4A" secondAttribute="centerX" id="qKR-dg-A5t"/>
+                            <constraint firstItem="Pna-WK-Cyo" firstAttribute="top" secondItem="X92-OI-E4A" secondAttribute="top" id="w7H-de-59A"/>
+                            <constraint firstItem="cSH-3i-Z7l" firstAttribute="leading" secondItem="X92-OI-E4A" secondAttribute="leading" id="wY4-mG-q9O"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="bgImageView" destination="Pna-WK-Cyo" id="IBU-lg-maU"/>
+                        <outlet property="scrollView" destination="EgG-Hd-yVB" id="ayU-x7-Eau"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8qN-ve-Fsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="-117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bgimage" width="600" height="400"/>
+    </resources>
+</document>
