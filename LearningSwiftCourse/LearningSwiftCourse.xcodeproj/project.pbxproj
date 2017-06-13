@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C702136C1EEA19AC0066987D /* CustomDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C702136B1EEA19AC0066987D /* CustomDismissAnimationController.swift */; };
 		C70ACF761EEF47A4007AD02D /* StretchyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ACF751EEF47A4007AD02D /* StretchyHeaderViewController.swift */; };
-		C70ACF781EEF4D6A007AD02D /* DraggableTopMenuMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70ACF771EEF4D6A007AD02D /* DraggableTopMenuMain.storyboard */; };
+		C70ACF781EEF4D6A007AD02D /* DraggableVerticalMenusMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70ACF771EEF4D6A007AD02D /* DraggableVerticalMenusMain.storyboard */; };
 		C70ACF7A1EEF4D9E007AD02D /* DraggableTopMenuMainViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ACF791EEF4D9E007AD02D /* DraggableTopMenuMainViewControllerViewController.swift */; };
 		C70C84B31EE703F50098A62F /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C7C1ED6500B00E2C4D3 /* Interest.swift */; };
 		C70C84DD1EE760F50098A62F /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C84DC1EE760F50098A62F /* SummaryView.swift */; };
@@ -84,6 +84,7 @@
 		C76E5C7B1ED639E500E2C4D3 /* CarouselMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76E5C7A1ED639E500E2C4D3 /* CarouselMain.storyboard */; };
 		C76E5C801ED65C7400E2C4D3 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C7F1ED65C7400E2C4D3 /* InterestCollectionViewCell.swift */; };
 		C76E5EC21ED706ED00E2C4D3 /* UISearchBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5EC11ED706ED00E2C4D3 /* UISearchBar+Ext.swift */; };
+		C776CBE61EF0642700A2BBF6 /* SimpleDraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C776CBE51EF0642700A2BBF6 /* SimpleDraggableView.swift */; };
 		C77920C11EEC6B8700BB6C52 /* ParallaxMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77920C01EEC6B8700BB6C52 /* ParallaxMain.storyboard */; };
 		C77920C31EEC6B9A00BB6C52 /* ParallaxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77920C21EEC6B9A00BB6C52 /* ParallaxViewController.swift */; };
 		C77920C51EEC6DBE00BB6C52 /* ParallaxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77920C41EEC6DBE00BB6C52 /* ParallaxTableViewCell.swift */; };
@@ -506,7 +507,7 @@
 /* Begin PBXFileReference section */
 		C702136B1EEA19AC0066987D /* CustomDismissAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDismissAnimationController.swift; sourceTree = "<group>"; };
 		C70ACF751EEF47A4007AD02D /* StretchyHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchyHeaderViewController.swift; sourceTree = "<group>"; };
-		C70ACF771EEF4D6A007AD02D /* DraggableTopMenuMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DraggableTopMenuMain.storyboard; sourceTree = "<group>"; };
+		C70ACF771EEF4D6A007AD02D /* DraggableVerticalMenusMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DraggableVerticalMenusMain.storyboard; sourceTree = "<group>"; };
 		C70ACF791EEF4D9E007AD02D /* DraggableTopMenuMainViewControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableTopMenuMainViewControllerViewController.swift; sourceTree = "<group>"; };
 		C70C84DC1EE760F50098A62F /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		C72BE6611EECA7E600A54EE2 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
@@ -588,6 +589,7 @@
 		C76E5C7C1ED6500B00E2C4D3 /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		C76E5C7F1ED65C7400E2C4D3 /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
 		C76E5EC11ED706ED00E2C4D3 /* UISearchBar+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Ext.swift"; sourceTree = "<group>"; };
+		C776CBE51EF0642700A2BBF6 /* SimpleDraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDraggableView.swift; sourceTree = "<group>"; };
 		C77920C01EEC6B8700BB6C52 /* ParallaxMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ParallaxMain.storyboard; sourceTree = "<group>"; };
 		C77920C21EEC6B9A00BB6C52 /* ParallaxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxViewController.swift; sourceTree = "<group>"; };
 		C77920C41EEC6DBE00BB6C52 /* ParallaxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxTableViewCell.swift; sourceTree = "<group>"; };
@@ -758,9 +760,10 @@
 		C72E27A31E9ED9EB0064E01B /* LearningSwiftCourse */ = {
 			isa = PBXGroup;
 			children = (
-				C76342511EEFC1C200534507 /* ConstraintsPack */,
 				C7E3886E1ED3055F000DCE15 /* LearningSwiftCourse.entitlements */,
+				C76342511EEFC1C200534507 /* ConstraintsPack */,
 				C7AE48D11EA5638800C2096E /* Extensions */,
+				C70213831EEA1A680066987D /* TransitionAnimations */,
 				C7CB1ED31EE8906800EA7329 /* SWRevealViewController */,
 				C741B3F41EEBEE8900716E41 /* SlideShowExample */,
 				C77920A81EEC6B4800BB6C52 /* ParallaxScrollExample */,
@@ -775,9 +778,8 @@
 				C765C26D1EA4E02700F5FE90 /* ColorsExample */,
 				C72BE6491EECA77F00A54EE2 /* ImageViewerExample */,
 				C7EFC8C61EEDFD0400AA3EFB /* ImageCropperExample */,
-				C7EFC8A81EEDECDC00AA3EFB /* NavigationDrawer */,
 				C763427A1EEFDCF700534507 /* SpringBasedDrawerExample */,
-				C7EFC8C51EEDEF1100AA3EFB /* DraggableTopMenuExample */,
+				C7EFC8C51EEDEF1100AA3EFB /* DraggableVerticalMenusExample */,
 				C70ACF581EEF476B007AD02D /* StretchyHeaderExample */,
 				C76E5C771ED639A500E2C4D3 /* CarouselViewsExample */,
 				C749396D1ED7729D00555D31 /* InspirationalFilmsExample */,
@@ -787,7 +789,6 @@
 				C7CB1FF61EE956DC00EA7329 /* TopMenuExample */,
 				C76E0D011EE9EDAC00A66E94 /* MultiSidedBarMenuExample */,
 				C7CB1FF71EE966A900EA7329 /* PopUpExample */,
-				C70213831EEA1A680066987D /* TransitionAnimations */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
 				C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */,
@@ -1237,21 +1238,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C7EFC8A81EEDECDC00AA3EFB /* NavigationDrawer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = NavigationDrawer;
-			sourceTree = "<group>";
-		};
-		C7EFC8C51EEDEF1100AA3EFB /* DraggableTopMenuExample */ = {
+		C7EFC8C51EEDEF1100AA3EFB /* DraggableVerticalMenusExample */ = {
 			isa = PBXGroup;
 			children = (
 				C70ACF791EEF4D9E007AD02D /* DraggableTopMenuMainViewControllerViewController.swift */,
+				C776CBE51EF0642700A2BBF6 /* SimpleDraggableView.swift */,
 				C763420F1EEF514300534507 /* DraggableView.swift */,
-				C70ACF771EEF4D6A007AD02D /* DraggableTopMenuMain.storyboard */,
+				C70ACF771EEF4D6A007AD02D /* DraggableVerticalMenusMain.storyboard */,
 			);
-			name = DraggableTopMenuExample;
+			name = DraggableVerticalMenusExample;
 			sourceTree = "<group>";
 		};
 		C7EFC8C61EEDFD0400AA3EFB /* ImageCropperExample */ = {
@@ -1723,7 +1718,7 @@
 				C742173E1EC1CF740007B4C3 /* Slide.xib in Resources */,
 				C74217D21EC1F37A0007B4C3 /* slide18.gif in Resources */,
 				C74217D61EC1F4090007B4C3 /* slide17.gif in Resources */,
-				C70ACF781EEF4D6A007AD02D /* DraggableTopMenuMain.storyboard in Resources */,
+				C70ACF781EEF4D6A007AD02D /* DraggableVerticalMenusMain.storyboard in Resources */,
 				C77920CC1EEC8B3100BB6C52 /* ParallaxHeaderMain.storyboard in Resources */,
 				C7E387E01ED2F5A9000DCE15 /* brooks.mp3 in Resources */,
 				C765C26C1EA4DFD400F5FE90 /* TabBarMain.storyboard in Resources */,
@@ -1831,6 +1826,7 @@
 				C70C84B31EE703F50098A62F /* Interest.swift in Sources */,
 				C76E5C721ED60AFC00E2C4D3 /* UIApplication+Ext.swift in Sources */,
 				C7BE67861EE2B72900A05286 /* Generic+Ext.swift in Sources */,
+				C776CBE61EF0642700A2BBF6 /* SimpleDraggableView.swift in Sources */,
 				C76342101EEF514300534507 /* DraggableView.swift in Sources */,
 				C77920D01EEC8B6A00BB6C52 /* ParallaxHeaderTableViewController.swift in Sources */,
 				C7EFC8F11EEED21300AA3EFB /* WalkthroughZoomViewController.swift in Sources */,

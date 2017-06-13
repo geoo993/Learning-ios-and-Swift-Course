@@ -71,7 +71,7 @@ class DraggableView: UIView {
     func setupPanGesture(){
         panGesture = UIPanGestureRecognizer(target: self, action:#selector(self.handlePan))
         panGesture?.cancelsTouchesInView = false
-        self.addGestureRecognizer(panGesture)
+        bottomIndicator.addGestureRecognizer(panGesture)//change from bottom indicator to self
     }
     
     func panGestureEnded(){
@@ -170,6 +170,7 @@ class DraggableView: UIView {
      */
     
     deinit {
+        self.removeEverything()
         animator = nil
         containerBoundary = nil
         snapBehavior = nil

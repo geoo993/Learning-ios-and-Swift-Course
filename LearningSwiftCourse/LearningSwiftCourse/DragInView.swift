@@ -59,14 +59,14 @@ class DragInView : UIView {
             
         }
         // trigger
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: [], animations: {() -> Void in
-            self.c.constant = self.kOpenDrawExtent
-            self.superview!.layoutIfNeeded()
-        }, completion: {(finished: Bool) -> Void in
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: [], animations: { [weak self] _ in
+            self?.c.constant = (self?.kOpenDrawExtent)!
+            self?.superview!.layoutIfNeeded()
+        }, completion: { [weak self] (finished: Bool) in
                 // Add tap-to-close
-            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleCloseTapGesture))
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self?.handleCloseTapGesture))
             tapGestureRecognizer.numberOfTapsRequired = 1
-            self.handleView.addGestureRecognizer(tapGestureRecognizer)
+            self?.handleView.addGestureRecognizer(tapGestureRecognizer)
         })
         return
     }
@@ -98,11 +98,10 @@ class DragInView : UIView {
             
             case .ended:
                                 // Snap shut
-                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.25, initialSpringVelocity: 0.5, options: [], animations: {() -> Void in
-                    self.c.constant = self.kClosedDrawExtent
-                    self.superview!.layoutIfNeeded()
-                }, completion: {(finished: Bool) -> Void in
-                })
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.25, initialSpringVelocity: 0.5, options: [], animations: { [weak self] _ in
+                    self?.c.constant = (self?.kClosedDrawExtent)!
+                    self?.superview!.layoutIfNeeded()
+                }, completion: nil )
                 
             default:
                 break
