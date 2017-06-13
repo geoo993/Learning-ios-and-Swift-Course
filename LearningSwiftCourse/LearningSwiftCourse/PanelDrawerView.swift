@@ -1,8 +1,8 @@
 //
-//  DraggableView.swift
+//  PanelDrawerView.swift
 //  LearningSwiftCourse
 //
-//  Created by GEORGE QUENTIN on 12/06/2017.
+//  Created by GEORGE QUENTIN on 13/06/2017.
 //  Copyright © 2017 LEXI LABS. All rights reserved.
 //
 
@@ -11,17 +11,16 @@
 
 import UIKit
 
-class DraggableView: UIView {
+class PanelDrawerView: UIView {
     
-    @IBOutlet weak var bottomIndicator : UIView!
-    @IBOutlet weak var backgroundImageView : UIImageView!
+    //@IBOutlet weak var bottomIndicator : UIView!
+    //@IBOutlet weak var backgroundImageView : UIImageView!
     
     var animator : UIDynamicAnimator? = nil
     var containerBoundary : UICollisionBehavior!
     var snapBehavior : UISnapBehavior!
     var dynamicItemBehavior : UIDynamicItemBehavior!
     var gravityBehavior : UIGravityBehavior!
-    var panGesture : UIPanGestureRecognizer!
     
     var heightToSee : CGFloat = 50
     var maxHeight : CGFloat? = nil
@@ -32,7 +31,7 @@ class DraggableView: UIView {
         self.translatesAutoresizingMaskIntoConstraints = true
         self.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        setupPanGesture()
+        //setupPanGesture()
         setupAnimator()
     }
     
@@ -68,11 +67,13 @@ class DraggableView: UIView {
         containerBoundary.addBoundary(withIdentifier: ("lowerBoundary" as NSCopying) , from: CGPoint(x:0,y:lowerContainerBoundary), to: CGPoint(x:containerBoundaryWidth,y:lowerContainerBoundary))
         
     }
+    /*
     func setupPanGesture(){
         panGesture = UIPanGestureRecognizer(target: self, action:#selector(self.handlePan))
         panGesture?.cancelsTouchesInView = false
         self.addGestureRecognizer(panGesture)
     }
+ */
     
     func panGestureEnded(){
         
@@ -141,6 +142,8 @@ class DraggableView: UIView {
         }
     }
     
+    
+    
     /*
      override init(frame: CGRect) {
      super.init(frame: frame)
@@ -175,6 +178,6 @@ class DraggableView: UIView {
         snapBehavior = nil
         dynamicItemBehavior = nil
         gravityBehavior = nil
-        panGesture = nil
+        //panGesture = nil
     }
 }

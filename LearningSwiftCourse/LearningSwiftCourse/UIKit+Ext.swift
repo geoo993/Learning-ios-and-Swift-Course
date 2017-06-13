@@ -18,6 +18,11 @@ public struct ColorComponents {
 
 
 extension UIColor {
+    
+    public static func systemsBlueColor () -> UIColor
+    {
+        return UIColor.init(red: 0.0, green: 0.4784, blue: 1.0, alpha: 1.0) 
+    }
     public static func randomColor() -> UIColor {
         
         return UIColor.init(red: CGFloat.randomF(min: 0.0, max: 1.0), green: CGFloat.randomF(min: 0.0,max: 1.0), blue: CGFloat.randomF(min:0.0,max: 1.0), alpha: 1)

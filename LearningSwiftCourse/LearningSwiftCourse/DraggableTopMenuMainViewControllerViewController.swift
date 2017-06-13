@@ -6,11 +6,19 @@
 //  Copyright © 2017 LEXI LABS. All rights reserved.
 //
 
+//https://stackoverflow.com/questions/29659360/swift-uidynamic-animate-panel-from-bottom-to-top
+
 import UIKit
 
 class DraggableTopMenuMainViewControllerViewController: UIViewController {
 
     @IBOutlet weak var draggableView : DraggableView!
+    
+    @IBAction func homeButton(_ sender: UIButton) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,5 +58,9 @@ class DraggableTopMenuMainViewControllerViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    deinit {
+        print("Draggable Top menu view controller is \(#function)")
+    }
 
 }

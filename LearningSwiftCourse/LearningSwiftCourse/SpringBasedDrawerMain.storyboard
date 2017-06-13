@@ -20,12 +20,40 @@
                     <view key="view" contentMode="scaleToFill" id="Wmo-en-79S">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="svetik" translatesAutoresizingMaskIntoConstraints="NO" id="PP0-Ow-KBQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H36-iL-T3T">
+                                <rect key="frame" x="135.5" y="528" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="8GH-3M-4E2"/>
+                                </constraints>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="homeButton:" destination="ilq-Fp-R5F" eventType="touchUpInside" id="neB-W7-jLe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X9v-DI-n0O" firstAttribute="top" secondItem="H36-iL-T3T" secondAttribute="bottom" constant="10" id="ESz-Uh-JaO"/>
+                            <constraint firstAttribute="trailing" secondItem="PP0-Ow-KBQ" secondAttribute="trailing" id="Ear-Z5-IiF"/>
+                            <constraint firstItem="PP0-Ow-KBQ" firstAttribute="centerY" secondItem="Wmo-en-79S" secondAttribute="centerY" id="Kg0-wE-eWH"/>
+                            <constraint firstItem="X9v-DI-n0O" firstAttribute="top" secondItem="PP0-Ow-KBQ" secondAttribute="bottom" id="NFK-3j-Esp"/>
+                            <constraint firstItem="PP0-Ow-KBQ" firstAttribute="centerX" secondItem="Wmo-en-79S" secondAttribute="centerX" id="SA5-km-MPI"/>
+                            <constraint firstItem="H36-iL-T3T" firstAttribute="centerX" secondItem="Wmo-en-79S" secondAttribute="centerX" id="YoP-Mx-mQq"/>
+                            <constraint firstItem="PP0-Ow-KBQ" firstAttribute="top" secondItem="Wmo-en-79S" secondAttribute="top" id="lEr-ER-7aK"/>
+                            <constraint firstItem="PP0-Ow-KBQ" firstAttribute="leading" secondItem="Wmo-en-79S" secondAttribute="leading" id="uV5-sg-Y4R"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3c-If-KZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="144.80000000000001" y="-172.26386806596702"/>
+            <point key="canvasLocation" x="144.375" y="-173.2394366197183"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="svetik" width="1280" height="861"/>
+    </resources>
 </document>

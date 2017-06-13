@@ -9,7 +9,6 @@
 //http://www.informit.com/articles/article.aspx?p=2217000
 
 import Foundation
-
 import UIKit
 
 
@@ -17,21 +16,22 @@ import UIKit
 class DragInView : UIView {
     
     // Full size of the drawer
-    let kDrawerExtent :CGFloat = 320
+    fileprivate var kDrawerExtent :CGFloat = 320
     // How much is seen when closed (minimum 32 please)
-    let kClosedDrawExtent :CGFloat = 32
+    fileprivate var kClosedDrawExtent :CGFloat = 50
     // How much drawer is seen when open
-    let kOpenDrawExtent  :CGFloat = 200
+    fileprivate var kOpenDrawExtent  : CGFloat = 200
     // How far the user has to drag to trigger the drawer to stay open
-    let kTriggerPoint :CGFloat = 260
-    // Handle dimensions
-    let kHandleExtent :CGFloat = 20
-    let kHandleLength :CGFloat = 50
-    let kHandleInset :CGFloat = 4
+    fileprivate var kTriggerPoint :CGFloat = 260
     
-    var handleView: UIImageView!
-    var side = NSLayoutAttribute.notAnAttribute
-    var c = NSLayoutConstraint()
+    // Handle dimensions
+    fileprivate var kHandleExtent :CGFloat = 20
+    fileprivate var kHandleLength :CGFloat = 50
+    fileprivate var kHandleInset :CGFloat = 5
+    
+    fileprivate var handleView: UIImageView!
+    fileprivate var side = NSLayoutAttribute.notAnAttribute
+    fileprivate var c = NSLayoutConstraint()
 
     func handleCloseTapGesture(tapGestureRecognizer: UITapGestureRecognizer) {
         
@@ -50,7 +50,7 @@ class DragInView : UIView {
         })
     }
 
-    func slideToOpen() {
+    fileprivate func slideToOpen() {
         
         // Clean up existing recognizers
         for recognizer: UIGestureRecognizer in handleView.gestureRecognizers! {
@@ -93,11 +93,9 @@ class DragInView : UIView {
                 break
             case .changed:
                                 // Follow finger drag
-                
                 let constant = (amount + kClosedDrawExtent + kHandleInset + kHandleExtent / 2)
                 self.c.constant = constant
             
-                print(constant, self.c.constant)
             case .ended:
                                 // Snap shut
                 UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.25, initialSpringVelocity: 0.5, options: [], animations: {() -> Void in
@@ -106,36 +104,30 @@ class DragInView : UIView {
                 }, completion: {(finished: Bool) -> Void in
                 })
                 
-                print(self.c.constant)
             default:
                 break
         }
 
     }
 
-    
-    func getHandleView() -> UIImageView {
-        return handleView
-    }
-    
-    init(frame: CGRect, parent: UIViewController, side: NSLayoutAttribute) {
-        
-        super.init(frame: frame)
+    init(parent: UIViewController, side: NSLayoutAttribute) {
+        super.init(frame: parent.view.frame)
         
         if ![(.left), (.leading), (.right), (.trailing), (.top), (.bottom)].contains((side)) {
           
         }
         
         // Establish general look and auto layout
-        self.backgroundColor = UIColor.white
         self.autoLayoutEnabled = true
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.black.cgColor
+        
         // Create child nav bar for translucency
         let nb = UINavigationBar()
         nb.autoLayoutEnabled = true
         self.addSubview(nb)
         StretchViewToSuperview(view: nb, inset: CGSize.zero, priority: 1000)
+        
         // Build handle
         handleView = UIImageView()
         handleView.isUserInteractionEnabled = true
@@ -147,6 +139,12 @@ class DragInView : UIView {
         // Add to parent
         parent.view.addSubview(self)
         self.side = side
+        
+        //setupConstraints(onParent: parent)
+        //setupGestures()
+    }
+    
+    func setupConstraints(onParent parent: UIViewController){
         
         let horizontal = [(.left), (.leading), (.right), (.trailing)].contains((side))
         if horizontal {
@@ -170,8 +168,6 @@ class DragInView : UIView {
             self.c = NSLayoutConstraint(item: parent.view, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: kClosedDrawExtent)
             AlignViewInSuperview(view: handleView, attribute: .leading, inset: kHandleInset, priority: 1000)
         case .top:
-            
-            
             self.c = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: parent.view, attribute: .top, multiplier: 1, constant: kClosedDrawExtent)
             AlignViewInSuperview(view: handleView, attribute: .bottom, inset: kHandleInset, priority: 1000)
         case .bottom:
@@ -186,6 +182,13 @@ class DragInView : UIView {
         //c.installWithPriority(750)
         c.priority = 750
         
+        parent.view.addConstraint(c)
+        
+        
+    }
+   
+    func setupGestures(){
+        
         // Add slide to open
         let recognizer = UIPanGestureRecognizer(target: self, action: #selector(self.handleOpenPanGesture))
         handleView.addGestureRecognizer(recognizer)
@@ -195,11 +198,34 @@ class DragInView : UIView {
         handleView.addGestureRecognizer(openTapRecognizer)
     }
     
+    func handleViewColor(_ color: UIColor ){
+        handleView.backgroundColor = color
+    }
+    
+    func handleDrawerSize(_ size: CGSize){
+        kHandleLength = size.width
+        kHandleExtent = size.height
+    }
+    
+    func visibleHeightWhenClosed(_ height : CGFloat){
+        kOpenDrawExtent = (height > kDrawerExtent) ? kDrawerExtent : height
+    }
+    
+    func visibleHeightWhenOpened(_ height : CGFloat){
+        kOpenDrawExtent = (height > kDrawerExtent) ? kDrawerExtent : height
+    }
+    
+    func drawerMaxCutOffExtent(_ cutOff: CGFloat ){
+        kTriggerPoint = cutOff
+    }
+   
+    func drawerFullHeight ( _ height: CGFloat ) {
+        kDrawerExtent = height
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-//    class func viewWithParent(parent: UIViewController, side: NSLayoutAttribute) -> Self {
-//        return self.init(frame: CGRect.zero, parent: parent, side: side)
-//    }
+
 }

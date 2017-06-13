@@ -10,12 +10,31 @@ import UIKit
 
 class SpringBasedDrawerViewController: UIViewController {
 
+    @IBAction func homeButton(_ sender: UIButton) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
+    
+    var dragInView : DragInView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let frame = CGRect(x: 100, y: 100, width: 200, height: 300)
-        let vieww = DragInView(frame: frame, parent: self, side: NSLayoutAttribute.top)
-        // Do any additional setup after loading the view.
+        if dragInView == nil {
+            let height : CGFloat = 400
+            dragInView = DragInView(parent: self, side: .bottom)
+            dragInView?.drawerFullHeight(height)
+            dragInView?.handleDrawerSize(CGSize(width: 50, height: 20))
+            dragInView?.handleViewColor(UIColor.brown)
+            dragInView?.drawerMaxCutOffExtent(300)
+            dragInView?.visibleHeightWhenClosed(40)
+            dragInView?.visibleHeightWhenOpened(height - 50)
+            
+            dragInView?.setupConstraints(onParent: self)
+            dragInView?.setupGestures()
+            self.view.addSubview( dragInView!)
+        }
         
     }
 
@@ -34,5 +53,14 @@ class SpringBasedDrawerViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func clearAll(){
+        dragInView = nil
+    }
+    
+    deinit {
+        clearAll()
+        print("Spring Based Drawer view controller is \(#function)")
+    }
 
 }

@@ -42,8 +42,9 @@ class MainCollectionViewController: UICollectionViewController {
                            //"SideBarMenuViewController" : "SideBarMenuMain",
                            //"SWRevealViewController" : "MultiSidedBarMenuMain",
                            //"TopMenuNavigationController" : "TopMenuMain"
+                            
                             "DraggableTopMenuMainViewController" : "DraggableTopMenuMain",
-                            "SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
+                            //"SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
                            ]
     
     //Mark: - Collection view 
@@ -130,7 +131,7 @@ class MainCollectionViewController: UICollectionViewController {
         cell.backgroundColor = color
         
         cell.cellImageView.backgroundColor = color
-        cell.cellImageView.image = UIImage(named: "appDev_icon") ?? UIImage()
+        cell.cellImageView.image = UIImage(named: "AppGameIcon") ?? UIImage()
         
         return cell
     }

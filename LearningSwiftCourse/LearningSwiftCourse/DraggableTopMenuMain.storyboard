@@ -24,13 +24,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darksunset" translatesAutoresizingMaskIntoConstraints="NO" id="Uzn-2s-mVT">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWv-Sn-DlJ">
+                                <rect key="frame" x="135" y="528" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Phh-4O-E9Y"/>
+                                </constraints>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="homeButton:" destination="bTP-2E-Nao" eventType="touchUpInside" id="TeQ-Zq-tHY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Uzn-2s-mVT" firstAttribute="top" secondItem="xtk-e4-jEq" secondAttribute="top" id="4jQ-Ab-37q"/>
+                            <constraint firstItem="KWd-ec-iai" firstAttribute="top" secondItem="eWv-Sn-DlJ" secondAttribute="bottom" constant="10" id="KVm-X8-i18"/>
                             <constraint firstItem="Uzn-2s-mVT" firstAttribute="leading" secondItem="xtk-e4-jEq" secondAttribute="leading" id="LgO-Rs-erL"/>
                             <constraint firstItem="Uzn-2s-mVT" firstAttribute="centerY" secondItem="xtk-e4-jEq" secondAttribute="centerY" id="RUX-H8-I1Z"/>
                             <constraint firstAttribute="trailing" secondItem="Uzn-2s-mVT" secondAttribute="trailing" id="Rak-le-iXD"/>
                             <constraint firstItem="KWd-ec-iai" firstAttribute="top" secondItem="Uzn-2s-mVT" secondAttribute="bottom" id="U0f-Az-NMz"/>
+                            <constraint firstItem="eWv-Sn-DlJ" firstAttribute="centerX" secondItem="xtk-e4-jEq" secondAttribute="centerX" id="UHq-yP-kNp"/>
                             <constraint firstItem="Uzn-2s-mVT" firstAttribute="centerX" secondItem="xtk-e4-jEq" secondAttribute="centerX" id="pyW-PC-fIp"/>
                         </constraints>
                     </view>

@@ -12,13 +12,6 @@ import UIKit
 
 extension UIButton {
     
-   
-    override open var isHighlighted: Bool {
-        didSet {
-            backgroundColor = isHighlighted ? UIColor.clear : UIColor.clear
-        }
-    }
-    
     /*
     override open var isSelected: Bool {
         didSet {
