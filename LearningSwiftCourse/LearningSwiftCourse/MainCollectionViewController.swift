@@ -29,11 +29,11 @@ class MainCollectionViewController: UICollectionViewController {
                            //"NavigationViewController": "NavBarMain",
                            //"ColorsViewController": "ColorsMain",
                            //"ScrollViewController": "ScrollViewMain",
-                           "CustomPageViewController" : "PageViewMain",
-                           "SlideShowViewController" : "SlideShowMain",
-                           "ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
-                           "ParallaxViewController" : "ParallaxMain",
-                           "ImageViewerViewController" : "ImageViewerMain",
+                           //"CustomPageViewController" : "PageViewMain",
+                           //"SlideShowViewController" : "SlideShowMain",
+                           //"ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
+                           //"ParallaxViewController" : "ParallaxMain",
+                           //"ImageViewerViewController" : "ImageViewerMain",
                            //"ImageCropperViewController" : "ImageCropperMain",
                            //"CarouselViewController": "CarouselMain",
                            //"InspirationalFilmsViewController": "InspirationalFilmsMain",
@@ -42,6 +42,8 @@ class MainCollectionViewController: UICollectionViewController {
                            //"SideBarMenuViewController" : "SideBarMenuMain",
                            //"SWRevealViewController" : "MultiSidedBarMenuMain",
                            //"TopMenuNavigationController" : "TopMenuMain"
+                            "DraggableTopMenuMainViewController" : "DraggableTopMenuMain",
+                            "SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
                            ]
     
     //Mark: - Collection view 

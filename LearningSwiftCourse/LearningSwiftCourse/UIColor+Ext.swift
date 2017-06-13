@@ -76,6 +76,10 @@ public extension UIColor {
         return color
     }
     
+    public func fullhexDescription(_ includeAlpha: Bool = false) -> String {
+        return "#" + self.hexDescription(includeAlpha)
+    }
+    
     fileprivate enum UIColorMasks: CUnsignedInt {
         case redMask    = 0xff000000
         case greenMask  = 0x00ff0000
@@ -138,6 +142,11 @@ public extension UIColor {
             hexString = String(hexString.characters.dropFirst())
         }
         return cssToHexDictionairy.firstKeyForValue(forValue: hexString.uppercased()) ?? "1"
+    }
+    
+    static func getAllColorNamesFromLibrary () -> [String]
+    {
+        return UIColor.cssToHexDictionairy.map{ $0.key }.sorted()
     }
     
     fileprivate static let cssToHexDictionairy : Dictionary<String, String> = [
@@ -292,4 +301,5 @@ public extension UIColor {
         "YELLOW" : "FFFF00",
         "YELLOWGREEN" : "9ACD32"
     ]
+  
 }

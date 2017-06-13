@@ -21,6 +21,7 @@ final class ParallaxHeaderView: UIView {
     
     fileprivate var headerBgColor = UIColor.red
     
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -88,10 +89,11 @@ final class ParallaxHeaderView: UIView {
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
+        
         containerLayoutConstraint.constant = scrollView.contentInset.top
         let yPosition = scrollView.contentOffset.y
         let offsetY = -(yPosition + scrollView.contentInset.top)
-        
+      
         containerView.clipsToBounds = offsetY <= 0
         bottomLayoutConstraint.constant = offsetY >= 0 ? 0 : -offsetY / 2
         heightLayoutConstraint.constant = max(offsetY + scrollView.contentInset.top, scrollView.contentInset.top)

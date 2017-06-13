@@ -25,6 +25,14 @@ extension Double {
         let minimum = min < max ? min : max 
         return  rand * Swift.abs(Double( min - max)) + minimum
     }
+    
+    /// Rounds the double to decimal places value
+    public func round(to places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+        
+    }
+    
 }
 
 extension CGFloat {
@@ -50,9 +58,9 @@ extension CGFloat {
         }
     }
     
-    public static func roundToPlacesF(value:CGFloat, places:Int) -> CGFloat {
+    public func round(to places:Int) -> CGFloat {
         let divisor = pow(10.0, CGFloat(places))
-        return Darwin.round(value * divisor) / divisor
+        return Darwin.round(self * divisor) / divisor
     }
     
     public static func randF() -> CGFloat {

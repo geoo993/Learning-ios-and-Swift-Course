@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C702136C1EEA19AC0066987D /* CustomDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C702136B1EEA19AC0066987D /* CustomDismissAnimationController.swift */; };
+		C70ACF761EEF47A4007AD02D /* StretchyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ACF751EEF47A4007AD02D /* StretchyHeaderViewController.swift */; };
+		C70ACF781EEF4D6A007AD02D /* DraggableTopMenuMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70ACF771EEF4D6A007AD02D /* DraggableTopMenuMain.storyboard */; };
+		C70ACF7A1EEF4D9E007AD02D /* DraggableTopMenuMainViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ACF791EEF4D9E007AD02D /* DraggableTopMenuMainViewControllerViewController.swift */; };
 		C70C84B31EE703F50098A62F /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C7C1ED6500B00E2C4D3 /* Interest.swift */; };
 		C70C84DD1EE760F50098A62F /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C84DC1EE760F50098A62F /* SummaryView.swift */; };
 		C72BE6621EECA7E600A54EE2 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72BE6611EECA7E600A54EE2 /* ImageViewerViewController.swift */; };
@@ -45,6 +48,12 @@
 		C74C99FF1EE87C14001E4FFE /* AirbnbMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74C99FE1EE87C14001E4FFE /* AirbnbMain.storyboard */; };
 		C74C9A011EE87C68001E4FFE /* AirbnbTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C9A001EE87C68001E4FFE /* AirbnbTableViewController.swift */; };
 		C74C9A031EE87C98001E4FFE /* AirbnbData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C9A021EE87C98001E4FFE /* AirbnbData.swift */; };
+		C76342101EEF514300534507 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C763420F1EEF514300534507 /* DraggableView.swift */; };
+		C76342541EEFC1DF00534507 /* ConstraintPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76342521EEFC1DF00534507 /* ConstraintPack.swift */; };
+		C76342551EEFC1DF00534507 /* CrossPlatformDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76342531EEFC1DF00534507 /* CrossPlatformDefines.swift */; };
+		C763425D1EEFD46700534507 /* DragInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C763425C1EEFD46700534507 /* DragInView.swift */; };
+		C763427C1EEFDD3D00534507 /* SpringBasedDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C763427B1EEFDD3D00534507 /* SpringBasedDrawerViewController.swift */; };
+		C763427E1EEFDD5300534507 /* SpringBasedDrawerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C763427D1EEFDD5300534507 /* SpringBasedDrawerMain.storyboard */; };
 		C765C26C1EA4DFD400F5FE90 /* TabBarMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C765C26B1EA4DFD400F5FE90 /* TabBarMain.storyboard */; };
 		C765C2701EA4E08600F5FE90 /* MetricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C26F1EA4E08600F5FE90 /* MetricViewController.swift */; };
 		C765C2721EA4E09F00F5FE90 /* EnglishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765C2711EA4E09F00F5FE90 /* EnglishViewController.swift */; };
@@ -494,6 +503,9 @@
 
 /* Begin PBXFileReference section */
 		C702136B1EEA19AC0066987D /* CustomDismissAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDismissAnimationController.swift; sourceTree = "<group>"; };
+		C70ACF751EEF47A4007AD02D /* StretchyHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchyHeaderViewController.swift; sourceTree = "<group>"; };
+		C70ACF771EEF4D6A007AD02D /* DraggableTopMenuMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DraggableTopMenuMain.storyboard; sourceTree = "<group>"; };
+		C70ACF791EEF4D9E007AD02D /* DraggableTopMenuMainViewControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableTopMenuMainViewControllerViewController.swift; sourceTree = "<group>"; };
 		C70C84DC1EE760F50098A62F /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		C72BE6611EECA7E600A54EE2 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		C72BE6631EECA7F600A54EE2 /* ImageViewerMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageViewerMain.storyboard; sourceTree = "<group>"; };
@@ -537,6 +549,12 @@
 		C74C99FE1EE87C14001E4FFE /* AirbnbMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AirbnbMain.storyboard; sourceTree = "<group>"; };
 		C74C9A001EE87C68001E4FFE /* AirbnbTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbTableViewController.swift; sourceTree = "<group>"; };
 		C74C9A021EE87C98001E4FFE /* AirbnbData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirbnbData.swift; sourceTree = "<group>"; };
+		C763420F1EEF514300534507 /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
+		C76342521EEFC1DF00534507 /* ConstraintPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintPack.swift; sourceTree = "<group>"; };
+		C76342531EEFC1DF00534507 /* CrossPlatformDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossPlatformDefines.swift; sourceTree = "<group>"; };
+		C763425C1EEFD46700534507 /* DragInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragInView.swift; sourceTree = "<group>"; };
+		C763427B1EEFDD3D00534507 /* SpringBasedDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringBasedDrawerViewController.swift; sourceTree = "<group>"; };
+		C763427D1EEFDD5300534507 /* SpringBasedDrawerMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpringBasedDrawerMain.storyboard; sourceTree = "<group>"; };
 		C765C26B1EA4DFD400F5FE90 /* TabBarMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBarMain.storyboard; sourceTree = "<group>"; };
 		C765C26F1EA4E08600F5FE90 /* MetricViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricViewController.swift; sourceTree = "<group>"; };
 		C765C2711EA4E09F00F5FE90 /* EnglishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnglishViewController.swift; sourceTree = "<group>"; };
@@ -693,6 +711,14 @@
 			name = TransitionAnimations;
 			sourceTree = "<group>";
 		};
+		C70ACF581EEF476B007AD02D /* StretchyHeaderExample */ = {
+			isa = PBXGroup;
+			children = (
+				C70ACF751EEF47A4007AD02D /* StretchyHeaderViewController.swift */,
+			);
+			name = StretchyHeaderExample;
+			sourceTree = "<group>";
+		};
 		C72BE6491EECA77F00A54EE2 /* ImageViewerExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -728,6 +754,7 @@
 		C72E27A31E9ED9EB0064E01B /* LearningSwiftCourse */ = {
 			isa = PBXGroup;
 			children = (
+				C76342511EEFC1C200534507 /* ConstraintsPack */,
 				C7E3886E1ED3055F000DCE15 /* LearningSwiftCourse.entitlements */,
 				C7AE48D11EA5638800C2096E /* Extensions */,
 				C7CB1ED31EE8906800EA7329 /* SWRevealViewController */,
@@ -745,7 +772,9 @@
 				C72BE6491EECA77F00A54EE2 /* ImageViewerExample */,
 				C7EFC8C61EEDFD0400AA3EFB /* ImageCropperExample */,
 				C7EFC8A81EEDECDC00AA3EFB /* NavigationDrawer */,
-				C7EFC8C51EEDEF1100AA3EFB /* SpringBasedDrawerExample */,
+				C763427A1EEFDCF700534507 /* SpringBasedDrawerExample */,
+				C7EFC8C51EEDEF1100AA3EFB /* DraggableTopMenuExample */,
+				C70ACF581EEF476B007AD02D /* StretchyHeaderExample */,
 				C76E5C771ED639A500E2C4D3 /* CarouselViewsExample */,
 				C749396D1ED7729D00555D31 /* InspirationalFilmsExample */,
 				C7E8B1721ED454ED00FC912F /* VideoPlayerExample */,
@@ -847,6 +876,25 @@
 				C74C99FE1EE87C14001E4FFE /* AirbnbMain.storyboard */,
 			);
 			name = AirbnbExample;
+			sourceTree = "<group>";
+		};
+		C76342511EEFC1C200534507 /* ConstraintsPack */ = {
+			isa = PBXGroup;
+			children = (
+				C76342521EEFC1DF00534507 /* ConstraintPack.swift */,
+				C76342531EEFC1DF00534507 /* CrossPlatformDefines.swift */,
+			);
+			name = ConstraintsPack;
+			sourceTree = "<group>";
+		};
+		C763427A1EEFDCF700534507 /* SpringBasedDrawerExample */ = {
+			isa = PBXGroup;
+			children = (
+				C763427B1EEFDD3D00534507 /* SpringBasedDrawerViewController.swift */,
+				C763425C1EEFD46700534507 /* DragInView.swift */,
+				C763427D1EEFDD5300534507 /* SpringBasedDrawerMain.storyboard */,
+			);
+			name = SpringBasedDrawerExample;
 			sourceTree = "<group>";
 		};
 		C765C26D1EA4E02700F5FE90 /* ColorsExample */ = {
@@ -1192,11 +1240,14 @@
 			name = NavigationDrawer;
 			sourceTree = "<group>";
 		};
-		C7EFC8C51EEDEF1100AA3EFB /* SpringBasedDrawerExample */ = {
+		C7EFC8C51EEDEF1100AA3EFB /* DraggableTopMenuExample */ = {
 			isa = PBXGroup;
 			children = (
+				C70ACF791EEF4D9E007AD02D /* DraggableTopMenuMainViewControllerViewController.swift */,
+				C763420F1EEF514300534507 /* DraggableView.swift */,
+				C70ACF771EEF4D6A007AD02D /* DraggableTopMenuMain.storyboard */,
 			);
-			name = SpringBasedDrawerExample;
+			name = DraggableTopMenuExample;
 			sourceTree = "<group>";
 		};
 		C7EFC8C61EEDFD0400AA3EFB /* ImageCropperExample */ = {
@@ -1659,12 +1710,14 @@
 				C7CB1FF91EE966D100EA7329 /* PopUpMain.storyboard in Resources */,
 				C74217CE1EC1F34C0007B4C3 /* slide15.gif in Resources */,
 				C7E387DE1ED2F2FF000DCE15 /* AudioMain.storyboard in Resources */,
+				C763427E1EEFDD5300534507 /* SpringBasedDrawerMain.storyboard in Resources */,
 				C74C99FF1EE87C14001E4FFE /* AirbnbMain.storyboard in Resources */,
 				C74217D01EC1F36A0007B4C3 /* slide16.gif in Resources */,
 				C7EFC8EB1EEE9CD400AA3EFB /* PageViewMain.storyboard in Resources */,
 				C742173E1EC1CF740007B4C3 /* Slide.xib in Resources */,
 				C74217D21EC1F37A0007B4C3 /* slide18.gif in Resources */,
 				C74217D61EC1F4090007B4C3 /* slide17.gif in Resources */,
+				C70ACF781EEF4D6A007AD02D /* DraggableTopMenuMain.storyboard in Resources */,
 				C77920CC1EEC8B3100BB6C52 /* ParallaxHeaderMain.storyboard in Resources */,
 				C7E387E01ED2F5A9000DCE15 /* brooks.mp3 in Resources */,
 				C765C26C1EA4DFD400F5FE90 /* TabBarMain.storyboard in Resources */,
@@ -1744,6 +1797,7 @@
 				C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */,
 				C7CB1ECE1EE8878600EA7329 /* AirbnbNavigationController.swift in Sources */,
 				C7B589FF1EEAAADA006C85E9 /* CustomPresentAnimationController.swift in Sources */,
+				C76342541EEFC1DF00534507 /* ConstraintPack.swift in Sources */,
 				C7CB1FFB1EE96BE700EA7329 /* PopUpViewController.swift in Sources */,
 				C74939861ED774C200555D31 /* InspirationalFilmsViewController.swift in Sources */,
 				C76E0D141EE9F98600A66E94 /* TopMenuNewsTableViewController.swift in Sources */,
@@ -1762,6 +1816,7 @@
 				C765C2721EA4E09F00F5FE90 /* EnglishViewController.swift in Sources */,
 				C7AE48D61EA563A400C2096E /* UIImage+Ext.swift in Sources */,
 				C76E5C801ED65C7400E2C4D3 /* InterestCollectionViewCell.swift in Sources */,
+				C763425D1EEFD46700534507 /* DragInView.swift in Sources */,
 				C702136C1EEA19AC0066987D /* CustomDismissAnimationController.swift in Sources */,
 				C74C9A011EE87C68001E4FFE /* AirbnbTableViewController.swift in Sources */,
 				C7B589E71EEAA70C006C85E9 /* CustomInteractionController.swift in Sources */,
@@ -1769,19 +1824,23 @@
 				C70C84B31EE703F50098A62F /* Interest.swift in Sources */,
 				C76E5C721ED60AFC00E2C4D3 /* UIApplication+Ext.swift in Sources */,
 				C7BE67861EE2B72900A05286 /* Generic+Ext.swift in Sources */,
+				C76342101EEF514300534507 /* DraggableView.swift in Sources */,
 				C77920D01EEC8B6A00BB6C52 /* ParallaxHeaderTableViewController.swift in Sources */,
 				C7EFC8F11EEED21300AA3EFB /* WalkthroughZoomViewController.swift in Sources */,
 				C77920C31EEC6B9A00BB6C52 /* ParallaxViewController.swift in Sources */,
 				C7CB20071EE97DBA00EA7329 /* SideBarMenu.swift in Sources */,
+				C70ACF761EEF47A4007AD02D /* StretchyHeaderViewController.swift in Sources */,
 				C7E45A101EE2EEA300F7015C /* UIButton+Ext.swift in Sources */,
 				C7F45EA01EE41D9B005CF986 /* String+Ext.swift in Sources */,
 				C76E0D0B1EE9EE6000A66E94 /* NewsTableViewCell.swift in Sources */,
 				C7CB1F611EE8B6BD00EA7329 /* StorySmartiesMenuTableViewController.swift in Sources */,
 				C7CB1FFF1EE976C900EA7329 /* SideBarMenuViewController.swift in Sources */,
 				C76E0D191EE9F9E900A66E94 /* TopMenuNavigationController.swift in Sources */,
+				C763427C1EEFDD3D00534507 /* SpringBasedDrawerViewController.swift in Sources */,
 				C749398D1ED782D500555D31 /* InspirationalFilms.swift in Sources */,
 				C77920C51EEC6DBE00BB6C52 /* ParallaxTableViewCell.swift in Sources */,
 				C70C84DD1EE760F50098A62F /* SummaryView.swift in Sources */,
+				C70ACF7A1EEF4D9E007AD02D /* DraggableTopMenuMainViewControllerViewController.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
 				C7CB20031EE9775900EA7329 /* SideBarMenuTableViewController.swift in Sources */,
 				C7E45A281EE351BB00F7015C /* UITextField+Ext.swift in Sources */,
@@ -1795,6 +1854,7 @@
 				C7BE65E41EE2A23E00A05286 /* MainCollectionViewCell.swift in Sources */,
 				C7AE48041EA4FE7D00C2096E /* TabBarViewController.swift in Sources */,
 				C7AE48B01EA5550B00C2096E /* MediaTableViewCell.swift in Sources */,
+				C76342551EEFC1DF00534507 /* CrossPlatformDefines.swift in Sources */,
 				C7BE65E21EE2A22900A05286 /* MainCollectionViewController.swift in Sources */,
 				C76E0D091EE9EE6000A66E94 /* MultiSidedBarMenuControllerLeft.swift in Sources */,
 				C7AE48D71EA563A400C2096E /* UIKit+Ext.swift in Sources */,

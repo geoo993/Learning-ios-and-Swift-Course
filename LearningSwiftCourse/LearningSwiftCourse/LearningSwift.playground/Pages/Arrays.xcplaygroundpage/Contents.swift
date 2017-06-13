@@ -32,7 +32,7 @@ var str = "Hello, playground"
 
 for i in 0..<40 {
     //print( CGFloat(i) / CGFloat(40)  )
-    //print( i % 2 )
+    print( i % 2 )
 }
 
 

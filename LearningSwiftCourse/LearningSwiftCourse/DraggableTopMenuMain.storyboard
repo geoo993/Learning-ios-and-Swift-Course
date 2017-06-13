@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bTP-2E-Nao">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Draggable Top Menu Main View Controller View Controller-->
+        <scene sceneID="jx3-aB-ZYP">
+            <objects>
+                <viewController storyboardIdentifier="DraggableTopMenuMainViewController" id="bTP-2E-Nao" customClass="DraggableTopMenuMainViewControllerViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d1Z-Vy-CwZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="KWd-ec-iai"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xtk-e4-jEq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darksunset" translatesAutoresizingMaskIntoConstraints="NO" id="Uzn-2s-mVT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Uzn-2s-mVT" firstAttribute="top" secondItem="xtk-e4-jEq" secondAttribute="top" id="4jQ-Ab-37q"/>
+                            <constraint firstItem="Uzn-2s-mVT" firstAttribute="leading" secondItem="xtk-e4-jEq" secondAttribute="leading" id="LgO-Rs-erL"/>
+                            <constraint firstItem="Uzn-2s-mVT" firstAttribute="centerY" secondItem="xtk-e4-jEq" secondAttribute="centerY" id="RUX-H8-I1Z"/>
+                            <constraint firstAttribute="trailing" secondItem="Uzn-2s-mVT" secondAttribute="trailing" id="Rak-le-iXD"/>
+                            <constraint firstItem="KWd-ec-iai" firstAttribute="top" secondItem="Uzn-2s-mVT" secondAttribute="bottom" id="U0f-Az-NMz"/>
+                            <constraint firstItem="Uzn-2s-mVT" firstAttribute="centerX" secondItem="xtk-e4-jEq" secondAttribute="centerX" id="pyW-PC-fIp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="draggableView" destination="JcH-HY-UOk" id="xwK-3P-Wjb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S2m-sH-W55" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="JcH-HY-UOk" customClass="DraggableView" customModule="LearningSwiftCourse" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5CQ-v6-T6B" userLabel="background Image View">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCE-08-CFy">
+                            <rect key="frame" x="145" y="490" width="30" height="10"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="DNP-r6-M93"/>
+                                <constraint firstAttribute="height" constant="10" id="hjk-f1-jN1"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="5CQ-v6-T6B" secondAttribute="bottom" id="2H3-1m-9Zm"/>
+                        <constraint firstItem="5CQ-v6-T6B" firstAttribute="centerX" secondItem="JcH-HY-UOk" secondAttribute="centerX" id="55n-d2-1tx"/>
+                        <constraint firstItem="5CQ-v6-T6B" firstAttribute="leading" secondItem="JcH-HY-UOk" secondAttribute="leading" id="6b8-7s-6jJ"/>
+                        <constraint firstItem="hCE-08-CFy" firstAttribute="centerX" secondItem="JcH-HY-UOk" secondAttribute="centerX" id="6o8-6L-Xyv"/>
+                        <constraint firstItem="5CQ-v6-T6B" firstAttribute="top" secondItem="JcH-HY-UOk" secondAttribute="top" id="CYr-7m-ysQ"/>
+                        <constraint firstAttribute="trailing" secondItem="5CQ-v6-T6B" secondAttribute="trailing" id="dBs-yy-Boq"/>
+                        <constraint firstItem="5CQ-v6-T6B" firstAttribute="centerY" secondItem="JcH-HY-UOk" secondAttribute="centerY" id="lfl-gs-Qab"/>
+                        <constraint firstAttribute="bottom" secondItem="hCE-08-CFy" secondAttribute="bottom" id="vxl-MO-cT5"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="5CQ-v6-T6B" id="jeP-1O-SZ9"/>
+                        <outlet property="bottomIndicator" destination="hCE-08-CFy" id="AhT-oU-BVA"/>
+                    </connections>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-189.375" y="104.5774647887324"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="darksunset" width="736" height="1104"/>
+    </resources>
+</document>

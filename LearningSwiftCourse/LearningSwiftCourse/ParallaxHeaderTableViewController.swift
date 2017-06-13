@@ -6,16 +6,22 @@
 //  Copyright © 2017 LEXI LABS. All rights reserved.
 //
 //https://stackoverflow.com/questions/42953360/swift-how-to-do-add-an-header-with-parallax-effect-to-tableview
-
+//https://www.youtube.com/watch?v=vIeZrhIjApg
+//https://blog.frozenfirestudios.com/how-to-add-a-stretchy-flair-to-your-uicollectionview-e403822e0f33
 
 import UIKit
 
 class ParallaxHeaderTableViewController: UITableViewController {
 
+    var headerView : UIView!
+    var newHeaderLayer : CAShapeLayer!
+    
     var containerView : SlideShowView? = nil
     let imageNames = ["autumnlandscape", "desert", "GoldenGateBridge", "happiness","japanvillage", "pexels", "treesfallredleaves"] 
     
-    let cellItems = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Home"]
+    let colorItems = {
+        return UIColor.cssString.sorted()
+    }()
     
     //Mark: - Status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -31,7 +37,7 @@ class ParallaxHeaderTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        let parallaxViewFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 200)
+        let parallaxViewFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 250)
         self.tableView.tableHeaderView  = ParallaxHeaderView(frame: parallaxViewFrame)
         self.tableView.tableHeaderView?.clipsToBounds = true
         
@@ -82,20 +88,37 @@ class ParallaxHeaderTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return cellItems.count
+        return colorItems.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "parallax header cell", for: indexPath) as! ParallaxHeaderTableViewCell
-        cell.textLabel?.text = cellItems[indexPath.row]
-        cell.detailTextLabel?.text = "This is cell \(indexPath.row)"
+        
+        let index = indexPath.row
+        let colorName = colorItems[index]
+        let color = UIColor(hex: colorName)
+        let hexValue = color.toHexString()
+        let redComponents = color.getRBGValues().r.round(to: 2)
+        let greenComponents = color.getRBGValues().g.round(to: 2)
+        let blueComponents = color.getRBGValues().b.round(to: 2)
+        let alphaComponents = color.getRBGValues().a.round(to: 2)
+        
+        cell.colorLabel.text = colorName
+        cell.colorHexLabel.text = hexValue
+        cell.colorRGBLabel.text = "red: \(redComponents),   green:\(greenComponents),   blue\(blueComponents),   alpha:\(alphaComponents)"
+        
+        cell.colorLabel.textAlignment = (index % 2 == 0) ? .right : .left
+        cell.colorHexLabel.textAlignment = (index % 2 == 0) ? .right : .left
+        cell.colorRGBLabel.textAlignment = (index % 2 == 0) ? .right : .left
+        
+        cell.backgroundColor = color
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 7 {
+        if indexPath.row == 0 {
             dismiss(animated: true) { 
                 print("view controller dismissed, now going to home page")
             }
@@ -103,6 +126,9 @@ class ParallaxHeaderTableViewController: UITableViewController {
     }
     
 
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

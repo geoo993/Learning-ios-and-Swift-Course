@@ -34,6 +34,26 @@ extension UIColor {
         }
     }
     
+    var redValue: CGFloat{
+        return cgColor.components! [0]
+    }
+    
+    var greenValue: CGFloat{
+        return cgColor.components! [1]
+    }
+    
+    var blueValue: CGFloat{
+        return cgColor.components! [2]
+    }
+    
+    var alphaValue: CGFloat{
+        return cgColor.components! [3]
+    }
+    
+    func getRBGValues() -> (r:CGFloat, g:CGFloat,b:CGFloat, a:CGFloat){
+        return (r:redValue, g:greenValue, b: blueValue, a:alphaValue)
+    }
+    
     public static func interpolateRGBColorWithWhite(start:UIColor,end:UIColor, fraction:CGFloat) -> UIColor
     {
         var f = max(0, fraction)

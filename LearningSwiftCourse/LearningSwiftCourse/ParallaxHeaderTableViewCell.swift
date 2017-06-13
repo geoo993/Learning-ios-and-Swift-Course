@@ -10,6 +10,10 @@ import UIKit
 
 class ParallaxHeaderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var colorHexLabel: UILabel!
+    @IBOutlet weak var colorRGBLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,7 +28,6 @@ class ParallaxHeaderTableViewCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        self.backgroundColor = UIColor.randomColor()
     }
     
     public override func willMove(toSuperview newSuperview: UIView?) {
