@@ -84,8 +84,6 @@ class WalkthroughZoomViewController: UIViewController {
         }
  
         
-        
-        
     }
 
     func handleSwipe(_ recognizer: UISwipeGestureRecognizer)

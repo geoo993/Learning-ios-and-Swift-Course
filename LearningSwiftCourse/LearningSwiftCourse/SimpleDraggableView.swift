@@ -5,6 +5,7 @@
 //  Created by GEORGE QUENTIN on 13/06/2017.
 //  Copyright © 2017 LEXI LABS. All rights reserved.
 //
+//https://stackoverflow.com/questions/29659360/swift-uidynamic-animate-panel-from-bottom-to-top
 
 import Foundation
 import UIKit

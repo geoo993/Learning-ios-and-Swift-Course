@@ -61,11 +61,11 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCE-08-CFy">
-                            <rect key="frame" x="145" y="488" width="30" height="10"/>
+                            <rect key="frame" x="135" y="483" width="50" height="15"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="30" id="DNP-r6-M93"/>
-                                <constraint firstAttribute="height" constant="10" id="hjk-f1-jN1"/>
+                                <constraint firstAttribute="width" constant="50" id="DNP-r6-M93"/>
+                                <constraint firstAttribute="height" constant="15" id="hjk-f1-jN1"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -102,11 +102,11 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yP7-bv-M1a" userLabel="Top Indicator View">
-                            <rect key="frame" x="135" y="2" width="30" height="10"/>
+                            <rect key="frame" x="125" y="2" width="50" height="15"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="30" id="7Mh-aS-JDd"/>
-                                <constraint firstAttribute="height" constant="10" id="IgL-Ki-A21"/>
+                                <constraint firstAttribute="width" constant="50" id="7Mh-aS-JDd"/>
+                                <constraint firstAttribute="height" constant="15" id="IgL-Ki-A21"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

@@ -25,10 +25,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H36-iL-T3T">
-                                <rect key="frame" x="135.5" y="528" width="50" height="30"/>
+                                <rect key="frame" x="135.5" y="40" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="8GH-3M-4E2"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
                                     <action selector="homeButton:" destination="ilq-Fp-R5F" eventType="touchUpInside" id="neB-W7-jLe"/>
@@ -37,12 +38,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="X9v-DI-n0O" firstAttribute="top" secondItem="H36-iL-T3T" secondAttribute="bottom" constant="10" id="ESz-Uh-JaO"/>
                             <constraint firstAttribute="trailing" secondItem="PP0-Ow-KBQ" secondAttribute="trailing" id="Ear-Z5-IiF"/>
                             <constraint firstItem="PP0-Ow-KBQ" firstAttribute="centerY" secondItem="Wmo-en-79S" secondAttribute="centerY" id="Kg0-wE-eWH"/>
                             <constraint firstItem="X9v-DI-n0O" firstAttribute="top" secondItem="PP0-Ow-KBQ" secondAttribute="bottom" id="NFK-3j-Esp"/>
                             <constraint firstItem="PP0-Ow-KBQ" firstAttribute="centerX" secondItem="Wmo-en-79S" secondAttribute="centerX" id="SA5-km-MPI"/>
                             <constraint firstItem="H36-iL-T3T" firstAttribute="centerX" secondItem="Wmo-en-79S" secondAttribute="centerX" id="YoP-Mx-mQq"/>
+                            <constraint firstItem="H36-iL-T3T" firstAttribute="top" secondItem="dyY-Ft-Y1g" secondAttribute="bottom" constant="20" id="jJZ-Nx-I5d"/>
                             <constraint firstItem="PP0-Ow-KBQ" firstAttribute="top" secondItem="Wmo-en-79S" secondAttribute="top" id="lEr-ER-7aK"/>
                             <constraint firstItem="PP0-Ow-KBQ" firstAttribute="leading" secondItem="Wmo-en-79S" secondAttribute="leading" id="uV5-sg-Y4R"/>
                         </constraints>

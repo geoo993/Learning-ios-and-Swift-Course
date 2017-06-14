@@ -230,7 +230,7 @@
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3vc-0N-BU8">
                             <size key="itemSize" width="140" height="140"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="10"/>
                             <inset key="sectionInset" minX="10" minY="40" maxX="10" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
@@ -282,6 +282,10 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Nuq-TL-xQL">
+                            <rect key="frame" x="0.0" y="180" width="320" height="10"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="H4l-An-Szx" id="l7v-pk-jW7"/>
                             <outlet property="delegate" destination="H4l-An-Szx" id="NZf-hO-8pV"/>
@@ -293,7 +297,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8f2-cp-siR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2351.25" y="-80.281690140845072"/>
+            <point key="canvasLocation" x="2363" y="-173"/>
         </scene>
         <!--ColorsViewController-->
         <scene sceneID="4c5-04-MPy">
@@ -375,7 +379,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AppGameIcon" width="300" height="200"/>
+        <image name="AppGameIcon" width="760" height="475"/>
         <image name="beachimage" width="768" height="1280"/>
     </resources>
 </document>

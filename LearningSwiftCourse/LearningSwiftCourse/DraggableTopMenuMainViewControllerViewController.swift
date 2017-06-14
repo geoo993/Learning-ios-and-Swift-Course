@@ -60,7 +60,7 @@ class DraggableTopMenuMainViewControllerViewController: UIViewController {
         
         self.view.addSubview(simpleSlideDrawerView)
         
-        simpleSlideDrawerView.setupDraggableView(with: self.view, widthRatio: 1, heightRatio: heightRatio, heightToSee: 30)
+        simpleSlideDrawerView.setupDraggableView(with: self.view, widthRatio: 1, heightRatio: heightRatio, heightToSee: 40)
         
         simpleSlideDrawerView.setupGestureRecognizer()
     
