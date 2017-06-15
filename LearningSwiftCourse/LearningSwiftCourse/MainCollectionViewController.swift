@@ -19,31 +19,33 @@ class MainCollectionViewController: UICollectionViewController {
     //let customDismissAnimationController = CustomDismissAnimationController()
     
     var views: [String: String] = [
-        
-                           //"StorySmartiesRevealViewController":"StorySmartiesMain",
-                           //"VideoPlayerViewController":"VideoPlayerMain",
-                           //"AudioCheckViewController": "AudioMain",
-                           //"TableViewNavigationViewController": "TableViewMain",
-                           //"TabBarViewController": "TabBarMain",
-                           //"NavigationViewController": "NavBarMain",
-                           //"ColorsViewController": "ColorsMain",
-                           //"ScrollViewController": "ScrollViewMain",
-                           //"CustomPageViewController" : "PageViewMain",
-                           //"SlideShowViewController" : "SlideShowMain",
-                           //"ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
-                           //"ParallaxViewController" : "ParallaxMain",
-                           //"ImageViewerViewController" : "ImageViewerMain",
-                           //"ImageCropperViewController" : "ImageCropperMain",
-                           //"CarouselViewController": "CarouselMain",
-                           //"InspirationalFilmsViewController": "InspirationalFilmsMain",
-                           //"AirbnbRevealViewController" : "AirbnbMain",
-                           //"PopUpNavigationController": "PopUpMain",
-                           //"SideBarMenuViewController" : "SideBarMenuMain",
-                           //"SWRevealViewController" : "MultiSidedBarMenuMain",
-                           //"TopMenuNavigationController" : "TopMenuMain"
-                           //"DraggableTopMenuMainViewController" : "DraggableVerticalMenusMain",
+        /*
+                           "StorySmartiesRevealViewController":"StorySmartiesMain",
+                           "VideoPlayerViewController":"VideoPlayerMain",
+                           "AudioCheckViewController": "AudioMain",
+                           "TableViewNavigationViewController": "TableViewMain",
+                           "TabBarViewController": "TabBarMain",
+                           "NavigationViewController": "NavBarMain",
+                           "ColorsViewController": "ColorsMain",
+                           "ScrollViewController": "ScrollViewMain",
+                           "CustomPageViewController" : "PageViewMain",
+                           "SlideShowViewController" : "SlideShowMain",
+                           "ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
+                           "ParallaxViewController" : "ParallaxMain",
+                           "ImageViewerViewController" : "ImageViewerMain",
+                           "ImageCropperViewController" : "ImageCropperMain",
+                           "CarouselViewController": "CarouselMain",
+                           "InspirationalFilmsViewController": "InspirationalFilmsMain",
+                           "AirbnbRevealViewController" : "AirbnbMain",
+                           "PopUpNavigationController": "PopUpMain",
+                           "SideBarMenuViewController" : "SideBarMenuMain",
+                           "SWRevealViewController" : "MultiSidedBarMenuMain",
+                           "TopMenuNavigationController" : "TopMenuMain",
+                           "DraggableTopMenuMainViewController" : "DraggableVerticalMenusMain",
+                           */
                            //"SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
-                            "ButtonsTypesViewController": "ButtonsMain",
+                           "ButtonsTypesViewController": "ButtonsMain",
+                            "BasicCoreMLwithImagesViewController" : "BasicCoreMLwithImagesMain",
                            ]
     
     //Mark: - Collection view 

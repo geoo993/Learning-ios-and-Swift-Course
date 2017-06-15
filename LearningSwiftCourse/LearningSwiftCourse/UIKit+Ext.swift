@@ -125,9 +125,17 @@ public  extension UIColor {
         var b:CGFloat = 0
         var a:CGFloat = 0
         getRed(&r, green: &g, blue: &b, alpha: &a)
-        let rgb:Int = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
-        return NSString(format:"#%06x", rgb) as String
+        //let rgb:Int = (Int)(r * 255)<<16 | (Int)(g * 255)<<8 | (Int)(b * 255)<<0
+        //return NSString(format:"#%06x", rgb) as String
+        return String(
+            format: "%02X%02X%02X",
+            Int(r * 0xff),
+            Int(g * 0xff),
+            Int(b * 0xff)
+        )
     }
+    
+   
     
     public static let cssString : [String] = [
         "CLEAR" ,

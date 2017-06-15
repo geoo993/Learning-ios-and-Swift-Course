@@ -21,17 +21,23 @@ class ButtonsTypesViewController: UIViewController {
     }
     @IBAction func buttonTouchUpInside(_ sender: UIButton) {
         print("Touch Up Inside")
-        UIView.animate(withDuration: 0.2) { [weak self] _ in
+        UIView.animate(withDuration: 0.2) { [weak self] () -> Void in
             self?.animatedButton.titleLabel?.alpha = 1.0
         }
     }
     @IBAction func buttonTouchUpOutside(_ sender: UIButton) { 
         print("Touch Up Outside")
-        UIView.animate(withDuration: 0.2) { [weak self] _ in
+        UIView.animate(withDuration: 0.2) { [weak self] () -> Void in
             self?.animatedButton.titleLabel?.alpha = 1.0
         }
     }
    
+    @IBAction func homebutton(_ sender: UIButton) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

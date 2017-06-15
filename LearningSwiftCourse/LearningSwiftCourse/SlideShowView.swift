@@ -89,7 +89,7 @@ class SlideShowView: UIView {
             withDuration: duration, 
             delay: 0.1, 
             options: [.curveEaseInOut], 
-            animations: { [weak self] _ in
+            animations: { [weak self] () -> Void in
                 guard let this = self else { return }
                 
                 //make current displayed image thats at the top or last in array disappear

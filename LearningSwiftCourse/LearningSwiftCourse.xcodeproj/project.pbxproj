@@ -186,6 +186,14 @@
 		C7F45F4F1EE4BAFA005CF986 /* StorySmartiesMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7F45F4E1EE4BAFA005CF986 /* StorySmartiesMain.storyboard */; };
 		C7F45F511EE4BB18005CF986 /* StorySmartiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F45F501EE4BB18005CF986 /* StorySmartiesViewController.swift */; };
 		C7FBFE4D1EA4E92900DECCAE /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */; };
+		C7FF52501EF33868005D1D83 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C7FF524C1EF33849005D1D83 /* GoogLeNetPlaces.mlmodel */; };
+		C7FF52661EF33D5C005D1D83 /* BasicCoreMLwithImagesMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FF52631EF33B6C005D1D83 /* BasicCoreMLwithImagesMain.storyboard */; };
+		C7FF52671EF33D60005D1D83 /* BasicCoreMLwithImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF52641EF33C20005D1D83 /* BasicCoreMLwithImagesViewController.swift */; };
+		C7FF52681EF33D62005D1D83 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF52651EF33C20005D1D83 /* ImageProcessor.swift */; };
+		C7FF52691EF33D66005D1D83 /* ResNet50.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7FF52601EF33AD9005D1D83 /* ResNet50.txt */; };
+		C7FF526A1EF33D69005D1D83 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C7FF525F1EF33AD9005D1D83 /* Resnet50.mlmodel */; };
+		C7FF526B1EF33D6C005D1D83 /* Places205-GoogLeNet.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7FF52621EF33B63005D1D83 /* Places205-GoogLeNet.txt */; };
+		C7FF526D1EF33FCA005D1D83 /* BasicCoreMLwithImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF526C1EF33FCA005D1D83 /* BasicCoreMLwithImagesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -716,6 +724,14 @@
 		C7F45F4E1EE4BAFA005CF986 /* StorySmartiesMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StorySmartiesMain.storyboard; sourceTree = "<group>"; };
 		C7F45F501EE4BB18005CF986 /* StorySmartiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySmartiesViewController.swift; sourceTree = "<group>"; };
 		C7FBFE4C1EA4E92900DECCAE /* RedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
+		C7FF524C1EF33849005D1D83 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
+		C7FF525F1EF33AD9005D1D83 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		C7FF52601EF33AD9005D1D83 /* ResNet50.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ResNet50.txt; sourceTree = "<group>"; };
+		C7FF52621EF33B63005D1D83 /* Places205-GoogLeNet.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Places205-GoogLeNet.txt"; sourceTree = "<group>"; };
+		C7FF52631EF33B6C005D1D83 /* BasicCoreMLwithImagesMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasicCoreMLwithImagesMain.storyboard; sourceTree = "<group>"; };
+		C7FF52641EF33C20005D1D83 /* BasicCoreMLwithImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCoreMLwithImagesViewController.swift; sourceTree = "<group>"; };
+		C7FF52651EF33C20005D1D83 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		C7FF526C1EF33FCA005D1D83 /* BasicCoreMLwithImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCoreMLwithImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -863,6 +879,7 @@
 				C76E0D011EE9EDAC00A66E94 /* MultiSidedBarMenuExample */,
 				C7CB1FF71EE966A900EA7329 /* PopUpExample */,
 				C7D3C0441EF2B6FF0042E90A /* ButtonsExample */,
+				C7FF524B1EF33787005D1D83 /* BasicCoreMLwithImages */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
 				C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */,
@@ -1400,6 +1417,37 @@
 			name = StorySmartiesDesign;
 			sourceTree = "<group>";
 		};
+		C7FF524B1EF33787005D1D83 /* BasicCoreMLwithImages */ = {
+			isa = PBXGroup;
+			children = (
+				C7FF52651EF33C20005D1D83 /* ImageProcessor.swift */,
+				C7FF52641EF33C20005D1D83 /* BasicCoreMLwithImagesViewController.swift */,
+				C7FF526C1EF33FCA005D1D83 /* BasicCoreMLwithImagesCollectionViewCell.swift */,
+				C7FF52631EF33B6C005D1D83 /* BasicCoreMLwithImagesMain.storyboard */,
+				C7FF525A1EF33A66005D1D83 /* ResNet50 */,
+				C7FF52591EF33A3E005D1D83 /* GoogLeNetPlaces */,
+			);
+			path = BasicCoreMLwithImages;
+			sourceTree = "<group>";
+		};
+		C7FF52591EF33A3E005D1D83 /* GoogLeNetPlaces */ = {
+			isa = PBXGroup;
+			children = (
+				C7FF52621EF33B63005D1D83 /* Places205-GoogLeNet.txt */,
+				C7FF524C1EF33849005D1D83 /* GoogLeNetPlaces.mlmodel */,
+			);
+			path = GoogLeNetPlaces;
+			sourceTree = "<group>";
+		};
+		C7FF525A1EF33A66005D1D83 /* ResNet50 */ = {
+			isa = PBXGroup;
+			children = (
+				C7FF52601EF33AD9005D1D83 /* ResNet50.txt */,
+				C7FF525F1EF33AD9005D1D83 /* Resnet50.mlmodel */,
+			);
+			path = ResNet50;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1526,7 +1574,7 @@
 					C72E27A01E9ED9EB0064E01B = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 4Q93294747;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1540,23 +1588,27 @@
 					C72E27B41E9ED9EB0064E01B = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 4Q93294747;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C72E27A01E9ED9EB0064E01B;
 					};
 					C72E27BF1E9ED9EB0064E01B = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 4Q93294747;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C72E27A01E9ED9EB0064E01B;
 					};
 					C7D3C0F31EF2BB550042E90A = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 4Q93294747;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					C7D3C0FB1EF2BB550042E90A = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 4Q93294747;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C72E27A01E9ED9EB0064E01B;
 					};
@@ -1870,6 +1922,7 @@
 				C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */,
 				C72BE6641EECA7F600A54EE2 /* ImageViewerMain.storyboard in Resources */,
 				C74217341EC1C27C0007B4C3 /* ScrollViewMain.storyboard in Resources */,
+				C7FF52661EF33D5C005D1D83 /* BasicCoreMLwithImagesMain.storyboard in Resources */,
 				C76E0D031EE9EDDD00A66E94 /* MultiSidedBarMenuMain.storyboard in Resources */,
 				C73977B21EEEEE91005C96C8 /* ImageCropperMain.storyboard in Resources */,
 				C7CB1FF91EE966D100EA7329 /* PopUpMain.storyboard in Resources */,
@@ -1881,6 +1934,7 @@
 				C7EFC8EB1EEE9CD400AA3EFB /* PageViewMain.storyboard in Resources */,
 				C742173E1EC1CF740007B4C3 /* Slide.xib in Resources */,
 				C74217D21EC1F37A0007B4C3 /* slide18.gif in Resources */,
+				C7FF52691EF33D66005D1D83 /* ResNet50.txt in Resources */,
 				C74217D61EC1F4090007B4C3 /* slide17.gif in Resources */,
 				C70ACF781EEF4D6A007AD02D /* DraggableVerticalMenusMain.storyboard in Resources */,
 				C77920CC1EEC8B3100BB6C52 /* ParallaxHeaderMain.storyboard in Resources */,
@@ -1897,6 +1951,7 @@
 				C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */,
 				C77920C11EEC6B8700BB6C52 /* ParallaxMain.storyboard in Resources */,
 				C74217CC1EC1F32B0007B4C3 /* slide19.gif in Resources */,
+				C7FF526B1EF33D6C005D1D83 /* Places205-GoogLeNet.txt in Resources */,
 				C7CB20011EE976E500EA7329 /* SideBarMenuMain.storyboard in Resources */,
 				C74939841ED7747100555D31 /* InspirationalFilmsMain.storyboard in Resources */,
 				C72E27AA1E9ED9EB0064E01B /* ColorsMain.storyboard in Resources */,
@@ -1976,7 +2031,9 @@
 				C76E0D141EE9F98600A66E94 /* TopMenuNewsTableViewController.swift in Sources */,
 				C7EFC8ED1EEE9D0D00AA3EFB /* CustomPageViewController.swift in Sources */,
 				C73977D01EEEEEC2005C96C8 /* ImageCropperViewController.swift in Sources */,
+				C7FF52501EF33868005D1D83 /* GoogLeNetPlaces.mlmodel in Sources */,
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
+				C7FF526A1EF33D69005D1D83 /* Resnet50.mlmodel in Sources */,
 				C76E0D0D1EE9EE6000A66E94 /* PhotoViewController.swift in Sources */,
 				C74217361EC1C7A60007B4C3 /* ScrollViewController.swift in Sources */,
 				C72BE6661EED63E800A54EE2 /* ImageScrollView.swift in Sources */,
@@ -2010,6 +2067,7 @@
 				C763427C1EEFDD3D00534507 /* SpringBasedDrawerViewController.swift in Sources */,
 				C749398D1ED782D500555D31 /* InspirationalFilms.swift in Sources */,
 				C77920C51EEC6DBE00BB6C52 /* ParallaxTableViewCell.swift in Sources */,
+				C7FF52681EF33D62005D1D83 /* ImageProcessor.swift in Sources */,
 				C70C84DD1EE760F50098A62F /* SummaryView.swift in Sources */,
 				C70ACF7A1EEF4D9E007AD02D /* DraggableTopMenuMainViewControllerViewController.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
@@ -2022,9 +2080,11 @@
 				C7AE48B31EA5550B00C2096E /* ProductLine.swift in Sources */,
 				C7BE65E41EE2A23E00A05286 /* MainCollectionViewCell.swift in Sources */,
 				C7AE48041EA4FE7D00C2096E /* TabBarViewController.swift in Sources */,
+				C7FF52671EF33D60005D1D83 /* BasicCoreMLwithImagesViewController.swift in Sources */,
 				C7AE48B01EA5550B00C2096E /* MediaTableViewCell.swift in Sources */,
 				C76342551EEFC1DF00534507 /* CrossPlatformDefines.swift in Sources */,
 				C7BE65E21EE2A22900A05286 /* MainCollectionViewController.swift in Sources */,
+				C7FF526D1EF33FCA005D1D83 /* BasicCoreMLwithImagesCollectionViewCell.swift in Sources */,
 				C76E0D091EE9EE6000A66E94 /* MultiSidedBarMenuControllerLeft.swift in Sources */,
 				C7CB1ED21EE8905D00EA7329 /* SWRevealViewController.m in Sources */,
 				C7AE48A21EA5509B00C2096E /* TableViewNavigationViewController.swift in Sources */,
@@ -2211,7 +2271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2256,7 +2316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -2278,7 +2338,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LearningSwiftCourse/LearningSwiftCourse-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2295,7 +2356,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.lexilabs.LearningSwiftCourse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LearningSwiftCourse/LearningSwiftCourse-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -2310,7 +2372,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.lexilabs.LearningSwiftCourseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearningSwiftCourse.app/LearningSwiftCourse";
 			};
 			name = Debug;
@@ -2325,7 +2388,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.lexilabs.LearningSwiftCourseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearningSwiftCourse.app/LearningSwiftCourse";
 			};
 			name = Release;
@@ -2339,7 +2403,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.lexilabs.LearningSwiftCourseUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = LearningSwiftCourse;
 			};
 			name = Debug;
@@ -2353,7 +2418,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.lexilabs.LearningSwiftCourseUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = LearningSwiftCourse;
 			};
 			name = Release;
@@ -2374,7 +2440,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.geomakesgames.LearningSwiftCourseExtensions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2396,7 +2463,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.geomakesgames.LearningSwiftCourseExtensions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2411,7 +2479,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.geomakesgames.LearningSwiftCourseExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearningSwiftCourse.app/LearningSwiftCourse";
 			};
 			name = Debug;
@@ -2425,7 +2494,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.geomakesgames.LearningSwiftCourseExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearningSwiftCourse.app/LearningSwiftCourse";
 			};
 			name = Release;

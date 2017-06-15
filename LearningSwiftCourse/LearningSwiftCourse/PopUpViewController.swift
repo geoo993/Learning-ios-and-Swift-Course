@@ -55,7 +55,7 @@ class PopUpViewController: UIViewController  {
         addItemPopUpView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
         addItemPopUpView.alpha = 0
         
-        UIView.animate(withDuration: 0.4) { [weak self] _ in
+        UIView.animate(withDuration: 0.4) { [weak self] () -> Void in
             self?.visualEffectView.effect = self?.effect
             self?.addItemPopUpView.alpha = 1.0
             self?.addItemPopUpView.transform = CGAffineTransform.identity
@@ -65,7 +65,7 @@ class PopUpViewController: UIViewController  {
     
     func animateOut(){
         
-        UIView.animate(withDuration: 0.3, animations: { [weak self] _ in            
+        UIView.animate(withDuration: 0.3, animations: { [weak self] () -> Void in            
             self?.addItemPopUpView.alpha = 0.0
             self?.addItemPopUpView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             self?.visualEffectView.effect = nil

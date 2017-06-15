@@ -33,7 +33,7 @@ class DragInView : UIView {
     fileprivate var side = NSLayoutAttribute.notAnAttribute
     fileprivate var c = NSLayoutConstraint()
 
-    func handleCloseTapGesture(tapGestureRecognizer: UITapGestureRecognizer) {
+    @objc func handleCloseTapGesture(_ tapGestureRecognizer: UITapGestureRecognizer) {
         
         handleView.removeGestureRecognizer(tapGestureRecognizer)
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: [], animations: {() -> Void in
@@ -59,7 +59,7 @@ class DragInView : UIView {
             
         }
         // trigger
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: [], animations: { [weak self] _ in
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: [], animations: { [weak self] () -> Void in
             self?.c.constant = (self?.kOpenDrawExtent)!
             self?.superview!.layoutIfNeeded()
         }, completion: { [weak self] (finished: Bool) in
@@ -71,13 +71,13 @@ class DragInView : UIView {
         return
     }
 
-    func handleOpenTapGesture(tapGestureRecognizer: UITapGestureRecognizer) {
+    @objc func handleOpenTapGesture(_ tapGestureRecognizer: UITapGestureRecognizer) {
         
         tapGestureRecognizer.isEnabled = false
         self.slideToOpen()
     }
 
-    func handleOpenPanGesture(panGestureRecognizer: UIPanGestureRecognizer) {
+    @objc func handleOpenPanGesture(panGestureRecognizer: UIPanGestureRecognizer) {
         
         
         let horizontal = [(.left), (.leading), (.right), (.trailing)].contains((side))
@@ -98,7 +98,7 @@ class DragInView : UIView {
             
             case .ended:
                                 // Snap shut
-                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.25, initialSpringVelocity: 0.5, options: [], animations: { [weak self] _ in
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.25, initialSpringVelocity: 0.5, options: [], animations: { [weak self] () -> Void in
                     self?.c.constant = (self?.kClosedDrawExtent)!
                     self?.superview!.layoutIfNeeded()
                 }, completion: nil )
@@ -125,7 +125,7 @@ class DragInView : UIView {
         let nb = UINavigationBar()
         nb.autoLayoutEnabled = true
         self.addSubview(nb)
-        StretchViewToSuperview(view: nb, inset: CGSize.zero, priority: 1000)
+        StretchViewToSuperview(view: nb, inset: CGSize.zero, priority: LayoutPriority(rawValue: 1000))
         
         // Build handle
         handleView = UIImageView()
@@ -147,31 +147,31 @@ class DragInView : UIView {
         
         let horizontal = [(.left), (.leading), (.right), (.trailing)].contains((side))
         if horizontal {
-            CenterViewInSuperview(view: handleView, horizontal: false, vertical: true, priority: 1000)
-            SizeView(view: handleView, size: CGSize(width: kHandleExtent, height: kHandleLength), priority: 1000)
-            SizeView(view: self, size: CGSize(width: kDrawerExtent,height: SkipConstraint), priority: 1000)
-            StretchViewToTopLayoutGuide(controller: parent, view: self, inset: 0, priority: 1000)
-            StretchViewToBottomLayoutGuide(controller: parent, view: self, inset: 0, priority: 1000)
+            CenterViewInSuperview(view: handleView, horizontal: false, vertical: true, priority: LayoutPriority(rawValue: 1000))
+            SizeView(view: handleView, size: CGSize(width: kHandleExtent, height: kHandleLength), priority: LayoutPriority(rawValue: 1000))
+            SizeView(view: self, size: CGSize(width: kDrawerExtent,height: SkipConstraint), priority: LayoutPriority(rawValue: 1000))
+            StretchViewToTopLayoutGuide(controller: parent, view: self, inset: 0, priority: LayoutPriority(rawValue: 1000))
+            StretchViewToBottomLayoutGuide(controller: parent, view: self, inset: 0, priority: LayoutPriority(rawValue: 1000))
         }
         else {
-            CenterViewInSuperview(view: handleView, horizontal: true, vertical: false, priority: 1000)
-            SizeView(view: handleView, size: CGSize(width: kHandleLength, height: kHandleExtent), priority: 1000)
-            SizeView(view: self, size: CGSize(width: SkipConstraint, height: kDrawerExtent), priority: 1000)
-            StretchViewHorizontallyToSuperview(view: self, inset: 0, priority: 1000)
+            CenterViewInSuperview(view: handleView, horizontal: true, vertical: false, priority: LayoutPriority(rawValue: 1000))
+            SizeView(view: handleView, size: CGSize(width: kHandleLength, height: kHandleExtent), priority: LayoutPriority(rawValue: 1000))
+            SizeView(view: self, size: CGSize(width: SkipConstraint, height: kDrawerExtent), priority: LayoutPriority(rawValue: 1000))
+            StretchViewHorizontallyToSuperview(view: self, inset: 0, priority: LayoutPriority(rawValue: 1000))
         }
         switch side {
         case .left, .leading:
             self.c = NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: parent.view, attribute: .leading, multiplier: 1, constant: kClosedDrawExtent)
-            AlignViewInSuperview(view: handleView, attribute: .trailing, inset: kHandleInset, priority: 1000)
+            AlignViewInSuperview(view: handleView, attribute: .trailing, inset: kHandleInset, priority: LayoutPriority(rawValue: 1000))
         case .right, .trailing:
             self.c = NSLayoutConstraint(item: parent.view, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: kClosedDrawExtent)
-            AlignViewInSuperview(view: handleView, attribute: .leading, inset: kHandleInset, priority: 1000)
+            AlignViewInSuperview(view: handleView, attribute: .leading, inset: kHandleInset, priority: LayoutPriority(rawValue: 1000))
         case .top:
             self.c = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: parent.view, attribute: .top, multiplier: 1, constant: kClosedDrawExtent)
-            AlignViewInSuperview(view: handleView, attribute: .bottom, inset: kHandleInset, priority: 1000)
+            AlignViewInSuperview(view: handleView, attribute: .bottom, inset: kHandleInset, priority: LayoutPriority(rawValue: 1000))
         case .bottom:
             self.c = NSLayoutConstraint(item: parent.view, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: kClosedDrawExtent)
-            AlignViewInSuperview(view: handleView, attribute: .top, inset: kHandleInset, priority: 1000)
+            AlignViewInSuperview(view: handleView, attribute: .top, inset: kHandleInset, priority: LayoutPriority(rawValue: 1000))
         default:
             break
         }
@@ -179,7 +179,7 @@ class DragInView : UIView {
         // This is the all-purpose position constraint regardless
         // of the side the view is presented on
         //c.installWithPriority(750)
-        c.priority = 750
+        c.priority = UILayoutPriority(rawValue: 750)
         
         parent.view.addConstraint(c)
         

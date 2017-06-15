@@ -30,6 +30,7 @@ class SpringBasedDrawerViewController: UIViewController {
             dragInView?.drawerMaxCutOffExtent(300)
             dragInView?.visibleHeightWhenClosed(40)
             dragInView?.visibleHeightWhenOpened(height - 50)
+            dragInView?.backgroundColor = UIColor.white
             
             dragInView?.setupConstraints(onParent: self)
             dragInView?.setupGestures()

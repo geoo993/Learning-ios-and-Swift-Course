@@ -70,11 +70,11 @@ public extension GameSequenceExtensions where Self.Iterator.Element: Hashable {
 
     public func skipDuplicates() -> [Element] {
         
-        guard var list = (self as? [Element]) else { return [] }
+        guard var list = (self as? [Self.Iterator.Element]) else { return [] }
         
         //do not take duplicated words
-        var tempList = [Element]()
-        var elementsRemoved = [Element]()
+        var tempList : [Self.Iterator.Element] = []
+        var elementsRemoved : [Self.Iterator.Element] = []
         
         for word in list{
             if (tempList.contains(word)){
@@ -115,7 +115,7 @@ public extension GameSequenceExtensions where Self.Iterator.Element: Hashable {
     public func take(_ amount: Int) -> [Element] {
         guard var list = (self as? [Self.Iterator.Element]), list.count > 1, amount <= list.count else { return [] }
         
-        var temp = [Element]()
+        var temp : [Self.Iterator.Element] = []
         var count = amount
         
         while count > 0 {
@@ -133,7 +133,7 @@ public extension GameSequenceExtensions where Self.Iterator.Element: Hashable {
         
         guard var list = (self as? [Self.Iterator.Element]), list.count > 0 else { return [] }
         
-        var temp = [Element]()
+        var temp : [Self.Iterator.Element] = []
         
         while list.count > 0 {
             let index = Int(arc4random_uniform(UInt32(list.count - 1)))
@@ -153,9 +153,14 @@ public extension GameSequenceExtensions where Self.Iterator.Element: Hashable {
     public func removeAllAfter(index: Int) -> [Element]{
         
         guard let list = (self as? [Self.Iterator.Element]), list.count > index else { return [] }
-        return list.enumerated().flatMap { (ind, element) -> Element? in
-            return (ind <= index) ? list[ind] : nil
+        
+        var temp : [Self.Iterator.Element] = []
+        for (ind,element) in list.enumerated(){
+            if (ind <= index) {
+               temp.append(element) 
+            } 
         }
+        return temp
     }
        
 }

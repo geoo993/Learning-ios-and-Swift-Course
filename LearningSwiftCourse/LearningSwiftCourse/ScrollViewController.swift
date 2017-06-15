@@ -154,7 +154,7 @@ extension ScrollViewController: UIScrollViewDelegate {
       
         for i in 0..<self.slidesViews.count {
             
-            animationChain?.cancelAnimationChain({ [weak self] _ in
+            animationChain?.cancelAnimationChain({ [weak self] () -> Void in
                 guard let this = self else { return }
                 let slide = this.slidesViews[i]
                 slide.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)

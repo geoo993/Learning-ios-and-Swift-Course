@@ -504,12 +504,12 @@ extension InspirationalFilmsViewController {
             //videoPlayer?.isMuted = true
             
             videoPlayerLayer =  AVPlayerLayer(player: videoPlayer)
-            videoPlayerLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+            videoPlayerLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
             videoPlayerLayer?.zPosition = -1
             
             videoPlayerLayer?.frame = videoView.bounds
             videoPlayerLayer?.backgroundColor = UIColor.clear.cgColor
-            videoPlayerLayer?.videoGravity = AVLayerVideoGravityResizeAspect
+            videoPlayerLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
             videoView.backgroundColor = UIColor.clear
             //self.videoView.layer.addSublayer(playerLayer!)
             videoView.layer.insertSublayer(videoPlayerLayer!, at: 0)

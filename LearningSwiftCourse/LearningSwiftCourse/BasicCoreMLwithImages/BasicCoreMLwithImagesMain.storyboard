@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="7SK-CQ-PKI">
+                                <rect key="frame" x="16" y="77" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WtA-tE-CHq" appends="YES" id="bFZ-3R-a26"/>
+                                </connections>
+                            </imageView>
+                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img2" translatesAutoresizingMaskIntoConstraints="NO" id="gji-Ag-rGF">
+                                <rect key="frame" x="137" y="77" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cm9-Qo-jIJ" appends="YES" id="MMS-IU-5tP"/>
+                                </connections>
+                            </imageView>
+                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img3" translatesAutoresizingMaskIntoConstraints="NO" id="Wke-QL-5vl">
+                                <rect key="frame" x="259" y="77" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1i7-9y-tCB" appends="YES" id="YyJ-Eh-hpW"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oc9-BY-Dmq">
+                                <rect key="frame" x="16" y="215" width="343" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="categoryLabel" destination="Oc9-BY-Dmq" id="Lip-wR-jYI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WtA-tE-CHq" userLabel="1">
+                    <connections>
+                        <action selector="imageTapped:" destination="BYZ-38-t0r" id="pEM-bc-JkN"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="cm9-Qo-jIJ" userLabel="2">
+                    <connections>
+                        <action selector="imageTapped:" destination="BYZ-38-t0r" id="UfP-Ns-75D"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1i7-9y-tCB" userLabel="3">
+                    <connections>
+                        <action selector="imageTapped:" destination="BYZ-38-t0r" id="Z4D-qj-czM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Basic CoreM Lwith Images View Controller-->
+        <scene sceneID="o44-6P-TYX">
+            <objects>
+                <viewController storyboardIdentifier="BasicCoreMLwithImagesViewController" id="oZx-3y-Vex" customClass="BasicCoreMLwithImagesViewController" customModule="LearningSwiftCourse" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rYf-Xl-Qcc"/>
+                        <viewControllerLayoutGuide type="bottom" id="uU7-Ae-cRv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mof-7x-wTP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlP-kU-ZJL">
+                                <rect key="frame" x="87.5" y="20" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="LXS-UF-O76"/>
+                                    <constraint firstAttribute="height" constant="40" id="i06-Px-rN0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I74-wV-fQU">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5N2-4y-YVP">
+                                    <size key="itemSize" width="224" height="224"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="10"/>
+                                    <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imagesCollectionCell" id="hci-4l-iwd" customClass="BasicCoreMLwithImagesCollectionViewCell" customModule="LearningSwiftCourse">
+                                        <rect key="frame" x="75.5" y="20" width="224" height="224"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="224" height="224"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgw-B4-lti">
+                                                    <rect key="frame" x="0.0" y="0.0" width="224" height="224"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="224" id="b1Z-7a-CPc"/>
+                                                        <constraint firstAttribute="height" constant="224" id="poL-gJ-o2K"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="bgw-B4-lti" firstAttribute="top" secondItem="hci-4l-iwd" secondAttribute="top" id="Oq9-J4-jv2"/>
+                                            <constraint firstItem="bgw-B4-lti" firstAttribute="leading" secondItem="hci-4l-iwd" secondAttribute="leading" id="Yf5-yT-sET"/>
+                                            <constraint firstAttribute="trailing" secondItem="bgw-B4-lti" secondAttribute="trailing" id="kRM-kr-dR1"/>
+                                            <constraint firstAttribute="bottom" secondItem="bgw-B4-lti" secondAttribute="bottom" id="tEl-OQ-a1O"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellImageView" destination="bgw-B4-lti" id="Xfc-77-wNz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="h4n-G1-TSz">
+                                    <rect key="frame" x="0.0" y="244" width="375" height="10"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="oZx-3y-Vex" id="buD-pv-tE2"/>
+                                    <outlet property="delegate" destination="oZx-3y-Vex" id="16c-ix-c9j"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uU7-Ae-cRv" firstAttribute="top" secondItem="I74-wV-fQU" secondAttribute="bottom" id="35w-X2-6qu"/>
+                            <constraint firstItem="I74-wV-fQU" firstAttribute="leading" secondItem="mof-7x-wTP" secondAttribute="leading" id="4nR-cA-02D"/>
+                            <constraint firstItem="MlP-kU-ZJL" firstAttribute="centerX" secondItem="mof-7x-wTP" secondAttribute="centerX" id="C7T-f8-SKY"/>
+                            <constraint firstItem="I74-wV-fQU" firstAttribute="top" secondItem="MlP-kU-ZJL" secondAttribute="bottom" id="KvJ-E9-K7F"/>
+                            <constraint firstItem="I74-wV-fQU" firstAttribute="centerX" secondItem="mof-7x-wTP" secondAttribute="centerX" id="c0D-66-vF8"/>
+                            <constraint firstAttribute="trailing" secondItem="I74-wV-fQU" secondAttribute="trailing" id="wjT-8j-Hro"/>
+                            <constraint firstItem="MlP-kU-ZJL" firstAttribute="top" secondItem="mof-7x-wTP" secondAttribute="top" constant="20" id="yiu-zf-oKW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="categoryLabel" destination="MlP-kU-ZJL" id="IQK-xc-wX7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDO-f7-BQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816.79999999999995" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img1" width="224" height="224"/>
+        <image name="img2" width="224" height="224"/>
+        <image name="img3" width="224" height="224"/>
+    </resources>
+</document>

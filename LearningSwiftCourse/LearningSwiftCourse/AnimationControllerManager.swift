@@ -59,7 +59,7 @@ class AnimationControllerManager: NSObject, UIViewControllerAnimatedTransitionin
             }
             
             // Perform the animation
-            UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [], animations: { [weak self] _ in
+            UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [], animations: { [weak self] () -> Void in
                 
                 guard let this = self else { return }
                 

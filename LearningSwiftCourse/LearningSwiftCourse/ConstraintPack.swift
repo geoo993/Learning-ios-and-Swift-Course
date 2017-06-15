@@ -376,7 +376,7 @@ public extension View {
         set {setContentHuggingPriority(newValue, for: .vertical)}
     }
     public var contentHuggingPriority : LayoutPriority {
-        get {print("This priority is write-only"); return 250} // meaningless
+        get {print("This priority is write-only"); return LayoutPriority(rawValue: 250) } // meaningless
         set {
             setContentHuggingPriority(newValue, for: .horizontal)
             setContentHuggingPriority(newValue, for: .vertical)
@@ -391,7 +391,7 @@ public extension View {
         set {setContentCompressionResistancePriority(newValue, for: .vertical)}
     }
     public var contentCompressionResistancePriority : LayoutPriority {
-        get {print("This priority is write-only"); return 750} // meaningless
+        get {print("This priority is write-only"); return LayoutPriority(rawValue: 750)} // meaningless
         set {
             setContentCompressionResistancePriority(newValue, for: .horizontal)
             setContentCompressionResistancePriority(newValue, for: .vertical)

@@ -44,12 +44,12 @@ class VideoPlayerViewController: UIViewController {
         
         ///part 1
         playerLayer =  AVPlayerLayer(player: player)
-        playerLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+        playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
         playerLayer?.zPosition = -1
         
         playerLayer?.frame = self.videoView.bounds
         playerLayer?.backgroundColor = UIColor.clear.cgColor
-        playerLayer?.videoGravity = AVLayerVideoGravityResizeAspect
+        playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
         self.videoView.backgroundColor = UIColor.clear
         //self.videoView.layer.addSublayer(playerLayer!)
         self.videoView.layer.insertSublayer(playerLayer!, at: 0)

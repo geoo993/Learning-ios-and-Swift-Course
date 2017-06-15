@@ -10,10 +10,10 @@ import Foundation
 
 public extension Dictionary where Value: Equatable {
     public func firstKeyForValue(forValue val: Value) -> Key? {
-        return first(where: { $1 == val })?.0
+        return first(where: { $0.1 == val })?.0
     }
     public func allKeysForValue(val : Value) -> [Key] {
-        return self.filter { $1 == val }.map { $0.0 }
+        return self.filter { $0.1 == val }.map { $0.0 }
     }
     
     public func getKeyString(index : Int) -> String{
