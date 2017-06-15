@@ -8,27 +8,27 @@
 
 import Foundation
 
-extension Dictionary where Value: Equatable {
-    func firstKeyForValue(forValue val: Value) -> Key? {
+public extension Dictionary where Value: Equatable {
+    public func firstKeyForValue(forValue val: Value) -> Key? {
         return first(where: { $1 == val })?.0
     }
-    func allKeysForValue(val : Value) -> [Key] {
+    public func allKeysForValue(val : Value) -> [Key] {
         return self.filter { $1 == val }.map { $0.0 }
     }
     
-    func getKeyString(index : Int) -> String{
+    public func getKeyString(index : Int) -> String{
         return Array(self)[index].key as? String ?? ""
     }
     
-    func getKeyInt(index : Int) -> Int{
+    public func getKeyInt(index : Int) -> Int{
        return Array(self)[index].key as? Int ?? 0
     }
     
-    func getValueString(index : Int) -> String{
+    public func getValueString(index : Int) -> String{
         return Array(self)[index].value as? String ?? ""
     }
     
-    func getValueInt(index : Int) -> Int {
+    public func getValueInt(index : Int) -> Int {
         return Array(self)[index].value as? Int ?? 0
     }
 }

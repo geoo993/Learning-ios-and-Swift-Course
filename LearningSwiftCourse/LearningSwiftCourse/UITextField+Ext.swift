@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-extension UITextField {
-    var placeHolderColor: UIColor? {
+public extension UITextField {
+    public var placeHolderColor: UIColor? {
         get {
             return self.placeHolderColor
         }
@@ -19,7 +19,7 @@ extension UITextField {
         }
     }
     
-    var placeHolderMagnifyingGlassColor : UIColor? {
+    public var placeHolderMagnifyingGlassColor : UIColor? {
         get {
             return self.placeHolderMagnifyingGlassColor
         }

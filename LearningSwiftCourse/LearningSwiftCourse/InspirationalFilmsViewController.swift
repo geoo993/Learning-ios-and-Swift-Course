@@ -12,6 +12,7 @@ import RxSwift
 import AVKit
 import AVFoundation
 import IBAnimatable
+import LearningSwiftCourseExtensions
 
 @IBDesignable
 class InspirationalFilmsViewController: UIViewController {

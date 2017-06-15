@@ -13,7 +13,7 @@ import ImageIO
 
 extension UIImage {
     
-    static func setImageFromURl(stringImageUrl urlString: String) -> UIImage? {
+    public static func setImageFromURl(stringImageUrl urlString: String) -> UIImage? {
         
         var img : UIImage? = UIImage(named: "noImage") 
         
@@ -68,7 +68,7 @@ extension UIImage {
     }
     
     
-    class func delayForImageAtIndex(index: Int, source: CGImageSource!) -> Double {
+    public class func delayForImageAtIndex(index: Int, source: CGImageSource!) -> Double {
         var delay = 0.1
         
         let cfProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil)
@@ -89,7 +89,7 @@ extension UIImage {
         return delay
     }
     
-    class func gcdForPair(_ a: Int?, _ b: Int?) -> Int {
+    public class func gcdForPair(_ a: Int?, _ b: Int?) -> Int {
         var a = a
         var b = b
         if b == nil || a == nil {
@@ -121,7 +121,7 @@ extension UIImage {
         }
     }
     
-    class func gcdForArray(array: Array<Int>) -> Int {
+    public class func gcdForArray(array: Array<Int>) -> Int {
         if array.isEmpty {
             return 1
         }
@@ -135,7 +135,7 @@ extension UIImage {
         return gcd!
     }
     
-    class func animatedImageWithSource(source: CGImageSource) -> UIImage? {
+    public class func animatedImageWithSource(source: CGImageSource) -> UIImage? {
         let count = CGImageSourceGetCount(source)
         var images = [CGImage]()
         var delays = [Int]()

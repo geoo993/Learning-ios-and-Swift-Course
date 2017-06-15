@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-extension UIButton {
+public extension UIButton {
     
     /*
     override open var isSelected: Bool {
@@ -33,7 +33,7 @@ extension UIButton {
         return image!
     }
     
-    func setBackgroundColor(color: UIColor, for state: UIControlState) {
+    public func setBackgroundColor(color: UIColor, for state: UIControlState) {
         self.setBackgroundImage(imageWithColor(color: color), for: state)
     }
     

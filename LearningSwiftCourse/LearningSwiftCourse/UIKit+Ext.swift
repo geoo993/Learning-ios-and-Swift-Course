@@ -17,7 +17,7 @@ public struct ColorComponents {
 }
 
 
-extension UIColor {
+public  extension UIColor {
     
     public static func systemsBlueColor () -> UIColor
     {
@@ -39,23 +39,23 @@ extension UIColor {
         }
     }
     
-    var redValue: CGFloat{
+    public  var redValue: CGFloat{
         return cgColor.components! [0]
     }
     
-    var greenValue: CGFloat{
+    public  var greenValue: CGFloat{
         return cgColor.components! [1]
     }
     
-    var blueValue: CGFloat{
+    public var blueValue: CGFloat{
         return cgColor.components! [2]
     }
     
-    var alphaValue: CGFloat{
+    public var alphaValue: CGFloat{
         return cgColor.components! [3]
     }
     
-    func getRBGValues() -> (r:CGFloat, g:CGFloat,b:CGFloat, a:CGFloat){
+    public func getRBGValues() -> (r:CGFloat, g:CGFloat,b:CGFloat, a:CGFloat){
         return (r:redValue, g:greenValue, b: blueValue, a:alphaValue)
     }
     
@@ -101,7 +101,7 @@ extension UIColor {
         return nil
     }
     
-    convenience init(red: Int, green: Int, blue: Int, a: CGFloat = 1.0) {
+    public convenience init(red: Int, green: Int, blue: Int, a: CGFloat = 1.0) {
         self.init(
             red: CGFloat(red) / 255.0,
             green: CGFloat(green) / 255.0,
@@ -110,7 +110,7 @@ extension UIColor {
         )
     }
     
-    convenience init(rgb: Int, a: CGFloat = 1.0) {
+    public convenience init(rgb: Int, a: CGFloat = 1.0) {
         self.init(
             red: (rgb >> 16) & 0xFF,
             green: (rgb >> 8) & 0xFF,
@@ -119,7 +119,7 @@ extension UIColor {
         )
     }
 
-    func toHexString() -> String {
+    public func toHexString() -> String {
         var r:CGFloat = 0
         var g:CGFloat = 0
         var b:CGFloat = 0
@@ -129,7 +129,7 @@ extension UIColor {
         return NSString(format:"#%06x", rgb) as String
     }
     
-    static let cssString : [String] = [
+    public static let cssString : [String] = [
         "CLEAR" ,
         "TRANSPARENT",
         "" ,

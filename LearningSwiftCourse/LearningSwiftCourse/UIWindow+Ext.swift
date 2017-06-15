@@ -9,17 +9,17 @@
 import Foundation
 import UIKit
 
-extension UIWindow {
+public extension UIWindow {
     
     
-    func visibleViewController() -> UIViewController? {
+    public func visibleViewController() -> UIViewController? {
         if let rootViewController: UIViewController  = self.rootViewController {
             return UIWindow.getVisibleViewControllerFrom(vc: rootViewController)
         }
         return nil
     }
     
-    class func getVisibleViewControllerFrom(vc:UIViewController) -> UIViewController {
+    public class func getVisibleViewControllerFrom(vc:UIViewController) -> UIViewController {
         
         if vc.isKind(of: UINavigationController.self) {
             

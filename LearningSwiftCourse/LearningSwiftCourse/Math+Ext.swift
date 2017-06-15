@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 
-extension Int {
+public extension Int {
     
     public static func random(min: Int, max:Int) -> Int {
         return min + Int(arc4random_uniform(UInt32(max - min + 1)))
     }
     
 }
-extension Double {
+public extension Double {
     
     public static func random(min: Double, max: Double) -> Double {
         
@@ -35,7 +35,7 @@ extension Double {
     
 }
 
-extension CGFloat {
+public extension CGFloat {
     
     public static func overrideSizeF(size:CGFloat) -> CGFloat {
         let bounds = UIScreen.main.bounds

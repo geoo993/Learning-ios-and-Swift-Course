@@ -13,9 +13,9 @@ import UIKit
 //http://stackoverflow.com/questions/39813497/swift-3-display-image-from-url
 //http://stackoverflow.com/questions/29472149/swift-how-to-display-an-image-using-url
 
-extension UIImageView {
+public extension UIImageView {
     
-    func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    public func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard
@@ -29,13 +29,13 @@ extension UIImageView {
             }
             }.resume()
     }
-    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    public func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
         guard let url = URL(string: link) else { return }
         downloadedFrom(url: url, contentMode: mode)
     }
     
     
-    func downloadImageFrom(url:URL){
+    public func downloadImageFrom(url:URL){
         
         if let imageData = NSData(contentsOf: url)  {
             let str64 = imageData.base64EncodedData(options: .lineLength64Characters)
@@ -67,7 +67,7 @@ extension UIImageView {
         
     }
     
-    func loadFromURL(url: URL)  {
+    public func loadFromURL(url: URL)  {
         
         DispatchQueue.global().async {
             let data = try? Data(contentsOf: url) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
@@ -84,7 +84,7 @@ extension UIImageView {
         
     }
       
-    func blurImage()
+    public func blurImage()
     {
         let _ = self.subviews.filter({ $0 is UIVisualEffectView }).map({ $0.removeFromSuperview() })
         

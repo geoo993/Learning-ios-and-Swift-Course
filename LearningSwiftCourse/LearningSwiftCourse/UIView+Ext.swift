@@ -114,7 +114,7 @@ public extension UIView {
     }
     
     
-    func blurNewView(newChild: UIView, effect: UIBlurEffectStyle){
+    public func blurNewView(newChild: UIView, effect: UIBlurEffectStyle){
         let parent = self
         
         // Blur Effect
@@ -136,14 +136,14 @@ public extension UIView {
     }
     
     
-    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+    public func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
         self.layer.mask = mask
     }
     
-    func addBorder(mask: CAShapeLayer, borderColor: UIColor, borderWidth: CGFloat) {
+    public func addBorder(mask: CAShapeLayer, borderColor: UIColor, borderWidth: CGFloat) {
         let borderLayer = CAShapeLayer()
         borderLayer.path = mask.path
         borderLayer.fillColor = UIColor.clear.cgColor
@@ -153,19 +153,19 @@ public extension UIView {
         layer.addSublayer(borderLayer)
     }
     
-    func fadeIn(_ duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
+    public func fadeIn(_ duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
         UIView.animate(withDuration: duration, delay: delay, options: UIViewAnimationOptions.curveEaseIn, animations: {
             self.alpha = 1.0
         }, completion: completion)  }
     
-    func fadeOut(_ duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, completion: @escaping (Bool) -> Void = {(finished: Bool) -> Void in}) {
+    public func fadeOut(_ duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, completion: @escaping (Bool) -> Void = {(finished: Bool) -> Void in}) {
         UIView.animate(withDuration: duration, delay: delay, options: UIViewAnimationOptions.curveEaseIn, animations: {
             self.alpha = 0.0
         }, completion: completion)
     }
     
     // Recursive remove subviews and constraints
-    func removeSubviews() {
+    public func removeSubviews() {
         self.subviews.forEach({
             if !($0 is UILayoutSupport) {
                 $0.removeSubviews()
@@ -176,7 +176,7 @@ public extension UIView {
     }
     
     // Recursive remove subviews and constraints
-    func removeSubviewsAndConstraints() {
+    public func removeSubviewsAndConstraints() {
         self.subviews.forEach({
             $0.removeSubviewsAndConstraints()
             $0.removeConstraints($0.constraints)
@@ -184,7 +184,7 @@ public extension UIView {
         })
     }
     
-    func removeEverything (){
+    public func removeEverything (){
         while(self.subviews.count > 0) 
         {
             self.removeSubviewsAndConstraints()

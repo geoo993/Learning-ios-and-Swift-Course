@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIImage {
+public  extension UIImage {
     
     /// Resizes an image to the specified size.
     ///
@@ -18,7 +18,7 @@ extension UIImage {
     ///
     /// - Returns: the resized image.
     ///
-    func imageWithSize(size: CGSize) -> UIImage {
+    public  func imageWithSize(size: CGSize) -> UIImage {
         
         if UIScreen.main.responds(to: #selector(NSDecimalNumberBehaviors.scale)){
             UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale);
@@ -47,7 +47,7 @@ extension UIImage {
     ///         the final image's size will be equal to:
     ///         `CGSize(width: size.width + extraMargin * 2, height: size.height + extraMargin * 2)`
     ///
-    func imageWithSize(size: CGSize, extraMargin: CGFloat) -> UIImage {
+    public func imageWithSize(size: CGSize, extraMargin: CGFloat) -> UIImage {
         
         let imageSize = CGSize(width: size.width + extraMargin * 1.5, height: size.height + extraMargin * 1.5)
         
@@ -62,7 +62,7 @@ extension UIImage {
     }
     
     //Summon this function VVV
-    func resizeImageWithAspect(image: UIImage,scaledToMaxWidth width:CGFloat,maxHeight height :CGFloat)->UIImage
+    public  func resizeImageWithAspect(image: UIImage,scaledToMaxWidth width:CGFloat,maxHeight height :CGFloat)->UIImage
     {
         let oldWidth = image.size.width;
         let oldHeight = image.size.height;
