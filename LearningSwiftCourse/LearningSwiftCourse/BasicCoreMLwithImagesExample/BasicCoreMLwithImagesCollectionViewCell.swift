@@ -26,7 +26,5 @@ class BasicCoreMLwithImagesCollectionViewCell: UICollectionViewCell {
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-        
-        
     }
 }

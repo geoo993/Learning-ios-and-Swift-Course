@@ -78,14 +78,14 @@ class ButtonsTypesViewController: UIViewController {
         button.addTarget(self, action: #selector(systemsButtonTouchUpInside), for: UIControlEvents.touchUpInside)
         button.addTarget(self, action: #selector(systemsButtonTouchUpOutside), for: UIControlEvents.touchUpOutside)
     }
-    func systemsButtonDown(_ sender : UIButton){
+    @objc func systemsButtonDown(_ sender : UIButton){
         print("Systems Button Touch Down")
     }
     
-    func systemsButtonTouchUpInside(_ sender : UIButton){
+    @objc func systemsButtonTouchUpInside(_ sender : UIButton){
         print("Systems Button Touch Up Inside")
     }
-    func systemsButtonTouchUpOutside(_ sender : UIButton){
+    @objc func systemsButtonTouchUpOutside(_ sender : UIButton){
         print("Systems Button Touch Up Outside")
     }
     
@@ -116,15 +116,15 @@ class ButtonsTypesViewController: UIViewController {
         button.addTarget(self, action: #selector(customButtonTouchUpOutside), for: UIControlEvents.touchUpOutside)
     }
     
-    func customButtonDown(_ sender : UIButton){
+    @objc func customButtonDown(_ sender : UIButton){
         sender.titleLabel?.alpha = 0.2
     }
-    func customButtonTouchUpInside(_ sender : UIButton){
+    @objc func customButtonTouchUpInside(_ sender : UIButton){
         UIView.animate(withDuration: 0.2) {
             sender.titleLabel?.alpha = 1.0
         }
     }
-    func customButtonTouchUpOutside(_ sender : UIButton){
+    @objc func customButtonTouchUpOutside(_ sender : UIButton){
         UIView.animate(withDuration: 0.2) {
             sender.titleLabel?.alpha = 1.0
         }

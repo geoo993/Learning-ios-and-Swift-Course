@@ -21,10 +21,10 @@ class ParallaxViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     
-    let imageNames = ["autumnlandscape", "desert", "GoldenGateBridge", "happiness","japanvillage", "pexels", "treesfallredleaves", "svetik", "snowvillage","naturemountain"] 
+    let imageNames = ["autumnlandscape", "desert", "GoldenGateBridge", "happiness","japanvillage", "pexels", "treesfallredleaves", "svetik", "snowvillage","naturemountain","foresttreesfog"] 
     var images = [UIImage]()
     
-    let cellItems = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Home"]
+    let cellItems = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten","Home"]
     
     
     // Mark: - Parallax elements
@@ -114,7 +114,7 @@ class ParallaxViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 9 {
+        if indexPath.row == (cellItems.count - 1) {
             dismiss(animated: true) { 
                 print("view controller dismissed, now going to home page")
             }

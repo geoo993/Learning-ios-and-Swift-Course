@@ -14,25 +14,19 @@ class BasicCoreMLwithImagesViewController: UIViewController {
     
     let googleNetPlacesModel = GoogLeNetPlaces()
     private let reuseIdentifier = "imagesCollectionCell"
-    var images : [UIImage?] = [0..<3].flatMap{ $0 }.map{ UIImage(named: "img\($0 + 1)")! }
+    var images : [UIImage?] = [0..<16].flatMap{ $0 }.map{ UIImage(named: "img\($0 + 1)")! }
+    
+    @IBAction func homebutton(_ sender: UIButton) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-//    @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
-//        let imageView = sender.view as? UIImageView
-//        
-//        if let imageToAnalyse = imageView?.image {
-//            if let sceneLabelString = sceneLabel(forImage: imageToAnalyse) {
-//                categoryLabel.text = sceneLabelString
-//            }
-//        }
-//        
-//        
-//    }
-    
     func sceneLabel(forImage image: UIImage) -> String?
     {
         //requires to pass along a CVPixelBuffer
