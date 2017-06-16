@@ -5,6 +5,8 @@
 //  Created by Brian Advent on 09.06.17.
 //  Copyright © 2017 Brian Advent. All rights reserved.
 //
+//https://www.youtube.com/watch?v=cyWYTwDtbyw
+//https://www.youtube.com/watch?v=NNKPbdT9gXU
 
 import UIKit
 

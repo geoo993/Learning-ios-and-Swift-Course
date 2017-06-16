@@ -12,7 +12,8 @@ containerView.backgroundColor = UIColor.blue
 
 let label = UILabel(frame:CGRect(x: 0, y: 0, width: 200, height: 30))
 label.textAlignment = .center
-label.center = containerView.center
+label.font = label.font.withSize(12)
+label.center = CGPoint(x:80, y: containerView.center.y)
 containerView.addSubview(label)
 
 
@@ -26,8 +27,6 @@ observableInterval
     .subscribe(onNext: { (index) in
         label.text = colors[index] 
         containerView.backgroundColor = UIColor(hex: colors[index] )
-    },onCompleted: { (element) in 
-        print("completed colors count")
     }).addDisposableTo(disposeBag)
 
 PlaygroundPage.current.liveView = containerView

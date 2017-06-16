@@ -43,7 +43,7 @@ class MainCollectionViewController: UICollectionViewController {
                            //"DraggableTopMenuMainViewController" : "DraggableVerticalMenusMain",
                            //"SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
                            "ButtonsTypesViewController": "ButtonsMain",
-                            "BasicCoreMLwithImagesViewController" : "BasicCoreMLwithImagesMain",
+                            //"BasicCoreMLwithImagesViewController" : "BasicCoreMLwithImagesMain",
                            ]
     
     //Mark: - Collection view 
