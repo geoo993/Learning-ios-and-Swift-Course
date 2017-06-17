@@ -17,11 +17,16 @@ public struct ColorComponents {
 }
 
 
-public  extension UIColor {
+public extension UIColor {
     
     public static func systemsBlueColor () -> UIColor
     {
         return UIColor.init(red: 0.0, green: 0.4784, blue: 1.0, alpha: 1.0) 
+    }
+    public func getTextColor () -> UIColor {
+        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        _ = self.getRed(&r, green: &g, blue: &b, alpha: &a)
+        return (r<0.8 && g<0.8 && b<0.8) ? UIColor.white : UIColor.black
     }
     public static func randomColor() -> UIColor {
         

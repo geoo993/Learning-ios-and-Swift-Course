@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MkE-uC-9BW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Colors-->
+        <scene sceneID="Skg-qe-0fg">
+            <objects>
+                <tableViewController storyboardIdentifier="SearchBarTableViewController" id="Nti-EF-dHY" customClass="SearchBarTableViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aAB-2m-hfR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchbarCell" id="cRX-bl-5nW" customClass="SearchBarTableViewCell" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cRX-bl-5nW" id="L6h-p3-rPC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEw-bS-RyM">
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="43.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="rEw-bS-RyM" secondAttribute="trailing" constant="10" id="Bn8-6W-TQy"/>
+                                        <constraint firstAttribute="bottom" secondItem="rEw-bS-RyM" secondAttribute="bottom" id="IFJ-bI-ksl"/>
+                                        <constraint firstItem="rEw-bS-RyM" firstAttribute="top" secondItem="L6h-p3-rPC" secondAttribute="top" id="qHN-SA-Rae"/>
+                                        <constraint firstItem="rEw-bS-RyM" firstAttribute="leading" secondItem="L6h-p3-rPC" secondAttribute="leading" id="qZm-8A-5up"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleTextLabel" destination="rEw-bS-RyM" id="zBw-oU-czM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Nti-EF-dHY" id="gze-Wr-KQY"/>
+                            <outlet property="delegate" destination="Nti-EF-dHY" id="kVU-Vt-b8E"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Colors" id="8H5-yq-U2V"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="STx-zl-xRL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527" y="125"/>
+        </scene>
+        <!--Search Bar View Navigation Controller-->
+        <scene sceneID="rCz-qh-i7u">
+            <objects>
+                <navigationController storyboardIdentifier="SearchBarViewNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="MkE-uC-9BW" customClass="SearchBarViewNavigationController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QQ0-2K-4gw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Nti-EF-dHY" kind="relationship" relationship="rootViewController" id="G5k-M7-aNN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KWt-sc-78C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-267.19999999999999" y="125.93703148425789"/>
+        </scene>
+    </scenes>
+</document>

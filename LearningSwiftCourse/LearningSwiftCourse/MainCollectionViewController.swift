@@ -44,7 +44,8 @@ class MainCollectionViewController: UICollectionViewController {
                            //"SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
                            //"ButtonsTypesViewController": "ButtonsMain",
                             //"BasicCoreMLwithImagesViewController" : "BasicCoreMLwithImagesMain",
-                            "SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain"
+                            //"SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",
+                            "SearchBarViewNavigationController" : "SearchBarMain",
                            ]
     
     //Mark: - Collection view 
