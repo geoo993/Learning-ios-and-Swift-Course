@@ -59,7 +59,7 @@ class StretchyHeaderTableViewController: UITableViewController {
     let kTableHeaderHeight: CGFloat = 250.0  
     let kTableHeaderCutAway: CGFloat = 50.0  
     
-    var useCutOff = false
+    var useCutOff = true
     var headerCutOffLayer : CAShapeLayer!
     var slideShowView : SlideShowView? = nil
     let imageNames = ["autumnlandscape", "desert", "GoldenGateBridge", "happiness","japanvillage", "pexels", "treesfallredleaves", "bg-header"] 

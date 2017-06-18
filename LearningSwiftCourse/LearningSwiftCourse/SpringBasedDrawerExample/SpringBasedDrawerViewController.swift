@@ -18,6 +18,11 @@ class SpringBasedDrawerViewController: UIViewController {
     
     var dragInView : DragInView?
     
+    //Mark: - Status bar
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

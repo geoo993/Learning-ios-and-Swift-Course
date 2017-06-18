@@ -122,7 +122,7 @@ class DraggableView: UIView {
     }
     
     
-    func handlePan (pan:UIPanGestureRecognizer) {
+    @objc func handlePan (pan:UIPanGestureRecognizer) {
         let velocity = pan.velocity(in: self.superview).y
         var movement = self.frame
         movement.origin.x = 0

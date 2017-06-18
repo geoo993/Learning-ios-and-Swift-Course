@@ -146,7 +146,7 @@ class SimpleDraggableView: UIView {
         topIndicator.addGestureRecognizer(doubleTap)
     }
     
-    func handleDoubleTap(_ recognizer: UITapGestureRecognizer)
+    @objc func handleDoubleTap(_ recognizer: UITapGestureRecognizer)
     {
         isOpen = !isOpen
         showBasePanel(open: isOpen)

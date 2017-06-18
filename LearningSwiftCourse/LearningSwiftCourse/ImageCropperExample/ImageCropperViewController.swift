@@ -28,12 +28,25 @@ class ImageCropperViewController: UIViewController {
             let scrollViewOffset = scrollView.contentOffset
             let image = scrollView.snapShotImage(withSize:scrollViewSize, opaque: true, offset: scrollViewOffset)
             
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-            let alert  = UIAlertController(title: "Image Save", message: "Your image has been saved to your camera roll", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:nil))
-            self.present(alert, animated: true, completion: nil)
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
             
         }
+    }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        
+        if let error = error {
+            // we got back an error!
+            let alert = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true, completion: nil)
+        } else {
+            
+            let alert  = UIAlertController(title: "Image Save!", message: "Your image has been saved to your camera roll", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(alert, animated: true, completion: nil)
+        }
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -78,7 +91,7 @@ class ImageCropperViewController: UIViewController {
         imageView?.addGestureRecognizer(tap)
     }
     
-    func handleImageTap(_ recognizer: UITapGestureRecognizer)
+    @objc func handleImageTap(_ recognizer: UITapGestureRecognizer)
     {
         let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
@@ -92,7 +105,6 @@ class ImageCropperViewController: UIViewController {
         alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
-        
         
     }
     

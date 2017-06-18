@@ -26,7 +26,7 @@ class MainCollectionViewController: UICollectionViewController {
                            //"TabBarViewController": "TabBarMain",
                            //"NavigationViewController": "NavBarMain",
                            //"ColorsViewController": "ColorsMain",
-                           //"ScrollViewController": "ScrollViewMain",
+                           "ScrollViewController": "ScrollViewMain",
                            //"CustomPageViewController" : "PageViewMain",
                            //"SlideShowViewController" : "SlideShowMain",
                            //"ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
@@ -41,12 +41,12 @@ class MainCollectionViewController: UICollectionViewController {
                            //"SWRevealViewController" : "MultiSidedBarMenuMain",
                            //"TopMenuNavigationController" : "TopMenuMain",
                            //"DraggableTopMenuMainViewController" : "DraggableVerticalMenusMain",
-                           "SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
-                           "ButtonsTypesViewController": "ButtonsMain",
-                            //"BasicCoreMLwithImagesViewController" : "BasicCoreMLwithImagesMain",
-                            "SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",
-                            "SearchBarViewNavigationController" : "SearchBarMain",
-                            "StretchyHeaderRevealViewController" : "StretchyHeaderMain",
+                           //"SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
+                           //"ButtonsTypesViewController": "ButtonsMain",
+                           //"BasicCoreMLwithImagesViewController" : "BasicCoreMLwithImagesMain",
+                            //"SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",
+                            //"SearchBarViewNavigationController" : "SearchBarMain",
+                            //"StretchyHeaderRevealViewController" : "StretchyHeaderMain",
                            ]
     
     //Mark: - Collection view 
