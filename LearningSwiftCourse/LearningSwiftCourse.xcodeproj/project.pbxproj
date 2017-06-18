@@ -27,6 +27,7 @@
 		C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */; };
 		C72E27BA1E9ED9EB0064E01B /* LearningSwiftCourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27B91E9ED9EB0064E01B /* LearningSwiftCourseTests.swift */; };
 		C72E27C51E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */; };
+		C72F58AC1EF67A0F005929E3 /* StretchyHeaderMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F58AB1EF67A0F005929E3 /* StretchyHeaderMenuTableViewController.swift */; };
 		C73977B21EEEEE91005C96C8 /* ImageCropperMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73977B11EEEEE91005C96C8 /* ImageCropperMain.storyboard */; };
 		C73977D01EEEEEC2005C96C8 /* ImageCropperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73977CF1EEEEEC2005C96C8 /* ImageCropperViewController.swift */; };
 		C73977D21EEEFFBE005C96C8 /* pListRequestPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */; };
@@ -583,6 +584,7 @@
 		C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSwiftCourseUITests.swift; sourceTree = "<group>"; };
 		C72E27C61E9ED9EB0064E01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72E27D21E9EDA0C0064E01B /* LearningSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningSwift.playground; sourceTree = "<group>"; };
+		C72F58AB1EF67A0F005929E3 /* StretchyHeaderMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderMenuTableViewController.swift; sourceTree = "<group>"; };
 		C73977B11EEEEE91005C96C8 /* ImageCropperMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageCropperMain.storyboard; sourceTree = "<group>"; };
 		C73977CF1EEEEEC2005C96C8 /* ImageCropperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperViewController.swift; sourceTree = "<group>"; };
 		C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pListRequestPermissions.swift; sourceTree = "<group>"; };
@@ -840,6 +842,7 @@
 			children = (
 				C79130B71EF5C9170078D464 /* StretchyHeaderTableViewController.swift */,
 				C79130B91EF5C92A0078D464 /* StretchyHeaderTableViewCell.swift */,
+				C72F58AB1EF67A0F005929E3 /* StretchyHeaderMenuTableViewController.swift */,
 				C79130BB1EF5D85D0078D464 /* NewStretchyHeaderItem.swift */,
 				C79130991EF5C5000078D464 /* StretchyHeaderMain.storyboard */,
 			);
@@ -2163,6 +2166,7 @@
 				C7EE7BE01EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift in Sources */,
 				C703771A1EF5471E002E7D9B /* SearchBarTableViewController.swift in Sources */,
 				C71B9E721EF5370C005A7C6C /* TableView+Ext.swift in Sources */,
+				C72F58AC1EF67A0F005929E3 /* StretchyHeaderMenuTableViewController.swift in Sources */,
 				C749398F1ED7840D00555D31 /* InspirationalFilmsInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

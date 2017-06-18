@@ -17,6 +17,7 @@ struct NewStretchyHeaderItem {
         case MiddleEast
         case Africa
         case AsiaPacific
+        case Australia
         
         func toString() -> String {
             switch self {
@@ -32,6 +33,8 @@ struct NewStretchyHeaderItem {
                 return "Africa"
             case .AsiaPacific:
                 return "Asia-Pacific"
+            case .Australia:
+                return "Australia"
             }
         }
         
@@ -49,11 +52,14 @@ struct NewStretchyHeaderItem {
                 return UIColor(red: 0.988, green: 0.271, blue: 0.282, alpha: 1.0)
             case .AsiaPacific:
                 return UIColor(red: 0.620, green: 0.776, blue: 0.153, alpha: 1.0)
+            case .Australia:
+                return UIColor(red: 0.720, green: 0.176, blue: 0.453, alpha: 1.0)
             }
         }
         
     }
     
     let continent: Continent
+    let country: String
     let summary: String
 }

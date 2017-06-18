@@ -10,18 +10,21 @@ import UIKit
 
 class StretchyHeaderTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var cellHeadlineLabel: UILabel!
+    @IBOutlet weak var cellContinentLabel: UILabel!
+    @IBOutlet weak var cellCountryLabel: UILabel!
     @IBOutlet weak var cellSummaryLabel: UILabel!
     
     var newsItem: NewStretchyHeaderItem? {  
         didSet {
             if let item = newsItem {
-                cellHeadlineLabel.text = item.continent.toString()
-                cellHeadlineLabel.textColor = item.continent.toColor()
+                cellContinentLabel.text = item.continent.toString()
+                cellContinentLabel.textColor = item.continent.toColor()
+                cellCountryLabel.text = item.country
                 cellSummaryLabel.text = item.summary
             }
             else {
-                cellHeadlineLabel.text = nil
+                cellContinentLabel.text = nil
+                cellCountryLabel.text = nil
                 cellSummaryLabel.text = nil
             }
         }

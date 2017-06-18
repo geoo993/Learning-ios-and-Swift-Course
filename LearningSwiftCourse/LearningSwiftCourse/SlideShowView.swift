@@ -51,6 +51,8 @@ class SlideShowView: UIView {
         }else{
             imagesList.append(imageView)
         }
+        self.clipsToBounds = true
+        self.layer.masksToBounds = true
         self.addSubview(imageView)
         
         //increment tags

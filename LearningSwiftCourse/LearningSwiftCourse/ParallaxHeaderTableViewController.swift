@@ -17,7 +17,7 @@ class ParallaxHeaderTableViewController: UITableViewController {
     var newHeaderLayer : CAShapeLayer!
     
     var containerView : SlideShowView? = nil
-    let imageNames = ["autumnlandscape", "desert", "GoldenGateBridge", "happiness","japanvillage", "pexels", "treesfallredleaves"] 
+    let imageNames = ["autumnlandscape", "desert", "GoldenGateBridge", "happiness","japanvillage", "pexels", "treesfallredleaves", "bg-header"] 
     
     let colorItems = {
         return UIColor.cssString.sorted()
