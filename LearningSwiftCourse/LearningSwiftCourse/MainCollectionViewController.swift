@@ -41,11 +41,11 @@ class MainCollectionViewController: UICollectionViewController {
                            //"SWRevealViewController" : "MultiSidedBarMenuMain",
                            //"TopMenuNavigationController" : "TopMenuMain",
                            //"DraggableTopMenuMainViewController" : "DraggableVerticalMenusMain",
-                           //"SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
-                           //"ButtonsTypesViewController": "ButtonsMain",
+                           "SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
+                           "ButtonsTypesViewController": "ButtonsMain",
                             //"BasicCoreMLwithImagesViewController" : "BasicCoreMLwithImagesMain",
-                            //"SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",
-                            //"SearchBarViewNavigationController" : "SearchBarMain",
+                            "SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",
+                            "SearchBarViewNavigationController" : "SearchBarMain",
                             "StretchyHeaderRevealViewController" : "StretchyHeaderMain",
                            ]
     

@@ -48,7 +48,18 @@
                             <outlet property="delegate" destination="Nti-EF-dHY" id="kVU-Vt-b8E"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Colors" id="8H5-yq-U2V"/>
+                    <navigationItem key="navigationItem" title="Colors" id="8H5-yq-U2V">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="Oeo-u7-ESf">
+                            <connections>
+                                <action selector="homeBarButton:" destination="Nti-EF-dHY" id="uMk-Xn-9zw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="87l-mK-QgE">
+                            <connections>
+                                <action selector="searchBarButton:" destination="Nti-EF-dHY" id="4sx-yF-gA6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STx-zl-xRL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

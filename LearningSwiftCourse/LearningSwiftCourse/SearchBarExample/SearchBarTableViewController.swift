@@ -12,6 +12,16 @@ import LearningSwiftCourseExtensions
 
 class SearchBarTableViewController: UITableViewController {
 
+    @IBAction func homeBarButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true) { 
+            print("ViewController dismissed, now going to home page")
+        }
+    }
+    
+    @IBAction func searchBarButton(_ sender: UIBarButtonItem) {
+        setupResultsTableView()
+    }
+    
     var colorNamesItems = {
         return UIColor.cssString.filter{ $0 != "" }.sorted()
     }()
@@ -31,14 +41,14 @@ class SearchBarTableViewController: UITableViewController {
     var searchBar: UISearchBar?
     var selectedColorFromSearch = 0 
     
-    func setupHomeNavigationbarItem(){
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: #selector(searchButtonTapped))
-        //navigationController?.navigationBar.barTintColor = UIColor.blue
-    }
-    
-    @objc func searchButtonTapped(_ sender: UIBarButtonItem){
-        setupResultsTableView()
-    }
+//    func setupHomeNavigationbarItem(){
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: #selector(searchButtonTapped))
+//        //navigationController?.navigationBar.barTintColor = UIColor.blue
+//    }
+//    
+//    @objc func searchButtonTapped(_ sender: UIBarButtonItem){
+//        setupResultsTableView()
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +57,7 @@ class SearchBarTableViewController: UITableViewController {
         self.resultsTableViewController.tableView.dataSource = self
         self.resultsTableViewController.tableView.delegate = self
         
-        setupHomeNavigationbarItem()
+        //setupHomeNavigationbarItem()
         
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = true

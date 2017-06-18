@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-extension UITableView {
+public extension UITableView {
     
-    func getAllCells() -> [UITableViewCell] {
+    public func getAllCells() -> [UITableViewCell] {
         
         var cells = [UITableViewCell]()
         // assuming tableView is your self.tableView defined somewhere

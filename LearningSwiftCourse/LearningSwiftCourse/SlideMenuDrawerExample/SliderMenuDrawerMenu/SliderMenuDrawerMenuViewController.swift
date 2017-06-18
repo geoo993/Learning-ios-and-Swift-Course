@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LearningSwiftCourseExtensions
 
 protocol SlideMenuDelegate {
     func slideMenuItemSelectedAtIndex(_ index : Int)

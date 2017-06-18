@@ -47,7 +47,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="224" height="224"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgw-B4-lti">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="bgw-B4-lti">
                                                     <rect key="frame" x="0.0" y="0.0" width="224" height="224"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="224" id="b1Z-7a-CPc"/>
@@ -106,4 +106,7 @@
             <point key="canvasLocation" x="816.79999999999995" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="img1" width="224" height="224"/>
+    </resources>
 </document>
