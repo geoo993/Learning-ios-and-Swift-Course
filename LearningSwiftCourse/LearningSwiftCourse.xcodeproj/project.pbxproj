@@ -12,7 +12,6 @@
 		C703771A1EF5471E002E7D9B /* SearchBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70377191EF5471E002E7D9B /* SearchBarTableViewController.swift */; };
 		C703771C1EF5473A002E7D9B /* SearchBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C703771B1EF5473A002E7D9B /* SearchBarTableViewCell.swift */; };
 		C703771E1EF551C0002E7D9B /* SearchBarViewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C703771D1EF551C0002E7D9B /* SearchBarViewNavigationController.swift */; };
-		C70ACF761EEF47A4007AD02D /* StretchyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ACF751EEF47A4007AD02D /* StretchyHeaderViewController.swift */; };
 		C70ACF781EEF4D6A007AD02D /* DraggableVerticalMenusMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70ACF771EEF4D6A007AD02D /* DraggableVerticalMenusMain.storyboard */; };
 		C70ACF7A1EEF4D9E007AD02D /* DraggableTopMenuMainViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ACF791EEF4D9E007AD02D /* DraggableTopMenuMainViewControllerViewController.swift */; };
 		C70C84B31EE703F50098A62F /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76E5C7C1ED6500B00E2C4D3 /* Interest.swift */; };
@@ -107,6 +106,10 @@
 		C77E83361EA25F4F000AC715 /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; };
 		C77E83371EA25F4F000AC715 /* RxSwiftExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C78DD5151EEA098A00EF5E64 /* AnimationControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78DD5141EEA098A00EF5E64 /* AnimationControllerManager.swift */; };
+		C791309A1EF5C5000078D464 /* StretchyHeaderMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79130991EF5C5000078D464 /* StretchyHeaderMain.storyboard */; };
+		C79130B81EF5C9170078D464 /* StretchyHeaderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79130B71EF5C9170078D464 /* StretchyHeaderTableViewController.swift */; };
+		C79130BA1EF5C92A0078D464 /* StretchyHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79130B91EF5C92A0078D464 /* StretchyHeaderTableViewCell.swift */; };
+		C79130BC1EF5D85D0078D464 /* NewStretchyHeaderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79130BB1EF5D85D0078D464 /* NewStretchyHeaderItem.swift */; };
 		C79635D71EE5A01100AA11B0 /* SummaryViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79635D61EE5A01100AA11B0 /* SummaryViewTableViewCell.swift */; };
 		C7ACB3871ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ACB3861ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift */; };
 		C7AE47ED1EA4FCE600C2096E /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE47EC1EA4FCE600C2096E /* TabBarModel.swift */; };
@@ -559,7 +562,6 @@
 		C70377191EF5471E002E7D9B /* SearchBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTableViewController.swift; sourceTree = "<group>"; };
 		C703771B1EF5473A002E7D9B /* SearchBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTableViewCell.swift; sourceTree = "<group>"; };
 		C703771D1EF551C0002E7D9B /* SearchBarViewNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewNavigationController.swift; sourceTree = "<group>"; };
-		C70ACF751EEF47A4007AD02D /* StretchyHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchyHeaderViewController.swift; sourceTree = "<group>"; };
 		C70ACF771EEF4D6A007AD02D /* DraggableVerticalMenusMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DraggableVerticalMenusMain.storyboard; sourceTree = "<group>"; };
 		C70ACF791EEF4D9E007AD02D /* DraggableTopMenuMainViewControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableTopMenuMainViewControllerViewController.swift; sourceTree = "<group>"; };
 		C70C84DC1EE760F50098A62F /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
@@ -671,6 +673,10 @@
 		C78F4AB21EF34FDE0001CF94 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		C78F4AB41EF34FDE0001CF94 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		C78F4AB51EF34FDE0001CF94 /* ResNet50.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ResNet50.txt; sourceTree = "<group>"; };
+		C79130991EF5C5000078D464 /* StretchyHeaderMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StretchyHeaderMain.storyboard; sourceTree = "<group>"; };
+		C79130B71EF5C9170078D464 /* StretchyHeaderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderTableViewController.swift; sourceTree = "<group>"; };
+		C79130B91EF5C92A0078D464 /* StretchyHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		C79130BB1EF5D85D0078D464 /* NewStretchyHeaderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStretchyHeaderItem.swift; sourceTree = "<group>"; };
 		C79635D61EE5A01100AA11B0 /* SummaryViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewTableViewCell.swift; sourceTree = "<group>"; };
 		C7ACB3861ED8C0B8008B0E82 /* InspirationalFilmsMediaScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationalFilmsMediaScrollView.swift; sourceTree = "<group>"; };
 		C7AE47EC1EA4FCE600C2096E /* TabBarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
@@ -832,7 +838,10 @@
 		C70ACF581EEF476B007AD02D /* StretchyHeaderExample */ = {
 			isa = PBXGroup;
 			children = (
-				C70ACF751EEF47A4007AD02D /* StretchyHeaderViewController.swift */,
+				C79130B71EF5C9170078D464 /* StretchyHeaderTableViewController.swift */,
+				C79130B91EF5C92A0078D464 /* StretchyHeaderTableViewCell.swift */,
+				C79130BB1EF5D85D0078D464 /* NewStretchyHeaderItem.swift */,
+				C79130991EF5C5000078D464 /* StretchyHeaderMain.storyboard */,
 			);
 			name = StretchyHeaderExample;
 			sourceTree = "<group>";
@@ -1972,6 +1981,7 @@
 				C7D3C0621EF2B7270042E90A /* ButtonsMain.storyboard in Resources */,
 				C7AE48901EA5327300C2096E /* Main.storyboard in Resources */,
 				C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */,
+				C791309A1EF5C5000078D464 /* StretchyHeaderMain.storyboard in Resources */,
 				C72BE6641EECA7F600A54EE2 /* ImageViewerMain.storyboard in Resources */,
 				C74217341EC1C27C0007B4C3 /* ScrollViewMain.storyboard in Resources */,
 				C76E0D031EE9EDDD00A66E94 /* MultiSidedBarMenuMain.storyboard in Resources */,
@@ -2056,6 +2066,7 @@
 				C7F45F511EE4BB18005CF986 /* StorySmartiesViewController.swift in Sources */,
 				C765C27B1EA4E77000F5FE90 /* NavigationViewController.swift in Sources */,
 				C7E387DC1ED2F2DC000DCE15 /* AudioCheckViewController.swift in Sources */,
+				C79130BC1EF5D85D0078D464 /* NewStretchyHeaderItem.swift in Sources */,
 				C76E0D151EE9F98600A66E94 /* TopMenuNewsTableViewCell.swift in Sources */,
 				C741B3F61EEBEEB500716E41 /* SlideShowViewController.swift in Sources */,
 				C76E5C761ED6326A00E2C4D3 /* EmptyViewController.swift in Sources */,
@@ -2084,6 +2095,7 @@
 				C73977D01EEEEEC2005C96C8 /* ImageCropperViewController.swift in Sources */,
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
 				C76E0D0D1EE9EE6000A66E94 /* PhotoViewController.swift in Sources */,
+				C79130BA1EF5C92A0078D464 /* StretchyHeaderTableViewCell.swift in Sources */,
 				C76F04EE1EF505160090F71B /* SliderMenuDrawerBaseViewController.swift in Sources */,
 				C74217361EC1C7A60007B4C3 /* ScrollViewController.swift in Sources */,
 				C72BE6661EED63E800A54EE2 /* ImageScrollView.swift in Sources */,
@@ -2110,7 +2122,6 @@
 				C76343101EEFF4A100534507 /* StorySmartiesScrollMenuViewController.swift in Sources */,
 				C77920C31EEC6B9A00BB6C52 /* ParallaxViewController.swift in Sources */,
 				C7CB20071EE97DBA00EA7329 /* SideBarMenu.swift in Sources */,
-				C70ACF761EEF47A4007AD02D /* StretchyHeaderViewController.swift in Sources */,
 				C7D3C0641EF2B7540042E90A /* ButtonsTypesViewController.swift in Sources */,
 				C76E0D0B1EE9EE6000A66E94 /* NewsTableViewCell.swift in Sources */,
 				C7CB1F611EE8B6BD00EA7329 /* StorySmartiesMenuTableViewController.swift in Sources */,
@@ -2129,6 +2140,7 @@
 				C7CB1EB61EE8817600EA7329 /* AirbnbPlacesTableViewCell.swift in Sources */,
 				C74C9A031EE87C98001E4FFE /* AirbnbData.swift in Sources */,
 				C76F04F01EF505E40090F71B /* SliderMenuDrawerViewController.swift in Sources */,
+				C79130B81EF5C9170078D464 /* StretchyHeaderTableViewController.swift in Sources */,
 				C742173C1EC1CF650007B4C3 /* Slide.swift in Sources */,
 				C78DD5151EEA098A00EF5E64 /* AnimationControllerManager.swift in Sources */,
 				C72BE6621EECA7E600A54EE2 /* ImageViewerViewController.swift in Sources */,

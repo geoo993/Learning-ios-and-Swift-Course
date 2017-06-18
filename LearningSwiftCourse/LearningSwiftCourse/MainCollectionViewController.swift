@@ -29,7 +29,7 @@ class MainCollectionViewController: UICollectionViewController {
                            //"ScrollViewController": "ScrollViewMain",
                            //"CustomPageViewController" : "PageViewMain",
                            //"SlideShowViewController" : "SlideShowMain",
-                           //"ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
+                           "ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
                            //"ParallaxViewController" : "ParallaxMain",
                            //"ImageViewerViewController" : "ImageViewerMain",
                            //"ImageCropperViewController" : "ImageCropperMain",
@@ -45,7 +45,8 @@ class MainCollectionViewController: UICollectionViewController {
                            //"ButtonsTypesViewController": "ButtonsMain",
                             //"BasicCoreMLwithImagesViewController" : "BasicCoreMLwithImagesMain",
                             //"SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",
-                            "SearchBarViewNavigationController" : "SearchBarMain",
+                            //"SearchBarViewNavigationController" : "SearchBarMain",
+                            "StretchyHeaderTableViewController" : "StretchyHeaderMain",
                            ]
     
     //Mark: - Collection view 
