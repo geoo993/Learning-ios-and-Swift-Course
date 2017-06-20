@@ -19,14 +19,14 @@ class MainCollectionViewController: UICollectionViewController {
     //let customDismissAnimationController = CustomDismissAnimationController()
     
     var views: [String: String] = [
-                           //"StorySmartiesRevealViewController":"StorySmartiesMain",
+                           "StorySmartiesRevealViewController":"StorySmartiesMain",
                            //"VideoPlayerViewController":"VideoPlayerMain",
                            //"AudioCheckViewController": "AudioMain",
                            //"TableViewNavigationViewController": "TableViewMain",
                            //"TabBarViewController": "TabBarMain",
                            //"NavigationViewController": "NavBarMain",
                            //"ColorsViewController": "ColorsMain",
-                           "ScrollViewController": "ScrollViewMain",
+                           //"ScrollViewController": "ScrollViewMain",
                            //"CustomPageViewController" : "PageViewMain",
                            //"SlideShowViewController" : "SlideShowMain",
                            //"ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
