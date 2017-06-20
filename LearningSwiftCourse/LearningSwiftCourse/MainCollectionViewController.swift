@@ -19,7 +19,7 @@ class MainCollectionViewController: UICollectionViewController {
     //let customDismissAnimationController = CustomDismissAnimationController()
     
     var views: [String: String] = [
-                           "StorySmartiesRevealViewController":"StorySmartiesMain",
+                           //"StorySmartiesRevealViewController":"StorySmartiesMain",
                            //"VideoPlayerViewController":"VideoPlayerMain",
                            //"AudioCheckViewController": "AudioMain",
                            //"TableViewNavigationViewController": "TableViewMain",
@@ -47,6 +47,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",
                             //"SearchBarViewNavigationController" : "SearchBarMain",
                             //"StretchyHeaderRevealViewController" : "StretchyHeaderMain",
+                            "BBCiPlayerNavigationController" : "BBCiPlayerMain",
                            ]
     
     //Mark: - Collection view 

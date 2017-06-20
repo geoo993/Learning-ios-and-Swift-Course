@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BBC iPlayer Table View Controller-->
+        <scene sceneID="U7c-LW-qsh">
+            <objects>
+                <tableViewController storyboardIdentifier="BBCiPlayerTableViewController" id="sbt-QD-Hyv" userLabel="BBC iPlayer Table View Controller" customClass="BBCiPlayerTableViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="40" sectionFooterHeight="30" id="RD6-B3-xEL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="iplayerTableViewCell" id="ESk-0y-EpR" userLabel="BBC iPlayer TableView Cell" customClass="BBCiPlayerTableViewCell" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="40" width="320" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ESk-0y-EpR" id="nyO-jL-owb">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sAR-k1-p1Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7uE-ji-Vw6">
+                                                <size key="itemSize" width="150" height="190"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="iplayerTableViewCollectionViewCell" id="h1K-q4-VoR" customClass="BBCiPlayerTableviewCollectionViewCell" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                                    <rect key="frame" x="5" y="5" width="150" height="190"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="190"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmY-fV-YdB" userLabel="Title Label">
+                                                                <rect key="frame" x="54" y="84.5" width="42" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstItem="GmY-fV-YdB" firstAttribute="centerX" secondItem="h1K-q4-VoR" secondAttribute="centerX" id="Cba-XY-Slo"/>
+                                                        <constraint firstItem="GmY-fV-YdB" firstAttribute="centerY" secondItem="h1K-q4-VoR" secondAttribute="centerY" id="HZK-R1-GTf"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="titleLabel" destination="GmY-fV-YdB" id="2XS-rT-8Ud"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="ESk-0y-EpR" id="6jd-sd-i40"/>
+                                                <outlet property="delegate" destination="ESk-0y-EpR" id="90w-wE-9xf"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="sAR-k1-p1Y" secondAttribute="trailing" id="2kq-D6-JUD"/>
+                                        <constraint firstItem="sAR-k1-p1Y" firstAttribute="leading" secondItem="nyO-jL-owb" secondAttribute="leading" id="UaW-yN-bHl"/>
+                                        <constraint firstItem="sAR-k1-p1Y" firstAttribute="top" secondItem="nyO-jL-owb" secondAttribute="top" id="YQ0-Ws-gQ4"/>
+                                        <constraint firstAttribute="bottom" secondItem="sAR-k1-p1Y" secondAttribute="bottom" id="fSc-D0-7eY"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="sAR-k1-p1Y" id="4Pn-BJ-CgF"/>
+                                    <outlet property="collectionViewFlowLayout" destination="7uE-ji-Vw6" id="DZP-Bu-Hpe"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sbt-QD-Hyv" id="CGb-FN-Lx2"/>
+                            <outlet property="delegate" destination="sbt-QD-Hyv" id="eQ8-rO-m2F"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="YXL-lC-pav"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLc-9P-Is3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228.75" y="211.26760563380282"/>
+        </scene>
+        <!--BBC iPlayer New View Controller-->
+        <scene sceneID="JqY-IV-ksR">
+            <objects>
+                <viewController storyboardIdentifier="BBCiPlayerNewViewController" id="TaZ-1L-aqr" userLabel="BBC iPlayer New View Controller" customClass="BBCiPlayerNewViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fSM-Ga-Rcg"/>
+                        <viewControllerLayoutGuide type="bottom" id="a88-Kx-7DO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VPq-Wv-16u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLT-OT-zbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1215.2" y="223.53823088455775"/>
+        </scene>
+        <!--BBC iPlayer Navigation Controller-->
+        <scene sceneID="92a-kF-bcc">
+            <objects>
+                <navigationController storyboardIdentifier="BBCiPlayerNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="1rO-4i-T2f" userLabel="BBC iPlayer Navigation Controller" customClass="BBCiPlayerNavigationController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3BN-m4-MM4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sbt-QD-Hyv" kind="relationship" relationship="rootViewController" id="kJd-W0-EA8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7CR-Wi-EW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-823" y="212"/>
+        </scene>
+    </scenes>
+</document>
