@@ -5,6 +5,7 @@
 //  Created by GEORGE QUENTIN on 20/06/2017.
 //  Copyright © 2017 LEXI LABS. All rights reserved.
 //
+//https://contentpedlar.wordpress.com/2016/10/22/uicollectionview-in-uitableview/
 //https://stackoverflow.com/questions/31582378/ios-8-swift-tableview-with-embedded-collectionview
 //https://www.raywenderlich.com/129059/self-sizing-table-view-cells
 
