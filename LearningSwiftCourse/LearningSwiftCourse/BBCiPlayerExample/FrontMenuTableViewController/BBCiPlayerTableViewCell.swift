@@ -88,9 +88,6 @@ extension BBCiPlayerTableViewCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print("collectionViewCell selected \(indexPath.row)")
-        
-        
         let bundle = Bundle(identifier: "co.lexilabs.LearningSwiftCourse")
         
         

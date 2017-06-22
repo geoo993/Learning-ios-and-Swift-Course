@@ -22,6 +22,7 @@ struct BBCiPlayerVideosItems {
         case BBCParliament = "BBC Parliament"
         case BBCAlba = "BBC Alba"
         case S4C = "S4C"
+        case Recommended = "RECOMMENDED"
         
         static let allChannels = [BBCOne, BBCTwo, BBCThree,BBCFour,BBCRadio1, CBBC, CBeeBies,BBCParliament,BBCAlba,S4C]
     }

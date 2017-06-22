@@ -11,6 +11,8 @@
 //https://stackoverflow.com/questions/28600375/how-can-we-add-image-in-uitableview-section-header-using-swift
 //https://stackoverflow.com/questions/1074006/is-it-possible-to-disable-floating-headers-in-uitableview-with-uitableviewstylep
 //https://www.youtube.com/watch?v=k7_XFDXiGfU
+//https://stackoverflow.com/questions/3521310/how-to-increase-the-uitableview-separator-height
+//https://stackoverflow.com/questions/11236367/display-clearcolor-uiviewcontroller-over-uiviewcontroller
 
 
 import UIKit
@@ -187,8 +189,9 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
       
         let tablevc = self.storyboard?.instantiateViewController(withIdentifier: "BBCiPlayerContentTableViewController") as! BBCiPlayerContentTableViewController
     
+        //tablevc.view.backgroundColor = UIColor.clear
+        tablevc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         tablevc.titleName = self.mainSectionsItems[button.tag].title
-        //tablevc.navBar.topItem?.title = self.mainSectionsItems[button.tag].title
         
         //self.navigationController?.pushViewController(vc!, animated: true)
         self.present(tablevc, animated: true, completion: { 
@@ -273,16 +276,6 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
        
         return ( (cellHeight + cellSpacing) * CGFloat(inPairs) ) + (cellVerticalInsect * 2) - cellSpacing
     }
-    
-    /*
-     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    
-     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-    }
- */
+
     
 }

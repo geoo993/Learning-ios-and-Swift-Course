@@ -10,9 +10,16 @@ import UIKit
 
 class BBCiPlayerContentTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imageHeadingView : UIImageView!
+    @IBOutlet weak var imageHeadingLabel : UILabel!
+    @IBOutlet weak var channelLabel : UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        channelLabel.textColor = UIColor.bbciplayerPink()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
