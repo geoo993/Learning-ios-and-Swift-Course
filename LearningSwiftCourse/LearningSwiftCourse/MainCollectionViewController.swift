@@ -47,7 +47,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",
                             //"SearchBarViewNavigationController" : "SearchBarMain",
                             //"StretchyHeaderRevealViewController" : "StretchyHeaderMain",
-                            "BBCiPlayerNavigationController" : "BBCiPlayerMain",
+                            "BBCiPlayerTableViewController" : "BBCiPlayerMain",
                            ]
     
     //Mark: - Collection view 

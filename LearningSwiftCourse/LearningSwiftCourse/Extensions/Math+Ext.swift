@@ -37,21 +37,44 @@ public extension Double {
 
 public extension CGFloat {
     
-    public static func overrideSizeF(size:CGFloat) -> CGFloat {
+    public static func overrideHeightSizeF(size:CGFloat) -> CGFloat {
         let bounds = UIScreen.main.bounds
         let height = bounds.size.height
         switch height {
-        case 480.0: //Iphone 3,4,SE => 3.5 inch
-            return size * 0.54
-        case 568.0: //iphone 5, 5s => 4 inch
-            return size * 0.62
+        case 480.0: //Iphone 3,4 => 3.5 inch
+            return size * 0.55
+        case 568.0: //iphone 5, 5s, SE => 4 inch
+            return size * 0.64
         case 667.0: //iphone 7, 6, 6s => 4.7 inch
             return size * 0.72
         case 736.0: //iphone 7s, 6s+ 6+ => 5.5 inch
-            return size * 0.82
-        case 1024.0: //ipad retina, ipad air
-            return size * 0.92
-        case 1366.0: //ipad pro
+            return size * 0.80
+        case 1024.0: //iPad Retina, iPad Air, iPad Mini
+            return size * 0.90
+        case 1112.0: //iPad Pro 10.5
+            return size * 0.94
+        case 1366.0: //iPad Pro 12.9
+            return size
+        default:
+            return 0
+        }
+    }
+    
+    public static func overrideWidthSizeF(size:CGFloat) -> CGFloat {
+        let bounds = UIScreen.main.bounds
+        let width = bounds.size.width
+        switch width {
+        case 320.0: //Iphone 3,4 5, 5s, SE => 4 inch
+            return size * 0.60
+        case 375.0: //iphone 7, 6, 6s => 4.7 inch
+            return size * 0.66
+        case 414.0: //iphone 7s, 6s+ 6+ => 5.5 inch
+            return size * 0.72
+        case 768.0: //ipad Retina, ipad Air, iPad Mini
+            return size * 0.84
+        case 834.0: //iPad Pro 10.5
+            return size * 92
+        case 1024.0: //iPad Pro 12.9
             return size
         default:
             return 0

@@ -423,7 +423,7 @@ extension InspirationalFilmsViewController : UICollectionViewDelegateFlowLayout 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize { 
         
-        let autoResize = CGFloat.overrideSizeF(size: 1.2)
+        let autoResize = CGFloat.overrideHeightSizeF(size: 1.2)
         let itemWidth = screenWidth * 0.3
         let itemHeight = (collectionView.contentSize.height * autoResize) 
         

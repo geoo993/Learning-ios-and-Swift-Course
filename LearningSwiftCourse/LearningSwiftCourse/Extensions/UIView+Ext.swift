@@ -135,6 +135,31 @@ public extension UIView {
         blurEffectView.contentView.addSubview(vibrancyEffectView)
     }
     
+    func addBlurEffectToTopView() {
+        // Add blur view
+        let view = self
+        
+        //This will let visualEffectView to work perfectly
+        if let navBar = view as? UINavigationBar{
+            navBar.setBackgroundImage(UIImage(), for: .default)
+            navBar.shadowImage = UIImage()
+        }
+        
+        var bounds = view.bounds
+        bounds.offsetBy(dx: 0.0, dy: -20.0)
+        bounds.size.height = bounds.height + 20.0
+        
+        let blurEffect = UIBlurEffect(style: .dark)
+        let visualEffectView = UIVisualEffectView(effect: blurEffect)
+        
+        visualEffectView.isUserInteractionEnabled = false
+        visualEffectView.frame = bounds
+        visualEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.insertSubview(visualEffectView, at: 0)
+        
+    }
+    
+    
     
     public func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))

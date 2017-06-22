@@ -23,6 +23,15 @@ public extension UIColor {
     {
         return UIColor.init(red: 0.0, green: 0.4784, blue: 1.0, alpha: 1.0) 
     }
+    public static func bbciplayerDark() -> UIColor
+    {
+        return UIColor.init(red: 0.08, green: 0.08, blue: 0.08, alpha: 1.0)
+    }
+    public static func bbciplayerWhiteGray() -> UIColor
+    {
+        return UIColor.init(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+    }
+    
     public func getTextColor () -> UIColor {
         var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
         _ = self.getRed(&r, green: &g, blue: &b, alpha: &a)
