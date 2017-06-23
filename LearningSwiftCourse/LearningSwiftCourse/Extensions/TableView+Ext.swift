@@ -30,3 +30,16 @@ public extension UITableView {
     }
     
 }
+
+public extension UITableViewCell {
+    
+    public func customSeperatorLine(withColor color: UIColor, separatorHeight: CGFloat){
+        let screenSize = UIScreen.main.bounds
+        let additionalSeparator = UIView.init(frame: CGRect(x: 0, 
+                                                            y: self.frame.size.height - separatorHeight, 
+                                                            width: screenSize.width, 
+                                                            height: separatorHeight))
+        additionalSeparator.backgroundColor = color
+        self.addSubview(additionalSeparator)
+    }
+}

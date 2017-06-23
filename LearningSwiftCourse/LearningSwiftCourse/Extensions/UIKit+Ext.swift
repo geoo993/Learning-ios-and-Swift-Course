@@ -25,7 +25,7 @@ public extension UIColor {
     }
     public static func bbciplayerDark() -> UIColor
     {
-        return UIColor.init(red: 0.08, green: 0.08, blue: 0.08, alpha: 1.0)
+        return UIColor.init(red: 27/255, green: 30/255, blue: 42/255, alpha: 1.0)
     }
     public static func bbciplayerWhiteGray() -> UIColor
     {

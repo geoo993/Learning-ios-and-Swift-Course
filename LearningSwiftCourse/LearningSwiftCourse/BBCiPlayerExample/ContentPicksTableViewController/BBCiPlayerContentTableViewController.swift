@@ -60,6 +60,10 @@ class BBCiPlayerContentTableViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    deinit {
+        
+    }
 
 }
 
@@ -79,15 +83,7 @@ extension BBCiPlayerContentTableViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "contentTableViewCell") as! BBCiPlayerContentTableViewCell
        
-        let screenSize = UIScreen.main.bounds
-        let separatorHeight = CGFloat(1.0)
-        let additionalSeparator = UIView.init(frame: CGRect(x: 0, 
-                                                            y: cell.frame.size.height - separatorHeight, 
-                                                            width: screenSize.width, 
-                                                            height: separatorHeight))
-        additionalSeparator.backgroundColor = UIColor.gray
-        cell.addSubview(additionalSeparator)
-        
+        cell.customSeperatorLine(withColor: UIColor.gray, separatorHeight: 0.4)
         return cell
     }
     
@@ -104,11 +100,11 @@ extension BBCiPlayerContentTableViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0.0
+        return CGFloat.leastNormalMagnitude
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.0
+        return CGFloat.leastNormalMagnitude
     }
     
 }

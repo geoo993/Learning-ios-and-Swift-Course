@@ -25,11 +25,12 @@ class BBCiPlayerSectionsHeaderView: UIView {
     }
     */
 
-
+    /*
      override init(frame: CGRect) {
-     super.init(frame: frame)
+        super.init(frame: frame)
      
      }
+     */
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -53,6 +54,10 @@ class BBCiPlayerSectionsHeaderView: UIView {
      */
     
     deinit {
-        
+        sectionsHeaderImageView = nil
+        labelsPanelView = nil
+        channelLabel = nil
+        contentTitleLabel = nil
+        contentDescriptionLabel = nil
     }
 }

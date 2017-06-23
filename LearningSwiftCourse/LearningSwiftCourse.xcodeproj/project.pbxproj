@@ -11,6 +11,7 @@
 		C703771A1EF5471E002E7D9B /* SearchBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70377191EF5471E002E7D9B /* SearchBarTableViewController.swift */; };
 		C703771C1EF5473A002E7D9B /* SearchBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C703771B1EF5473A002E7D9B /* SearchBarTableViewCell.swift */; };
 		C703771E1EF551C0002E7D9B /* SearchBarViewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C703771D1EF551C0002E7D9B /* SearchBarViewNavigationController.swift */; };
+		C708787C1EFD0EBF006BBDEC /* DetailedContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C708787B1EFD0EBF006BBDEC /* DetailedContentTableViewCell.swift */; };
 		C71EDCF01EF6DB9B00B69EF9 /* LearningSwiftCourse-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = C71EDCCC1EF6DA3800B69EF9 /* LearningSwiftCourse-Bridging-Header.h */; };
 		C71EDCF51EF6DDB300B69EF9 /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C71EDCF41EF6DD5100B69EF9 /* SWRevealViewController.h */; };
 		C71EDCF61EF6DDB600B69EF9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C71EDCF31EF6DD5100B69EF9 /* SWRevealViewController.m */; };
@@ -581,6 +582,7 @@
 		C70377191EF5471E002E7D9B /* SearchBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTableViewController.swift; sourceTree = "<group>"; };
 		C703771B1EF5473A002E7D9B /* SearchBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTableViewCell.swift; sourceTree = "<group>"; };
 		C703771D1EF551C0002E7D9B /* SearchBarViewNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewNavigationController.swift; sourceTree = "<group>"; };
+		C708787B1EFD0EBF006BBDEC /* DetailedContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedContentTableViewCell.swift; sourceTree = "<group>"; };
 		C71EDCCC1EF6DA3800B69EF9 /* LearningSwiftCourse-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearningSwiftCourse-Bridging-Header.h"; sourceTree = "<group>"; };
 		C71EDCF31EF6DD5100B69EF9 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		C71EDCF41EF6DD5100B69EF9 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -952,11 +954,20 @@
 			path = LearningSwiftCourseUITests;
 			sourceTree = "<group>";
 		};
+		C7560E101EFD060900243172 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C7349E0B1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift */,
+				C767868E1EF91C3F005C159F /* BBCiPlayerTableviewCollectionViewCell.swift */,
+				C767868C1EF91600005C159F /* BBCiPlayerTableViewCell.swift */,
+				C708787B1EFD0EBF006BBDEC /* DetailedContentTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C7602D6D1EFC11B800BA32B7 /* FrontMenuTableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C767868E1EF91C3F005C159F /* BBCiPlayerTableviewCollectionViewCell.swift */,
-				C767868C1EF91600005C159F /* BBCiPlayerTableViewCell.swift */,
 				C767866E1EF915E9005C159F /* BBCiPlayerTableViewController.swift */,
 			);
 			path = FrontMenuTableViewController;
@@ -966,7 +977,6 @@
 			isa = PBXGroup;
 			children = (
 				C7349E091EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift */,
-				C7349E0B1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift */,
 			);
 			path = ContentPicksTableViewController;
 			sourceTree = "<group>";
@@ -982,6 +992,7 @@
 		C76786441EF90DA2005C159F /* BBCiPlayerExample */ = {
 			isa = PBXGroup;
 			children = (
+				C7560E101EFD060900243172 /* Cells */,
 				C7602D6E1EFC11D600BA32B7 /* ContentPicksTableViewController */,
 				C7602D6F1EFC11FD00BA32B7 /* ContentDetailedViewController */,
 				C7602D6D1EFC11B800BA32B7 /* FrontMenuTableViewController */,
@@ -2234,6 +2245,7 @@
 				C76786671EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift in Sources */,
 				C7C2AF6E1EF6CD64004F257A /* TabBarModel.swift in Sources */,
 				C7C2AF531EF6CCF1004F257A /* SideBarMenuViewController.swift in Sources */,
+				C708787C1EFD0EBF006BBDEC /* DetailedContentTableViewCell.swift in Sources */,
 				C7C2AF6B1EF6CD64004F257A /* EnglishViewController.swift in Sources */,
 				C7C2AF411EF6CCC3004F257A /* ParallaxHeaderView.swift in Sources */,
 				C7C2AF751EF6CD79004F257A /* TableViewNavigationViewController.swift in Sources */,

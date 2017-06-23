@@ -63,6 +63,12 @@ class BBCiPlayerTableViewCell: UITableViewCell {
         //apply defined layout to collectionview
         collectionView!.collectionViewLayout = collectionViewFlowLayout
     }
+    
+    deinit {
+        collectionViewCellHeight = nil
+        cellLineSpacing = nil
+        cellVerticalInsect = nil
+    }
 
 }
 

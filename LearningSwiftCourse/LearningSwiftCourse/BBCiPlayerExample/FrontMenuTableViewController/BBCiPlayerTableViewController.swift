@@ -91,7 +91,8 @@ class BBCiPlayerTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        view.backgroundColor = UIColor.bbciplayerDark()
     }
 
     override func didReceiveMemoryWarning() {
@@ -102,13 +103,16 @@ class BBCiPlayerTableViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        addBBCIplayerLogo()
+        self.tableView.layoutSubviews()
+    }
+    
+    func addBBCIplayerLogo(){
         let image = #imageLiteral(resourceName: "BBC_iPlayer_logo_white")
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 40))
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
         navItem.titleView = imageView
-        
-        self.tableView.layoutSubviews()
     }
     
 //    func getTopAreaHeight() -> CGFloat
@@ -130,6 +134,9 @@ class BBCiPlayerTableViewController: UIViewController {
      }
      */ 
 
+    deinit {
+        
+    }
 }
 
 // MARK: - Table view data source and UITableViewDelegate
