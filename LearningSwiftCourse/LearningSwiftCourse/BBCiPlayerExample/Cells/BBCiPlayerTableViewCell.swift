@@ -84,8 +84,16 @@ extension BBCiPlayerTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "iplayerTableViewCollectionViewCell", for: indexPath) as! BBCiPlayerTableviewCollectionViewCell
-        cell.titleLabel.text = collectionData[indexPath.row].videoTitle 
-        cell.backgroundColor = UIColor.randomColor()
+        
+        let captionText = collectionData[indexPath.row].caption.rawValue
+        cell.imageHeadingLabel.text = captionText
+        cell.imageHeadingLabel.backgroundColor = (captionText == "") ? UIColor.clear : UIColor.bbciplayerPink()
+            
+        cell.imageHeadingView.image = collectionData[indexPath.row].image
+        cell.titleLabel.text = collectionData[indexPath.row].title 
+        cell.descriptionLabel.text = collectionData[indexPath.row].summary
+        cell.backgroundColor = UIColor.bbciplayerDark()
+        
         return cell
     }
 }

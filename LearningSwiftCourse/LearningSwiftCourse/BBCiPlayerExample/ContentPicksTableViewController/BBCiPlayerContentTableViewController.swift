@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LearningSwiftCourseExtensions
 
 class BBCiPlayerContentTableViewController: UIViewController {
 
@@ -25,6 +26,13 @@ class BBCiPlayerContentTableViewController: UIViewController {
     @IBOutlet weak var tableView : UITableView!
     
     var titleName : String = ""
+    var mixedItems : [BBCiPlayerVideosItems] =  {
+        
+        let allchannelsItems = BBCiPlayerVideosItems.allChannelsItems()
+        let shuffled = allchannelsItems.shuffled()
+        let amount = shuffled.take(10)
+        return amount
+    }()
     
     
     //Mark: - Status bar
@@ -34,7 +42,7 @@ class BBCiPlayerContentTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navBar.clearNavigationBarBackground()
     }
 
@@ -47,6 +55,7 @@ class BBCiPlayerContentTableViewController: UIViewController {
         super.viewWillAppear(animated)
         
         navBar.topItem?.title = titleName
+        
         self.tableView.reloadData()
     }
   
@@ -76,17 +85,26 @@ extension BBCiPlayerContentTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return mixedItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "contentTableViewCell") as! BBCiPlayerContentTableViewCell
        
+        let captionText = mixedItems[indexPath.row].caption.rawValue
         cell.customSeperatorLine(withColor: UIColor.gray, separatorHeight: 0.4)
+        cell.imageHeadingView.image = mixedItems[indexPath.row].image
+        cell.imageHeadingLabel.text = captionText
+        cell.titleLabel.text = mixedItems[indexPath.row].title
+        cell.descriptionLabel.text = mixedItems[indexPath.row].summary
+        
+        cell.imageHeadingLabel.backgroundColor = (captionText == "") ? UIColor.clear : UIColor.bbciplayerPink()
+        
         return cell
     }
     
+
 }
 
 

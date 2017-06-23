@@ -165,5 +165,40 @@ public extension GameSequenceExtensions where Self.Iterator.Element: Hashable {
        
 }
 
+public extension Array {
+    
+    func shuffled() -> [Element] {
+        
+        guard let list = (self as? [Array.Iterator.Element]), list.count > 0 else { return [] }
+        
+        var results : [Array.Iterator.Element] = []
+        var indexes = (0 ..< count).map { $0 }
+        while indexes.count > 0 {
+            let indexOfIndexes = Int(arc4random_uniform(UInt32(indexes.count)))
+            let index = indexes[indexOfIndexes]
+            results.append(list[index])
+            indexes.remove(at: indexOfIndexes)
+        }
+        return results
+    }
+    
+    public func take(_ amount: Int) -> [Element] {
+        guard var list = (self as? [Array.Iterator.Element]), list.count > 1, amount <= list.count else { return [] }
+        
+        var temp : [Array.Iterator.Element] = []
+        var count = amount
+        
+        while count > 0 {
+            let index = Int(arc4random_uniform(UInt32(list.count - 1)))
+            temp.append(list[index])
+            list.remove(at: index)
+            
+            count -= 1
+        }
+        
+        return temp
+    }
+    
+}
 
 

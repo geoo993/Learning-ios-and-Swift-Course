@@ -87,10 +87,10 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQb-7E-HBp" userLabel="Top Content View">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fjord" translatesAutoresizingMaskIntoConstraints="NO" id="NsG-xa-h6A">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbcfour6" translatesAutoresizingMaskIntoConstraints="NO" id="NsG-xa-h6A">
                                                             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbc_radio_1" translatesAutoresizingMaskIntoConstraints="NO" id="bPC-hK-FTT">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbc_four" translatesAutoresizingMaskIntoConstraints="NO" id="bPC-hK-FTT">
                                                             <rect key="frame" x="240" y="10" width="70" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="gyO-bQ-JNF"/>
@@ -111,22 +111,23 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0p-WZ-qrv" userLabel="Bottom Content View">
                                                     <rect key="frame" x="0.0" y="200" width="320" height="200"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 Music's Radiohead Playlist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxp-02-fQD" userLabel="Title Label">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cardinal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxp-02-fQD" userLabel="Title Label">
                                                             <rect key="frame" x="5" y="10" width="310" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BBC Radio 6 Music presenter Steve Lamacq looks back at Radiohead's career and picks some of the bands most iconic music videos." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-kZ-Iad" userLabel="Description Label">
-                                                            <rect key="frame" x="5" y="40.5" width="310" height="60"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-kZ-Iad" userLabel="Description Label">
+                                                            <rect key="frame" x="5" y="40" width="310" height="60"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="60" id="yu9-zq-9Ou"/>
                                                             </constraints>
+                                                            <string key="text">Canadian detective drama series. Demoted for a hunch about a case that he wouldn't let go, Cardinal is brought back to the homicide unit when a girl's body is discovered.</string>
                                                             <fontDescription key="fontDescription" name="ArialHebrew-Light" family="Arial Hebrew" pointSize="12"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available for 22 days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESp-ZE-Yrg" userLabel="Available Label">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available for 9 days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESp-ZE-Yrg" userLabel="Available Label">
                                                             <rect key="frame" x="5" y="95" width="310" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="vGa-l6-e0Y"/>
@@ -144,7 +145,7 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First shown: 4am 16 Jun 2017" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51l-Lu-3q3" userLabel="Release Date Label">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First shown: 9pm 3 Jun 2017" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51l-Lu-3q3" userLabel="Release Date Label">
                                                             <rect key="frame" x="5" y="115" width="310" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="yYI-OA-8eX"/>
@@ -187,14 +188,14 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailedContentTableViewCell" id="p4f-8j-mMy" userLabel="Detailed Content Table View Cell" customClass="DetailedContentTableViewCell" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailedContentTableViewCell" id="p4f-8j-mMy" userLabel="Detailed Content Table View Cell" customClass="BBCiPlayerContentDetailedTableViewCell" customModule="LearningSwiftCourse" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="428" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p4f-8j-mMy" id="Oui-NP-zCP">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fjord" translatesAutoresizingMaskIntoConstraints="NO" id="bzF-Nn-wIz">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbcone8" translatesAutoresizingMaskIntoConstraints="NO" id="bzF-Nn-wIz">
                                                     <rect key="frame" x="4" y="4" width="120" height="72"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="PEU-2C-hNE"/>
@@ -203,13 +204,13 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIC-q9-WgB">
                                                     <rect key="frame" x="134" y="2" width="181" height="76"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have I Got News For You" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjZ-fz-8sN">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor who" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjZ-fz-8sN">
                                                             <rect key="frame" x="0.0" y="2" width="181" height="16"/>
                                                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series 53: Episode 9" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5a6-fd-Pyl">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series 3: Episode 1" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5a6-fd-Pyl">
                                                             <rect key="frame" x="0.0" y="23" width="181" height="15"/>
                                                             <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -376,7 +377,7 @@
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NrJ-Hq-cGg">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="95"/>
                                                                                 <subviews>
-                                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fjord" translatesAutoresizingMaskIntoConstraints="NO" id="Kpz-dH-ss2" userLabel="TopImageView">
+                                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbctwo1" translatesAutoresizingMaskIntoConstraints="NO" id="Kpz-dH-ss2" userLabel="TopImageView">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="95"/>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW SERIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJg-rB-BId">
@@ -412,7 +413,7 @@
                                                                                         <color key="textColor" red="0.90012640919999998" green="0.90012640919999998" blue="0.90012640919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ripper Street" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8G-R4-WfK">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospital" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8G-R4-WfK">
                                                                                         <rect key="frame" x="4" y="23" width="142" height="20"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="JUd-NX-rXs"/>
@@ -421,10 +422,10 @@
                                                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series 5: 1. Closed Casket" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jB8-MG-pPc">
-                                                                                        <rect key="frame" x="4" y="55" width="142" height="15"/>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series 2: Episode 1" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jB8-MG-pPc">
+                                                                                        <rect key="frame" x="4" y="60" width="142" height="20"/>
                                                                                         <constraints>
-                                                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="Uac-3Q-O0L"/>
+                                                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Uac-3Q-O0L"/>
                                                                                         </constraints>
                                                                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="10"/>
                                                                                         <color key="textColor" red="0.90012640919999998" green="0.90012640919999998" blue="0.90012640919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -437,7 +438,7 @@
                                                                                     <constraint firstAttribute="trailing" secondItem="cvo-Lt-xCR" secondAttribute="trailing" constant="4" id="5d2-E9-DyY"/>
                                                                                     <constraint firstItem="R8G-R4-WfK" firstAttribute="leading" secondItem="iLa-av-HHb" secondAttribute="leading" constant="4" id="DUD-ew-bMI"/>
                                                                                     <constraint firstItem="R8G-R4-WfK" firstAttribute="top" secondItem="cvo-Lt-xCR" secondAttribute="bottom" constant="5" id="Dqa-T9-8y0"/>
-                                                                                    <constraint firstAttribute="bottom" secondItem="jB8-MG-pPc" secondAttribute="bottom" constant="25" id="GTG-ej-QlU"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="jB8-MG-pPc" secondAttribute="bottom" constant="15" id="GTG-ej-QlU"/>
                                                                                     <constraint firstItem="jB8-MG-pPc" firstAttribute="leading" secondItem="iLa-av-HHb" secondAttribute="leading" constant="4" id="I5S-gM-1Zp"/>
                                                                                     <constraint firstItem="R8G-R4-WfK" firstAttribute="centerX" secondItem="iLa-av-HHb" secondAttribute="centerX" id="OcG-Zp-q15"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="R8G-R4-WfK" secondAttribute="trailing" constant="4" id="ddN-zu-PhX"/>
@@ -593,7 +594,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fjord" translatesAutoresizingMaskIntoConstraints="NO" id="9uk-el-LqJ" userLabel="Main Image View">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbcone3" translatesAutoresizingMaskIntoConstraints="NO" id="9uk-el-LqJ" userLabel="Main Image View">
                                                     <rect key="frame" x="1" y="5" width="150" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="SaB-Ma-jYG"/>
@@ -617,19 +618,19 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECOMMENDED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bs2-BI-2xb" userLabel="Channel Label">
                                                             <rect key="frame" x="0.0" y="0.0" width="163.5" height="21"/>
                                                             <fontDescription key="fontDescription" name="ArialHebrew-Light" family="Arial Hebrew" pointSize="11"/>
-                                                            <color key="textColor" red="0.90012640919999998" green="0.90012640919999998" blue="0.90012640919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" red="1" green="0.19749483703950618" blue="0.64828161882098767" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Panorama" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwb-4t-8Jh" userLabel="Title Label">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poldark" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwb-4t-8Jh" userLabel="Title Label">
                                                             <rect key="frame" x="0.0" y="21" width="163" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="UFq-uj-Xgd"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="ArialHebrew-Light" family="Arial Hebrew" pointSize="20"/>
+                                                            <fontDescription key="fontDescription" name="ArialHebrew-Light" family="Arial Hebrew" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London Tower Fire" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el5-4r-yEB" userLabel="Description Label">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series 3: Episode 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el5-4r-yEB" userLabel="Description Label">
                                                             <rect key="frame" x="0.0" y="51" width="163" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Ql8-EA-tV3"/>
@@ -719,8 +720,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bbc_radio_1" width="1920" height="1080"/>
+        <image name="bbc_four" width="1000" height="754"/>
+        <image name="bbcfour6" width="1200" height="675"/>
         <image name="bbciplayerplayontviconwhite" width="25" height="21"/>
-        <image name="fjord" width="2560" height="1600"/>
+        <image name="bbcone3" width="320" height="180"/>
+        <image name="bbcone8" width="790" height="444"/>
+        <image name="bbctwo1" width="1200" height="675"/>
     </resources>
 </document>

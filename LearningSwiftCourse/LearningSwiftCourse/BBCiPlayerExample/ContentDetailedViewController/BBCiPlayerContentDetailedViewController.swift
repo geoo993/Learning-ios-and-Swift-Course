@@ -39,6 +39,13 @@ class BBCiPlayerContentDetailedViewController: UIViewController, UINavigationBar
     var navbarHeight : CGFloat = 84
     var navbarTitle : String = "Hello"
     
+    var mixedItems : [BBCiPlayerVideosItems] =  {
+        let allchannelsItems = BBCiPlayerVideosItems.allChannelsItems()
+        let shuffled = allchannelsItems.shuffled()
+        let amount = shuffled.take(6)
+        return amount
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -90,13 +97,17 @@ extension BBCiPlayerContentDetailedViewController: UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return mixedItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: "detailedContentTableViewCell", for: indexPath) as! DetailedContentTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailedContentTableViewCell", for: indexPath) as! BBCiPlayerContentDetailedTableViewCell
+        
         cell.customSeperatorLine(withColor: UIColor.gray, separatorHeight: 0.4)
+        cell.contentImageView.image = mixedItems[indexPath.row].image
+        cell.contentTitleLabel.text = mixedItems[indexPath.row].title
+        cell.contentDescriptionLabel.text = mixedItems[indexPath.row].summary
         
         return cell
     }
