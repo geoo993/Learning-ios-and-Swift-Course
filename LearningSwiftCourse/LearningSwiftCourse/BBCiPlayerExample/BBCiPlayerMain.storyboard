@@ -54,12 +54,6 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem id="5hG-Sb-7fg">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="x3f-Xk-9b0">
-                                            <color key="tintColor" red="1" green="0.10605951003086422" blue="0.35297394135185189" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <action selector="backnavButton:" destination="TaZ-1L-aqr" id="WJS-3Z-XAj"/>
-                                            </connections>
-                                        </barButtonItem>
                                         <rightBarButtonItems>
                                             <barButtonItem systemItem="stop" id="muF-KK-vVK">
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -262,7 +256,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.080794412669999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.095708089370987667" green="0.10765590958703705" blue="0.13499965958358026" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="HG0-jT-rVT" firstAttribute="leading" secondItem="VPq-Wv-16u" secondAttribute="leading" id="3DU-E7-wz3"/>
                             <constraint firstItem="HG0-jT-rVT" firstAttribute="bottom" secondItem="a88-Kx-7DO" secondAttribute="top" id="3X3-hx-Xk3"/>
@@ -279,9 +273,26 @@
                             <constraint firstAttribute="trailing" secondItem="6mW-HI-gfE" secondAttribute="trailing" id="xI8-Bn-VJa"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="F42-Cg-14r">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="stop" id="rUv-mI-ZpX">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="stopButton:" destination="TaZ-1L-aqr" id="cTU-Oe-xz8"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="bbciplayerplayontviconwhite" style="plain" id="bek-n7-H8U" userLabel="Play On Tv Button Item">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="playontvButton:" destination="TaZ-1L-aqr" id="NIo-t8-fVa"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="backnavBarItem" destination="x3f-Xk-9b0" id="Q9c-Mz-SWb"/>
                         <outlet property="detailedContentAvailableLabel" destination="ESp-ZE-Yrg" id="Lx6-PZ-ouX"/>
                         <outlet property="detailedContentDescriptionLabel" destination="rwl-kZ-Iad" id="MH2-BT-oIH"/>
                         <outlet property="detailedContentImageView" destination="NsG-xa-h6A" id="oR2-GR-cym"/>
@@ -294,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLT-OT-zbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200" y="210.21126760563379"/>
+            <point key="canvasLocation" x="2411.25" y="207.04225352112675"/>
         </scene>
         <!--BBC iPlayer Table View Controller-->
         <scene sceneID="QM6-v7-brL">
@@ -333,15 +344,9 @@
                                         <rightBarButtonItems>
                                             <barButtonItem systemItem="search" id="5JC-un-Arx">
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <action selector="stopButton:" destination="ZY3-ho-Es7" id="5VN-on-THh"/>
-                                                </connections>
                                             </barButtonItem>
                                             <barButtonItem image="bbciplayerplayontviconwhite" style="plain" id="OYS-LA-9Av" userLabel="Play On Tv Button Item">
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <action selector="playontvButton:" destination="ZY3-ho-Es7" id="SAW-sc-mBG"/>
-                                                </connections>
                                             </barButtonItem>
                                         </rightBarButtonItems>
                                     </navigationItem>
@@ -502,7 +507,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.080794412669999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.095708089369999999" green="0.1076559096" blue="0.13499965959999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="d4E-QQ-cqo" firstAttribute="leading" secondItem="bKt-S8-Lzp" secondAttribute="leading" id="3mH-Mb-ZoW"/>
                             <constraint firstItem="APb-Pv-WmX" firstAttribute="leading" secondItem="bKt-S8-Lzp" secondAttribute="leading" id="4KX-ky-xNZ"/>
@@ -540,58 +545,19 @@
                         <viewControllerLayoutGuide type="bottom" id="djK-MC-btr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1WL-mX-Ezi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SuV-0Y-KjP" userLabel="Back Ground Blur Visual Effect View">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nNr-nE-dfV">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="weJ-SJ-RNW" userLabel="Top Visual Effect View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7NA-lE-e3F">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="6a4-hG-hdy"/>
-                                </constraints>
-                                <blurEffect style="dark"/>
-                            </visualEffectView>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="c23-d5-yWV">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Title" id="5hO-mR-Bv6">
-                                        <rightBarButtonItems>
-                                            <barButtonItem systemItem="stop" id="swt-zV-rk5">
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <action selector="stopButton:" destination="ZY3-ho-Es7" id="ful-XX-UMH"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem image="bbciplayerplayontviconwhite" style="plain" id="8FW-UC-Nmz" userLabel="Play On Tv Button Item">
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <action selector="playontvButton:" destination="ZY3-ho-Es7" id="kLM-kR-Hud"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </rightBarButtonItems>
-                                    </navigationItem>
-                                </items>
-                                <connections>
-                                    <outlet property="delegate" destination="ZY3-ho-Es7" id="mLc-qX-Ahu"/>
-                                </connections>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="31" sectionFooterHeight="31" translatesAutoresizingMaskIntoConstraints="NO" id="cCE-9n-BRg">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contentTableViewCell" id="F7E-Rt-QyZ" userLabel="BBC iPlayer Content Table View Cell" customClass="BBCiPlayerContentTableViewCell" customModule="LearningSwiftCourse" customModuleProvider="target">
@@ -623,22 +589,22 @@
                                                     <rect key="frame" x="156" y="2" width="163" height="96"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECOMMENDED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bs2-BI-2xb" userLabel="Channel Label">
-                                                            <rect key="frame" x="0.0" y="0.0" width="163.5" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="163.5" height="16"/>
                                                             <fontDescription key="fontDescription" name="ArialHebrew-Light" family="Arial Hebrew" pointSize="11"/>
                                                             <color key="textColor" red="1" green="0.19749483703950618" blue="0.64828161882098767" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poldark" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwb-4t-8Jh" userLabel="Title Label">
-                                                            <rect key="frame" x="0.0" y="21" width="163" height="30"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poldark" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwb-4t-8Jh" userLabel="Title Label">
+                                                            <rect key="frame" x="0.0" y="16" width="163" height="40"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="30" id="UFq-uj-Xgd"/>
+                                                                <constraint firstAttribute="height" constant="40" id="UFq-uj-Xgd"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="ArialHebrew-Light" family="Arial Hebrew" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series 3: Episode 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el5-4r-yEB" userLabel="Description Label">
-                                                            <rect key="frame" x="0.0" y="51" width="163" height="30"/>
+                                                            <rect key="frame" x="0.0" y="56" width="163" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Ql8-EA-tV3"/>
                                                             </constraints>
@@ -654,7 +620,7 @@
                                                         <constraint firstItem="Bs2-BI-2xb" firstAttribute="centerX" secondItem="smf-YY-Lcd" secondAttribute="centerX" id="FfH-sL-Wcm"/>
                                                         <constraint firstItem="uwb-4t-8Jh" firstAttribute="top" secondItem="Bs2-BI-2xb" secondAttribute="bottom" id="MfU-nt-okI"/>
                                                         <constraint firstAttribute="trailing" secondItem="el5-4r-yEB" secondAttribute="trailing" id="Ouu-7I-THZ"/>
-                                                        <constraint firstAttribute="bottom" secondItem="el5-4r-yEB" secondAttribute="bottom" constant="15" id="Qj1-gJ-7R4"/>
+                                                        <constraint firstAttribute="bottom" secondItem="el5-4r-yEB" secondAttribute="bottom" constant="10" id="Qj1-gJ-7R4"/>
                                                         <constraint firstItem="el5-4r-yEB" firstAttribute="leading" secondItem="smf-YY-Lcd" secondAttribute="leading" id="R0d-ic-ueP"/>
                                                         <constraint firstAttribute="trailing" secondItem="Bs2-BI-2xb" secondAttribute="trailing" id="V44-OJ-Lcb"/>
                                                         <constraint firstItem="Bs2-BI-2xb" firstAttribute="leading" secondItem="smf-YY-Lcd" secondAttribute="leading" id="WTL-0r-8iT"/>
@@ -696,34 +662,60 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SuV-0Y-KjP" firstAttribute="leading" secondItem="1WL-mX-Ezi" secondAttribute="leading" id="5v1-qx-CV8"/>
-                            <constraint firstItem="weJ-SJ-RNW" firstAttribute="leading" secondItem="1WL-mX-Ezi" secondAttribute="leading" id="F0j-WQ-qQH"/>
-                            <constraint firstItem="SuV-0Y-KjP" firstAttribute="top" secondItem="weJ-SJ-RNW" secondAttribute="bottom" id="IgO-hJ-yfh"/>
                             <constraint firstAttribute="trailing" secondItem="SuV-0Y-KjP" secondAttribute="trailing" id="MZd-uv-h9r"/>
                             <constraint firstAttribute="trailing" secondItem="cCE-9n-BRg" secondAttribute="trailing" id="SQ8-rv-lWz"/>
-                            <constraint firstItem="weJ-SJ-RNW" firstAttribute="centerX" secondItem="1WL-mX-Ezi" secondAttribute="centerX" id="Zsf-kF-UxH"/>
-                            <constraint firstItem="cCE-9n-BRg" firstAttribute="top" secondItem="weJ-SJ-RNW" secondAttribute="bottom" id="bLm-Rn-uhy"/>
-                            <constraint firstItem="c23-d5-yWV" firstAttribute="centerX" secondItem="1WL-mX-Ezi" secondAttribute="centerX" id="fdl-I5-3Fr"/>
-                            <constraint firstItem="cCE-9n-BRg" firstAttribute="top" secondItem="c23-d5-yWV" secondAttribute="bottom" id="gdS-kP-5lY"/>
+                            <constraint firstItem="SuV-0Y-KjP" firstAttribute="top" secondItem="i03-2C-qdL" secondAttribute="bottom" id="ciJ-H1-IVV"/>
+                            <constraint firstItem="cCE-9n-BRg" firstAttribute="top" secondItem="i03-2C-qdL" secondAttribute="bottom" id="dAM-K9-Xi9"/>
                             <constraint firstItem="djK-MC-btr" firstAttribute="top" secondItem="SuV-0Y-KjP" secondAttribute="bottom" id="hbI-tI-L4l"/>
-                            <constraint firstItem="c23-d5-yWV" firstAttribute="leading" secondItem="1WL-mX-Ezi" secondAttribute="leading" id="j8o-33-vfV"/>
-                            <constraint firstItem="weJ-SJ-RNW" firstAttribute="top" secondItem="1WL-mX-Ezi" secondAttribute="top" id="kO0-4m-cAN"/>
-                            <constraint firstItem="c23-d5-yWV" firstAttribute="top" secondItem="i03-2C-qdL" secondAttribute="bottom" id="kra-pV-3WF"/>
-                            <constraint firstAttribute="trailing" secondItem="weJ-SJ-RNW" secondAttribute="trailing" id="lLj-M3-a3j"/>
                             <constraint firstItem="cCE-9n-BRg" firstAttribute="leading" secondItem="1WL-mX-Ezi" secondAttribute="leading" id="pWk-it-13a"/>
                             <constraint firstItem="djK-MC-btr" firstAttribute="top" secondItem="cCE-9n-BRg" secondAttribute="bottom" id="v54-Ru-27b"/>
                             <constraint firstItem="cCE-9n-BRg" firstAttribute="centerX" secondItem="1WL-mX-Ezi" secondAttribute="centerX" id="vY6-fx-oPW"/>
-                            <constraint firstAttribute="trailing" secondItem="c23-d5-yWV" secondAttribute="trailing" id="wo8-pS-P7R"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="A97-hQ-f6f">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="stop" id="S6J-L2-lIP">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="stopButton:" destination="ZY3-ho-Es7" id="iWo-WI-3AF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="bbciplayerplayontviconwhite" id="Z8k-KD-uoG" userLabel="Play on tv ">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="playontvButton:" destination="ZY3-ho-Es7" id="aEn-PC-aA3"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="navBar" destination="c23-d5-yWV" id="kPk-9i-1Yx"/>
                         <outlet property="tableView" destination="cCE-9n-BRg" id="uFh-6q-Oqh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IT7-cc-UdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="368" y="210"/>
+            <point key="canvasLocation" x="1457" y="207"/>
+        </scene>
+        <!--BBC iPlayer Content Navigation Controller-->
+        <scene sceneID="hTU-3H-Whz">
+            <objects>
+                <navigationController storyboardIdentifier="BBCiPlayerContentNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="pRZ-Lt-B50" userLabel="BBC iPlayer Content Navigation Controller" customClass="BBCiPlayerContentNavigationController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="4O0-K1-Db0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.1450980392" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZY3-ho-Es7" kind="relationship" relationship="rootViewController" id="mgK-iY-uLJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBz-EE-xGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="206"/>
         </scene>
     </scenes>
     <resources>

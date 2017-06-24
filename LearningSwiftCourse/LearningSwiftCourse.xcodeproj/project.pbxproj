@@ -11,6 +11,7 @@
 		C703771A1EF5471E002E7D9B /* SearchBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70377191EF5471E002E7D9B /* SearchBarTableViewController.swift */; };
 		C703771C1EF5473A002E7D9B /* SearchBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C703771B1EF5473A002E7D9B /* SearchBarTableViewCell.swift */; };
 		C703771E1EF551C0002E7D9B /* SearchBarViewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C703771D1EF551C0002E7D9B /* SearchBarViewNavigationController.swift */; };
+		C70557E91EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70557E81EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift */; };
 		C708787C1EFD0EBF006BBDEC /* BBCiPlayerContentDetailedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C708787B1EFD0EBF006BBDEC /* BBCiPlayerContentDetailedTableViewCell.swift */; };
 		C71EDCF01EF6DB9B00B69EF9 /* LearningSwiftCourse-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = C71EDCCC1EF6DA3800B69EF9 /* LearningSwiftCourse-Bridging-Header.h */; };
 		C71EDCF51EF6DDB300B69EF9 /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C71EDCF41EF6DD5100B69EF9 /* SWRevealViewController.h */; };
@@ -582,6 +583,7 @@
 		C70377191EF5471E002E7D9B /* SearchBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTableViewController.swift; sourceTree = "<group>"; };
 		C703771B1EF5473A002E7D9B /* SearchBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTableViewCell.swift; sourceTree = "<group>"; };
 		C703771D1EF551C0002E7D9B /* SearchBarViewNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewNavigationController.swift; sourceTree = "<group>"; };
+		C70557E81EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentNavigationController.swift; sourceTree = "<group>"; };
 		C708787B1EFD0EBF006BBDEC /* BBCiPlayerContentDetailedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentDetailedTableViewCell.swift; sourceTree = "<group>"; };
 		C71EDCCC1EF6DA3800B69EF9 /* LearningSwiftCourse-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearningSwiftCourse-Bridging-Header.h"; sourceTree = "<group>"; };
 		C71EDCF31EF6DD5100B69EF9 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -977,6 +979,7 @@
 			isa = PBXGroup;
 			children = (
 				C7349E091EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift */,
+				C70557E81EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift */,
 			);
 			path = ContentPicksTableViewController;
 			sourceTree = "<group>";
@@ -2180,6 +2183,7 @@
 				C7C2AF0E1EF6CC62004F257A /* SimpleDraggableView.swift in Sources */,
 				C7C2AF3C1EF6CCB3004F257A /* ParallaxTableViewCell.swift in Sources */,
 				C767868D1EF91600005C159F /* BBCiPlayerTableViewCell.swift in Sources */,
+				C70557E91EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift in Sources */,
 				C7C2AF0A1EF6CC5C004F257A /* CrossPlatformDefines.swift in Sources */,
 				C7C2AEFD1EF6CC17004F257A /* AirbnbNavigationController.swift in Sources */,
 				C7C2AF2C1EF6CC97004F257A /* MultiSidedBarMenuControllerLeft.swift in Sources */,

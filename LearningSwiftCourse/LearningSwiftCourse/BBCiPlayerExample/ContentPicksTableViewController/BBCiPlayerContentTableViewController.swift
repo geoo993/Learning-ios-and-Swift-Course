@@ -15,14 +15,13 @@ class BBCiPlayerContentTableViewController: UIViewController {
         dismiss(animated: true) { 
             print("ViewController dismissed, now going to home page")
         }
-        //self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func playontvButton(_ sender: UINavigationItem) {
         print("Play on tv")
     }
     
-    @IBOutlet weak var navBar : UINavigationBar!
     @IBOutlet weak var tableView : UITableView!
     
     var titleName : String = ""
@@ -43,7 +42,6 @@ class BBCiPlayerContentTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navBar.clearNavigationBarBackground()
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,12 +52,9 @@ class BBCiPlayerContentTableViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navBar.topItem?.title = titleName
-        
         self.tableView.reloadData()
     }
-  
-
+ 
     /*
     // MARK: - Navigation
 
@@ -71,7 +66,7 @@ class BBCiPlayerContentTableViewController: UIViewController {
     */
     
     deinit {
-        
+        tableView = nil
     }
 
 }
@@ -119,14 +114,10 @@ extension BBCiPlayerContentTableViewController: UITableViewDelegate {
         let storyboard = UIStoryboard(name: "BBCiPlayerMain", bundle: bundle)
         let vc = storyboard.instantiateViewController(withIdentifier: "BBCiPlayerContentDetailedViewController") as! BBCiPlayerContentDetailedViewController
         
+        vc.usingNavigationController = true
         vc.currentContent = mixedItems[indexPath.row]
-        vc.navbarbackTitle = titleName
+        self.navigationController?.pushViewController(vc, animated: true) 
         
-        print("\(indexPath.row)", titleName)
-        
-        self.present(vc, animated: true, completion: { 
-            print("BBCiPlayerContentDetailedViewController presented")
-        })
         
     }
    

@@ -9,10 +9,7 @@
 import UIKit
 
 class BBCiPlayerContentDetailedViewController: UIViewController, UINavigationBarDelegate {
-    
-    @IBAction func backnavButton(_ sender: UINavigationItem) {
-        print("Back")
-    }
+
     
     @IBAction func stopButton(_ sender: UINavigationItem) {
         dismiss(animated: true) { 
@@ -27,7 +24,6 @@ class BBCiPlayerContentDetailedViewController: UIViewController, UINavigationBar
     
     @IBOutlet weak var detailedContentTableView : UITableView!
     @IBOutlet weak var navBar : UINavigationBar!
-    @IBOutlet weak var backnavBarItem : UIBarButtonItem!
     
     @IBOutlet weak var detailedContentImageView : UIImageView!
     @IBOutlet weak var detailedContentLogoImageView : UIImageView!
@@ -42,7 +38,7 @@ class BBCiPlayerContentDetailedViewController: UIViewController, UINavigationBar
     }
     
     var navbarHeight : CGFloat = 84
-    var navbarbackTitle : String = ""
+    var usingNavigationController = false
     var currentContent : BBCiPlayerVideosItems?
     var mixedItems : [BBCiPlayerVideosItems] =  {
         let allchannelsItems = BBCiPlayerVideosItems.allChannelsItems()
@@ -55,7 +51,7 @@ class BBCiPlayerContentDetailedViewController: UIViewController, UINavigationBar
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.bbciplayerDark()
-        navBar.clearNavigationBarBackground()
+        navBar.clearNavigationBarBackground(with: UIColor.clear)
         
         detailedContentTableView.tableFooterView = nil
         
@@ -73,14 +69,15 @@ class BBCiPlayerContentDetailedViewController: UIViewController, UINavigationBar
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+       
+        displayCustomNavbar(display: usingNavigationController)
         setupCurrentContent()
-        
-        backnavBarItem.title = navbarbackTitle
-        backnavBarItem.tintColor = UIColor.bbciplayerPink()
-            
         detailedContentTableView.reloadData()
     }
     
+    func displayCustomNavbar (display : Bool){
+        navBar.isHidden = display
+    }
     func setupCurrentContent(){
         
         if let content = currentContent {
@@ -90,7 +87,6 @@ class BBCiPlayerContentDetailedViewController: UIViewController, UINavigationBar
             detailedContentDescriptionLabel.text = content.summary
         }
     }
-    
     
     /*
     // MARK: - Navigation
@@ -165,21 +161,7 @@ extension BBCiPlayerContentDetailedViewController: UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return nil
     }
-    
-    /*
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        //let cell = self.tableView.dequeueReusableCell(withIdentifier: "iplayerTableViewCell") as! BBCiPlayerTableViewCell 
-        //let size: CGSize = cell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
-        //let height = size.height
-        //return UITableViewAutomaticDimension
-        
-        let numberOfItemsInCell = mainMenuData[indexPath.section].count
-        let inPairs = numberOfItemsInCell / 2
-        
-        return ( (cellHeight + cellSpacing) * CGFloat(inPairs) ) + (cellVerticalInsect * 2) - cellSpacing
-    }
-    */
+
     
 }
 

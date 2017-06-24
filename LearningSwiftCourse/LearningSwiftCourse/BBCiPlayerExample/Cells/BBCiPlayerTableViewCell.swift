@@ -65,6 +65,8 @@ class BBCiPlayerTableViewCell: UITableViewCell {
     }
     
     deinit {
+        collectionView = nil
+        collectionViewFlowLayout = nil
         collectionViewCellHeight = nil
         cellLineSpacing = nil
         cellVerticalInsect = nil
@@ -108,8 +110,8 @@ extension BBCiPlayerTableViewCell: UICollectionViewDelegate {
         
         //self.navigationController?.pushViewController(vc!, animated: true)
         let parentViewController = self.getParentViewController()
+        vc.usingNavigationController = false
         vc.currentContent = collectionData[indexPath.row]
-        vc.navbarbackTitle = ""
         parentViewController?.present(vc, animated: true, completion: { 
             print("BBCiPlayerContentDetailedViewController presented")
         })

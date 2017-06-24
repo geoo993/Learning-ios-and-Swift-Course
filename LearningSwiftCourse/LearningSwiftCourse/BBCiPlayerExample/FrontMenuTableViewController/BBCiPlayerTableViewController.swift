@@ -139,7 +139,9 @@ class BBCiPlayerTableViewController: UIViewController {
      */ 
 
     deinit {
-        
+        navBar = nil
+        navItem = nil
+        tableView = nil
     }
 }
 
@@ -172,8 +174,9 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
         return cell
     }
   
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) 
+    {
+        
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -197,16 +200,24 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
     
     @objc func sectionHeaderButtonAction(_ button: UIButton) { 
       
-        let tablevc = self.storyboard?.instantiateViewController(withIdentifier: "BBCiPlayerContentTableViewController") as! BBCiPlayerContentTableViewController
-    
-        //tablevc.view.backgroundColor = UIColor.clear
-        tablevc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        tablevc.titleName = self.mainSectionsItems[button.tag].title
+//        let tablevc = self.storyboard?.instantiateViewController(withIdentifier: "BBCiPlayerContentTableViewController") as! BBCiPlayerContentTableViewController
+//    
+//        tablevc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+//        tablevc.titleName = self.mainSectionsItems[button.tag].title
+//        
+//        //self.navigationController?.pushViewController(vc!, animated: true)
+//        self.present(tablevc, animated: true, completion: { 
+//            print("BBCiPlayerContentTableViewController presented")
+//        })
         
-        //self.navigationController?.pushViewController(vc!, animated: true)
-        self.present(tablevc, animated: true, completion: { 
-            print("BBCiPlayerContentTableViewController presented")
+        let tablenavVc = self.storyboard?.instantiateViewController(withIdentifier: "BBCiPlayerContentNavigationController") as! BBCiPlayerContentNavigationController
+        tablenavVc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        
+        tablenavVc.titleName = self.mainSectionsItems[button.tag].title
+        self.present(tablenavVc, animated: true, completion: { 
+            print("BBCiPlayerContentNavigationController presented")
         })
+        
     }
     
     func addItemsInSectionHeader(with view : UIView, section : Int )  {

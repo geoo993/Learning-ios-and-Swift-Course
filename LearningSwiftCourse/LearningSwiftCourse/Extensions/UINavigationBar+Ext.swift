@@ -11,11 +11,11 @@ import Foundation
 
 extension UINavigationBar {
     
-    func clearNavigationBarBackground(){
+    func clearNavigationBarBackground(with color: UIColor){
         self.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.shadowImage = UIImage()
         self.isTranslucent = true
-        self.backgroundColor = UIColor.clear
+        self.backgroundColor = color
         
     }
 }
