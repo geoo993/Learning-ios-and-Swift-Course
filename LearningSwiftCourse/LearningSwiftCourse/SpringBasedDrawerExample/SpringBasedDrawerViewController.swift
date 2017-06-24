@@ -27,14 +27,14 @@ class SpringBasedDrawerViewController: UIViewController {
         super.viewDidLoad()
         
         if dragInView == nil {
-            let height : CGFloat = 400
-            dragInView = DragInView(parent: self, side: .bottom)
+            let height : CGFloat = 320
+            dragInView = DragInView(parent: self, side: .top)
             dragInView?.drawerFullHeight(height)
             dragInView?.handleDrawerSize(CGSize(width: 50, height: 20))
             dragInView?.handleViewColor(UIColor.brown)
-            dragInView?.drawerMaxCutOffExtent(300)
-            dragInView?.visibleHeightWhenClosed(40)
-            dragInView?.visibleHeightWhenOpened(height - 50)
+            dragInView?.drawerMaxCutOffExtent(250)
+            //dragInView?.visibleHeightWhenClosed(200)
+            //dragInView?.visibleHeightWhenOpened(height - 50)
             dragInView?.backgroundColor = UIColor.white
             
             dragInView?.setupConstraints(onParent: self)

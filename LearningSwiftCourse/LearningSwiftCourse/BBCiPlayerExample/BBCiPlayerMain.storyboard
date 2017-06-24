@@ -533,6 +533,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAA-d5-ZD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="T66-6S-AC1" userLabel="Control Menu View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.095708089369999999" green="0.1076559096" blue="0.13499965959999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="-493.125" y="208.09859154929578"/>
         </scene>

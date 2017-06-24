@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Simple Spring Drawer View Controller-->
+        <scene sceneID="8mz-6w-bZt">
+            <objects>
+                <viewController storyboardIdentifier="SimpleSpringDrawerViewController" id="mKA-wc-m1d" customClass="SimpleSpringDrawerViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TVr-op-27A"/>
+                        <viewControllerLayoutGuide type="bottom" id="OY7-kj-zu1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iqV-yL-OE0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coralreef" translatesAutoresizingMaskIntoConstraints="NO" id="rA1-jC-DfU" userLabel="bg Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rA1-jC-DfU" firstAttribute="top" secondItem="iqV-yL-OE0" secondAttribute="top" id="1CI-zZ-drt"/>
+                            <constraint firstItem="OY7-kj-zu1" firstAttribute="top" secondItem="rA1-jC-DfU" secondAttribute="bottom" id="5rp-eM-xa4"/>
+                            <constraint firstAttribute="trailing" secondItem="rA1-jC-DfU" secondAttribute="trailing" id="III-8R-1Yz"/>
+                            <constraint firstItem="rA1-jC-DfU" firstAttribute="leading" secondItem="iqV-yL-OE0" secondAttribute="leading" id="Ip4-av-CxG"/>
+                            <constraint firstItem="rA1-jC-DfU" firstAttribute="centerY" secondItem="iqV-yL-OE0" secondAttribute="centerY" id="Ubx-Sn-XIW"/>
+                            <constraint firstItem="rA1-jC-DfU" firstAttribute="centerX" secondItem="iqV-yL-OE0" secondAttribute="centerX" id="XKJ-gQ-SNT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="topDrawerView" destination="Ofh-Pc-MKY" id="Cpb-uC-U9P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLd-1O-pDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Ofh-Pc-MKY" userLabel="Top Drawer View" customClass="TopDrawerView" customModule="LearningSwiftCourse" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Rq-z7-KXy">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Epc-W3-LTm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0qu-rR-9En">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="HFT-Ub-Oas">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <vibrancyEffect>
+                                            <blurEffect style="extraLight"/>
+                                        </vibrancyEffect>
+                                    </visualEffectView>
+                                </subviews>
+                            </view>
+                            <blurEffect style="extraLight"/>
+                        </visualEffectView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8Rq-z7-KXy" secondAttribute="trailing" id="0hq-fk-kz2"/>
+                        <constraint firstItem="8Rq-z7-KXy" firstAttribute="leading" secondItem="Ofh-Pc-MKY" secondAttribute="leading" id="4Jv-0X-Q9N"/>
+                        <constraint firstAttribute="bottom" secondItem="8Rq-z7-KXy" secondAttribute="bottom" id="8Se-b4-bam"/>
+                        <constraint firstItem="8Rq-z7-KXy" firstAttribute="top" secondItem="Ofh-Pc-MKY" secondAttribute="top" id="KKi-qH-UcC"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-370.39999999999998" y="59.820089955022496"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coralreef" width="506" height="900"/>
+    </resources>
+</document>

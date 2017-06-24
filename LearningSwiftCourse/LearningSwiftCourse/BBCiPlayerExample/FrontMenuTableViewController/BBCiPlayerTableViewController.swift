@@ -40,7 +40,9 @@ class BBCiPlayerTableViewController: UIViewController {
     
     var mainSectionsItems = [(channel:String,title:String, description:String, item:BBCiPlayerVideosItems)]()
     var mainMenuData = [[BBCiPlayerVideosItems]]()
-
+    var firstHeaderViewSlideShowContainer : SlideShowView? = nil
+    var firstHeaderViewSlideShowImages : [UIImage] = []
+    
     var cellSpacing : CGFloat = 2
     var cellVerticalInsect : CGFloat = 4
     var cellHeight : CGFloat = CGFloat.overrideHeightSizeF(size: 260)
@@ -57,12 +59,6 @@ class BBCiPlayerTableViewController: UIViewController {
         return .lightContent
     }
     
-    //slideshow
-    //bbconeItems[5] 
-    //bbccbeebiesItems[4]
-    //bbcparliamentItems[2]
-    //bbcfourItems[8]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.bbciplayerDark()
@@ -78,6 +74,7 @@ class BBCiPlayerTableViewController: UIViewController {
         
         addBBCIplayerLogo()
         setupItems()
+
         self.tableView.layoutSubviews()
     }
     
@@ -117,6 +114,13 @@ class BBCiPlayerTableViewController: UIViewController {
             [bbconeItems[6], bbcfourItems[7], bbccbbcItems[4], bbcnewsItems[6], bbccbeebiesItems[0], bbctwoItems[3]]
         ]
         
+        firstHeaderViewSlideShowImages = [
+            bbconeItems[5], 
+            bbccbeebiesItems[4],
+            bbcparliamentItems[2],
+            bbcfourItems[8],
+            bbcthreeItems[4],
+        ].flatMap{ $0.image }
     }
     
 //    func getTopAreaHeight() -> CGFloat
@@ -142,6 +146,7 @@ class BBCiPlayerTableViewController: UIViewController {
         navBar = nil
         navItem = nil
         tableView = nil
+        firstHeaderViewSlideShowContainer = nil
     }
 }
 
@@ -187,6 +192,7 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
         sectionHeader.backgroundColor = UIColor.bbciplayerDark()
         addItemsInSectionHeader(with: sectionHeader, section: section)
         
+        //add button above items
         let sectionHeaderButton = UIButton(frame: sectionHeaderFrame)
         sectionHeaderButton.backgroundColor = UIColor.clear
         sectionHeaderButton.tag = section
@@ -199,17 +205,7 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
     
     
     @objc func sectionHeaderButtonAction(_ button: UIButton) { 
-      
-//        let tablevc = self.storyboard?.instantiateViewController(withIdentifier: "BBCiPlayerContentTableViewController") as! BBCiPlayerContentTableViewController
-//    
-//        tablevc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-//        tablevc.titleName = self.mainSectionsItems[button.tag].title
-//        
-//        //self.navigationController?.pushViewController(vc!, animated: true)
-//        self.present(tablevc, animated: true, completion: { 
-//            print("BBCiPlayerContentTableViewController presented")
-//        })
-        
+   
         let tablenavVc = self.storyboard?.instantiateViewController(withIdentifier: "BBCiPlayerContentNavigationController") as! BBCiPlayerContentNavigationController
         tablenavVc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         
@@ -223,13 +219,27 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
     func addItemsInSectionHeader(with view : UIView, section : Int )  {
         
         let screen = UIScreen.main.bounds.size
-        let topViewFrame = CGRect(x: 0, y: 0, width: screen.width, height: cellHeaderHeight * 0.65)
-        let topHeaderImage = mainSectionsItems[section].item.image
-        let topHeaderImageView = UIImageView(image: topHeaderImage)
-        topHeaderImageView.backgroundColor = UIColor.clear
-        topHeaderImageView.frame = topViewFrame
-        view.addSubview(topHeaderImageView)
-        
+        let topViewHeight = cellHeaderHeight * 0.65
+        let topViewFrame = CGRect(x: 0, y: 0, width: screen.width, height: topViewHeight)
+        if section == 0 {
+            
+            firstHeaderViewSlideShowContainer?.removeEverything()
+            firstHeaderViewSlideShowContainer = nil
+            if firstHeaderViewSlideShowContainer == nil {
+                firstHeaderViewSlideShowContainer = SlideShowView(frame: topViewFrame, parentView: view, images: firstHeaderViewSlideShowImages)
+                firstHeaderViewSlideShowContainer?.moveToDistance = 30
+                firstHeaderViewSlideShowContainer?.duration = 6
+                view.addSubview(firstHeaderViewSlideShowContainer!)
+                firstHeaderViewSlideShowContainer?.animateImageViews()
+            }
+            
+        }else {
+            let topHeaderImage = mainSectionsItems[section].item.image
+            let topHeaderImageView = UIImageView(image: topHeaderImage)
+            topHeaderImageView.backgroundColor = UIColor.clear
+            topHeaderImageView.frame = topViewFrame
+            view.addSubview(topHeaderImageView)
+        }
         
         let captionLabel = UILabel(frame: 
             CGRect(x:0, 
@@ -243,16 +253,16 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
         captionLabel.font = UIFont(name: FamilyName.helvetica.rawValue, size: 8)
         view.addSubview(captionLabel)
         
+        let bottomViewHeight = cellHeaderHeight * 0.35
         let bottomViewFrame = CGRect(x: 0, 
-                                     y: topHeaderImageView.frame.size.height, 
+                                     y: topViewHeight, 
                                      width: UIScreen.main.bounds.size.width, 
-                                     height: cellHeaderHeight * 0.35 )
+                                     height: bottomViewHeight )
         let bottomView = UIView(frame: bottomViewFrame)
         bottomView.backgroundColor = UIColor.clear
         bottomView.frame = bottomViewFrame
         view.addSubview(bottomView)
         
-        let bottomViewHeight = bottomView.frame.size.height
         let channelLabel = UILabel(frame: 
             CGRect(x: 5, y:0, 
                    width: screen.width - 10, 

@@ -13,6 +13,9 @@
 		C703771E1EF551C0002E7D9B /* SearchBarViewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C703771D1EF551C0002E7D9B /* SearchBarViewNavigationController.swift */; };
 		C70557E91EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70557E81EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift */; };
 		C708787C1EFD0EBF006BBDEC /* BBCiPlayerContentDetailedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C708787B1EFD0EBF006BBDEC /* BBCiPlayerContentDetailedTableViewCell.swift */; };
+		C71678E21EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71678E11EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard */; };
+		C71678E41EFF19C700355E41 /* SimpleSpringDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71678E31EFF19C700355E41 /* SimpleSpringDrawerViewController.swift */; };
+		C71678E61EFF1A7B00355E41 /* TopDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71678E51EFF1A7B00355E41 /* TopDrawerView.swift */; };
 		C71EDCF01EF6DB9B00B69EF9 /* LearningSwiftCourse-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = C71EDCCC1EF6DA3800B69EF9 /* LearningSwiftCourse-Bridging-Header.h */; };
 		C71EDCF51EF6DDB300B69EF9 /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C71EDCF41EF6DD5100B69EF9 /* SWRevealViewController.h */; };
 		C71EDCF61EF6DDB600B69EF9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C71EDCF31EF6DD5100B69EF9 /* SWRevealViewController.m */; };
@@ -585,6 +588,9 @@
 		C703771D1EF551C0002E7D9B /* SearchBarViewNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewNavigationController.swift; sourceTree = "<group>"; };
 		C70557E81EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentNavigationController.swift; sourceTree = "<group>"; };
 		C708787B1EFD0EBF006BBDEC /* BBCiPlayerContentDetailedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentDetailedTableViewCell.swift; sourceTree = "<group>"; };
+		C71678E11EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleSpringDrawerMain.storyboard; sourceTree = "<group>"; };
+		C71678E31EFF19C700355E41 /* SimpleSpringDrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSpringDrawerViewController.swift; sourceTree = "<group>"; };
+		C71678E51EFF1A7B00355E41 /* TopDrawerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDrawerView.swift; sourceTree = "<group>"; };
 		C71EDCCC1EF6DA3800B69EF9 /* LearningSwiftCourse-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearningSwiftCourse-Bridging-Header.h"; sourceTree = "<group>"; };
 		C71EDCF31EF6DD5100B69EF9 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		C71EDCF41EF6DD5100B69EF9 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -860,6 +866,16 @@
 			path = SearchBarExample;
 			sourceTree = "<group>";
 		};
+		C71678C41EFF196500355E41 /* SimpleSpringDrawerExample */ = {
+			isa = PBXGroup;
+			children = (
+				C71678E51EFF1A7B00355E41 /* TopDrawerView.swift */,
+				C71678E31EFF19C700355E41 /* SimpleSpringDrawerViewController.swift */,
+				C71678E11EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard */,
+			);
+			path = SimpleSpringDrawerExample;
+			sourceTree = "<group>";
+		};
 		C72E27981E9ED9EB0064E01B = {
 			isa = PBXGroup;
 			children = (
@@ -912,6 +928,7 @@
 				C7C2AEB71EF6CB63004F257A /* ScrollViewExample */,
 				C70376FA1EF5468A002E7D9B /* SearchBarExample */,
 				C7C2AE6E1EF6CB62004F257A /* SideBarMenuExample */,
+				C71678C41EFF196500355E41 /* SimpleSpringDrawerExample */,
 				C76F04C21EF4FFD40090F71B /* SlideMenuDrawerExample */,
 				C7C2AEE31EF6CB63004F257A /* SlideShowExample */,
 				C7C2AEA91EF6CB63004F257A /* SpringBasedDrawerExample */,
@@ -2091,6 +2108,7 @@
 				C7C2AF511EF6CCF1004F257A /* SideBarMenuMain.storyboard in Resources */,
 				C7C2AF0C1EF6CC62004F257A /* DraggableVerticalMenusMain.storyboard in Resources */,
 				C7C2AF421EF6CCCE004F257A /* PopUpMain.storyboard in Resources */,
+				C71678E21EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard in Resources */,
 				C7C2AF381EF6CCA9004F257A /* PageViewMain.storyboard in Resources */,
 				C7AE48901EA5327300C2096E /* Main.storyboard in Resources */,
 				C7C2AF4C1EF6CCD7004F257A /* slide18.gif in Resources */,
@@ -2219,6 +2237,7 @@
 				C7C2AF621EF6CD2D004F257A /* StorySmartiesBookShelfCollectionViewCell.swift in Sources */,
 				C7C2AF761EF6CD7E004F257A /* MediaLayers.swift in Sources */,
 				C7C2AF061EF6CC46004F257A /* CarouselViewController.swift in Sources */,
+				C71678E41EFF19C700355E41 /* SimpleSpringDrawerViewController.swift in Sources */,
 				C778EDED1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift in Sources */,
 				C7C2AF681EF6CD35004F257A /* StretchyHeaderTableViewController.swift in Sources */,
 				C7C2AF081EF6CC4A004F257A /* Interest.swift in Sources */,
@@ -2280,6 +2299,7 @@
 				C7C2AF431EF6CCCE004F257A /* PopUpNavigationController.swift in Sources */,
 				C7C2AF6F1EF6CD64004F257A /* TabBarViewController.swift in Sources */,
 				C7349E0C1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift in Sources */,
+				C71678E61EFF1A7B00355E41 /* TopDrawerView.swift in Sources */,
 				C7C2AF331EF6CCA1004F257A /* NavBarModel.swift in Sources */,
 				C7C2AF7F1EF6CD8A004F257A /* TopMenuNewsTableViewController.swift in Sources */,
 				C7C2AF071EF6CC46004F257A /* InterestCollectionViewCell.swift in Sources */,

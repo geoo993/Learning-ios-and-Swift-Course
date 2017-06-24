@@ -88,6 +88,7 @@ class DragInView : UIView {
             self.slideToOpen()
             return
         }
+        
         switch panGestureRecognizer.state {
             case .began:
                 break
@@ -98,7 +99,7 @@ class DragInView : UIView {
             
             case .ended:
                                 // Snap shut
-                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.25, initialSpringVelocity: 0.5, options: [], animations: { [weak self] () -> Void in
+                UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.25, initialSpringVelocity: 0.5, options: [], animations: { [weak self] () -> Void in
                     self?.c.constant = (self?.kClosedDrawExtent)!
                     self?.superview!.layoutIfNeeded()
                 }, completion: nil )
@@ -206,13 +207,13 @@ class DragInView : UIView {
         kHandleExtent = size.height
     }
     
-    func visibleHeightWhenClosed(_ height : CGFloat){
-        kOpenDrawExtent = (height > kDrawerExtent) ? kDrawerExtent : height
-    }
-    
-    func visibleHeightWhenOpened(_ height : CGFloat){
-        kOpenDrawExtent = (height > kDrawerExtent) ? kDrawerExtent : height
-    }
+//    func visibleHeightWhenClosed(_ height : CGFloat){
+//        kOpenDrawExtent = (height > kDrawerExtent) ? kDrawerExtent : height
+//    }
+//    
+//    func visibleHeightWhenOpened(_ height : CGFloat){
+//        kOpenDrawExtent = (height > kDrawerExtent) ? kDrawerExtent : height
+//    }
     
     func drawerMaxCutOffExtent(_ cutOff: CGFloat ){
         kTriggerPoint = cutOff
