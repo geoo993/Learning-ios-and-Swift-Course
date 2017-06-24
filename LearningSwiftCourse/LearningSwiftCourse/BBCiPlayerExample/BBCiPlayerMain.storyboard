@@ -54,6 +54,12 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem id="5hG-Sb-7fg">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="x3f-Xk-9b0">
+                                            <color key="tintColor" red="1" green="0.10605951003086422" blue="0.35297394135185189" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="backnavButton:" destination="TaZ-1L-aqr" id="WJS-3Z-XAj"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <rightBarButtonItems>
                                             <barButtonItem systemItem="stop" id="muF-KK-vVK">
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -111,19 +117,19 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0p-WZ-qrv" userLabel="Bottom Content View">
                                                     <rect key="frame" x="0.0" y="200" width="320" height="200"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cardinal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxp-02-fQD" userLabel="Title Label">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cardinal" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxp-02-fQD" userLabel="Title Label">
                                                             <rect key="frame" x="5" y="10" width="310" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-kZ-Iad" userLabel="Description Label">
-                                                            <rect key="frame" x="5" y="40" width="310" height="60"/>
+                                                            <rect key="frame" x="5" y="30.5" width="310" height="60"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="60" id="yu9-zq-9Ou"/>
                                                             </constraints>
                                                             <string key="text">Canadian detective drama series. Demoted for a hunch about a case that he wouldn't let go, Cardinal is brought back to the homicide unit when a girl's body is discovered.</string>
-                                                            <fontDescription key="fontDescription" name="ArialHebrew-Light" family="Arial Hebrew" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -167,7 +173,7 @@
                                                         <constraint firstItem="51l-Lu-3q3" firstAttribute="centerX" secondItem="Y0p-WZ-qrv" secondAttribute="centerX" id="NU8-SM-JRr"/>
                                                         <constraint firstAttribute="trailing" secondItem="ESp-ZE-Yrg" secondAttribute="trailing" constant="5" id="RMR-ed-z0M"/>
                                                         <constraint firstAttribute="trailing" secondItem="51l-Lu-3q3" secondAttribute="trailing" constant="5" id="hRd-XY-yey"/>
-                                                        <constraint firstItem="rwl-kZ-Iad" firstAttribute="top" secondItem="Uxp-02-fQD" secondAttribute="bottom" constant="10" id="iHk-RA-20v"/>
+                                                        <constraint firstItem="rwl-kZ-Iad" firstAttribute="top" secondItem="Uxp-02-fQD" secondAttribute="bottom" id="iHk-RA-20v"/>
                                                         <constraint firstAttribute="trailing" secondItem="rwl-kZ-Iad" secondAttribute="trailing" constant="5" id="kgC-xC-1w3"/>
                                                         <constraint firstItem="rwl-kZ-Iad" firstAttribute="leading" secondItem="Y0p-WZ-qrv" secondAttribute="leading" constant="5" id="kxm-wX-Fgh"/>
                                                         <constraint firstItem="51l-Lu-3q3" firstAttribute="top" secondItem="ESp-ZE-Yrg" secondAttribute="bottom" id="n4D-rd-zJo"/>
@@ -275,6 +281,7 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="backnavBarItem" destination="x3f-Xk-9b0" id="Q9c-Mz-SWb"/>
                         <outlet property="detailedContentAvailableLabel" destination="ESp-ZE-Yrg" id="Lx6-PZ-ouX"/>
                         <outlet property="detailedContentDescriptionLabel" destination="rwl-kZ-Iad" id="MH2-BT-oIH"/>
                         <outlet property="detailedContentImageView" destination="NsG-xa-h6A" id="oR2-GR-cym"/>
@@ -716,7 +723,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IT7-cc-UdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335.625" y="209.1549295774648"/>
+            <point key="canvasLocation" x="368" y="210"/>
         </scene>
     </scenes>
     <resources>

@@ -103,23 +103,13 @@ extension BBCiPlayerTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let bundle = Bundle(identifier: "co.lexilabs.LearningSwiftCourse")
-        
-        
         let storyboard = UIStoryboard(name: "BBCiPlayerMain", bundle: bundle)
-        
-        
-        
         let vc = storyboard.instantiateViewController(withIdentifier: "BBCiPlayerContentDetailedViewController") as! BBCiPlayerContentDetailedViewController
-        
-        
-        //        let navbarFrame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: getTopAreaHeight())
-        //        vc.navbar = UINavigationBar(frame: navbarFrame)
-        //        vc.navbar.backgroundColor = UIColor.white
-        //vc.navbar.delegate = vc as! UINavigationBarDelegate
-        //vc.navbar.topItem?.title = mainSectionsItems[button.tag].title
         
         //self.navigationController?.pushViewController(vc!, animated: true)
         let parentViewController = self.getParentViewController()
+        vc.currentContent = collectionData[indexPath.row]
+        vc.navbarbackTitle = ""
         parentViewController?.present(vc, animated: true, completion: { 
             print("BBCiPlayerContentDetailedViewController presented")
         })

@@ -10,6 +10,10 @@ import UIKit
 
 class BBCiPlayerContentDetailedViewController: UIViewController, UINavigationBarDelegate {
     
+    @IBAction func backnavButton(_ sender: UINavigationItem) {
+        print("Back")
+    }
+    
     @IBAction func stopButton(_ sender: UINavigationItem) {
         dismiss(animated: true) { 
             print("ViewController dismissed, now going to home page")
@@ -23,6 +27,7 @@ class BBCiPlayerContentDetailedViewController: UIViewController, UINavigationBar
     
     @IBOutlet weak var detailedContentTableView : UITableView!
     @IBOutlet weak var navBar : UINavigationBar!
+    @IBOutlet weak var backnavBarItem : UIBarButtonItem!
     
     @IBOutlet weak var detailedContentImageView : UIImageView!
     @IBOutlet weak var detailedContentLogoImageView : UIImageView!
@@ -37,8 +42,8 @@ class BBCiPlayerContentDetailedViewController: UIViewController, UINavigationBar
     }
     
     var navbarHeight : CGFloat = 84
-    var navbarTitle : String = "Hello"
-    
+    var navbarbackTitle : String = ""
+    var currentContent : BBCiPlayerVideosItems?
     var mixedItems : [BBCiPlayerVideosItems] =  {
         let allchannelsItems = BBCiPlayerVideosItems.allChannelsItems()
         let shuffled = allchannelsItems.shuffled()
@@ -68,8 +73,25 @@ class BBCiPlayerContentDetailedViewController: UIViewController, UINavigationBar
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupCurrentContent()
+        
+        backnavBarItem.title = navbarbackTitle
+        backnavBarItem.tintColor = UIColor.bbciplayerPink()
+            
         detailedContentTableView.reloadData()
     }
+    
+    func setupCurrentContent(){
+        
+        if let content = currentContent {
+            detailedContentImageView.image = content.image
+            detailedContentLogoImageView.image = BBCiPlayerVideosItems.Channels.allChannelsWithLogo[content.channel]
+            detailedContentTitleLabel.text = content.title
+            detailedContentDescriptionLabel.text = content.summary
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -81,7 +103,15 @@ class BBCiPlayerContentDetailedViewController: UIViewController, UINavigationBar
     */
     
     deinit {
-        
+        currentContent = nil
+        detailedContentTableView = nil
+        navBar = nil
+        detailedContentImageView = nil
+        detailedContentLogoImageView = nil
+        detailedContentTitleLabel = nil
+        detailedContentDescriptionLabel = nil
+        detailedContentAvailableLabel = nil
+        detailedContentReleasedateLabel = nil
     }
 
 }
@@ -114,6 +144,10 @@ extension BBCiPlayerContentDetailedViewController: UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        detailedContentImageView.image = mixedItems[indexPath.row].image
+        detailedContentLogoImageView.image = BBCiPlayerVideosItems.Channels.allChannelsWithLogo[mixedItems[indexPath.row].channel]
+        detailedContentTitleLabel.text = mixedItems[indexPath.row].title
+        detailedContentDescriptionLabel.text = mixedItems[indexPath.row].summary
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

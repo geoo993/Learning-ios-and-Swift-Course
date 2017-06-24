@@ -114,9 +114,22 @@ extension BBCiPlayerContentTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Row selected, so set textField to relevant value, hide tableView
         // endEditing can trigger some other action according to requirements
-        print("\(indexPath.row)")
+       
+        let bundle = Bundle(identifier: "co.lexilabs.LearningSwiftCourse")
+        let storyboard = UIStoryboard(name: "BBCiPlayerMain", bundle: bundle)
+        let vc = storyboard.instantiateViewController(withIdentifier: "BBCiPlayerContentDetailedViewController") as! BBCiPlayerContentDetailedViewController
+        
+        vc.currentContent = mixedItems[indexPath.row]
+        vc.navbarbackTitle = titleName
+        
+        print("\(indexPath.row)", titleName)
+        
+        self.present(vc, animated: true, completion: { 
+            print("BBCiPlayerContentDetailedViewController presented")
+        })
+        
     }
-    
+   
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return CGFloat.leastNormalMagnitude
     }

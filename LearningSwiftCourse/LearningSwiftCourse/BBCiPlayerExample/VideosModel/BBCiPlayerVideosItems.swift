@@ -22,10 +22,21 @@ struct BBCiPlayerVideosItems {
         case BBCParliament = "BBC Parliament"
         case BBCAlba = "BBC Alba"
         case S4C = "S4C"
-        
-        static let allChannels = [BBCOne, BBCTwo, BBCThree,BBCFour,BBCRadio1, CBBC, CBeeBies,BBCNews,BBCParliament,BBCAlba,S4C]
-        
-        static let channelsImages : [UIImage] = [#imageLiteral(resourceName: "bbc_one"),#imageLiteral(resourceName: "bbc_two"),#imageLiteral(resourceName: "bbc_three"),#imageLiteral(resourceName: "bbc_four"),#imageLiteral(resourceName: "bbc_radio_1"),#imageLiteral(resourceName: "bbc_cbbc"),#imageLiteral(resourceName: "bbc_cbeebies"),#imageLiteral(resourceName: "bbc_news"),#imageLiteral(resourceName: "BBC_Parliament"),#imageLiteral(resourceName: "BBC_Alba"),#imageLiteral(resourceName: "bbc_s4c")]
+
+        static let allChannelsWithLogo : [BBCiPlayerVideosItems.Channels: UIImage] = 
+            [
+                BBCOne: #imageLiteral(resourceName: "bbc_one"),
+                BBCTwo: #imageLiteral(resourceName: "bbc_two"),
+                BBCThree: #imageLiteral(resourceName: "bbc_three"),
+                BBCFour: #imageLiteral(resourceName: "bbc_four"),
+                BBCRadio1: #imageLiteral(resourceName: "bbc_radio_1"),
+                CBBC: #imageLiteral(resourceName: "bbc_cbbc"),
+                CBeeBies: #imageLiteral(resourceName: "bbc_cbeebies"),
+                BBCNews: #imageLiteral(resourceName: "bbc_news") ,
+                BBCParliament: #imageLiteral(resourceName: "BBC_Parliament"),
+                BBCAlba: #imageLiteral(resourceName: "BBC_Alba"),
+                S4C: #imageLiteral(resourceName: "bbc_s4c"),
+            ]
     }
     
     enum Caption : String {
@@ -114,13 +125,13 @@ extension BBCiPlayerVideosItems {
     static func bbcRadioItems () -> [BBCiPlayerVideosItems] {
         return [
             BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCRadio1, image : #imageLiteral(resourceName: "bbcradio1"), caption: BBCiPlayerVideosItems.Caption.None, title: "NewsBeat Documentaries", summary: "Addicted to Protein"),
-            BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCRadio1, image : #imageLiteral(resourceName: "bbcradio2"), caption: BBCiPlayerVideosItems.Caption.None, title: "the World's Most Extreme Festivals", summary: "Spring Break Cancun"),
+            BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCRadio1, image : #imageLiteral(resourceName: "bbcradio2"), caption: BBCiPlayerVideosItems.Caption.None, title: "The World's Most Extreme Festivals", summary: "Spring Break Cancun"),
             BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCRadio1, image : #imageLiteral(resourceName: "bbcradio3"), caption: BBCiPlayerVideosItems.Caption.None, title: "New York Hijabis", summary: ""),
             BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCRadio1, image : #imageLiteral(resourceName: "bbcradio4"), caption: BBCiPlayerVideosItems.Caption.None, title: "The Gaming Show", summary: "E3 2017"),
             BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCRadio1, image : #imageLiteral(resourceName: "bbcradio7"), caption: BBCiPlayerVideosItems.Caption.None, title: "Get Muscly In A Month", summary: ""),
-            BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCRadio1, image : #imageLiteral(resourceName: "bbcradio8"), caption: BBCiPlayerVideosItems.Caption.None, title: "the Secret of The Fast And The Furious", summary: ""),
+            BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCRadio1, image : #imageLiteral(resourceName: "bbcradio8"), caption: BBCiPlayerVideosItems.Caption.None, title: "The Secret of The Fast And The Furious", summary: ""),
             BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCRadio1, image : #imageLiteral(resourceName: "bbcradio9"), caption: BBCiPlayerVideosItems.Caption.None, title: "A Summer with Blossoms", summary: ""),
-            BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCRadio1, image : #imageLiteral(resourceName: "bbcradio10"), caption: BBCiPlayerVideosItems.Caption.None, title: "hanging Out with Justin Bieber", summary: ""),
+            BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCRadio1, image : #imageLiteral(resourceName: "bbcradio10"), caption: BBCiPlayerVideosItems.Caption.None, title: "Hanging Out with Justin Bieber", summary: ""),
         ]
     }
     
@@ -152,7 +163,7 @@ extension BBCiPlayerVideosItems {
             BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCNews, image : #imageLiteral(resourceName: "bbcnews3"), caption: BBCiPlayerVideosItems.Caption.None, title: "The Film Review", summary: "Churhill, Gifted, Whitney: Can I Be Me"),
             BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCNews, image : #imageLiteral(resourceName: "bbcnews4"), caption: BBCiPlayerVideosItems.Caption.None, title: "Our World", summary: "Homeless in Hawaii"),
             BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCNews, image : #imageLiteral(resourceName: "bbcnews5"), caption: BBCiPlayerVideosItems.Caption.None, title: "HARDtalk", summary: "Thuli Madonsela - Public Protector, South Africa (2009-2016)"),
-            BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCNews, image : #imageLiteral(resourceName: "bbcnews6"), caption: BBCiPlayerVideosItems.Caption.None, title: "the Travel Show", summary: "178. Bermuda"),
+            BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCNews, image : #imageLiteral(resourceName: "bbcnews6"), caption: BBCiPlayerVideosItems.Caption.None, title: "The Travel Show", summary: "178. Bermuda"),
             BBCiPlayerVideosItems(channel: BBCiPlayerVideosItems.Channels.BBCNews, image : #imageLiteral(resourceName: "bbcnews7"), caption: BBCiPlayerVideosItems.Caption.None, title: "BBC News Special", summary: "Finsbury Park Attack"),
         ]
     }
