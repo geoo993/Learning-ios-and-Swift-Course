@@ -5,11 +5,11 @@
 //  Created by GEORGE QUENTIN on 24/06/2017.
 //  Copyright © 2017 LEXI LABS. All rights reserved.
 //
+//https://stackoverflow.com/questions/27371935/how-to-animate-a-uiview-with-constraints-in-swift
+//http://www.ryanwright.me/cookbook/ios/autolayout/programmatic
 
 import UIKit
 import Cartography
-
-
 
 class TopDrawerView: UIView {
 
@@ -20,12 +20,12 @@ class TopDrawerView: UIView {
     
     var parentView = UIView()
     
-    // Full size of the drawer
-    fileprivate var drawerHeight :CGFloat = 350
+    // Full size of the drawer and also how much drawer is seen when open
+    fileprivate var drawerHeight :CGFloat = 300
     // How much is seen when closed (minimum 32 please)
     fileprivate var amountSeenWhenClosed : CGFloat = 80
-    // How much drawer is seen when open
-    fileprivate var amountSeenWhenOpened  : CGFloat = 300
+    //stretching until this max point
+    fileprivate var maximumStretched  : CGFloat = 320
     // How far the user has to drag to trigger the drawer to stay open
     fileprivate var triggerPoint : CGFloat = 140
     
@@ -66,11 +66,13 @@ class TopDrawerView: UIView {
     }
     
     func setupView(){
-        self.drawerHeight = self.frame.height
-        self.autoLayoutEnabled = true
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.black.cgColor
-        self.contentMode = .center
+        drawerHeight = frame.height
+        triggerPoint = drawerHeight * 0.5
+        maximumStretched = drawerHeight * 1.2
+        autoLayoutEnabled = true
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.black.cgColor
+        contentMode = .center
         
         // Build handle
         handleView.autoLayoutEnabled = true
@@ -79,6 +81,8 @@ class TopDrawerView: UIView {
         
         snapto = SnapTo.top
         setToPosition(to: snapto)
+        
+        print(viewTopVerticalPosition, viewBottomVerticalPosition)
     }
     
     func setToPosition(to position: SnapTo){
@@ -91,7 +95,7 @@ class TopDrawerView: UIView {
         case SnapTo.bottom:
             // top and bottom constraint positions when opened
             viewTopVerticalPosition  = 0
-            viewBottomVerticalPosition = -screenHeight + amountSeenWhenOpened
+            viewBottomVerticalPosition = -screenHeight + drawerHeight
         }
     
     }
@@ -125,83 +129,11 @@ class TopDrawerView: UIView {
                                multiplier: 1.0, 
                                constant: viewBottomVerticalPosition)
         
-        
-//        viewBottomVerticalPositionConstraint = 
-//            NSLayoutConstraint(item: self, 
-//                               attribute: .bottom,
-//                               relatedBy: .equal,
-//                               toItem: self.parentView, 
-//                               attribute: .top, 
-//                               multiplier: 1.0, 
-//                               constant: /*-fullHeightSize +*/ amountSeenWhenClosed)
-        
+     
         NSLayoutConstraint.activate(
             [viewTopVerticalPositionConstraint!,viewBottomVerticalPositionConstraint!])
         
     }
-    
-    /*
-    func hideRedViewAnimated(animated: Bool) {
-        //remove current constraint
-        removeViewYPositionConstraint()
-        let hideConstraint = NSLayoutConstraint(item: self,
-                                                attribute: .bottom,
-                                                relatedBy: .equal,
-                                                toItem: self.parentView,
-                                                attribute: .top,
-                                                multiplier: 1,
-                                                constant: 0)
-        viewYPositionConstraint = hideConstraint
-        self.parentView.addConstraint(hideConstraint)
-        //animate changes
-        performConstraintLayout(animated: animated)
-        
-    }
-    
-    func showRedViewAnimated(animated: Bool) {
-        //remove current constraint
-        removeViewYPositionConstraint()
-        let centerYConstraint = NSLayoutConstraint(item: self,
-                                                   attribute: .centerY,
-                                                   relatedBy: .equal,
-                                                   toItem: self.parentView,
-                                                   attribute: .centerY,
-                                                   multiplier: 1,
-                                                   constant: 0)
-        viewYPositionConstraint = centerYConstraint
-        self.parentView.addConstraint(centerYConstraint)
-        //animate changes
-        performConstraintLayout(animated: animated)
-        
-    }
-    
-    func performConstraintLayout(animated : Bool) {
-        if animated == true {
-            UIView.animate(withDuration: 1,
-                                       delay: 0,
-                                       usingSpringWithDamping: 0.5,
-                                       initialSpringVelocity: 0.6,
-                                       options: .beginFromCurrentState,
-                                       animations: { () -> Void in
-                                        self.parentView.layoutIfNeeded()
-            }, completion: nil)
-        } else {
-            parentView.layoutIfNeeded()
-        }
-      
-    }
-    
-    func removeViewYPositionConstraint() {
-        if viewYPositionConstraint != nil {
-            parentView.removeConstraint(viewYPositionConstraint!)
-            viewYPositionConstraint = nil
-        }
-    }
-    
-    func isRedViewVisible() -> Bool {
-        return parentView.bounds.contains(self.frame.origin)
-    }
-    */
     
     func setupGestures(){
         
@@ -216,24 +148,55 @@ class TopDrawerView: UIView {
     //swipe down to open
     //drag down to open
     
+    fileprivate func slideToOpen() {
+        
+        // Clean up existing recognizers
+        for recognizer: UIGestureRecognizer in handleView.gestureRecognizers! {
+            recognizer.isEnabled = false
+            handleView.removeGestureRecognizer(recognizer)
+        }
+        
+        // trigger
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: [], animations: { [weak self] () -> Void in
+                guard let this = self else { return }
+                this.viewTopVerticalPositionConstraint?.constant = this.viewTopVerticalPosition
+                this.viewBottomVerticalPositionConstraint?.constant = this.viewBottomVerticalPosition
+                this.parentView.layoutIfNeeded()
+            }, completion: { [weak self] (finished: Bool) in
+//                // Add tap-to-close
+//                let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self?.handleCloseTapGesture))
+//                tapGestureRecognizer.numberOfTapsRequired = 1
+//                self?.handleView.addGestureRecognizer(tapGestureRecognizer)
+        })
+        return
+    }
+    
     
     @objc func handleOpenPanGesture(panGestureRecognizer: UIPanGestureRecognizer) {
         
         let offset = panGestureRecognizer.translation(in: self.parentView)
         let amount: CGFloat = abs(offset.y)
        
-        //when stretched halfway 
-        if (amount + amountSeenWhenClosed + handleViewInset / 2) > triggerPoint {
-            //panGestureRecognizer.isEnabled = false
-            //self.slideToOpen()
-            //return
+        if (amount + amountSeenWhenClosed + handleViewInset / 2) > maximumStretched {
+            //when stretched beyond rest lenght  
+            print("reached max stretch")
+            snapto = SnapTo.bottom
+            setToPosition(to: snapto)
+            panGestureRecognizer.isEnabled = false
+            slideToOpen()
+            return
+        } else if (amount + amountSeenWhenClosed + handleViewInset / 2) > triggerPoint {
+            //when stretched halfway 
             print("reached trigger point")
             snapto = SnapTo.bottom
-        }else if (amount + amountSeenWhenClosed + handleViewInset) > amountSeenWhenOpened {
+            setToPosition(to: snapto)
+        }else if (amount + amountSeenWhenClosed + handleViewInset) > drawerHeight {
             print("reached max point")
             snapto = SnapTo.bottom
+            setToPosition(to: snapto)
         }else{
             snapto = SnapTo.top
+            setToPosition(to: snapto)
         }
         
         print(amount + amountSeenWhenClosed + handleViewInset)
@@ -249,8 +212,6 @@ class TopDrawerView: UIView {
             viewBottomVerticalPositionConstraint?.constant = -screenHeight + constant
             
         case .ended:
-            
-            setToPosition(to: snapto)
             
             // Snap shut
             UIView.animate(withDuration: TimeInterval(snaptocloseDuration), 
@@ -272,17 +233,14 @@ class TopDrawerView: UIView {
             break
         }
  
-        
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-      
     }
     
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
-        
     }
     
 
