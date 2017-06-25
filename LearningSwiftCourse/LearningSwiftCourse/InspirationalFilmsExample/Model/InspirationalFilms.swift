@@ -244,6 +244,7 @@ class InspirationalFilms {
         InspirationalFilms(title: "Lord Of War", description: "",coverImage: "LordOfWar", maxImage: 0, maxVideos: 0, filmInfo:InspirationalFilmsInfo(year: 2005, rating: Rating.Excellent, genres: [Genres.Drama, Genres.Crime, Genres.Thriller])),
         InspirationalFilms(title: "The Finest Hours", description: "",coverImage: "TheFinestHours", maxImage: 0, maxVideos: 0, filmInfo:InspirationalFilmsInfo(year: 2016, rating: Rating.Good, genres: [Genres.Drama, Genres.Action, Genres.History])),
         InspirationalFilms(title: "Ip Man", description: "",coverImage: "IpMan", maxImage: 0, maxVideos: 0, filmInfo:InspirationalFilmsInfo(year: 2008, rating: Rating.Excellent, genres: [Genres.Drama, Genres.Action, Genres.Biography])),
+        InspirationalFilms(title: "All The Way", description: "",coverImage: "AllTheWay", maxImage: 0, maxVideos: 0, filmInfo:InspirationalFilmsInfo(year: 2016, rating: Rating.Outstanding, genres: [Genres.Drama, Genres.History, Genres.Biography])),
         
         ]
         

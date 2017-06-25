@@ -160,6 +160,7 @@ class DragInView : UIView {
             SizeView(view: self, size: CGSize(width: SkipConstraint, height: kDrawerExtent), priority: LayoutPriority(rawValue: 1000))
             StretchViewHorizontallyToSuperview(view: self, inset: 0, priority: LayoutPriority(rawValue: 1000))
         }
+        
         switch side {
         case .left, .leading:
             self.c = NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: parent.view, attribute: .leading, multiplier: 1, constant: kClosedDrawExtent)

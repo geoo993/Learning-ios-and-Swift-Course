@@ -11,13 +11,34 @@ import UIKit
 class SimpleSpringDrawerViewController: UIViewController {
 
     @IBOutlet weak var topDrawerView : TopDrawerView!
+    var shouldOpen = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+//        tap.numberOfTapsRequired = 1
+//        view.addGestureRecognizer(tap)
+//        view.isUserInteractionEnabled = true
+        
     }
 
+    // function which is triggered when handleTap is called
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        
+        /*
+        if shouldOpen {
+            topDrawerView.showRedViewAnimated(animated: true)
+        }else{
+            topDrawerView.hideRedViewAnimated(animated: false)
+        }
+        
+        shouldOpen = !shouldOpen
+ */
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -32,11 +53,20 @@ class SimpleSpringDrawerViewController: UIViewController {
         let heightToSee : CGFloat = 60
         let width = self.view.frame.size.width
         let height = self.view.frame.size.height * heightRatio
-        let frame = CGRect(x: 0, y: height + heightToSee, width: width, height: height)
+        let frame = CGRect(x: 0, y: -height + heightToSee, width: width, height: height)
         topDrawerView.parentView = self.view
         topDrawerView.frame = frame
+        topDrawerView.setupView()
+        topDrawerView.addConstraints()
+        topDrawerView.setupGestures()
+        //topDrawerView.hideRedViewAnimated(animated: false)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //topDrawerView.showRedViewAnimated(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
