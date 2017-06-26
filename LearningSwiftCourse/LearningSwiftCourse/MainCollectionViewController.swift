@@ -41,7 +41,7 @@ class MainCollectionViewController: UICollectionViewController {
                            //"SWRevealViewController" : "MultiSidedBarMenuMain",
                            //"TopMenuNavigationController" : "TopMenuMain",
                            //"DraggableTopMenuMainViewController" : "DraggableVerticalMenusMain",
-                           //"SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
+                           "SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
                            //"ButtonsTypesViewController": "ButtonsMain",
                            //"BasicCoreMLwithImagesViewController" : "BasicCoreMLwithImagesMain",
                             //"SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",

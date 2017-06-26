@@ -65,11 +65,10 @@
                             <blurEffect style="extraLight"/>
                         </visualEffectView>
                         <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RCw-uc-Pa8">
-                            <rect key="frame" x="135" y="325" width="50" height="20"/>
+                            <rect key="frame" x="0.0" y="320" width="320" height="30"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="50" id="WMf-Wf-EEg"/>
-                                <constraint firstAttribute="height" constant="20" id="vrD-Vf-5Cc"/>
+                                <constraint firstAttribute="height" constant="30" id="2Qz-sh-3Ak"/>
                             </constraints>
                         </imageView>
                     </subviews>
@@ -77,8 +76,10 @@
                         <constraint firstAttribute="trailing" secondItem="8Rq-z7-KXy" secondAttribute="trailing" id="0hq-fk-kz2"/>
                         <constraint firstItem="8Rq-z7-KXy" firstAttribute="leading" secondItem="Ofh-Pc-MKY" secondAttribute="leading" id="4Jv-0X-Q9N"/>
                         <constraint firstAttribute="bottom" secondItem="8Rq-z7-KXy" secondAttribute="bottom" id="8Se-b4-bam"/>
+                        <constraint firstItem="RCw-uc-Pa8" firstAttribute="leading" secondItem="Ofh-Pc-MKY" secondAttribute="leading" id="AaC-n9-d3M"/>
+                        <constraint firstAttribute="trailing" secondItem="RCw-uc-Pa8" secondAttribute="trailing" id="Cjf-QZ-xOK"/>
                         <constraint firstItem="8Rq-z7-KXy" firstAttribute="top" secondItem="Ofh-Pc-MKY" secondAttribute="top" id="KKi-qH-UcC"/>
-                        <constraint firstAttribute="bottom" secondItem="RCw-uc-Pa8" secondAttribute="bottom" constant="5" id="S3b-V9-Hrk"/>
+                        <constraint firstAttribute="bottom" secondItem="RCw-uc-Pa8" secondAttribute="bottom" id="S3b-V9-Hrk"/>
                         <constraint firstItem="RCw-uc-Pa8" firstAttribute="centerX" secondItem="Ofh-Pc-MKY" secondAttribute="centerX" id="idq-bz-uU7"/>
                     </constraints>
                     <connections>

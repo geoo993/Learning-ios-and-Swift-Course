@@ -49,7 +49,7 @@ class SimpleSpringDrawerViewController: UIViewController {
         
         self.view.addSubview(topDrawerView)
         
-        let heightRatio : CGFloat = 0.4
+        let heightRatio : CGFloat = 0.5
         let heightToSee : CGFloat = 60
         let width = self.view.frame.size.width
         let height = self.view.frame.size.height * heightRatio
@@ -58,7 +58,7 @@ class SimpleSpringDrawerViewController: UIViewController {
         topDrawerView.frame = frame
         topDrawerView.setupView()
         topDrawerView.addConstraints()
-        topDrawerView.setupGestures()
+        topDrawerView.setupPanGesture()
         //topDrawerView.hideRedViewAnimated(animated: false)
     }
 

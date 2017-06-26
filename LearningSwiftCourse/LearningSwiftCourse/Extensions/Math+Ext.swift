@@ -110,10 +110,10 @@ public extension CGFloat {
         return value
     }
     
-    public func percentageWithF(value:CGFloat, minValue: CGFloat) -> CGFloat 
+    public func percentageWithF(maxValue:CGFloat, minValue: CGFloat) -> CGFloat 
     {
-        let difference: CGFloat = (minValue < 0) ? self : self - minValue;
-        return (CGFloat(100) * ((value - minValue) / difference));
+        let difference: CGFloat = (minValue < 0) ? maxValue : maxValue - minValue;
+        return (CGFloat(100) * ((self - minValue) / difference));
     }
     
     public func getPercentangeValueF(_ percent : CGFloat, _ minValue : CGFloat) -> CGFloat{

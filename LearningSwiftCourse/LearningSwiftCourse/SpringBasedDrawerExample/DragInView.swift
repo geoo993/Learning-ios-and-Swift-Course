@@ -40,13 +40,7 @@ class DragInView : UIView {
             self.c.constant = self.kClosedDrawExtent
             self.superview!.layoutIfNeeded()
         }, completion: {(finished: Bool) -> Void in
-                // Add drag-to-open
-            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.handleOpenPanGesture))
-            self.handleView.addGestureRecognizer(panGestureRecognizer)
-                // Add tap-to-open
-            let openTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleOpenTapGesture))
-            openTapRecognizer.numberOfTapsRequired = 1
-            self.handleView.addGestureRecognizer(openTapRecognizer)
+            self.setupGestures()
         })
     }
 
@@ -189,13 +183,14 @@ class DragInView : UIView {
    
     func setupGestures(){
         
-        // Add slide to open
+        // Add slide/drag to open
         let recognizer = UIPanGestureRecognizer(target: self, action: #selector(self.handleOpenPanGesture))
         handleView.addGestureRecognizer(recognizer)
         // Add tap to open
         let openTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleOpenTapGesture))
         openTapRecognizer.numberOfTapsRequired = 1
         handleView.addGestureRecognizer(openTapRecognizer)
+        
     }
     
     func handleViewColor(_ color: UIColor ){
