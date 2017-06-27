@@ -231,6 +231,17 @@
                                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BrE-11-cBq">
                                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <subviews>
+                                                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ybd-nk-M1m">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                                                            </scrollView>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="bottom" secondItem="Ybd-nk-M1m" secondAttribute="bottom" id="ISD-Zu-ZTp"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="Ybd-nk-M1m" secondAttribute="trailing" id="gkd-kM-8tH"/>
+                                                                            <constraint firstItem="Ybd-nk-M1m" firstAttribute="top" secondItem="BrE-11-cBq" secondAttribute="top" id="jtM-ZR-Hbb"/>
+                                                                            <constraint firstItem="Ybd-nk-M1m" firstAttribute="leading" secondItem="BrE-11-cBq" secondAttribute="leading" id="mqH-Fj-Sl3"/>
+                                                                        </constraints>
                                                                     </view>
                                                                     <blurEffect style="light"/>
                                                                 </visualEffectView>
@@ -245,6 +256,17 @@
                                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5Kp-uT-Fmw">
                                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <subviews>
+                                                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uva-EK-QmJ">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                                                            </scrollView>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="bottom" secondItem="Uva-EK-QmJ" secondAttribute="bottom" id="4vU-mP-qnK"/>
+                                                                            <constraint firstItem="Uva-EK-QmJ" firstAttribute="top" secondItem="5Kp-uT-Fmw" secondAttribute="top" id="5Sd-Vn-E9s"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="Uva-EK-QmJ" secondAttribute="trailing" id="Gha-Gc-Z8L"/>
+                                                                            <constraint firstItem="Uva-EK-QmJ" firstAttribute="leading" secondItem="5Kp-uT-Fmw" secondAttribute="leading" id="TRc-TB-YdZ"/>
+                                                                        </constraints>
                                                                     </view>
                                                                     <blurEffect style="light"/>
                                                                 </visualEffectView>
@@ -298,6 +320,8 @@
                                     <blurEffect style="dark"/>
                                 </visualEffectView>
                                 <connections>
+                                    <outlet property="categoriesScrollView" destination="Ybd-nk-M1m" id="kda-Zs-I5N"/>
+                                    <outlet property="channelsScrollView" destination="Uva-EK-QmJ" id="un8-3j-W2F"/>
                                     <outlet property="dataSource" destination="TL3-05-Ut9" id="p8A-It-sMB"/>
                                     <outlet property="delegate" destination="TL3-05-Ut9" id="Eke-a5-Oe8"/>
                                     <outlet property="navBar" destination="AeS-Yz-UjJ" id="2K2-cP-x5X"/>

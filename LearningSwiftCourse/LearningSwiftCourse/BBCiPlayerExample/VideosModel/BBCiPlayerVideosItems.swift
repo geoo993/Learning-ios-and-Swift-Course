@@ -10,6 +10,53 @@ import Foundation
 
 struct BBCiPlayerVideosItems {  
     
+    enum Categories : String {
+        case Arts = "Arts"
+        case CBBC = "CBBC"
+        case CBeeBies = "CBeeBies"
+        case Comedy = "Comedy"
+        case Documentaries = "Documentaries"
+        case DramaAndSoaps = "Drama & Soaps"
+        case Entertainment = "Entertainment"
+        case Films = "Films"
+        case Food = "Food"
+        case History = "History"
+        case Lifestyle = "Lifestyle"
+        case Music = "Music"
+        case News = "News"
+        case ScienceAndNature = "Science & Nature"
+        case Sport = "Sport"
+        case AudioDescribed = "Audio Described"
+        case Signed = "Signed"
+        case NorthernIreland = "Northern Ireland"
+        case Scotland = "Scotland"
+        case Wales = "Wales"
+        
+        static let allCategories : [BBCiPlayerVideosItems.Categories] = 
+            [
+                 Arts,
+                 CBBC,
+                 CBeeBies,
+                 Comedy,
+                 Documentaries,
+                 DramaAndSoaps,
+                 Entertainment,
+                 Films,
+                 Food,
+                 History,
+                 Lifestyle,
+                 Music,
+                 News,
+                 ScienceAndNature,
+                 Sport,
+                 AudioDescribed,
+                 Signed,
+                 NorthernIreland,
+                 Scotland,
+                 Wales,
+            ]
+    }
+    
     enum Channels : String {
         case BBCOne = "BBC One"
         case BBCTwo = "BBC Two"
