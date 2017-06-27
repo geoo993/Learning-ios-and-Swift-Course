@@ -145,6 +145,7 @@ class StretchyHeaderTableViewController: UITableViewController {
         
         headerImageView.image = UIImage(named: imageNames.chooseOne() )!
     }
+    
     func updateHeaderView() {  
         
         let effectiveHeight = useCutOff ? kTableHeaderHeight-kTableHeaderCutAway/2 : kTableHeaderHeight

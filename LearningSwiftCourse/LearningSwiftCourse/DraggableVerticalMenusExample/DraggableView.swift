@@ -11,7 +11,7 @@
 
 import UIKit
 
-class DraggableView: UIView {
+class DraggableView: UIView, UICollisionBehaviorDelegate {
     
     @IBOutlet weak var bottomIndicator : UIView!
     @IBOutlet weak var backgroundImageView : UIImageView!
@@ -23,7 +23,7 @@ class DraggableView: UIView {
     var gravityBehavior : UIGravityBehavior!
     var panGesture : UIPanGestureRecognizer!
     
-    var heightToSee : CGFloat = 50
+    var heightToSee : CGFloat = 80
     var maxHeight : CGFloat? = nil
     var superViewHeight : CGFloat? = nil
     
@@ -49,6 +49,7 @@ class DraggableView: UIView {
     
     func setupDynamicItemBehavior (){
         dynamicItemBehavior = UIDynamicItemBehavior(items: [self])
+        dynamicItemBehavior.resistance = 0
         dynamicItemBehavior.allowsRotation = false
         dynamicItemBehavior.elasticity = 0
     }
@@ -58,7 +59,18 @@ class DraggableView: UIView {
     }
     func setupContainerBoundary (){
         containerBoundary = UICollisionBehavior(items: [self])
+        containerBoundary.collisionDelegate = self 
     }
+    
+    func collisionBehavior(_ behavior: UICollisionBehavior, beganContactFor item1: UIDynamicItem, with item2: UIDynamicItem, at p: CGPoint) {
+        
+        dynamicItemBehavior.resistance = 100
+    }
+    func collisionBehavior(_ behavior: UICollisionBehavior, endedContactFor item1: UIDynamicItem, with item2: UIDynamicItem) {
+        
+        dynamicItemBehavior.resistance = 0;
+    }
+    
     func configureContainerBoundary (){
         let containerBoundaryWidth = UIScreen.main.bounds.size.width
         let upperContainerBoundary = (-self.frame.size.height + heightToSee)
@@ -68,38 +80,7 @@ class DraggableView: UIView {
         containerBoundary.addBoundary(withIdentifier: ("lowerBoundary" as NSCopying) , from: CGPoint(x:0,y:lowerContainerBoundary), to: CGPoint(x:containerBoundaryWidth,y:lowerContainerBoundary))
         
     }
-    func setupPanGesture(){
-        panGesture = UIPanGestureRecognizer(target: self, action:#selector(self.handlePan))
-        panGesture?.cancelsTouchesInView = false
-        bottomIndicator.addGestureRecognizer(panGesture)//change from bottom indicator to self
-    }
-    
-    func panGestureEnded(){
-        
-        if (self.snapBehavior != nil) {
-            animator?.removeBehavior(snapBehavior)
-        }
-        let velocity = dynamicItemBehavior.linearVelocity(for: self)
-        
-        if fabsf(Float(velocity.y)) > Float(maxHeight! / 2) {
-            if velocity.y < 0 {
-                panGestureSnapToTop()
-            }else{
-                panGestureSnapToBottom()
-            }
-        }else{
-            
-            if let superViewHeight = superViewHeight {
-                if self.frame.origin.y > (superViewHeight / 2) {
-                    crossToBottomSectionOfSuperView()
-                }else{
-                    crossToTopSectionOfSuperView()
-                }
-            }
-        }
-        
-    }
-    
+  
     func crossToTopSectionOfSuperView(){
         panGestureSnapToTop()
     }
@@ -121,6 +102,11 @@ class DraggableView: UIView {
         self.roundCorners([.bottomRight, .bottomLeft], radius: 10)
     }
     
+    func setupPanGesture(){
+        panGesture = UIPanGestureRecognizer(target: self, action:#selector(self.handlePan))
+        panGesture?.cancelsTouchesInView = false
+        bottomIndicator.addGestureRecognizer(panGesture)//change from bottom indicator to self
+    }
     
     @objc func handlePan (pan:UIPanGestureRecognizer) {
         let velocity = pan.velocity(in: self.superview).y
@@ -141,6 +127,36 @@ class DraggableView: UIView {
         }
     }
     
+    func panGestureEnded(){
+        
+        if (self.snapBehavior != nil) {
+            animator?.removeBehavior(snapBehavior)
+        }
+        let velocity = dynamicItemBehavior.linearVelocity(for: self)
+        
+        let panOffset = panGesture.translation(in: self)
+        let panMovement: CGFloat = abs(panOffset.y)
+        
+        //if fabsf(Float(velocity.y)) > Float(maxHeight! / 2) {
+        if (panMovement > (maxHeight! / 2) )  {
+            
+            if velocity.y < 0 {
+                panGestureSnapToTop()
+            }else{
+                panGestureSnapToBottom()
+            }
+        }else{
+            
+            if let superViewHeight = superViewHeight {
+                if self.frame.origin.y > (superViewHeight / 2) {
+                    crossToBottomSectionOfSuperView()
+                }else{
+                    crossToTopSectionOfSuperView()
+                }
+            }
+        }
+        
+    }
     /*
      override init(frame: CGRect) {
      super.init(frame: frame)

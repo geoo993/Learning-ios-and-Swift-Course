@@ -13,6 +13,7 @@
 		C703771E1EF551C0002E7D9B /* SearchBarViewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C703771D1EF551C0002E7D9B /* SearchBarViewNavigationController.swift */; };
 		C70557E91EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70557E81EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift */; };
 		C708787C1EFD0EBF006BBDEC /* BBCiPlayerContentDetailedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C708787B1EFD0EBF006BBDEC /* BBCiPlayerContentDetailedTableViewCell.swift */; };
+		C711FF261F016929005AAEA5 /* StretchyHeaderOnlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C711FF251F016929005AAEA5 /* StretchyHeaderOnlyViewController.swift */; };
 		C71678E21EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71678E11EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard */; };
 		C71678E41EFF19C700355E41 /* SimpleSpringDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71678E31EFF19C700355E41 /* SimpleSpringDrawerViewController.swift */; };
 		C71678E61EFF1A7B00355E41 /* TopDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71678E51EFF1A7B00355E41 /* TopDrawerView.swift */; };
@@ -219,6 +220,8 @@
 		C7D3C1161EF2BBA90042E90A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82F81EA25F08000AC715 /* RxSwift.framework */; };
 		C7D3C1171EF2BBE50042E90A /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; };
 		C7D3C1181EF2BBE50042E90A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76E0CE71EE9ECB300A66E94 /* MapKit.framework */; };
+		C7E774041F01542600440E05 /* StretchyHeaderOnlyMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E774031F01542600440E05 /* StretchyHeaderOnlyMain.storyboard */; };
+		C7E774061F01560E00440E05 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E774051F01560E00440E05 /* UINavigationController+Ext.swift */; };
 		C7EE7BE01EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7BDF1EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift */; };
 		C7EE7BFE1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7BFD1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift */; };
 		C7EFC8921EEDB80200AA3EFB /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EFC8701EEDB7F700AA3EFB /* Cartography.framework */; };
@@ -588,6 +591,7 @@
 		C703771D1EF551C0002E7D9B /* SearchBarViewNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewNavigationController.swift; sourceTree = "<group>"; };
 		C70557E81EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentNavigationController.swift; sourceTree = "<group>"; };
 		C708787B1EFD0EBF006BBDEC /* BBCiPlayerContentDetailedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentDetailedTableViewCell.swift; sourceTree = "<group>"; };
+		C711FF251F016929005AAEA5 /* StretchyHeaderOnlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderOnlyViewController.swift; sourceTree = "<group>"; };
 		C71678E11EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleSpringDrawerMain.storyboard; sourceTree = "<group>"; };
 		C71678E31EFF19C700355E41 /* SimpleSpringDrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSpringDrawerViewController.swift; sourceTree = "<group>"; };
 		C71678E51EFF1A7B00355E41 /* TopDrawerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDrawerView.swift; sourceTree = "<group>"; };
@@ -791,6 +795,8 @@
 		C7D3C1031EF2BB550042E90A /* LearningSwiftCourseExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSwiftCourseExtensionsTests.swift; sourceTree = "<group>"; };
 		C7D3C1051EF2BB550042E90A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7E3886E1ED3055F000DCE15 /* LearningSwiftCourse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearningSwiftCourse.entitlements; sourceTree = "<group>"; };
+		C7E774031F01542600440E05 /* StretchyHeaderOnlyMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StretchyHeaderOnlyMain.storyboard; sourceTree = "<group>"; };
+		C7E774051F01560E00440E05 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 		C7EE7BDF1EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerNavigationController.swift; sourceTree = "<group>"; };
 		C7EE7BFD1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerCustomViewController.swift; sourceTree = "<group>"; };
 		C7EFC8661EEDB7F700AA3EFB /* Cartography.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cartography.xcodeproj; path = ../Carthage/Checkouts/Cartography/Cartography.xcodeproj; sourceTree = "<group>"; };
@@ -934,6 +940,7 @@
 				C7C2AEA91EF6CB63004F257A /* SpringBasedDrawerExample */,
 				C7C2AEE71EF6CB64004F257A /* StorySmartiesDesign */,
 				C7C2AEB11EF6CB63004F257A /* StretchyHeaderExample */,
+				C7E773E61F0153A100440E05 /* StretchyHeaderOnly */,
 				C7C2AE911EF6CB62004F257A /* SWRevealViewController */,
 				C7C2AE451EF6CB62004F257A /* TabBarExample */,
 				C7C2AED01EF6CB63004F257A /* TableExample */,
@@ -1234,6 +1241,7 @@
 				C7C2AE671EF6CB62004F257A /* UIWindow+Ext.swift */,
 				C7349DEB1EFC226B00B99AE6 /* UINavigationBar+Ext.swift */,
 				C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */,
+				C7E774051F01560E00440E05 /* UINavigationController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1593,6 +1601,15 @@
 				C76E0CE71EE9ECB300A66E94 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7E773E61F0153A100440E05 /* StretchyHeaderOnly */ = {
+			isa = PBXGroup;
+			children = (
+				C7E774031F01542600440E05 /* StretchyHeaderOnlyMain.storyboard */,
+				C711FF251F016929005AAEA5 /* StretchyHeaderOnlyViewController.swift */,
+			);
+			path = StretchyHeaderOnly;
 			sourceTree = "<group>";
 		};
 		C7EFC8671EEDB7F700AA3EFB /* Products */ = {
@@ -2140,6 +2157,7 @@
 				C76786621EF90DE1005C159F /* BBCiPlayerMain.storyboard in Resources */,
 				C72E27AC1E9ED9EB0064E01B /* Assets.xcassets in Resources */,
 				C7C2AF7C1EF6CD8A004F257A /* TopMenuMain.storyboard in Resources */,
+				C7E774041F01542600440E05 /* StretchyHeaderOnlyMain.storyboard in Resources */,
 				C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */,
 				C7C2AF021EF6CC2C004F257A /* AudioMain.storyboard in Resources */,
 				C7C2AF001EF6CC29004F257A /* brooks.mp3 in Resources */,
@@ -2222,6 +2240,7 @@
 				C7C2AF281EF6CC8C004F257A /* InspirationalFilmsCollectionViewCell.swift in Sources */,
 				C7C2AF841EF6CD91004F257A /* CustomNavigationAnimationController.swift in Sources */,
 				C7C2AF6A1EF6CD64004F257A /* EmptyViewController.swift in Sources */,
+				C711FF261F016929005AAEA5 /* StretchyHeaderOnlyViewController.swift in Sources */,
 				C7C2AF2B1EF6CC97004F257A /* MapViewController.swift in Sources */,
 				C7C2AF0B1EF6CC62004F257A /* DraggableTopMenuMainViewControllerViewController.swift in Sources */,
 				C7C2AF601EF6CD2A004F257A /* StorySmartiesMenuTableViewController.swift in Sources */,
@@ -2274,6 +2293,7 @@
 				C7C2AF751EF6CD79004F257A /* TableViewNavigationViewController.swift in Sources */,
 				C703771E1EF551C0002E7D9B /* SearchBarViewNavigationController.swift in Sources */,
 				C7C2AF211EF6CC78004F257A /* ImageScrollView.swift in Sources */,
+				C7E774061F01560E00440E05 /* UINavigationController+Ext.swift in Sources */,
 				C7C2AF701EF6CD70004F257A /* AddMediaViewController.swift in Sources */,
 				C7C2AF351EF6CCA1004F257A /* RedViewController.swift in Sources */,
 				C76F04C41EF5001D0090F71B /* SliderMenuDrawerMenuTableViewCell.swift in Sources */,
