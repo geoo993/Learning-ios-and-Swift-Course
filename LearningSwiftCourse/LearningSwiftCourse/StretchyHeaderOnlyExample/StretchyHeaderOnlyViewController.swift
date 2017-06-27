@@ -21,8 +21,8 @@ class StretchyHeaderOnlyViewController: UIViewController, UITableViewDelegate, U
     @IBOutlet weak var tableView: UITableView!
     
     // Full size of the drawer and also how much drawer is seen when open
-    fileprivate var headerHeight :CGFloat = 300
-    // How much is seen when closed (minimum 32 please)
+    fileprivate var headerHeight :CGFloat = 350
+    // How much is seen when closed (minimum 20 please)
     fileprivate var amountSeenWhenClosed : CGFloat = 64
     // How far the user has to drag to trigger the drawer to stay open or closed
     fileprivate var triggerPoint : CGFloat = 50

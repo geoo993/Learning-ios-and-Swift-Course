@@ -938,9 +938,9 @@
 				C76F04C21EF4FFD40090F71B /* SlideMenuDrawerExample */,
 				C7C2AEE31EF6CB63004F257A /* SlideShowExample */,
 				C7C2AEA91EF6CB63004F257A /* SpringBasedDrawerExample */,
-				C7C2AEE71EF6CB64004F257A /* StorySmartiesDesign */,
+				C7C2AEE71EF6CB64004F257A /* StorySmartiesDesignExample */,
 				C7C2AEB11EF6CB63004F257A /* StretchyHeaderExample */,
-				C7E773E61F0153A100440E05 /* StretchyHeaderOnly */,
+				C7E773E61F0153A100440E05 /* StretchyHeaderOnlyExample */,
 				C7C2AE911EF6CB62004F257A /* SWRevealViewController */,
 				C7C2AE451EF6CB62004F257A /* TabBarExample */,
 				C7C2AED01EF6CB63004F257A /* TableExample */,
@@ -1527,7 +1527,7 @@
 			path = SlideShowExample;
 			sourceTree = "<group>";
 		};
-		C7C2AEE71EF6CB64004F257A /* StorySmartiesDesign */ = {
+		C7C2AEE71EF6CB64004F257A /* StorySmartiesDesignExample */ = {
 			isa = PBXGroup;
 			children = (
 				C7C2AEE81EF6CB64004F257A /* BookShelf */,
@@ -1538,7 +1538,7 @@
 				C7C2AEF01EF6CB64004F257A /* StorySmartiesScrollMenuViewController.swift */,
 				C7C2AEF11EF6CB64004F257A /* StorySmartiesViewController.swift */,
 			);
-			path = StorySmartiesDesign;
+			path = StorySmartiesDesignExample;
 			sourceTree = "<group>";
 		};
 		C7C2AEE81EF6CB64004F257A /* BookShelf */ = {
@@ -1603,13 +1603,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C7E773E61F0153A100440E05 /* StretchyHeaderOnly */ = {
+		C7E773E61F0153A100440E05 /* StretchyHeaderOnlyExample */ = {
 			isa = PBXGroup;
 			children = (
 				C7E774031F01542600440E05 /* StretchyHeaderOnlyMain.storyboard */,
 				C711FF251F016929005AAEA5 /* StretchyHeaderOnlyViewController.swift */,
 			);
-			path = StretchyHeaderOnly;
+			path = StretchyHeaderOnlyExample;
 			sourceTree = "<group>";
 		};
 		C7EFC8671EEDB7F700AA3EFB /* Products */ = {
