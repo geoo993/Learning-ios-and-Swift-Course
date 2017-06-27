@@ -10,7 +10,7 @@
 import UIKit
 import Cartography
 
-class StretchyHeaderOnlyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
+class BBCiPlayerStretchyHeaderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
 
     
     //Mark: - Status bar
@@ -18,7 +18,7 @@ class StretchyHeaderOnlyViewController: UIViewController, UITableViewDelegate, U
         return .lightContent
     }
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: BBCiPlayerStretchyTableView!
     
     // Full size of the drawer and also how much drawer is seen when open
     fileprivate var headerHeight :CGFloat = 350
@@ -49,6 +49,7 @@ class StretchyHeaderOnlyViewController: UIViewController, UITableViewDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,12 +70,8 @@ class StretchyHeaderOnlyViewController: UIViewController, UITableViewDelegate, U
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        tableView.layer.borderWidth = 4
-        tableView.layer.borderColor = UIColor.red.cgColor
-        
         initialSetup()
     }
-    
     
     func initialSetup(){
         setTableView()
@@ -83,6 +80,15 @@ class StretchyHeaderOnlyViewController: UIViewController, UITableViewDelegate, U
         shouldOpenPanel(false)
         
     }
+    deinit {
+        tableView = nil
+    }
+    
+}
+
+// Mark - Behaviours
+extension BBCiPlayerStretchyHeaderViewController {
+    
     func activateDrag(with drag : Bool) {
         tableView.isScrollEnabled = drag
         //tableView.isSpringLoaded = drag
@@ -223,28 +229,28 @@ class StretchyHeaderOnlyViewController: UIViewController, UITableViewDelegate, U
         
     }
  
-    deinit {
-        tableView = nil
-    }
 }
 
-extension StretchyHeaderOnlyViewController: UIDynamicAnimatorDelegate {
+// Mark - UIDynamicAnimatorDelegate
+extension BBCiPlayerStretchyHeaderViewController: UIDynamicAnimatorDelegate {
     
     func dynamicAnimatorDidPause(_ animator: UIDynamicAnimator) {
         isOpen = (tableView.frame.origin.y > 0 )
         isClosing = false
         tableView.contentOffset = CGPoint.zero
         activateDrag(with: isOpen )
+        
     }
     
     func dynamicAnimatorWillResume(_ animator: UIDynamicAnimator) {
     }
 }
 
-extension StretchyHeaderOnlyViewController {
+// Mark - TableView Scroll Delegate and Datasource
+extension BBCiPlayerStretchyHeaderViewController {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+   
         if isOpen == false {
             scrollView.contentOffset = CGPoint.zero
         }

@@ -49,7 +49,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"StretchyHeaderRevealViewController" : "StretchyHeaderMain",
                             //"BBCiPlayerTableViewController" : "BBCiPlayerMain",
                             //"SimpleSpringDrawerViewController" : "SimpleSpringDrawerMain",
-                            "StretchyHeaderOnlyViewController" : "StretchyHeaderOnlyMain"
+                            "BBCiPlayerStretchyHeaderViewController" : "BBCiPlayerStretchyHeaderMain"
                            ]
     
     //Mark: - Collection view 
