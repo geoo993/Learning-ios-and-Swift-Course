@@ -230,6 +230,8 @@
 		C7F1FE1E1EEB5CD7002F3641 /* EasyAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F1FE051EEB5CCF002F3641 /* EasyAnimation.framework */; };
 		C7F1FE1F1EEB5CD7002F3641 /* EasyAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7F1FE051EEB5CCF002F3641 /* EasyAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7F33C4A1EF92E9C0096E372 /* BBCiPlayerVideosItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F33C491EF92E9C0096E372 /* BBCiPlayerVideosItems.swift */; };
+		C7FC254B1F0501DC00959765 /* UIPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FC254A1F0501DC00959765 /* UIPickerViewController.swift */; };
+		C7FC254D1F05020200959765 /* UIPickerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FC254C1F05020200959765 /* UIPickerMain.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -804,6 +806,8 @@
 		C7EFC8661EEDB7F700AA3EFB /* Cartography.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cartography.xcodeproj; path = ../Carthage/Checkouts/Cartography/Cartography.xcodeproj; sourceTree = "<group>"; };
 		C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EasyAnimation.xcodeproj; path = ../Carthage/Checkouts/EasyAnimation/EasyAnimation.xcodeproj; sourceTree = "<group>"; };
 		C7F33C491EF92E9C0096E372 /* BBCiPlayerVideosItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerVideosItems.swift; sourceTree = "<group>"; };
+		C7FC254A1F0501DC00959765 /* UIPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewController.swift; sourceTree = "<group>"; };
+		C7FC254C1F05020200959765 /* UIPickerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIPickerMain.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -949,6 +953,7 @@
 				C7C2AE7D1EF6CB62004F257A /* TopMenuExample */,
 				C7C2AE8C1EF6CB62004F257A /* TransitionAnimations */,
 				C7C2AE421EF6CB62004F257A /* VideoPlayerExample */,
+				C7FC252D1F05019600959765 /* UIPickerExample */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
 				C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */,
@@ -1652,6 +1657,15 @@
 			name = Videos;
 			sourceTree = "<group>";
 		};
+		C7FC252D1F05019600959765 /* UIPickerExample */ = {
+			isa = PBXGroup;
+			children = (
+				C7FC254A1F0501DC00959765 /* UIPickerViewController.swift */,
+				C7FC254C1F05020200959765 /* UIPickerMain.storyboard */,
+			);
+			path = UIPickerExample;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2125,6 +2139,7 @@
 				C7C2AF3B1EF6CCB3004F257A /* ParallaxMain.storyboard in Resources */,
 				C7C2AF031EF6CC3C004F257A /* ButtonsMain.storyboard in Resources */,
 				C7C2AF3E1EF6CCC3004F257A /* ParallaxHeaderMain.storyboard in Resources */,
+				C7FC254D1F05020200959765 /* UIPickerMain.storyboard in Resources */,
 				C7C2AF511EF6CCF1004F257A /* SideBarMenuMain.storyboard in Resources */,
 				C7C2AF0C1EF6CC62004F257A /* DraggableVerticalMenusMain.storyboard in Resources */,
 				C7C2AF421EF6CCCE004F257A /* PopUpMain.storyboard in Resources */,
@@ -2244,6 +2259,7 @@
 				C7C2AF841EF6CD91004F257A /* CustomNavigationAnimationController.swift in Sources */,
 				C7C2AF6A1EF6CD64004F257A /* EmptyViewController.swift in Sources */,
 				C711FF261F016929005AAEA5 /* BBCiPlayerStretchyHeaderViewController.swift in Sources */,
+				C7FC254B1F0501DC00959765 /* UIPickerViewController.swift in Sources */,
 				C7C2AF2B1EF6CC97004F257A /* MapViewController.swift in Sources */,
 				C7C2AF0B1EF6CC62004F257A /* DraggableTopMenuMainViewControllerViewController.swift in Sources */,
 				C7C2AF601EF6CD2A004F257A /* StorySmartiesMenuTableViewController.swift in Sources */,

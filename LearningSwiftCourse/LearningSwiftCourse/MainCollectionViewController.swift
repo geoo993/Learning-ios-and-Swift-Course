@@ -44,12 +44,13 @@ class MainCollectionViewController: UICollectionViewController {
                            //"SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
                            //"ButtonsTypesViewController": "ButtonsMain",
                            //"BasicCoreMLwithImagesViewController" : "BasicCoreMLwithImagesMain",
-                            //"SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",
+                            "SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",
                             //"SearchBarViewNavigationController" : "SearchBarMain",
                             //"StretchyHeaderRevealViewController" : "StretchyHeaderMain",
                             //"BBCiPlayerTableViewController" : "BBCiPlayerMain",
                             //"SimpleSpringDrawerViewController" : "SimpleSpringDrawerMain",
-                            "BBCiPlayerStretchyHeaderViewController" : "BBCiPlayerStretchyHeaderMain"
+                            //"BBCiPlayerStretchyHeaderViewController" : "BBCiPlayerStretchyHeaderMain",
+                            //"UIPickerViewController" : "UIPickerMain"
                            ]
     
     //Mark: - Collection view 

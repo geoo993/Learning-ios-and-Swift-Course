@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Picker View Controller-->
+        <scene sceneID="R4d-pL-8nt">
+            <objects>
+                <viewController storyboardIdentifier="UIPickerViewController" id="iId-EQ-gz5" customClass="UIPickerViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sND-kV-AwN"/>
+                        <viewControllerLayoutGuide type="bottom" id="UTd-sZ-oLJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="96O-em-5bQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hem-0a-9xD">
+                                <rect key="frame" x="0.0" y="368" width="320" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="i25-91-GfH"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="iId-EQ-gz5" id="vu4-uz-e4b"/>
+                                    <outlet property="delegate" destination="iId-EQ-gz5" id="JD3-YV-b1M"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joy-X7-wAg" userLabel="emoji button">
+                                <rect key="frame" x="35" y="68" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="BbZ-uQ-Jjq"/>
+                                    <constraint firstAttribute="width" constant="250" id="HkY-IZ-tiQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <state key="normal" title="😀"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="joy-X7-wAg" firstAttribute="centerX" secondItem="96O-em-5bQ" secondAttribute="centerX" id="4vn-sf-WxW"/>
+                            <constraint firstItem="hem-0a-9xD" firstAttribute="top" secondItem="joy-X7-wAg" secondAttribute="bottom" constant="50" id="5Gh-yy-bbi"/>
+                            <constraint firstItem="UTd-sZ-oLJ" firstAttribute="top" secondItem="hem-0a-9xD" secondAttribute="bottom" id="Dxg-Sp-Zwq"/>
+                            <constraint firstAttribute="trailing" secondItem="hem-0a-9xD" secondAttribute="trailing" id="Gsa-r3-HFQ"/>
+                            <constraint firstItem="hem-0a-9xD" firstAttribute="leading" secondItem="96O-em-5bQ" secondAttribute="leading" id="Mq7-Z1-LuM"/>
+                            <constraint firstItem="hem-0a-9xD" firstAttribute="centerX" secondItem="96O-em-5bQ" secondAttribute="centerX" id="e2q-Ii-brB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emojiButton" destination="joy-X7-wAg" id="R7f-qF-MBM"/>
+                        <outlet property="picker" destination="hem-0a-9xD" id="9g2-ke-kpo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLU-m0-MOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207" y="81"/>
+        </scene>
+    </scenes>
+</document>
