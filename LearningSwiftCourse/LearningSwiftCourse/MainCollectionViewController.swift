@@ -51,8 +51,8 @@ class MainCollectionViewController: UICollectionViewController {
                             //"SimpleSpringDrawerViewController" : "SimpleSpringDrawerMain",
                             //"BBCiPlayerStretchyHeaderViewController" : "BBCiPlayerStretchyHeaderMain",
                             //"UIPickerViewController" : "UIPickerMain"
-                            //"UIViewSlidesViewController" : "UIViewSlidesMain",
-                            "AnimatableSideMenuContainerViewController" : "AnimatableSideMenuMain",
+                            "UIViewSlidesViewController" : "UIViewSlidesMain",
+                            //"AnimatableSideMenuContainerViewController" : "AnimatableSideMenuMain",
                            ]
     
     //Mark: - Collection view 

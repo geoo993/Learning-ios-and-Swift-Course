@@ -64,6 +64,11 @@
 		C7BE65DC1EE29CE000A05286 /* IBAnimatable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7BE65C51EE29CCD00A05286 /* IBAnimatable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7BE65E21EE2A22900A05286 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */; };
 		C7BE65E41EE2A23E00A05286 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE65E31EE2A23E00A05286 /* MainCollectionViewCell.swift */; };
+		C7BF534A1F058D9200F01E72 /* RedSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF53491F058D9200F01E72 /* RedSlideView.swift */; };
+		C7BF534C1F058DAA00F01E72 /* GreenSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF534B1F058DAA00F01E72 /* GreenSlideView.swift */; };
+		C7BF534E1F058DC300F01E72 /* BlueSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF534D1F058DC300F01E72 /* BlueSlideView.swift */; };
+		C7BF53501F058E7200F01E72 /* UIViewsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF534F1F058E7200F01E72 /* UIViewsContainerViewController.swift */; };
+		C7BF53521F05AFD800F01E72 /* YellowSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF53511F05AFD800F01E72 /* YellowSlideView.swift */; };
 		C7C2AE3C1EF6CA8D004F257A /* ColorChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE391EF6CA80004F257A /* ColorChangeViewController.swift */; };
 		C7C2AE3D1EF6CA90004F257A /* ColorsMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C2AE3A1EF6CA80004F257A /* ColorsMain.storyboard */; };
 		C7C2AE3E1EF6CA93004F257A /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE3B1EF6CA80004F257A /* ColorsViewController.swift */; };
@@ -663,6 +668,11 @@
 		C7BE65BD1EE29CCC00A05286 /* IBAnimatable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IBAnimatable.xcodeproj; path = ../Carthage/Checkouts/IBAnimatable/IBAnimatable.xcodeproj; sourceTree = "<group>"; };
 		C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		C7BE65E31EE2A23E00A05286 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7BF53491F058D9200F01E72 /* RedSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedSlideView.swift; sourceTree = "<group>"; };
+		C7BF534B1F058DAA00F01E72 /* GreenSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSlideView.swift; sourceTree = "<group>"; };
+		C7BF534D1F058DC300F01E72 /* BlueSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueSlideView.swift; sourceTree = "<group>"; };
+		C7BF534F1F058E7200F01E72 /* UIViewsContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewsContainerViewController.swift; sourceTree = "<group>"; };
+		C7BF53511F05AFD800F01E72 /* YellowSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowSlideView.swift; sourceTree = "<group>"; };
 		C7C2AE391EF6CA80004F257A /* ColorChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangeViewController.swift; sourceTree = "<group>"; };
 		C7C2AE3A1EF6CA80004F257A /* ColorsMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorsMain.storyboard; sourceTree = "<group>"; };
 		C7C2AE3B1EF6CA80004F257A /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
@@ -955,6 +965,7 @@
 				C70C15261F0570DA00CE9220 /* AnimatableSideMenuExample */,
 				C78F4AAB1EF34FDE0001CF94 /* BasicCoreMLwithImagesExample */,
 				C76786441EF90DA2005C159F /* BBCiPlayerExample */,
+				C7E773E61F0153A100440E05 /* BBCiPlayerStretchyHeaderExample */,
 				C7C2AEC81EF6CB63004F257A /* ButtonsExample */,
 				C7C2AEDD1EF6CB63004F257A /* CarouselViewsExample */,
 				C7C2AE381EF6CA80004F257A /* ColorsExample */,
@@ -979,7 +990,6 @@
 				C7C2AEA91EF6CB63004F257A /* SpringBasedDrawerExample */,
 				C7C2AEE71EF6CB64004F257A /* StorySmartiesDesignExample */,
 				C7C2AEB11EF6CB63004F257A /* StretchyHeaderExample */,
-				C7E773E61F0153A100440E05 /* BBCiPlayerStretchyHeaderExample */,
 				C7C2AE911EF6CB62004F257A /* SWRevealViewController */,
 				C7C2AE451EF6CB62004F257A /* TabBarExample */,
 				C7C2AED01EF6CB63004F257A /* TableExample */,
@@ -1622,7 +1632,12 @@
 			isa = PBXGroup;
 			children = (
 				C7D0DE731F0534DF000CD3D1 /* UIViewSlidesViewController.swift */,
+				C7BF534F1F058E7200F01E72 /* UIViewsContainerViewController.swift */,
 				C7D0DE751F0534F4000CD3D1 /* UIViewSlidesMain.storyboard */,
+				C7BF53491F058D9200F01E72 /* RedSlideView.swift */,
+				C7BF534B1F058DAA00F01E72 /* GreenSlideView.swift */,
+				C7BF534D1F058DC300F01E72 /* BlueSlideView.swift */,
+				C7BF53511F05AFD800F01E72 /* YellowSlideView.swift */,
 			);
 			path = UIViewSlidesExample;
 			sourceTree = "<group>";
@@ -2295,10 +2310,13 @@
 				C7C2AF5C1EF6CD14004F257A /* StorySmartiesScrollMenuViewController.swift in Sources */,
 				C70C154E1F0571B700CE9220 /* AnimatableSideMenuItemCell.swift in Sources */,
 				C7C2AF7D1EF6CD8A004F257A /* TopMenuNavigationController.swift in Sources */,
+				C7BF534A1F058D9200F01E72 /* RedSlideView.swift in Sources */,
 				C7C2AF201EF6CC71004F257A /* ImageCropperViewController.swift in Sources */,
 				C7C2AF291EF6CC8C004F257A /* InspirationalFilmsLabelsScrollView.swift in Sources */,
 				C767868F1EF91C3F005C159F /* BBCiPlayerTableviewCollectionViewCell.swift in Sources */,
 				C7F33C4A1EF92E9C0096E372 /* BBCiPlayerVideosItems.swift in Sources */,
+				C7BF53501F058E7200F01E72 /* UIViewsContainerViewController.swift in Sources */,
+				C7BF53521F05AFD800F01E72 /* YellowSlideView.swift in Sources */,
 				C767866F1EF915E9005C159F /* BBCiPlayerTableViewController.swift in Sources */,
 				C7C2AF3D1EF6CCB3004F257A /* ParallaxViewController.swift in Sources */,
 				C7C2AF7B1EF6CD8A004F257A /* AnimationControllerManager.swift in Sources */,
@@ -2385,6 +2403,7 @@
 				C7C2AF851EF6CD91004F257A /* CustomPresentAnimationController.swift in Sources */,
 				C7C2AF611EF6CD2A004F257A /* StorySmartiesMenuViewController.swift in Sources */,
 				C70C154B1F0571AC00CE9220 /* AnimatableDetailViewController.swift in Sources */,
+				C7BF534C1F058DAA00F01E72 /* GreenSlideView.swift in Sources */,
 				C73DF6D51EFC39FF00DAB515 /* UIResponder+Ext.swift in Sources */,
 				C7C2AF401EF6CCC3004F257A /* ParallaxHeaderTableViewController.swift in Sources */,
 				C7C2AF871EF6CD9A004F257A /* VideoPlayerViewController.swift in Sources */,
@@ -2393,6 +2412,7 @@
 				C7349E0C1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift in Sources */,
 				C71678E61EFF1A7B00355E41 /* TopDrawerView.swift in Sources */,
 				C7C2AF331EF6CCA1004F257A /* NavBarModel.swift in Sources */,
+				C7BF534E1F058DC300F01E72 /* BlueSlideView.swift in Sources */,
 				C7C2AF7F1EF6CD8A004F257A /* TopMenuNewsTableViewController.swift in Sources */,
 				C7C2AF071EF6CC46004F257A /* InterestCollectionViewCell.swift in Sources */,
 				C7C2AF3A1EF6CCA9004F257A /* WalkthroughZoomViewController.swift in Sources */,

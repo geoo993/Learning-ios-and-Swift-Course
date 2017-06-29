@@ -5,9 +5,27 @@
 //  Created by GEORGE QUENTIN on 24/05/2017.
 //  Copyright © 2017 LEXI LABS. All rights reserved.
 // from : https://stackoverflow.com/questions/30953201/adding-blur-effect-to-background-in-swift
+//https://stackoverflow.com/questions/9115854/uiview-hide-show-with-animation
+//https://stackoverflow.com/questions/6177393/how-to-add-animation-while-changing-the-hidden-mode-of-a-uiview
 
 import Foundation
 import UIKit
+
+private let UIViewVisibilityShowAnimationKey = "UIViewVisibilityShowAnimationKey"
+private let UIViewVisibilityHideAnimationKey = "UIViewVisibilityHideAnimationKey"
+
+private class UIViewAnimationDelegate: NSObject, CAAnimationDelegate {
+    weak var view: UIView?
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        
+        guard let view = self.view, flag else {
+            return
+        }
+        view.isHidden = !view.visible
+        view.removeVisibilityAnimations()
+    }
+}
 
 
 public extension UIView {
@@ -215,5 +233,109 @@ public extension UIView {
             self.removeSubviewsAndConstraints()
         }
     }
+    
+    
+    func removeVisibilityAnimations() {
+        self.layer.removeAnimation(forKey: UIViewVisibilityShowAnimationKey)
+        self.layer.removeAnimation(forKey: UIViewVisibilityHideAnimationKey)
+    }
+    
+    var visible: Bool {
+        get {
+            return !self.isHidden && self.layer.animation(forKey: UIViewVisibilityHideAnimationKey) == nil
+        }
+        
+        set {
+            let visible = newValue
+            
+            guard self.visible != visible else {
+                return
+            }
+            
+            let animated = UIView.areAnimationsEnabled
+            
+            self.removeVisibilityAnimations()
+            
+            guard animated else {
+                self.isHidden = !visible
+                return
+            }
+            
+            self.isHidden = false
+            
+            let delegate = UIViewAnimationDelegate()
+            delegate.view = self
+            
+            let animation = CABasicAnimation(keyPath: "opacity")
+            animation.fromValue = visible ? 0.0 : 1.0
+            animation.toValue = visible ? 1.0 : 0.0
+            animation.fillMode = kCAFillModeForwards
+            animation.isRemovedOnCompletion = false
+            animation.delegate = delegate
+            
+            self.layer.add(animation, forKey: visible ? UIViewVisibilityShowAnimationKey : UIViewVisibilityHideAnimationKey)
+        }
+    }
+    
+    func setVisible(visible: Bool, animated: Bool) {
+        let wereAnimationsEnabled = UIView.areAnimationsEnabled
+        
+        if wereAnimationsEnabled != animated {
+            UIView.setAnimationsEnabled(animated)
+            defer { UIView.setAnimationsEnabled(!animated) }
+        }
+        
+        self.visible = visible
+    }
+    
+    
+    func setHidden(with hidden: Bool, animated:Bool)
+    {
+        // If the hidden value is already set, do nothing
+        if (hidden == self.isHidden) {
+            return
+        }
+        // If no animation requested, do the normal setHidden method
+        else if (animated == false) {
+            self.isHidden = hidden // self.setHidden(with: hidden)
+            return
+        }
+        else {
+            // Store the view's current alpha value
+            let originalAlpha = self.alpha
+        
+            // If we're unhiding the view, make it invisible initially
+            if (hidden == false) {
+                self.alpha = 0
+            }
+    
+            // Unhide the view so we can see the animation
+            self.isHidden = false
+    
+            // Do the animation
+            UIView.animate(withDuration: 0.5,
+                           delay: 0.0,
+                           options: UIViewAnimationOptions.curveEaseOut,
+                           animations: { [weak self] () -> Void in
+                            // Start animation block
+                            if (hidden == true) {
+                                self?.alpha = 0
+                            }else {
+                                self?.alpha = originalAlpha;
+                            }
+                            self?.layoutIfNeeded()
+                            // End animation block
+            }, completion: { [weak self] (completed) -> Void in
+                // Start completion block
+                // Finish up by hiding the view if necessary...
+                self?.isHidden = hidden
+                // ... and putting back the correct alpha value
+                self?.alpha = originalAlpha;
+                // End completion block
+            })
+        }
+        
+    }
+
     
 }
