@@ -13,6 +13,13 @@
 		C703771E1EF551C0002E7D9B /* SearchBarViewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C703771D1EF551C0002E7D9B /* SearchBarViewNavigationController.swift */; };
 		C70557E91EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70557E81EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift */; };
 		C708787C1EFD0EBF006BBDEC /* BBCiPlayerContentDetailedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C708787B1EFD0EBF006BBDEC /* BBCiPlayerContentDetailedTableViewCell.swift */; };
+		C70C154A1F0571A100CE9220 /* AnimatableSideMenuMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70C15491F05711E00CE9220 /* AnimatableSideMenuMain.storyboard */; };
+		C70C154B1F0571AC00CE9220 /* AnimatableDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C15271F0570DA00CE9220 /* AnimatableDetailViewController.swift */; };
+		C70C154C1F0571B300CE9220 /* AnimatableHamburgerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C15281F0570DA00CE9220 /* AnimatableHamburgerView.swift */; };
+		C70C154D1F0571B500CE9220 /* AnimatableSideMenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C15291F0570DA00CE9220 /* AnimatableSideMenuContainerViewController.swift */; };
+		C70C154E1F0571B700CE9220 /* AnimatableSideMenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C152A1F0570DA00CE9220 /* AnimatableSideMenuItemCell.swift */; };
+		C70C154F1F0571BA00CE9220 /* AnimatableSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C152B1F0570DA00CE9220 /* AnimatableSideMenuViewController.swift */; };
+		C70C15501F0571BC00CE9220 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = C70C152C1F0570DA00CE9220 /* MenuItems.plist */; };
 		C711FF261F016929005AAEA5 /* BBCiPlayerStretchyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C711FF251F016929005AAEA5 /* BBCiPlayerStretchyHeaderViewController.swift */; };
 		C71678E21EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71678E11EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard */; };
 		C71678E41EFF19C700355E41 /* SimpleSpringDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71678E31EFF19C700355E41 /* SimpleSpringDrawerViewController.swift */; };
@@ -208,6 +215,8 @@
 		C7CF31F31EF6B33200114EC1 /* BasicCoreMLwithImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F4AAC1EF34FDE0001CF94 /* BasicCoreMLwithImagesCollectionViewCell.swift */; };
 		C7CF31F41EF6B33400114EC1 /* BasicCoreMLwithImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F4AAE1EF34FDE0001CF94 /* BasicCoreMLwithImagesViewController.swift */; };
 		C7CF31F51EF6B33B00114EC1 /* BasicCoreMLwithImagesMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78F4AAD1EF34FDE0001CF94 /* BasicCoreMLwithImagesMain.storyboard */; };
+		C7D0DE741F0534DF000CD3D1 /* UIViewSlidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D0DE731F0534DF000CD3D1 /* UIViewSlidesViewController.swift */; };
+		C7D0DE761F0534F4000CD3D1 /* UIViewSlidesMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D0DE751F0534F4000CD3D1 /* UIViewSlidesMain.storyboard */; };
 		C7D3C0FD1EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D3C0F41EF2BB550042E90A /* LearningSwiftCourseExtensions.framework */; };
 		C7D3C1041EF2BB550042E90A /* LearningSwiftCourseExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D3C1031EF2BB550042E90A /* LearningSwiftCourseExtensionsTests.swift */; };
 		C7D3C1061EF2BB550042E90A /* LearningSwiftCourseExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7D3C0F61EF2BB550042E90A /* LearningSwiftCourseExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -594,6 +603,13 @@
 		C703771D1EF551C0002E7D9B /* SearchBarViewNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewNavigationController.swift; sourceTree = "<group>"; };
 		C70557E81EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentNavigationController.swift; sourceTree = "<group>"; };
 		C708787B1EFD0EBF006BBDEC /* BBCiPlayerContentDetailedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentDetailedTableViewCell.swift; sourceTree = "<group>"; };
+		C70C15271F0570DA00CE9220 /* AnimatableDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableDetailViewController.swift; sourceTree = "<group>"; };
+		C70C15281F0570DA00CE9220 /* AnimatableHamburgerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableHamburgerView.swift; sourceTree = "<group>"; };
+		C70C15291F0570DA00CE9220 /* AnimatableSideMenuContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableSideMenuContainerViewController.swift; sourceTree = "<group>"; };
+		C70C152A1F0570DA00CE9220 /* AnimatableSideMenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableSideMenuItemCell.swift; sourceTree = "<group>"; };
+		C70C152B1F0570DA00CE9220 /* AnimatableSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableSideMenuViewController.swift; sourceTree = "<group>"; };
+		C70C152C1F0570DA00CE9220 /* MenuItems.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MenuItems.plist; sourceTree = "<group>"; };
+		C70C15491F05711E00CE9220 /* AnimatableSideMenuMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimatableSideMenuMain.storyboard; sourceTree = "<group>"; };
 		C711FF251F016929005AAEA5 /* BBCiPlayerStretchyHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerStretchyHeaderViewController.swift; sourceTree = "<group>"; };
 		C71678E11EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleSpringDrawerMain.storyboard; sourceTree = "<group>"; };
 		C71678E31EFF19C700355E41 /* SimpleSpringDrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSpringDrawerViewController.swift; sourceTree = "<group>"; };
@@ -792,6 +808,8 @@
 		C7C2AEF31EF6CB64004F257A /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		C7C2AEF41EF6CB64004F257A /* SummaryViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewTableViewCell.swift; sourceTree = "<group>"; };
 		C7C951731EA3E08D005DFE3B /* Architecture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Architecture.png; sourceTree = "<group>"; };
+		C7D0DE731F0534DF000CD3D1 /* UIViewSlidesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSlidesViewController.swift; sourceTree = "<group>"; };
+		C7D0DE751F0534F4000CD3D1 /* UIViewSlidesMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIViewSlidesMain.storyboard; sourceTree = "<group>"; };
 		C7D3C0F41EF2BB550042E90A /* LearningSwiftCourseExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LearningSwiftCourseExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D3C0F61EF2BB550042E90A /* LearningSwiftCourseExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningSwiftCourseExtensions.h; sourceTree = "<group>"; };
 		C7D3C0F71EF2BB550042E90A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -878,6 +896,20 @@
 			path = SearchBarExample;
 			sourceTree = "<group>";
 		};
+		C70C15261F0570DA00CE9220 /* AnimatableSideMenuExample */ = {
+			isa = PBXGroup;
+			children = (
+				C70C15491F05711E00CE9220 /* AnimatableSideMenuMain.storyboard */,
+				C70C15271F0570DA00CE9220 /* AnimatableDetailViewController.swift */,
+				C70C15281F0570DA00CE9220 /* AnimatableHamburgerView.swift */,
+				C70C15291F0570DA00CE9220 /* AnimatableSideMenuContainerViewController.swift */,
+				C70C152A1F0570DA00CE9220 /* AnimatableSideMenuItemCell.swift */,
+				C70C152B1F0570DA00CE9220 /* AnimatableSideMenuViewController.swift */,
+				C70C152C1F0570DA00CE9220 /* MenuItems.plist */,
+			);
+			path = AnimatableSideMenuExample;
+			sourceTree = "<group>";
+		};
 		C71678C41EFF196500355E41 /* SimpleSpringDrawerExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -920,6 +952,7 @@
 				C7E3886E1ED3055F000DCE15 /* LearningSwiftCourse.entitlements */,
 				C7C2AE851EF6CB62004F257A /* AirbnbExample */,
 				C7C2AEAD1EF6CB63004F257A /* AudioExample */,
+				C70C15261F0570DA00CE9220 /* AnimatableSideMenuExample */,
 				C78F4AAB1EF34FDE0001CF94 /* BasicCoreMLwithImagesExample */,
 				C76786441EF90DA2005C159F /* BBCiPlayerExample */,
 				C7C2AEC81EF6CB63004F257A /* ButtonsExample */,
@@ -954,6 +987,7 @@
 				C7C2AE8C1EF6CB62004F257A /* TransitionAnimations */,
 				C7C2AE421EF6CB62004F257A /* VideoPlayerExample */,
 				C7FC252D1F05019600959765 /* UIPickerExample */,
+				C7D0DE561F053454000CD3D1 /* UIViewSlidesExample */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
 				C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */,
@@ -1584,6 +1618,15 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		C7D0DE561F053454000CD3D1 /* UIViewSlidesExample */ = {
+			isa = PBXGroup;
+			children = (
+				C7D0DE731F0534DF000CD3D1 /* UIViewSlidesViewController.swift */,
+				C7D0DE751F0534F4000CD3D1 /* UIViewSlidesMain.storyboard */,
+			);
+			path = UIViewSlidesExample;
+			sourceTree = "<group>";
+		};
 		C7D3C0F51EF2BB550042E90A /* LearningSwiftCourseExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -2136,6 +2179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D0DE761F0534F4000CD3D1 /* UIViewSlidesMain.storyboard in Resources */,
 				C7C2AF3B1EF6CCB3004F257A /* ParallaxMain.storyboard in Resources */,
 				C7C2AF031EF6CC3C004F257A /* ButtonsMain.storyboard in Resources */,
 				C7C2AF3E1EF6CCC3004F257A /* ParallaxHeaderMain.storyboard in Resources */,
@@ -2155,6 +2199,7 @@
 				C7C2AF2E1EF6CC97004F257A /* MultiSidedBarMenuMain.storyboard in Resources */,
 				C7C2AF6D1EF6CD64004F257A /* TabBarMain.storyboard in Resources */,
 				C7C2AF221EF6CC78004F257A /* ImageViewerMain.storyboard in Resources */,
+				C70C154A1F0571A100CE9220 /* AnimatableSideMenuMain.storyboard in Resources */,
 				C76F04C81EF5004B0090F71B /* SliderMenuDrawerMain.storyboard in Resources */,
 				C70377181EF546B6002E7D9B /* SearchBarMain.storyboard in Resources */,
 				C7C2AF4B1EF6CCD7004F257A /* slide17.gif in Resources */,
@@ -2166,6 +2211,7 @@
 				C7C2AF051EF6CC46004F257A /* CarouselMain.storyboard in Resources */,
 				C7C2AF4A1EF6CCD7004F257A /* slide16.gif in Resources */,
 				C7C2AF491EF6CCD7004F257A /* slide15.gif in Resources */,
+				C70C15501F0571BC00CE9220 /* MenuItems.plist in Resources */,
 				C7C2AF861EF6CD9A004F257A /* VideoPlayerMain.storyboard in Resources */,
 				C7C2AF481EF6CCD7004F257A /* Slide.xib in Resources */,
 				C7C2AF541EF6CD03004F257A /* SlideShowMain.storyboard in Resources */,
@@ -2247,6 +2293,7 @@
 				C7C2AF661EF6CD35004F257A /* StretchyHeaderMenuTableViewController.swift in Sources */,
 				C7C2AEFE1EF6CC17004F257A /* AirbnbPlacesTableViewCell.swift in Sources */,
 				C7C2AF5C1EF6CD14004F257A /* StorySmartiesScrollMenuViewController.swift in Sources */,
+				C70C154E1F0571B700CE9220 /* AnimatableSideMenuItemCell.swift in Sources */,
 				C7C2AF7D1EF6CD8A004F257A /* TopMenuNavigationController.swift in Sources */,
 				C7C2AF201EF6CC71004F257A /* ImageCropperViewController.swift in Sources */,
 				C7C2AF291EF6CC8C004F257A /* InspirationalFilmsLabelsScrollView.swift in Sources */,
@@ -2281,6 +2328,7 @@
 				C7C2AF681EF6CD35004F257A /* StretchyHeaderTableViewController.swift in Sources */,
 				C7C2AF081EF6CC4A004F257A /* Interest.swift in Sources */,
 				C7C2AF011EF6CC2C004F257A /* AudioCheckViewController.swift in Sources */,
+				C70C154F1F0571BA00CE9220 /* AnimatableSideMenuViewController.swift in Sources */,
 				C7C2AEFF1EF6CC17004F257A /* AirbnbTableViewController.swift in Sources */,
 				C7C2AF261EF6CC88004F257A /* InspirationalFilms.swift in Sources */,
 				C7C2AF6C1EF6CD64004F257A /* MetricViewController.swift in Sources */,
@@ -2301,6 +2349,7 @@
 				C7C2AE3E1EF6CA93004F257A /* ColorsViewController.swift in Sources */,
 				C7C2AF831EF6CD91004F257A /* CustomInteractionController.swift in Sources */,
 				C7349DEC1EFC226B00B99AE6 /* UINavigationBar+Ext.swift in Sources */,
+				C70C154D1F0571B500CE9220 /* AnimatableSideMenuContainerViewController.swift in Sources */,
 				C7349E0A1EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift in Sources */,
 				C7C2AF5D1EF6CD14004F257A /* StorySmartiesViewController.swift in Sources */,
 				C7C2AF041EF6CC3C004F257A /* ButtonsTypesViewController.swift in Sources */,
@@ -2329,10 +2378,13 @@
 				C7C2AF5E1EF6CD24004F257A /* SummaryView.swift in Sources */,
 				C7C2AF641EF6CD35004F257A /* NewStretchyHeaderItem.swift in Sources */,
 				C7C2AF591EF6CD0B004F257A /* SpringBasedDrawerViewController.swift in Sources */,
+				C7D0DE741F0534DF000CD3D1 /* UIViewSlidesViewController.swift in Sources */,
 				C76F04F01EF505E40090F71B /* SliderMenuDrawerViewController.swift in Sources */,
+				C70C154C1F0571B300CE9220 /* AnimatableHamburgerView.swift in Sources */,
 				C7BE65E41EE2A23E00A05286 /* MainCollectionViewCell.swift in Sources */,
 				C7C2AF851EF6CD91004F257A /* CustomPresentAnimationController.swift in Sources */,
 				C7C2AF611EF6CD2A004F257A /* StorySmartiesMenuViewController.swift in Sources */,
+				C70C154B1F0571AC00CE9220 /* AnimatableDetailViewController.swift in Sources */,
 				C73DF6D51EFC39FF00DAB515 /* UIResponder+Ext.swift in Sources */,
 				C7C2AF401EF6CCC3004F257A /* ParallaxHeaderTableViewController.swift in Sources */,
 				C7C2AF871EF6CD9A004F257A /* VideoPlayerViewController.swift in Sources */,
