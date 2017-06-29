@@ -12,10 +12,15 @@ import Cartography
 
 class BBCiPlayerStretchyHeaderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
 
-    
     //Mark: - Status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    @IBAction func homebutton(_ sender: Any) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
     }
     
     @IBOutlet weak var tableView: BBCiPlayerStretchyTableView!
@@ -81,7 +86,9 @@ class BBCiPlayerStretchyHeaderViewController: UIViewController, UITableViewDeleg
         
     }
     deinit {
+        view.removeEverything()
         tableView = nil
+        print("BBC iplayer stretchy Header view controller is \(#function)")
     }
     
 }

@@ -10,7 +10,9 @@ import UIKit
 
 class BBCiPlayerStretchyTableView: UITableView {
 
-    @IBOutlet weak var navBar : UINavigationBar!
+    @IBOutlet weak var topNavBar : UINavigationBar!
+    @IBOutlet weak var bottomNavBar : UINavigationBar!
+    @IBOutlet weak var bottomNavBarUpArrowIcon : UIImageView!
     @IBOutlet weak var categoriesScrollView : UIScrollView!
     @IBOutlet weak var channelsScrollView : UIScrollView!
     
@@ -41,8 +43,11 @@ class BBCiPlayerStretchyTableView: UITableView {
         categoriesScrollView.delegate = self
         channelsScrollView.delegate = self
         
+        setupNavBars()
+        
         setCategoriesScrollViewElements()
         setChannelsScrollViewElements()
+        
      }
      
      public override func willMove(toSuperview newSuperview: UIView?) {
@@ -53,16 +58,25 @@ class BBCiPlayerStretchyTableView: UITableView {
      public override func layoutSubviews() {
         super.layoutSubviews()
         
-        updateNavBarVisibility()
+        updateBottomNavBarVisibility()
         
      }
      
-    func updateNavBarVisibility (){
+    func setupNavBars(){
+        topNavBar.clearNavigationBarBackground(with: UIColor.clear)
+        topNavBar.topItem?.leftBarButtonItem?.image = UIImage(named:"BBC_iPlayer_logo_white_nav")?.withRenderingMode(.alwaysOriginal) 
+        
+        bottomNavBar.clearNavigationBarBackground(with: UIColor.clear)
+        bottomNavBar.topItem?.rightBarButtonItems?.last?.image = UIImage(named:"BBC_iPlayer_logo_white_nav")?.withRenderingMode(.alwaysOriginal)
+    }
+    
+    func updateBottomNavBarVisibility (){
         
         let yPosition = self.frame.origin.y
-        let difference = yPosition.percentageWithF(maxValue: -275, minValue: -284) / 100
-        navBar.alpha = 1 - abs(difference)
-        navBar.isHidden = (navBar.alpha < 0.05)
+        let difference = yPosition.percentageWithF(maxValue: -280, minValue: -284) / 100
+        bottomNavBar.alpha = 1 - abs(difference)
+        bottomNavBarUpArrowIcon.alpha = abs(difference)
+        bottomNavBar.isHidden = (bottomNavBar.alpha < 0.05)
     }
     
     func setCategoriesScrollViewElements(){
@@ -125,6 +139,14 @@ class BBCiPlayerStretchyTableView: UITableView {
         
     }
     
+    
+    deinit {
+        topNavBar = nil
+        bottomNavBar = nil
+        bottomNavBarUpArrowIcon = nil
+        categoriesScrollView = nil
+        channelsScrollView = nil
+    }
 }
 
 // MARK: - UIScrollViewDelegate

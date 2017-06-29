@@ -46,6 +46,12 @@ struct EmojiIcons {
 
 class UIPickerViewController: UIViewController {
 
+    @IBAction func homebutton(_ sender: Any) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
+    
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var emojiButton: UIButton!
  
