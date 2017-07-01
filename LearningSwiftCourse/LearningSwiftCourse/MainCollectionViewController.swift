@@ -33,6 +33,7 @@ class MainCollectionViewController: UICollectionViewController {
                            //"ParallaxViewController" : "ParallaxMain",
                            //"ImageViewerViewController" : "ImageViewerMain",
                            //"ImageCropperViewController" : "ImageCropperMain",
+                           "ImagePickerCoreMLViewNavigationController" : "ImagePickerCoreMLViewMain", 
                            //"CarouselViewController": "CarouselMain",
                            //"InspirationalFilmsViewController": "InspirationalFilmsMain",
                            //"AirbnbRevealViewController" : "AirbnbMain",
@@ -43,7 +44,7 @@ class MainCollectionViewController: UICollectionViewController {
                            //"DraggableTopMenuMainViewController" : "DraggableVerticalMenusMain",
                            //"SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
                            //"ButtonsTypesViewController": "ButtonsMain",
-                           //"BasicCoreMLwithImagesViewController" : "BasicCoreMLwithImagesMain",
+                           "BasicCoreMLwithImagesViewController" : "BasicCoreMLwithImagesMain",
                            //"SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",
                             //"SearchBarViewNavigationController" : "SearchBarMain",
                             //"StretchyHeaderRevealViewController" : "StretchyHeaderMain",
@@ -53,7 +54,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"UIPickerViewController" : "UIPickerMain"
                             //"UIViewSlidesViewController" : "UIViewSlidesMain",
                             //"AnimatableSideMenuContainerViewController" : "AnimatableSideMenuMain",
-                            "PieChartPageViewController" : "CirclePieViewMain"
+                            "PieChartPageViewController" : "CirclePieViewMain",
                            ]
     
     //Mark: - Collection view 

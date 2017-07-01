@@ -36,6 +36,25 @@ public  extension UIImage {
         return resultingImage
     }
     
+    public  func resizeImage(with size: CGSize, opaque: Bool = false, scale: CGFloat = UIScreen.main.scale) -> UIImage {
+        
+        if UIScreen.main.responds(to: #selector(NSDecimalNumberBehaviors.scale)){
+            UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
+        }
+        else
+        {
+            UIGraphicsBeginImageContext(size);
+        }
+        
+        let rect = CGRect(x:0.0, y:0.0,width: size.width, height:size.height);
+        draw(in: rect)
+        guard let resultingImage = UIGraphicsGetImageFromCurrentImageContext() else { print("UIGraphicsGetImageFromCurrentImageContext is Nil "); return UIImage() };
+        UIGraphicsEndImageContext();
+        
+        return resultingImage
+    }
+    
+    
     /// Resizes an image to the specified size and adds an extra transparent margin at all sides of
     /// the image.
     ///

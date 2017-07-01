@@ -18,6 +18,12 @@ import UIKit
 
 class PieChartViewViewController: UIViewController {
 
+    @IBAction func homebutton(_ sender: Any) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -29,7 +35,6 @@ class PieChartViewViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         setupPage()
     }
 
@@ -118,6 +123,9 @@ class PieChartViewViewController: UIViewController {
     }
     
     func showPieChartWithSubData(){
+        
+        removeView(with: PieChartWithSubData.self)
+        
         let uicolor_chart_1 = UIColor.init(red: 0.0/255, green:153.0/255, blue:255.0/255, alpha:1.0)  //16b
         let uicolor_chart_2 = UIColor.init(red: 0.0/255, green:200.0/255, blue:120.0/255, alpha:1.0)
         let uicolor_chart_3 = UIColor.init(red: 140.0/255, green:220.0/255, blue:0.0/255, alpha:1.0)
@@ -141,6 +149,7 @@ class PieChartViewViewController: UIViewController {
     }
     
     func showPieChartWithLines(){
+        removeView(with: PieChartViewWithBezierPath.self)
         
         let frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 300)
         let dataPoints = [

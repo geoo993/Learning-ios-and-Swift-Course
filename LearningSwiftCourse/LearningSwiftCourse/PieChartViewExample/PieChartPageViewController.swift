@@ -20,6 +20,7 @@ class PieChartPageViewController: UIPageViewController {
 
         // Do any additional setup after loading the view.
         self.dataSource = self
+        self.delegate = self
         
         // Create the first screen
         if let startingViewController = self.pageViewController(atIndex: pageIndex) {
@@ -58,7 +59,10 @@ class PieChartPageViewController: UIPageViewController {
         
         if index < numberOfPages {
             
-            let page = self.storyboard!.instantiateViewController(withIdentifier: "PieChartViewViewController") as! PieChartViewViewController
+            let defaultBundleID = "co.lexilabs.LearningSwiftCourse"
+            let bundle = Bundle(identifier: defaultBundleID)
+            let storyboard = UIStoryboard(name: "CirclePieViewMain", bundle: bundle) 
+            let page = storyboard.instantiateViewController(withIdentifier: "PieChartViewViewController") as! PieChartViewViewController
             
             page.numberOfPages = numberOfPages
             page.pageIndex = index
@@ -118,3 +122,11 @@ extension PieChartPageViewController: UIPageViewControllerDataSource {
     }
     
 }
+
+
+// Mark: - UIPageViewControllerDelegate
+extension PieChartPageViewController: UIPageViewControllerDelegate {
+    
+    
+}
+

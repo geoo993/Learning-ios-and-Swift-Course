@@ -32,7 +32,7 @@ class BasicCoreMLwithImagesViewController: UIViewController {
     func sceneLabel(forImage image: UIImage) -> String?
     {
         //requires to pass along a CVPixelBuffer
-        if let pixelBuffer = ImageProcessor.pixelBuffer(forImage: image.cgImage!) {
+        if let pixelBuffer = ImageProcessor.pixelBuffer(forImage: image) {
             guard let scene = try? googleNetPlacesModel.prediction(sceneImage: pixelBuffer) else { return nil }
             return scene.sceneLabel
         }

@@ -27,6 +27,11 @@
 		C71EDCF01EF6DB9B00B69EF9 /* LearningSwiftCourse-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = C71EDCCC1EF6DA3800B69EF9 /* LearningSwiftCourse-Bridging-Header.h */; };
 		C71EDCF51EF6DDB300B69EF9 /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C71EDCF41EF6DD5100B69EF9 /* SWRevealViewController.h */; };
 		C71EDCF61EF6DDB600B69EF9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C71EDCF31EF6DD5100B69EF9 /* SWRevealViewController.m */; };
+		C72AF49B1F07CCB30023F014 /* ImagePickerCoreMLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AF47C1F07CC9E0023F014 /* ImagePickerCoreMLViewController.swift */; };
+		C72AF49C1F07CCB80023F014 /* ImagePickerCoreMLViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72AF47D1F07CC9E0023F014 /* ImagePickerCoreMLViewMain.storyboard */; };
+		C72AF49D1F07CCBA0023F014 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C72AF47E1F07CC9E0023F014 /* Inceptionv3.mlmodel */; };
+		C72AF49F1F07CD3C0023F014 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C78F4AB41EF34FDE0001CF94 /* Resnet50.mlmodel */; };
+		C72AF4A11F07CD790023F014 /* ImagePickerCoreMLViewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AF4A01F07CD790023F014 /* ImagePickerCoreMLViewNavigationController.swift */; };
 		C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */; };
 		C72E27AC1E9ED9EB0064E01B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72E27AB1E9ED9EB0064E01B /* Assets.xcassets */; };
 		C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */; };
@@ -631,6 +636,11 @@
 		C71EDCCC1EF6DA3800B69EF9 /* LearningSwiftCourse-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearningSwiftCourse-Bridging-Header.h"; sourceTree = "<group>"; };
 		C71EDCF31EF6DD5100B69EF9 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		C71EDCF41EF6DD5100B69EF9 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C72AF47C1F07CC9E0023F014 /* ImagePickerCoreMLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoreMLViewController.swift; sourceTree = "<group>"; };
+		C72AF47D1F07CC9E0023F014 /* ImagePickerCoreMLViewMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImagePickerCoreMLViewMain.storyboard; sourceTree = "<group>"; };
+		C72AF47E1F07CC9E0023F014 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		C72AF4A01F07CD790023F014 /* ImagePickerCoreMLViewNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoreMLViewNavigationController.swift; sourceTree = "<group>"; };
+		C72AF4A21F07CE490023F014 /* Inception-v3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Inception-v3.txt"; sourceTree = "<group>"; };
 		C72E27A11E9ED9EB0064E01B /* LearningSwiftCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningSwiftCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C72E27AB1E9ED9EB0064E01B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -948,6 +958,18 @@
 			path = SimpleSpringDrawerExample;
 			sourceTree = "<group>";
 		};
+		C72AF47B1F07CC9E0023F014 /* ImagePickerCoreMLExample */ = {
+			isa = PBXGroup;
+			children = (
+				C72AF4A01F07CD790023F014 /* ImagePickerCoreMLViewNavigationController.swift */,
+				C72AF47C1F07CC9E0023F014 /* ImagePickerCoreMLViewController.swift */,
+				C72AF47D1F07CC9E0023F014 /* ImagePickerCoreMLViewMain.storyboard */,
+				C72AF47E1F07CC9E0023F014 /* Inceptionv3.mlmodel */,
+				C72AF4A21F07CE490023F014 /* Inception-v3.txt */,
+			);
+			path = ImagePickerCoreMLExample;
+			sourceTree = "<group>";
+		};
 		C72E27981E9ED9EB0064E01B = {
 			isa = PBXGroup;
 			children = (
@@ -992,6 +1014,7 @@
 				C7C2AECB1EF6CB63004F257A /* DraggableVerticalMenusExample */,
 				C7C2AE571EF6CB62004F257A /* Extensions */,
 				C7C2AE541EF6CB62004F257A /* ImageCropperExample */,
+				C72AF47B1F07CC9E0023F014 /* ImagePickerCoreMLExample */,
 				C7C2AE501EF6CB62004F257A /* ImageViewerExample */,
 				C7C2AE731EF6CB62004F257A /* InspirationalFilmsExample */,
 				C7C2AE981EF6CB63004F257A /* MultiSidedBarMenuExample */,
@@ -1192,7 +1215,6 @@
 		C78F4AAB1EF34FDE0001CF94 /* BasicCoreMLwithImagesExample */ = {
 			isa = PBXGroup;
 			children = (
-				C78F4AB21EF34FDE0001CF94 /* ImageProcessor.swift */,
 				C78F4AAC1EF34FDE0001CF94 /* BasicCoreMLwithImagesCollectionViewCell.swift */,
 				C78F4AAE1EF34FDE0001CF94 /* BasicCoreMLwithImagesViewController.swift */,
 				C78F4AAD1EF34FDE0001CF94 /* BasicCoreMLwithImagesMain.storyboard */,
@@ -1293,6 +1315,7 @@
 		C7C2AE571EF6CB62004F257A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C78F4AB21EF34FDE0001CF94 /* ImageProcessor.swift */,
 				C7C2AE581EF6CB62004F257A /* Dictionary+Ext.swift */,
 				C7C2AE591EF6CB62004F257A /* Generic+Ext.swift */,
 				C7C2AE5A1EF6CB62004F257A /* Math+Ext.swift */,
@@ -2238,6 +2261,7 @@
 				C7C2AF0C1EF6CC62004F257A /* DraggableVerticalMenusMain.storyboard in Resources */,
 				C7C2AF421EF6CCCE004F257A /* PopUpMain.storyboard in Resources */,
 				C71678E21EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard in Resources */,
+				C72AF49C1F07CCB80023F014 /* ImagePickerCoreMLViewMain.storyboard in Resources */,
 				C7C2AF381EF6CCA9004F257A /* PageViewMain.storyboard in Resources */,
 				C7AE48901EA5327300C2096E /* Main.storyboard in Resources */,
 				C7C2AF4C1EF6CCD7004F257A /* slide18.gif in Resources */,
@@ -2340,6 +2364,7 @@
 				C7C2AF0A1EF6CC5C004F257A /* CrossPlatformDefines.swift in Sources */,
 				C7C2AEFD1EF6CC17004F257A /* AirbnbNavigationController.swift in Sources */,
 				C7C2AF2C1EF6CC97004F257A /* MultiSidedBarMenuControllerLeft.swift in Sources */,
+				C72AF49D1F07CCBA0023F014 /* Inceptionv3.mlmodel in Sources */,
 				C7CF31F41EF6B33400114EC1 /* BasicCoreMLwithImagesViewController.swift in Sources */,
 				C7C2AF721EF6CD70004F257A /* ChosenMediaTableViewController.swift in Sources */,
 				C7C2AF2A1EF6CC8C004F257A /* InspirationalFilmsMediaScrollView.swift in Sources */,
@@ -2395,6 +2420,7 @@
 				C7C2AF2D1EF6CC97004F257A /* MultiSidedBarMenuControllerRight.swift in Sources */,
 				C7CEB7AD1F07059D00CC054B /* PieChartView.swift in Sources */,
 				C73977D21EEEFFBE005C96C8 /* pListRequestPermissions.swift in Sources */,
+				C72AF4A11F07CD790023F014 /* ImagePickerCoreMLViewNavigationController.swift in Sources */,
 				C703771C1EF5473A002E7D9B /* SearchBarTableViewCell.swift in Sources */,
 				C7C2AF561EF6CD03004F257A /* SlideShowViewController.swift in Sources */,
 				C7C2AF251EF6CC83004F257A /* InspirationalFilmsViewController.swift in Sources */,
@@ -2402,6 +2428,7 @@
 				C76F04C61EF500370090F71B /* SliderMenuDrawerMenuViewController.swift in Sources */,
 				C7C2AF571EF6CD0B004F257A /* DragInView.swift in Sources */,
 				C7C2AF441EF6CCCE004F257A /* PopUpViewController.swift in Sources */,
+				C72AF49F1F07CD3C0023F014 /* Resnet50.mlmodel in Sources */,
 				C7C2AF781EF6CD7E004F257A /* MediaType.swift in Sources */,
 				C7C2AF711EF6CD70004F257A /* ChosenMediaDetailedViewController.swift in Sources */,
 				C7C2AF801EF6CD8A004F257A /* TopMenuTableViewCell.swift in Sources */,
@@ -2421,6 +2448,7 @@
 				C7C2AF6B1EF6CD64004F257A /* EnglishViewController.swift in Sources */,
 				C7C2AF411EF6CCC3004F257A /* ParallaxHeaderView.swift in Sources */,
 				C7C2AF751EF6CD79004F257A /* TableViewNavigationViewController.swift in Sources */,
+				C72AF49B1F07CCB30023F014 /* ImagePickerCoreMLViewController.swift in Sources */,
 				C703771E1EF551C0002E7D9B /* SearchBarViewNavigationController.swift in Sources */,
 				C7C2AF211EF6CC78004F257A /* ImageScrollView.swift in Sources */,
 				C7E774061F01560E00440E05 /* UINavigationController+Ext.swift in Sources */,
