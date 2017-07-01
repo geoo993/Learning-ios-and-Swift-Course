@@ -15,7 +15,8 @@
 /////In the Cartfile we define which dependencies we want from framework in our project.
 ////Alamofire from https://github.com/Alamofire/Alamofire
 ///github "Alamofire/Alamofire" ~> 4.4  (this tells carthage to look in Github for this dependency and under the user alimofire, to get repository called AlimoFire and then Git version 4.4)
-//// after adding carthage install line in Cartfile, you then do the following in terminal === /*  carthage bootstrap --platform iOS  */
+//// after adding carthage install line in Cartfile, you then do the following in terminal === /*     carthage bootstrap --platform iOS   or    carthage update --platform iOS        */
+/////Note: delete Carthage.resolved first.
 
 /*
  Version requirement
@@ -72,6 +73,12 @@ import Alamofire
 
 class CarthageDemoViewController: UIViewController {
 
+    @IBAction func homebutton(_ sender: Any) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
