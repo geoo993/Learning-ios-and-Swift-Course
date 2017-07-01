@@ -37,11 +37,26 @@
 		C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */; };
 		C72E27BA1E9ED9EB0064E01B /* LearningSwiftCourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27B91E9ED9EB0064E01B /* LearningSwiftCourseTests.swift */; };
 		C72E27C51E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */; };
+		C733BA601F07FE240010AAA7 /* CarthageDemoMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C733BA5F1F07FE240010AAA7 /* CarthageDemoMain.storyboard */; };
 		C7349DEC1EFC226B00B99AE6 /* UINavigationBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349DEB1EFC226B00B99AE6 /* UINavigationBar+Ext.swift */; };
 		C7349E0A1EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349E091EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift */; };
 		C7349E0C1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349E0B1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift */; };
 		C73977D21EEEFFBE005C96C8 /* pListRequestPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */; };
 		C73DF6D51EFC39FF00DAB515 /* UIResponder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */; };
+		C740573F1F07FFCD00411F5B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C74056C61F07FFB400411F5B /* Alamofire.framework */; };
+		C74057401F07FFCD00411F5B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C74056C61F07FFB400411F5B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C74057431F07FFCD00411F5B /* EasyAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C74056D91F07FFB500411F5B /* EasyAnimation.framework */; };
+		C74057441F07FFCD00411F5B /* EasyAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C74056D91F07FFB500411F5B /* EasyAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C74057471F07FFCD00411F5B /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C740572B1F07FFB600411F5B /* Cartography.framework */; };
+		C74057481F07FFCD00411F5B /* Cartography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C740572B1F07FFB600411F5B /* Cartography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C740574B1F07FFCD00411F5B /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C740573C1F07FFB600411F5B /* RxSwiftExt.framework */; };
+		C740574C1F07FFCD00411F5B /* RxSwiftExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C740573C1F07FFB600411F5B /* RxSwiftExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C740574F1F07FFCD00411F5B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C74056F51F07FFB500411F5B /* RxSwift.framework */; };
+		C74057501F07FFCD00411F5B /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C74056F51F07FFB500411F5B /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C74057531F07FFCD00411F5B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C74056FD1F07FFB500411F5B /* RxCocoa.framework */; };
+		C74057541F07FFCD00411F5B /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C74056FD1F07FFB500411F5B /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C74057601F0800DE00411F5B /* IBAnimatable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C740575F1F0800CA00411F5B /* IBAnimatable.framework */; };
+		C74057611F0800DE00411F5B /* IBAnimatable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C740575F1F0800CA00411F5B /* IBAnimatable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C75144C21F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */; };
 		C76786621EF90DE1005C159F /* BBCiPlayerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76786611EF90DE1005C159F /* BBCiPlayerMain.storyboard */; };
 		C76786671EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76786661EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift */; };
@@ -55,20 +70,11 @@
 		C76F04EE1EF505160090F71B /* SliderMenuDrawerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F04C91EF501D00090F71B /* SliderMenuDrawerBaseViewController.swift */; };
 		C76F04F01EF505E40090F71B /* SliderMenuDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F04EF1EF505E40090F71B /* SliderMenuDrawerViewController.swift */; };
 		C778EDED1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778EDEC1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift */; };
-		C77E832A1EA25F4F000AC715 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83271EA25F18000AC715 /* RxGesture.framework */; };
-		C77E832B1EA25F4F000AC715 /* RxGesture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83271EA25F18000AC715 /* RxGesture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C77E832E1EA25F4F000AC715 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82F81EA25F08000AC715 /* RxSwift.framework */; };
-		C77E832F1EA25F4F000AC715 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82F81EA25F08000AC715 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C77E83321EA25F4F000AC715 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83001EA25F08000AC715 /* RxCocoa.framework */; };
-		C77E83331EA25F4F000AC715 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83001EA25F08000AC715 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C77E83361EA25F4F000AC715 /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; };
-		C77E83371EA25F4F000AC715 /* RxSwiftExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7A1A2171F079AF2005CF910 /* PieChartWithSubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */; };
 		C7A1A2351F07B4F7005CF910 /* PieChartViewWithBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */; };
 		C7AE48901EA5327300C2096E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AE488F1EA5327300C2096E /* Main.storyboard */; };
 		C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48911EA5328B00C2096E /* MainViewController.swift */; };
-		C7BE65DB1EE29CE000A05286 /* IBAnimatable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BE65C51EE29CCD00A05286 /* IBAnimatable.framework */; };
-		C7BE65DC1EE29CE000A05286 /* IBAnimatable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7BE65C51EE29CCD00A05286 /* IBAnimatable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7BC88651F07F3CB0034B11C /* CarthageDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BC88641F07F3CB0034B11C /* CarthageDemoViewController.swift */; };
 		C7BE65E21EE2A22900A05286 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */; };
 		C7BE65E41EE2A23E00A05286 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BE65E31EE2A23E00A05286 /* MainCollectionViewCell.swift */; };
 		C7BF534A1F058D9200F01E72 /* RedSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF53491F058D9200F01E72 /* RedSlideView.swift */; };
@@ -241,22 +247,11 @@
 		C7D3C1061EF2BB550042E90A /* LearningSwiftCourseExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7D3C0F61EF2BB550042E90A /* LearningSwiftCourseExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7D3C1091EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D3C0F41EF2BB550042E90A /* LearningSwiftCourseExtensions.framework */; };
 		C7D3C10A1EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7D3C0F41EF2BB550042E90A /* LearningSwiftCourseExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C7D3C1111EF2BBA90042E90A /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EFC8701EEDB7F700AA3EFB /* Cartography.framework */; };
-		C7D3C1121EF2BBA90042E90A /* EasyAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F1FE051EEB5CCF002F3641 /* EasyAnimation.framework */; };
-		C7D3C1131EF2BBA90042E90A /* IBAnimatable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BE65C51EE29CCD00A05286 /* IBAnimatable.framework */; };
-		C7D3C1141EF2BBA90042E90A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83001EA25F08000AC715 /* RxCocoa.framework */; };
-		C7D3C1151EF2BBA90042E90A /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83271EA25F18000AC715 /* RxGesture.framework */; };
-		C7D3C1161EF2BBA90042E90A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82F81EA25F08000AC715 /* RxSwift.framework */; };
-		C7D3C1171EF2BBE50042E90A /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; };
 		C7D3C1181EF2BBE50042E90A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76E0CE71EE9ECB300A66E94 /* MapKit.framework */; };
 		C7E774041F01542600440E05 /* BBCiPlayerStretchyHeaderMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E774031F01542600440E05 /* BBCiPlayerStretchyHeaderMain.storyboard */; };
 		C7E774061F01560E00440E05 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E774051F01560E00440E05 /* UINavigationController+Ext.swift */; };
 		C7EE7BE01EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7BDF1EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift */; };
 		C7EE7BFE1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7BFD1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift */; };
-		C7EFC8921EEDB80200AA3EFB /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EFC8701EEDB7F700AA3EFB /* Cartography.framework */; };
-		C7EFC8931EEDB80200AA3EFB /* Cartography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7EFC8701EEDB7F700AA3EFB /* Cartography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C7F1FE1E1EEB5CD7002F3641 /* EasyAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F1FE051EEB5CCF002F3641 /* EasyAnimation.framework */; };
-		C7F1FE1F1EEB5CD7002F3641 /* EasyAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7F1FE051EEB5CCF002F3641 /* EasyAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7F33C4A1EF92E9C0096E372 /* BBCiPlayerVideosItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F33C491EF92E9C0096E372 /* BBCiPlayerVideosItems.swift */; };
 		C7FC254B1F0501DC00959765 /* UIPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FC254A1F0501DC00959765 /* UIPickerViewController.swift */; };
 		C7FC254D1F05020200959765 /* UIPickerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FC254C1F05020200959765 /* UIPickerMain.storyboard */; };
@@ -277,226 +272,331 @@
 			remoteGlobalIDString = C72E27A01E9ED9EB0064E01B;
 			remoteInfo = LearningSwiftCourse;
 		};
-		C77E82DB1EA25EF5000AC715 /* PBXContainerItemProxy */ = {
+		C74056C51F07FFB400411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82D61EA25EF5000AC715 /* RxSwiftExt.xcodeproj */;
+			containerPortal = C74056BA1F07FFB400411F5B /* Alamofire.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 188C6D911C47B2B20092101A;
-			remoteInfo = RxSwiftExt;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
 		};
-		C77E82DD1EA25EF5000AC715 /* PBXContainerItemProxy */ = {
+		C74056C71F07FFB400411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82D61EA25EF5000AC715 /* RxSwiftExt.xcodeproj */;
+			containerPortal = C74056BA1F07FFB400411F5B /* Alamofire.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 3D638DE71DC2B2D40089A590;
-			remoteInfo = RxSwiftExtTests;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
 		};
-		C77E82F71EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74056C91F07FFB400411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056BA1F07FFB400411F5B /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		C74056CB1F07FFB400411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74056BA1F07FFB400411F5B /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire macOS Tests";
+		};
+		C74056CD1F07FFB400411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74056BA1F07FFB400411F5B /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		C74056CF1F07FFB400411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74056BA1F07FFB400411F5B /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		C74056D11F07FFB400411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74056BA1F07FFB400411F5B /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		C74056D81F07FFB500411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74056D31F07FFB400411F5B /* EasyAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 403482541B8E01ED006C3C7C;
+			remoteInfo = EasyAnimation;
+		};
+		C74056DA1F07FFB500411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74056D31F07FFB400411F5B /* EasyAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 72A03EF91C29784A002DA467;
+			remoteInfo = "EasyAnimation tvOS";
+		};
+		C74056F41F07FFB500411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C8A56AD71AD7424700B4673B;
 			remoteInfo = "RxSwift-iOS";
 		};
-		C77E82F91EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74056F61F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C88BB8711B07E5ED0064D411;
 			remoteInfo = "RxSwift-macOS";
 		};
-		C77E82FB1EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74056F81F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2EA280C1BB9B5A200880ED3;
 			remoteInfo = "RxSwift-tvOS";
 		};
-		C77E82FD1EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74056FA1F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C8F0C0021BBBFB8B001B112F;
 			remoteInfo = "RxSwift-watchOS";
 		};
-		C77E82FF1EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74056FC1F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C809396D1B8A71760088E94D;
 			remoteInfo = "RxCocoa-iOS";
 		};
-		C77E83011EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74056FE1F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C80939E71B8A71840088E94D;
 			remoteInfo = "RxCocoa-macOS";
 		};
-		C77E83031EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74057001F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2138C751BB9BE9800339B5C;
 			remoteInfo = "RxCocoa-tvOS";
 		};
-		C77E83051EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74057021F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C8F0C04B1BBBFBB9001B112F;
 			remoteInfo = "RxCocoa-watchOS";
 		};
-		C77E83071EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74057041F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C8093BC71B8A71F00088E94D;
 			remoteInfo = "RxBlocking-iOS";
 		};
-		C77E83091EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74057061F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C8093C451B8A71FC0088E94D;
 			remoteInfo = "RxBlocking-macOS";
 		};
-		C77E830B1EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74057081F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2EBEB811BB9B99D003A27DC;
 			remoteInfo = "RxBlocking-tvOS";
 		};
-		C77E830D1EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C740570A1F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C8F0C0581BBBFBCE001B112F;
 			remoteInfo = "RxBlocking-watchOS";
 		};
-		C77E830F1EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C740570C1F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C88FA50C1C25C44800CCFEA4;
 			remoteInfo = "RxTest-iOS";
 		};
-		C77E83111EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C740570E1F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C88FA51D1C25C4B500CCFEA4;
 			remoteInfo = "RxTest-macOS";
 		};
-		C77E83131EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74057101F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C88FA52E1C25C4C000CCFEA4;
 			remoteInfo = "RxTest-tvOS";
 		};
-		C77E83151EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74057121F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C88FA53F1C25C4CC00CCFEA4;
 			remoteInfo = "RxTest-watchOS";
 		};
-		C77E83171EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74057141F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C83508C31C386F6F0027C24C;
 			remoteInfo = "AllTests-iOS";
 		};
-		C77E83191EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74057161F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C83509841C38740E0027C24C;
 			remoteInfo = "AllTests-tvOS";
 		};
-		C77E831B1EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C74057181F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C83509941C38742C0027C24C;
 			remoteInfo = "AllTests-macOS";
 		};
-		C77E831D1EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C740571A1F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C85BA04B1C3878740075D68E;
 			remoteInfo = Microoptimizations;
 		};
-		C77E831F1EA25F08000AC715 /* PBXContainerItemProxy */ = {
+		C740571C1F07FFB500411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C8E8BA551E2C181A00A4AC2C;
 			remoteInfo = Benchmarks;
 		};
-		C77E83261EA25F18000AC715 /* PBXContainerItemProxy */ = {
+		C740572A1F07FFB600411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */;
+			containerPortal = C74057211F07FFB500411F5B /* Cartography.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = F4CC4C1D1DEBA895009ED835;
-			remoteInfo = "RxGesture-iOS";
+			remoteGlobalIDString = 54C96A11195063CD000CDD27;
+			remoteInfo = "Cartography-iOS";
 		};
-		C77E83281EA25F18000AC715 /* PBXContainerItemProxy */ = {
+		C740572C1F07FFB600411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */;
+			containerPortal = C74057211F07FFB500411F5B /* Cartography.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 87F8F7221E511E2E00C3B1BE;
-			remoteInfo = "RxGesture-OSX";
+			remoteGlobalIDString = 54C96A1C195063CD000CDD27;
+			remoteInfo = "Cartography-iOS-Tests";
 		};
-		C77E832C1EA25F4F000AC715 /* PBXContainerItemProxy */ = {
+		C740572E1F07FFB600411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */;
+			containerPortal = C74057211F07FFB500411F5B /* Cartography.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 54F6A838195C20C100313D24;
+			remoteInfo = "Cartography-Mac";
+		};
+		C74057301F07FFB600411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74057211F07FFB500411F5B /* Cartography.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 54F6A842195C20C200313D24;
+			remoteInfo = "Cartography-Mac-Tests";
+		};
+		C74057321F07FFB600411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74057211F07FFB500411F5B /* Cartography.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 632F090A1BF1E7AA002431A3;
+			remoteInfo = "Cartography-tvOS";
+		};
+		C74057341F07FFB600411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74057211F07FFB500411F5B /* Cartography.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 632F09221BF1E7FC002431A3;
+			remoteInfo = "Cartography-tvOS-tests";
+		};
+		C740573B1F07FFB600411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74057361F07FFB600411F5B /* RxSwiftExt.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 188C6D911C47B2B20092101A;
+			remoteInfo = RxSwiftExt;
+		};
+		C740573D1F07FFB600411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74057361F07FFB600411F5B /* RxSwiftExt.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D638DE71DC2B2D40089A590;
+			remoteInfo = RxSwiftExtTests;
+		};
+		C74057411F07FFCD00411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74056BA1F07FFB400411F5B /* Alamofire.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = F4CC4C1C1DEBA895009ED835;
-			remoteInfo = "RxGesture-iOS";
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
 		};
-		C77E83301EA25F4F000AC715 /* PBXContainerItemProxy */ = {
+		C74057451F07FFCD00411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74056D31F07FFB400411F5B /* EasyAnimation.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = C8A56AD61AD7424700B4673B;
-			remoteInfo = "RxSwift-iOS";
+			remoteGlobalIDString = 403482531B8E01ED006C3C7C;
+			remoteInfo = EasyAnimation;
 		};
-		C77E83341EA25F4F000AC715 /* PBXContainerItemProxy */ = {
+		C74057491F07FFCD00411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+			containerPortal = C74057211F07FFB500411F5B /* Cartography.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = C80938F51B8A71760088E94D;
-			remoteInfo = "RxCocoa-iOS";
+			remoteGlobalIDString = 54C96A10195063CD000CDD27;
+			remoteInfo = "Cartography-iOS";
 		};
-		C77E83381EA25F4F000AC715 /* PBXContainerItemProxy */ = {
+		C740574D1F07FFCD00411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C77E82D61EA25EF5000AC715 /* RxSwiftExt.xcodeproj */;
+			containerPortal = C74057361F07FFB600411F5B /* RxSwiftExt.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 188C6D901C47B2B20092101A;
 			remoteInfo = RxSwiftExt;
 		};
-		C7BE65C21EE29CCD00A05286 /* PBXContainerItemProxy */ = {
+		C74057511F07FFCD00411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C7BE65BD1EE29CCC00A05286 /* IBAnimatable.xcodeproj */;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C8A56AD61AD7424700B4673B;
+			remoteInfo = "RxSwift-iOS";
+		};
+		C74057551F07FFCD00411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C80938F51B8A71760088E94D;
+			remoteInfo = "RxCocoa-iOS";
+		};
+		C740575C1F0800CA00411F5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C74057571F0800CA00411F5B /* IBAnimatable.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = AE6C66FF1BFBF93500134A35;
 			remoteInfo = IBAnimatableApp;
 		};
-		C7BE65C41EE29CCD00A05286 /* PBXContainerItemProxy */ = {
+		C740575E1F0800CA00411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C7BE65BD1EE29CCC00A05286 /* IBAnimatable.xcodeproj */;
+			containerPortal = C74057571F0800CA00411F5B /* IBAnimatable.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = AE6B01551C2A082300950BB2;
 			remoteInfo = IBAnimatable;
 		};
-		C7BE65DD1EE29CE000A05286 /* PBXContainerItemProxy */ = {
+		C74057621F0800DE00411F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C7BE65BD1EE29CCC00A05286 /* IBAnimatable.xcodeproj */;
+			containerPortal = C74057571F0800CA00411F5B /* IBAnimatable.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = AE6B01541C2A082300950BB2;
 			remoteInfo = IBAnimatable;
@@ -522,76 +622,6 @@
 			remoteGlobalIDString = C7D3C0F31EF2BB550042E90A;
 			remoteInfo = LearningSwiftCourseExtensions;
 		};
-		C7EFC86F1EEDB7F700AA3EFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7EFC8661EEDB7F700AA3EFB /* Cartography.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 54C96A11195063CD000CDD27;
-			remoteInfo = "Cartography-iOS";
-		};
-		C7EFC8711EEDB7F700AA3EFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7EFC8661EEDB7F700AA3EFB /* Cartography.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 54C96A1C195063CD000CDD27;
-			remoteInfo = "Cartography-iOS-Tests";
-		};
-		C7EFC8731EEDB7F700AA3EFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7EFC8661EEDB7F700AA3EFB /* Cartography.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 54F6A838195C20C100313D24;
-			remoteInfo = "Cartography-Mac";
-		};
-		C7EFC8751EEDB7F700AA3EFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7EFC8661EEDB7F700AA3EFB /* Cartography.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 54F6A842195C20C200313D24;
-			remoteInfo = "Cartography-Mac-Tests";
-		};
-		C7EFC8771EEDB7F700AA3EFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7EFC8661EEDB7F700AA3EFB /* Cartography.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 632F090A1BF1E7AA002431A3;
-			remoteInfo = "Cartography-tvOS";
-		};
-		C7EFC8791EEDB7F700AA3EFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7EFC8661EEDB7F700AA3EFB /* Cartography.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 632F09221BF1E7FC002431A3;
-			remoteInfo = "Cartography-tvOS-tests";
-		};
-		C7EFC8941EEDB80200AA3EFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7EFC8661EEDB7F700AA3EFB /* Cartography.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 54C96A10195063CD000CDD27;
-			remoteInfo = "Cartography-iOS";
-		};
-		C7F1FE041EEB5CCF002F3641 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 403482541B8E01ED006C3C7C;
-			remoteInfo = EasyAnimation;
-		};
-		C7F1FE061EEB5CCF002F3641 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 72A03EF91C29784A002DA467;
-			remoteInfo = "EasyAnimation tvOS";
-		};
-		C7F1FE201EEB5CD7002F3641 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 403482531B8E01ED006C3C7C;
-			remoteInfo = EasyAnimation;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -601,14 +631,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C77E83371EA25F4F000AC715 /* RxSwiftExt.framework in Embed Frameworks */,
 				C7D3C10A1EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Embed Frameworks */,
-				C7EFC8931EEDB80200AA3EFB /* Cartography.framework in Embed Frameworks */,
-				C7F1FE1F1EEB5CD7002F3641 /* EasyAnimation.framework in Embed Frameworks */,
-				C77E83331EA25F4F000AC715 /* RxCocoa.framework in Embed Frameworks */,
-				C77E832F1EA25F4F000AC715 /* RxSwift.framework in Embed Frameworks */,
-				C7BE65DC1EE29CE000A05286 /* IBAnimatable.framework in Embed Frameworks */,
-				C77E832B1EA25F4F000AC715 /* RxGesture.framework in Embed Frameworks */,
+				C74057481F07FFCD00411F5B /* Cartography.framework in Embed Frameworks */,
+				C74057541F07FFCD00411F5B /* RxCocoa.framework in Embed Frameworks */,
+				C74057611F0800DE00411F5B /* IBAnimatable.framework in Embed Frameworks */,
+				C74057501F07FFCD00411F5B /* RxSwift.framework in Embed Frameworks */,
+				C74057441F07FFCD00411F5B /* EasyAnimation.framework in Embed Frameworks */,
+				C74057401F07FFCD00411F5B /* Alamofire.framework in Embed Frameworks */,
+				C740574C1F07FFCD00411F5B /* RxSwiftExt.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,11 +683,18 @@
 		C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSwiftCourseUITests.swift; sourceTree = "<group>"; };
 		C72E27C61E9ED9EB0064E01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72E27D21E9EDA0C0064E01B /* LearningSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningSwift.playground; sourceTree = "<group>"; };
+		C733BA5F1F07FE240010AAA7 /* CarthageDemoMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarthageDemoMain.storyboard; sourceTree = "<group>"; };
 		C7349DEB1EFC226B00B99AE6 /* UINavigationBar+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Ext.swift"; sourceTree = "<group>"; };
 		C7349E091EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentTableViewController.swift; sourceTree = "<group>"; };
 		C7349E0B1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentTableViewCell.swift; sourceTree = "<group>"; };
 		C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pListRequestPermissions.swift; sourceTree = "<group>"; };
 		C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Ext.swift"; sourceTree = "<group>"; };
+		C74056BA1F07FFB400411F5B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Carthage/Checkouts/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		C74056D31F07FFB400411F5B /* EasyAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EasyAnimation.xcodeproj; path = Carthage/Checkouts/EasyAnimation/EasyAnimation.xcodeproj; sourceTree = "<group>"; };
+		C74056DC1F07FFB500411F5B /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
+		C74057211F07FFB500411F5B /* Cartography.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cartography.xcodeproj; path = Carthage/Checkouts/Cartography/Cartography.xcodeproj; sourceTree = "<group>"; };
+		C74057361F07FFB600411F5B /* RxSwiftExt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxSwiftExt.xcodeproj; path = Carthage/Checkouts/RxSwiftExt/RxSwiftExt.xcodeproj; sourceTree = "<group>"; };
+		C74057571F0800CA00411F5B /* IBAnimatable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IBAnimatable.xcodeproj; path = Carthage/Checkouts/IBAnimatable/IBAnimatable.xcodeproj; sourceTree = "<group>"; };
 		C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerStretchyTableView.swift; sourceTree = "<group>"; };
 		C76786611EF90DE1005C159F /* BBCiPlayerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BBCiPlayerMain.storyboard; sourceTree = "<group>"; };
 		C76786661EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentDetailedViewController.swift; sourceTree = "<group>"; };
@@ -671,9 +708,6 @@
 		C76F04C91EF501D00090F71B /* SliderMenuDrawerBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerBaseViewController.swift; sourceTree = "<group>"; };
 		C76F04EF1EF505E40090F71B /* SliderMenuDrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerViewController.swift; sourceTree = "<group>"; };
 		C778EDEC1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerSectionsHeaderView.swift; sourceTree = "<group>"; };
-		C77E82D61EA25EF5000AC715 /* RxSwiftExt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxSwiftExt.xcodeproj; path = ../Carthage/Checkouts/RxSwiftExt/RxSwiftExt.xcodeproj; sourceTree = "<group>"; };
-		C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = ../Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
-		C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxGesture.xcodeproj; path = ../Carthage/Checkouts/RxGesture/RxGesture/RxGesture.xcodeproj; sourceTree = "<group>"; };
 		C78F4AAC1EF34FDE0001CF94 /* BasicCoreMLwithImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCoreMLwithImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C78F4AAD1EF34FDE0001CF94 /* BasicCoreMLwithImagesMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasicCoreMLwithImagesMain.storyboard; sourceTree = "<group>"; };
 		C78F4AAE1EF34FDE0001CF94 /* BasicCoreMLwithImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCoreMLwithImagesViewController.swift; sourceTree = "<group>"; };
@@ -686,7 +720,7 @@
 		C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewWithBezierPath.swift; sourceTree = "<group>"; };
 		C7AE488F1EA5327300C2096E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C7AE48911EA5328B00C2096E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		C7BE65BD1EE29CCC00A05286 /* IBAnimatable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IBAnimatable.xcodeproj; path = ../Carthage/Checkouts/IBAnimatable/IBAnimatable.xcodeproj; sourceTree = "<group>"; };
+		C7BC88641F07F3CB0034B11C /* CarthageDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarthageDemoViewController.swift; sourceTree = "<group>"; };
 		C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		C7BE65E31EE2A23E00A05286 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7BF53491F058D9200F01E72 /* RedSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedSlideView.swift; sourceTree = "<group>"; };
@@ -859,8 +893,6 @@
 		C7E774051F01560E00440E05 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 		C7EE7BDF1EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerNavigationController.swift; sourceTree = "<group>"; };
 		C7EE7BFD1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerCustomViewController.swift; sourceTree = "<group>"; };
-		C7EFC8661EEDB7F700AA3EFB /* Cartography.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cartography.xcodeproj; path = ../Carthage/Checkouts/Cartography/Cartography.xcodeproj; sourceTree = "<group>"; };
-		C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EasyAnimation.xcodeproj; path = ../Carthage/Checkouts/EasyAnimation/EasyAnimation.xcodeproj; sourceTree = "<group>"; };
 		C7F33C491EF92E9C0096E372 /* BBCiPlayerVideosItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerVideosItems.swift; sourceTree = "<group>"; };
 		C7FC254A1F0501DC00959765 /* UIPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewController.swift; sourceTree = "<group>"; };
 		C7FC254C1F05020200959765 /* UIPickerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIPickerMain.storyboard; sourceTree = "<group>"; };
@@ -871,15 +903,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7F1FE1E1EEB5CD7002F3641 /* EasyAnimation.framework in Frameworks */,
 				C76E0CE81EE9ECB300A66E94 /* MapKit.framework in Frameworks */,
+				C74057431F07FFCD00411F5B /* EasyAnimation.framework in Frameworks */,
+				C74057601F0800DE00411F5B /* IBAnimatable.framework in Frameworks */,
+				C740574F1F07FFCD00411F5B /* RxSwift.framework in Frameworks */,
+				C74057471F07FFCD00411F5B /* Cartography.framework in Frameworks */,
+				C74057531F07FFCD00411F5B /* RxCocoa.framework in Frameworks */,
+				C740573F1F07FFCD00411F5B /* Alamofire.framework in Frameworks */,
+				C740574B1F07FFCD00411F5B /* RxSwiftExt.framework in Frameworks */,
 				C7D3C1091EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Frameworks */,
-				C77E83361EA25F4F000AC715 /* RxSwiftExt.framework in Frameworks */,
-				C77E83321EA25F4F000AC715 /* RxCocoa.framework in Frameworks */,
-				C77E832E1EA25F4F000AC715 /* RxSwift.framework in Frameworks */,
-				C7EFC8921EEDB80200AA3EFB /* Cartography.framework in Frameworks */,
-				C7BE65DB1EE29CE000A05286 /* IBAnimatable.framework in Frameworks */,
-				C77E832A1EA25F4F000AC715 /* RxGesture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -901,14 +933,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7D3C1171EF2BBE50042E90A /* RxSwiftExt.framework in Frameworks */,
 				C7D3C1181EF2BBE50042E90A /* MapKit.framework in Frameworks */,
-				C7D3C1111EF2BBA90042E90A /* Cartography.framework in Frameworks */,
-				C7D3C1121EF2BBA90042E90A /* EasyAnimation.framework in Frameworks */,
-				C7D3C1131EF2BBA90042E90A /* IBAnimatable.framework in Frameworks */,
-				C7D3C1141EF2BBA90042E90A /* RxCocoa.framework in Frameworks */,
-				C7D3C1151EF2BBA90042E90A /* RxGesture.framework in Frameworks */,
-				C7D3C1161EF2BBA90042E90A /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1011,6 +1036,7 @@
 				C7CEB7851F06FD5800CC054B /* PieChartViewExample */,
 				C7C2AE381EF6CA80004F257A /* ColorsExample */,
 				C7C2AE951EF6CB63004F257A /* ConstraintsPack */,
+				C7BC88631F07F36E0034B11C /* CarthageExample */,
 				C7C2AECB1EF6CB63004F257A /* DraggableVerticalMenusExample */,
 				C7C2AE571EF6CB62004F257A /* Extensions */,
 				C7C2AE541EF6CB62004F257A /* ImageCropperExample */,
@@ -1071,6 +1097,88 @@
 				C72E27C61E9ED9EB0064E01B /* Info.plist */,
 			);
 			path = LearningSwiftCourseUITests;
+			sourceTree = "<group>";
+		};
+		C74056BB1F07FFB400411F5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C74056C61F07FFB400411F5B /* Alamofire.framework */,
+				C74056C81F07FFB400411F5B /* Alamofire iOS Tests.xctest */,
+				C74056CA1F07FFB400411F5B /* Alamofire.framework */,
+				C74056CC1F07FFB400411F5B /* Alamofire macOS Tests.xctest */,
+				C74056CE1F07FFB400411F5B /* Alamofire.framework */,
+				C74056D01F07FFB400411F5B /* Alamofire tvOS Tests.xctest */,
+				C74056D21F07FFB400411F5B /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C74056D41F07FFB400411F5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C74056D91F07FFB500411F5B /* EasyAnimation.framework */,
+				C74056DB1F07FFB500411F5B /* EasyAnimation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C74056DD1F07FFB500411F5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C74056F51F07FFB500411F5B /* RxSwift.framework */,
+				C74056F71F07FFB500411F5B /* RxSwift.framework */,
+				C74056F91F07FFB500411F5B /* RxSwift.framework */,
+				C74056FB1F07FFB500411F5B /* RxSwift.framework */,
+				C74056FD1F07FFB500411F5B /* RxCocoa.framework */,
+				C74056FF1F07FFB500411F5B /* RxCocoa.framework */,
+				C74057011F07FFB500411F5B /* RxCocoa.framework */,
+				C74057031F07FFB500411F5B /* RxCocoa.framework */,
+				C74057051F07FFB500411F5B /* RxBlocking.framework */,
+				C74057071F07FFB500411F5B /* RxBlocking.framework */,
+				C74057091F07FFB500411F5B /* RxBlocking.framework */,
+				C740570B1F07FFB500411F5B /* RxBlocking.framework */,
+				C740570D1F07FFB500411F5B /* RxTest.framework */,
+				C740570F1F07FFB500411F5B /* RxTest.framework */,
+				C74057111F07FFB500411F5B /* RxTest.framework */,
+				C74057131F07FFB500411F5B /* RxTest.framework */,
+				C74057151F07FFB500411F5B /* AllTests-iOS.xctest */,
+				C74057171F07FFB500411F5B /* AllTests-tvOS.xctest */,
+				C74057191F07FFB500411F5B /* AllTests-macOS.xctest */,
+				C740571B1F07FFB500411F5B /* PerformanceTests.app */,
+				C740571D1F07FFB500411F5B /* Benchmarks.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C74057221F07FFB500411F5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C740572B1F07FFB600411F5B /* Cartography.framework */,
+				C740572D1F07FFB600411F5B /* Cartography-iOS-Tests.xctest */,
+				C740572F1F07FFB600411F5B /* Cartography.framework */,
+				C74057311F07FFB600411F5B /* Cartography-Mac-Tests.xctest */,
+				C74057331F07FFB600411F5B /* Cartography.framework */,
+				C74057351F07FFB600411F5B /* Cartography-tvOS-tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C74057371F07FFB600411F5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C740573C1F07FFB600411F5B /* RxSwiftExt.framework */,
+				C740573E1F07FFB600411F5B /* RxSwiftExtTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C74057581F0800CA00411F5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C740575D1F0800CA00411F5B /* IBAnimatableApp.app */,
+				C740575F1F0800CA00411F5B /* IBAnimatable.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		C7560E101EFD060900243172 /* Cells */ = {
@@ -1156,60 +1264,14 @@
 		C77E82D51EA25E3B000AC715 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				C7EFC8661EEDB7F700AA3EFB /* Cartography.xcodeproj */,
-				C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */,
-				C7BE65BD1EE29CCC00A05286 /* IBAnimatable.xcodeproj */,
-				C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */,
-				C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */,
-				C77E82D61EA25EF5000AC715 /* RxSwiftExt.xcodeproj */,
+				C74057571F0800CA00411F5B /* IBAnimatable.xcodeproj */,
+				C74056BA1F07FFB400411F5B /* Alamofire.xcodeproj */,
+				C74056D31F07FFB400411F5B /* EasyAnimation.xcodeproj */,
+				C74057211F07FFB500411F5B /* Cartography.xcodeproj */,
+				C74057361F07FFB600411F5B /* RxSwiftExt.xcodeproj */,
+				C74056DC1F07FFB500411F5B /* Rx.xcodeproj */,
 			);
 			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		C77E82D71EA25EF5000AC715 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */,
-				C77E82DE1EA25EF5000AC715 /* RxSwiftExtTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C77E82E01EA25F07000AC715 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C77E82F81EA25F08000AC715 /* RxSwift.framework */,
-				C77E82FA1EA25F08000AC715 /* RxSwift.framework */,
-				C77E82FC1EA25F08000AC715 /* RxSwift.framework */,
-				C77E82FE1EA25F08000AC715 /* RxSwift.framework */,
-				C77E83001EA25F08000AC715 /* RxCocoa.framework */,
-				C77E83021EA25F08000AC715 /* RxCocoa.framework */,
-				C77E83041EA25F08000AC715 /* RxCocoa.framework */,
-				C77E83061EA25F08000AC715 /* RxCocoa.framework */,
-				C77E83081EA25F08000AC715 /* RxBlocking.framework */,
-				C77E830A1EA25F08000AC715 /* RxBlocking.framework */,
-				C77E830C1EA25F08000AC715 /* RxBlocking.framework */,
-				C77E830E1EA25F08000AC715 /* RxBlocking.framework */,
-				C77E83101EA25F08000AC715 /* RxTest.framework */,
-				C77E83121EA25F08000AC715 /* RxTest.framework */,
-				C77E83141EA25F08000AC715 /* RxTest.framework */,
-				C77E83161EA25F08000AC715 /* RxTest.framework */,
-				C77E83181EA25F08000AC715 /* AllTests-iOS.xctest */,
-				C77E831A1EA25F08000AC715 /* AllTests-tvOS.xctest */,
-				C77E831C1EA25F08000AC715 /* AllTests-macOS.xctest */,
-				C77E831E1EA25F08000AC715 /* PerformanceTests.app */,
-				C77E83201EA25F08000AC715 /* Benchmarks.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C77E83221EA25F18000AC715 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C77E83271EA25F18000AC715 /* RxGesture.framework */,
-				C77E83291EA25F18000AC715 /* RxGesture.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		C78F4AAB1EF34FDE0001CF94 /* BasicCoreMLwithImagesExample */ = {
@@ -1242,13 +1304,13 @@
 			path = ResNet50;
 			sourceTree = "<group>";
 		};
-		C7BE65BE1EE29CCC00A05286 /* Products */ = {
+		C7BC88631F07F36E0034B11C /* CarthageExample */ = {
 			isa = PBXGroup;
 			children = (
-				C7BE65C31EE29CCD00A05286 /* IBAnimatableApp.app */,
-				C7BE65C51EE29CCD00A05286 /* IBAnimatable.framework */,
+				C7BC88641F07F3CB0034B11C /* CarthageDemoViewController.swift */,
+				C733BA5F1F07FE240010AAA7 /* CarthageDemoMain.storyboard */,
 			);
-			name = Products;
+			path = CarthageExample;
 			sourceTree = "<group>";
 		};
 		C7C2AE381EF6CA80004F257A /* ColorsExample */ = {
@@ -1736,28 +1798,6 @@
 			path = BBCiPlayerStretchyHeaderExample;
 			sourceTree = "<group>";
 		};
-		C7EFC8671EEDB7F700AA3EFB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C7EFC8701EEDB7F700AA3EFB /* Cartography.framework */,
-				C7EFC8721EEDB7F700AA3EFB /* Cartography-iOS-Tests.xctest */,
-				C7EFC8741EEDB7F700AA3EFB /* Cartography.framework */,
-				C7EFC8761EEDB7F700AA3EFB /* Cartography-Mac-Tests.xctest */,
-				C7EFC8781EEDB7F700AA3EFB /* Cartography.framework */,
-				C7EFC87A1EEDB7F700AA3EFB /* Cartography-tvOS-tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C7F1FE001EEB5CCF002F3641 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C7F1FE051EEB5CCF002F3641 /* EasyAnimation.framework */,
-				C7F1FE071EEB5CCF002F3641 /* EasyAnimation.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		C7F33C2C1EF92E590096E372 /* VideosModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1810,14 +1850,14 @@
 			buildRules = (
 			);
 			dependencies = (
-				C77E832D1EA25F4F000AC715 /* PBXTargetDependency */,
-				C77E83311EA25F4F000AC715 /* PBXTargetDependency */,
-				C77E83351EA25F4F000AC715 /* PBXTargetDependency */,
-				C77E83391EA25F4F000AC715 /* PBXTargetDependency */,
-				C7BE65DE1EE29CE000A05286 /* PBXTargetDependency */,
-				C7F1FE211EEB5CD7002F3641 /* PBXTargetDependency */,
-				C7EFC8951EEDB80200AA3EFB /* PBXTargetDependency */,
 				C7D3C1081EF2BB550042E90A /* PBXTargetDependency */,
+				C74057421F07FFCD00411F5B /* PBXTargetDependency */,
+				C74057461F07FFCD00411F5B /* PBXTargetDependency */,
+				C740574A1F07FFCD00411F5B /* PBXTargetDependency */,
+				C740574E1F07FFCD00411F5B /* PBXTargetDependency */,
+				C74057521F07FFCD00411F5B /* PBXTargetDependency */,
+				C74057561F07FFCD00411F5B /* PBXTargetDependency */,
+				C74057631F0800DE00411F5B /* PBXTargetDependency */,
 			);
 			name = LearningSwiftCourse;
 			productName = LearningSwiftCourse;
@@ -1963,28 +2003,28 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = C7EFC8671EEDB7F700AA3EFB /* Products */;
-					ProjectRef = C7EFC8661EEDB7F700AA3EFB /* Cartography.xcodeproj */;
+					ProductGroup = C74056BB1F07FFB400411F5B /* Products */;
+					ProjectRef = C74056BA1F07FFB400411F5B /* Alamofire.xcodeproj */;
 				},
 				{
-					ProductGroup = C7F1FE001EEB5CCF002F3641 /* Products */;
-					ProjectRef = C7F1FDFF1EEB5CCF002F3641 /* EasyAnimation.xcodeproj */;
+					ProductGroup = C74057221F07FFB500411F5B /* Products */;
+					ProjectRef = C74057211F07FFB500411F5B /* Cartography.xcodeproj */;
 				},
 				{
-					ProductGroup = C7BE65BE1EE29CCC00A05286 /* Products */;
-					ProjectRef = C7BE65BD1EE29CCC00A05286 /* IBAnimatable.xcodeproj */;
+					ProductGroup = C74056D41F07FFB400411F5B /* Products */;
+					ProjectRef = C74056D31F07FFB400411F5B /* EasyAnimation.xcodeproj */;
 				},
 				{
-					ProductGroup = C77E82E01EA25F07000AC715 /* Products */;
-					ProjectRef = C77E82DF1EA25F07000AC715 /* Rx.xcodeproj */;
+					ProductGroup = C74057581F0800CA00411F5B /* Products */;
+					ProjectRef = C74057571F0800CA00411F5B /* IBAnimatable.xcodeproj */;
 				},
 				{
-					ProductGroup = C77E83221EA25F18000AC715 /* Products */;
-					ProjectRef = C77E83211EA25F18000AC715 /* RxGesture.xcodeproj */;
+					ProductGroup = C74056DD1F07FFB500411F5B /* Products */;
+					ProjectRef = C74056DC1F07FFB500411F5B /* Rx.xcodeproj */;
 				},
 				{
-					ProductGroup = C77E82D71EA25EF5000AC715 /* Products */;
-					ProjectRef = C77E82D61EA25EF5000AC715 /* RxSwiftExt.xcodeproj */;
+					ProductGroup = C74057371F07FFB600411F5B /* Products */;
+					ProjectRef = C74057361F07FFB600411F5B /* RxSwiftExt.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1999,250 +2039,285 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */ = {
+		C74056C61F07FFB400411F5B /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RxSwiftExt.framework;
-			remoteRef = C77E82DB1EA25EF5000AC715 /* PBXContainerItemProxy */;
+			path = Alamofire.framework;
+			remoteRef = C74056C51F07FFB400411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E82DE1EA25EF5000AC715 /* RxSwiftExtTests.xctest */ = {
+		C74056C81F07FFB400411F5B /* Alamofire iOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = RxSwiftExtTests.xctest;
-			remoteRef = C77E82DD1EA25EF5000AC715 /* PBXContainerItemProxy */;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = C74056C71F07FFB400411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E82F81EA25F08000AC715 /* RxSwift.framework */ = {
+		C74056CA1F07FFB400411F5B /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = C74056C91F07FFB400411F5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C74056CC1F07FFB400411F5B /* Alamofire macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire macOS Tests.xctest";
+			remoteRef = C74056CB1F07FFB400411F5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C74056CE1F07FFB400411F5B /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = C74056CD1F07FFB400411F5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C74056D01F07FFB400411F5B /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = C74056CF1F07FFB400411F5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C74056D21F07FFB400411F5B /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = C74056D11F07FFB400411F5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C74056D91F07FFB500411F5B /* EasyAnimation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EasyAnimation.framework;
+			remoteRef = C74056D81F07FFB500411F5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C74056DB1F07FFB500411F5B /* EasyAnimation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EasyAnimation.framework;
+			remoteRef = C74056DA1F07FFB500411F5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C74056F51F07FFB500411F5B /* RxSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxSwift.framework;
-			remoteRef = C77E82F71EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74056F41F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E82FA1EA25F08000AC715 /* RxSwift.framework */ = {
+		C74056F71F07FFB500411F5B /* RxSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxSwift.framework;
-			remoteRef = C77E82F91EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74056F61F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E82FC1EA25F08000AC715 /* RxSwift.framework */ = {
+		C74056F91F07FFB500411F5B /* RxSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxSwift.framework;
-			remoteRef = C77E82FB1EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74056F81F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E82FE1EA25F08000AC715 /* RxSwift.framework */ = {
+		C74056FB1F07FFB500411F5B /* RxSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxSwift.framework;
-			remoteRef = C77E82FD1EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74056FA1F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E83001EA25F08000AC715 /* RxCocoa.framework */ = {
+		C74056FD1F07FFB500411F5B /* RxCocoa.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxCocoa.framework;
-			remoteRef = C77E82FF1EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74056FC1F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E83021EA25F08000AC715 /* RxCocoa.framework */ = {
+		C74056FF1F07FFB500411F5B /* RxCocoa.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxCocoa.framework;
-			remoteRef = C77E83011EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74056FE1F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E83041EA25F08000AC715 /* RxCocoa.framework */ = {
+		C74057011F07FFB500411F5B /* RxCocoa.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxCocoa.framework;
-			remoteRef = C77E83031EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74057001F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E83061EA25F08000AC715 /* RxCocoa.framework */ = {
+		C74057031F07FFB500411F5B /* RxCocoa.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxCocoa.framework;
-			remoteRef = C77E83051EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74057021F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E83081EA25F08000AC715 /* RxBlocking.framework */ = {
+		C74057051F07FFB500411F5B /* RxBlocking.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxBlocking.framework;
-			remoteRef = C77E83071EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74057041F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E830A1EA25F08000AC715 /* RxBlocking.framework */ = {
+		C74057071F07FFB500411F5B /* RxBlocking.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxBlocking.framework;
-			remoteRef = C77E83091EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74057061F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E830C1EA25F08000AC715 /* RxBlocking.framework */ = {
+		C74057091F07FFB500411F5B /* RxBlocking.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxBlocking.framework;
-			remoteRef = C77E830B1EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74057081F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E830E1EA25F08000AC715 /* RxBlocking.framework */ = {
+		C740570B1F07FFB500411F5B /* RxBlocking.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxBlocking.framework;
-			remoteRef = C77E830D1EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C740570A1F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E83101EA25F08000AC715 /* RxTest.framework */ = {
+		C740570D1F07FFB500411F5B /* RxTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxTest.framework;
-			remoteRef = C77E830F1EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C740570C1F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E83121EA25F08000AC715 /* RxTest.framework */ = {
+		C740570F1F07FFB500411F5B /* RxTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxTest.framework;
-			remoteRef = C77E83111EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C740570E1F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E83141EA25F08000AC715 /* RxTest.framework */ = {
+		C74057111F07FFB500411F5B /* RxTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxTest.framework;
-			remoteRef = C77E83131EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74057101F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E83161EA25F08000AC715 /* RxTest.framework */ = {
+		C74057131F07FFB500411F5B /* RxTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxTest.framework;
-			remoteRef = C77E83151EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74057121F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E83181EA25F08000AC715 /* AllTests-iOS.xctest */ = {
+		C74057151F07FFB500411F5B /* AllTests-iOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "AllTests-iOS.xctest";
-			remoteRef = C77E83171EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74057141F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E831A1EA25F08000AC715 /* AllTests-tvOS.xctest */ = {
+		C74057171F07FFB500411F5B /* AllTests-tvOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "AllTests-tvOS.xctest";
-			remoteRef = C77E83191EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74057161F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E831C1EA25F08000AC715 /* AllTests-macOS.xctest */ = {
+		C74057191F07FFB500411F5B /* AllTests-macOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "AllTests-macOS.xctest";
-			remoteRef = C77E831B1EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C74057181F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E831E1EA25F08000AC715 /* PerformanceTests.app */ = {
+		C740571B1F07FFB500411F5B /* PerformanceTests.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			name = PerformanceTests.app;
 			path = Microoptimizations.app;
-			remoteRef = C77E831D1EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C740571A1F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E83201EA25F08000AC715 /* Benchmarks.xctest */ = {
+		C740571D1F07FFB500411F5B /* Benchmarks.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = Benchmarks.xctest;
-			remoteRef = C77E831F1EA25F08000AC715 /* PBXContainerItemProxy */;
+			remoteRef = C740571C1F07FFB500411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C77E83271EA25F18000AC715 /* RxGesture.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxGesture.framework;
-			remoteRef = C77E83261EA25F18000AC715 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C77E83291EA25F18000AC715 /* RxGesture.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxGesture.framework;
-			remoteRef = C77E83281EA25F18000AC715 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7BE65C31EE29CCD00A05286 /* IBAnimatableApp.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = IBAnimatableApp.app;
-			remoteRef = C7BE65C21EE29CCD00A05286 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7BE65C51EE29CCD00A05286 /* IBAnimatable.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = IBAnimatable.framework;
-			remoteRef = C7BE65C41EE29CCD00A05286 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7EFC8701EEDB7F700AA3EFB /* Cartography.framework */ = {
+		C740572B1F07FFB600411F5B /* Cartography.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Cartography.framework;
-			remoteRef = C7EFC86F1EEDB7F700AA3EFB /* PBXContainerItemProxy */;
+			remoteRef = C740572A1F07FFB600411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C7EFC8721EEDB7F700AA3EFB /* Cartography-iOS-Tests.xctest */ = {
+		C740572D1F07FFB600411F5B /* Cartography-iOS-Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Cartography-iOS-Tests.xctest";
-			remoteRef = C7EFC8711EEDB7F700AA3EFB /* PBXContainerItemProxy */;
+			remoteRef = C740572C1F07FFB600411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C7EFC8741EEDB7F700AA3EFB /* Cartography.framework */ = {
+		C740572F1F07FFB600411F5B /* Cartography.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Cartography.framework;
-			remoteRef = C7EFC8731EEDB7F700AA3EFB /* PBXContainerItemProxy */;
+			remoteRef = C740572E1F07FFB600411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C7EFC8761EEDB7F700AA3EFB /* Cartography-Mac-Tests.xctest */ = {
+		C74057311F07FFB600411F5B /* Cartography-Mac-Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Cartography-Mac-Tests.xctest";
-			remoteRef = C7EFC8751EEDB7F700AA3EFB /* PBXContainerItemProxy */;
+			remoteRef = C74057301F07FFB600411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C7EFC8781EEDB7F700AA3EFB /* Cartography.framework */ = {
+		C74057331F07FFB600411F5B /* Cartography.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Cartography.framework;
-			remoteRef = C7EFC8771EEDB7F700AA3EFB /* PBXContainerItemProxy */;
+			remoteRef = C74057321F07FFB600411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C7EFC87A1EEDB7F700AA3EFB /* Cartography-tvOS-tests.xctest */ = {
+		C74057351F07FFB600411F5B /* Cartography-tvOS-tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Cartography-tvOS-tests.xctest";
-			remoteRef = C7EFC8791EEDB7F700AA3EFB /* PBXContainerItemProxy */;
+			remoteRef = C74057341F07FFB600411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C7F1FE051EEB5CCF002F3641 /* EasyAnimation.framework */ = {
+		C740573C1F07FFB600411F5B /* RxSwiftExt.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = EasyAnimation.framework;
-			remoteRef = C7F1FE041EEB5CCF002F3641 /* PBXContainerItemProxy */;
+			path = RxSwiftExt.framework;
+			remoteRef = C740573B1F07FFB600411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C7F1FE071EEB5CCF002F3641 /* EasyAnimation.framework */ = {
+		C740573E1F07FFB600411F5B /* RxSwiftExtTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RxSwiftExtTests.xctest;
+			remoteRef = C740573D1F07FFB600411F5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C740575D1F0800CA00411F5B /* IBAnimatableApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = IBAnimatableApp.app;
+			remoteRef = C740575C1F0800CA00411F5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C740575F1F0800CA00411F5B /* IBAnimatable.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = EasyAnimation.framework;
-			remoteRef = C7F1FE061EEB5CCF002F3641 /* PBXContainerItemProxy */;
+			path = IBAnimatable.framework;
+			remoteRef = C740575E1F0800CA00411F5B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -2275,6 +2350,7 @@
 				C7C2AF6D1EF6CD64004F257A /* TabBarMain.storyboard in Resources */,
 				C7C2AF221EF6CC78004F257A /* ImageViewerMain.storyboard in Resources */,
 				C70C154A1F0571A100CE9220 /* AnimatableSideMenuMain.storyboard in Resources */,
+				C733BA601F07FE240010AAA7 /* CarthageDemoMain.storyboard in Resources */,
 				C76F04C81EF5004B0090F71B /* SliderMenuDrawerMain.storyboard in Resources */,
 				C70377181EF546B6002E7D9B /* SearchBarMain.storyboard in Resources */,
 				C7C2AF4B1EF6CCD7004F257A /* slide17.gif in Resources */,
@@ -2391,6 +2467,7 @@
 				C711FF261F016929005AAEA5 /* BBCiPlayerStretchyHeaderViewController.swift in Sources */,
 				C7FC254B1F0501DC00959765 /* UIPickerViewController.swift in Sources */,
 				C7C2AF2B1EF6CC97004F257A /* MapViewController.swift in Sources */,
+				C7BC88651F07F3CB0034B11C /* CarthageDemoViewController.swift in Sources */,
 				C7C2AF0B1EF6CC62004F257A /* DraggableTopMenuMainViewControllerViewController.swift in Sources */,
 				C7C2AF601EF6CD2A004F257A /* StorySmartiesMenuTableViewController.swift in Sources */,
 				C7C2AF501EF6CCF1004F257A /* SideBarMenu.swift in Sources */,
@@ -2558,30 +2635,40 @@
 			target = C72E27A01E9ED9EB0064E01B /* LearningSwiftCourse */;
 			targetProxy = C72E27C11E9ED9EB0064E01B /* PBXContainerItemProxy */;
 		};
-		C77E832D1EA25F4F000AC715 /* PBXTargetDependency */ = {
+		C74057421F07FFCD00411F5B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "RxGesture-iOS";
-			targetProxy = C77E832C1EA25F4F000AC715 /* PBXContainerItemProxy */;
+			name = "Alamofire iOS";
+			targetProxy = C74057411F07FFCD00411F5B /* PBXContainerItemProxy */;
 		};
-		C77E83311EA25F4F000AC715 /* PBXTargetDependency */ = {
+		C74057461F07FFCD00411F5B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "RxSwift-iOS";
-			targetProxy = C77E83301EA25F4F000AC715 /* PBXContainerItemProxy */;
+			name = EasyAnimation;
+			targetProxy = C74057451F07FFCD00411F5B /* PBXContainerItemProxy */;
 		};
-		C77E83351EA25F4F000AC715 /* PBXTargetDependency */ = {
+		C740574A1F07FFCD00411F5B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "RxCocoa-iOS";
-			targetProxy = C77E83341EA25F4F000AC715 /* PBXContainerItemProxy */;
+			name = "Cartography-iOS";
+			targetProxy = C74057491F07FFCD00411F5B /* PBXContainerItemProxy */;
 		};
-		C77E83391EA25F4F000AC715 /* PBXTargetDependency */ = {
+		C740574E1F07FFCD00411F5B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxSwiftExt;
-			targetProxy = C77E83381EA25F4F000AC715 /* PBXContainerItemProxy */;
+			targetProxy = C740574D1F07FFCD00411F5B /* PBXContainerItemProxy */;
 		};
-		C7BE65DE1EE29CE000A05286 /* PBXTargetDependency */ = {
+		C74057521F07FFCD00411F5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RxSwift-iOS";
+			targetProxy = C74057511F07FFCD00411F5B /* PBXContainerItemProxy */;
+		};
+		C74057561F07FFCD00411F5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RxCocoa-iOS";
+			targetProxy = C74057551F07FFCD00411F5B /* PBXContainerItemProxy */;
+		};
+		C74057631F0800DE00411F5B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IBAnimatable;
-			targetProxy = C7BE65DD1EE29CE000A05286 /* PBXContainerItemProxy */;
+			targetProxy = C74057621F0800DE00411F5B /* PBXContainerItemProxy */;
 		};
 		C7D3C0FF1EF2BB550042E90A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2597,16 +2684,6 @@
 			isa = PBXTargetDependency;
 			target = C7D3C0F31EF2BB550042E90A /* LearningSwiftCourseExtensions */;
 			targetProxy = C7D3C1071EF2BB550042E90A /* PBXContainerItemProxy */;
-		};
-		C7EFC8951EEDB80200AA3EFB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Cartography-iOS";
-			targetProxy = C7EFC8941EEDB80200AA3EFB /* PBXContainerItemProxy */;
-		};
-		C7F1FE211EEB5CD7002F3641 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = EasyAnimation;
-			targetProxy = C7F1FE201EEB5CD7002F3641 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
