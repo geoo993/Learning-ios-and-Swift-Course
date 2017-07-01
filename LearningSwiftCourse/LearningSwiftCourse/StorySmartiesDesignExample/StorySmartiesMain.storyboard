@@ -675,10 +675,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="260" height="260"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="The_Tale_of_Peter_Rabbit" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-h8-Xeo" customClass="AnimatableImageView" customModule="IBAnimatable">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="The_Tale_of_Peter_Rabbit" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-h8-Xeo">
                                             <rect key="frame" x="0.0" y="0.0" width="260" height="260"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                     <real key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>

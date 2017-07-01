@@ -9,11 +9,9 @@
 //https://www.youtube.com/watch?v=8PWjo1Di620
 
 import UIKit
-import EasyAnimation
 
 class ScrollViewController: UIViewController {
 
-    
     @IBOutlet weak var mainScrollView: UIScrollView!
     
     @IBOutlet weak var pageControl: UIPageControl!
@@ -24,7 +22,6 @@ class ScrollViewController: UIViewController {
         }
     }
     
-    var animationChain : EAAnimationFuture?
     var previousPage : Int = 0
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -44,7 +41,6 @@ class ScrollViewController: UIViewController {
         mainScrollView.isPagingEnabled = true
         mainScrollView.bounces = false
         mainScrollView.delegate = self
-        
         
         //Build Slides View
         setupSlides(info)
@@ -103,8 +99,8 @@ class ScrollViewController: UIViewController {
     }
     
     func clearAll(){
-        animationChain?.cancelAnimationChain()
-        animationChain = nil
+        //animationChain?.cancelAnimationChain()
+        //animationChain = nil
         view.removeEverything()
     }
     
@@ -135,18 +131,18 @@ extension ScrollViewController: UIScrollViewDelegate {
         
         //zoom in effect
         let imageView = slidesViews[currentPage].backgroundImage
-        
-        animationChain = 
-            UIView.animateAndChain(
-                withDuration: 10.0, 
-                delay: 0.2, 
-                options: [.curveEaseInOut], 
-                animations: {
-                imageView?.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
-                imageView?.layoutIfNeeded()
-            }, completion: nil).animate(withDuration: 10.0, animations: {
+       
+        //animationChain = 
+        UIView.animate(withDuration: 10.0, delay: 0.2, options: [.curveEaseInOut], animations: { () -> Void in
+            imageView?.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+            imageView?.layoutIfNeeded()
+        }) { (completed) in
+            UIView.animate(withDuration: 10.0, animations: { () -> Void in
                 imageView?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                imageView?.layoutIfNeeded()
             })
+        }
+        
         previousPage = currentPage
     }
     
@@ -154,16 +150,11 @@ extension ScrollViewController: UIScrollViewDelegate {
       
         for i in 0..<self.slidesViews.count {
             
-            animationChain?.cancelAnimationChain({ [weak self] () -> Void in
-                guard let this = self else { return }
-                let slide = this.slidesViews[i]
-                slide.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-                slide.layer.removeAllAnimations()
-                slide.frame.origin.x = CGFloat(i) * UIScreen.main.bounds.size.width
-                slide.layoutIfNeeded()
-            })
-            
-            animationChain = nil
+            let slide = self.slidesViews[i]
+            slide.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            slide.layer.removeAllAnimations()
+            slide.frame.origin.x = CGFloat(i) * UIScreen.main.bounds.size.width
+            slide.layoutIfNeeded()
         }
         
     }

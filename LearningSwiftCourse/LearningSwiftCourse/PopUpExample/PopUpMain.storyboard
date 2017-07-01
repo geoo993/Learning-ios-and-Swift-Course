@@ -76,7 +76,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRU-Hz-RI5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="1hC-Pf-G4j" customClass="AnimatableView" customModule="IBAnimatable">
+                <view clipsSubviews="YES" contentMode="scaleToFill" id="1hC-Pf-G4j">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -108,7 +108,7 @@
                         <constraint firstAttribute="bottom" secondItem="lbs-5Z-K5m" secondAttribute="bottom" constant="10" id="s7f-EH-TRo"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <real key="value" value="10"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>

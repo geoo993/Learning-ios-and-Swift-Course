@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import IBAnimatable
 
 @IBDesignable
 class MainCollectionViewCell: UICollectionViewCell {
     
     
-    @IBOutlet weak var cellImageView: AnimatableImageView!
+    @IBOutlet weak var cellImageView: UIImageView!
     
     
     public required init?(coder aDecoder: NSCoder) {
@@ -32,7 +31,10 @@ class MainCollectionViewCell: UICollectionViewCell {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        
+        layer.borderColor = UIColor.gray.cgColor
+        layer.borderWidth = 2.0
+        layer.cornerRadius = 10
+        clipsToBounds = true
     }
     
 }

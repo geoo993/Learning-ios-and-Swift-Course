@@ -11,7 +11,6 @@ import RxCocoa
 import RxSwift
 import AVKit
 import AVFoundation
-import IBAnimatable
 import LearningSwiftCourseExtensions
 
 @IBDesignable
@@ -59,7 +58,7 @@ class InspirationalFilmsViewController: UIViewController {
     
     //Mark: - @IBOutlets and @IBAction
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var homebutton: AnimatableButton!
+    @IBOutlet weak var homebutton: UIButton!
     @IBAction func homebuttonAction(_ sender: Any) {
         
         dismiss(animated: true) { 
@@ -80,20 +79,20 @@ class InspirationalFilmsViewController: UIViewController {
     
     var playSelected = false
     @IBOutlet weak var inspirationalFilmsPlayView: UIView!
-    @IBOutlet weak var inspirationalFilmsPlayButton: AnimatableButton!
+    @IBOutlet weak var inspirationalFilmsPlayButton: UIButton!
     
     var toggletoImageOrVideo = false
     var imagesSelected = false
     @IBOutlet weak var inspirationalFilmsImagesView: UIView!
-    @IBOutlet weak var inspirationalFilmsImagesButton: AnimatableButton!
+    @IBOutlet weak var inspirationalFilmsImagesButton: UIButton!
    
     var videosSelected = false
     @IBOutlet weak var inspirationalFilmsVideosView: UIView!
-    @IBOutlet weak var inspirationalFilmsVideosButton: AnimatableButton!
+    @IBOutlet weak var inspirationalFilmsVideosButton: UIButton!
    
     var loveSelected = false
     @IBOutlet weak var inspirationalFilmsLoveView: UIView!
-    @IBOutlet weak var inspirationalFilmsLoveButton: AnimatableButton!
+    @IBOutlet weak var inspirationalFilmsLoveButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -162,8 +161,8 @@ class InspirationalFilmsViewController: UIViewController {
             for cell in visibleCells{
                 let indexPath = self.collectionView.indexPath(for: cell) 
                 let borderWidth : CGFloat = (currentFilmIndex == indexPath?.row) ? 2 : 0
-                cell.inspirationalFilmsCoverImageButton.borderWidth = borderWidth
-                cell.inspirationalFilmsCoverImageButton.borderColor = dashboardTextsColor
+                cell.inspirationalFilmsCoverImageButton.layer.borderWidth = borderWidth
+                cell.inspirationalFilmsCoverImageButton.layer.borderColor = dashboardTextsColor.cgColor
             }
         }
     }
@@ -408,8 +407,8 @@ extension InspirationalFilmsViewController : UICollectionViewDataSource {
             return InspirationalFilmsCollectionViewCell()
         }
         let borderWidth : CGFloat = (currentFilmIndex == indexPath.row) ? 2 : 0
-        cell.inspirationalFilmsCoverImageButton.borderWidth = borderWidth
-        cell.inspirationalFilmsCoverImageButton.borderColor = dashboardTextsColor
+        cell.inspirationalFilmsCoverImageButton.layer.borderWidth = borderWidth
+        cell.inspirationalFilmsCoverImageButton.layer.borderColor = dashboardTextsColor.cgColor
         cell.inspirationalFilm = inspirationalFilms[indexPath.item]
         
         return cell
@@ -621,22 +620,22 @@ extension InspirationalFilmsViewController {
         }
     }
     
-    @IBAction func inspirationalFilmsImagesButtonAction(_ sender: AnimatableButton) {
+    @IBAction func inspirationalFilmsImagesButtonAction(_ sender: UIButton) {
         toggletoImageOrVideo = false
         setToggleToVideoOrImage(toggle: toggletoImageOrVideo)
     }
     
-    @IBAction func inspirationalFilmsVideosButtonAction(_ sender: AnimatableButton) {
+    @IBAction func inspirationalFilmsVideosButtonAction(_ sender: UIButton) {
         toggletoImageOrVideo = true
         setToggleToVideoOrImage(toggle: toggletoImageOrVideo)
     }
     
     
-    @IBAction func inspirationalFilmsPlayButtonActionTouchDown(_ sender: AnimatableButton) {
+    @IBAction func inspirationalFilmsPlayButtonActionTouchDown(_ sender: UIButton) {
        
     }
     
-    @IBAction func inspirationalFilmsPlayButtonActionTouchInside(_ sender: AnimatableButton) {
+    @IBAction func inspirationalFilmsPlayButtonActionTouchInside(_ sender: UIButton) {
         
         
         if toggletoImageOrVideo {
@@ -655,7 +654,7 @@ extension InspirationalFilmsViewController {
         }
     }
     
-    @IBAction func inspirationalFilmsPlayButtonActionTouchOutside(_ sender: AnimatableButton) {
+    @IBAction func inspirationalFilmsPlayButtonActionTouchOutside(_ sender: UIButton) {
         
         if toggletoImageOrVideo {
             playSelected = !playSelected
@@ -674,11 +673,11 @@ extension InspirationalFilmsViewController {
     }
     
     
-    @IBAction func inspirationalFilmsLoveButtonActionTouchDown(_ sender: AnimatableButton) {
+    @IBAction func inspirationalFilmsLoveButtonActionTouchDown(_ sender: UIButton) {
         
     }
     
-    @IBAction func inspirationalFilmsLoveButtonActionTouchInside(_ sender: AnimatableButton) {
+    @IBAction func inspirationalFilmsLoveButtonActionTouchInside(_ sender: UIButton) {
        
         loveSelected = !loveSelected
         let color = loveSelected ? selectedColor.withAlphaComponent(0.4) : unselectedColor
@@ -686,7 +685,7 @@ extension InspirationalFilmsViewController {
         updateLoveButton(color: color, colorInverse: colorInverse)
     }
     
-    @IBAction func inspirationalFilmsLoveButtonActionTouchOutside(_ sender: AnimatableButton) {
+    @IBAction func inspirationalFilmsLoveButtonActionTouchOutside(_ sender: UIButton) {
         
         loveSelected = !loveSelected      
         let color = loveSelected ? selectedColor.withAlphaComponent(0.4) : unselectedColor

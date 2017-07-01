@@ -7,12 +7,11 @@
 //
 
 import UIKit
-import IBAnimatable
 
 @IBDesignable
 class StorySmartiesBookShelfCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var bookshelfImageView: AnimatableImageView!
+    @IBOutlet weak var bookshelfImageView: UIImageView!
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder) 

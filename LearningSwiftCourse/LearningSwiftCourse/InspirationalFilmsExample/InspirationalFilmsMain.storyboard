@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TYC-OA-v6D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TYC-OA-v6D">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,7 +31,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Film" showsSearchResultsButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8sc-MI-o4A">
-                                            <rect key="frame" x="40" y="20" width="374" height="44"/>
+                                            <rect key="frame" x="40" y="20" width="374" height="56"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="searchField.textColor">
@@ -43,7 +42,7 @@
                                                 <outlet property="delegate" destination="TYC-OA-v6D" id="iGV-YZ-RpG"/>
                                             </connections>
                                         </searchBar>
-                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km6-GI-9Z7" userLabel="Home" customClass="AnimatableButton" customModule="IBAnimatable">
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km6-GI-9Z7" userLabel="Home">
                                             <rect key="frame" x="12" y="30" width="25" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="MZp-ue-3pR"/>
@@ -103,7 +102,7 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy4-5M-RIh" userLabel="Play View">
                                                                     <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="75.666666666666686"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jps-ul-63r" userLabel="Play Button" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jps-ul-63r" userLabel="Play Button">
                                                                             <rect key="frame" x="25" y="10" width="52.666666666666671" height="55.666666666666686"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <constraints>
@@ -113,11 +112,6 @@
                                                                             <state key="normal" image="startplaying"/>
                                                                             <state key="selected" image="startplaying"/>
                                                                             <state key="highlighted" image="startplaying"/>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                            </userDefinedRuntimeAttributes>
                                                                             <connections>
                                                                                 <action selector="inspirationalFilmsPlayButtonActionTouchDown:" destination="TYC-OA-v6D" eventType="touchDown" id="AHM-he-fx1"/>
                                                                                 <action selector="inspirationalFilmsPlayButtonActionTouchInside:" destination="TYC-OA-v6D" eventType="touchUpInside" id="Hpg-nj-NpQ"/>
@@ -138,7 +132,7 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7h-S4-JIA" userLabel="Images View">
                                                                     <rect key="frame" x="103.66666666666666" y="0.0" width="102.99999999999997" height="75.666666666666686"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKj-TS-vCA" userLabel="Images Button" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKj-TS-vCA" userLabel="Images Button">
                                                                             <rect key="frame" x="25.999999999999986" y="16" width="51" height="43.666666666666686"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -162,7 +156,7 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkt-sg-SLe" userLabel="Videos View">
                                                                     <rect key="frame" x="207.66666666666669" y="0.0" width="102.66666666666669" height="75.666666666666686"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mho-Re-7cl" userLabel="Video Button" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mho-Re-7cl" userLabel="Video Button">
                                                                             <rect key="frame" x="26" y="12" width="50.666666666666657" height="51.666666666666686"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -187,18 +181,13 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Njl-fC-T0g" userLabel="Love View">
                                                                     <rect key="frame" x="311.33333333333326" y="0.0" width="102.66666666666669" height="75.666666666666686"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHs-la-o97" userLabel="Love Button" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHs-la-o97" userLabel="Love Button">
                                                                             <rect key="frame" x="23" y="10" width="57.666666666666686" height="55.666666666666686"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                             <state key="normal" image="hearticon"/>
                                                                             <state key="selected" image="hearticon"/>
                                                                             <state key="highlighted" image="hearticon"/>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                            </userDefinedRuntimeAttributes>
                                                                             <connections>
                                                                                 <action selector="inspirationalFilmsLoveButtonActionTouchDown:" destination="TYC-OA-v6D" eventType="touchDown" id="pLh-yw-tS4"/>
                                                                                 <action selector="inspirationalFilmsLoveButtonActionTouchInside:" destination="TYC-OA-v6D" eventType="touchUpInside" id="ItG-c9-fUl"/>
@@ -320,17 +309,17 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="120"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C35-hF-NrG" userLabel="Inspirational Films Cover Image Button" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C35-hF-NrG" userLabel="Inspirational Films Cover Image Button">
                                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="120"/>
                                                                         <state key="normal" image="AFewGoodMen"/>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                                 <real key="value" value="10"/>
                                                                             </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
                                                                                 <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                             </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                                                 <real key="value" value="2"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>

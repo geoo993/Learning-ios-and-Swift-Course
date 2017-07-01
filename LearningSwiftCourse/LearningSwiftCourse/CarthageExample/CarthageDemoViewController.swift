@@ -10,13 +10,14 @@
 //https://github.com/Carthage/Carthage
 //https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md
 //https://www.raywenderlich.com/109330/carthage-tutorial-getting-started
+//https://stackoverflow.com/questions/30612995/how-to-update-just-one-library-from-the-cartfile-with-carthage
 
 
 /////In the Cartfile we define which dependencies we want from framework in our project.
 ////Alamofire from https://github.com/Alamofire/Alamofire
 ///github "Alamofire/Alamofire" ~> 4.4  (this tells carthage to look in Github for this dependency and under the user alimofire, to get repository called AlimoFire and then Git version 4.4)
 //// after adding carthage install line in Cartfile, you then do the following in terminal === /*     carthage bootstrap --platform iOS   or    carthage update --platform iOS        */
-/////Note: delete Carthage.resolved first.
+/////Note: do a "brew install carthage" first and also delete Carthage.resolved before running carthage command in termonal.
 
 /*
  Version requirement

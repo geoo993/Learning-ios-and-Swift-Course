@@ -8,13 +8,12 @@
 //https://www.youtube.com/watch?v=CXvOS6hYADc
 
 import UIKit
-import IBAnimatable
 
 @IBDesignable
 class PopUpViewController: UIViewController  {
 
    
-    @IBOutlet var addItemPopUpView: AnimatableView!
+    @IBOutlet var addItemPopUpView: UIView!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     
     @IBAction func homeItem(_ sender: UIBarButtonItem) {
@@ -51,7 +50,7 @@ class PopUpViewController: UIViewController  {
     func animateIn(){
         self.view.addSubview(addItemPopUpView)
         addItemPopUpView.center = self.view.center
-        
+        addItemPopUpView.layer.cornerRadius = 10
         addItemPopUpView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
         addItemPopUpView.alpha = 0
         

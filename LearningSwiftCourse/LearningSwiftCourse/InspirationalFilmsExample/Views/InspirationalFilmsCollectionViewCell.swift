@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import IBAnimatable
 
 @IBDesignable
 class InspirationalFilmsCollectionViewCell: UICollectionViewCell {
@@ -18,8 +17,8 @@ class InspirationalFilmsCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    @IBOutlet weak var inspirationalFilmsCoverImageButton: AnimatableButton!
-    @IBAction func inspirationalFilmsCoverImageButtonAction(_ sender: AnimatableButton) {
+    @IBOutlet weak var inspirationalFilmsCoverImageButton: UIButton!
+    @IBAction func inspirationalFilmsCoverImageButtonAction(_ sender: UIButton) {
         InspirationalFilmsViewController.updateInspirationalFilm.onNext(inspirationalFilm.title)
     }
     
@@ -42,7 +41,9 @@ class InspirationalFilmsCollectionViewCell: UICollectionViewCell {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.layer.cornerRadius = 10
-        self.clipsToBounds = true
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.white.cgColor
+        layer.cornerRadius = 10
+        clipsToBounds = true
     }
 }

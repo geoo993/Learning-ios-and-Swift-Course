@@ -1,7 +1,4 @@
-github "Alamofire/Alamofire" ~> 4.4
-github "artman/HexColor" ~> 3.0
-github "IBAnimatable/IBAnimatable" ~> 4.1.0
-github "realm/realm-cocoa" ~> 2.8.3
-github "robb/Cartography"
+github "Alamofire/Alamofire" ~> 4.0
+github "robb/Cartography" ~> 1.0
 github "ReactiveX/RxSwift" ~> 3.0
 github "watson-developer-cloud/swift-sdk"

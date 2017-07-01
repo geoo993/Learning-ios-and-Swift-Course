@@ -6,7 +6,6 @@
 //  Copyright © 2017 LEXI LABS. All rights reserved.
 //
 
-import IBAnimatable
 import UIKit
 
 
@@ -26,7 +25,7 @@ class MainCollectionViewController: UICollectionViewController {
                            //"TabBarViewController": "TabBarMain",
                            //"NavigationViewController": "NavBarMain",
                            //"ColorsViewController": "ColorsMain",
-                           //"ScrollViewController": "ScrollViewMain",
+                           "ScrollViewController": "ScrollViewMain",
                            //"CustomPageViewController" : "PageViewMain",
                            //"SlideShowViewController" : "SlideShowMain",
                            //"ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
@@ -55,7 +54,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"UIViewSlidesViewController" : "UIViewSlidesMain",
                             //"AnimatableSideMenuContainerViewController" : "AnimatableSideMenuMain",
                             //"PieChartPageViewController" : "CirclePieViewMain",
-                            "CarthageDemoViewController" : "CarthageDemoMain",
+                            //"CarthageDemoViewController" : "CarthageDemoMain",
                            ]
     
     //Mark: - Collection view 
