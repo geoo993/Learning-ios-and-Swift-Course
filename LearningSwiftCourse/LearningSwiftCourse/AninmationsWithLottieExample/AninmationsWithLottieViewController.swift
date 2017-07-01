@@ -22,26 +22,27 @@ class AninmationsWithLottieViewController: UIViewController {
         }
     }
     
+    let animationView = LOTAnimationView(name: "PinJump")
     @IBAction func showAnimation(_ sender: UIButton) {
         
-        animateView()
+        for subview in view.subviews {
+            if subview == animationView {
+                subview.removeFromSuperview()
+            }
+        }
         
-    }
-    
-    func animateView(){
-        
-        let animationView = LOTAnimationView(name: "PinJump")
         let frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: 250)
         animationView.frame = frame
         animationView.contentMode = .scaleAspectFill
         animationView.loopAnimation = true
         view.addSubview(animationView)
         
+        animationView.play()
     }
     
     var isMenuOn = false
     var hamburgerMenuButton : LOTAnimationView?
-    let hamburgerMenuFrame =  CGRect(x: 0, y: 20, width: 100, height: 100)
+    let hamburgerMenuFrame =  CGRect(x: 0, y: 10, width: 100, height: 100)
     
     func addHamburgermenuButton(is on: Bool){
         
@@ -59,8 +60,7 @@ class AninmationsWithLottieViewController: UIViewController {
         hamburgerMenuButton?.gestureRecognizers?.removeAll()
         addMenuToggleRecognizer()
         
-        hamburgerMenuButton?.sizeToFit()
-        self.view.addSubview( hamburgerMenuButton!)
+        view.addSubview( hamburgerMenuButton!)
         
     }
   
