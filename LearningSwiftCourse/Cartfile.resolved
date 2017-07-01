@@ -1,4 +1,5 @@
 github "Alamofire/Alamofire" "4.5.0"
 github "ReactiveX/RxSwift" "3.5.0"
+github "airbnb/lottie-ios" "13de4a22780873ebd2124a35126da8adc2a7c6b6"
 github "robb/Cartography" "1.1.0"
 github "watson-developer-cloud/swift-sdk" "v0.16.0"

@@ -17,7 +17,7 @@
 ////Alamofire from https://github.com/Alamofire/Alamofire
 ///github "Alamofire/Alamofire" ~> 4.4  (this tells carthage to look in Github for this dependency and under the user alimofire, to get repository called AlimoFire and then Git version 4.4)
 //// after adding carthage install line in Cartfile, you then do the following in terminal === /*     carthage bootstrap --platform iOS   or    carthage update --platform iOS        */
-/////Note: do a "brew install carthage" first and also delete Carthage.resolved before running carthage command in termonal.
+/////Note: do a "brew install carthage" first, then make sure previous derived dependencies files are deleted and also delete Carthage.resolved before running carthage command in terminal.
 
 /*
  Version requirement
@@ -66,7 +66,7 @@
 //github "Khan/SwiftTweaks" "master"    ========= go to and use the master branch
 //github "drmohundro/SWXMLHash" ~> 3.0       ========= Require version 3.x (3.0 or later, but less than 4.0)
 //github "robb/Cartography" >= 1.0   =========== Require version 1.0 or later
-
+ 
 */
 
 import UIKit

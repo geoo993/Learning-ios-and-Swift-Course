@@ -2,3 +2,4 @@ github "Alamofire/Alamofire" ~> 4.0
 github "robb/Cartography" ~> 1.0
 github "ReactiveX/RxSwift" ~> 3.0
 github "watson-developer-cloud/swift-sdk"
+github "airbnb/lottie-ios" "master"
