@@ -20,6 +20,11 @@
 		C70C154E1F0571B700CE9220 /* AnimatableSideMenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C152A1F0570DA00CE9220 /* AnimatableSideMenuItemCell.swift */; };
 		C70C154F1F0571BA00CE9220 /* AnimatableSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C152B1F0570DA00CE9220 /* AnimatableSideMenuViewController.swift */; };
 		C70C15501F0571BC00CE9220 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = C70C152C1F0570DA00CE9220 /* MenuItems.plist */; };
+		C70F09E81F084EDB0049BACC /* buttonOff.json in Resources */ = {isa = PBXBuildFile; fileRef = C70F09C41F084ED60049BACC /* buttonOff.json */; };
+		C70F09E91F084EDE0049BACC /* buttonOn.json in Resources */ = {isa = PBXBuildFile; fileRef = C70F09C31F084ED60049BACC /* buttonOn.json */; };
+		C70F09EA1F084EE10049BACC /* HamburgerArrow.aep in Resources */ = {isa = PBXBuildFile; fileRef = C70F09C61F084ED60049BACC /* HamburgerArrow.aep */; };
+		C70F09EB1F084EE40049BACC /* PinJump.aep in Resources */ = {isa = PBXBuildFile; fileRef = C70F09C51F084ED60049BACC /* PinJump.aep */; };
+		C70F09EC1F084EE70049BACC /* PinJump.json in Resources */ = {isa = PBXBuildFile; fileRef = C70F09C21F084ED60049BACC /* PinJump.json */; };
 		C711FF261F016929005AAEA5 /* BBCiPlayerStretchyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C711FF251F016929005AAEA5 /* BBCiPlayerStretchyHeaderViewController.swift */; };
 		C71678E21EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71678E11EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard */; };
 		C71678E41EFF19C700355E41 /* SimpleSpringDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71678E31EFF19C700355E41 /* SimpleSpringDrawerViewController.swift */; };
@@ -56,6 +61,10 @@
 		C76F04EE1EF505160090F71B /* SliderMenuDrawerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F04C91EF501D00090F71B /* SliderMenuDrawerBaseViewController.swift */; };
 		C76F04F01EF505E40090F71B /* SliderMenuDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F04EF1EF505E40090F71B /* SliderMenuDrawerViewController.swift */; };
 		C778EDED1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778EDEC1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift */; };
+		C78F49821F08493000FA2275 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78F496A1F08491400FA2275 /* Lottie.framework */; };
+		C78F49831F08493000FA2275 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C78F496A1F08491400FA2275 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C78F49881F0849F900FA2275 /* AninmationsWithLottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F49871F0849F900FA2275 /* AninmationsWithLottieViewController.swift */; };
+		C78F498A1F084A0600FA2275 /* AninmationsWithLottieMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78F49891F084A0600FA2275 /* AninmationsWithLottieMain.storyboard */; };
 		C7A1A2171F079AF2005CF910 /* PieChartWithSubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */; };
 		C7A1A2351F07B4F7005CF910 /* PieChartViewWithBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */; };
 		C7A967791F082BFC0002299B /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A9676E1F082BDE0002299B /* Cartography.framework */; };
@@ -265,6 +274,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = C72E27A01E9ED9EB0064E01B;
 			remoteInfo = LearningSwiftCourse;
+		};
+		C78F49691F08491400FA2275 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78F49571F08491400FA2275 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 62CA59B81E3C173B002D7188;
+			remoteInfo = Lottie_iOS;
+		};
+		C78F496B1F08491400FA2275 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78F49571F08491400FA2275 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FAE1F7E61E428CBE002E0974;
+			remoteInfo = Lottie_macOS;
+		};
+		C78F496D1F08491400FA2275 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78F49571F08491400FA2275 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84FE12EF1E4C1485009B157C;
+			remoteInfo = LottieLibraryIOS;
+		};
+		C78F49841F08493000FA2275 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78F49571F08491400FA2275 /* Lottie.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 62CA59B71E3C173B002D7188;
+			remoteInfo = Lottie_iOS;
 		};
 		C7A967381F082BDD0002299B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -567,6 +604,7 @@
 				C7A9677A1F082BFC0002299B /* Cartography.framework in Embed Frameworks */,
 				C7F2EE451F0837CB00655CCC /* RxCocoa.framework in Embed Frameworks */,
 				C7A967821F082BFC0002299B /* Alamofire.framework in Embed Frameworks */,
+				C78F49831F08493000FA2275 /* Lottie.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,6 +625,11 @@
 		C70C152B1F0570DA00CE9220 /* AnimatableSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableSideMenuViewController.swift; sourceTree = "<group>"; };
 		C70C152C1F0570DA00CE9220 /* MenuItems.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MenuItems.plist; sourceTree = "<group>"; };
 		C70C15491F05711E00CE9220 /* AnimatableSideMenuMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimatableSideMenuMain.storyboard; sourceTree = "<group>"; };
+		C70F09C21F084ED60049BACC /* PinJump.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PinJump.json; sourceTree = "<group>"; };
+		C70F09C31F084ED60049BACC /* buttonOn.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = buttonOn.json; sourceTree = "<group>"; };
+		C70F09C41F084ED60049BACC /* buttonOff.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = buttonOff.json; sourceTree = "<group>"; };
+		C70F09C51F084ED60049BACC /* PinJump.aep */ = {isa = PBXFileReference; lastKnownFileType = file; path = PinJump.aep; sourceTree = "<group>"; };
+		C70F09C61F084ED60049BACC /* HamburgerArrow.aep */ = {isa = PBXFileReference; lastKnownFileType = file; path = HamburgerArrow.aep; sourceTree = "<group>"; };
 		C711FF251F016929005AAEA5 /* BBCiPlayerStretchyHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerStretchyHeaderViewController.swift; sourceTree = "<group>"; };
 		C71678E11EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleSpringDrawerMain.storyboard; sourceTree = "<group>"; };
 		C71678E31EFF19C700355E41 /* SimpleSpringDrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSpringDrawerViewController.swift; sourceTree = "<group>"; };
@@ -630,6 +673,9 @@
 		C76F04C91EF501D00090F71B /* SliderMenuDrawerBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerBaseViewController.swift; sourceTree = "<group>"; };
 		C76F04EF1EF505E40090F71B /* SliderMenuDrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerViewController.swift; sourceTree = "<group>"; };
 		C778EDEC1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerSectionsHeaderView.swift; sourceTree = "<group>"; };
+		C78F49571F08491400FA2275 /* Lottie.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lottie.xcodeproj; path = "Carthage/Checkouts/lottie-ios/Lottie.xcodeproj"; sourceTree = "<group>"; };
+		C78F49871F0849F900FA2275 /* AninmationsWithLottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AninmationsWithLottieViewController.swift; sourceTree = "<group>"; };
+		C78F49891F084A0600FA2275 /* AninmationsWithLottieMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AninmationsWithLottieMain.storyboard; sourceTree = "<group>"; };
 		C78F4AAC1EF34FDE0001CF94 /* BasicCoreMLwithImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCoreMLwithImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C78F4AAD1EF34FDE0001CF94 /* BasicCoreMLwithImagesMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasicCoreMLwithImagesMain.storyboard; sourceTree = "<group>"; };
 		C78F4AAE1EF34FDE0001CF94 /* BasicCoreMLwithImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCoreMLwithImagesViewController.swift; sourceTree = "<group>"; };
@@ -833,6 +879,7 @@
 				C76E0CE81EE9ECB300A66E94 /* MapKit.framework in Frameworks */,
 				C7D3C1091EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Frameworks */,
 				C7A967811F082BFC0002299B /* Alamofire.framework in Frameworks */,
+				C78F49821F08493000FA2275 /* Lottie.framework in Frameworks */,
 				C7A967791F082BFC0002299B /* Cartography.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -895,6 +942,18 @@
 			path = AnimatableSideMenuExample;
 			sourceTree = "<group>";
 		};
+		C70F09EE1F08501C0049BACC /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C70F09C41F084ED60049BACC /* buttonOff.json */,
+				C70F09C31F084ED60049BACC /* buttonOn.json */,
+				C70F09C61F084ED60049BACC /* HamburgerArrow.aep */,
+				C70F09C51F084ED60049BACC /* PinJump.aep */,
+				C70F09C21F084ED60049BACC /* PinJump.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		C71678C41EFF196500355E41 /* SimpleSpringDrawerExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -950,6 +1009,7 @@
 				C7C2AE851EF6CB62004F257A /* AirbnbExample */,
 				C7C2AEAD1EF6CB63004F257A /* AudioExample */,
 				C70C15261F0570DA00CE9220 /* AnimatableSideMenuExample */,
+				C78F49861F0849DC00FA2275 /* AninmationsWithLottieExample */,
 				C78F4AAB1EF34FDE0001CF94 /* BasicCoreMLwithImagesExample */,
 				C76786441EF90DA2005C159F /* BBCiPlayerExample */,
 				C7E773E61F0153A100440E05 /* BBCiPlayerStretchyHeaderExample */,
@@ -1104,11 +1164,32 @@
 		C77E82D51EA25E3B000AC715 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				C78F49571F08491400FA2275 /* Lottie.xcodeproj */,
 				C7F2EDFE1F0837BC00655CCC /* Rx.xcodeproj */,
 				C7A967641F082BDD0002299B /* Cartography.xcodeproj */,
 				C7A9672D1F082BDC0002299B /* Alamofire.xcodeproj */,
 			);
 			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		C78F49581F08491400FA2275 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C78F496A1F08491400FA2275 /* Lottie.framework */,
+				C78F496C1F08491400FA2275 /* Lottie.framework */,
+				C78F496E1F08491400FA2275 /* libLottie.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C78F49861F0849DC00FA2275 /* AninmationsWithLottieExample */ = {
+			isa = PBXGroup;
+			children = (
+				C70F09EE1F08501C0049BACC /* Animations */,
+				C78F49871F0849F900FA2275 /* AninmationsWithLottieViewController.swift */,
+				C78F49891F084A0600FA2275 /* AninmationsWithLottieMain.storyboard */,
+			);
+			path = AninmationsWithLottieExample;
 			sourceTree = "<group>";
 		};
 		C78F4AAB1EF34FDE0001CF94 /* BasicCoreMLwithImagesExample */ = {
@@ -1747,6 +1828,7 @@
 				C7A967841F082BFC0002299B /* PBXTargetDependency */,
 				C7F2EE431F0837CB00655CCC /* PBXTargetDependency */,
 				C7F2EE471F0837CB00655CCC /* PBXTargetDependency */,
+				C78F49851F08493000FA2275 /* PBXTargetDependency */,
 			);
 			name = LearningSwiftCourse;
 			productName = LearningSwiftCourse;
@@ -1900,6 +1982,10 @@
 					ProjectRef = C7A967641F082BDD0002299B /* Cartography.xcodeproj */;
 				},
 				{
+					ProductGroup = C78F49581F08491400FA2275 /* Products */;
+					ProjectRef = C78F49571F08491400FA2275 /* Lottie.xcodeproj */;
+				},
+				{
 					ProductGroup = C7F2EDFF1F0837BC00655CCC /* Products */;
 					ProjectRef = C7F2EDFE1F0837BC00655CCC /* Rx.xcodeproj */;
 				},
@@ -1916,6 +2002,27 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		C78F496A1F08491400FA2275 /* Lottie.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Lottie.framework;
+			remoteRef = C78F49691F08491400FA2275 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C78F496C1F08491400FA2275 /* Lottie.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Lottie.framework;
+			remoteRef = C78F496B1F08491400FA2275 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C78F496E1F08491400FA2275 /* libLottie.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLottie.a;
+			remoteRef = C78F496D1F08491400FA2275 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C7A967391F082BDD0002299B /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -2163,6 +2270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7D0DE761F0534F4000CD3D1 /* UIViewSlidesMain.storyboard in Resources */,
+				C70F09EC1F084EE70049BACC /* PinJump.json in Resources */,
 				C7C2AF3B1EF6CCB3004F257A /* ParallaxMain.storyboard in Resources */,
 				C7C2AF031EF6CC3C004F257A /* ButtonsMain.storyboard in Resources */,
 				C7C2AF3E1EF6CCC3004F257A /* ParallaxHeaderMain.storyboard in Resources */,
@@ -2175,14 +2283,17 @@
 				C7C2AF381EF6CCA9004F257A /* PageViewMain.storyboard in Resources */,
 				C7AE48901EA5327300C2096E /* Main.storyboard in Resources */,
 				C7C2AF4C1EF6CCD7004F257A /* slide18.gif in Resources */,
+				C70F09E91F084EDE0049BACC /* buttonOn.json in Resources */,
 				C7CEB7A31F06FD7900CC054B /* CirclePieViewMain.storyboard in Resources */,
 				C7C2AEFB1EF6CC17004F257A /* AirbnbMain.storyboard in Resources */,
 				C7C2AF581EF6CD0B004F257A /* SpringBasedDrawerMain.storyboard in Resources */,
 				C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */,
 				C7C2AF461EF6CCD7004F257A /* ScrollViewMain.storyboard in Resources */,
+				C70F09EB1F084EE40049BACC /* PinJump.aep in Resources */,
 				C7C2AF1F1EF6CC71004F257A /* ImageCropperMain.storyboard in Resources */,
 				C7C2AF2E1EF6CC97004F257A /* MultiSidedBarMenuMain.storyboard in Resources */,
 				C7C2AF6D1EF6CD64004F257A /* TabBarMain.storyboard in Resources */,
+				C70F09EA1F084EE10049BACC /* HamburgerArrow.aep in Resources */,
 				C7C2AF221EF6CC78004F257A /* ImageViewerMain.storyboard in Resources */,
 				C70C154A1F0571A100CE9220 /* AnimatableSideMenuMain.storyboard in Resources */,
 				C733BA601F07FE240010AAA7 /* CarthageDemoMain.storyboard in Resources */,
@@ -2199,7 +2310,9 @@
 				C7C2AF4A1EF6CCD7004F257A /* slide16.gif in Resources */,
 				C7C2AF491EF6CCD7004F257A /* slide15.gif in Resources */,
 				C70C15501F0571BC00CE9220 /* MenuItems.plist in Resources */,
+				C78F498A1F084A0600FA2275 /* AninmationsWithLottieMain.storyboard in Resources */,
 				C7C2AF861EF6CD9A004F257A /* VideoPlayerMain.storyboard in Resources */,
+				C70F09E81F084EDB0049BACC /* buttonOff.json in Resources */,
 				C7C2AF481EF6CCD7004F257A /* Slide.xib in Resources */,
 				C7C2AF541EF6CD03004F257A /* SlideShowMain.storyboard in Resources */,
 				C7C2AF241EF6CC83004F257A /* InspirationalFilmsMain.storyboard in Resources */,
@@ -2386,6 +2499,7 @@
 				C7BE65E41EE2A23E00A05286 /* MainCollectionViewCell.swift in Sources */,
 				C7C2AF851EF6CD91004F257A /* CustomPresentAnimationController.swift in Sources */,
 				C7C2AF611EF6CD2A004F257A /* StorySmartiesMenuViewController.swift in Sources */,
+				C78F49881F0849F900FA2275 /* AninmationsWithLottieViewController.swift in Sources */,
 				C70C154B1F0571AC00CE9220 /* AnimatableDetailViewController.swift in Sources */,
 				C7BF534C1F058DAA00F01E72 /* GreenSlideView.swift in Sources */,
 				C73DF6D51EFC39FF00DAB515 /* UIResponder+Ext.swift in Sources */,
@@ -2469,6 +2583,11 @@
 			isa = PBXTargetDependency;
 			target = C72E27A01E9ED9EB0064E01B /* LearningSwiftCourse */;
 			targetProxy = C72E27C11E9ED9EB0064E01B /* PBXContainerItemProxy */;
+		};
+		C78F49851F08493000FA2275 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Lottie_iOS;
+			targetProxy = C78F49841F08493000FA2275 /* PBXContainerItemProxy */;
 		};
 		C7A9677C1F082BFC0002299B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
