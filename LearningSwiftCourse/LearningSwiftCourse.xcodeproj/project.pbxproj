@@ -58,6 +58,8 @@
 		C77E83331EA25F4F000AC715 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E83001EA25F08000AC715 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C77E83361EA25F4F000AC715 /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; };
 		C77E83371EA25F4F000AC715 /* RxSwiftExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C77E82DC1EA25EF5000AC715 /* RxSwiftExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7A1A2171F079AF2005CF910 /* PieChartWithSubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */; };
+		C7A1A2351F07B4F7005CF910 /* PieChartViewWithBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */; };
 		C7AE48901EA5327300C2096E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AE488F1EA5327300C2096E /* Main.storyboard */; };
 		C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48911EA5328B00C2096E /* MainViewController.swift */; };
 		C7BE65DB1EE29CE000A05286 /* IBAnimatable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BE65C51EE29CCD00A05286 /* IBAnimatable.framework */; };
@@ -97,7 +99,7 @@
 		C7C2AF101EF6CC68004F257A /* Generic+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE591EF6CB62004F257A /* Generic+Ext.swift */; };
 		C7C2AF111EF6CC68004F257A /* Math+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE5A1EF6CB62004F257A /* Math+Ext.swift */; };
 		C7C2AF121EF6CC68004F257A /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE5B1EF6CB62004F257A /* String+Ext.swift */; };
-		C7C2AF131EF6CC68004F257A /* TableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE5C1EF6CB62004F257A /* TableView+Ext.swift */; };
+		C7C2AF131EF6CC68004F257A /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE5C1EF6CB62004F257A /* UITableView+Ext.swift */; };
 		C7C2AF141EF6CC68004F257A /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE5D1EF6CB62004F257A /* UIApplication+Ext.swift */; };
 		C7C2AF151EF6CC68004F257A /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE5E1EF6CB62004F257A /* UIButton+Ext.swift */; };
 		C7C2AF161EF6CC68004F257A /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE5F1EF6CB62004F257A /* UIColor+Ext.swift */; };
@@ -214,6 +216,13 @@
 		C7C2AF861EF6CD9A004F257A /* VideoPlayerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C2AE431EF6CB62004F257A /* VideoPlayerMain.storyboard */; };
 		C7C2AF871EF6CD9A004F257A /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE441EF6CB62004F257A /* VideoPlayerViewController.swift */; };
 		C7C951741EA3E08D005DFE3B /* Architecture.png in Resources */ = {isa = PBXBuildFile; fileRef = C7C951731EA3E08D005DFE3B /* Architecture.png */; };
+		C7CEB7A31F06FD7900CC054B /* CirclePieViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CEB7A21F06FD7900CC054B /* CirclePieViewMain.storyboard */; };
+		C7CEB7A51F06FD9000CC054B /* PieChartViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CEB7A41F06FD9000CC054B /* PieChartViewViewController.swift */; };
+		C7CEB7A71F06FE0D00CC054B /* CirclePieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CEB7A61F06FE0D00CC054B /* CirclePieView.swift */; };
+		C7CEB7AA1F07000500CC054B /* CirclePieIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CEB7A91F07000100CC054B /* CirclePieIndicatorView.swift */; };
+		C7CEB7AB1F07000B00CC054B /* CirclePieIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CEB7A81F07000100CC054B /* CirclePieIndicatorView.xib */; };
+		C7CEB7AD1F07059D00CC054B /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CEB7AC1F07059D00CC054B /* PieChartView.swift */; };
+		C7CEB7AF1F0709C600CC054B /* PieChartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CEB7AE1F0709C600CC054B /* PieChartPageViewController.swift */; };
 		C7CF31D41EF6B31E00114EC1 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C78F4AB01EF34FDE0001CF94 /* GoogLeNetPlaces.mlmodel */; };
 		C7CF31F11EF6B32100114EC1 /* Places205-GoogLeNet.txt in Resources */ = {isa = PBXBuildFile; fileRef = C78F4AB11EF34FDE0001CF94 /* Places205-GoogLeNet.txt */; };
 		C7CF31F21EF6B32F00114EC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F4AB21EF34FDE0001CF94 /* ImageProcessor.swift */; };
@@ -663,6 +672,8 @@
 		C78F4AB21EF34FDE0001CF94 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		C78F4AB41EF34FDE0001CF94 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		C78F4AB51EF34FDE0001CF94 /* ResNet50.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ResNet50.txt; sourceTree = "<group>"; };
+		C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartWithSubData.swift; sourceTree = "<group>"; };
+		C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewWithBezierPath.swift; sourceTree = "<group>"; };
 		C7AE488F1EA5327300C2096E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C7AE48911EA5328B00C2096E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C7BE65BD1EE29CCC00A05286 /* IBAnimatable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IBAnimatable.xcodeproj; path = ../Carthage/Checkouts/IBAnimatable/IBAnimatable.xcodeproj; sourceTree = "<group>"; };
@@ -696,7 +707,7 @@
 		C7C2AE591EF6CB62004F257A /* Generic+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Generic+Ext.swift"; sourceTree = "<group>"; };
 		C7C2AE5A1EF6CB62004F257A /* Math+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Math+Ext.swift"; sourceTree = "<group>"; };
 		C7C2AE5B1EF6CB62004F257A /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
-		C7C2AE5C1EF6CB62004F257A /* TableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Ext.swift"; sourceTree = "<group>"; };
+		C7C2AE5C1EF6CB62004F257A /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		C7C2AE5D1EF6CB62004F257A /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
 		C7C2AE5E1EF6CB62004F257A /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		C7C2AE5F1EF6CB62004F257A /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
@@ -818,6 +829,13 @@
 		C7C2AEF31EF6CB64004F257A /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		C7C2AEF41EF6CB64004F257A /* SummaryViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewTableViewCell.swift; sourceTree = "<group>"; };
 		C7C951731EA3E08D005DFE3B /* Architecture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Architecture.png; sourceTree = "<group>"; };
+		C7CEB7A21F06FD7900CC054B /* CirclePieViewMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CirclePieViewMain.storyboard; sourceTree = "<group>"; };
+		C7CEB7A41F06FD9000CC054B /* PieChartViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewViewController.swift; sourceTree = "<group>"; };
+		C7CEB7A61F06FE0D00CC054B /* CirclePieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePieView.swift; sourceTree = "<group>"; };
+		C7CEB7A81F07000100CC054B /* CirclePieIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CirclePieIndicatorView.xib; sourceTree = "<group>"; };
+		C7CEB7A91F07000100CC054B /* CirclePieIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePieIndicatorView.swift; sourceTree = "<group>"; };
+		C7CEB7AC1F07059D00CC054B /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		C7CEB7AE1F0709C600CC054B /* PieChartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartPageViewController.swift; sourceTree = "<group>"; };
 		C7D0DE731F0534DF000CD3D1 /* UIViewSlidesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSlidesViewController.swift; sourceTree = "<group>"; };
 		C7D0DE751F0534F4000CD3D1 /* UIViewSlidesMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIViewSlidesMain.storyboard; sourceTree = "<group>"; };
 		C7D3C0F41EF2BB550042E90A /* LearningSwiftCourseExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LearningSwiftCourseExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -968,6 +986,7 @@
 				C7E773E61F0153A100440E05 /* BBCiPlayerStretchyHeaderExample */,
 				C7C2AEC81EF6CB63004F257A /* ButtonsExample */,
 				C7C2AEDD1EF6CB63004F257A /* CarouselViewsExample */,
+				C7CEB7851F06FD5800CC054B /* PieChartViewExample */,
 				C7C2AE381EF6CA80004F257A /* ColorsExample */,
 				C7C2AE951EF6CB63004F257A /* ConstraintsPack */,
 				C7C2AECB1EF6CB63004F257A /* DraggableVerticalMenusExample */,
@@ -1278,7 +1297,7 @@
 				C7C2AE591EF6CB62004F257A /* Generic+Ext.swift */,
 				C7C2AE5A1EF6CB62004F257A /* Math+Ext.swift */,
 				C7C2AE5B1EF6CB62004F257A /* String+Ext.swift */,
-				C7C2AE5C1EF6CB62004F257A /* TableView+Ext.swift */,
+				C7C2AE5C1EF6CB62004F257A /* UITableView+Ext.swift */,
 				C7C2AE5D1EF6CB62004F257A /* UIApplication+Ext.swift */,
 				C7C2AE5E1EF6CB62004F257A /* UIButton+Ext.swift */,
 				C7C2AE5F1EF6CB62004F257A /* UIColor+Ext.swift */,
@@ -1626,6 +1645,22 @@
 				C7C951731EA3E08D005DFE3B /* Architecture.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		C7CEB7851F06FD5800CC054B /* PieChartViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				C7CEB7A41F06FD9000CC054B /* PieChartViewViewController.swift */,
+				C7CEB7AE1F0709C600CC054B /* PieChartPageViewController.swift */,
+				C7CEB7A91F07000100CC054B /* CirclePieIndicatorView.swift */,
+				C7CEB7A81F07000100CC054B /* CirclePieIndicatorView.xib */,
+				C7CEB7A21F06FD7900CC054B /* CirclePieViewMain.storyboard */,
+				C7CEB7A61F06FE0D00CC054B /* CirclePieView.swift */,
+				C7CEB7AC1F07059D00CC054B /* PieChartView.swift */,
+				C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */,
+				C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */,
+			);
+			path = PieChartViewExample;
 			sourceTree = "<group>";
 		};
 		C7D0DE561F053454000CD3D1 /* UIViewSlidesExample */ = {
@@ -2206,6 +2241,7 @@
 				C7C2AF381EF6CCA9004F257A /* PageViewMain.storyboard in Resources */,
 				C7AE48901EA5327300C2096E /* Main.storyboard in Resources */,
 				C7C2AF4C1EF6CCD7004F257A /* slide18.gif in Resources */,
+				C7CEB7A31F06FD7900CC054B /* CirclePieViewMain.storyboard in Resources */,
 				C7C2AEFB1EF6CC17004F257A /* AirbnbMain.storyboard in Resources */,
 				C7C2AF581EF6CD0B004F257A /* SpringBasedDrawerMain.storyboard in Resources */,
 				C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */,
@@ -2218,6 +2254,7 @@
 				C76F04C81EF5004B0090F71B /* SliderMenuDrawerMain.storyboard in Resources */,
 				C70377181EF546B6002E7D9B /* SearchBarMain.storyboard in Resources */,
 				C7C2AF4B1EF6CCD7004F257A /* slide17.gif in Resources */,
+				C7CEB7AB1F07000B00CC054B /* CirclePieIndicatorView.xib in Resources */,
 				C7CF31F11EF6B32100114EC1 /* Places205-GoogLeNet.txt in Resources */,
 				C7CF31F51EF6B33B00114EC1 /* BasicCoreMLwithImagesMain.storyboard in Resources */,
 				C7C2AF5B1EF6CD14004F257A /* StorySmartiesMain.storyboard in Resources */,
@@ -2289,6 +2326,7 @@
 				C7C2AF2F1EF6CC97004F257A /* NewsTableViewCell.swift in Sources */,
 				C7C2AF4F1EF6CCD7004F257A /* SlidesInfoModel.swift in Sources */,
 				C7C2AF371EF6CCA9004F257A /* CustomPageViewController.swift in Sources */,
+				C7A1A2171F079AF2005CF910 /* PieChartWithSubData.swift in Sources */,
 				C7C2AF091EF6CC5A004F257A /* ConstraintPack.swift in Sources */,
 				C7CF31F31EF6B33200114EC1 /* BasicCoreMLwithImagesCollectionViewCell.swift in Sources */,
 				C7C2AF821EF6CD91004F257A /* CustomDismissAnimationController.swift in Sources */,
@@ -2318,9 +2356,11 @@
 				C7BF53501F058E7200F01E72 /* UIViewsContainerViewController.swift in Sources */,
 				C7BF53521F05AFD800F01E72 /* YellowSlideView.swift in Sources */,
 				C767866F1EF915E9005C159F /* BBCiPlayerTableViewController.swift in Sources */,
+				C7A1A2351F07B4F7005CF910 /* PieChartViewWithBezierPath.swift in Sources */,
 				C7C2AF3D1EF6CCB3004F257A /* ParallaxViewController.swift in Sources */,
 				C7C2AF7B1EF6CD8A004F257A /* AnimationControllerManager.swift in Sources */,
 				C7C2AF281EF6CC8C004F257A /* InspirationalFilmsCollectionViewCell.swift in Sources */,
+				C7CEB7A71F06FE0D00CC054B /* CirclePieView.swift in Sources */,
 				C7C2AF841EF6CD91004F257A /* CustomNavigationAnimationController.swift in Sources */,
 				C7C2AF6A1EF6CD64004F257A /* EmptyViewController.swift in Sources */,
 				C711FF261F016929005AAEA5 /* BBCiPlayerStretchyHeaderViewController.swift in Sources */,
@@ -2332,6 +2372,7 @@
 				C7CF31D41EF6B31E00114EC1 /* GoogLeNetPlaces.mlmodel in Sources */,
 				C7C2AE3C1EF6CA8D004F257A /* ColorChangeViewController.swift in Sources */,
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
+				C7CEB7A51F06FD9000CC054B /* PieChartViewViewController.swift in Sources */,
 				C7C2AF361EF6CCA1004F257A /* RootViewController.swift in Sources */,
 				C75144C21F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift in Sources */,
 				C7C2AF271EF6CC88004F257A /* InspirationalFilmsInfo.swift in Sources */,
@@ -2352,6 +2393,7 @@
 				C7C2AF6C1EF6CD64004F257A /* MetricViewController.swift in Sources */,
 				C7C2AEF51EF6CC0B004F257A /* AirbnbData.swift in Sources */,
 				C7C2AF2D1EF6CC97004F257A /* MultiSidedBarMenuControllerRight.swift in Sources */,
+				C7CEB7AD1F07059D00CC054B /* PieChartView.swift in Sources */,
 				C73977D21EEEFFBE005C96C8 /* pListRequestPermissions.swift in Sources */,
 				C703771C1EF5473A002E7D9B /* SearchBarTableViewCell.swift in Sources */,
 				C7C2AF561EF6CD03004F257A /* SlideShowViewController.swift in Sources */,
@@ -2369,6 +2411,7 @@
 				C7349DEC1EFC226B00B99AE6 /* UINavigationBar+Ext.swift in Sources */,
 				C70C154D1F0571B500CE9220 /* AnimatableSideMenuContainerViewController.swift in Sources */,
 				C7349E0A1EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift in Sources */,
+				C7CEB7AA1F07000500CC054B /* CirclePieIndicatorView.swift in Sources */,
 				C7C2AF5D1EF6CD14004F257A /* StorySmartiesViewController.swift in Sources */,
 				C7C2AF041EF6CC3C004F257A /* ButtonsTypesViewController.swift in Sources */,
 				C76786671EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift in Sources */,
@@ -2388,6 +2431,7 @@
 				C7C2AF7A1EF6CD7E004F257A /* ProductLine.swift in Sources */,
 				C7C2AF771EF6CD7E004F257A /* MediaTableViewCell.swift in Sources */,
 				C7C2AF341EF6CCA1004F257A /* NavigationViewController.swift in Sources */,
+				C7CEB7AF1F0709C600CC054B /* PieChartPageViewController.swift in Sources */,
 				C7C2AF471EF6CCD7004F257A /* Slide.swift in Sources */,
 				C7C2AF301EF6CC97004F257A /* NewsTableViewController.swift in Sources */,
 				C7EE7BFE1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift in Sources */,
@@ -2455,7 +2499,7 @@
 				C7C2AF151EF6CC68004F257A /* UIButton+Ext.swift in Sources */,
 				C7C2AF1B1EF6CC68004F257A /* UISearchBar+Ext.swift in Sources */,
 				C7C2AF121EF6CC68004F257A /* String+Ext.swift in Sources */,
-				C7C2AF131EF6CC68004F257A /* TableView+Ext.swift in Sources */,
+				C7C2AF131EF6CC68004F257A /* UITableView+Ext.swift in Sources */,
 				C7C2AF161EF6CC68004F257A /* UIColor+Ext.swift in Sources */,
 				C7C2AF1A1EF6CC68004F257A /* UIKit+Ext.swift in Sources */,
 				C7C2AF171EF6CC68004F257A /* UIImage+Ext.swift in Sources */,

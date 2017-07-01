@@ -167,6 +167,10 @@ public extension GameSequenceExtensions where Self.Iterator.Element: Hashable {
 
 public extension Array {
     
+    subscript (safe index: Int) -> Element? {
+        return indices ~= index ? self[index] : nil
+    }
+   
     func shuffled() -> [Element] {
         
         guard let list = (self as? [Array.Iterator.Element]), list.count > 0 else { return [] }

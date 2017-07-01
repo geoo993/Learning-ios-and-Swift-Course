@@ -51,8 +51,9 @@ class MainCollectionViewController: UICollectionViewController {
                             //"SimpleSpringDrawerViewController" : "SimpleSpringDrawerMain",
                             //"BBCiPlayerStretchyHeaderViewController" : "BBCiPlayerStretchyHeaderMain",
                             //"UIPickerViewController" : "UIPickerMain"
-                            "UIViewSlidesViewController" : "UIViewSlidesMain",
+                            //"UIViewSlidesViewController" : "UIViewSlidesMain",
                             //"AnimatableSideMenuContainerViewController" : "AnimatableSideMenuMain",
+                            "PieChartPageViewController" : "CirclePieViewMain"
                            ]
     
     //Mark: - Collection view 
@@ -97,7 +98,6 @@ class MainCollectionViewController: UICollectionViewController {
         
     }
  */
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

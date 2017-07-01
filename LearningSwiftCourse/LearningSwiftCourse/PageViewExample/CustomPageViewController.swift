@@ -32,7 +32,6 @@ class CustomPageViewController: UIPageViewController {
         
         // Create the first screen
         if let startingViewController = self.pageViewController(atIndex: pageIndex) {
-            
             setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
         }
         

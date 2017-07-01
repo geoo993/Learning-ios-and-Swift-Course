@@ -30,6 +30,33 @@ private class UIViewAnimationDelegate: NSObject, CAAnimationDelegate {
 
 public extension UIView {
     
+    public func shakeView(repeatCount: Float){
+        
+        let view = self
+        CATransaction.begin()
+        CATransaction.setCompletionBlock({
+            //view.isHidden = true
+        })
+        let shake = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.1
+        shake.repeatCount = repeatCount
+        shake.autoreverses = true
+        
+        let from_point = CGPoint(x: view.center.x - 5, y: view.center.y)
+        let from_value : NSValue = NSValue(cgPoint: from_point)
+        
+        let to_point = CGPoint(x: view.center.x + 5, y:view.center.y)
+        let to_value : NSValue = NSValue(cgPoint: to_point)
+        
+        shake.fromValue = from_value
+        shake.toValue = to_value
+        view.layer.add(shake, forKey: "position")
+        
+        //shake.delegate = self
+        
+        CATransaction.commit()
+    }
+    
     public func snapShotImage(withSize size: CGSize, opaque: Bool = false, offset :CGPoint = CGPoint.zero) -> UIImage {
         
         ///size, opaque, scale

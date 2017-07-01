@@ -19,6 +19,10 @@ public extension Int {
 }
 public extension Double {
     
+    public func format(f: String) -> String {
+        return NSString(format: "%\(f)f" as NSString, self) as String
+    }
+    
     public static func random(min: Double, max: Double) -> Double {
         
         let rand = Double(arc4random()) / Double(UINT32_MAX)
@@ -33,6 +37,12 @@ public extension Double {
         
     }
     
+}
+
+public extension Float {
+    var degreesToRadians : CGFloat {
+        return CGFloat(self) * CGFloat(Double.pi) / 180.0
+    }
 }
 
 public extension CGFloat {
