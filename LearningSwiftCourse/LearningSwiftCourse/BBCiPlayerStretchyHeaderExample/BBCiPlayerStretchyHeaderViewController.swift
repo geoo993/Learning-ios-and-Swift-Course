@@ -17,16 +17,10 @@ class BBCiPlayerStretchyHeaderViewController: UIViewController, UITableViewDeleg
         return .lightContent
     }
     
-    @IBAction func homebutton(_ sender: Any) {
-        dismiss(animated: true) { 
-            print("view controller dismissed, now going to home page")
-        }
-    }
-    
     @IBOutlet weak var tableView: BBCiPlayerStretchyTableView!
     
     // Full size of the drawer and also how much drawer is seen when open
-    fileprivate var headerHeight :CGFloat = 350
+    fileprivate var headerHeight :CGFloat = 354
     // How much is seen when closed (minimum 20 please)
     fileprivate var amountSeenWhenClosed : CGFloat = 64
     // How far the user has to drag to trigger the drawer to stay open or closed
@@ -54,7 +48,6 @@ class BBCiPlayerStretchyHeaderViewController: UIViewController, UITableViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,8 +76,8 @@ class BBCiPlayerStretchyHeaderViewController: UIViewController, UITableViewDeleg
         setupPanGesture()
         setupAnimator()
         shouldOpenPanel(false)
-        
     }
+    
     deinit {
         view.removeEverything()
         tableView = nil
@@ -102,9 +95,14 @@ extension BBCiPlayerStretchyHeaderViewController {
     }
     
     func setTableView (){
-        
+        //self.view.addSubview(tableView)
         let tableViewFrame = CGRect(origin: tableView.frame.origin, size: CGSize(width: screenWidth, height: headerHeight))
         tableView.frame = tableViewFrame
+        tableView.tableViewDissmissViewController = {
+            self.dismiss(animated: true) {
+                print("view controller dismissed, now going to home page")
+            }
+        }
     }
     
     func setupAnimator(){
@@ -246,7 +244,6 @@ extension BBCiPlayerStretchyHeaderViewController: UIDynamicAnimatorDelegate {
         isClosing = false
         tableView.contentOffset = CGPoint.zero
         activateDrag(with: isOpen )
-        
     }
     
     func dynamicAnimatorWillResume(_ animator: UIDynamicAnimator) {

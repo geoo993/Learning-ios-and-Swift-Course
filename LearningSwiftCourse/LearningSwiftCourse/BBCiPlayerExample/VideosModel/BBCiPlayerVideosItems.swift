@@ -84,6 +84,20 @@ struct BBCiPlayerVideosItems {
                 BBCAlba: #imageLiteral(resourceName: "BBC_Alba"),
                 S4C: #imageLiteral(resourceName: "bbc_s4c"),
             ]
+        static let allChannels : [(channel:BBCiPlayerVideosItems.Channels , image:UIImage)] = 
+            [
+                (BBCOne, #imageLiteral(resourceName: "bbconesmall")),
+                (BBCTwo,#imageLiteral(resourceName: "bbctwosmall")),
+                (BBCThree,#imageLiteral(resourceName: "bbcthreesmall")),
+                (BBCFour, #imageLiteral(resourceName: "bbcfoursmall")),
+                (BBCRadio1, #imageLiteral(resourceName: "bbcradio1small")),
+                (CBBC,#imageLiteral(resourceName: "bbccbbcsmall")),
+                (CBeeBies,#imageLiteral(resourceName: "cbeebiessmall")),
+                (BBCNews,#imageLiteral(resourceName: "bbcnewssmall")),
+                (BBCParliament,#imageLiteral(resourceName: "bbcparliementsmall")),
+                (BBCAlba,#imageLiteral(resourceName: "bbcalbasmall")),
+                (S4C,#imageLiteral(resourceName: "bbcs4csmall")),
+                ]
     }
     
     enum Caption : String {

@@ -46,6 +46,8 @@
 		C7349DEC1EFC226B00B99AE6 /* UINavigationBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349DEB1EFC226B00B99AE6 /* UINavigationBar+Ext.swift */; };
 		C7349E0A1EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349E091EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift */; };
 		C7349E0C1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349E0B1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift */; };
+		C73585811F09259000B33B55 /* ButtonWithImageAndTextMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73585801F09259000B33B55 /* ButtonWithImageAndTextMain.storyboard */; };
+		C73585831F0925AD00B33B55 /* ButtonWithImageAndTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73585821F0925AD00B33B55 /* ButtonWithImageAndTextViewController.swift */; };
 		C73977D21EEEFFBE005C96C8 /* pListRequestPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */; };
 		C73DF6D51EFC39FF00DAB515 /* UIResponder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */; };
 		C75144C21F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */; };
@@ -256,6 +258,8 @@
 		C7F2EE441F0837CB00655CCC /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F2EE1F1F0837BC00655CCC /* RxCocoa.framework */; };
 		C7F2EE451F0837CB00655CCC /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7F2EE1F1F0837BC00655CCC /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7F33C4A1EF92E9C0096E372 /* BBCiPlayerVideosItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F33C491EF92E9C0096E372 /* BBCiPlayerVideosItems.swift */; };
+		C7FA25551F0911E900446935 /* BBCiPlayerStretchyCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FA25541F0911E900446935 /* BBCiPlayerStretchyCategoriesCollectionViewCell.swift */; };
+		C7FA25781F0911FE00446935 /* BBCiPlayerStretchyChannelsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FA25771F0911FE00446935 /* BBCiPlayerStretchyChannelsCollectionViewCell.swift */; };
 		C7FC254B1F0501DC00959765 /* UIPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FC254A1F0501DC00959765 /* UIPickerViewController.swift */; };
 		C7FC254D1F05020200959765 /* UIPickerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FC254C1F05020200959765 /* UIPickerMain.storyboard */; };
 /* End PBXBuildFile section */
@@ -658,6 +662,8 @@
 		C7349DEB1EFC226B00B99AE6 /* UINavigationBar+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Ext.swift"; sourceTree = "<group>"; };
 		C7349E091EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentTableViewController.swift; sourceTree = "<group>"; };
 		C7349E0B1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentTableViewCell.swift; sourceTree = "<group>"; };
+		C73585801F09259000B33B55 /* ButtonWithImageAndTextMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ButtonWithImageAndTextMain.storyboard; sourceTree = "<group>"; };
+		C73585821F0925AD00B33B55 /* ButtonWithImageAndTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithImageAndTextViewController.swift; sourceTree = "<group>"; };
 		C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pListRequestPermissions.swift; sourceTree = "<group>"; };
 		C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Ext.swift"; sourceTree = "<group>"; };
 		C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerStretchyTableView.swift; sourceTree = "<group>"; };
@@ -865,6 +871,8 @@
 		C7EE7BFD1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerCustomViewController.swift; sourceTree = "<group>"; };
 		C7F2EDFE1F0837BC00655CCC /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
 		C7F33C491EF92E9C0096E372 /* BBCiPlayerVideosItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerVideosItems.swift; sourceTree = "<group>"; };
+		C7FA25541F0911E900446935 /* BBCiPlayerStretchyCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerStretchyCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7FA25771F0911FE00446935 /* BBCiPlayerStretchyChannelsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerStretchyChannelsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7FC254A1F0501DC00959765 /* UIPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewController.swift; sourceTree = "<group>"; };
 		C7FC254C1F05020200959765 /* UIPickerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIPickerMain.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1014,6 +1022,7 @@
 				C76786441EF90DA2005C159F /* BBCiPlayerExample */,
 				C7E773E61F0153A100440E05 /* BBCiPlayerStretchyHeaderExample */,
 				C7C2AEC81EF6CB63004F257A /* ButtonsExample */,
+				C735855E1F09256200B33B55 /* ButtonWithImageAndTextExample */,
 				C7C2AEDD1EF6CB63004F257A /* CarouselViewsExample */,
 				C7CEB7851F06FD5800CC054B /* PieChartViewExample */,
 				C7C2AE381EF6CA80004F257A /* ColorsExample */,
@@ -1079,6 +1088,15 @@
 				C72E27C61E9ED9EB0064E01B /* Info.plist */,
 			);
 			path = LearningSwiftCourseUITests;
+			sourceTree = "<group>";
+		};
+		C735855E1F09256200B33B55 /* ButtonWithImageAndTextExample */ = {
+			isa = PBXGroup;
+			children = (
+				C73585801F09259000B33B55 /* ButtonWithImageAndTextMain.storyboard */,
+				C73585821F0925AD00B33B55 /* ButtonWithImageAndTextViewController.swift */,
+			);
+			path = ButtonWithImageAndTextExample;
 			sourceTree = "<group>";
 		};
 		C7560E101EFD060900243172 /* Cells */ = {
@@ -1739,6 +1757,8 @@
 				C7E774031F01542600440E05 /* BBCiPlayerStretchyHeaderMain.storyboard */,
 				C711FF251F016929005AAEA5 /* BBCiPlayerStretchyHeaderViewController.swift */,
 				C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */,
+				C7FA25541F0911E900446935 /* BBCiPlayerStretchyCategoriesCollectionViewCell.swift */,
+				C7FA25771F0911FE00446935 /* BBCiPlayerStretchyChannelsCollectionViewCell.swift */,
 			);
 			path = BBCiPlayerStretchyHeaderExample;
 			sourceTree = "<group>";
@@ -2281,6 +2301,7 @@
 				C71678E21EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard in Resources */,
 				C72AF49C1F07CCB80023F014 /* ImagePickerCoreMLViewMain.storyboard in Resources */,
 				C7C2AF381EF6CCA9004F257A /* PageViewMain.storyboard in Resources */,
+				C73585811F09259000B33B55 /* ButtonWithImageAndTextMain.storyboard in Resources */,
 				C7AE48901EA5327300C2096E /* Main.storyboard in Resources */,
 				C7C2AF4C1EF6CCD7004F257A /* slide18.gif in Resources */,
 				C70F09E91F084EDE0049BACC /* buttonOn.json in Resources */,
@@ -2386,6 +2407,7 @@
 				C767868D1EF91600005C159F /* BBCiPlayerTableViewCell.swift in Sources */,
 				C70557E91EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift in Sources */,
 				C7C2AF0A1EF6CC5C004F257A /* CrossPlatformDefines.swift in Sources */,
+				C7FA25781F0911FE00446935 /* BBCiPlayerStretchyChannelsCollectionViewCell.swift in Sources */,
 				C7C2AEFD1EF6CC17004F257A /* AirbnbNavigationController.swift in Sources */,
 				C7C2AF2C1EF6CC97004F257A /* MultiSidedBarMenuControllerLeft.swift in Sources */,
 				C72AF49D1F07CCBA0023F014 /* Inceptionv3.mlmodel in Sources */,
@@ -2397,6 +2419,7 @@
 				C7C2AF5C1EF6CD14004F257A /* StorySmartiesScrollMenuViewController.swift in Sources */,
 				C70C154E1F0571B700CE9220 /* AnimatableSideMenuItemCell.swift in Sources */,
 				C7C2AF7D1EF6CD8A004F257A /* TopMenuNavigationController.swift in Sources */,
+				C73585831F0925AD00B33B55 /* ButtonWithImageAndTextViewController.swift in Sources */,
 				C7BF534A1F058D9200F01E72 /* RedSlideView.swift in Sources */,
 				C7C2AF201EF6CC71004F257A /* ImageCropperViewController.swift in Sources */,
 				C7C2AF291EF6CC8C004F257A /* InspirationalFilmsLabelsScrollView.swift in Sources */,
@@ -2488,6 +2511,7 @@
 				C7C2AF471EF6CCD7004F257A /* Slide.swift in Sources */,
 				C7C2AF301EF6CC97004F257A /* NewsTableViewController.swift in Sources */,
 				C7EE7BFE1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift in Sources */,
+				C7FA25551F0911E900446935 /* BBCiPlayerStretchyCategoriesCollectionViewCell.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
 				C7C2AF521EF6CCF1004F257A /* SideBarMenuTableViewController.swift in Sources */,
 				C7C2AF5E1EF6CD24004F257A /* SummaryView.swift in Sources */,

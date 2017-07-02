@@ -7,22 +7,63 @@
 //
 
 import UIKit
+import LearningSwiftCourseExtensions
 
 class BBCiPlayerStretchyTableView: UITableView {
 
+    var tableViewDissmissViewController : () -> Void = {}
+    
     @IBOutlet weak var topNavBar : UINavigationBar!
     @IBOutlet weak var bottomNavBar : UINavigationBar!
     @IBOutlet weak var bottomNavBarUpArrowIcon : UIImageView!
-    @IBOutlet weak var categoriesScrollView : UIScrollView!
-    @IBOutlet weak var channelsScrollView : UIScrollView!
     
-    let spacing : CGFloat = 10
+    @IBOutlet weak var categoriesCollectionView : UICollectionView!
+    @IBOutlet weak var channelsCollectionView : UICollectionView!
+    
+    @IBOutlet weak var homebutton: UIButton!
+    @IBAction func homebuttonAction(_ sender: UIButton) {
+        updateButtonColor(with: sender)
+        tableViewDissmissViewController()
+    }
+    
+    @IBOutlet weak var tvguidebutton: UIButton!
+    @IBAction func tvguidebuttonAction(_ sender: UIButton) {
+      updateButtonColor(with: sender)
+    }
+    
+    @IBOutlet weak var programmesbutton: UIButton!
+    @IBAction func programmesbuttonAction(_ sender: UIButton) {
+       updateButtonColor(with: sender)
+    }
+    
+    @IBOutlet weak var downloadsbutton: UIButton!
+    @IBAction func downloadsbuttonAction(_ sender: UIButton) {
+        updateButtonColor(with: sender)
+    }
+    
+    func updateButtonColor(with sender: UIButton){
+        
+        let buttons =  getAllTopButtons()
+        for button in buttons {
+            button.tintColor = UIColor.white
+            button.setTitleColor(.white, for: .normal)
+        }
+        sender.tintColor = UIColor.bbciplayerPink()
+        sender.setTitleColor(.bbciplayerPink(), for: .normal)
+    }
+    
+    var allTopButtons = [UIButton]()
+    func getAllTopButtons () -> [UIButton]
+    {
+        allTopButtons = [homebutton,tvguidebutton,programmesbutton,downloadsbutton]
+        return allTopButtons
+    }
+    
+    
     let categoriesItems = BBCiPlayerVideosItems.Categories.allCategories
-    let channelsItems = {
-        return BBCiPlayerVideosItems.Channels
-        .allChannelsWithLogo
-        .map{ $0.key }
-    }()
+    let channelsItems =  BBCiPlayerVideosItems.Channels.allChannels
+    var categoriesLabels = [UILabel]()
+    var collectionViewSpacing : CGFloat = 30
     
     /*
      override init(frame: CGRect) {
@@ -38,15 +79,8 @@ class BBCiPlayerStretchyTableView: UITableView {
    
      override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
-        categoriesScrollView.delegate = self
-        channelsScrollView.delegate = self
         
         setupNavBars()
-        
-        setCategoriesScrollViewElements()
-        setChannelsScrollViewElements()
         
      }
      
@@ -59,7 +93,6 @@ class BBCiPlayerStretchyTableView: UITableView {
         super.layoutSubviews()
         
         updateBottomNavBarVisibility()
-        
      }
      
     func setupNavBars(){
@@ -78,74 +111,129 @@ class BBCiPlayerStretchyTableView: UITableView {
         bottomNavBarUpArrowIcon.alpha = abs(difference)
         bottomNavBar.isHidden = (bottomNavBar.alpha < 0.05)
     }
-    
-    func setCategoriesScrollViewElements(){
-        
-        let elementwidth : CGFloat = 100
-        let elementheight = categoriesScrollView.frame.size.height
-        
-        categoriesScrollView.removeSubviews()
-        
-        for i in 0..<categoriesItems.count {
-            
-            let element = UILabel(frame: CGRect(x: 0, y: 0, width: elementwidth, height: elementheight ))
-            
-            element.frame.origin.x = spacing + CGFloat(i) * elementwidth
-            element.contentMode = .center
-            element.text = categoriesItems[i].rawValue
-            element.clipsToBounds = true
-            element.layer.masksToBounds = true
-            element.font = element.font.withSize(12)
-            
-            categoriesScrollView.addSubview(element)
-            
-        }
-        
-        //calculate the content width
-        let contentWidth =  elementwidth * CGFloat(categoriesItems.count)
-        
-        //set scrollView content size
-        categoriesScrollView.contentSize = CGSize(width: contentWidth, height: elementheight)
-        
-    }
-    
-    func setChannelsScrollViewElements(){
-        
-        let elementwidth : CGFloat = 100
-        let elementheight = channelsScrollView.frame.size.height
-        
-        channelsScrollView.removeSubviews()
-        
-        for i in 0..<channelsItems.count {
-            
-            let element = UILabel(frame: CGRect(x: 0, y: 0, width: elementwidth, height: elementheight ))
-            
-            element.frame.origin.x = spacing + CGFloat(i) * elementwidth
-            element.contentMode = .center
-            element.text = channelsItems[i].rawValue
-            element.clipsToBounds = true
-            element.layer.masksToBounds = true
-            element.font = element.font.withSize(12)
-            
-            channelsScrollView.addSubview(element)
-            
-        }
-        
-        //calculate the content width
-        let contentWidth = elementwidth * CGFloat(channelsItems.count)
-        
-        //set scrollView content size
-        channelsScrollView.contentSize = CGSize(width: contentWidth, height: elementheight)
-        
-    }
-    
-    
+
     deinit {
         topNavBar = nil
         bottomNavBar = nil
         bottomNavBarUpArrowIcon = nil
-        categoriesScrollView = nil
-        channelsScrollView = nil
+    }
+}
+
+
+// MARK: UICollectionViewDataSource
+extension BBCiPlayerStretchyTableView : UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of items
+        if collectionView == categoriesCollectionView{
+            return categoriesItems.count
+        }
+        
+        if collectionView == channelsCollectionView{
+            return channelsItems.count
+        }
+        
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if collectionView == categoriesCollectionView{
+            guard let categorycell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryid", for: indexPath) as? BBCiPlayerStretchyCategoriesCollectionViewCell
+                else {
+                    return BBCiPlayerStretchyCategoriesCollectionViewCell()
+            }
+            categorycell.categoryLabel.text = categoriesItems[indexPath.row].rawValue
+            return categorycell
+        }
+        
+        if collectionView == channelsCollectionView{
+            guard let channelcell = collectionView.dequeueReusableCell(withReuseIdentifier: "channelid", for: indexPath) as? BBCiPlayerStretchyChannelsCollectionViewCell
+                else {
+                    return BBCiPlayerStretchyChannelsCollectionViewCell()
+            }
+            
+            channelcell.channelLabel.text = ""//channelsItems[indexPath.row].channel.rawValue
+            channelcell.channelImage.image = channelsItems[indexPath.row].image
+            return channelcell
+        }
+        
+        return UICollectionViewCell()
+    }
+
+    // MARK: UICollectionViewDelegate
+
+
+    // Uncomment this method to specify if the specified item should be highlighted during tracking
+    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        collectionView.reloadData()
+        return true
+    }
+
+    // Uncomment this method to specify if the specified item should be selected
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        collectionView.reloadData()
+        return true
+    }
+
+    //did select item (cell) with tap gesture
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        if collectionView == categoriesCollectionView{
+            guard let categorycell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryid", for: indexPath) as? BBCiPlayerStretchyCategoriesCollectionViewCell
+                else { return }
+            categorycell.specialHighlightedArea = UIView()
+            categorycell.contentView.addSubview(categorycell.specialHighlightedArea!)
+        }
+        
+        if collectionView == channelsCollectionView{
+            guard let channelcell = collectionView.dequeueReusableCell(withReuseIdentifier: "channelid", for: indexPath) as? BBCiPlayerStretchyChannelsCollectionViewCell
+                else { return }
+            channelcell.specialHighlightedArea = UIView()
+            channelcell.contentView.addSubview(channelcell.specialHighlightedArea!)
+        }
+        
+        
+        collectionView.reloadData()
+    }
+
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension BBCiPlayerStretchyTableView : UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize { 
+        
+        let textFont = UIFont.init(name: FamilyName.arialHebrewBold.rawValue , size: 14)
+    
+        let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout 
+        let itemWidth = layout?.itemSize.width ?? 100
+        let itemHeight = layout?.itemSize.height ?? 44
+        
+        if collectionView == categoriesCollectionView{
+            //let size: CGSize = categoriesItems[indexPath.row].rawValue.size(withAttributes: [NSAttributedStringKey.font: textFont])
+            let extimatedWidth = categoriesItems[indexPath.row].rawValue.getWidth(constrainedBy: itemHeight, with: textFont!)
+            let categoryWidth = collectionViewSpacing + extimatedWidth //size.width
+            return CGSize(width: categoryWidth, height: itemHeight)
+        }
+        
+        if collectionView == channelsCollectionView{
+            //let size: CGSize = channelsItems[indexPath.row].rawValue.size(withAttributes: [NSAttributedStringKey.font: textFont])
+            let extimatedWidth = channelsItems[indexPath.row].channel.rawValue.getWidth(constrainedBy: itemHeight, with: textFont!)
+            let channelWidth = collectionViewSpacing + extimatedWidth //size.width
+            return CGSize(width: channelWidth, height: itemHeight)
+        }
+        
+        return CGSize(width: itemWidth , height: itemHeight) 
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero//contentInset
     }
 }
 
@@ -155,22 +243,14 @@ extension BBCiPlayerStretchyTableView : UIScrollViewDelegate{
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         //update the page controls with the current page number
         
-        if scrollView == categoriesScrollView{
+        if scrollView == categoriesCollectionView{
             print("categories scrollview")
         }
         
-        if scrollView == channelsScrollView{
+        if scrollView == channelsCollectionView{
             print("channels scrollview")
         }
-        
-//        if let categoriesScrollview = (scrollView) as? CategoriesScrollview {
-//            
-//        }
-//        
-//        if let channelsScrollview = (scrollView) as? ChannelsScrollView {
-//            
-//        }
-        
+
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
@@ -181,4 +261,5 @@ extension BBCiPlayerStretchyTableView : UIScrollViewDelegate{
     }
     
 }
+ 
 

@@ -29,6 +29,59 @@ extension String {
         return path
     }
     
+    // create a function for estimated string...
+    public func estimatedStringFrame (with font :UIFont) -> CGRect {
+        
+        let size = CGSize(width: UIScreen.main.bounds.size.width - 20, height: 1000)
+        
+        let nsstring = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        
+        return NSString(string: self).boundingRect(with: size, options: nsstring, attributes: [NSAttributedStringKey.font : font], context: nil)
+    }
+
+    
+    public func getFontSize(inFrame: CGRect, desiredFontSize : Int, reduceBy: CGFloat) -> CGFloat
+    {
+        let text = self
+        var tempHeight : CGFloat = 0.0
+        for i in 0..<desiredFontSize{
+            
+            let font = UIFont.systemFont(ofSize: CGFloat(i))
+            let labelSizeWidth = inFrame.size.width
+            let labelSizeHeight = inFrame.size.height
+            let textAttributedFont = [NSAttributedStringKey.font: font]
+            let textNSString : NSString = (text as NSString)
+            let size = textNSString.boundingRect(with: CGSize(width: labelSizeWidth, height: CGFloat.greatestFiniteMagnitude), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: textAttributedFont, context: nil).size
+            
+            let sizeHeight = size.height 
+            if (sizeHeight > labelSizeHeight){
+                tempHeight = CGFloat(i)
+                break;
+            }else{
+                tempHeight = CGFloat(desiredFontSize)
+            }
+        }
+        
+        return tempHeight - reduceBy
+        
+        
+    }
+    
+    public func getHeight(constrainedBy width: CGFloat, with font: UIFont) -> CGFloat {
+        let constrainedSize = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constrainedSize, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
+        
+        return boundingBox.height
+    }
+    
+    
+    public func getWidth(constrainedBy height: CGFloat, with font: UIFont) -> CGFloat {
+        let constrainedSize = CGSize(width: .greatestFiniteMagnitude, height: height)
+        let boundingBox = self.boundingRect(with: constrainedSize, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
+        
+        return boundingBox.width
+    }
+    
     
 }
 
