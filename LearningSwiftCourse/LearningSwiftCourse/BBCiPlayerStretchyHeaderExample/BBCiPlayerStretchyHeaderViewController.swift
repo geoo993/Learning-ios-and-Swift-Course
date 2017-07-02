@@ -10,13 +10,14 @@
 import UIKit
 import Cartography
 
-class BBCiPlayerStretchyHeaderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
+class BBCiPlayerStretchyHeaderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //Mark: - Status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
+    ////  * HEADER ITEMS  BEGIN  * ////
     @IBOutlet weak var tableView: BBCiPlayerStretchyTableView!
     
     // Full size of the drawer and also how much drawer is seen when open
@@ -45,6 +46,8 @@ class BBCiPlayerStretchyHeaderViewController: UIViewController, UITableViewDeleg
     var panGesture : UIPanGestureRecognizer!
     var isOpen : Bool = false
     var isClosing : Bool = false
+    ////  * HEADER ITEMS  END * ////
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +57,7 @@ class BBCiPlayerStretchyHeaderViewController: UIViewController, UITableViewDeleg
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 0
     }
@@ -70,14 +74,7 @@ class BBCiPlayerStretchyHeaderViewController: UIViewController, UITableViewDeleg
         
         initialSetup()
     }
-    
-    func initialSetup(){
-        setTableView()
-        setupPanGesture()
-        setupAnimator()
-        shouldOpenPanel(false)
-    }
-    
+   
     deinit {
         view.removeEverything()
         tableView = nil
@@ -89,15 +86,26 @@ class BBCiPlayerStretchyHeaderViewController: UIViewController, UITableViewDeleg
 // Mark - Behaviours
 extension BBCiPlayerStretchyHeaderViewController {
     
+    
+    func initialSetup(){
+        setHeaderTableView()
+        setupHeaderPanGesture()
+        setupHeaderAnimator()
+        shouldOpenPanelHeader(false)
+    }
+    
     func activateDrag(with drag : Bool) {
         tableView.isScrollEnabled = drag
         //tableView.isSpringLoaded = drag
     }
     
-    func setTableView (){
+    func setHeaderTableView (){
         //self.view.addSubview(tableView)
         let tableViewFrame = CGRect(origin: tableView.frame.origin, size: CGSize(width: screenWidth, height: headerHeight))
         tableView.frame = tableViewFrame
+        tableView.tableViewShouldOpenPanel = {
+            self.shouldOpenPanelHeader(true)
+        }
         tableView.tableViewDissmissViewController = {
             self.dismiss(animated: true) {
                 print("view controller dismissed, now going to home page")
@@ -105,7 +113,7 @@ extension BBCiPlayerStretchyHeaderViewController {
         }
     }
     
-    func setupAnimator(){
+    func setupHeaderAnimator(){
         animator = UIDynamicAnimator(referenceView: self.view)
         animator?.delegate = self
         
@@ -152,7 +160,7 @@ extension BBCiPlayerStretchyHeaderViewController {
         //self.tableView.roundCorners([.topRight, .topLeft], radius: 0)
     }
   
-    func shouldOpenPanel(_ open:Bool)
+    func shouldOpenPanelHeader(_ open:Bool)
     {
         if open {
             snapToBottom( 2.0)
@@ -170,7 +178,7 @@ extension BBCiPlayerStretchyHeaderViewController {
         panGesture = nil
     }
     
-    func setupPanGesture(){
+    func setupHeaderPanGesture(){
         // Add slide to open or close
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.handlePanGesture))
         panGesture?.cancelsTouchesInView = false
@@ -218,16 +226,16 @@ extension BBCiPlayerStretchyHeaderViewController {
         //if fabsf(Float(velocity.y)) > Float(triggerPoint) {
         if (panMovement > triggerPoint) {
             if velocity.y < 0 {
-                shouldOpenPanel(false)
+                shouldOpenPanelHeader(false)
             }else{
-                shouldOpenPanel(true)
+                shouldOpenPanelHeader(true)
             }
         }else{
             
             if self.tableView.frame.origin.y > (headerHeight / 2) {
-                shouldOpenPanel(true)
+                shouldOpenPanelHeader(true)
             }else{
-                shouldOpenPanel(false)
+                shouldOpenPanelHeader(false)
             }
             
         }
@@ -338,8 +346,8 @@ extension BBCiPlayerStretchyHeaderViewController {
             if (panMovement > triggerPoint && goingUp){
                 latestContentOffset = lastContentOffset
                 //activateDrag(with: false )
-                setupPanGesture()
-                shouldOpenPanel(false)
+                setupHeaderPanGesture()
+                shouldOpenPanelHeader(false)
                 isClosing = true
             }
             

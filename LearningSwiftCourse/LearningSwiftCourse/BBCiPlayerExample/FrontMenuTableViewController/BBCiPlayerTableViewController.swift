@@ -21,6 +21,39 @@ import RxSwift
 
 class BBCiPlayerTableViewController: UIViewController {
     
+    ////  * HEADER ITEMS  BEGIN  * ////
+    @IBOutlet weak var headerTableView: BBCiPlayerStretchyTableView!
+    
+    // Full size of the drawer and also how much drawer is seen when open
+    fileprivate var headerHeight :CGFloat = 354
+    // How much is seen when closed (minimum 20 please)
+    fileprivate var amountSeenWhenClosed : CGFloat = 62
+    // How far the user has to drag to trigger the drawer to stay open or closed
+    fileprivate var triggerPoint : CGFloat = 50
+    //screen width
+    fileprivate var screenWidth : CGFloat = {
+        return UIScreen.main.bounds.width
+    }()
+    //screen height
+    fileprivate var screenHeight : CGFloat = {
+        return UIScreen.main.bounds.height
+    }()
+    
+    var latestContentOffset = CGPoint.zero
+    var lastContentOffset = CGPoint.zero
+    var lastContentOffsetWhenSpringEnabled = CGPoint.zero
+    var animator : UIDynamicAnimator? = nil
+    var containerBoundary : UICollisionBehavior!
+    var snapBehavior : UISnapBehavior!
+    var dynamicItemBehavior : UIDynamicItemBehavior!
+    var gravityBehavior : UIGravityBehavior!
+    var panGesture : UIPanGestureRecognizer!
+    var isOpen : Bool = false
+    var isClosing : Bool = false
+    ////  * HEADER ITEMS  END * ////
+    
+    
+    
     //("BBC ONE","Doctor Who","10 programmes"), 
     //("BBC ONE","The Met: Policing London","5 episodes"), 
     //("BBC THREE","Can't Cope","Won't Cope"), 
@@ -58,7 +91,7 @@ class BBCiPlayerTableViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.bbciplayerDark()
@@ -75,7 +108,10 @@ class BBCiPlayerTableViewController: UIViewController {
         addBBCIplayerLogo()
         setupItems()
 
-        self.tableView.layoutSubviews()
+        initialHeaderSetup()
+        
+        tableView.layoutSubviews()
+        
     }
     
     func addBBCIplayerLogo(){
@@ -143,10 +179,13 @@ class BBCiPlayerTableViewController: UIViewController {
      */ 
 
     deinit {
+        view.removeEverything()
         navBar = nil
         navItem = nil
         tableView = nil
+        headerTableView = nil
         firstHeaderViewSlideShowContainer = nil
+        print("BBC iplayer view controller is \(#function)")
     }
 }
 
@@ -155,15 +194,29 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        
+        if tableView == headerTableView {
+            return 0
+        }
+        
         return mainSectionsItems.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if tableView == headerTableView {
+            return 0
+        }
+        
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if tableView == headerTableView {
+            return UITableViewCell()
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "iplayerTableViewCell", for: indexPath)
             as! BBCiPlayerTableViewCell
         //cell.tag = indexPath.section
@@ -186,6 +239,10 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
+        if tableView == headerTableView {
+            return nil
+        }
+        
         let sectionHeaderFrame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: cellHeaderHeight)
         let sectionHeader = UIView(frame: sectionHeaderFrame)
         
@@ -198,7 +255,6 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
         sectionHeaderButton.tag = section
         sectionHeaderButton.addTarget(self, action: #selector(self.sectionHeaderButtonAction(_:)), for: .touchUpInside)
         sectionHeader.addSubview(sectionHeaderButton)
-        
         
         return sectionHeader
     }
@@ -297,10 +353,18 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        if tableView == headerTableView {
+            return 0
+        }
+        
         return cellHeaderHeight // section 1 and above have 50 section height */
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if tableView == headerTableView {
+            return 0
+        }
         return CGFloat.leastNormalMagnitude
     }
    
@@ -309,6 +373,10 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if tableView == headerTableView {
+            return 0
+        }
+        
         let numberOfItemsInCell = mainMenuData[indexPath.section].count
         let inPairs : CGFloat = CGFloat(numberOfItemsInCell) / CGFloat(2.0)
         let inPairsRounded = inPairs.rounded(.toNearestOrAwayFromZero)
@@ -318,3 +386,269 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
 
     
 }
+
+
+// Mark - Behaviours
+extension BBCiPlayerTableViewController: UIGestureRecognizerDelegate  {
+    
+    
+    func initialHeaderSetup(){
+        setHeaderTableView()
+        setupHeaderPanGesture()
+        setupHeaderAnimator()
+        shouldOpenPanelHeader(false)
+    }
+    
+    func activateDrag(with drag : Bool) {
+        headerTableView.isScrollEnabled = drag
+        //headerTableView.isSpringLoaded = drag
+    }
+    
+    func setHeaderTableView (){
+        view.addSubview(headerTableView)
+        let tableViewFrame = CGRect(origin: headerTableView.frame.origin, size: CGSize(width: screenWidth, height: headerHeight))
+        headerTableView.frame = tableViewFrame
+        headerTableView.tableViewShouldOpenPanel = {
+            self.shouldOpenPanelHeader(true)
+        }
+        headerTableView.tableViewDissmissViewController = {
+            self.dismiss(animated: true) {
+                print("view controller dismissed, now going to home page")
+            }
+        }
+    }
+    
+    func setupHeaderAnimator(){
+        animator = UIDynamicAnimator(referenceView: view)
+        animator?.delegate = self
+        
+        setupDynamicItemBehavior()
+        setupGravityBehavior()
+        setupContainerBoundary()
+        configureContainerBoundary()
+        animator?.addBehavior(gravityBehavior)
+        animator?.addBehavior(dynamicItemBehavior)
+        animator?.addBehavior(containerBoundary)
+        
+    }
+    
+    func setupDynamicItemBehavior (){
+        dynamicItemBehavior = UIDynamicItemBehavior(items: [headerTableView])
+        dynamicItemBehavior.resistance = 0
+        dynamicItemBehavior.elasticity = 0
+        dynamicItemBehavior.allowsRotation = false
+    }
+    func setupGravityBehavior (){
+        gravityBehavior = UIGravityBehavior(items: [headerTableView])
+        gravityBehavior.gravityDirection = CGVector(dx: 0, dy: -1)
+    }
+    func setupContainerBoundary (){
+        containerBoundary = UICollisionBehavior(items: [headerTableView])
+    }
+    
+    func configureContainerBoundary (){
+        let upperContainerBoundary = (-headerHeight + amountSeenWhenClosed)
+        containerBoundary.addBoundary(withIdentifier: ("upperBoundary" as NSCopying) , from: CGPoint(x:0,y:upperContainerBoundary), to: CGPoint(x:screenWidth,y:upperContainerBoundary))
+        
+        let lowerContainerBoundary = headerHeight + 20
+        containerBoundary.addBoundary(withIdentifier: ("lowerBoundary" as NSCopying) , from: CGPoint(x:0,y:lowerContainerBoundary), to: CGPoint(x:screenWidth,y:lowerContainerBoundary))
+        
+    }
+    
+    func snapToTop(_ gravityY: CGFloat){
+        gravityBehavior.gravityDirection = CGVector(dx: 0, dy: -gravityY)
+        //self.tableView.roundCorners([.topRight, .topLeft], radius: 10)
+    }
+    
+    func snapToBottom(_ gravityY:CGFloat){
+        gravityBehavior.gravityDirection = CGVector(dx: 0, dy: gravityY)
+        //self.tableView.roundCorners([.topRight, .topLeft], radius: 0)
+    }
+    
+    func shouldOpenPanelHeader(_ open:Bool)
+    {
+        if open {
+            snapToBottom( 2.0)
+            removePanGestures()
+            activateDrag(with: open )
+        }else{
+            snapToTop( 2.0 )
+        }
+    }
+    
+    func removePanGestures(){
+        // Clean up existing pan recognizers
+        panGesture.isEnabled = false
+        headerTableView.removeGestureRecognizer(panGesture)
+        panGesture = nil
+    }
+    
+    func setupHeaderPanGesture(){
+        // Add slide to open or close
+        panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
+        panGesture?.cancelsTouchesInView = false
+        headerTableView.addGestureRecognizer(panGesture)
+    }
+    
+    @objc func handlePanGesture(pan: UIPanGestureRecognizer) {
+        
+        let velocity = pan.velocity(in: view).y
+        var movement = headerTableView.frame
+        movement.origin.x = 0
+        movement.origin.y = movement.origin.y + (velocity * 0.04)
+        
+        switch pan.state {
+        case .began:
+            break
+        case .changed:
+            
+            if (snapBehavior != nil) {
+                animator?.removeBehavior(snapBehavior)
+            }
+            snapBehavior = UISnapBehavior(item: headerTableView, snapTo: CGPoint(x: movement.midX, y: movement.midY))
+            animator?.addBehavior(snapBehavior)
+            break
+        case .ended:
+            panGestureEnded()
+            break
+        default:
+            break
+        }
+        
+    }
+    
+    func panGestureEnded(){
+        
+        if (snapBehavior != nil) {
+            animator?.removeBehavior(snapBehavior)
+        }
+        let velocity = dynamicItemBehavior.linearVelocity(for: headerTableView)
+        
+        let panOffset = panGesture.translation(in: headerTableView)
+        let panMovement: CGFloat = abs(panOffset.y)
+        
+        
+        //if fabsf(Float(velocity.y)) > Float(triggerPoint) {
+        if (panMovement > triggerPoint) {
+            if velocity.y < 0 {
+                shouldOpenPanelHeader(false)
+            }else{
+                shouldOpenPanelHeader(true)
+            }
+        }else{
+            
+            if headerTableView.frame.origin.y > (headerHeight / 2) {
+                shouldOpenPanelHeader(true)
+            }else{
+                shouldOpenPanelHeader(false)
+            }
+            
+        }
+        
+    }
+    
+}
+
+// Mark - UIDynamicAnimatorDelegate
+extension BBCiPlayerTableViewController: UIDynamicAnimatorDelegate {
+    
+    func dynamicAnimatorDidPause(_ animator: UIDynamicAnimator) {
+        isOpen = (headerTableView.frame.origin.y > 0 )
+        isClosing = false
+        headerTableView.contentOffset = CGPoint.zero
+        activateDrag(with: isOpen )
+    }
+    
+    func dynamicAnimatorWillResume(_ animator: UIDynamicAnimator) {
+    }
+}
+
+
+// Mark - TableView Scroll Delegate and Datasource
+extension BBCiPlayerTableViewController {
+  
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if scrollView == headerTableView {
+            
+            if isOpen == false {
+                scrollView.contentOffset = CGPoint.zero
+            }
+            
+            if isOpen {
+                
+                let currentOffset = scrollView.contentOffset;
+                if (currentOffset.y > lastContentOffsetWhenSpringEnabled.y && currentOffset.y < 0 && isClosing == false)
+                {
+                    // Upward
+                    
+                    //make sure offset is at zero
+                    UIView.animate(withDuration: 0.5,
+                                   delay: 0.0,
+                                   usingSpringWithDamping: 0.9,
+                                   initialSpringVelocity: 0.6,
+                                   options: .beginFromCurrentState,
+                                   animations: { [weak self] () -> Void in
+                                    guard let this = self else { return }
+                                    scrollView.contentOffset = CGPoint.zero
+                                    this.headerTableView.contentOffset = CGPoint.zero
+                                    this.headerTableView.layoutIfNeeded()
+                                    
+                        }, completion: { (completed) -> Void in
+                            scrollView.contentOffset = CGPoint.zero
+                    })
+                    
+                    
+                }else if isClosing {
+                    //scrollView.contentOffset = latestContentOffset
+                    //print(scrollView.contentOffset,latestContentOffset ,isOpen)
+                }
+                else
+                {
+                    // Downward
+                    //print("heading downward")
+                }
+                
+                lastContentOffsetWhenSpringEnabled = currentOffset;
+            }
+        
+        }
+    }
+ 
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        if scrollView == headerTableView {
+            
+            if isOpen {
+                let panGestureRecognizer = scrollView.panGestureRecognizer
+                let panOffset = panGestureRecognizer.translation(in: scrollView)
+                let panMovement: CGFloat = abs(panOffset.y)
+                
+                lastContentOffset = CGPoint.zero
+                let currentOffset = scrollView.contentOffset
+                let goingUp = (currentOffset.y > lastContentOffset.y)
+                lastContentOffset = currentOffset
+                
+                if (panMovement > triggerPoint && goingUp){
+                    latestContentOffset = lastContentOffset
+                    //activateDrag(with: false )
+                    setupHeaderPanGesture()
+                    shouldOpenPanelHeader(false)
+                    isClosing = true
+                }
+                
+            }
+        
+        }
+        
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        if scrollView == headerTableView {
+            scrollView.contentOffset = CGPoint.zero
+        }
+    }
+    
+}
+

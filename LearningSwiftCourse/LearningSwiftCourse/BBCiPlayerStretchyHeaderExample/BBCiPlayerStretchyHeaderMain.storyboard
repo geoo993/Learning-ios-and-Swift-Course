@@ -360,6 +360,9 @@
                                                                                         <navigationItem id="qVN-So-IaK">
                                                                                             <barButtonItem key="leftBarButtonItem" title="Menu" springLoaded="YES" style="plain" id="pUc-GM-HlL">
                                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                                <connections>
+                                                                                                    <action selector="menubuttonAction:" destination="DKN-7p-eaw" id="HsV-G2-7fZ"/>
+                                                                                                </connections>
                                                                                             </barButtonItem>
                                                                                             <rightBarButtonItems>
                                                                                                 <barButtonItem image="search_icon_nav" id="Oc3-Iw-cck">

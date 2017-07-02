@@ -12,6 +12,7 @@ import LearningSwiftCourseExtensions
 class BBCiPlayerStretchyTableView: UITableView {
 
     var tableViewDissmissViewController : () -> Void = {}
+    var tableViewShouldOpenPanel : () -> Void = {}
     
     @IBOutlet weak var topNavBar : UINavigationBar!
     @IBOutlet weak var bottomNavBar : UINavigationBar!
@@ -19,6 +20,12 @@ class BBCiPlayerStretchyTableView: UITableView {
     
     @IBOutlet weak var categoriesCollectionView : UICollectionView!
     @IBOutlet weak var channelsCollectionView : UICollectionView!
+    
+    
+    @IBAction func menubuttonAction(_ sender: UIBarButtonItem) {
+        print("menu")
+        tableViewShouldOpenPanel()
+    }
     
     @IBOutlet weak var homebutton: UIButton!
     @IBAction func homebuttonAction(_ sender: UIButton) {
@@ -244,11 +251,11 @@ extension BBCiPlayerStretchyTableView : UIScrollViewDelegate{
         //update the page controls with the current page number
         
         if scrollView == categoriesCollectionView{
-            print("categories scrollview")
+            //print("categories scrollview")
         }
         
         if scrollView == channelsCollectionView{
-            print("channels scrollview")
+            //print("channels scrollview")
         }
 
     }
