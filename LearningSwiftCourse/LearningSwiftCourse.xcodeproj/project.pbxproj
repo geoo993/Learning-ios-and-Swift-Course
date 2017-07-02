@@ -42,6 +42,7 @@
 		C72E27AF1E9ED9EB0064E01B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */; };
 		C72E27BA1E9ED9EB0064E01B /* LearningSwiftCourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27B91E9ED9EB0064E01B /* LearningSwiftCourseTests.swift */; };
 		C72E27C51E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */; };
+		C73154581F09A62200FAC356 /* LayoutableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73154571F09A62200FAC356 /* LayoutableButton.swift */; };
 		C733BA601F07FE240010AAA7 /* CarthageDemoMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C733BA5F1F07FE240010AAA7 /* CarthageDemoMain.storyboard */; };
 		C7349DEC1EFC226B00B99AE6 /* UINavigationBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349DEB1EFC226B00B99AE6 /* UINavigationBar+Ext.swift */; };
 		C7349E0A1EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349E091EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift */; };
@@ -658,6 +659,7 @@
 		C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSwiftCourseUITests.swift; sourceTree = "<group>"; };
 		C72E27C61E9ED9EB0064E01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72E27D21E9EDA0C0064E01B /* LearningSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearningSwift.playground; sourceTree = "<group>"; };
+		C73154571F09A62200FAC356 /* LayoutableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutableButton.swift; sourceTree = "<group>"; };
 		C733BA5F1F07FE240010AAA7 /* CarthageDemoMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarthageDemoMain.storyboard; sourceTree = "<group>"; };
 		C7349DEB1EFC226B00B99AE6 /* UINavigationBar+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Ext.swift"; sourceTree = "<group>"; };
 		C7349E091EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentTableViewController.swift; sourceTree = "<group>"; };
@@ -1095,6 +1097,7 @@
 			children = (
 				C73585801F09259000B33B55 /* ButtonWithImageAndTextMain.storyboard */,
 				C73585821F0925AD00B33B55 /* ButtonWithImageAndTextViewController.swift */,
+				C73154571F09A62200FAC356 /* LayoutableButton.swift */,
 			);
 			path = ButtonWithImageAndTextExample;
 			sourceTree = "<group>";
@@ -2473,6 +2476,7 @@
 				C7C2AF561EF6CD03004F257A /* SlideShowViewController.swift in Sources */,
 				C7C2AF251EF6CC83004F257A /* InspirationalFilmsViewController.swift in Sources */,
 				C7C2AF671EF6CD35004F257A /* StretchyHeaderTableViewCell.swift in Sources */,
+				C73154581F09A62200FAC356 /* LayoutableButton.swift in Sources */,
 				C76F04C61EF500370090F71B /* SliderMenuDrawerMenuViewController.swift in Sources */,
 				C7C2AF571EF6CD0B004F257A /* DragInView.swift in Sources */,
 				C7C2AF441EF6CCCE004F257A /* PopUpViewController.swift in Sources */,

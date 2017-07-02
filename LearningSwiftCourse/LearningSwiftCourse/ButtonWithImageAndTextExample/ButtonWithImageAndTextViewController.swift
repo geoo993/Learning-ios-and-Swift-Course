@@ -8,23 +8,30 @@
 //https://stackoverflow.com/questions/4201959/label-under-image-in-uibutton
 //https://stackoverflow.com/questions/4564621/aligning-text-and-image-on-uibutton-with-imageedgeinsets-and-titleedgeinsets
 //https://stackoverflow.com/questions/33033737/display-image-and-text-in-button
+//https://stackoverflow.com/questions/4564621/aligning-text-and-image-on-uibutton-with-imageedgeinsets-and-titleedgeinsets
 
 
 import UIKit
 
 class ButtonWithImageAndTextViewController: UIViewController {
 
+    @IBOutlet weak var buttonOne : UIButton!
+    @IBOutlet weak var buttonTwo : UIButton!
+    @IBOutlet weak var buttonThree : UIButton!
+    @IBOutlet weak var buttonFour : UIButton!
+    @IBOutlet weak var buttonFive : UIButton!
+    @IBOutlet weak var buttonSix : UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+  
 
     /*
     // MARK: - Navigation

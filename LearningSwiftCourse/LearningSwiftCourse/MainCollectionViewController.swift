@@ -47,16 +47,16 @@ class MainCollectionViewController: UICollectionViewController {
                            //"SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",
                             //"SearchBarViewNavigationController" : "SearchBarMain",
                             //"StretchyHeaderRevealViewController" : "StretchyHeaderMain",
-                            "BBCiPlayerTableViewController" : "BBCiPlayerMain",
+                            //"BBCiPlayerTableViewController" : "BBCiPlayerMain",
                             //"SimpleSpringDrawerViewController" : "SimpleSpringDrawerMain",
-                            "BBCiPlayerStretchyHeaderViewController" : "BBCiPlayerStretchyHeaderMain",
+                            //"BBCiPlayerStretchyHeaderViewController" : "BBCiPlayerStretchyHeaderMain",
                             //"UIPickerViewController" : "UIPickerMain"
                             //"UIViewSlidesViewController" : "UIViewSlidesMain",
                             //"AnimatableSideMenuContainerViewController" : "AnimatableSideMenuMain",
                             //"PieChartPageViewController" : "CirclePieViewMain",
                             //"CarthageDemoViewController" : "CarthageDemoMain",
                             //"AninmationsWithLottieViewController" : "AninmationsWithLottieMain",
-                            //"ButtonWithImageAndTextViewController" : "ButtonWithImageAndTextMain",
+                            "ButtonWithImageAndTextViewController" : "ButtonWithImageAndTextMain",
                            ]
     
     //Mark: - Collection view 

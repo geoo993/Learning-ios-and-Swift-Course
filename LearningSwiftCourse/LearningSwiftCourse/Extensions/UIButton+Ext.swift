@@ -37,4 +37,34 @@ public extension UIButton {
         self.setBackgroundImage(imageWithColor(color: color), for: state)
     }
     
+    public func alignContentVerticallyByCenter(offset:CGFloat = 10) {
+        let buttonSize = frame.size
+        
+        if let titleLabel = titleLabel,
+            let imageView = imageView {
+            
+            if let buttonTitle = titleLabel.text,
+                let image = imageView.image {
+                let titleString:NSString = NSString(string: buttonTitle)
+                let titleSize = titleString.size(withAttributes: [
+                    NSAttributedStringKey.font : titleLabel.font
+                    ])
+                let buttonImageSize = image.size
+                
+                let topImageOffset = (buttonSize.height - (titleSize.height + buttonImageSize.height + offset)) / 2
+                let leftImageOffset = (buttonSize.width - buttonImageSize.width) / 2
+                imageEdgeInsets = UIEdgeInsetsMake(topImageOffset,
+                                                   leftImageOffset,
+                                                   0,0)
+                
+                let titleTopOffset = topImageOffset + offset + buttonImageSize.height
+                let leftTitleOffset = (buttonSize.width - titleSize.width) / 2 - image.size.width
+                
+                titleEdgeInsets = UIEdgeInsetsMake(titleTopOffset,
+                                                   leftTitleOffset,
+                                                   0,0)
+            }
+        }
+    }
+  
 }

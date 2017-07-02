@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UZ5-fb-rZ3">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,14 +17,194 @@
                         <viewControllerLayoutGuide type="bottom" id="CU8-CQ-aZ4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SgA-Jd-bVT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtE-ps-EaL" userLabel="Button one" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                <rect key="frame" x="10" y="40" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="gfD-Zf-Eby"/>
+                                    <constraint firstAttribute="width" constant="150" id="vgN-s5-XLM"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button 1" image="Clock">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageToTitleSpacing">
+                                        <real key="value" value="-10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageVerticalAlignmentName" value="center"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageHorizontalAlignmentName" value="left"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYa-jh-zrQ" userLabel="Button two" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                <rect key="frame" x="160" y="40" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="4Wt-CU-vpF"/>
+                                    <constraint firstAttribute="width" constant="150" id="Dh4-Tv-G3X"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button 2" image="Drinks">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageVerticalAlignmentName" value="center"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageHorizontalAlignmentName" value="right"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageToTitleSpacing">
+                                        <real key="value" value="-10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8O-rw-OSf" userLabel="Button three" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                <rect key="frame" x="10" y="200" width="150" height="150"/>
+                                <color key="backgroundColor" red="1" green="0.19749483700000001" blue="0.64828161880000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="cO5-Kd-8SP"/>
+                                    <constraint firstAttribute="height" constant="150" id="xn7-nw-TIu"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button 3" image="Raining"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageVerticalAlignmentName" value="top"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageHorizontalAlignmentName" value="center"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageToTitleSpacing">
+                                        <real key="value" value="-10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFh-zQ-IA4" userLabel="Button four" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                <rect key="frame" x="160" y="200" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.080794412669999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Syw-jU-Ras"/>
+                                    <constraint firstAttribute="height" constant="150" id="e1R-ux-mqM"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button 4" image="hearticon"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageVerticalAlignmentName" value="bottom"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageHorizontalAlignmentName" value="center"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageToTitleSpacing">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H28-6w-IeG" userLabel="Button five" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                <rect key="frame" x="10" y="360" width="150" height="150"/>
+                                <color key="backgroundColor" red="1" green="0.10605951" blue="0.35297394139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="20i-67-Kzq"/>
+                                    <constraint firstAttribute="height" constant="150" id="avq-sC-e6b"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button 5" image="settingsIconPin"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageVerticalAlignmentName" value="top"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageHorizontalAlignmentName" value="center"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4U7-Qu-hfX" userLabel="Button six" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                <rect key="frame" x="160" y="360" width="150" height="150"/>
+                                <color key="backgroundColor" red="1" green="0.93619850059999998" blue="0.46027067669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="RsY-2y-eFg"/>
+                                    <constraint firstAttribute="width" constant="150" id="srP-tG-Clq"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button 6" image="ThumbsDown"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageVerticalAlignmentName" value="top"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageHorizontalAlignmentName" value="bottom"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageToTitleSpacing">
+                                        <real key="value" value="-15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4U7-Qu-hfX" secondAttribute="trailing" constant="10" id="00f-yv-M6t"/>
+                            <constraint firstItem="H28-6w-IeG" firstAttribute="top" secondItem="Y8O-rw-OSf" secondAttribute="bottom" constant="10" id="1bk-NK-Gjf"/>
+                            <constraint firstItem="XYa-jh-zrQ" firstAttribute="top" secondItem="VcR-04-11y" secondAttribute="bottom" constant="20" id="7Ov-g7-ClM"/>
+                            <constraint firstAttribute="trailing" secondItem="XYa-jh-zrQ" secondAttribute="trailing" constant="10" id="GRb-Du-CNo"/>
+                            <constraint firstItem="CFh-zQ-IA4" firstAttribute="top" secondItem="XYa-jh-zrQ" secondAttribute="bottom" constant="10" id="Mys-3a-YA5"/>
+                            <constraint firstItem="H28-6w-IeG" firstAttribute="leading" secondItem="SgA-Jd-bVT" secondAttribute="leading" constant="10" id="Osb-FX-heg"/>
+                            <constraint firstItem="OtE-ps-EaL" firstAttribute="top" secondItem="VcR-04-11y" secondAttribute="bottom" constant="20" id="Uz8-K1-h5a"/>
+                            <constraint firstItem="4U7-Qu-hfX" firstAttribute="top" secondItem="CFh-zQ-IA4" secondAttribute="bottom" constant="10" id="cEA-72-Q2A"/>
+                            <constraint firstItem="OtE-ps-EaL" firstAttribute="leading" secondItem="SgA-Jd-bVT" secondAttribute="leading" constant="10" id="kwV-Wp-uOT"/>
+                            <constraint firstItem="Y8O-rw-OSf" firstAttribute="leading" secondItem="SgA-Jd-bVT" secondAttribute="leading" constant="10" id="l1g-cW-gVj"/>
+                            <constraint firstAttribute="trailing" secondItem="CFh-zQ-IA4" secondAttribute="trailing" constant="10" id="t8G-1M-15C"/>
+                            <constraint firstItem="Y8O-rw-OSf" firstAttribute="top" secondItem="OtE-ps-EaL" secondAttribute="bottom" constant="10" id="z0Y-4E-Mor"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonFive" destination="H28-6w-IeG" id="ACP-k8-4xB"/>
+                        <outlet property="buttonFour" destination="CFh-zQ-IA4" id="KcZ-eU-IED"/>
+                        <outlet property="buttonOne" destination="OtE-ps-EaL" id="tZZ-qo-135"/>
+                        <outlet property="buttonSix" destination="4U7-Qu-hfX" id="eG0-Dq-jJD"/>
+                        <outlet property="buttonThree" destination="Y8O-rw-OSf" id="Yqp-2U-8zC"/>
+                        <outlet property="buttonTwo" destination="XYa-jh-zrQ" id="LRf-jA-3rG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GC5-ix-fSL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-393" y="81"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Clock" width="80" height="80"/>
+        <image name="Drinks" width="80" height="80"/>
+        <image name="Raining" width="80" height="80"/>
+        <image name="ThumbsDown" width="80" height="80"/>
+        <image name="hearticon" width="64" height="64"/>
+        <image name="settingsIconPin" width="50" height="50"/>
+    </resources>
 </document>
