@@ -21,9 +21,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hem-0a-9xD">
-                                <rect key="frame" x="0.0" y="368" width="320" height="200"/>
+                                <rect key="frame" x="0.0" y="270" width="320" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="i25-91-GfH"/>
+                                    <constraint firstAttribute="height" constant="150" id="i25-91-GfH"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="iId-EQ-gz5" id="vu4-uz-e4b"/>
@@ -42,10 +42,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joy-X7-wAg" userLabel="emoji button">
-                                <rect key="frame" x="35" y="68" width="250" height="250"/>
+                                <rect key="frame" x="60" y="70" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="BbZ-uQ-Jjq"/>
-                                    <constraint firstAttribute="width" constant="250" id="HkY-IZ-tiQ"/>
+                                    <constraint firstAttribute="height" constant="200" id="BbZ-uQ-Jjq"/>
+                                    <constraint firstAttribute="width" constant="200" id="HkY-IZ-tiQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <state key="normal" title="😀"/>
@@ -55,12 +55,12 @@
                         <constraints>
                             <constraint firstItem="bhy-VU-HsU" firstAttribute="top" secondItem="sND-kV-AwN" secondAttribute="bottom" id="1PC-dQ-KvI"/>
                             <constraint firstItem="joy-X7-wAg" firstAttribute="centerX" secondItem="96O-em-5bQ" secondAttribute="centerX" id="4vn-sf-WxW"/>
-                            <constraint firstItem="hem-0a-9xD" firstAttribute="top" secondItem="joy-X7-wAg" secondAttribute="bottom" constant="50" id="5Gh-yy-bbi"/>
                             <constraint firstItem="bhy-VU-HsU" firstAttribute="centerX" secondItem="96O-em-5bQ" secondAttribute="centerX" id="7tY-EZ-pTv"/>
-                            <constraint firstItem="UTd-sZ-oLJ" firstAttribute="top" secondItem="hem-0a-9xD" secondAttribute="bottom" id="Dxg-Sp-Zwq"/>
                             <constraint firstAttribute="trailing" secondItem="hem-0a-9xD" secondAttribute="trailing" id="Gsa-r3-HFQ"/>
                             <constraint firstItem="hem-0a-9xD" firstAttribute="leading" secondItem="96O-em-5bQ" secondAttribute="leading" id="Mq7-Z1-LuM"/>
+                            <constraint firstItem="hem-0a-9xD" firstAttribute="top" secondItem="joy-X7-wAg" secondAttribute="bottom" id="acU-Eq-vKw"/>
                             <constraint firstItem="hem-0a-9xD" firstAttribute="centerX" secondItem="96O-em-5bQ" secondAttribute="centerX" id="e2q-Ii-brB"/>
+                            <constraint firstItem="joy-X7-wAg" firstAttribute="top" secondItem="bhy-VU-HsU" secondAttribute="bottom" constant="20" id="ePj-wo-MMi"/>
                         </constraints>
                     </view>
                     <connections>
@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLU-m0-MOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="81"/>
+            <point key="canvasLocation" x="-208.125" y="80.281690140845072"/>
         </scene>
     </scenes>
 </document>

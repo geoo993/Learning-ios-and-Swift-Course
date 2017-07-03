@@ -3,3 +3,6 @@ github "robb/Cartography" ~> 1.0
 github "ReactiveX/RxSwift" ~> 3.0
 github "watson-developer-cloud/swift-sdk"
 github "airbnb/lottie-ios" "master"
+github "Akkyie/AKPickerView-Swift"
+github "facebook/pop"
+github "PureLayout/PureLayout"

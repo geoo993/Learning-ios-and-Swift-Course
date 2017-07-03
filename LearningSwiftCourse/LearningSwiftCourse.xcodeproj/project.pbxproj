@@ -32,6 +32,7 @@
 		C71EDCF01EF6DB9B00B69EF9 /* LearningSwiftCourse-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = C71EDCCC1EF6DA3800B69EF9 /* LearningSwiftCourse-Bridging-Header.h */; };
 		C71EDCF51EF6DDB300B69EF9 /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C71EDCF41EF6DD5100B69EF9 /* SWRevealViewController.h */; };
 		C71EDCF61EF6DDB600B69EF9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C71EDCF31EF6DD5100B69EF9 /* SWRevealViewController.m */; };
+		C72A5EC41F0B00620058F291 /* RadialMenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72A5EC31F0B00620058F291 /* RadialMenuTabBarController.swift */; };
 		C72AF49B1F07CCB30023F014 /* ImagePickerCoreMLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AF47C1F07CC9E0023F014 /* ImagePickerCoreMLViewController.swift */; };
 		C72AF49C1F07CCB80023F014 /* ImagePickerCoreMLViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72AF47D1F07CC9E0023F014 /* ImagePickerCoreMLViewMain.storyboard */; };
 		C72AF49D1F07CCBA0023F014 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C72AF47E1F07CC9E0023F014 /* Inceptionv3.mlmodel */; };
@@ -250,6 +251,19 @@
 		C7D3C1091EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D3C0F41EF2BB550042E90A /* LearningSwiftCourseExtensions.framework */; };
 		C7D3C10A1EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7D3C0F41EF2BB550042E90A /* LearningSwiftCourseExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7D3C1181EF2BBE50042E90A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76E0CE71EE9ECB300A66E94 /* MapKit.framework */; };
+		C7DD103F1F0AF6CE00C7C074 /* AKPickerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DD103E1F0AF6B900C7C074 /* AKPickerView.framework */; };
+		C7DD10401F0AF6CE00C7C074 /* AKPickerView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7DD103E1F0AF6B900C7C074 /* AKPickerView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7DD104C1F0AFB8500C7C074 /* CircleHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD10491F0AFB4B00C7C074 /* CircleHelpers.swift */; };
+		C7DD104D1F0AFB8800C7C074 /* RadialMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD104A1F0AFB4B00C7C074 /* RadialMenu.swift */; };
+		C7DD104E1F0AFB8B00C7C074 /* RadialSubMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD104B1F0AFB4B00C7C074 /* RadialSubMenu.swift */; };
+		C7DD104F1F0AFB8E00C7C074 /* RadialMenuFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD10441F0AFB4B00C7C074 /* RadialMenuFirstViewController.swift */; };
+		C7DD10501F0AFB9000C7C074 /* RadialMenuSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD10461F0AFB4B00C7C074 /* RadialMenuSecondViewController.swift */; };
+		C7DD10511F0AFB9300C7C074 /* UIColor+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD10451F0AFB4B00C7C074 /* UIColor+helpers.swift */; };
+		C7DD106A1F0AFD2F00C7C074 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DD105F1F0AFD2600C7C074 /* pop.framework */; };
+		C7DD106B1F0AFD2F00C7C074 /* pop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7DD105F1F0AFD2600C7C074 /* pop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7DD108C1F0AFE9600C7C074 /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DD107B1F0AFE8200C7C074 /* PureLayout.framework */; };
+		C7DD108D1F0AFE9600C7C074 /* PureLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7DD107B1F0AFE8200C7C074 /* PureLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7DD10911F0AFF3A00C7C074 /* RadialMenuMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD10901F0AFF3200C7C074 /* RadialMenuMain.storyboard */; };
 		C7E774041F01542600440E05 /* BBCiPlayerStretchyHeaderMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E774031F01542600440E05 /* BBCiPlayerStretchyHeaderMain.storyboard */; };
 		C7E774061F01560E00440E05 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E774051F01560E00440E05 /* UINavigationController+Ext.swift */; };
 		C7EE7BE01EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7BDF1EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift */; };
@@ -434,6 +448,153 @@
 			remoteGlobalIDString = C7D3C0F31EF2BB550042E90A;
 			remoteInfo = LearningSwiftCourseExtensions;
 		};
+		C7DD103B1F0AF6B900C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD10361F0AF6B900C7C074 /* AKPickerViewSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 66F602611A8A167C0006FA7E;
+			remoteInfo = AKPickerViewSample;
+		};
+		C7DD103D1F0AF6B900C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD10361F0AF6B900C7C074 /* AKPickerViewSample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 66F6028F1A8A17220006FA7E;
+			remoteInfo = AKPickerView;
+		};
+		C7DD10411F0AF6CE00C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD10361F0AF6B900C7C074 /* AKPickerViewSample.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 66F6028E1A8A17220006FA7E;
+			remoteInfo = AKPickerView;
+		};
+		C7DD105C1F0AFD2600C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD10521F0AFD2600C7C074 /* pop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EC191218162FB53A00E0CC76;
+			remoteInfo = "pop-ios-static";
+		};
+		C7DD105E1F0AFD2600C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD10521F0AFD2600C7C074 /* pop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0B6BE74819FFD3B900762101;
+			remoteInfo = "pop-ios-framework";
+		};
+		C7DD10601F0AFD2600C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD10521F0AFD2600C7C074 /* pop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EC68857F18C7B60000C6194C;
+			remoteInfo = "pop-osx-framework";
+		};
+		C7DD10621F0AFD2600C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD10521F0AFD2600C7C074 /* pop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0755AE4F1BEA15950094AB41;
+			remoteInfo = "pop-tvos-framework";
+		};
+		C7DD10641F0AFD2600C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD10521F0AFD2600C7C074 /* pop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ECF01ED318C92B7F009E0AD1;
+			remoteInfo = "pop-tests-ios";
+		};
+		C7DD10661F0AFD2600C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD10521F0AFD2600C7C074 /* pop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EC7E319918C93D6500B38170;
+			remoteInfo = "pop-tests-osx";
+		};
+		C7DD10681F0AFD2600C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD10521F0AFD2600C7C074 /* pop.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0755AE8C1BEA19580094AB41;
+			remoteInfo = "pop-tests-tvos";
+		};
+		C7DD106C1F0AFD2F00C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD10521F0AFD2600C7C074 /* pop.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B6BE74719FFD3B900762101;
+			remoteInfo = "pop-ios-framework";
+		};
+		C7DD107A1F0AFE8200C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1046AB01A7F32380017187F;
+			remoteInfo = PureLayout_iOS;
+		};
+		C7DD107C1F0AFE8200C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1046AD81A7F32790017187F;
+			remoteInfo = PureLayout_Mac;
+		};
+		C7DD107E1F0AFE8200C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 164C8B831C0D36500007A6B1;
+			remoteInfo = PureLayout_tvOS;
+		};
+		C7DD10801F0AFE8200C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B12C23DB17C3FDE4001CF667;
+			remoteInfo = "Example-iOS";
+		};
+		C7DD10821F0AFE8200C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7D4967E1B7B084800A74818;
+			remoteInfo = "Example-iOS-Xcode7";
+		};
+		C7DD10841F0AFE8200C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1A290DB19562FDA00D4765E;
+			remoteInfo = "Example-Mac";
+		};
+		C7DD10861F0AFE8200C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 164C8B4E1C0D354E0007A6B1;
+			remoteInfo = "Example-tvOS";
+		};
+		C7DD10881F0AFE8200C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1EC855D195662790099293C;
+			remoteInfo = "PureLayoutTests-iOS";
+		};
+		C7DD108A1F0AFE8200C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1EC857C195662B40099293C;
+			remoteInfo = "PureLayoutTests-Mac";
+		};
+		C7DD108E1F0AFE9600C7C074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B1046AAF1A7F32380017187F;
+			remoteInfo = PureLayout_iOS;
+		};
 		C7F2EE161F0837BC00655CCC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C7F2EDFE1F0837BC00655CCC /* Rx.xcodeproj */;
@@ -604,9 +765,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C7DD106B1F0AFD2F00C7C074 /* pop.framework in Embed Frameworks */,
+				C7DD108D1F0AFE9600C7C074 /* PureLayout.framework in Embed Frameworks */,
 				C7F2EE411F0837CB00655CCC /* RxSwift.framework in Embed Frameworks */,
 				C7D3C10A1EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Embed Frameworks */,
 				C7A9677A1F082BFC0002299B /* Cartography.framework in Embed Frameworks */,
+				C7DD10401F0AF6CE00C7C074 /* AKPickerView.framework in Embed Frameworks */,
 				C7F2EE451F0837CB00655CCC /* RxCocoa.framework in Embed Frameworks */,
 				C7A967821F082BFC0002299B /* Alamofire.framework in Embed Frameworks */,
 				C78F49831F08493000FA2275 /* Lottie.framework in Embed Frameworks */,
@@ -642,6 +806,7 @@
 		C71EDCCC1EF6DA3800B69EF9 /* LearningSwiftCourse-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearningSwiftCourse-Bridging-Header.h"; sourceTree = "<group>"; };
 		C71EDCF31EF6DD5100B69EF9 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		C71EDCF41EF6DD5100B69EF9 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C72A5EC31F0B00620058F291 /* RadialMenuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuTabBarController.swift; sourceTree = "<group>"; };
 		C72AF47C1F07CC9E0023F014 /* ImagePickerCoreMLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoreMLViewController.swift; sourceTree = "<group>"; };
 		C72AF47D1F07CC9E0023F014 /* ImagePickerCoreMLViewMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImagePickerCoreMLViewMain.storyboard; sourceTree = "<group>"; };
 		C72AF47E1F07CC9E0023F014 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
@@ -866,6 +1031,17 @@
 		C7D3C0FC1EF2BB550042E90A /* LearningSwiftCourseExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningSwiftCourseExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D3C1031EF2BB550042E90A /* LearningSwiftCourseExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSwiftCourseExtensionsTests.swift; sourceTree = "<group>"; };
 		C7D3C1051EF2BB550042E90A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7DD10361F0AF6B900C7C074 /* AKPickerViewSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AKPickerViewSample.xcodeproj; path = "Carthage/Checkouts/AKPickerView-Swift/AKPickerViewSample.xcodeproj"; sourceTree = "<group>"; };
+		C7DD10441F0AFB4B00C7C074 /* RadialMenuFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuFirstViewController.swift; sourceTree = "<group>"; };
+		C7DD10451F0AFB4B00C7C074 /* UIColor+helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+helpers.swift"; sourceTree = "<group>"; };
+		C7DD10461F0AFB4B00C7C074 /* RadialMenuSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuSecondViewController.swift; sourceTree = "<group>"; };
+		C7DD10471F0AFB4B00C7C074 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C7DD10491F0AFB4B00C7C074 /* CircleHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleHelpers.swift; sourceTree = "<group>"; };
+		C7DD104A1F0AFB4B00C7C074 /* RadialMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenu.swift; sourceTree = "<group>"; };
+		C7DD104B1F0AFB4B00C7C074 /* RadialSubMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialSubMenu.swift; sourceTree = "<group>"; };
+		C7DD10521F0AFD2600C7C074 /* pop.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pop.xcodeproj; path = Carthage/Checkouts/pop/pop.xcodeproj; sourceTree = "<group>"; };
+		C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PureLayout.xcodeproj; path = Carthage/Checkouts/PureLayout/PureLayout/PureLayout.xcodeproj; sourceTree = "<group>"; };
+		C7DD10901F0AFF3200C7C074 /* RadialMenuMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RadialMenuMain.storyboard; sourceTree = "<group>"; };
 		C7E3886E1ED3055F000DCE15 /* LearningSwiftCourse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearningSwiftCourse.entitlements; sourceTree = "<group>"; };
 		C7E774031F01542600440E05 /* BBCiPlayerStretchyHeaderMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BBCiPlayerStretchyHeaderMain.storyboard; sourceTree = "<group>"; };
 		C7E774051F01560E00440E05 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
@@ -888,9 +1064,12 @@
 				C7F2EE401F0837CB00655CCC /* RxSwift.framework in Frameworks */,
 				C76E0CE81EE9ECB300A66E94 /* MapKit.framework in Frameworks */,
 				C7D3C1091EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Frameworks */,
+				C7DD106A1F0AFD2F00C7C074 /* pop.framework in Frameworks */,
 				C7A967811F082BFC0002299B /* Alamofire.framework in Frameworks */,
 				C78F49821F08493000FA2275 /* Lottie.framework in Frameworks */,
 				C7A967791F082BFC0002299B /* Cartography.framework in Frameworks */,
+				C7DD108C1F0AFE9600C7C074 /* PureLayout.framework in Frameworks */,
+				C7DD103F1F0AF6CE00C7C074 /* AKPickerView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,6 +1221,7 @@
 				C7C2AE4C1EF6CB62004F257A /* ParallaxScrollExample */,
 				C7C2AEC31EF6CB63004F257A /* ParallaxTableViewHeadingExample */,
 				C7C2AEA51EF6CB63004F257A /* PopUpExample */,
+				C7DD10431F0AF9CE00C7C074 /* RadialMenuExample */,
 				C7C2AEB71EF6CB63004F257A /* ScrollViewExample */,
 				C70376FA1EF5468A002E7D9B /* SearchBarExample */,
 				C7C2AE6E1EF6CB62004F257A /* SideBarMenuExample */,
@@ -1185,6 +1365,9 @@
 		C77E82D51EA25E3B000AC715 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */,
+				C7DD10521F0AFD2600C7C074 /* pop.xcodeproj */,
+				C7DD10361F0AF6B900C7C074 /* AKPickerViewSample.xcodeproj */,
 				C78F49571F08491400FA2275 /* Lottie.xcodeproj */,
 				C7F2EDFE1F0837BC00655CCC /* Rx.xcodeproj */,
 				C7A967641F082BDD0002299B /* Cartography.xcodeproj */,
@@ -1746,6 +1929,69 @@
 			path = LearningSwiftCourseExtensionsTests;
 			sourceTree = "<group>";
 		};
+		C7DD10371F0AF6B900C7C074 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7DD103C1F0AF6B900C7C074 /* AKPickerViewSample.app */,
+				C7DD103E1F0AF6B900C7C074 /* AKPickerView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7DD10431F0AF9CE00C7C074 /* RadialMenuExample */ = {
+			isa = PBXGroup;
+			children = (
+				C7DD10481F0AFB4B00C7C074 /* RadialMenu */,
+				C7DD10901F0AFF3200C7C074 /* RadialMenuMain.storyboard */,
+				C72A5EC31F0B00620058F291 /* RadialMenuTabBarController.swift */,
+				C7DD10441F0AFB4B00C7C074 /* RadialMenuFirstViewController.swift */,
+				C7DD10461F0AFB4B00C7C074 /* RadialMenuSecondViewController.swift */,
+				C7DD10471F0AFB4B00C7C074 /* README.md */,
+				C7DD10451F0AFB4B00C7C074 /* UIColor+helpers.swift */,
+			);
+			path = RadialMenuExample;
+			sourceTree = "<group>";
+		};
+		C7DD10481F0AFB4B00C7C074 /* RadialMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C7DD10491F0AFB4B00C7C074 /* CircleHelpers.swift */,
+				C7DD104A1F0AFB4B00C7C074 /* RadialMenu.swift */,
+				C7DD104B1F0AFB4B00C7C074 /* RadialSubMenu.swift */,
+			);
+			path = RadialMenu;
+			sourceTree = "<group>";
+		};
+		C7DD10531F0AFD2600C7C074 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7DD105D1F0AFD2600C7C074 /* libpop.a */,
+				C7DD105F1F0AFD2600C7C074 /* pop.framework */,
+				C7DD10611F0AFD2600C7C074 /* pop.framework */,
+				C7DD10631F0AFD2600C7C074 /* pop.framework */,
+				C7DD10651F0AFD2600C7C074 /* pop-tests.xctest */,
+				C7DD10671F0AFD2600C7C074 /* pop-tests.xctest */,
+				C7DD10691F0AFD2600C7C074 /* pop-tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7DD106F1F0AFE8200C7C074 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7DD107B1F0AFE8200C7C074 /* PureLayout.framework */,
+				C7DD107D1F0AFE8200C7C074 /* PureLayout.framework */,
+				C7DD107F1F0AFE8200C7C074 /* PureLayout.framework */,
+				C7DD10811F0AFE8200C7C074 /* Example-iOS.app */,
+				C7DD10831F0AFE8200C7C074 /* Example-iOS-Xcode7.app */,
+				C7DD10851F0AFE8200C7C074 /* Example-Mac.app */,
+				C7DD10871F0AFE8200C7C074 /* Example-tvOS.app */,
+				C7DD10891F0AFE8200C7C074 /* PureLayoutTests-iOS.xctest */,
+				C7DD108B1F0AFE8200C7C074 /* PureLayoutTests-Mac.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C7E3886B1ED3055F000DCE15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1852,6 +2098,9 @@
 				C7F2EE431F0837CB00655CCC /* PBXTargetDependency */,
 				C7F2EE471F0837CB00655CCC /* PBXTargetDependency */,
 				C78F49851F08493000FA2275 /* PBXTargetDependency */,
+				C7DD10421F0AF6CE00C7C074 /* PBXTargetDependency */,
+				C7DD106D1F0AFD2F00C7C074 /* PBXTargetDependency */,
+				C7DD108F1F0AFE9600C7C074 /* PBXTargetDependency */,
 			);
 			name = LearningSwiftCourse;
 			productName = LearningSwiftCourse;
@@ -1997,6 +2246,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = C7DD10371F0AF6B900C7C074 /* Products */;
+					ProjectRef = C7DD10361F0AF6B900C7C074 /* AKPickerViewSample.xcodeproj */;
+				},
+				{
 					ProductGroup = C7A9672E1F082BDC0002299B /* Products */;
 					ProjectRef = C7A9672D1F082BDC0002299B /* Alamofire.xcodeproj */;
 				},
@@ -2007,6 +2260,14 @@
 				{
 					ProductGroup = C78F49581F08491400FA2275 /* Products */;
 					ProjectRef = C78F49571F08491400FA2275 /* Lottie.xcodeproj */;
+				},
+				{
+					ProductGroup = C7DD10531F0AFD2600C7C074 /* Products */;
+					ProjectRef = C7DD10521F0AFD2600C7C074 /* pop.xcodeproj */;
+				},
+				{
+					ProductGroup = C7DD106F1F0AFE8200C7C074 /* Products */;
+					ProjectRef = C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */;
 				},
 				{
 					ProductGroup = C7F2EDFF1F0837BC00655CCC /* Products */;
@@ -2135,6 +2396,132 @@
 			fileType = wrapper.cfbundle;
 			path = "Cartography-tvOS-tests.xctest";
 			remoteRef = C7A967771F082BDE0002299B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD103C1F0AF6B900C7C074 /* AKPickerViewSample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = AKPickerViewSample.app;
+			remoteRef = C7DD103B1F0AF6B900C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD103E1F0AF6B900C7C074 /* AKPickerView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AKPickerView.framework;
+			remoteRef = C7DD103D1F0AF6B900C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD105D1F0AFD2600C7C074 /* libpop.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpop.a;
+			remoteRef = C7DD105C1F0AFD2600C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD105F1F0AFD2600C7C074 /* pop.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = pop.framework;
+			remoteRef = C7DD105E1F0AFD2600C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD10611F0AFD2600C7C074 /* pop.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = pop.framework;
+			remoteRef = C7DD10601F0AFD2600C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD10631F0AFD2600C7C074 /* pop.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = pop.framework;
+			remoteRef = C7DD10621F0AFD2600C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD10651F0AFD2600C7C074 /* pop-tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "pop-tests.xctest";
+			remoteRef = C7DD10641F0AFD2600C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD10671F0AFD2600C7C074 /* pop-tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "pop-tests.xctest";
+			remoteRef = C7DD10661F0AFD2600C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD10691F0AFD2600C7C074 /* pop-tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "pop-tests.xctest";
+			remoteRef = C7DD10681F0AFD2600C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD107B1F0AFE8200C7C074 /* PureLayout.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PureLayout.framework;
+			remoteRef = C7DD107A1F0AFE8200C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD107D1F0AFE8200C7C074 /* PureLayout.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PureLayout.framework;
+			remoteRef = C7DD107C1F0AFE8200C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD107F1F0AFE8200C7C074 /* PureLayout.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PureLayout.framework;
+			remoteRef = C7DD107E1F0AFE8200C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD10811F0AFE8200C7C074 /* Example-iOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Example-iOS.app";
+			remoteRef = C7DD10801F0AFE8200C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD10831F0AFE8200C7C074 /* Example-iOS-Xcode7.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Example-iOS-Xcode7.app";
+			remoteRef = C7DD10821F0AFE8200C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD10851F0AFE8200C7C074 /* Example-Mac.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Example-Mac.app";
+			remoteRef = C7DD10841F0AFE8200C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD10871F0AFE8200C7C074 /* Example-tvOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Example-tvOS.app";
+			remoteRef = C7DD10861F0AFE8200C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD10891F0AFE8200C7C074 /* PureLayoutTests-iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "PureLayoutTests-iOS.xctest";
+			remoteRef = C7DD10881F0AFE8200C7C074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7DD108B1F0AFE8200C7C074 /* PureLayoutTests-Mac.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "PureLayoutTests-Mac.xctest";
+			remoteRef = C7DD108A1F0AFE8200C7C074 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		C7F2EE171F0837BC00655CCC /* RxSwift.framework */ = {
@@ -2295,6 +2682,7 @@
 				C7D0DE761F0534F4000CD3D1 /* UIViewSlidesMain.storyboard in Resources */,
 				C70F09EC1F084EE70049BACC /* PinJump.json in Resources */,
 				C7C2AF3B1EF6CCB3004F257A /* ParallaxMain.storyboard in Resources */,
+				C7DD10911F0AFF3A00C7C074 /* RadialMenuMain.storyboard in Resources */,
 				C7C2AF031EF6CC3C004F257A /* ButtonsMain.storyboard in Resources */,
 				C7C2AF3E1EF6CCC3004F257A /* ParallaxHeaderMain.storyboard in Resources */,
 				C7FC254D1F05020200959765 /* UIPickerMain.storyboard in Resources */,
@@ -2397,6 +2785,7 @@
 				C7C2AF0D1EF6CC62004F257A /* DraggableView.swift in Sources */,
 				C7C2AF2F1EF6CC97004F257A /* NewsTableViewCell.swift in Sources */,
 				C7C2AF4F1EF6CCD7004F257A /* SlidesInfoModel.swift in Sources */,
+				C7DD10511F0AFB9300C7C074 /* UIColor+helpers.swift in Sources */,
 				C7C2AF371EF6CCA9004F257A /* CustomPageViewController.swift in Sources */,
 				C7A1A2171F079AF2005CF910 /* PieChartWithSubData.swift in Sources */,
 				C7C2AF091EF6CC5A004F257A /* ConstraintPack.swift in Sources */,
@@ -2406,6 +2795,7 @@
 				C7C2AF451EF6CCD7004F257A /* ScrollViewController.swift in Sources */,
 				C7C2AF5F1EF6CD24004F257A /* SummaryViewTableViewCell.swift in Sources */,
 				C7C2AF0E1EF6CC62004F257A /* SimpleDraggableView.swift in Sources */,
+				C72A5EC41F0B00620058F291 /* RadialMenuTabBarController.swift in Sources */,
 				C7C2AF3C1EF6CCB3004F257A /* ParallaxTableViewCell.swift in Sources */,
 				C767868D1EF91600005C159F /* BBCiPlayerTableViewCell.swift in Sources */,
 				C70557E91EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift in Sources */,
@@ -2445,6 +2835,7 @@
 				C7C2AF0B1EF6CC62004F257A /* DraggableTopMenuMainViewControllerViewController.swift in Sources */,
 				C7C2AF601EF6CD2A004F257A /* StorySmartiesMenuTableViewController.swift in Sources */,
 				C7C2AF501EF6CCF1004F257A /* SideBarMenu.swift in Sources */,
+				C7DD104E1F0AFB8B00C7C074 /* RadialSubMenu.swift in Sources */,
 				C7CF31D41EF6B31E00114EC1 /* GoogLeNetPlaces.mlmodel in Sources */,
 				C7C2AE3C1EF6CA8D004F257A /* ColorChangeViewController.swift in Sources */,
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
@@ -2492,12 +2883,14 @@
 				C7349E0A1EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift in Sources */,
 				C7CEB7AA1F07000500CC054B /* CirclePieIndicatorView.swift in Sources */,
 				C7C2AF5D1EF6CD14004F257A /* StorySmartiesViewController.swift in Sources */,
+				C7DD10501F0AFB9000C7C074 /* RadialMenuSecondViewController.swift in Sources */,
 				C7C2AF041EF6CC3C004F257A /* ButtonsTypesViewController.swift in Sources */,
 				C76786671EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift in Sources */,
 				C7C2AF6E1EF6CD64004F257A /* TabBarModel.swift in Sources */,
 				C7C2AF531EF6CCF1004F257A /* SideBarMenuViewController.swift in Sources */,
 				C708787C1EFD0EBF006BBDEC /* BBCiPlayerContentDetailedTableViewCell.swift in Sources */,
 				C7C2AF6B1EF6CD64004F257A /* EnglishViewController.swift in Sources */,
+				C7DD104D1F0AFB8800C7C074 /* RadialMenu.swift in Sources */,
 				C7C2AF411EF6CCC3004F257A /* ParallaxHeaderView.swift in Sources */,
 				C7C2AF751EF6CD79004F257A /* TableViewNavigationViewController.swift in Sources */,
 				C72AF49B1F07CCB30023F014 /* ImagePickerCoreMLViewController.swift in Sources */,
@@ -2536,6 +2929,7 @@
 				C7C2AF431EF6CCCE004F257A /* PopUpNavigationController.swift in Sources */,
 				C7C2AF6F1EF6CD64004F257A /* TabBarViewController.swift in Sources */,
 				C7349E0C1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift in Sources */,
+				C7DD104C1F0AFB8500C7C074 /* CircleHelpers.swift in Sources */,
 				C71678E61EFF1A7B00355E41 /* TopDrawerView.swift in Sources */,
 				C7C2AF331EF6CCA1004F257A /* NavBarModel.swift in Sources */,
 				C7BF534E1F058DC300F01E72 /* BlueSlideView.swift in Sources */,
@@ -2544,6 +2938,7 @@
 				C7C2AF3A1EF6CCA9004F257A /* WalkthroughZoomViewController.swift in Sources */,
 				C7C2AF791EF6CD7E004F257A /* Product.swift in Sources */,
 				C7BE65E21EE2A22900A05286 /* MainCollectionViewController.swift in Sources */,
+				C7DD104F1F0AFB8E00C7C074 /* RadialMenuFirstViewController.swift in Sources */,
 				C7EE7BE01EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift in Sources */,
 				C7C2AF7E1EF6CD8A004F257A /* TopMenuNewsTableViewCell.swift in Sources */,
 				C703771A1EF5471E002E7D9B /* SearchBarTableViewController.swift in Sources */,
@@ -2641,6 +3036,21 @@
 			isa = PBXTargetDependency;
 			target = C7D3C0F31EF2BB550042E90A /* LearningSwiftCourseExtensions */;
 			targetProxy = C7D3C1071EF2BB550042E90A /* PBXContainerItemProxy */;
+		};
+		C7DD10421F0AF6CE00C7C074 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AKPickerView;
+			targetProxy = C7DD10411F0AF6CE00C7C074 /* PBXContainerItemProxy */;
+		};
+		C7DD106D1F0AFD2F00C7C074 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "pop-ios-framework";
+			targetProxy = C7DD106C1F0AFD2F00C7C074 /* PBXContainerItemProxy */;
+		};
+		C7DD108F1F0AFE9600C7C074 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PureLayout_iOS;
+			targetProxy = C7DD108E1F0AFE9600C7C074 /* PBXContainerItemProxy */;
 		};
 		C7F2EE431F0837CB00655CCC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

@@ -9,6 +9,8 @@
 //https://www.youtube.com/watch?v=tGr7qsKGkzY
 
 import UIKit
+import AKPickerView
+import class AKPickerView.AKPickerView
 
 struct EmojiIcons {
     public enum Icons: String {
@@ -53,6 +55,7 @@ class UIPickerViewController: UIViewController {
     }
     
     @IBOutlet weak var picker: UIPickerView!
+    var akpicker: AKPickerView!
     @IBOutlet weak var emojiButton: UIButton!
  
     let pickerData = EmojiIcons.icons.map { $0.key }
@@ -63,6 +66,12 @@ class UIPickerViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let pickerFrame = CGRect(x: 0 , y: self.view.frame.size.height - 100, width: self.view.frame.size.width, height: 100)
+        self.akpicker = AKPickerView(frame: pickerFrame)
+        self.akpicker.delegate = self
+        self.akpicker.dataSource = self
+        
+        self.view.addSubview(akpicker)
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,7 +79,12 @@ class UIPickerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.akpicker.reloadData()
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -110,4 +124,27 @@ extension UIPickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
     }
     
+}
+
+extension UIPickerViewController: AKPickerViewDelegate, AKPickerViewDataSource {
+    
+
+    func numberOfItemsInPickerView(_ pickerView: AKPickerView) -> Int
+    {
+        return pickerData.count 
+    }
+    
+    @objc func pickerView(_ pickerView: AKPickerView, titleForItem item: Int) -> String
+    {
+        return pickerData[item]
+    }
+    
+//    @objc func pickerView(_ pickerView: AKPickerView, imageForItem item: Int) -> UIImage
+//    {
+//        
+//    }
+    
+    @objc func pickerView(_ pickerView: AKPickerView, didSelectItem item: Int) {
+        emojiButton.setTitle(pickerData[item], for: .normal)
+    }
 }
