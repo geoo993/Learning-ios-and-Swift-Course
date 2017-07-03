@@ -168,6 +168,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OY-YJ-yKn">
+                                <rect key="frame" x="130" y="528" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GoX-ph-qSU"/>
+                                    <constraint firstAttribute="width" constant="60" id="Yg8-7x-f6h"/>
+                                </constraints>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="homebutton:" destination="UZ5-fb-rZ3" eventType="touchUpInside" id="u1V-Rz-bz6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -177,10 +188,12 @@
                             <constraint firstAttribute="trailing" secondItem="XYa-jh-zrQ" secondAttribute="trailing" constant="10" id="GRb-Du-CNo"/>
                             <constraint firstItem="CFh-zQ-IA4" firstAttribute="top" secondItem="XYa-jh-zrQ" secondAttribute="bottom" constant="10" id="Mys-3a-YA5"/>
                             <constraint firstItem="H28-6w-IeG" firstAttribute="leading" secondItem="SgA-Jd-bVT" secondAttribute="leading" constant="10" id="Osb-FX-heg"/>
+                            <constraint firstItem="CU8-CQ-aZ4" firstAttribute="top" secondItem="1OY-YJ-yKn" secondAttribute="bottom" constant="10" id="UWT-jA-933"/>
                             <constraint firstItem="OtE-ps-EaL" firstAttribute="top" secondItem="VcR-04-11y" secondAttribute="bottom" constant="20" id="Uz8-K1-h5a"/>
                             <constraint firstItem="4U7-Qu-hfX" firstAttribute="top" secondItem="CFh-zQ-IA4" secondAttribute="bottom" constant="10" id="cEA-72-Q2A"/>
                             <constraint firstItem="OtE-ps-EaL" firstAttribute="leading" secondItem="SgA-Jd-bVT" secondAttribute="leading" constant="10" id="kwV-Wp-uOT"/>
                             <constraint firstItem="Y8O-rw-OSf" firstAttribute="leading" secondItem="SgA-Jd-bVT" secondAttribute="leading" constant="10" id="l1g-cW-gVj"/>
+                            <constraint firstItem="1OY-YJ-yKn" firstAttribute="centerX" secondItem="SgA-Jd-bVT" secondAttribute="centerX" id="npp-lC-7MZ"/>
                             <constraint firstAttribute="trailing" secondItem="CFh-zQ-IA4" secondAttribute="trailing" constant="10" id="t8G-1M-15C"/>
                             <constraint firstItem="Y8O-rw-OSf" firstAttribute="top" secondItem="OtE-ps-EaL" secondAttribute="bottom" constant="10" id="z0Y-4E-Mor"/>
                         </constraints>

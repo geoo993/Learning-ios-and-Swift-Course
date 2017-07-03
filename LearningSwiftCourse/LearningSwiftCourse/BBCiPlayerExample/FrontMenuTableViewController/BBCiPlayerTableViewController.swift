@@ -524,7 +524,7 @@ extension BBCiPlayerTableViewController: UIGestureRecognizerDelegate  {
         }
         let velocity = dynamicItemBehavior.linearVelocity(for: headerTableView)
         
-        let panOffset = panGesture.translation(in: headerTableView)
+        let panOffset = panGesture.translation(in: headerTableView!)
         let panMovement: CGFloat = abs(panOffset.y)
         
         

@@ -201,7 +201,7 @@ class TopDrawerView: UIView {
             slideToOpenAfterTrigger()
             return
         }
-        print(drawerHeight)
+        
         if (panMovement + amountSeenWhenClosed + handleViewInset / 2) > triggerPoint {
             //when stretched halfway 
             //print("reached trigger point")

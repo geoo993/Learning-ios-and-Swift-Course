@@ -23,8 +23,6 @@ class AnimatableSideMenuViewController: UITableViewController {
         // Remove the drop shadow from the navigation bar
         navigationController!.navigationBar.clipsToBounds = true
     
-        print(menuItems)
-        
         (navigationController!.parent as! AnimatableSideMenuContainerViewController).menuItem = (menuItems[0] as! NSDictionary)
     }
   

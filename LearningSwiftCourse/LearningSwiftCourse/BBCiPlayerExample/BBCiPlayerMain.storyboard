@@ -337,19 +337,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem id="luI-KR-ayT">
-                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="rWx-eh-z34">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                        <rightBarButtonItems>
-                                            <barButtonItem systemItem="search" id="5JC-un-Arx">
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </barButtonItem>
-                                            <barButtonItem image="bbciplayerplayontviconwhite" style="plain" id="OYS-LA-9Av" userLabel="Play On Tv Button Item">
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </barButtonItem>
-                                        </rightBarButtonItems>
-                                    </navigationItem>
+                                    <navigationItem id="luI-KR-ayT"/>
                                 </items>
                                 <connections>
                                     <outlet property="delegate" destination="ZY3-ho-Es7" id="7P8-uT-awg"/>
@@ -619,7 +607,7 @@
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <inset key="titleEdgeInsets" minX="-100" minY="50" maxX="0.0" maxY="0.0"/>
+                                                                        <inset key="titleEdgeInsets" minX="-50" minY="50" maxX="0.0" maxY="0.0"/>
                                                                         <inset key="imageEdgeInsets" minX="24" minY="25" maxX="24" maxY="30"/>
                                                                         <state key="normal" title="TV Guide" image="tvguide">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -804,8 +792,8 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
                                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BBC One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2e-Vq-crx">
-                                                                                        <rect key="frame" x="21" y="14" width="59" height="17"/>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2e-Vq-crx">
+                                                                                        <rect key="frame" x="50.5" y="22.5" width="0.0" height="0.0"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                         <nil key="highlightedColor"/>
@@ -2200,6 +2188,6 @@ AABBAAAAAAAAAAAAAAAAAADxjQ
         <image name="search_icon_nav" width="25" height="24"/>
         <image name="settings_nav" width="26" height="26"/>
         <image name="slideupgray" width="128" height="128"/>
-        <image name="tvguide" width="100" height="96"/>
+        <image name="tvguide" width="50" height="48"/>
     </resources>
 </document>

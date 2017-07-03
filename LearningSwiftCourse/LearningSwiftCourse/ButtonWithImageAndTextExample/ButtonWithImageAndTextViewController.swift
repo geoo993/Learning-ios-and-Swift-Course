@@ -22,6 +22,12 @@ class ButtonWithImageAndTextViewController: UIViewController {
     @IBOutlet weak var buttonFive : UIButton!
     @IBOutlet weak var buttonSix : UIButton!
     
+    @IBAction func homebutton(_ sender: UIButton) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

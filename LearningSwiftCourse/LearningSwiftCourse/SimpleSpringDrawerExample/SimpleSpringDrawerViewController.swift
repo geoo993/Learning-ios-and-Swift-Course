@@ -13,6 +13,11 @@ class SimpleSpringDrawerViewController: UIViewController {
     @IBOutlet weak var topDrawerView : TopDrawerView!
     var shouldOpen = false
     
+    @IBAction func homebutton(_ sender: UIButton) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

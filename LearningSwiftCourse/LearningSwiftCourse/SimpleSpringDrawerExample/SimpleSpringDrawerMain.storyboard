@@ -23,6 +23,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coralreef" translatesAutoresizingMaskIntoConstraints="NO" id="rA1-jC-DfU" userLabel="bg Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7P-Lv-bXt">
+                                <rect key="frame" x="130" y="508" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IU4-Ym-I5z"/>
+                                    <constraint firstAttribute="width" constant="60" id="h7C-rC-upA"/>
+                                </constraints>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="homebutton:" destination="mKA-wc-m1d" eventType="touchUpInside" id="sn6-Fn-jS5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -30,6 +41,8 @@
                             <constraint firstItem="OY7-kj-zu1" firstAttribute="top" secondItem="rA1-jC-DfU" secondAttribute="bottom" id="5rp-eM-xa4"/>
                             <constraint firstAttribute="trailing" secondItem="rA1-jC-DfU" secondAttribute="trailing" id="III-8R-1Yz"/>
                             <constraint firstItem="rA1-jC-DfU" firstAttribute="leading" secondItem="iqV-yL-OE0" secondAttribute="leading" id="Ip4-av-CxG"/>
+                            <constraint firstItem="OY7-kj-zu1" firstAttribute="top" secondItem="k7P-Lv-bXt" secondAttribute="bottom" constant="30" id="MBP-jD-Phi"/>
+                            <constraint firstItem="k7P-Lv-bXt" firstAttribute="centerX" secondItem="iqV-yL-OE0" secondAttribute="centerX" id="Mi7-3g-WbM"/>
                             <constraint firstItem="rA1-jC-DfU" firstAttribute="centerY" secondItem="iqV-yL-OE0" secondAttribute="centerY" id="Ubx-Sn-XIW"/>
                             <constraint firstItem="rA1-jC-DfU" firstAttribute="centerX" secondItem="iqV-yL-OE0" secondAttribute="centerX" id="XKJ-gQ-SNT"/>
                         </constraints>
@@ -65,10 +78,11 @@
                             <blurEffect style="extraLight"/>
                         </visualEffectView>
                         <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RCw-uc-Pa8">
-                            <rect key="frame" x="0.0" y="320" width="320" height="30"/>
+                            <rect key="frame" x="110" y="320" width="100" height="30"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="2Qz-sh-3Ak"/>
+                                <constraint firstAttribute="width" constant="100" id="KcP-FJ-tTi"/>
                             </constraints>
                         </imageView>
                     </subviews>
@@ -76,8 +90,6 @@
                         <constraint firstAttribute="trailing" secondItem="8Rq-z7-KXy" secondAttribute="trailing" id="0hq-fk-kz2"/>
                         <constraint firstItem="8Rq-z7-KXy" firstAttribute="leading" secondItem="Ofh-Pc-MKY" secondAttribute="leading" id="4Jv-0X-Q9N"/>
                         <constraint firstAttribute="bottom" secondItem="8Rq-z7-KXy" secondAttribute="bottom" id="8Se-b4-bam"/>
-                        <constraint firstItem="RCw-uc-Pa8" firstAttribute="leading" secondItem="Ofh-Pc-MKY" secondAttribute="leading" id="AaC-n9-d3M"/>
-                        <constraint firstAttribute="trailing" secondItem="RCw-uc-Pa8" secondAttribute="trailing" id="Cjf-QZ-xOK"/>
                         <constraint firstItem="8Rq-z7-KXy" firstAttribute="top" secondItem="Ofh-Pc-MKY" secondAttribute="top" id="KKi-qH-UcC"/>
                         <constraint firstAttribute="bottom" secondItem="RCw-uc-Pa8" secondAttribute="bottom" id="S3b-V9-Hrk"/>
                         <constraint firstItem="RCw-uc-Pa8" firstAttribute="centerX" secondItem="Ofh-Pc-MKY" secondAttribute="centerX" id="idq-bz-uU7"/>

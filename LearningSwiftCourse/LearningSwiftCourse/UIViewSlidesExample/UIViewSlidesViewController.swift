@@ -92,6 +92,13 @@ class UIViewSlidesViewController: UIViewController {
         setupSwipeGesture()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let frame = CGRect(origin: CGPoint.zero, size: CGSize(width: self.view.frame.width, height: viewsContainer.frame.height))
+        viewsContainer.frame = frame
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

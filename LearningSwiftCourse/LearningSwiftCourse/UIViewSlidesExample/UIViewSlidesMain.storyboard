@@ -110,6 +110,12 @@
                                         </constraints>
                                         <blurEffect style="light"/>
                                     </visualEffectView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5I-Zo-RAT">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="252"/>
+                                        <connections>
+                                            <segue destination="lQP-Wr-PwC" kind="embed" identifier="containerOfViews" id="CcS-Mr-tuQ"/>
+                                        </connections>
+                                    </containerView>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dgs-SB-Nme" userLabel="Bottom Visual Effect View">
                                         <rect key="frame" x="0.0" y="316" width="320" height="84"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nLs-9q-8d2">
@@ -169,12 +175,6 @@
                                         </constraints>
                                         <blurEffect style="light"/>
                                     </visualEffectView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5I-Zo-RAT">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="252"/>
-                                        <connections>
-                                            <segue destination="lQP-Wr-PwC" kind="embed" identifier="containerOfViews" id="CcS-Mr-tuQ"/>
-                                        </connections>
-                                    </containerView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="r5I-Zo-RAT" firstAttribute="leading" secondItem="ELa-US-pMh" secondAttribute="leading" id="5zq-Wv-fPp"/>

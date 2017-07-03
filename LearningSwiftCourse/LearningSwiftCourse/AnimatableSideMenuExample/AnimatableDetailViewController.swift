@@ -10,6 +10,12 @@ import UIKit
 
 class AnimatableDetailViewController: UIViewController {
   
+    @IBAction func homeButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
+    
     @IBOutlet weak var backgroundImageView: UIImageView!
   
     var hamburgerView: AnimatableHamburgerView?

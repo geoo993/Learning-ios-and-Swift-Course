@@ -32,6 +32,7 @@ class UIViewsContainerViewController: UIViewController {
     
     func setUpViews(){
         let viewsframe = self.view.bounds
+        
         self.view.addSubview(redview)
         self.view.addSubview(greenview)
         self.view.addSubview(blueview)
