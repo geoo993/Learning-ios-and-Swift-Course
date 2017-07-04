@@ -13,7 +13,7 @@
 import UIKit
 import QuartzCore
 
-class RadialMenuFirstViewController: UIViewController {
+class RadialMenuColorsViewController: UIViewController {
     
     @IBAction func homeButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true) { 
@@ -45,7 +45,7 @@ class RadialMenuFirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(RadialMenuFirstViewController.pressedButton(_:)))
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(RadialMenuColorsViewController.pressedButton(_:)))
         
         // Setup radial menu
         var subMenus: [RadialSubMenu] = []
@@ -156,6 +156,10 @@ class RadialMenuFirstViewController: UIViewController {
     func resetSubMenu(_ subMenu: RadialSubMenu) {
         let color = colorForSubMenu(subMenu)
         subMenu.backgroundColor = color.withAlphaComponent(0.75)
+    }
+    
+    deinit {
+        print("Radial Menu Colors View Controller \(#function)")
     }
 }
 

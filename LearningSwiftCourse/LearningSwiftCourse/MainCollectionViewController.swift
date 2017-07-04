@@ -39,7 +39,7 @@ class MainCollectionViewController: UICollectionViewController {
                            //"PopUpNavigationController": "PopUpMain",
                            //"SideBarMenuViewController" : "SideBarMenuMain",
                            //"SWRevealViewController" : "MultiSidedBarMenuMain",
-                           //"TopMenuNavigationController" : "TopMenuMain",
+                           //"/Users/GeorgeQuentin/Dev/Learning-ios8-and-Swift-Course/LearningSwiftCourse/LearningSwiftCourse/Student Submissions for the WWDC 2017 ScholarshipTopMenuNavigationController" : "TopMenuMain",
                            //"DraggableTopMenuMainViewController" : "DraggableVerticalMenusMain",
                            //"SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
                            //"ButtonsTypesViewController": "ButtonsMain",
@@ -50,14 +50,14 @@ class MainCollectionViewController: UICollectionViewController {
                             //"BBCiPlayerTableViewController" : "BBCiPlayerMain",
                             //"SimpleSpringDrawerViewController" : "SimpleSpringDrawerMain",
                             //"BBCiPlayerStretchyHeaderViewController" : "BBCiPlayerStretchyHeaderMain",
-                            "UIPickerViewController" : "UIPickerMain",
+                            //"UIPickerViewController" : "UIPickerMain",
                             //"UIViewSlidesViewController" : "UIViewSlidesMain",
                             //"AnimatableSideMenuContainerViewController" : "AnimatableSideMenuMain",
                             //"PieChartPageViewController" : "CirclePieViewMain",
                             //"CarthageDemoViewController" : "CarthageDemoMain",
                             //"AninmationsWithLottieViewController" : "AninmationsWithLottieMain",
                             //"ButtonWithImageAndTextViewController" : "ButtonWithImageAndTextMain",
-                            //"RadialMenuTabBarController" : "RadialMenuMain",
+                            "RadialMenuTabBarController" : "RadialMenuMain",
                            ]
     
     //Mark: - Collection view 

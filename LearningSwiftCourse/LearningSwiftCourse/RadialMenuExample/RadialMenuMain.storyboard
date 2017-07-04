@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Default-->
+        <!--Colors-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController storyboardIdentifier="RadialMenuFirstViewController" id="9pv-A4-QxB" customClass="RadialMenuFirstViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RadialMenuColorsViewController" id="9pv-A4-QxB" customClass="RadialMenuColorsViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -41,16 +41,16 @@
                             <constraint firstItem="iQr-d4-Ar2" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailing" id="GCv-eZ-Lr1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Default" image="circle" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Colors" image="circle" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3041" y="591"/>
+            <point key="canvasLocation" x="3060" y="8"/>
         </scene>
         <!--iOS 8-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="RadialMenuSecondViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RadialMenuiOSViewController" id="8rJ-Kc-sve" customClass="RadialMenuiOSViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -80,7 +80,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3042" y="1284"/>
+            <point key="canvasLocation" x="2394" y="1955"/>
+        </scene>
+        <!--Smilies-->
+        <scene sceneID="ICA-gz-ovW">
+            <objects>
+                <viewController storyboardIdentifier="RadialMenuEmogiesViewController" id="hpp-dy-tZd" customClass="RadialMenuEmogiesViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gsq-4l-rPt"/>
+                        <viewControllerLayoutGuide type="bottom" id="fIt-bK-Ql3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3ld-hF-1sm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Smilies" image="smilingverysmall" id="MfB-4N-beQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R4b-zP-dqz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3321" y="1700"/>
+        </scene>
+        <!--Text-->
+        <scene sceneID="dcN-Lt-4Bi">
+            <objects>
+                <viewController storyboardIdentifier="RadialMenuTextViewController" id="eex-kV-dxP" customClass="RadialMenuTextViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="emj-fk-aeE"/>
+                        <viewControllerLayoutGuide type="bottom" id="GPD-ZG-mpK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tY7-te-7Oz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Text" image="textsmessagesmall" id="xey-u8-Wc0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxc-lu-ibZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3662" y="800"/>
         </scene>
         <!--Radial Menu Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -95,6 +133,8 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="eex-kV-dxP" kind="relationship" relationship="viewControllers" id="Dul-aG-NOZ"/>
+                        <segue destination="hpp-dy-tZd" kind="relationship" relationship="viewControllers" id="kGW-RM-NvO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -105,5 +145,7 @@
     <resources>
         <image name="circle" width="30" height="30"/>
         <image name="microphone" width="16" height="16"/>
+        <image name="smilingverysmall" width="20" height="20"/>
+        <image name="textsmessagesmall" width="25" height="25"/>
     </resources>
 </document>

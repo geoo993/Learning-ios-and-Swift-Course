@@ -10,7 +10,7 @@ import UIKit
 import QuartzCore
 import PureLayout
 
-class RadialMenuSecondViewController: UIViewController {
+class RadialMenuiOSViewController: UIViewController {
     var didSetupConstraints = false
     
     let highlightColor = UIColor(red:0.0, green:122.0/255.0, blue:1.0, alpha:1.0)
@@ -68,7 +68,7 @@ class RadialMenuSecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(RadialMenuSecondViewController.pressedButton(_:)))
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(RadialMenuiOSViewController.pressedButton(_:)))
         
         radialMenu = RadialMenu(menus: [createSubMenu("cancel"), createSubMenu("save")], radius: menuRadius)
         radialMenu.minAngle = 180
@@ -170,5 +170,10 @@ class RadialMenuSecondViewController: UIViewController {
             didSetupConstraints = true
         }
     }
+    
+    deinit {
+        print("Radial Menu iOS View Controller \(#function)")
+    }
+    
 }
 
