@@ -70,7 +70,7 @@ class RadialMenuTextViewController: UIViewController, UIGestureRecognizerDelegat
         switch(gesture.state) {
         case .began:
             if showRadialMenu == false {
-                //wordSelected(at: location )
+                wordSelected(at: location )
                 setupRadialMenu(with: textView, titles: titleItems)
                 firstPressLocation = location
                 radialMenu.openAtPosition(firstPressLocation)

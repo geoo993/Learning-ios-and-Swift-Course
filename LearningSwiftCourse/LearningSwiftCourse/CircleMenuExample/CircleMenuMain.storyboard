@@ -1,7 +1,83 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5OM-sy-e65">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Circle Menu View Controller-->
+        <scene sceneID="TbL-ri-u0R">
+            <objects>
+                <viewController storyboardIdentifier="CircleMenuViewController" id="5OM-sy-e65" customClass="CircleMenuViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S56-2R-Jvh"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Sd-XT-wCD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GIN-LR-onI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeE-Zb-IaN">
+                                <rect key="frame" x="157" y="617" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="6sq-aC-ST0"/>
+                                    <constraint firstAttribute="height" constant="30" id="rgW-q1-JVc"/>
+                                </constraints>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="homebutton:" destination="5OM-sy-e65" eventType="touchUpInside" id="9Kn-nT-OCN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAP-Fs-5SU" userLabel="Circle Menu Button" customClass="CircleMenu" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                <rect key="frame" x="157.5" y="303" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="09v-Br-mRE"/>
+                                    <constraint firstAttribute="height" constant="60" id="IVh-od-CQA"/>
+                                </constraints>
+                                <state key="normal" image="menualt"/>
+                                <state key="selected" image="icon_close"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                        <real key="value" value="120"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonsCount">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="showDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.078431372550000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eeE-Zb-IaN" firstAttribute="centerX" secondItem="GIN-LR-onI" secondAttribute="centerX" id="7wA-va-MT3"/>
+                            <constraint firstItem="WAP-Fs-5SU" firstAttribute="centerY" secondItem="GIN-LR-onI" secondAttribute="centerY" id="GWC-AZ-4nF"/>
+                            <constraint firstItem="8Sd-XT-wCD" firstAttribute="top" secondItem="eeE-Zb-IaN" secondAttribute="bottom" constant="20" id="bYE-pw-2Nb"/>
+                            <constraint firstItem="WAP-Fs-5SU" firstAttribute="centerX" secondItem="GIN-LR-onI" secondAttribute="centerX" id="snq-EN-pjp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="WAP-Fs-5SU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1R-3i-VeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340" y="234"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_close" width="120" height="120"/>
+        <image name="menualt" width="32" height="32"/>
+    </resources>
 </document>

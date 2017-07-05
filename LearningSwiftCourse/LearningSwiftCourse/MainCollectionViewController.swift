@@ -57,7 +57,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"CarthageDemoViewController" : "CarthageDemoMain",
                             //"AninmationsWithLottieViewController" : "AninmationsWithLottieMain",
                             //"ButtonWithImageAndTextViewController" : "ButtonWithImageAndTextMain",
-                            "RadialMenuTabBarController" : "RadialMenuMain",
+                            //"RadialMenuTabBarController" : "RadialMenuMain",
                             "CircleMenuViewController" : "CircleMenuMain",
                            ]
     
