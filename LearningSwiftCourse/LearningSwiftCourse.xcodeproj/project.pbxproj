@@ -89,6 +89,7 @@
 		C7BF534E1F058DC300F01E72 /* BlueSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF534D1F058DC300F01E72 /* BlueSlideView.swift */; };
 		C7BF53501F058E7200F01E72 /* UIViewsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF534F1F058E7200F01E72 /* UIViewsContainerViewController.swift */; };
 		C7BF53521F05AFD800F01E72 /* YellowSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF53511F05AFD800F01E72 /* YellowSlideView.swift */; };
+		C7C0F8781F0C077E003A4DE2 /* UITextView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F8771F0C077E003A4DE2 /* UITextView+Ext.swift */; };
 		C7C2AE3C1EF6CA8D004F257A /* ColorChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE391EF6CA80004F257A /* ColorChangeViewController.swift */; };
 		C7C2AE3D1EF6CA90004F257A /* ColorsMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C2AE3A1EF6CA80004F257A /* ColorsMain.storyboard */; };
 		C7C2AE3E1EF6CA93004F257A /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE3B1EF6CA80004F257A /* ColorsViewController.swift */; };
@@ -877,6 +878,7 @@
 		C7BF534D1F058DC300F01E72 /* BlueSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueSlideView.swift; sourceTree = "<group>"; };
 		C7BF534F1F058E7200F01E72 /* UIViewsContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewsContainerViewController.swift; sourceTree = "<group>"; };
 		C7BF53511F05AFD800F01E72 /* YellowSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowSlideView.swift; sourceTree = "<group>"; };
+		C7C0F8771F0C077E003A4DE2 /* UITextView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Ext.swift"; sourceTree = "<group>"; };
 		C7C2AE391EF6CA80004F257A /* ColorChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangeViewController.swift; sourceTree = "<group>"; };
 		C7C2AE3A1EF6CA80004F257A /* ColorsMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorsMain.storyboard; sourceTree = "<group>"; };
 		C7C2AE3B1EF6CA80004F257A /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
@@ -1567,6 +1569,7 @@
 				C7349DEB1EFC226B00B99AE6 /* UINavigationBar+Ext.swift */,
 				C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */,
 				C7E774051F01560E00440E05 /* UINavigationController+Ext.swift */,
+				C7C0F8771F0C077E003A4DE2 /* UITextView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2831,6 +2834,7 @@
 				C7C2AF281EF6CC8C004F257A /* InspirationalFilmsCollectionViewCell.swift in Sources */,
 				C7CEB7A71F06FE0D00CC054B /* CirclePieView.swift in Sources */,
 				C7C2AF841EF6CD91004F257A /* CustomNavigationAnimationController.swift in Sources */,
+				C7C0F8781F0C077E003A4DE2 /* UITextView+Ext.swift in Sources */,
 				C7C2AF6A1EF6CD64004F257A /* EmptyViewController.swift in Sources */,
 				C711FF261F016929005AAEA5 /* BBCiPlayerStretchyHeaderViewController.swift in Sources */,
 				C7FC254B1F0501DC00959765 /* UIPickerViewController.swift in Sources */,

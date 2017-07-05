@@ -82,6 +82,78 @@ extension String {
         return boundingBox.width
     }
     
+    //emoji 
+    
+    public func toUIImage(with fontSize: CGFloat) -> UIImage {
+        let size = CGSize(width: 30, height: 35)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0);
+        UIColor.white.set()
+        let rect = CGRect(origin: CGPoint.zero, size: size)
+        UIRectFill(CGRect(origin: CGPoint.zero, size: size))
+        
+        (self as NSString).draw(in: rect, withAttributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: fontSize)]) 
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        guard let im = image else {
+            print("problem")
+            return UIImage()
+        }
+        return im
+    }
+    
+    
+    public func showEmojiDetail () -> String {
+        return self.characters.reduce("") { // loop through str individual characters
+            var item = "\($1)" // string with the current char
+            let isEmoji = item.containsEmoji // true or false
+            
+            if isEmoji {
+                item = item.applyingTransform(StringTransform.toUnicodeName, reverse: false)!
+            }
+            return $0 + item
+            }.replacingOccurrences(of:"\\N", with:"") // strips "\N"
+        
+    }
+    
+    public var containsEmoji: Bool {
+        
+        for scalar in self.unicodeScalars {
+            switch scalar.value {
+                
+            case 0x2600...0x1F9FF:
+                return true
+            default:
+                continue
+            }
+        }
+        return false
+    }
+    
+    public func removeSpecialCharsFromString() -> String {
+        let validCharacters = Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890+-*=(),.:!_".characters)
+        return String(self.characters.filter { validCharacters.contains($0) })
+    }
+    
+    public func removingEmoji () -> String {
+        
+        return self.characters.reduce("") 
+        { 
+            let item = "\($1)" // string with the current char
+            let isEmoji = item.containsEmoji // true or false
+            
+            if isEmoji {
+                
+                print("Found emoji", item)
+                return ""
+            }else {
+                print("No emoji", item)
+                return item
+            }
+        }
+    }
+    
     
 }
 

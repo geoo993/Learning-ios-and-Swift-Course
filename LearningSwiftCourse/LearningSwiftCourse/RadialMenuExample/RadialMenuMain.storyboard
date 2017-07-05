@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,11 +17,11 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQr-d4-Ar2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="Un0-hs-WCQ"/>
                                 </constraints>
@@ -56,11 +56,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-n5-O85">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="gSd-d4-sOG"/>
                                 </constraints>
@@ -91,7 +91,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fIt-bK-Ql3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3ld-hF-1sm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -110,15 +110,52 @@
                         <viewControllerLayoutGuide type="bottom" id="GPD-ZG-mpK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tY7-te-7Oz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNh-xg-M4B">
+                                <rect key="frame" x="20" y="134" width="280" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="qKd-Ni-nHK"/>
+                                </constraints>
+                                <mutableString key="text">The NSLinguisticTagger class provides a uniform interface to a variety of natural language processing functionality with support for many different languages and scripts. You can use NSLinguisticTagger to segment natural language text into paragraphs, sentences, or words, and tag information about those tokens, such as part of speech, lexical class, lemma, script, and language.
+
+When you create a linguistic tagger, you specify what kind of information you're interested in by passing one or more NSLinguisticTagScheme values. Set the string property to the natural language text you want to analyze, and the linguistic tagger processes it according to the specified tag schemes. You can then enumerate over the tags in a specified range, using the methods described in Enumerating Linguistic Tags, to get the information requested for a given scheme and unit.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eex-kV-dxP" id="PMx-jq-xrs"/>
+                                </connections>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hJ-rZ-3yw">
+                                <rect key="frame" x="110" y="50" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ill-9J-OrV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6hJ-rZ-3yw" firstAttribute="centerX" secondItem="tY7-te-7Oz" secondAttribute="centerX" id="7L6-0w-w0p"/>
+                            <constraint firstItem="nNh-xg-M4B" firstAttribute="centerX" secondItem="tY7-te-7Oz" secondAttribute="centerX" id="HD5-9B-mus"/>
+                            <constraint firstItem="nNh-xg-M4B" firstAttribute="leading" secondItem="tY7-te-7Oz" secondAttribute="leading" constant="20" id="KZN-0F-bVe"/>
+                            <constraint firstItem="nNh-xg-M4B" firstAttribute="centerY" secondItem="tY7-te-7Oz" secondAttribute="centerY" id="Zj0-T4-wu0"/>
+                            <constraint firstAttribute="trailing" secondItem="nNh-xg-M4B" secondAttribute="trailing" constant="20" id="r5I-iU-ACf"/>
+                            <constraint firstItem="6hJ-rZ-3yw" firstAttribute="top" secondItem="emj-fk-aeE" secondAttribute="bottom" constant="30" id="tML-c0-bfp"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Text" image="textsmessagesmall" id="xey-u8-Wc0"/>
+                    <connections>
+                        <outlet property="textView" destination="nNh-xg-M4B" id="IpW-OQ-xtm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxc-lu-ibZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3662" y="800"/>
+            <point key="canvasLocation" x="3661.5999999999999" y="799.2503748125938"/>
         </scene>
         <!--Radial Menu Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

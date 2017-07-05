@@ -25,10 +25,10 @@ class RadialMenuColorsViewController: UIViewController {
     var tapView:UIView
     
     var radialMenu:RadialMenu!
-    let num = 4
+    let numberOfMenus = 4
     let addButtonSize: CGFloat = 25
-    let menuRadius: CGFloat = 125.0
-    let subMenuRadius: CGFloat = 35.0
+    let menuRadius: CGFloat = 120.0
+    let subMenuRadius: CGFloat = 30.0
     var didSetupConstraints = false
     let colors = ["#C0392B", "#2ECC71", "#E67E22", "#3498DB", "#9B59B6", "#F1C40F",
                   "#16A085", "#8E44AD", "#2C3E50", "#F39C12", "#2980B9", "#27AE60",
@@ -42,15 +42,49 @@ class RadialMenuColorsViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    func removeView<T>(with type : T.Type){
+        for subview in view.subviews {
+            if (subview is T) {
+                print(subview)
+                subview.removeFromSuperview()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupRadialMenu()
+        
+        // Setup add button
+        addButton.isUserInteractionEnabled = true
+        addButton.alpha = 0.65
+        view.addSubview(addButton)
+        
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(RadialMenuColorsViewController.pressedButton(_:)))
+        
+        tapView.center = view.center
+        tapView.addGestureRecognizer(longPress)
+        view.addSubview(tapView)
+        
+        view.backgroundColor = UIColor.white
+        
+        
+    }
+    
+  
+    func setupRadialMenu() {
+        
+        removeView(with: RadialMenu.self)
+        
+        if radialMenu != nil {
+            radialMenu = nil
+        }
         
         // Setup radial menu
         var subMenus: [RadialSubMenu] = []
-        for i in 0..<num {
-            subMenus.append(self.createSubMenu(i))
+        for i in 0..<numberOfMenus {
+            subMenus.append(self.createSubMenuItem(i))
         }
         
         radialMenu = RadialMenu(menus: subMenus, radius: menuRadius)
@@ -86,16 +120,6 @@ class RadialMenuColorsViewController: UIViewController {
         
         view.addSubview(radialMenu)
         
-        // Setup add button
-        addButton.isUserInteractionEnabled = true
-        addButton.alpha = 0.65
-        view.addSubview(addButton)
-        
-        tapView.center = view.center
-        tapView.addGestureRecognizer(longPress)
-        view.addSubview(tapView)
-        
-        view.backgroundColor = UIColor.white
     }
     
     // FIXME: Consider moving this to the radial menu and making standard interaction types  that are configurable
@@ -132,7 +156,7 @@ class RadialMenuColorsViewController: UIViewController {
     
     // MARK - RadialSubMenu helpers
     
-    func createSubMenu(_ i: Int) -> RadialSubMenu {
+    func createSubMenuItem(_ i: Int) -> RadialSubMenu {
         let subMenu = RadialSubMenu(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(subMenuRadius*2), height: CGFloat(subMenuRadius*2)))
         subMenu.isUserInteractionEnabled = true
         subMenu.layer.cornerRadius = subMenuRadius

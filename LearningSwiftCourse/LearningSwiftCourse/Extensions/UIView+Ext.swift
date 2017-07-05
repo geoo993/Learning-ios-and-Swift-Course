@@ -261,6 +261,16 @@ public extension UIView {
         }
     }
     
+    func removeSubview<T>(with type : T.Type){
+        for subview in self.subviews {
+            if (subview is T) {
+                //print(subview)
+                subview.removeEverything()
+                subview.removeFromSuperview()
+            }
+        }
+    }
+    
     
     func removeVisibilityAnimations() {
         self.layer.removeAnimation(forKey: UIViewVisibilityShowAnimationKey)
@@ -363,6 +373,5 @@ public extension UIView {
         }
         
     }
-
     
 }
