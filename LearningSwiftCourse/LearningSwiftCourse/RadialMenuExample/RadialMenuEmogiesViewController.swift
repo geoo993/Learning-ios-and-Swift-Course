@@ -10,13 +10,13 @@ import UIKit
 
 class RadialMenuEmogiesViewController: UIViewController {
 
-    var tapView:UIView
+    @IBOutlet weak var activatedLabel : UILabel!
     
     var showRadialMenu = false
     var radialMenu:RadialMenu!
     var firstPressLocation = CGPoint.zero
-    
-    let emogiIcons = ["🤡","😎","😡","👹","🎃","👮‍♀️","👽"]
+    let emogiIcons = ["🤡","😎","😡","👹","🎃","👽"]
+    let emogiImages = [#imageLiteral(resourceName: "angry26"),#imageLiteral(resourceName: "emoticon1"),#imageLiteral(resourceName: "frown1"),#imageLiteral(resourceName: "mute24"),#imageLiteral(resourceName: "smiley41"),#imageLiteral(resourceName: "winking9")] 
     let menuRadius: CGFloat = 150.0
     let subMenuRadius: CGFloat = 20.0
     let colors = ["#C0392B", "#2ECC71", "#E67E22", "#3498DB", "#9B59B6", "#F1C40F",
@@ -24,16 +24,13 @@ class RadialMenuEmogiesViewController: UIViewController {
                   "#D35400", "#34495E", "#E74C3C", "#1ABC9C"].map { UIColor(rgba: $0) }
     
     required init?(coder aDecoder: NSCoder) {
-        tapView = UIView()
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //setupRadialMenu()
         setupLongPress()
-        // Do any additional setup after loading the view.
     }
     
     
@@ -47,12 +44,11 @@ class RadialMenuEmogiesViewController: UIViewController {
     }
     @objc func longPressed(_ gesture : UIGestureRecognizer) {
     
-        print()
-        
         let location = gesture.location(in: view)
         
         switch(gesture.state) {
         case .began:
+            
             if showRadialMenu == false {
                 setupRadialMenu()
                 firstPressLocation = location
@@ -61,7 +57,6 @@ class RadialMenuEmogiesViewController: UIViewController {
                 showRadialMenu = true
             }
         case .changed:
-            
             if showRadialMenu == true {
                 self.radialMenu.moveAtPosition(location)
             }
@@ -101,9 +96,11 @@ class RadialMenuEmogiesViewController: UIViewController {
         
         // Setup radial menu
         var subMenus: [RadialSubMenu] = []
-        for i in 0..<emogiIcons.count {
-            let img = emogiIcons[i].toUIImage(with: 30)
-            subMenus.append( self.createSubMenuItem(i, image: img)  )
+        for i in 0..<emogiImages.count {
+            //let img = emogiIcons[i].toUIImage(with: 30)
+            let img = emogiImages[i]
+            let title = emogiIcons[i]
+            subMenus.append( self.createSubMenuItem(i, image: img, title: title)  )
         }
         
         radialMenu = RadialMenu(menus: subMenus, radius: menuRadius)
@@ -127,35 +124,54 @@ class RadialMenuEmogiesViewController: UIViewController {
             // TODO: Add nice color transition
             self.view.backgroundColor = color
         }
-        
+       
         radialMenu.onUnhighlight = { subMenu in
             self.resetSubMenu(subMenu)
             self.view.backgroundColor = UIColor.white
         }
         
-        radialMenu.onClose = {
+        radialMenu.onClose = { 
             self.view.backgroundColor = UIColor.white
+        }
+        
+        radialMenu.onActivate = { subMenu in
+            self.activatedLabel.text = "Activated \(subMenu.menuTitle)"
+            print ("activated menu \(subMenu.tag)")
         }
         
         view.addSubview(radialMenu)
         
     }
     
-    func createSubMenuItem(_ i: Int, image : UIImage?) -> RadialSubMenu {
+    func createSubMenuItem(_ i: Int, image : UIImage?, title: String?) -> RadialSubMenu {
         
-        let frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(subMenuRadius*2), height: CGFloat(subMenuRadius*2))
+        let dimension = CGFloat(subMenuRadius*2)
+        let frame = CGRect(x: 0.0, y: 0.0, width: dimension, height: dimension)
+        let subMenu : RadialSubMenu
         
-        let imageV = UIImageView(image: image)
-        imageV.frame = frame
-        imageV.contentMode = .scaleAspectFit
+        if title != nil {
+            //use button
+            let button = UIButton(frame: frame)
+            button.setTitle(title, for: .normal)
+            subMenu = RadialSubMenu(button: button)
+        }else if title == nil && image != nil {
+            //use image
+            let imageV = UIImageView(image: image)
+            imageV.frame = frame
+            imageV.contentMode = .scaleAspectFit
+            subMenu = RadialSubMenu(imageView: imageV)
+        }else {
+            subMenu = RadialSubMenu(frame: frame)
+        }
         
-        let subMenu = (image != nil) ? RadialSubMenu(imageView: imageV) : RadialSubMenu(frame: frame)
+        subMenu.menuTitle = title ?? "" 
         subMenu.isUserInteractionEnabled = true
         subMenu.layer.cornerRadius = subMenuRadius
         subMenu.layer.borderColor = UIColor.white.withAlphaComponent(0.5).cgColor
         subMenu.layer.borderWidth = 1
         subMenu.tag = i
         resetSubMenu(subMenu)
+        
         return subMenu
     }
     

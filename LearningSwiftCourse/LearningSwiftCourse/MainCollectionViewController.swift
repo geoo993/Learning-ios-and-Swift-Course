@@ -58,6 +58,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"AninmationsWithLottieViewController" : "AninmationsWithLottieMain",
                             //"ButtonWithImageAndTextViewController" : "ButtonWithImageAndTextMain",
                             "RadialMenuTabBarController" : "RadialMenuMain",
+                            "CircleMenuViewController" : "CircleMenuMain",
                            ]
     
     //Mark: - Collection view 

@@ -54,6 +54,7 @@
 		C737E9A61F0B8FF400DAD971 /* StudentSubmissionsfortheWWDC2017ScholarshipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C737E9A51F0B8FF400DAD971 /* StudentSubmissionsfortheWWDC2017ScholarshipViewController.swift */; };
 		C73977D21EEEFFBE005C96C8 /* pListRequestPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */; };
 		C73DF6D51EFC39FF00DAB515 /* UIResponder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */; };
+		C74773091F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74773081F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift */; };
 		C75144C21F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */; };
 		C76786621EF90DE1005C159F /* BBCiPlayerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76786611EF90DE1005C159F /* BBCiPlayerMain.storyboard */; };
 		C76786671EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76786661EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift */; };
@@ -67,6 +68,10 @@
 		C76F04EE1EF505160090F71B /* SliderMenuDrawerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F04C91EF501D00090F71B /* SliderMenuDrawerBaseViewController.swift */; };
 		C76F04F01EF505E40090F71B /* SliderMenuDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F04EF1EF505E40090F71B /* SliderMenuDrawerViewController.swift */; };
 		C778EDED1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778EDEC1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift */; };
+		C78D45131F0CEE52009B26A7 /* CircleMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78D44EF1F0CEE43009B26A7 /* CircleMenu.framework */; };
+		C78D45141F0CEE52009B26A7 /* CircleMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C78D44EF1F0CEE43009B26A7 /* CircleMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C78D45191F0CEE8A009B26A7 /* CircleMenuMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78D45181F0CEE8A009B26A7 /* CircleMenuMain.storyboard */; };
+		C78D451B1F0CEE9A009B26A7 /* CircleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D451A1F0CEE9A009B26A7 /* CircleMenuViewController.swift */; };
 		C78F49821F08493000FA2275 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78F496A1F08491400FA2275 /* Lottie.framework */; };
 		C78F49831F08493000FA2275 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C78F496A1F08491400FA2275 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C78F49881F0849F900FA2275 /* AninmationsWithLottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F49871F0849F900FA2275 /* AninmationsWithLottieViewController.swift */; };
@@ -296,6 +301,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = C72E27A01E9ED9EB0064E01B;
 			remoteInfo = LearningSwiftCourse;
+		};
+		C78D44EA1F0CEE43009B26A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84F248B31C58E65F008F12C1;
+			remoteInfo = CircleMenuDemo;
+		};
+		C78D44EC1F0CEE43009B26A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84F248C71C58E65F008F12C1;
+			remoteInfo = CircleMenuTests;
+		};
+		C78D44EE1F0CEE43009B26A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8403F5791CFF2C2E007D0BD1;
+			remoteInfo = CircleMenu;
+		};
+		C78D45151F0CEE52009B26A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8403F5781CFF2C2E007D0BD1;
+			remoteInfo = CircleMenu;
 		};
 		C78F49691F08491400FA2275 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -775,6 +808,7 @@
 				C7A9677A1F082BFC0002299B /* Cartography.framework in Embed Frameworks */,
 				C7DD10401F0AF6CE00C7C074 /* AKPickerView.framework in Embed Frameworks */,
 				C7F2EE451F0837CB00655CCC /* RxCocoa.framework in Embed Frameworks */,
+				C78D45141F0CEE52009B26A7 /* CircleMenu.framework in Embed Frameworks */,
 				C7A967821F082BFC0002299B /* Alamofire.framework in Embed Frameworks */,
 				C78F49831F08493000FA2275 /* Lottie.framework in Embed Frameworks */,
 			);
@@ -838,6 +872,7 @@
 		C737E9A51F0B8FF400DAD971 /* StudentSubmissionsfortheWWDC2017ScholarshipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSubmissionsfortheWWDC2017ScholarshipViewController.swift; sourceTree = "<group>"; };
 		C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pListRequestPermissions.swift; sourceTree = "<group>"; };
 		C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Ext.swift"; sourceTree = "<group>"; };
+		C74773081F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Ext.swift"; sourceTree = "<group>"; };
 		C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerStretchyTableView.swift; sourceTree = "<group>"; };
 		C76786611EF90DE1005C159F /* BBCiPlayerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BBCiPlayerMain.storyboard; sourceTree = "<group>"; };
 		C76786661EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentDetailedViewController.swift; sourceTree = "<group>"; };
@@ -851,6 +886,9 @@
 		C76F04C91EF501D00090F71B /* SliderMenuDrawerBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerBaseViewController.swift; sourceTree = "<group>"; };
 		C76F04EF1EF505E40090F71B /* SliderMenuDrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerViewController.swift; sourceTree = "<group>"; };
 		C778EDEC1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerSectionsHeaderView.swift; sourceTree = "<group>"; };
+		C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CircleMenu.xcodeproj; path = "Carthage/Checkouts/circle-menu/CircleMenu.xcodeproj"; sourceTree = "<group>"; };
+		C78D45181F0CEE8A009B26A7 /* CircleMenuMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CircleMenuMain.storyboard; sourceTree = "<group>"; };
+		C78D451A1F0CEE9A009B26A7 /* CircleMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleMenuViewController.swift; sourceTree = "<group>"; };
 		C78F49571F08491400FA2275 /* Lottie.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lottie.xcodeproj; path = "Carthage/Checkouts/lottie-ios/Lottie.xcodeproj"; sourceTree = "<group>"; };
 		C78F49871F0849F900FA2275 /* AninmationsWithLottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AninmationsWithLottieViewController.swift; sourceTree = "<group>"; };
 		C78F49891F084A0600FA2275 /* AninmationsWithLottieMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AninmationsWithLottieMain.storyboard; sourceTree = "<group>"; };
@@ -1069,6 +1107,7 @@
 				C7F2EE441F0837CB00655CCC /* RxCocoa.framework in Frameworks */,
 				C7F2EE401F0837CB00655CCC /* RxSwift.framework in Frameworks */,
 				C76E0CE81EE9ECB300A66E94 /* MapKit.framework in Frameworks */,
+				C78D45131F0CEE52009B26A7 /* CircleMenu.framework in Frameworks */,
 				C7D3C1091EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Frameworks */,
 				C7DD106A1F0AFD2F00C7C074 /* pop.framework in Frameworks */,
 				C7A967811F082BFC0002299B /* Alamofire.framework in Frameworks */,
@@ -1211,6 +1250,7 @@
 				C7C2AEC81EF6CB63004F257A /* ButtonsExample */,
 				C735855E1F09256200B33B55 /* ButtonWithImageAndTextExample */,
 				C7C2AEDD1EF6CB63004F257A /* CarouselViewsExample */,
+				C78D45171F0CEE5A009B26A7 /* CircleMenuExample */,
 				C7CEB7851F06FD5800CC054B /* PieChartViewExample */,
 				C7C2AE381EF6CA80004F257A /* ColorsExample */,
 				C7C2AE951EF6CB63004F257A /* ConstraintsPack */,
@@ -1388,6 +1428,7 @@
 		C77E82D51EA25E3B000AC715 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */,
 				C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */,
 				C7DD10521F0AFD2600C7C074 /* pop.xcodeproj */,
 				C7DD10361F0AF6B900C7C074 /* AKPickerViewSample.xcodeproj */,
@@ -1397,6 +1438,25 @@
 				C7A9672D1F082BDC0002299B /* Alamofire.xcodeproj */,
 			);
 			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		C78D44D81F0CEE43009B26A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C78D44EB1F0CEE43009B26A7 /* CircleMenuDemo.app */,
+				C78D44ED1F0CEE43009B26A7 /* CircleMenuTests.xctest */,
+				C78D44EF1F0CEE43009B26A7 /* CircleMenu.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C78D45171F0CEE5A009B26A7 /* CircleMenuExample */ = {
+			isa = PBXGroup;
+			children = (
+				C78D45181F0CEE8A009B26A7 /* CircleMenuMain.storyboard */,
+				C78D451A1F0CEE9A009B26A7 /* CircleMenuViewController.swift */,
+			);
+			path = CircleMenuExample;
 			sourceTree = "<group>";
 		};
 		C78F49581F08491400FA2275 /* Products */ = {
@@ -1570,6 +1630,7 @@
 				C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */,
 				C7E774051F01560E00440E05 /* UINavigationController+Ext.swift */,
 				C7C0F8771F0C077E003A4DE2 /* UITextView+Ext.swift */,
+				C74773081F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2110,6 +2171,7 @@
 				C7DD10421F0AF6CE00C7C074 /* PBXTargetDependency */,
 				C7DD106D1F0AFD2F00C7C074 /* PBXTargetDependency */,
 				C7DD108F1F0AFE9600C7C074 /* PBXTargetDependency */,
+				C78D45161F0CEE52009B26A7 /* PBXTargetDependency */,
 			);
 			name = LearningSwiftCourse;
 			productName = LearningSwiftCourse;
@@ -2267,6 +2329,10 @@
 					ProjectRef = C7A967641F082BDD0002299B /* Cartography.xcodeproj */;
 				},
 				{
+					ProductGroup = C78D44D81F0CEE43009B26A7 /* Products */;
+					ProjectRef = C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */;
+				},
+				{
 					ProductGroup = C78F49581F08491400FA2275 /* Products */;
 					ProjectRef = C78F49571F08491400FA2275 /* Lottie.xcodeproj */;
 				},
@@ -2295,6 +2361,27 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		C78D44EB1F0CEE43009B26A7 /* CircleMenuDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CircleMenuDemo.app;
+			remoteRef = C78D44EA1F0CEE43009B26A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C78D44ED1F0CEE43009B26A7 /* CircleMenuTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CircleMenuTests.xctest;
+			remoteRef = C78D44EC1F0CEE43009B26A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C78D44EF1F0CEE43009B26A7 /* CircleMenu.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CircleMenu.framework;
+			remoteRef = C78D44EE1F0CEE43009B26A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C78F496A1F08491400FA2275 /* Lottie.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -2696,6 +2783,7 @@
 				C7C2AF3E1EF6CCC3004F257A /* ParallaxHeaderMain.storyboard in Resources */,
 				C7FC254D1F05020200959765 /* UIPickerMain.storyboard in Resources */,
 				C7C2AF511EF6CCF1004F257A /* SideBarMenuMain.storyboard in Resources */,
+				C78D45191F0CEE8A009B26A7 /* CircleMenuMain.storyboard in Resources */,
 				C7C2AF0C1EF6CC62004F257A /* DraggableVerticalMenusMain.storyboard in Resources */,
 				C7C2AF421EF6CCCE004F257A /* PopUpMain.storyboard in Resources */,
 				C71678E21EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard in Resources */,
@@ -2856,6 +2944,7 @@
 				C7C2AF3F1EF6CCC3004F257A /* ParallaxHeaderTableViewCell.swift in Sources */,
 				C7C2AF621EF6CD2D004F257A /* StorySmartiesBookShelfCollectionViewCell.swift in Sources */,
 				C7C2AF761EF6CD7E004F257A /* MediaLayers.swift in Sources */,
+				C74773091F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift in Sources */,
 				C7C2AF061EF6CC46004F257A /* CarouselViewController.swift in Sources */,
 				C71678E41EFF19C700355E41 /* SimpleSpringDrawerViewController.swift in Sources */,
 				C778EDED1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift in Sources */,
@@ -2915,6 +3004,7 @@
 				C7C2AF7A1EF6CD7E004F257A /* ProductLine.swift in Sources */,
 				C7C2AF771EF6CD7E004F257A /* MediaTableViewCell.swift in Sources */,
 				C7C2AF341EF6CCA1004F257A /* NavigationViewController.swift in Sources */,
+				C78D451B1F0CEE9A009B26A7 /* CircleMenuViewController.swift in Sources */,
 				C7CEB7AF1F0709C600CC054B /* PieChartPageViewController.swift in Sources */,
 				C7C2AF471EF6CCD7004F257A /* Slide.swift in Sources */,
 				C7C2AF301EF6CC97004F257A /* NewsTableViewController.swift in Sources */,
@@ -3018,6 +3108,11 @@
 			isa = PBXTargetDependency;
 			target = C72E27A01E9ED9EB0064E01B /* LearningSwiftCourse */;
 			targetProxy = C72E27C11E9ED9EB0064E01B /* PBXContainerItemProxy */;
+		};
+		C78D45161F0CEE52009B26A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CircleMenu;
+			targetProxy = C78D45151F0CEE52009B26A7 /* PBXContainerItemProxy */;
 		};
 		C78F49851F08493000FA2275 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

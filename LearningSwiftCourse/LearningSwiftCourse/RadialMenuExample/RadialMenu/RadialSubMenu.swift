@@ -31,6 +31,8 @@ open class RadialSubMenu: UIView, POPAnimationDelegate {
         case closed, opening, opened, highlighted, unhighlighted, activated, closing
     }
 
+    var menuTitle : String = ""
+    
     open var delegate: RadialSubMenuDelegate?
     var origPosition         = CGPoint.zero
     var currPosition         = CGPoint.zero
@@ -76,6 +78,11 @@ open class RadialSubMenu: UIView, POPAnimationDelegate {
         self.init(frame: imageView.frame)
         imageView.isUserInteractionEnabled = true
         addSubview(imageView)
+    }
+    
+    convenience public init(button: UIButton) {
+        self.init(frame: button.frame)
+        addSubview(button)
     }
 
     required public init?(coder aDecoder: NSCoder) {

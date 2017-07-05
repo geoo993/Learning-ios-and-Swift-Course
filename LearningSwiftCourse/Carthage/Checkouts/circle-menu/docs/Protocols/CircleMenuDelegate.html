@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CircleMenuDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/CircleMenuDelegate" class="dashAnchor"></a>
+    <a title="CircleMenuDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">CircleMenuDemo Docs</a> (87% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">CircleMenuDemo Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CircleMenuDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CircleMenu.html">CircleMenu</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CircleMenuDelegate.html">CircleMenuDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CircleMenuDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">CircleMenuDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>CircleMenuDelegate</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP14CircleMenuDemo18CircleMenuDelegate10circleMenuFTCS_10CircleMenu11willDisplayCSo8UIButton7atIndexSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/circleMenu(_:willDisplay:atIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP14CircleMenuDemo18CircleMenuDelegate10circleMenuFTCS_10CircleMenu11willDisplayCSo8UIButton7atIndexSi_T_">circleMenu(_:willDisplay:atIndex:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate the circle menu is about to draw a button for a particular index.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">circleMenu</span><span class="p">(</span><span class="nv">circleMenu</span><span class="p">:</span> <span class="kt">CircleMenu</span><span class="p">,</span> <span class="n">willDisplay</span> <span class="nv">button</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">,</span> <span class="nv">atIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>circleMenu</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The circle menu object informing the delegate of this impending event.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>button</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A circle menu button object that circle menu is going to use when drawing the row. Don&rsquo;t change button.tag</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>atIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An button index.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP14CircleMenuDemo18CircleMenuDelegate10circleMenuFTCS_10CircleMenu18buttonWillSelectedCSo8UIButton7atIndexSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/circleMenu(_:buttonWillSelected:atIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP14CircleMenuDemo18CircleMenuDelegate10circleMenuFTCS_10CircleMenu18buttonWillSelectedCSo8UIButton7atIndexSi_T_">circleMenu(_:buttonWillSelected:atIndex:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that a specified index is about to be selected.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">circleMenu</span><span class="p">(</span><span class="nv">circleMenu</span><span class="p">:</span> <span class="kt">CircleMenu</span><span class="p">,</span> <span class="n">buttonWillSelected</span> <span class="nv">button</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">,</span> <span class="nv">atIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>circleMenu</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A circle menu object informing the delegate about the impending selection.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>button</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A selected circle menu button. Don&rsquo;t change button.tag</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>atIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Selected button index</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP14CircleMenuDemo18CircleMenuDelegate10circleMenuFTCS_10CircleMenu17buttonDidSelectedCSo8UIButton7atIndexSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/circleMenu(_:buttonDidSelected:atIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP14CircleMenuDemo18CircleMenuDelegate10circleMenuFTCS_10CircleMenu17buttonDidSelectedCSo8UIButton7atIndexSi_T_">circleMenu(_:buttonDidSelected:atIndex:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the specified index is now selected.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">circleMenu</span><span class="p">(</span><span class="nv">circleMenu</span><span class="p">:</span> <span class="kt">CircleMenu</span><span class="p">,</span> <span class="n">buttonDidSelected</span> <span class="nv">button</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">,</span> <span class="nv">atIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>circleMenu</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A circle menu object informing the delegate about the new index selection.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>button</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A selected circle menu button. Don&rsquo;t change button.tag</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>atIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Selected button index</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP14CircleMenuDemo18CircleMenuDelegate13menuCollapsedFCS_10CircleMenuT_"></a>
+                    <a name="//apple_ref/swift/Method/menuCollapsed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP14CircleMenuDemo18CircleMenuDelegate13menuCollapsedFCS_10CircleMenuT_">menuCollapsed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the menu was collapsed - the cancel action.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">menuCollapsed</span><span class="p">(</span><span class="nv">circleMenu</span><span class="p">:</span> <span class="kt">CircleMenu</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>circleMenu</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A circle menu object informing the delegate about the new index selection.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/Ramotion/circle-menu" target="_blank" rel="external">AlexKalinkin</a>. All rights reserved. (Last updated: 2016-06-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

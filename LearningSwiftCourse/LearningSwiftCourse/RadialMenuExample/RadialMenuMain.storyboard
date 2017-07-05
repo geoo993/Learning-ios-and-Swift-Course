@@ -93,13 +93,42 @@
                     <view key="view" contentMode="scaleToFill" id="3ld-hF-1sm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activated 😊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9V-hQ-xVw">
+                                <rect key="frame" x="60" y="266" width="200" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="beA-vl-KNV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Anywhere" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1c-2M-5ze">
+                                <rect key="frame" x="60.5" y="40" width="200" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="wU8-Kt-1ur"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e9V-hQ-xVw" firstAttribute="centerX" secondItem="3ld-hF-1sm" secondAttribute="centerX" id="1f8-Tb-VB2"/>
+                            <constraint firstItem="M1c-2M-5ze" firstAttribute="top" secondItem="gsq-4l-rPt" secondAttribute="bottom" constant="20" id="8bB-PL-hEE"/>
+                            <constraint firstItem="M1c-2M-5ze" firstAttribute="centerX" secondItem="3ld-hF-1sm" secondAttribute="centerX" id="gNj-rC-tAD"/>
+                            <constraint firstItem="e9V-hQ-xVw" firstAttribute="centerY" secondItem="3ld-hF-1sm" secondAttribute="centerY" id="riM-8Q-HoE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Smilies" image="smilingverysmall" id="MfB-4N-beQ"/>
+                    <connections>
+                        <outlet property="activatedLabel" destination="e9V-hQ-xVw" id="k8Q-kU-oYU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4b-zP-dqz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3321" y="1700"/>
+            <point key="canvasLocation" x="3320.625" y="1699.6478873239437"/>
         </scene>
         <!--Text-->
         <scene sceneID="dcN-Lt-4Bi">
@@ -119,9 +148,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="qKd-Ni-nHK"/>
                                 </constraints>
-                                <mutableString key="text">The NSLinguisticTagger class provides a uniform interface to a variety of natural language processing functionality with support for many different languages and scripts. You can use NSLinguisticTagger to segment natural language text into paragraphs, sentences, or words, and tag information about those tokens, such as part of speech, lexical class, lemma, script, and language.
+                                <string key="text">The NSLinguisticTagger class provides a uniform interface to a variety of natural language processing functionality with support for many different languages and scripts. You can use NSLinguisticTagger to segment natural language text into paragraphs, sentences, or words, and tag information about those tokens, such as part of speech, lexical class, lemma, script, and language.
 
-When you create a linguistic tagger, you specify what kind of information you're interested in by passing one or more NSLinguisticTagScheme values. Set the string property to the natural language text you want to analyze, and the linguistic tagger processes it according to the specified tag schemes. You can then enumerate over the tags in a specified range, using the methods described in Enumerating Linguistic Tags, to get the information requested for a given scheme and unit.</mutableString>
+When you create a linguistic tagger, you specify what kind of information you're interested in by passing one or more NSLinguisticTagScheme values. Set the string property to the natural language text you want to analyze, and the linguistic tagger processes it according to the specified tag schemes. You can then enumerate over the tags in a specified range, using the methods described in Enumerating Linguistic Tags, to get the information requested for a given scheme and unit.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
