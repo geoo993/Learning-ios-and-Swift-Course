@@ -8,6 +8,7 @@
 //https://developer.apple.com/machine-learning/
 //https://www.appcoda.com/coreml-introduction/
 //https://www.raywenderlich.com/164213/coreml-and-vision-machine-learning-in-ios-11-tutorial
+//http://machinethink.net/blog/ios-11-machine-learning-for-everyone/
 
 import UIKit
 import CoreML

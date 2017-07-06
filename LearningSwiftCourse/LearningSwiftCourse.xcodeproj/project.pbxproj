@@ -78,6 +78,9 @@
 		C78F498A1F084A0600FA2275 /* AninmationsWithLottieMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78F49891F084A0600FA2275 /* AninmationsWithLottieMain.storyboard */; };
 		C7A1A2171F079AF2005CF910 /* PieChartWithSubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */; };
 		C7A1A2351F07B4F7005CF910 /* PieChartViewWithBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */; };
+		C7A29BFA1F0E4B4700C2D9E6 /* Metal2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A29BF91F0E4B4700C2D9E6 /* Metal2.swift */; };
+		C7A58AE71F0D91610005C0A5 /*  NaturalLanguageProcessingMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A58AE61F0D91610005C0A5 /*  NaturalLanguageProcessingMain.storyboard */; };
+		C7A58AE91F0D917A0005C0A5 /* NaturalLanguageProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A58AE81F0D917A0005C0A5 /* NaturalLanguageProcessingViewController.swift */; };
 		C7A967791F082BFC0002299B /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A9676E1F082BDE0002299B /* Cartography.framework */; };
 		C7A9677A1F082BFC0002299B /* Cartography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7A9676E1F082BDE0002299B /* Cartography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7A967811F082BFC0002299B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A967391F082BDD0002299B /* Alamofire.framework */; };
@@ -902,6 +905,9 @@
 		C78F4AB51EF34FDE0001CF94 /* ResNet50.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ResNet50.txt; sourceTree = "<group>"; };
 		C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartWithSubData.swift; sourceTree = "<group>"; };
 		C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewWithBezierPath.swift; sourceTree = "<group>"; };
+		C7A29BF91F0E4B4700C2D9E6 /* Metal2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metal2.swift; sourceTree = "<group>"; };
+		C7A58AE61F0D91610005C0A5 /*  NaturalLanguageProcessingMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = " NaturalLanguageProcessingMain.storyboard"; sourceTree = "<group>"; };
+		C7A58AE81F0D917A0005C0A5 /* NaturalLanguageProcessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageProcessingViewController.swift; sourceTree = "<group>"; };
 		C7A9672D1F082BDC0002299B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Carthage/Checkouts/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C7A967641F082BDD0002299B /* Cartography.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cartography.xcodeproj; path = Carthage/Checkouts/Cartography/Cartography.xcodeproj; sourceTree = "<group>"; };
 		C7AE488F1EA5327300C2096E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -1262,7 +1268,9 @@
 				C7C2AE501EF6CB62004F257A /* ImageViewerExample */,
 				C7C2AE731EF6CB62004F257A /* InspirationalFilmsExample */,
 				C737E9701F0B88E800DAD971 /* Machine Learning For iOS */,
+				C7A29BC61F0E4B2500C2D9E6 /* Metal 2 */,
 				C7C2AE981EF6CB63004F257A /* MultiSidedBarMenuExample */,
+				C7A58AB31F0D91320005C0A5 /*  NaturalLanguageProcessing */,
 				C7C2AE681EF6CB62004F257A /* NavBarExample */,
 				C7C2AEA01EF6CB63004F257A /* PageViewExample */,
 				C7C2AE4C1EF6CB62004F257A /* ParallaxScrollExample */,
@@ -1507,6 +1515,23 @@
 				C78F4AB51EF34FDE0001CF94 /* ResNet50.txt */,
 			);
 			path = ResNet50;
+			sourceTree = "<group>";
+		};
+		C7A29BC61F0E4B2500C2D9E6 /* Metal 2 */ = {
+			isa = PBXGroup;
+			children = (
+				C7A29BF91F0E4B4700C2D9E6 /* Metal2.swift */,
+			);
+			path = "Metal 2";
+			sourceTree = "<group>";
+		};
+		C7A58AB31F0D91320005C0A5 /*  NaturalLanguageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				C7A58AE61F0D91610005C0A5 /*  NaturalLanguageProcessingMain.storyboard */,
+				C7A58AE81F0D917A0005C0A5 /* NaturalLanguageProcessingViewController.swift */,
+			);
+			path = " NaturalLanguageProcessing";
 			sourceTree = "<group>";
 		};
 		C7A9672E1F082BDC0002299B /* Products */ = {
@@ -2817,6 +2842,7 @@
 				C7C2AE3D1EF6CA90004F257A /* ColorsMain.storyboard in Resources */,
 				C7C2AF051EF6CC46004F257A /* CarouselMain.storyboard in Resources */,
 				C7C2AF4A1EF6CCD7004F257A /* slide16.gif in Resources */,
+				C7A58AE71F0D91610005C0A5 /*  NaturalLanguageProcessingMain.storyboard in Resources */,
 				C7C2AF491EF6CCD7004F257A /* slide15.gif in Resources */,
 				C70C15501F0571BC00CE9220 /* MenuItems.plist in Resources */,
 				C78F498A1F084A0600FA2275 /* AninmationsWithLottieMain.storyboard in Resources */,
@@ -2957,6 +2983,7 @@
 				C7C2AF6C1EF6CD64004F257A /* MetricViewController.swift in Sources */,
 				C7C2AEF51EF6CC0B004F257A /* AirbnbData.swift in Sources */,
 				C7C2AF2D1EF6CC97004F257A /* MultiSidedBarMenuControllerRight.swift in Sources */,
+				C7A58AE91F0D917A0005C0A5 /* NaturalLanguageProcessingViewController.swift in Sources */,
 				C7CEB7AD1F07059D00CC054B /* PieChartView.swift in Sources */,
 				C73977D21EEEFFBE005C96C8 /* pListRequestPermissions.swift in Sources */,
 				C72AF4A11F07CD790023F014 /* ImagePickerCoreMLViewNavigationController.swift in Sources */,
@@ -3002,6 +3029,7 @@
 				C76F04C41EF5001D0090F71B /* SliderMenuDrawerMenuTableViewCell.swift in Sources */,
 				C7C2AEFC1EF6CC17004F257A /* AirbnbMenuTableViewController.swift in Sources */,
 				C7C2AF7A1EF6CD7E004F257A /* ProductLine.swift in Sources */,
+				C7A29BFA1F0E4B4700C2D9E6 /* Metal2.swift in Sources */,
 				C7C2AF771EF6CD7E004F257A /* MediaTableViewCell.swift in Sources */,
 				C7C2AF341EF6CCA1004F257A /* NavigationViewController.swift in Sources */,
 				C78D451B1F0CEE9A009B26A7 /* CircleMenuViewController.swift in Sources */,
