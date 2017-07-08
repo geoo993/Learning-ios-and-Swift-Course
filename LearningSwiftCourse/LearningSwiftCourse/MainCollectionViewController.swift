@@ -34,7 +34,7 @@ class MainCollectionViewController: UICollectionViewController {
                            //"ImageCropperViewController" : "ImageCropperMain",
                            //"ImagePickerCoreMLViewNavigationController" : "ImagePickerCoreMLViewMain", 
                            //"CarouselViewController": "CarouselMain",
-                           "InspirationalFilmsViewController": "InspirationalFilmsMain",
+                           //"InspirationalFilmsViewController": "InspirationalFilmsMain",
                            //"AirbnbRevealViewController" : "AirbnbMain",
                            //"PopUpNavigationController": "PopUpMain",
                            //"SideBarMenuViewController" : "SideBarMenuMain",
@@ -50,7 +50,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"BBCiPlayerTableViewController" : "BBCiPlayerMain",
                             //"SimpleSpringDrawerViewController" : "SimpleSpringDrawerMain",
                             //"BBCiPlayerStretchyHeaderViewController" : "BBCiPlayerStretchyHeaderMain",
-                            //"UIPickerViewController" : "UIPickerMain",
+                            "UIPickerViewController" : "UIPickerMain",
                             //"UIViewSlidesViewController" : "UIViewSlidesMain",
                             //"AnimatableSideMenuContainerViewController" : "AnimatableSideMenuMain",
                             //"PieChartPageViewController" : "CirclePieViewMain",
@@ -179,8 +179,6 @@ class MainCollectionViewController: UICollectionViewController {
             present(vc, animated: true, completion: nil)
             
         }
-     
-        
     }
     
 

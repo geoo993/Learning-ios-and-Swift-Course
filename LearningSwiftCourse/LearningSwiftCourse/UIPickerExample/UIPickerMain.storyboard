@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iId-EQ-gz5">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hem-0a-9xD">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hem-0a-9xD" userLabel="Vertical Picker View">
                                 <rect key="frame" x="0.0" y="270" width="320" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="i25-91-GfH"/>
@@ -50,6 +50,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <state key="normal" title="😀"/>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1bL-UW-Qm5" userLabel="horizontal Picker View">
+                                <rect key="frame" x="0.0" y="468" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="iId-EQ-gz5" id="VgK-V0-KdT"/>
+                                    <outlet property="delegate" destination="iId-EQ-gz5" id="xKN-79-cgL"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -65,7 +73,8 @@
                     </view>
                     <connections>
                         <outlet property="emojiButton" destination="joy-X7-wAg" id="R7f-qF-MBM"/>
-                        <outlet property="picker" destination="hem-0a-9xD" id="9g2-ke-kpo"/>
+                        <outlet property="horizontalPicker" destination="1bL-UW-Qm5" id="gwZ-Sq-eTL"/>
+                        <outlet property="verticalPicker" destination="hem-0a-9xD" id="Cbl-LX-twi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLU-m0-MOu" userLabel="First Responder" sceneMemberID="firstResponder"/>

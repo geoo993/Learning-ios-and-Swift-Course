@@ -30,6 +30,22 @@ private class UIViewAnimationDelegate: NSObject, CAAnimationDelegate {
 
 public extension UIView {
     
+    
+    public static func createPickerViewItem(with frame : CGRect, text: String) -> UIView {
+        
+        let view = UIView(frame: frame )
+        
+        let label = UILabel(frame: view.frame)
+        label.text = text
+        label.textAlignment = .center
+        label.contentMode = .center
+        label.font = UIFont.systemFont(ofSize: 24)
+        view.addSubview(label)
+        
+        return view
+    }
+    
+    
     public func shakeView(repeatCount: Float){
         
         let view = self
