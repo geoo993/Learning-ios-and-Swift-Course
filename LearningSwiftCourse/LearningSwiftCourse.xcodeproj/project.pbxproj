@@ -56,6 +56,8 @@
 		C73DF6D51EFC39FF00DAB515 /* UIResponder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */; };
 		C74773091F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74773081F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift */; };
 		C75144C21F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */; };
+		C76020DB1F124E1B00EA009E /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76020D81F124E0E00EA009E /* RxGesture.framework */; };
+		C76020DC1F124E1B00EA009E /* RxGesture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C76020D81F124E0E00EA009E /* RxGesture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C76786621EF90DE1005C159F /* BBCiPlayerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76786611EF90DE1005C159F /* BBCiPlayerMain.storyboard */; };
 		C76786671EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76786661EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift */; };
 		C767866F1EF915E9005C159F /* BBCiPlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767866E1EF915E9005C159F /* BBCiPlayerTableViewController.swift */; };
@@ -76,6 +78,8 @@
 		C78F49831F08493000FA2275 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C78F496A1F08491400FA2275 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C78F49881F0849F900FA2275 /* AninmationsWithLottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F49871F0849F900FA2275 /* AninmationsWithLottieViewController.swift */; };
 		C78F498A1F084A0600FA2275 /* AninmationsWithLottieMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78F49891F084A0600FA2275 /* AninmationsWithLottieMain.storyboard */; };
+		C79DA46F1F122A7700A92704 /* DynamicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DA46E1F122A7700A92704 /* DynamicScrollViewController.swift */; };
+		C79DA4711F122A8D00A92704 /* DynamicScrollViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79DA4701F122A8D00A92704 /* DynamicScrollViewMain.storyboard */; };
 		C7A1A2171F079AF2005CF910 /* PieChartWithSubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */; };
 		C7A1A2351F07B4F7005CF910 /* PieChartViewWithBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */; };
 		C7A29BFA1F0E4B4700C2D9E6 /* Metal2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A29BF91F0E4B4700C2D9E6 /* Metal2.swift */; };
@@ -304,6 +308,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = C72E27A01E9ED9EB0064E01B;
 			remoteInfo = LearningSwiftCourse;
+		};
+		C76020D71F124E0E00EA009E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C76020A01F124E0E00EA009E /* RxGesture.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F4CC4C1D1DEBA895009ED835;
+			remoteInfo = "RxGesture-iOS";
+		};
+		C76020D91F124E0E00EA009E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C76020A01F124E0E00EA009E /* RxGesture.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 87F8F7221E511E2E00C3B1BE;
+			remoteInfo = "RxGesture-OSX";
+		};
+		C76020DD1F124E1B00EA009E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C76020A01F124E0E00EA009E /* RxGesture.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F4CC4C1C1DEBA895009ED835;
+			remoteInfo = "RxGesture-iOS";
 		};
 		C78D44EA1F0CEE43009B26A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -813,6 +838,7 @@
 				C7F2EE451F0837CB00655CCC /* RxCocoa.framework in Embed Frameworks */,
 				C78D45141F0CEE52009B26A7 /* CircleMenu.framework in Embed Frameworks */,
 				C7A967821F082BFC0002299B /* Alamofire.framework in Embed Frameworks */,
+				C76020DC1F124E1B00EA009E /* RxGesture.framework in Embed Frameworks */,
 				C78F49831F08493000FA2275 /* Lottie.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -877,6 +903,7 @@
 		C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Ext.swift"; sourceTree = "<group>"; };
 		C74773081F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Ext.swift"; sourceTree = "<group>"; };
 		C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerStretchyTableView.swift; sourceTree = "<group>"; };
+		C76020A01F124E0E00EA009E /* RxGesture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxGesture.xcodeproj; path = Carthage/Checkouts/RxGesture/RxGesture/RxGesture.xcodeproj; sourceTree = "<group>"; };
 		C76786611EF90DE1005C159F /* BBCiPlayerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BBCiPlayerMain.storyboard; sourceTree = "<group>"; };
 		C76786661EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentDetailedViewController.swift; sourceTree = "<group>"; };
 		C767866E1EF915E9005C159F /* BBCiPlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerTableViewController.swift; sourceTree = "<group>"; };
@@ -903,6 +930,8 @@
 		C78F4AB21EF34FDE0001CF94 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		C78F4AB41EF34FDE0001CF94 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		C78F4AB51EF34FDE0001CF94 /* ResNet50.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ResNet50.txt; sourceTree = "<group>"; };
+		C79DA46E1F122A7700A92704 /* DynamicScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicScrollViewController.swift; sourceTree = "<group>"; };
+		C79DA4701F122A8D00A92704 /* DynamicScrollViewMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DynamicScrollViewMain.storyboard; sourceTree = "<group>"; };
 		C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartWithSubData.swift; sourceTree = "<group>"; };
 		C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewWithBezierPath.swift; sourceTree = "<group>"; };
 		C7A29BF91F0E4B4700C2D9E6 /* Metal2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metal2.swift; sourceTree = "<group>"; };
@@ -1118,6 +1147,7 @@
 				C7DD106A1F0AFD2F00C7C074 /* pop.framework in Frameworks */,
 				C7A967811F082BFC0002299B /* Alamofire.framework in Frameworks */,
 				C78F49821F08493000FA2275 /* Lottie.framework in Frameworks */,
+				C76020DB1F124E1B00EA009E /* RxGesture.framework in Frameworks */,
 				C7A967791F082BFC0002299B /* Cartography.framework in Frameworks */,
 				C7DD108C1F0AFE9600C7C074 /* PureLayout.framework in Frameworks */,
 				C7DD103F1F0AF6CE00C7C074 /* AKPickerView.framework in Frameworks */,
@@ -1257,6 +1287,7 @@
 				C735855E1F09256200B33B55 /* ButtonWithImageAndTextExample */,
 				C7C2AEDD1EF6CB63004F257A /* CarouselViewsExample */,
 				C78D45171F0CEE5A009B26A7 /* CircleMenuExample */,
+				C79DA43B1F122A5400A92704 /* DynamicScrollViewExample */,
 				C7CEB7851F06FD5800CC054B /* PieChartViewExample */,
 				C7C2AE381EF6CA80004F257A /* ColorsExample */,
 				C7C2AE951EF6CB63004F257A /* ConstraintsPack */,
@@ -1364,6 +1395,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		C76020A11F124E0E00EA009E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C76020D81F124E0E00EA009E /* RxGesture.framework */,
+				C76020DA1F124E0E00EA009E /* RxGesture.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C7602D6D1EFC11B800BA32B7 /* FrontMenuTableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1436,6 +1476,7 @@
 		C77E82D51EA25E3B000AC715 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				C76020A01F124E0E00EA009E /* RxGesture.xcodeproj */,
 				C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */,
 				C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */,
 				C7DD10521F0AFD2600C7C074 /* pop.xcodeproj */,
@@ -1515,6 +1556,15 @@
 				C78F4AB51EF34FDE0001CF94 /* ResNet50.txt */,
 			);
 			path = ResNet50;
+			sourceTree = "<group>";
+		};
+		C79DA43B1F122A5400A92704 /* DynamicScrollViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				C79DA46E1F122A7700A92704 /* DynamicScrollViewController.swift */,
+				C79DA4701F122A8D00A92704 /* DynamicScrollViewMain.storyboard */,
+			);
+			path = DynamicScrollViewExample;
 			sourceTree = "<group>";
 		};
 		C7A29BC61F0E4B2500C2D9E6 /* Metal 2 */ = {
@@ -2197,6 +2247,7 @@
 				C7DD106D1F0AFD2F00C7C074 /* PBXTargetDependency */,
 				C7DD108F1F0AFE9600C7C074 /* PBXTargetDependency */,
 				C78D45161F0CEE52009B26A7 /* PBXTargetDependency */,
+				C76020DE1F124E1B00EA009E /* PBXTargetDependency */,
 			);
 			name = LearningSwiftCourse;
 			productName = LearningSwiftCourse;
@@ -2373,6 +2424,10 @@
 					ProductGroup = C7F2EDFF1F0837BC00655CCC /* Products */;
 					ProjectRef = C7F2EDFE1F0837BC00655CCC /* Rx.xcodeproj */;
 				},
+				{
+					ProductGroup = C76020A11F124E0E00EA009E /* Products */;
+					ProjectRef = C76020A01F124E0E00EA009E /* RxGesture.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -2386,6 +2441,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		C76020D81F124E0E00EA009E /* RxGesture.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RxGesture.framework;
+			remoteRef = C76020D71F124E0E00EA009E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C76020DA1F124E0E00EA009E /* RxGesture.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RxGesture.framework;
+			remoteRef = C76020D91F124E0E00EA009E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C78D44EB1F0CEE43009B26A7 /* CircleMenuDemo.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -2850,6 +2919,7 @@
 				C70F09E81F084EDB0049BACC /* buttonOff.json in Resources */,
 				C7C2AF481EF6CCD7004F257A /* Slide.xib in Resources */,
 				C7C2AF541EF6CD03004F257A /* SlideShowMain.storyboard in Resources */,
+				C79DA4711F122A8D00A92704 /* DynamicScrollViewMain.storyboard in Resources */,
 				C7C2AF241EF6CC83004F257A /* InspirationalFilmsMain.storyboard in Resources */,
 				C7C2AF4E1EF6CCD7004F257A /* slides_info.plist in Resources */,
 				C7C2AF651EF6CD35004F257A /* StretchyHeaderMain.storyboard in Resources */,
@@ -2916,6 +2986,7 @@
 				C7C2AF451EF6CCD7004F257A /* ScrollViewController.swift in Sources */,
 				C7C2AF5F1EF6CD24004F257A /* SummaryViewTableViewCell.swift in Sources */,
 				C7C2AF0E1EF6CC62004F257A /* SimpleDraggableView.swift in Sources */,
+				C79DA46F1F122A7700A92704 /* DynamicScrollViewController.swift in Sources */,
 				C72A5EC41F0B00620058F291 /* RadialMenuTabBarController.swift in Sources */,
 				C7C2AF3C1EF6CCB3004F257A /* ParallaxTableViewCell.swift in Sources */,
 				C767868D1EF91600005C159F /* BBCiPlayerTableViewCell.swift in Sources */,
@@ -3136,6 +3207,11 @@
 			isa = PBXTargetDependency;
 			target = C72E27A01E9ED9EB0064E01B /* LearningSwiftCourse */;
 			targetProxy = C72E27C11E9ED9EB0064E01B /* PBXContainerItemProxy */;
+		};
+		C76020DE1F124E1B00EA009E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RxGesture-iOS";
+			targetProxy = C76020DD1F124E1B00EA009E /* PBXContainerItemProxy */;
 		};
 		C78D45161F0CEE52009B26A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

@@ -277,6 +277,20 @@ public extension UIView {
         }
     }
     
+   
+    /**
+     Removes all constrains for this view
+     */
+    func removeConstraints() {
+        
+        let constraints = self.superview?.constraints.filter{
+            $0.firstItem as? UIView == self || $0.secondItem as? UIView == self
+            } ?? []
+        
+        self.superview?.removeConstraints(constraints)
+        self.removeConstraints(self.constraints)
+    }
+    
     func removeSubview<T>(with type : T.Type){
         for subview in self.subviews {
             if (subview is T) {

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WZ3-Le-o4j">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dynamic Scroll View Controller-->
+        <scene sceneID="iQA-Ez-mDk">
+            <objects>
+                <viewController storyboardIdentifier="DynamicScrollViewController" id="WZ3-Le-o4j" customClass="DynamicScrollViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zNM-13-LN4"/>
+                        <viewControllerLayoutGuide type="bottom" id="HEC-eW-kTS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T1k-o0-9Ka">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iu-TV-Muz">
+                                <rect key="frame" x="0.0" y="264" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO0-s0-eSW" userLabel="BookShelf Button">
+                                        <rect key="frame" x="5" y="5" width="32" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.2506155819" green="0.28846464799999999" blue="0.34158652760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="bookshelf_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWb-r7-Da6" userLabel="Students Button">
+                                        <rect key="frame" x="40" y="5" width="32" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.2506155819" green="0.28846464799999999" blue="0.34158652760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="studentUsers"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1w-S3-CMO" userLabel="Phonics Button">
+                                        <rect key="frame" x="80" y="5" width="32" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.2506155819" green="0.28846464799999999" blue="0.34158652760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="speakingsilhouettehead"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcH-xj-ngw" userLabel="Tweaks Button">
+                                        <rect key="frame" x="110" y="5" width="32" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.2506155819" green="0.28846464799999999" blue="0.34158652760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="cog-settings"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gt-gs-9NE" userLabel="Email Message Button">
+                                        <rect key="frame" x="144" y="5" width="32" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.2506155819" green="0.28846464799999999" blue="0.34158652760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="email-envelope-with-letter-transparent-512x512"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxy-4F-1l2" userLabel="Logout Button">
+                                        <rect key="frame" x="180" y="5" width="32" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.2506155819" green="0.28846464799999999" blue="0.34158652760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="logout"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efa-6B-rsU" userLabel="Reading Button">
+                                        <rect key="frame" x="210" y="5" width="32" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.2506155819" green="0.28846464799999999" blue="0.34158652760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="reading_with_finger"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSL-yr-K2E" userLabel="Games Button">
+                                        <rect key="frame" x="250" y="5" width="32" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.2506155819" green="0.28846464799999999" blue="0.34158652760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="Rocket_Emoji"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2z-LF-I5e" userLabel="BBc iPlayer Logo Button">
+                                        <rect key="frame" x="290" y="5" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.2506155819" green="0.28846464799999999" blue="0.34158652760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="BBC_iPlayer_logo_white"/>
+                                    </button>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="WZ3-Le-o4j" id="hdz-uy-kev"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60J-Qf-6UN">
+                                <rect key="frame" x="130" y="518" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="UJR-a1-n3f"/>
+                                    <constraint firstAttribute="height" constant="30" id="yCx-Bg-XAh"/>
+                                </constraints>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="homebutton:" destination="WZ3-Le-o4j" eventType="touchUpInside" id="0bZ-UA-xYY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HEC-eW-kTS" firstAttribute="top" secondItem="60J-Qf-6UN" secondAttribute="bottom" constant="20" id="nic-6Q-weI"/>
+                            <constraint firstItem="60J-Qf-6UN" firstAttribute="centerX" secondItem="T1k-o0-9Ka" secondAttribute="centerX" id="uKh-0I-lTU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="panelBBCiPlayerLogoButton" destination="L2z-LF-I5e" id="cyK-8s-IbH"/>
+                        <outlet property="panelBookshelfButton" destination="FO0-s0-eSW" id="sqg-N1-p6w"/>
+                        <outlet property="panelEmailButton" destination="0Gt-gs-9NE" id="Tnp-TI-yJI"/>
+                        <outlet property="panelGamesButton" destination="iSL-yr-K2E" id="meN-0Z-ebp"/>
+                        <outlet property="panelLogoutButton" destination="lxy-4F-1l2" id="aad-g0-ZP6"/>
+                        <outlet property="panelPhonicsButton" destination="S1w-S3-CMO" id="iZx-vw-SUo"/>
+                        <outlet property="panelReadingButton" destination="Efa-6B-rsU" id="zEc-FA-JSm"/>
+                        <outlet property="panelSrollView" destination="2iu-TV-Muz" id="paa-SV-vsI"/>
+                        <outlet property="panelStudentsButton" destination="ZWb-r7-Da6" id="f6j-BG-tvn"/>
+                        <outlet property="panelTweaksButton" destination="BcH-xj-ngw" id="Q6t-bq-DpL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96B-s0-Syn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1106" y="-129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BBC_iPlayer_logo_white" width="200" height="47"/>
+        <image name="Rocket_Emoji" width="256" height="256"/>
+        <image name="bookshelf_icon" width="128" height="128"/>
+        <image name="cog-settings" width="512" height="512"/>
+        <image name="email-envelope-with-letter-transparent-512x512" width="512" height="512"/>
+        <image name="logout" width="240" height="240"/>
+        <image name="reading_with_finger" width="256" height="256"/>
+        <image name="speakingsilhouettehead" width="256" height="256"/>
+        <image name="studentUsers" width="256" height="256"/>
+    </resources>
+</document>
