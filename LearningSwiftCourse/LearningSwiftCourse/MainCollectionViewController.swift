@@ -84,7 +84,6 @@ class MainCollectionViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
         cellColorName = UIColor.cssString.take(views.count)
-        
     }
     
     /*

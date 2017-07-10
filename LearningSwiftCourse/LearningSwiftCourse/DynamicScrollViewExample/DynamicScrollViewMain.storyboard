@@ -96,14 +96,79 @@
                                     <action selector="homebutton:" destination="WZ3-Le-o4j" eventType="touchUpInside" id="0bZ-UA-xYY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va3-ch-21X">
+                                <rect key="frame" x="60" y="50" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="az1-XT-f7d"/>
+                                    <constraint firstAttribute="height" constant="50" id="fV5-Ri-9Ew"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49K-3H-49Z">
+                                <rect key="frame" x="60" y="130" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KJW-03-3ra"/>
+                                    <constraint firstAttribute="height" constant="50" id="lTo-Ad-nhE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4e-Ai-6jC" userLabel="Text Scroll View">
+                                <rect key="frame" x="0.0" y="428" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PNd-L6-zy7"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="WZ3-Le-o4j" id="jO8-xh-QNK"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgZ-Yw-Yrm">
+                                <rect key="frame" x="100" y="358" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="O4J-52-KYl"/>
+                                    <constraint firstAttribute="height" constant="40" id="vi3-Or-7aN"/>
+                                </constraints>
+                                <state key="normal" title="Add Item Index"/>
+                                <connections>
+                                    <action selector="addItemAtIndexButton:" destination="WZ3-Le-o4j" eventType="touchUpInside" id="qfJ-4g-4VW"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-PJ-3ZF" userLabel="Add Item Picker View">
+                                <rect key="frame" x="225" y="328" width="50" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="TNc-iC-N9C"/>
+                                    <constraint firstAttribute="height" constant="100" id="Xeq-Lh-Vxa"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="WZ3-Le-o4j" id="NU3-0m-PDE"/>
+                                    <outlet property="delegate" destination="WZ3-Le-o4j" id="uOJ-EB-Bjj"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="C4e-Ai-6jC" firstAttribute="top" secondItem="XgZ-Yw-Yrm" secondAttribute="bottom" constant="30" id="4eF-eB-Tpf"/>
+                            <constraint firstItem="C4e-Ai-6jC" firstAttribute="leading" secondItem="T1k-o0-9Ka" secondAttribute="leading" id="7Oj-AL-DL1"/>
+                            <constraint firstItem="XgZ-Yw-Yrm" firstAttribute="centerX" secondItem="T1k-o0-9Ka" secondAttribute="centerX" id="COt-CW-3Q6"/>
+                            <constraint firstItem="49K-3H-49Z" firstAttribute="top" secondItem="va3-ch-21X" secondAttribute="bottom" constant="30" id="EFW-VS-i4r"/>
+                            <constraint firstItem="49K-3H-49Z" firstAttribute="centerX" secondItem="T1k-o0-9Ka" secondAttribute="centerX" id="ZdA-HN-jSv"/>
+                            <constraint firstItem="va3-ch-21X" firstAttribute="top" secondItem="zNM-13-LN4" secondAttribute="bottom" constant="30" id="ctG-2n-K4C"/>
+                            <constraint firstItem="C4e-Ai-6jC" firstAttribute="top" secondItem="0bd-PJ-3ZF" secondAttribute="bottom" id="emW-L4-UDM"/>
+                            <constraint firstAttribute="trailing" secondItem="C4e-Ai-6jC" secondAttribute="trailing" id="f89-I9-tNh"/>
+                            <constraint firstItem="60J-Qf-6UN" firstAttribute="top" secondItem="C4e-Ai-6jC" secondAttribute="bottom" constant="40" id="m7Z-Va-VVj"/>
                             <constraint firstItem="HEC-eW-kTS" firstAttribute="top" secondItem="60J-Qf-6UN" secondAttribute="bottom" constant="20" id="nic-6Q-weI"/>
+                            <constraint firstItem="C4e-Ai-6jC" firstAttribute="centerX" secondItem="T1k-o0-9Ka" secondAttribute="centerX" id="o5N-rC-VIr"/>
+                            <constraint firstItem="va3-ch-21X" firstAttribute="centerX" secondItem="T1k-o0-9Ka" secondAttribute="centerX" id="pmM-jh-bDS"/>
                             <constraint firstItem="60J-Qf-6UN" firstAttribute="centerX" secondItem="T1k-o0-9Ka" secondAttribute="centerX" id="uKh-0I-lTU"/>
+                            <constraint firstItem="0bd-PJ-3ZF" firstAttribute="leading" secondItem="XgZ-Yw-Yrm" secondAttribute="trailing" constant="5" id="wNl-jI-PKs"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addItemPickerView" destination="0bd-PJ-3ZF" id="fCw-Aa-uKc"/>
+                        <outlet property="fontTestButton" destination="49K-3H-49Z" id="Zc7-Da-FJv"/>
+                        <outlet property="fontTestLabel" destination="va3-ch-21X" id="XTF-KB-ZP9"/>
                         <outlet property="panelBBCiPlayerLogoButton" destination="L2z-LF-I5e" id="cyK-8s-IbH"/>
                         <outlet property="panelBookshelfButton" destination="FO0-s0-eSW" id="sqg-N1-p6w"/>
                         <outlet property="panelEmailButton" destination="0Gt-gs-9NE" id="Tnp-TI-yJI"/>
@@ -114,11 +179,12 @@
                         <outlet property="panelSrollView" destination="2iu-TV-Muz" id="paa-SV-vsI"/>
                         <outlet property="panelStudentsButton" destination="ZWb-r7-Da6" id="f6j-BG-tvn"/>
                         <outlet property="panelTweaksButton" destination="BcH-xj-ngw" id="Q6t-bq-DpL"/>
+                        <outlet property="textScrollView" destination="C4e-Ai-6jC" id="WUH-PB-PPP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96B-s0-Syn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="-129"/>
+            <point key="canvasLocation" x="1104.375" y="-129.92957746478874"/>
         </scene>
     </scenes>
     <resources>
