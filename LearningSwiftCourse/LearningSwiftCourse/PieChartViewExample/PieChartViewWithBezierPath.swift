@@ -88,6 +88,8 @@ public class DataPoint {
             path.stroke()
             
             startAngle = endAngle
+            
+            
         }
         
     }

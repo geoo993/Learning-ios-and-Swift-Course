@@ -56,6 +56,7 @@
 		C73DF6D51EFC39FF00DAB515 /* UIResponder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */; };
 		C74773091F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74773081F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift */; };
 		C75144C21F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */; };
+		C75C881F1F1BBB4A00004922 /* CGPoint+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75C881E1F1BBB4A00004922 /* CGPoint+Ext.swift */; };
 		C76020DB1F124E1B00EA009E /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76020D81F124E0E00EA009E /* RxGesture.framework */; };
 		C76020DC1F124E1B00EA009E /* RxGesture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C76020D81F124E0E00EA009E /* RxGesture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C76786621EF90DE1005C159F /* BBCiPlayerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76786611EF90DE1005C159F /* BBCiPlayerMain.storyboard */; };
@@ -78,6 +79,8 @@
 		C78F49831F08493000FA2275 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C78F496A1F08491400FA2275 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C78F49881F0849F900FA2275 /* AninmationsWithLottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F49871F0849F900FA2275 /* AninmationsWithLottieViewController.swift */; };
 		C78F498A1F084A0600FA2275 /* AninmationsWithLottieMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78F49891F084A0600FA2275 /* AninmationsWithLottieMain.storyboard */; };
+		C7919AFF1F1B8F7500913F15 /* MovingBallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7919AFE1F1B8F7500913F15 /* MovingBallsViewController.swift */; };
+		C7919B011F1B8F9000913F15 /* MovingBallsMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7919B001F1B8F9000913F15 /* MovingBallsMain.storyboard */; };
 		C79DA46F1F122A7700A92704 /* DynamicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DA46E1F122A7700A92704 /* DynamicScrollViewController.swift */; };
 		C79DA4711F122A8D00A92704 /* DynamicScrollViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79DA4701F122A8D00A92704 /* DynamicScrollViewMain.storyboard */; };
 		C7A1A2171F079AF2005CF910 /* PieChartWithSubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */; };
@@ -903,6 +906,7 @@
 		C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Ext.swift"; sourceTree = "<group>"; };
 		C74773081F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Ext.swift"; sourceTree = "<group>"; };
 		C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerStretchyTableView.swift; sourceTree = "<group>"; };
+		C75C881E1F1BBB4A00004922 /* CGPoint+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Ext.swift"; sourceTree = "<group>"; };
 		C76020A01F124E0E00EA009E /* RxGesture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxGesture.xcodeproj; path = Carthage/Checkouts/RxGesture/RxGesture/RxGesture.xcodeproj; sourceTree = "<group>"; };
 		C76786611EF90DE1005C159F /* BBCiPlayerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BBCiPlayerMain.storyboard; sourceTree = "<group>"; };
 		C76786661EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentDetailedViewController.swift; sourceTree = "<group>"; };
@@ -930,6 +934,8 @@
 		C78F4AB21EF34FDE0001CF94 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		C78F4AB41EF34FDE0001CF94 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		C78F4AB51EF34FDE0001CF94 /* ResNet50.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ResNet50.txt; sourceTree = "<group>"; };
+		C7919AFE1F1B8F7500913F15 /* MovingBallsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingBallsViewController.swift; sourceTree = "<group>"; };
+		C7919B001F1B8F9000913F15 /* MovingBallsMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovingBallsMain.storyboard; sourceTree = "<group>"; };
 		C79DA46E1F122A7700A92704 /* DynamicScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicScrollViewController.swift; sourceTree = "<group>"; };
 		C79DA4701F122A8D00A92704 /* DynamicScrollViewMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DynamicScrollViewMain.storyboard; sourceTree = "<group>"; };
 		C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartWithSubData.swift; sourceTree = "<group>"; };
@@ -1301,6 +1307,7 @@
 				C737E9701F0B88E800DAD971 /* Machine Learning For iOS */,
 				C7A29BC61F0E4B2500C2D9E6 /* Metal 2 */,
 				C7C2AE981EF6CB63004F257A /* MultiSidedBarMenuExample */,
+				C7919ACA1F1B8F1E00913F15 /* MovingBallExample */,
 				C7A58AB31F0D91320005C0A5 /*  NaturalLanguageProcessing */,
 				C7C2AE681EF6CB62004F257A /* NavBarExample */,
 				C7C2AEA01EF6CB63004F257A /* PageViewExample */,
@@ -1558,6 +1565,15 @@
 			path = ResNet50;
 			sourceTree = "<group>";
 		};
+		C7919ACA1F1B8F1E00913F15 /* MovingBallExample */ = {
+			isa = PBXGroup;
+			children = (
+				C7919AFE1F1B8F7500913F15 /* MovingBallsViewController.swift */,
+				C7919B001F1B8F9000913F15 /* MovingBallsMain.storyboard */,
+			);
+			path = MovingBallExample;
+			sourceTree = "<group>";
+		};
 		C79DA43B1F122A5400A92704 /* DynamicScrollViewExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -1688,6 +1704,7 @@
 				C7C2AE581EF6CB62004F257A /* Dictionary+Ext.swift */,
 				C7C2AE591EF6CB62004F257A /* Generic+Ext.swift */,
 				C7C2AE5A1EF6CB62004F257A /* Math+Ext.swift */,
+				C75C881E1F1BBB4A00004922 /* CGPoint+Ext.swift */,
 				C7C2AE5B1EF6CB62004F257A /* String+Ext.swift */,
 				C7C2AE5C1EF6CB62004F257A /* UITableView+Ext.swift */,
 				C7C2AE5D1EF6CB62004F257A /* UIApplication+Ext.swift */,
@@ -2897,6 +2914,7 @@
 				C7C2AF2E1EF6CC97004F257A /* MultiSidedBarMenuMain.storyboard in Resources */,
 				C7C2AF6D1EF6CD64004F257A /* TabBarMain.storyboard in Resources */,
 				C70F09EA1F084EE10049BACC /* HamburgerArrow.aep in Resources */,
+				C7919B011F1B8F9000913F15 /* MovingBallsMain.storyboard in Resources */,
 				C7C2AF221EF6CC78004F257A /* ImageViewerMain.storyboard in Resources */,
 				C70C154A1F0571A100CE9220 /* AnimatableSideMenuMain.storyboard in Resources */,
 				C733BA601F07FE240010AAA7 /* CarthageDemoMain.storyboard in Resources */,
@@ -2982,6 +3000,7 @@
 				C7C2AF091EF6CC5A004F257A /* ConstraintPack.swift in Sources */,
 				C7CF31F31EF6B33200114EC1 /* BasicCoreMLwithImagesCollectionViewCell.swift in Sources */,
 				C7C2AF821EF6CD91004F257A /* CustomDismissAnimationController.swift in Sources */,
+				C75C881F1F1BBB4A00004922 /* CGPoint+Ext.swift in Sources */,
 				C7C2AF631EF6CD2D004F257A /* StorySmartiesBookShelfCollectionViewController.swift in Sources */,
 				C7C2AF451EF6CCD7004F257A /* ScrollViewController.swift in Sources */,
 				C7C2AF5F1EF6CD24004F257A /* SummaryViewTableViewCell.swift in Sources */,
@@ -3068,6 +3087,7 @@
 				C7C2AF441EF6CCCE004F257A /* PopUpViewController.swift in Sources */,
 				C72AF49F1F07CD3C0023F014 /* Resnet50.mlmodel in Sources */,
 				C7C2AF781EF6CD7E004F257A /* MediaType.swift in Sources */,
+				C7919AFF1F1B8F7500913F15 /* MovingBallsViewController.swift in Sources */,
 				C7C2AF711EF6CD70004F257A /* ChosenMediaDetailedViewController.swift in Sources */,
 				C7C2AF801EF6CD8A004F257A /* TopMenuTableViewCell.swift in Sources */,
 				C7CF31F21EF6B32F00114EC1 /* ImageProcessor.swift in Sources */,

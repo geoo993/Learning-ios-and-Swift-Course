@@ -51,7 +51,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"SimpleSpringDrawerViewController" : "SimpleSpringDrawerMain",
                             //"BBCiPlayerStretchyHeaderViewController" : "BBCiPlayerStretchyHeaderMain",
                             //"UIPickerViewController" : "UIPickerMain",
-                            "DynamicScrollViewController" : "DynamicScrollViewMain",
+                            //"DynamicScrollViewController" : "DynamicScrollViewMain",
                             //"UIViewSlidesViewController" : "UIViewSlidesMain",
                             //"AnimatableSideMenuContainerViewController" : "AnimatableSideMenuMain",
                             //"PieChartPageViewController" : "CirclePieViewMain",
@@ -60,6 +60,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"ButtonWithImageAndTextViewController" : "ButtonWithImageAndTextMain",
                             //"RadialMenuTabBarController" : "RadialMenuMain",
                             //"CircleMenuViewController" : "CircleMenuMain",
+                            "MovingBallsViewController" : "MovingBallsMain",
                            ]
     
     //Mark: - Collection view 
