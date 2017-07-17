@@ -66,26 +66,22 @@ public class HUDView: UIView {
         let stopwatchXpos : CGFloat = ( screenWidth - stopwatchWidth) * CGFloat(0.5)
         let stopwatchFrame = CGRect(x: stopwatchXpos, y: yPos, width: stopwatchWidth, height: height)
         stopwatch.frame = stopwatchFrame
-        print(stopwatchFrame)
         
         let pointsWidth = (screenWidth * pointsWidthRatio)
         let pointsLabelWidth = pointsWidth * 0.4
         let pointsLabelXpos : CGFloat = screenWidth - pointsWidth
         let pointsLabelFrame = CGRect(x: pointsLabelXpos, y: yPos, width: pointsLabelWidth, height: height)
         pointsLabel.frame = pointsLabelFrame
-        print(pointsLabelFrame)
         
         let gamePointsWidth = pointsWidth * 0.6
         let gamePointsXpos : CGFloat = pointsLabelXpos + pointsLabelWidth
         let gamePointsFrame = CGRect(x: gamePointsXpos, y: yPos, width: gamePointsWidth, height: height)
         gamePoints.frame = gamePointsFrame
-        print(gamePointsFrame)
         
         let hintWidth = screenWidth * hintWidthRatio
         let hintXpos : CGFloat = screenWidth * frontSpace
         let hintFrame = CGRect(x: hintXpos, y: yPos, width: hintWidth, height: height)
         hintButton.frame = hintFrame
-        print(hintFrame)
         
     }
     
