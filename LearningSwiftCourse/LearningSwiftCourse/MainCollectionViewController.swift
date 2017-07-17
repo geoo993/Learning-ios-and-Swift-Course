@@ -60,7 +60,8 @@ class MainCollectionViewController: UICollectionViewController {
                             //"ButtonWithImageAndTextViewController" : "ButtonWithImageAndTextMain",
                             //"RadialMenuTabBarController" : "RadialMenuMain",
                             //"CircleMenuViewController" : "CircleMenuMain",
-                            "MovingBallsViewController" : "MovingBallsMain",
+                            //"MovingBallsViewController" : "MovingBallsMain",
+                            "AnagramsViewController": "AnagramsMain"
                            ]
     
     //Mark: - Collection view 

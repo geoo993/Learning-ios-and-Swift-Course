@@ -10,7 +10,18 @@ import Foundation
 import UIKit
 
 
-extension String {
+public extension String {
+    
+    subscript (index: Int) -> Character {
+        let charIndex = self.index(self.startIndex,offsetBy:index)
+        return self[charIndex]
+    }
+    
+    subscript (range: Range<Int>) -> String {
+        let startIndex = self.index(self.startIndex,offsetBy: range.lowerBound) 
+        let endIndex = self.index(self.startIndex,offsetBy: range.count) 
+        return String(self[startIndex..<endIndex])
+    }
     
     public func convert(range: Range<Int>) -> Range<String.Index>
     {
