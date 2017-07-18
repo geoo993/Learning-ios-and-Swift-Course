@@ -46,7 +46,7 @@ public class ExplodeView: UIView {
             
             //3
         
-            let emitterCell = CAEmitterCell.explosionEmitter(amount: 200,texture: texture!, color: UIColor.yellow)
+            let emitterCell = CAEmitterCell.explosionEmitter(birthRate: 200,texture: texture!, color: UIColor.yellow)
           
             //11
             emitter.emitterCells = [emitterCell]

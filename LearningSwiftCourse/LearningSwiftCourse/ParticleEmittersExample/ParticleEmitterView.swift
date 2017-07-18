@@ -10,11 +10,22 @@ import UIKit
 
 class ParticleEmitterView: UIView {
 
+    enum ParticleType {
+        case explosion
+        case firework
+        case simple
+        case snow
+        case rain
+    }
+    fileprivate var particleType : ParticleType
+    fileprivate var shouldEnd = false
+    
     //1
     fileprivate var emitter:CAEmitterLayer!
-    fileprivate var particleTextures : [UIImage] = [#imageLiteral(resourceName: "starparticle"),#imageLiteral(resourceName: "circlestar"),#imageLiteral(resourceName: "fullstar"),#imageLiteral(resourceName: "sparklingstar"),#imageLiteral(resourceName: "brightstar")]
+    fileprivate var particleTextures : [UIImage] = [#imageLiteral(resourceName: "starparticle"),#imageLiteral(resourceName: "circlestar"),#imageLiteral(resourceName: "fullstar"),#imageLiteral(resourceName: "sparklingstar"),#imageLiteral(resourceName: "brightstar"),#imageLiteral(resourceName: "circleParticle")]
     
     required public init?(coder aDecoder:NSCoder) {
+        particleType = .explosion
         super.init(coder: aDecoder)
         setupEmitter()
     }
@@ -25,6 +36,13 @@ class ParticleEmitterView: UIView {
     }
     
     override init(frame:CGRect) {
+        particleType = .explosion
+        super.init(frame:frame)
+        setupEmitter()
+    }
+    
+    init(frame:CGRect, type: ParticleType) {
+        particleType = type
         super.init(frame:frame)
         setupEmitter()
     }
@@ -58,7 +76,19 @@ class ParticleEmitterView: UIView {
         emitter.emitterPosition = CGPoint(x: self.bounds.size.width/2, y: self.bounds.size.height/2)
         emitter.emitterSize = self.bounds.size
         emitter.emitterMode = kCAEmitterLayerAdditive
-        emitter.emitterShape = kCAEmitterLayerRectangle
+        
+        switch particleType {
+        case .explosion:
+            emitter.emitterShape = kCAEmitterLayerRectangle
+        case .firework:
+            emitter.emitterShape = kCAEmitterLayerRectangle
+        case .simple:
+            emitter.emitterShape = kCAEmitterLayerRectangle
+        case .snow:
+            emitter.emitterShape = kCAEmitterLayerLine
+        case .rain:
+            emitter.emitterShape = kCAEmitterLayerLine
+        }
     }
     
     func simulateParticle(with index: Int){
@@ -68,10 +98,35 @@ class ParticleEmitterView: UIView {
         assert(texture != nil, "particle image not found")
         
         //3
-        let emitterCell = CAEmitterCell.explosionEmitter(amount: 200,texture: texture!, color: UIColor.randomColor())
+        let explosionCell = CAEmitterCell.explosionEmitter(birthRate: 200,texture: texture!, color: UIColor.randomColor())
         
+        let fireworkCell = CAEmitterCell.fireworkEmitter(birthRate: 400,texture: texture!, color: UIColor.randomColor())
+        
+        let red = CAEmitterCell.simpleEmitter(birthRate: 10,texture: texture!, color: UIColor.red)
+        let green = CAEmitterCell.simpleEmitter(birthRate: 10,texture: texture!, color: UIColor.green)
+        let blue = CAEmitterCell.simpleEmitter(birthRate: 10,texture: texture!, color: UIColor.blue)
+        
+        let snowCell = CAEmitterCell.snowEmitter(birthRate: 50,texture: texture!, color: UIColor.white)
+        
+        let rainCell = CAEmitterCell.rainEmitter(birthRate: 50,texture: texture!, color: UIColor.randomColor())
         //11
-        emitter.emitterCells = [emitterCell]
+        switch particleType {
+        case .explosion:
+            emitter.emitterCells = [explosionCell]
+            shouldEnd = true
+        case .firework:
+            emitter.emitterCells = [fireworkCell]
+            shouldEnd = true
+        case .simple:
+            emitter.emitterCells = [red,green,blue]
+            shouldEnd = false
+        case .snow:
+            emitter.emitterCells = [snowCell]
+            shouldEnd = false
+        case .rain:
+            emitter.emitterCells = [rainCell]
+            shouldEnd = false
+        }
         
         //disable the emitter
         var delay = Int64(0.1 * Double(NSEC_PER_SEC))
@@ -80,11 +135,13 @@ class ParticleEmitterView: UIView {
             self.disableEmitterCell()
         }
         
-        //remove explosion view
-        delay = Int64(2 * Double(NSEC_PER_SEC))
-        delayTime = DispatchTime.now() + Double(delay) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: delayTime) {
-            self.removeFromSuperview()
+        if shouldEnd {
+            //remove explosion view
+            delay = Int64(2 * Double(NSEC_PER_SEC))
+            delayTime = DispatchTime.now() + Double(delay) / Double(NSEC_PER_SEC)
+            DispatchQueue.main.asyncAfter(deadline: delayTime) {
+                self.removeFromSuperview()
+            }
         }
     }
     

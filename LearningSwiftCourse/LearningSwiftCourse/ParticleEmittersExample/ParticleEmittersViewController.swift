@@ -10,7 +10,7 @@
 //https://stackoverflow.com/questions/21539029/ios-firework-explosion-using-sprite-kit-particles
 //https://www.hackingwithswift.com/example-code/calayer/how-to-emit-particles-using-caemitterlayer
 //http://www.techotopia.com/index.php/An_iOS_9_Sprite_Kit_Particle_Emitter_Tutorial
-
+//https://www.youtube.com/watch?v=Cg5GzKsMF7M&feature=share
 
 import UIKit
 
@@ -22,13 +22,36 @@ public class ParticleEmittersViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var simulateParticles : UIButton!
-    @IBAction func simulateParticlesAction(_ sender: UIButton) {
-        runParticle()
+    var particlesView : ParticleEmitterView!
+    
+    @IBAction func explosionButtonAction(_ sender: UIButton) {
+        runParticle(with: ParticleEmitterView.ParticleType.explosion,xPosition: view.center.x,yPosition:view.center.y,width:10)
     }
     
-    func runParticle(){
-        let particlesView = ParticleEmitterView(frame:CGRect(x: view.center.x, y: view.center.y, width: 10,height: 10))
+    @IBAction func fireworkButtonAction(_ sender: UIButton) {
+        runParticle(with: ParticleEmitterView.ParticleType.firework,xPosition: view.center.x,yPosition:view.center.y - 100,width:10)
+    }
+    
+    @IBAction func particleButtonAction(_ sender: UIButton) {
+        runParticle(with: ParticleEmitterView.ParticleType.simple,xPosition: view.center.x,yPosition:view.center.y,width:10)
+    }
+    
+    @IBAction func snowButtonAction(_ sender: UIButton) {
+        
+        runParticle(with: ParticleEmitterView.ParticleType.snow, xPosition: 0,yPosition:view.center.y - 200,width:view.bounds.width)
+    }
+    @IBAction func rainButtonAction(_ sender: UIButton) {
+        
+        runParticle(with: ParticleEmitterView.ParticleType.rain, xPosition: 0,yPosition:view.center.y - 200, width:view.bounds.width)
+    }
+    
+    func runParticle(with type: ParticleEmitterView.ParticleType, xPosition: CGFloat, yPosition: CGFloat, width: CGFloat){
+        if particlesView != nil {
+            particlesView.removeEverything()
+            particlesView.removeFromSuperview()
+        }
+        
+        particlesView = ParticleEmitterView(frame: CGRect(x: xPosition, y: yPosition, width: width,height: 10), type: type)
         view.addSubview(particlesView)
         view.sendSubview(toBack: particlesView)
     }
@@ -36,11 +59,8 @@ public class ParticleEmittersViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        runParticle()
-        
         // Do any additional setup after loading the view.
     }
-    
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

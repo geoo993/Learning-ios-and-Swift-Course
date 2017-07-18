@@ -135,6 +135,7 @@
 		C7BF534E1F058DC300F01E72 /* BlueSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF534D1F058DC300F01E72 /* BlueSlideView.swift */; };
 		C7BF53501F058E7200F01E72 /* UIViewsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF534F1F058E7200F01E72 /* UIViewsContainerViewController.swift */; };
 		C7BF53521F05AFD800F01E72 /* YellowSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF53511F05AFD800F01E72 /* YellowSlideView.swift */; };
+		C7C0D80B1F1E0D0700929300 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = C7C0D8091F1E0D0700929300 /* spark.png */; };
 		C7C0F8781F0C077E003A4DE2 /* UITextView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F8771F0C077E003A4DE2 /* UITextView+Ext.swift */; };
 		C7C2AE3C1EF6CA8D004F257A /* ColorChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE391EF6CA80004F257A /* ColorChangeViewController.swift */; };
 		C7C2AE3D1EF6CA90004F257A /* ColorsMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C2AE3A1EF6CA80004F257A /* ColorsMain.storyboard */; };
@@ -1024,6 +1025,15 @@
 		C7BF534D1F058DC300F01E72 /* BlueSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueSlideView.swift; sourceTree = "<group>"; };
 		C7BF534F1F058E7200F01E72 /* UIViewsContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewsContainerViewController.swift; sourceTree = "<group>"; };
 		C7BF53511F05AFD800F01E72 /* YellowSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowSlideView.swift; sourceTree = "<group>"; };
+		C7C0D8091F1E0D0700929300 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		C7C0D8431F1E0E1200929300 /* Trail.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Trail.scnp; sourceTree = "<group>"; };
+		C7C0D8441F1E0E1200929300 /* Explode.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Explode.scnp; sourceTree = "<group>"; };
+		C7C0D8461F1E0EE700929300 /* ExplodeBad.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ExplodeBad.wav; sourceTree = "<group>"; };
+		C7C0D8471F1E0EE700929300 /* SpawnBad.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SpawnBad.wav; sourceTree = "<group>"; };
+		C7C0D8481F1E0EE700929300 /* SpawnGood.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SpawnGood.wav; sourceTree = "<group>"; };
+		C7C0D8491F1E0EE700929300 /* GameOver.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GameOver.wav; sourceTree = "<group>"; };
+		C7C0D84A1F1E0EE700929300 /* ExplodeGood.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ExplodeGood.wav; sourceTree = "<group>"; };
+		C7C0D84B1F1E0F4400929300 /* CircleParticle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CircleParticle.png; sourceTree = "<group>"; };
 		C7C0F8771F0C077E003A4DE2 /* UITextView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Ext.swift"; sourceTree = "<group>"; };
 		C7C2AE391EF6CA80004F257A /* ColorChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangeViewController.swift; sourceTree = "<group>"; };
 		C7C2AE3A1EF6CA80004F257A /* ColorsMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorsMain.storyboard; sourceTree = "<group>"; };
@@ -1402,6 +1412,7 @@
 				C7C2AE421EF6CB62004F257A /* VideoPlayerExample */,
 				C7FC252D1F05019600959765 /* UIPickerExample */,
 				C7D0DE561F053454000CD3D1 /* UIViewSlidesExample */,
+				C7C0D8451F1E0E7C00929300 /* SoundEffect */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
 				C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */,
@@ -1508,9 +1519,13 @@
 		C764A13A1F1D6E37009ACCED /* ParticleEmittersExample */ = {
 			isa = PBXGroup;
 			children = (
+				C7C0D84B1F1E0F4400929300 /* CircleParticle.png */,
+				C7C0D8441F1E0E1200929300 /* Explode.scnp */,
+				C7C0D8431F1E0E1200929300 /* Trail.scnp */,
 				C764A16E1F1D7265009ACCED /* ParticleEmittersViewController.swift */,
 				C792351F1F1D782B00188F98 /* ParticleEmitterView.swift */,
 				C764A1701F1D7279009ACCED /* ParticleEmittersMain.storyboard */,
+				C7C0D8091F1E0D0700929300 /* spark.png */,
 			);
 			path = ParticleEmittersExample;
 			sourceTree = "<group>";
@@ -1840,6 +1855,18 @@
 				C733BA5F1F07FE240010AAA7 /* CarthageDemoMain.storyboard */,
 			);
 			path = CarthageExample;
+			sourceTree = "<group>";
+		};
+		C7C0D8451F1E0E7C00929300 /* SoundEffect */ = {
+			isa = PBXGroup;
+			children = (
+				C7C0D8461F1E0EE700929300 /* ExplodeBad.wav */,
+				C7C0D84A1F1E0EE700929300 /* ExplodeGood.wav */,
+				C7C0D8491F1E0EE700929300 /* GameOver.wav */,
+				C7C0D8471F1E0EE700929300 /* SpawnBad.wav */,
+				C7C0D8481F1E0EE700929300 /* SpawnGood.wav */,
+			);
+			path = SoundEffect;
 			sourceTree = "<group>";
 		};
 		C7C2AE381EF6CA80004F257A /* ColorsExample */ = {
@@ -3166,6 +3193,7 @@
 				C76786621EF90DE1005C159F /* BBCiPlayerMain.storyboard in Resources */,
 				C764A1711F1D7279009ACCED /* ParticleEmittersMain.storyboard in Resources */,
 				C72E27AC1E9ED9EB0064E01B /* Assets.xcassets in Resources */,
+				C7C0D80B1F1E0D0700929300 /* spark.png in Resources */,
 				C7C2AF7C1EF6CD8A004F257A /* TopMenuMain.storyboard in Resources */,
 				C7752A7F1F1D032A007B9DA8 /* board.jpg in Resources */,
 				C7E774041F01542600440E05 /* BBCiPlayerStretchyHeaderMain.storyboard in Resources */,
