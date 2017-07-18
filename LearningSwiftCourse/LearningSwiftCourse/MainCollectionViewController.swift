@@ -39,7 +39,6 @@ class MainCollectionViewController: UICollectionViewController {
                            //"PopUpNavigationController": "PopUpMain",
                            //"SideBarMenuViewController" : "SideBarMenuMain",
                            //"SWRevealViewController" : "MultiSidedBarMenuMain",
-                           //"/Users/GeorgeQuentin/Dev/Learning-ios8-and-Swift-Course/LearningSwiftCourse/LearningSwiftCourse/Student Submissions for the WWDC 2017 ScholarshipTopMenuNavigationController" : "TopMenuMain",
                            //"DraggableTopMenuMainViewController" : "DraggableVerticalMenusMain",
                            //"SpringBasedDrawerViewController" : "SpringBasedDrawerMain",
                            //"ButtonsTypesViewController": "ButtonsMain",
@@ -61,7 +60,8 @@ class MainCollectionViewController: UICollectionViewController {
                             //"RadialMenuTabBarController" : "RadialMenuMain",
                             //"CircleMenuViewController" : "CircleMenuMain",
                             //"MovingBallsViewController" : "MovingBallsMain",
-                            "AnagramsViewController": "AnagramsMain"
+                            //"AnagramsViewController": "AnagramsMain"
+                            "ParticleEmittersViewController" : "ParticleEmittersMain"
                            ]
     
     //Mark: - Collection view 

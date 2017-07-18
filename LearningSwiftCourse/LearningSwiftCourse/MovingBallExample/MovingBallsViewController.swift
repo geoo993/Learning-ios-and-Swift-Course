@@ -12,6 +12,12 @@ import UIKit
 
 class MovingBallsViewController: UIViewController {
 
+    @IBAction func homebutton(_ sender: UIButton) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
+    
     var ballViews = [UIView]()
     var paddleView: UIView?
     var animator : UIDynamicAnimator? = nil
@@ -306,7 +312,6 @@ class MovingBallsViewController: UIViewController {
 
     deinit {
         view.removeEverything()
-        clearAll()
         print("Moving Ball view controller is \(#function)")
     }
     

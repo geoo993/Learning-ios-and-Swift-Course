@@ -50,7 +50,7 @@ extension CAEmitterCell {
         emitterCell.scaleSpeed = -0.3
         
         //12
-        emitterCell.spin = 0
+        emitterCell.spin = 2.0
         
         //13
         emitterCell.emissionRange = CGFloat(Double.pi*2)

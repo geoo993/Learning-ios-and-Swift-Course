@@ -10,7 +10,13 @@
 import UIKit
 
 class AnagramsViewController: UIViewController {
-
+    @IBOutlet weak var homeB : UIButton!
+    @IBAction func homebutton(_ sender: Any) {
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
+    
     override var shouldAutorotate: Bool {
         return false
     }
@@ -33,7 +39,9 @@ class AnagramsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Force the device in portrait mode when the view controller gets loaded
-        UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation") 
+        UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+        
+        view.bringSubview(toFront: homeB)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +61,8 @@ class AnagramsViewController: UIViewController {
         controller.hud = hudView
         
         controller.onAnagramSolved = self.showLevelMenu
+        
+        view.bringSubview(toFront: homeB)
     }
   
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

@@ -11,7 +11,7 @@
         <!--Anagrams View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="AnagramsViewController" id="vXZ-lx-hvc" customClass="AnagramsViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnagramsViewController" id="vXZ-lx-hvc" customClass="AnagramsViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -23,15 +23,31 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="board.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aF6-9A-1HG">
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec4-A0-aKR">
+                                <rect key="frame" x="367" y="1032" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="TzN-p2-yBi"/>
+                                    <constraint firstAttribute="height" constant="50" id="ek0-Zn-OSO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="homebutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cg4-Ea-6eB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aF6-9A-1HG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="3Ws-6M-9SU"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ec4-A0-aKR" secondAttribute="bottom" constant="30" id="5Lz-Ge-Ifp"/>
+                            <constraint firstItem="ec4-A0-aKR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="A6d-8j-TOO"/>
                             <constraint firstItem="aF6-9A-1HG" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="D0I-T6-qUn"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="aF6-9A-1HG" secondAttribute="bottom" id="QVV-ko-yfF"/>
                             <constraint firstAttribute="trailing" secondItem="aF6-9A-1HG" secondAttribute="trailing" id="XXZ-OP-wYn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="homeB" destination="ec4-A0-aKR" id="dNW-ad-XkB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
