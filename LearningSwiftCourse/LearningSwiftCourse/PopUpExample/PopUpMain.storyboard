@@ -5,13 +5,9 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Light</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Pop Up View Controller-->
         <scene sceneID="T2L-oE-iQv">
@@ -60,59 +56,28 @@
                                 <action selector="homeItem:" destination="qwA-k1-9oJ" id="l0r-wM-yVV"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jkY-FH-N42">
-                            <connections>
-                                <action selector="addItem:" destination="qwA-k1-9oJ" id="LPY-RL-NNs"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="jkY-FH-N42">
+                                <connections>
+                                    <action selector="addItem:" destination="qwA-k1-9oJ" id="LPY-RL-NNs"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Pick" id="Oqc-4t-krc">
+                                <connections>
+                                    <action selector="pickItem:" destination="qwA-k1-9oJ" id="XG3-N5-MRQ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                         <connections>
                             <outlet property="leftBarButtonItem" destination="amX-tV-Da2" id="8pb-QK-15F"/>
                             <outlet property="rightBarButtonItem" destination="jkY-FH-N42" id="dXn-bV-Q70"/>
                         </connections>
                     </navigationItem>
                     <connections>
-                        <outlet property="addItemPopUpView" destination="1hC-Pf-G4j" id="gvY-9Z-int"/>
                         <outlet property="visualEffectView" destination="2Gv-a5-lop" id="fet-Gs-GpX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRU-Hz-RI5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view clipsSubviews="YES" contentMode="scaleToFill" id="1hC-Pf-G4j">
-                    <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF1-6t-Qnp">
-                            <rect key="frame" x="50" y="20" width="100" height="21.5"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="100" id="g5c-NY-gOw"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbs-5Z-K5m">
-                            <rect key="frame" x="70" y="110" width="60" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="60" id="xNJ-k0-C4k"/>
-                            </constraints>
-                            <state key="normal" title="Done"/>
-                            <connections>
-                                <action selector="doneButton:" destination="qwA-k1-9oJ" eventType="touchUpInside" id="hXW-Dp-QAT"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="0.6008914877300614" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstItem="OF1-6t-Qnp" firstAttribute="top" secondItem="1hC-Pf-G4j" secondAttribute="top" constant="20" id="3kv-rv-PqD"/>
-                        <constraint firstItem="lbs-5Z-K5m" firstAttribute="centerX" secondItem="1hC-Pf-G4j" secondAttribute="centerX" id="9dX-Um-hxC"/>
-                        <constraint firstItem="OF1-6t-Qnp" firstAttribute="centerX" secondItem="1hC-Pf-G4j" secondAttribute="centerX" id="RML-O5-sMP"/>
-                        <constraint firstAttribute="bottom" secondItem="lbs-5Z-K5m" secondAttribute="bottom" constant="10" id="s7f-EH-TRo"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <real key="value" value="10"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
             </objects>
             <point key="canvasLocation" x="668" y="69"/>
         </scene>

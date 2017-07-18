@@ -53,6 +53,10 @@
 		C73977D21EEEFFBE005C96C8 /* pListRequestPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */; };
 		C73DF6D51EFC39FF00DAB515 /* UIResponder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */; };
 		C74773091F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74773081F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift */; };
+		C74BCB741F1E6C2F0027226E /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74BCB731F1E6C2F0027226E /* AddItemView.swift */; };
+		C74BCBA91F1E6C420027226E /* PickItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74BCBA81F1E6C420027226E /* PickItemView.swift */; };
+		C74BCBAB1F1E7DF20027226E /* AddItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C74BCBAA1F1E7DF20027226E /* AddItemView.xib */; };
+		C74BCBAD1F1E7E1D0027226E /* PickItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C74BCBAC1F1E7E1D0027226E /* PickItemView.xib */; };
 		C75144C21F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */; };
 		C75C881F1F1BBB4A00004922 /* CGPoint+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75C881E1F1BBB4A00004922 /* CGPoint+Ext.swift */; };
 		C76020DB1F124E1B00EA009E /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76020D81F124E0E00EA009E /* RxGesture.framework */; };
@@ -937,6 +941,10 @@
 		C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pListRequestPermissions.swift; sourceTree = "<group>"; };
 		C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Ext.swift"; sourceTree = "<group>"; };
 		C74773081F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Ext.swift"; sourceTree = "<group>"; };
+		C74BCB731F1E6C2F0027226E /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		C74BCBA81F1E6C420027226E /* PickItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickItemView.swift; sourceTree = "<group>"; };
+		C74BCBAA1F1E7DF20027226E /* AddItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemView.xib; sourceTree = "<group>"; };
+		C74BCBAC1F1E7E1D0027226E /* PickItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickItemView.xib; sourceTree = "<group>"; };
 		C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerStretchyTableView.swift; sourceTree = "<group>"; };
 		C75C881E1F1BBB4A00004922 /* CGPoint+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Ext.swift"; sourceTree = "<group>"; };
 		C76020A01F124E0E00EA009E /* RxGesture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxGesture.xcodeproj; path = Carthage/Checkouts/RxGesture/RxGesture/RxGesture.xcodeproj; sourceTree = "<group>"; };
@@ -2102,6 +2110,10 @@
 				C7C2AEA61EF6CB63004F257A /* PopUpMain.storyboard */,
 				C7C2AEA71EF6CB63004F257A /* PopUpNavigationController.swift */,
 				C7C2AEA81EF6CB63004F257A /* PopUpViewController.swift */,
+				C74BCB731F1E6C2F0027226E /* AddItemView.swift */,
+				C74BCBAA1F1E7DF20027226E /* AddItemView.xib */,
+				C74BCBA81F1E6C420027226E /* PickItemView.swift */,
+				C74BCBAC1F1E7E1D0027226E /* PickItemView.xib */,
 			);
 			path = PopUpExample;
 			sourceTree = "<group>";
@@ -3123,6 +3135,7 @@
 				C7D0DE761F0534F4000CD3D1 /* UIViewSlidesMain.storyboard in Resources */,
 				C70F09EC1F084EE70049BACC /* PinJump.json in Resources */,
 				C7C2AF3B1EF6CCB3004F257A /* ParallaxMain.storyboard in Resources */,
+				C74BCBAD1F1E7E1D0027226E /* PickItemView.xib in Resources */,
 				C7DD10911F0AFF3A00C7C074 /* RadialMenuMain.storyboard in Resources */,
 				C7C2AF031EF6CC3C004F257A /* ButtonsMain.storyboard in Resources */,
 				C7C2AF3E1EF6CCC3004F257A /* ParallaxHeaderMain.storyboard in Resources */,
@@ -3131,6 +3144,7 @@
 				C78D45191F0CEE8A009B26A7 /* CircleMenuMain.storyboard in Resources */,
 				C7C2AF0C1EF6CC62004F257A /* DraggableVerticalMenusMain.storyboard in Resources */,
 				C7752A8C1F1D0341007B9DA8 /* Default.png in Resources */,
+				C74BCBAB1F1E7DF20027226E /* AddItemView.xib in Resources */,
 				C7C2AF421EF6CCCE004F257A /* PopUpMain.storyboard in Resources */,
 				C71678E21EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard in Resources */,
 				C72AF49C1F07CCB80023F014 /* ImagePickerCoreMLViewMain.storyboard in Resources */,
@@ -3278,6 +3292,7 @@
 				C7C2AF2A1EF6CC8C004F257A /* InspirationalFilmsMediaScrollView.swift in Sources */,
 				C7752A911F1D0378007B9DA8 /* Level.swift in Sources */,
 				C7C2AF661EF6CD35004F257A /* StretchyHeaderMenuTableViewController.swift in Sources */,
+				C74BCB741F1E6C2F0027226E /* AddItemView.swift in Sources */,
 				C7C2AEFE1EF6CC17004F257A /* AirbnbPlacesTableViewCell.swift in Sources */,
 				C7C2AF5C1EF6CD14004F257A /* StorySmartiesScrollMenuViewController.swift in Sources */,
 				C70C154E1F0571B700CE9220 /* AnimatableSideMenuItemCell.swift in Sources */,
@@ -3304,6 +3319,7 @@
 				C7C2AF2B1EF6CC97004F257A /* MapViewController.swift in Sources */,
 				C7BC88651F07F3CB0034B11C /* CarthageDemoViewController.swift in Sources */,
 				C7C2AF0B1EF6CC62004F257A /* DraggableTopMenuMainViewControllerViewController.swift in Sources */,
+				C74BCBA91F1E6C420027226E /* PickItemView.swift in Sources */,
 				C7752A971F1D037D007B9DA8 /* TargetView.swift in Sources */,
 				C7C2AF601EF6CD2A004F257A /* StorySmartiesMenuTableViewController.swift in Sources */,
 				C7C2AF501EF6CCF1004F257A /* SideBarMenu.swift in Sources */,

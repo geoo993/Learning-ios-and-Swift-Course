@@ -27,10 +27,41 @@ private class UIViewAnimationDelegate: NSObject, CAAnimationDelegate {
     }
 }
 
+@IBDesignable extension UIView {
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            layer.borderColor = newValue!.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+            clipsToBounds = newValue > 0
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+}
 
 public extension UIView {
     
-    
+    func copyView<T: UIView>() -> T {
+        return NSKeyedUnarchiver.unarchiveObject(with: NSKeyedArchiver.archivedData(withRootObject: self)) as! T
+    }
+
     public static func createPickerViewItem(with frame : CGRect, text: String) -> UIView {
         
         let view = UIView(frame: frame )
@@ -229,6 +260,13 @@ public extension UIView {
         self.layer.mask = mask
     }
     
+    public func addBorder(with color: UIColor = .black, width: CGFloat = 1.0, radius : CGFloat = 10.0){
+        clipsToBounds = true
+        layer.cornerRadius = radius
+        layer.borderColor = color.cgColor
+        layer.borderWidth = width
+    }
+    
     public func addBorder(mask: CAShapeLayer, borderColor: UIColor, borderWidth: CGFloat) {
         let borderLayer = CAShapeLayer()
         borderLayer.path = mask.path
@@ -261,6 +299,18 @@ public extension UIView {
         
     }
     
+    
+    ///tempView = UIView()
+    ///originalView.copyViewElements(to: tempView)
+    func copyViewElements(to view : UIView){
+        for subView in self.subviews{
+            let subViewCopy = UIView()
+            subView.copyViewElements(to: subViewCopy)
+            view.addSubview(subViewCopy.copyView())
+            view.addConstraints(subViewCopy.constraints)
+        }
+    }
+    
     // Recursive remove subviews and constraints
     public func removeSubviewsAndConstraints() {
         self.subviews.forEach({
@@ -276,8 +326,7 @@ public extension UIView {
             self.removeSubviewsAndConstraints()
         }
     }
-    
-   
+
     /**
      Removes all constrains for this view
      */
@@ -294,7 +343,15 @@ public extension UIView {
     func removeSubview<T>(with type : T.Type){
         for subview in self.subviews {
             if (subview is T) {
-                //print(subview)
+                subview.removeEverything()
+                subview.removeFromSuperview()
+            }
+        }
+    }
+    
+    func removeSubview(with view : UIView){
+        for subview in self.subviews {
+            if (subview == view) {
                 subview.removeEverything()
                 subview.removeFromSuperview()
             }
