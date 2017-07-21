@@ -127,6 +127,7 @@
 		C7A9677A1F082BFC0002299B /* Cartography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7A9676E1F082BDE0002299B /* Cartography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7A967811F082BFC0002299B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A967391F082BDD0002299B /* Alamofire.framework */; };
 		C7A967821F082BFC0002299B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7A967391F082BDD0002299B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7AC22881F213AE100C94FF3 /* MIBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A032B71F2130E700371ED6 /* MIBadgeButton.swift */; };
 		C7AE48901EA5327300C2096E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AE488F1EA5327300C2096E /* Main.storyboard */; };
 		C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48911EA5328B00C2096E /* MainViewController.swift */; };
 		C7BB47601F0B9D2600F463BD /* RadialMenuTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BB475F1F0B9D2600F463BD /* RadialMenuTextViewController.swift */; };
@@ -1014,6 +1015,7 @@
 		C792351F1F1D782B00188F98 /* ParticleEmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleEmitterView.swift; sourceTree = "<group>"; };
 		C79DA46E1F122A7700A92704 /* DynamicScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicScrollViewController.swift; sourceTree = "<group>"; };
 		C79DA4701F122A8D00A92704 /* DynamicScrollViewMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DynamicScrollViewMain.storyboard; sourceTree = "<group>"; };
+		C7A032B71F2130E700371ED6 /* MIBadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIBadgeButton.swift; sourceTree = "<group>"; };
 		C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartWithSubData.swift; sourceTree = "<group>"; };
 		C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewWithBezierPath.swift; sourceTree = "<group>"; };
 		C7A29BF91F0E4B4700C2D9E6 /* Metal2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metal2.swift; sourceTree = "<group>"; };
@@ -1797,6 +1799,7 @@
 		C7919ACA1F1B8F1E00913F15 /* MovingBallExample */ = {
 			isa = PBXGroup;
 			children = (
+				C7A032B61F2130E700371ED6 /* MIBadgeButton */,
 				C7919AFE1F1B8F7500913F15 /* MovingBallsViewController.swift */,
 				C7919B001F1B8F9000913F15 /* MovingBallsMain.storyboard */,
 			);
@@ -1810,6 +1813,14 @@
 				C79DA4701F122A8D00A92704 /* DynamicScrollViewMain.storyboard */,
 			);
 			path = DynamicScrollViewExample;
+			sourceTree = "<group>";
+		};
+		C7A032B61F2130E700371ED6 /* MIBadgeButton */ = {
+			isa = PBXGroup;
+			children = (
+				C7A032B71F2130E700371ED6 /* MIBadgeButton.swift */,
+			);
+			path = MIBadgeButton;
 			sourceTree = "<group>";
 		};
 		C7A29BC61F0E4B2500C2D9E6 /* Metal 2 */ = {
@@ -3471,6 +3482,7 @@
 				C7C2AF191EF6CC68004F257A /* UIImageView+Ext.swift in Sources */,
 				C7C2AF181EF6CC68004F257A /* UIImage+GIF.swift in Sources */,
 				C7C2AF1D1EF6CC68004F257A /* UIView+Ext.swift in Sources */,
+				C7AC22881F213AE100C94FF3 /* MIBadgeButton.swift in Sources */,
 				C7C2AF0F1EF6CC68004F257A /* Dictionary+Ext.swift in Sources */,
 				C7C2AF1C1EF6CC68004F257A /* UITextField+Ext.swift in Sources */,
 				C71EDCF61EF6DDB600B69EF9 /* SWRevealViewController.m in Sources */,

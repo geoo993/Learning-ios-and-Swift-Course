@@ -36,7 +36,7 @@ class MainCollectionViewController: UICollectionViewController {
                            //"CarouselViewController": "CarouselMain",
                            //"InspirationalFilmsViewController": "InspirationalFilmsMain",
                            //"AirbnbRevealViewController" : "AirbnbMain",
-                           "PopUpNavigationController": "PopUpMain",
+                           //"PopUpNavigationController": "PopUpMain",
                            //"SideBarMenuViewController" : "SideBarMenuMain",
                            //"SWRevealViewController" : "MultiSidedBarMenuMain",
                            //"DraggableTopMenuMainViewController" : "DraggableVerticalMenusMain",
@@ -59,7 +59,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"ButtonWithImageAndTextViewController" : "ButtonWithImageAndTextMain",
                             //"RadialMenuTabBarController" : "RadialMenuMain",
                             //"CircleMenuViewController" : "CircleMenuMain",
-                            //"MovingBallsViewController" : "MovingBallsMain",
+                            "MovingBallsViewController" : "MovingBallsMain",
                             //"AnagramsViewController": "AnagramsMain"
                             //"ParticleEmittersViewController" : "ParticleEmittersMain"
                            ]

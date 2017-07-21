@@ -37,7 +37,6 @@ extension UITextView {
            
             let range = NSRange(substringRange, in: self.text)
             ranges.append(range)
-            print("word: \(substring), ns range: \(range), index range: \(substringRange)")
         })
         return ranges
     }

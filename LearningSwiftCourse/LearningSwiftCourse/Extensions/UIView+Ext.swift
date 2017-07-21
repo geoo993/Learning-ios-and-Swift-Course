@@ -27,35 +27,6 @@ private class UIViewAnimationDelegate: NSObject, CAAnimationDelegate {
     }
 }
 
-@IBDesignable extension UIView {
-    @IBInspectable var borderColor: UIColor? {
-        set {
-            layer.borderColor = newValue!.cgColor
-        }
-        get {
-            guard let color = layer.borderColor else { return nil }
-            return UIColor(cgColor: color)
-        }
-    }
-    @IBInspectable var borderWidth: CGFloat {
-        set {
-            layer.borderWidth = newValue
-        }
-        get {
-            return layer.borderWidth
-        }
-    }
-    @IBInspectable var cornerRadius: CGFloat {
-        set {
-            layer.cornerRadius = newValue
-            clipsToBounds = newValue > 0
-        }
-        get {
-            return layer.cornerRadius
-        }
-    }
-}
-
 public extension UIView {
     
     func copyView<T: UIView>() -> T {
@@ -256,15 +227,28 @@ public extension UIView {
     public func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
+        mask.frame = self.layer.bounds
         mask.path = path.cgPath
         self.layer.mask = mask
+        //https://stackoverflow.com/questions/10167266/how-to-set-cornerradius-for-only-top-left-and-top-right-corner-of-a-uiview
+        
     }
+    
     
     public func addBorder(with color: UIColor = .black, width: CGFloat = 1.0, radius : CGFloat = 10.0){
         clipsToBounds = true
         layer.cornerRadius = radius
         layer.borderColor = color.cgColor
         layer.borderWidth = width
+    }
+    
+    public func addShadow(with width:CGFloat = 0.2, height:CGFloat = 0.2, opacity:Float = 0.7, maskToBounds:Bool=false, radius:CGFloat = 0.5){
+        
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: width, height: height)
+        layer.shadowRadius = radius
+        layer.shadowOpacity = opacity
+        layer.masksToBounds = maskToBounds
     }
     
     public func addBorder(mask: CAShapeLayer, borderColor: UIColor, borderWidth: CGFloat) {

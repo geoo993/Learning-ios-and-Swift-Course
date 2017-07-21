@@ -9,6 +9,7 @@
 
 
 import UIKit
+import LearningSwiftCourseExtensions
 
 class MovingBallsViewController: UIViewController {
 
@@ -19,7 +20,7 @@ class MovingBallsViewController: UIViewController {
     }
     
     var ballViews = [UIView]()
-    var paddleView: UIView?
+    var paddleView: MIBadgeButton?
     var animator : UIDynamicAnimator? = nil
     var pusher = [UIPushBehavior]()
     var collider : UICollisionBehavior!
@@ -272,14 +273,16 @@ class MovingBallsViewController: UIViewController {
         }
         
         let paddleFrame = CGRect(origin: CGPoint.zero, size:paddleSize)
-        paddleView = UIView(frame: paddleFrame)
+        paddleView = MIBadgeButton(frame: paddleFrame)
+    
         paddleView?.center = view.center
         paddleView?.backgroundColor = UIColor.orange
         paddleView?.layer.cornerRadius = 8.0
-        paddleView?.layer.borderWidth = 2.0
-        paddleView?.layer.borderColor = UIColor.black.cgColor
+        paddleView?.badgeString = "150"
+        paddleView?.badgeTextColor = UIColor.white
+        paddleView?.badgeEdgeInsets = UIEdgeInsetsMake(5, 0, 0, 0)
         view.addSubview(paddleView!)
-        
+        paddleView?.addShadow(with: 1, height: 2, opacity: 0.7, maskToBounds: false)
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapGesture))
         tap.numberOfTapsRequired = 1
         tap.numberOfTouchesRequired = 1
