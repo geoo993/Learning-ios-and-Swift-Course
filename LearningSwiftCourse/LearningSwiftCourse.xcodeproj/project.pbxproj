@@ -130,6 +130,23 @@
 		C7AC22881F213AE100C94FF3 /* MIBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A032B71F2130E700371ED6 /* MIBadgeButton.swift */; };
 		C7AE48901EA5327300C2096E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AE488F1EA5327300C2096E /* Main.storyboard */; };
 		C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48911EA5328B00C2096E /* MainViewController.swift */; };
+		C7BA59331F26A52B00E66C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA591D1F26A52B00E66C53 /* AppDelegate.swift */; };
+		C7BA59341F26A52B00E66C53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7BA591E1F26A52B00E66C53 /* Assets.xcassets */; };
+		C7BA59351F26A52B00E66C53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BA591F1F26A52B00E66C53 /* LaunchScreen.storyboard */; };
+		C7BA59361F26A52B00E66C53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BA59211F26A52B00E66C53 /* Main.storyboard */; };
+		C7BA59371F26A52B00E66C53 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA59231F26A52B00E66C53 /* Course.swift */; };
+		C7BA59381F26A52B00E66C53 /* CourseDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA59241F26A52B00E66C53 /* CourseDetailTableViewController.swift */; };
+		C7BA59391F26A52B00E66C53 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA59251F26A52B00E66C53 /* CoursesTableViewController.swift */; };
+		C7BA593A1F26A52B00E66C53 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA59261F26A52B00E66C53 /* CourseTableViewCell.swift */; };
+		C7BA593B1F26A52B00E66C53 /* FreeCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA59271F26A52B00E66C53 /* FreeCourseViewController.swift */; };
+		C7BA593C1F26A52B00E66C53 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7BA59281F26A52B00E66C53 /* Info.plist */; };
+		C7BA593D1F26A52B00E66C53 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA59291F26A52B00E66C53 /* PageViewController.swift */; };
+		C7BA593E1F26A52B00E66C53 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA592A1F26A52B00E66C53 /* ProfileViewController.swift */; };
+		C7BA593F1F26A52B00E66C53 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA592B1F26A52B00E66C53 /* Program.swift */; };
+		C7BA59401F26A52B00E66C53 /* ProgramsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA592C1F26A52B00E66C53 /* ProgramsTableViewController.swift */; };
+		C7BA59411F26A52B00E66C53 /* walkthroughs.mov in Resources */ = {isa = PBXBuildFile; fileRef = C7BA592D1F26A52B00E66C53 /* walkthroughs.mov */; };
+		C7BA59421F26A52B00E66C53 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA592E1F26A52B00E66C53 /* WalkthroughViewController.swift */; };
+		C7BA59431F26A52B00E66C53 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA592F1F26A52B00E66C53 /* WebViewController.swift */; };
 		C7BB47601F0B9D2600F463BD /* RadialMenuTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BB475F1F0B9D2600F463BD /* RadialMenuTextViewController.swift */; };
 		C7BB47621F0B9D4100F463BD /* RadialMenuEmogiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BB47611F0B9D4100F463BD /* RadialMenuEmogiesViewController.swift */; };
 		C7BC88651F07F3CB0034B11C /* CarthageDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BC88641F07F3CB0034B11C /* CarthageDemoViewController.swift */; };
@@ -530,6 +547,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
+		};
+		C7BA59541F26A52B00E66C53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7BA59301F26A52B00E66C53 /* HamburgerMenu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F55A4C131C0902BC0005204C;
+			remoteInfo = HamburgerMenu;
 		};
 		C7D3C0FE1EF2BB550042E90A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1025,6 +1049,24 @@
 		C7A967641F082BDD0002299B /* Cartography.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cartography.xcodeproj; path = Carthage/Checkouts/Cartography/Cartography.xcodeproj; sourceTree = "<group>"; };
 		C7AE488F1EA5327300C2096E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C7AE48911EA5328B00C2096E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C7BA591D1F26A52B00E66C53 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7BA591E1F26A52B00E66C53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7BA59201F26A52B00E66C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7BA59221F26A52B00E66C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7BA59231F26A52B00E66C53 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		C7BA59241F26A52B00E66C53 /* CourseDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailTableViewController.swift; sourceTree = "<group>"; };
+		C7BA59251F26A52B00E66C53 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
+		C7BA59261F26A52B00E66C53 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
+		C7BA59271F26A52B00E66C53 /* FreeCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeCourseViewController.swift; sourceTree = "<group>"; };
+		C7BA59281F26A52B00E66C53 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7BA59291F26A52B00E66C53 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		C7BA592A1F26A52B00E66C53 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C7BA592B1F26A52B00E66C53 /* Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		C7BA592C1F26A52B00E66C53 /* ProgramsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramsTableViewController.swift; sourceTree = "<group>"; };
+		C7BA592D1F26A52B00E66C53 /* walkthroughs.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = walkthroughs.mov; sourceTree = "<group>"; };
+		C7BA592E1F26A52B00E66C53 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		C7BA592F1F26A52B00E66C53 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		C7BA59301F26A52B00E66C53 /* HamburgerMenu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HamburgerMenu.xcodeproj; sourceTree = "<group>"; };
 		C7BB475F1F0B9D2600F463BD /* RadialMenuTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuTextViewController.swift; sourceTree = "<group>"; };
 		C7BB47611F0B9D4100F463BD /* RadialMenuEmogiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuEmogiesViewController.swift; sourceTree = "<group>"; };
 		C7BC88641F07F3CB0034B11C /* CarthageDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarthageDemoViewController.swift; sourceTree = "<group>"; };
@@ -1382,6 +1424,7 @@
 				C7C2AEDD1EF6CB63004F257A /* CarouselViewsExample */,
 				C78D45171F0CEE5A009B26A7 /* CircleMenuExample */,
 				C79DA43B1F122A5400A92704 /* DynamicScrollViewExample */,
+				C7BA591A1F26A52B00E66C53 /* DucTran */,
 				C7C2AE381EF6CA80004F257A /* ColorsExample */,
 				C7C2AE951EF6CB63004F257A /* ConstraintsPack */,
 				C7BC88631F07F36E0034B11C /* CarthageExample */,
@@ -1863,6 +1906,55 @@
 				C7A967741F082BDE0002299B /* Cartography-Mac-Tests.xctest */,
 				C7A967761F082BDE0002299B /* Cartography.framework */,
 				C7A967781F082BDE0002299B /* Cartography-tvOS-tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7BA591A1F26A52B00E66C53 /* DucTran */ = {
+			isa = PBXGroup;
+			children = (
+				C7BA591B1F26A52B00E66C53 /* Starter */,
+			);
+			path = DucTran;
+			sourceTree = "<group>";
+		};
+		C7BA591B1F26A52B00E66C53 /* Starter */ = {
+			isa = PBXGroup;
+			children = (
+				C7BA591C1F26A52B00E66C53 /* Developers Academy */,
+				C7BA59301F26A52B00E66C53 /* HamburgerMenu.xcodeproj */,
+			);
+			path = Starter;
+			sourceTree = "<group>";
+		};
+		C7BA591C1F26A52B00E66C53 /* Developers Academy */ = {
+			isa = PBXGroup;
+			children = (
+				C7BA591D1F26A52B00E66C53 /* AppDelegate.swift */,
+				C7BA591E1F26A52B00E66C53 /* Assets.xcassets */,
+				C7BA591F1F26A52B00E66C53 /* LaunchScreen.storyboard */,
+				C7BA59211F26A52B00E66C53 /* Main.storyboard */,
+				C7BA59231F26A52B00E66C53 /* Course.swift */,
+				C7BA59241F26A52B00E66C53 /* CourseDetailTableViewController.swift */,
+				C7BA59251F26A52B00E66C53 /* CoursesTableViewController.swift */,
+				C7BA59261F26A52B00E66C53 /* CourseTableViewCell.swift */,
+				C7BA59271F26A52B00E66C53 /* FreeCourseViewController.swift */,
+				C7BA59281F26A52B00E66C53 /* Info.plist */,
+				C7BA59291F26A52B00E66C53 /* PageViewController.swift */,
+				C7BA592A1F26A52B00E66C53 /* ProfileViewController.swift */,
+				C7BA592B1F26A52B00E66C53 /* Program.swift */,
+				C7BA592C1F26A52B00E66C53 /* ProgramsTableViewController.swift */,
+				C7BA592D1F26A52B00E66C53 /* walkthroughs.mov */,
+				C7BA592E1F26A52B00E66C53 /* WalkthroughViewController.swift */,
+				C7BA592F1F26A52B00E66C53 /* WebViewController.swift */,
+			);
+			path = "Developers Academy";
+			sourceTree = "<group>";
+		};
+		C7BA59311F26A52B00E66C53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7BA59551F26A52B00E66C53 /* HamburgerMenu.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2683,6 +2775,10 @@
 					ProjectRef = C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */;
 				},
 				{
+					ProductGroup = C7BA59311F26A52B00E66C53 /* Products */;
+					ProjectRef = C7BA59301F26A52B00E66C53 /* HamburgerMenu.xcodeproj */;
+				},
+				{
 					ProductGroup = C78F49581F08491400FA2275 /* Products */;
 					ProjectRef = C78F49571F08491400FA2275 /* Lottie.xcodeproj */;
 				},
@@ -2860,6 +2956,13 @@
 			fileType = wrapper.cfbundle;
 			path = "Cartography-tvOS-tests.xctest";
 			remoteRef = C7A967771F082BDE0002299B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7BA59551F26A52B00E66C53 /* HamburgerMenu.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = HamburgerMenu.app;
+			remoteRef = C7BA59541F26A52B00E66C53 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		C7DD103C1F0AF6B900C7C074 /* AKPickerViewSample.app */ = {
@@ -3159,7 +3262,9 @@
 				C7C2AF421EF6CCCE004F257A /* PopUpMain.storyboard in Resources */,
 				C71678E21EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard in Resources */,
 				C72AF49C1F07CCB80023F014 /* ImagePickerCoreMLViewMain.storyboard in Resources */,
+				C7BA59341F26A52B00E66C53 /* Assets.xcassets in Resources */,
 				C7C2AF381EF6CCA9004F257A /* PageViewMain.storyboard in Resources */,
+				C7BA59351F26A52B00E66C53 /* LaunchScreen.storyboard in Resources */,
 				C73585811F09259000B33B55 /* ButtonWithImageAndTextMain.storyboard in Resources */,
 				C7AE48901EA5327300C2096E /* Main.storyboard in Resources */,
 				C7C2AF4C1EF6CCD7004F257A /* slide18.gif in Resources */,
@@ -3168,6 +3273,7 @@
 				C7752A861F1D032A007B9DA8 /* tile@2x.png in Resources */,
 				C70F09E91F084EDE0049BACC /* buttonOn.json in Resources */,
 				C7CEB7A31F06FD7900CC054B /* CirclePieViewMain.storyboard in Resources */,
+				C7BA59361F26A52B00E66C53 /* Main.storyboard in Resources */,
 				C7752A821F1D032A007B9DA8 /* btn@2x.png in Resources */,
 				C7C2AEFB1EF6CC17004F257A /* AirbnbMain.storyboard in Resources */,
 				C7C2AF581EF6CD0B004F257A /* SpringBasedDrawerMain.storyboard in Resources */,
@@ -3190,6 +3296,7 @@
 				C70377181EF546B6002E7D9B /* SearchBarMain.storyboard in Resources */,
 				C7752A8A1F1D033A007B9DA8 /* level2.plist in Resources */,
 				C7C2AF4B1EF6CCD7004F257A /* slide17.gif in Resources */,
+				C7BA593C1F26A52B00E66C53 /* Info.plist in Resources */,
 				C7CEB7AB1F07000B00CC054B /* CirclePieIndicatorView.xib in Resources */,
 				C7752A851F1D032A007B9DA8 /* tile.png in Resources */,
 				C7752A7B1F1D031D007B9DA8 /* ding.mp3 in Resources */,
@@ -3228,6 +3335,7 @@
 				C7752A791F1D0316007B9DA8 /* AnagramsMain.storyboard in Resources */,
 				C7C2AF741EF6CD79004F257A /* TableViewMain.storyboard in Resources */,
 				C7C2AF321EF6CCA1004F257A /* NavBarMain.storyboard in Resources */,
+				C7BA59411F26A52B00E66C53 /* walkthroughs.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3272,6 +3380,7 @@
 				C7C2AF551EF6CD03004F257A /* SlideShowView.swift in Sources */,
 				C7C2AF391EF6CCA9004F257A /* WalkthroughViewController.swift in Sources */,
 				C7752A881F1D0335007B9DA8 /* AnagramsSet.swift in Sources */,
+				C7BA593E1F26A52B00E66C53 /* ProfileViewController.swift in Sources */,
 				C7C2AF0D1EF6CC62004F257A /* DraggableView.swift in Sources */,
 				C7C2AF2F1EF6CC97004F257A /* NewsTableViewCell.swift in Sources */,
 				C7752A981F1D037D007B9DA8 /* TileView.swift in Sources */,
@@ -3290,12 +3399,15 @@
 				C7C2AF0E1EF6CC62004F257A /* SimpleDraggableView.swift in Sources */,
 				C79DA46F1F122A7700A92704 /* DynamicScrollViewController.swift in Sources */,
 				C72A5EC41F0B00620058F291 /* RadialMenuTabBarController.swift in Sources */,
+				C7BA59371F26A52B00E66C53 /* Course.swift in Sources */,
 				C7C2AF3C1EF6CCB3004F257A /* ParallaxTableViewCell.swift in Sources */,
+				C7BA59381F26A52B00E66C53 /* CourseDetailTableViewController.swift in Sources */,
 				C767868D1EF91600005C159F /* BBCiPlayerTableViewCell.swift in Sources */,
 				C70557E91EFEC3FE00A5ECF8 /* BBCiPlayerContentNavigationController.swift in Sources */,
 				C7C2AF0A1EF6CC5C004F257A /* CrossPlatformDefines.swift in Sources */,
 				C7FA25781F0911FE00446935 /* BBCiPlayerStretchyChannelsCollectionViewCell.swift in Sources */,
 				C7C2AEFD1EF6CC17004F257A /* AirbnbNavigationController.swift in Sources */,
+				C7BA59331F26A52B00E66C53 /* AppDelegate.swift in Sources */,
 				C7C2AF2C1EF6CC97004F257A /* MultiSidedBarMenuControllerLeft.swift in Sources */,
 				C72AF49D1F07CCBA0023F014 /* Inceptionv3.mlmodel in Sources */,
 				C7CF31F41EF6B33400114EC1 /* BasicCoreMLwithImagesViewController.swift in Sources */,
@@ -3347,6 +3459,7 @@
 				C76F04EE1EF505160090F71B /* SliderMenuDrawerBaseViewController.swift in Sources */,
 				C7C2AF5A1EF6CD14004F257A /* PanelDrawerView.swift in Sources */,
 				C7C2AF3F1EF6CCC3004F257A /* ParallaxHeaderTableViewCell.swift in Sources */,
+				C7BA593F1F26A52B00E66C53 /* Program.swift in Sources */,
 				C7C2AF621EF6CD2D004F257A /* StorySmartiesBookShelfCollectionViewCell.swift in Sources */,
 				C7C2AF761EF6CD7E004F257A /* MediaLayers.swift in Sources */,
 				C7752A921F1D037D007B9DA8 /* CounterLabelView.swift in Sources */,
@@ -3366,6 +3479,7 @@
 				C7CEB7AD1F07059D00CC054B /* PieChartView.swift in Sources */,
 				C73977D21EEEFFBE005C96C8 /* pListRequestPermissions.swift in Sources */,
 				C72AF4A11F07CD790023F014 /* ImagePickerCoreMLViewNavigationController.swift in Sources */,
+				C7BA593B1F26A52B00E66C53 /* FreeCourseViewController.swift in Sources */,
 				C703771C1EF5473A002E7D9B /* SearchBarTableViewCell.swift in Sources */,
 				C7C2AF561EF6CD03004F257A /* SlideShowViewController.swift in Sources */,
 				C7C2AF251EF6CC83004F257A /* InspirationalFilmsViewController.swift in Sources */,
@@ -3391,6 +3505,7 @@
 				C7C2AF5D1EF6CD14004F257A /* StorySmartiesViewController.swift in Sources */,
 				C7DD10501F0AFB9000C7C074 /* RadialMenuiOSViewController.swift in Sources */,
 				C7C2AF041EF6CC3C004F257A /* ButtonsTypesViewController.swift in Sources */,
+				C7BA593D1F26A52B00E66C53 /* PageViewController.swift in Sources */,
 				C76786671EF90E6B005C159F /* BBCiPlayerContentDetailedViewController.swift in Sources */,
 				C7C2AF6E1EF6CD64004F257A /* TabBarModel.swift in Sources */,
 				C7C2AF531EF6CCF1004F257A /* SideBarMenuViewController.swift in Sources */,
@@ -3409,8 +3524,10 @@
 				C76F04C41EF5001D0090F71B /* SliderMenuDrawerMenuTableViewCell.swift in Sources */,
 				C7C2AEFC1EF6CC17004F257A /* AirbnbMenuTableViewController.swift in Sources */,
 				C7C2AF7A1EF6CD7E004F257A /* ProductLine.swift in Sources */,
+				C7BA59421F26A52B00E66C53 /* WalkthroughViewController.swift in Sources */,
 				C7C2AF771EF6CD7E004F257A /* MediaTableViewCell.swift in Sources */,
 				C7C2AF341EF6CCA1004F257A /* NavigationViewController.swift in Sources */,
+				C7BA59431F26A52B00E66C53 /* WebViewController.swift in Sources */,
 				C78D451B1F0CEE9A009B26A7 /* CircleMenuViewController.swift in Sources */,
 				C7CEB7AF1F0709C600CC054B /* PieChartPageViewController.swift in Sources */,
 				C7752A961F1D037D007B9DA8 /* StopwatchView.swift in Sources */,
@@ -3421,6 +3538,7 @@
 				C7FA25551F0911E900446935 /* BBCiPlayerStretchyCategoriesCollectionViewCell.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
 				C7C2AF521EF6CCF1004F257A /* SideBarMenuTableViewController.swift in Sources */,
+				C7BA59401F26A52B00E66C53 /* ProgramsTableViewController.swift in Sources */,
 				C7C2AF5E1EF6CD24004F257A /* SummaryView.swift in Sources */,
 				C7C2AF641EF6CD35004F257A /* NewStretchyHeaderItem.swift in Sources */,
 				C7C2AF591EF6CD0B004F257A /* SpringBasedDrawerViewController.swift in Sources */,
@@ -3443,6 +3561,7 @@
 				C7DD104C1F0AFB8500C7C074 /* CircleHelpers.swift in Sources */,
 				C71678E61EFF1A7B00355E41 /* TopDrawerView.swift in Sources */,
 				C764A16F1F1D7265009ACCED /* ParticleEmittersViewController.swift in Sources */,
+				C7BA59391F26A52B00E66C53 /* CoursesTableViewController.swift in Sources */,
 				C7C2AF331EF6CCA1004F257A /* NavBarModel.swift in Sources */,
 				C7BF534E1F058DC300F01E72 /* BlueSlideView.swift in Sources */,
 				C7C2AF7F1EF6CD8A004F257A /* TopMenuNewsTableViewController.swift in Sources */,
@@ -3456,6 +3575,7 @@
 				C7C2AF7E1EF6CD8A004F257A /* TopMenuNewsTableViewCell.swift in Sources */,
 				C703771A1EF5471E002E7D9B /* SearchBarTableViewController.swift in Sources */,
 				C7C2AF311EF6CC97004F257A /* PhotoViewController.swift in Sources */,
+				C7BA593A1F26A52B00E66C53 /* CourseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3596,6 +3716,22 @@
 				C72E27AE1E9ED9EB0064E01B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C7BA591F1F26A52B00E66C53 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7BA59201F26A52B00E66C53 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C7BA59211F26A52B00E66C53 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7BA59221F26A52B00E66C53 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
