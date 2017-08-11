@@ -74,6 +74,7 @@
 		C76F04C81EF5004B0090F71B /* SliderMenuDrawerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76F04C71EF5004B0090F71B /* SliderMenuDrawerMain.storyboard */; };
 		C76F04EE1EF505160090F71B /* SliderMenuDrawerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F04C91EF501D00090F71B /* SliderMenuDrawerBaseViewController.swift */; };
 		C76F04F01EF505E40090F71B /* SliderMenuDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F04EF1EF505E40090F71B /* SliderMenuDrawerViewController.swift */; };
+		C772C3131F3E18AA003E883C /* RemoveDerivedDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C772C3121F3E18AA003E883C /* RemoveDerivedDataViewController.swift */; };
 		C7752A791F1D0316007B9DA8 /* AnagramsMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7752A1B1F1CFE25007B9DA8 /* AnagramsMain.storyboard */; };
 		C7752A7A1F1D0318007B9DA8 /* AnagramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7752A1C1F1CFE25007B9DA8 /* AnagramsViewController.swift */; };
 		C7752A7B1F1D031D007B9DA8 /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C7752A1F1F1CFE25007B9DA8 /* ding.mp3 */; };
@@ -986,6 +987,7 @@
 		C76F04C71EF5004B0090F71B /* SliderMenuDrawerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SliderMenuDrawerMain.storyboard; sourceTree = "<group>"; };
 		C76F04C91EF501D00090F71B /* SliderMenuDrawerBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerBaseViewController.swift; sourceTree = "<group>"; };
 		C76F04EF1EF505E40090F71B /* SliderMenuDrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerViewController.swift; sourceTree = "<group>"; };
+		C772C3121F3E18AA003E883C /* RemoveDerivedDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveDerivedDataViewController.swift; sourceTree = "<group>"; };
 		C7752A1B1F1CFE25007B9DA8 /* AnagramsMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnagramsMain.storyboard; sourceTree = "<group>"; };
 		C7752A1C1F1CFE25007B9DA8 /* AnagramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramsViewController.swift; sourceTree = "<group>"; };
 		C7752A1F1F1CFE25007B9DA8 /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
@@ -1447,6 +1449,7 @@
 				C7CEB7851F06FD5800CC054B /* PieChartViewExample */,
 				C7C2AEA51EF6CB63004F257A /* PopUpExample */,
 				C7DD10431F0AF9CE00C7C074 /* RadialMenuExample */,
+				C772C2DD1F3E1854003E883C /* RemoveDerivedData */,
 				C7C2AEB71EF6CB63004F257A /* ScrollViewExample */,
 				C70376FA1EF5468A002E7D9B /* SearchBarExample */,
 				C7C2AE6E1EF6CB62004F257A /* SideBarMenuExample */,
@@ -1617,6 +1620,14 @@
 				C7EE7BDF1EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift */,
 			);
 			path = SliderMenuDrawerMenu;
+			sourceTree = "<group>";
+		};
+		C772C2DD1F3E1854003E883C /* RemoveDerivedData */ = {
+			isa = PBXGroup;
+			children = (
+				C772C3121F3E18AA003E883C /* RemoveDerivedDataViewController.swift */,
+			);
+			path = RemoveDerivedData;
 			sourceTree = "<group>";
 		};
 		C7752A1A1F1CFE25007B9DA8 /* AnagramsGame */ = {
@@ -3524,6 +3535,7 @@
 				C76F04C41EF5001D0090F71B /* SliderMenuDrawerMenuTableViewCell.swift in Sources */,
 				C7C2AEFC1EF6CC17004F257A /* AirbnbMenuTableViewController.swift in Sources */,
 				C7C2AF7A1EF6CD7E004F257A /* ProductLine.swift in Sources */,
+				C772C3131F3E18AA003E883C /* RemoveDerivedDataViewController.swift in Sources */,
 				C7BA59421F26A52B00E66C53 /* WalkthroughViewController.swift in Sources */,
 				C7C2AF771EF6CD7E004F257A /* MediaTableViewCell.swift in Sources */,
 				C7C2AF341EF6CCA1004F257A /* NavigationViewController.swift in Sources */,
