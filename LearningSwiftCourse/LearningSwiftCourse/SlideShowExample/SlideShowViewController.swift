@@ -10,7 +10,6 @@
 
 
 import UIKit
-import EasyAnimation
 
 class SlideShowViewController: UIViewController {
 

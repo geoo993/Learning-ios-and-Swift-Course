@@ -62,7 +62,7 @@ class CustomPageViewController: UIPageViewController {
         
         if index < numberOfPages {
             
-            let page = self.storyboard!.instantiateViewController(withIdentifier: "WalkthroughViewController") as! WalkthroughViewController
+            let page = self.storyboard!.instantiateViewController(withIdentifier: "WalkthroughViewController") as! WalkthroughPageViewController
             
             page.numberOfPages = numberOfPages
             page.pageIndex = index
@@ -112,7 +112,7 @@ extension CustomPageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
-        let walkthroughviewController = viewController as! WalkthroughViewController
+        let walkthroughviewController = viewController as! WalkthroughPageViewController
         
         if (walkthroughviewController.pageIndex + 1) < numberOfPages {
             return self.pageViewController(atIndex: (walkthroughviewController.pageIndex + 1) )
@@ -128,7 +128,7 @@ extension CustomPageViewController: UIPageViewControllerDataSource {
                             viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         
-        let walkthroughviewController = viewController as! WalkthroughViewController
+        let walkthroughviewController = viewController as! WalkthroughPageViewController
         
         if walkthroughviewController.pageIndex > 0 {
             return self.pageViewController(atIndex: (walkthroughviewController.pageIndex - 1) )

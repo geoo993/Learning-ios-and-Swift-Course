@@ -131,16 +131,13 @@
 		C7AC22881F213AE100C94FF3 /* MIBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A032B71F2130E700371ED6 /* MIBadgeButton.swift */; };
 		C7AE48901EA5327300C2096E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AE488F1EA5327300C2096E /* Main.storyboard */; };
 		C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE48911EA5328B00C2096E /* MainViewController.swift */; };
-		C7BA59331F26A52B00E66C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA591D1F26A52B00E66C53 /* AppDelegate.swift */; };
-		C7BA59341F26A52B00E66C53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7BA591E1F26A52B00E66C53 /* Assets.xcassets */; };
-		C7BA59351F26A52B00E66C53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BA591F1F26A52B00E66C53 /* LaunchScreen.storyboard */; };
-		C7BA59361F26A52B00E66C53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BA59211F26A52B00E66C53 /* Main.storyboard */; };
+		C7BA59341F26A52B00E66C53 /* DucTranDevelopersAcademyAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7BA591E1F26A52B00E66C53 /* DucTranDevelopersAcademyAssets.xcassets */; };
+		C7BA59361F26A52B00E66C53 /* DucTranDevelopersAcademy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BA59211F26A52B00E66C53 /* DucTranDevelopersAcademy.storyboard */; };
 		C7BA59371F26A52B00E66C53 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA59231F26A52B00E66C53 /* Course.swift */; };
 		C7BA59381F26A52B00E66C53 /* CourseDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA59241F26A52B00E66C53 /* CourseDetailTableViewController.swift */; };
 		C7BA59391F26A52B00E66C53 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA59251F26A52B00E66C53 /* CoursesTableViewController.swift */; };
 		C7BA593A1F26A52B00E66C53 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA59261F26A52B00E66C53 /* CourseTableViewCell.swift */; };
 		C7BA593B1F26A52B00E66C53 /* FreeCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA59271F26A52B00E66C53 /* FreeCourseViewController.swift */; };
-		C7BA593C1F26A52B00E66C53 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7BA59281F26A52B00E66C53 /* Info.plist */; };
 		C7BA593D1F26A52B00E66C53 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA59291F26A52B00E66C53 /* PageViewController.swift */; };
 		C7BA593E1F26A52B00E66C53 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA592A1F26A52B00E66C53 /* ProfileViewController.swift */; };
 		C7BA593F1F26A52B00E66C53 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BA592B1F26A52B00E66C53 /* Program.swift */; };
@@ -226,7 +223,7 @@
 		C7C2AF361EF6CCA1004F257A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE6D1EF6CB62004F257A /* RootViewController.swift */; };
 		C7C2AF371EF6CCA9004F257A /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AEA11EF6CB63004F257A /* CustomPageViewController.swift */; };
 		C7C2AF381EF6CCA9004F257A /* PageViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C2AEA21EF6CB63004F257A /* PageViewMain.storyboard */; };
-		C7C2AF391EF6CCA9004F257A /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AEA31EF6CB63004F257A /* WalkthroughViewController.swift */; };
+		C7C2AF391EF6CCA9004F257A /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AEA31EF6CB63004F257A /* WalkthroughPageViewController.swift */; };
 		C7C2AF3A1EF6CCA9004F257A /* WalkthroughZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AEA41EF6CB63004F257A /* WalkthroughZoomViewController.swift */; };
 		C7C2AF3B1EF6CCB3004F257A /* ParallaxMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C2AE4D1EF6CB62004F257A /* ParallaxMain.storyboard */; };
 		C7C2AF3C1EF6CCB3004F257A /* ParallaxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE4E1EF6CB62004F257A /* ParallaxTableViewCell.swift */; };
@@ -325,6 +322,9 @@
 		C7D3C1091EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D3C0F41EF2BB550042E90A /* LearningSwiftCourseExtensions.framework */; };
 		C7D3C10A1EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7D3C0F41EF2BB550042E90A /* LearningSwiftCourseExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7D3C1181EF2BBE50042E90A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76E0CE71EE9ECB300A66E94 /* MapKit.framework */; };
+		C7D526F01F3E1E45002277EE /* CHIPageControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D526C81F3E1E3C002277EE /* CHIPageControl.framework */; };
+		C7D526F11F3E1E45002277EE /* CHIPageControl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7D526C81F3E1E3C002277EE /* CHIPageControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7D526F51F3E5A89002277EE /* LayoutableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D526F41F3E5A89002277EE /* LayoutableView.swift */; };
 		C7DD103F1F0AF6CE00C7C074 /* AKPickerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DD103E1F0AF6B900C7C074 /* AKPickerView.framework */; };
 		C7DD10401F0AF6CE00C7C074 /* AKPickerView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7DD103E1F0AF6B900C7C074 /* AKPickerView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7DD104C1F0AFB8500C7C074 /* CircleHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD10491F0AFB4B00C7C074 /* CircleHelpers.swift */; };
@@ -549,13 +549,6 @@
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
-		C7BA59541F26A52B00E66C53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7BA59301F26A52B00E66C53 /* HamburgerMenu.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F55A4C131C0902BC0005204C;
-			remoteInfo = HamburgerMenu;
-		};
 		C7D3C0FE1EF2BB550042E90A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C72E27991E9ED9EB0064E01B /* Project object */;
@@ -576,6 +569,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = C7D3C0F31EF2BB550042E90A;
 			remoteInfo = LearningSwiftCourseExtensions;
+		};
+		C7D526C71F3E1E3C002277EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7D526B61F3E1E3B002277EE /* CHIPageControl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4313A78C1E7A831E0015A568;
+			remoteInfo = CHIPageControl;
+		};
+		C7D526F21F3E1E45002277EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7D526B61F3E1E3B002277EE /* CHIPageControl.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4313A78B1E7A831E0015A568;
+			remoteInfo = CHIPageControl;
 		};
 		C7DD103B1F0AF6B900C7C074 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -904,6 +911,7 @@
 				C78D45141F0CEE52009B26A7 /* CircleMenu.framework in Embed Frameworks */,
 				C7A967821F082BFC0002299B /* Alamofire.framework in Embed Frameworks */,
 				C76020DC1F124E1B00EA009E /* RxGesture.framework in Embed Frameworks */,
+				C7D526F11F3E1E45002277EE /* CHIPageControl.framework in Embed Frameworks */,
 				C78F49831F08493000FA2275 /* Lottie.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -1051,16 +1059,13 @@
 		C7A967641F082BDD0002299B /* Cartography.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cartography.xcodeproj; path = Carthage/Checkouts/Cartography/Cartography.xcodeproj; sourceTree = "<group>"; };
 		C7AE488F1EA5327300C2096E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C7AE48911EA5328B00C2096E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		C7BA591D1F26A52B00E66C53 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C7BA591E1F26A52B00E66C53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C7BA59201F26A52B00E66C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C7BA59221F26A52B00E66C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7BA591E1F26A52B00E66C53 /* DucTranDevelopersAcademyAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DucTranDevelopersAcademyAssets.xcassets; sourceTree = "<group>"; };
+		C7BA59221F26A52B00E66C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DucTranDevelopersAcademy.storyboard; sourceTree = "<group>"; };
 		C7BA59231F26A52B00E66C53 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		C7BA59241F26A52B00E66C53 /* CourseDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailTableViewController.swift; sourceTree = "<group>"; };
 		C7BA59251F26A52B00E66C53 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		C7BA59261F26A52B00E66C53 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		C7BA59271F26A52B00E66C53 /* FreeCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeCourseViewController.swift; sourceTree = "<group>"; };
-		C7BA59281F26A52B00E66C53 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7BA59291F26A52B00E66C53 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		C7BA592A1F26A52B00E66C53 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C7BA592B1F26A52B00E66C53 /* Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
@@ -1068,7 +1073,6 @@
 		C7BA592D1F26A52B00E66C53 /* walkthroughs.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = walkthroughs.mov; sourceTree = "<group>"; };
 		C7BA592E1F26A52B00E66C53 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		C7BA592F1F26A52B00E66C53 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		C7BA59301F26A52B00E66C53 /* HamburgerMenu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HamburgerMenu.xcodeproj; sourceTree = "<group>"; };
 		C7BB475F1F0B9D2600F463BD /* RadialMenuTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuTextViewController.swift; sourceTree = "<group>"; };
 		C7BB47611F0B9D4100F463BD /* RadialMenuEmogiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuEmogiesViewController.swift; sourceTree = "<group>"; };
 		C7BC88641F07F3CB0034B11C /* CarthageDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarthageDemoViewController.swift; sourceTree = "<group>"; };
@@ -1168,7 +1172,7 @@
 		C7C2AE9F1EF6CB63004F257A /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		C7C2AEA11EF6CB63004F257A /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		C7C2AEA21EF6CB63004F257A /* PageViewMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageViewMain.storyboard; sourceTree = "<group>"; };
-		C7C2AEA31EF6CB63004F257A /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		C7C2AEA31EF6CB63004F257A /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		C7C2AEA41EF6CB63004F257A /* WalkthroughZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughZoomViewController.swift; sourceTree = "<group>"; };
 		C7C2AEA61EF6CB63004F257A /* PopUpMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUpMain.storyboard; sourceTree = "<group>"; };
 		C7C2AEA71EF6CB63004F257A /* PopUpNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpNavigationController.swift; sourceTree = "<group>"; };
@@ -1248,6 +1252,8 @@
 		C7D3C0FC1EF2BB550042E90A /* LearningSwiftCourseExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningSwiftCourseExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D3C1031EF2BB550042E90A /* LearningSwiftCourseExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSwiftCourseExtensionsTests.swift; sourceTree = "<group>"; };
 		C7D3C1051EF2BB550042E90A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7D526B61F3E1E3B002277EE /* CHIPageControl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CHIPageControl.xcodeproj; path = Carthage/Checkouts/CHIPageControl/CHIPageControl.xcodeproj; sourceTree = "<group>"; };
+		C7D526F41F3E5A89002277EE /* LayoutableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutableView.swift; sourceTree = "<group>"; };
 		C7DD10361F0AF6B900C7C074 /* AKPickerViewSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AKPickerViewSample.xcodeproj; path = "Carthage/Checkouts/AKPickerView-Swift/AKPickerViewSample.xcodeproj"; sourceTree = "<group>"; };
 		C7DD10441F0AFB4B00C7C074 /* RadialMenuColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuColorsViewController.swift; sourceTree = "<group>"; };
 		C7DD10461F0AFB4B00C7C074 /* RadialMenuiOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenuiOSViewController.swift; sourceTree = "<group>"; };
@@ -1281,6 +1287,7 @@
 				C76E0CE81EE9ECB300A66E94 /* MapKit.framework in Frameworks */,
 				C78D45131F0CEE52009B26A7 /* CircleMenu.framework in Frameworks */,
 				C7D3C1091EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Frameworks */,
+				C7D526F01F3E1E45002277EE /* CHIPageControl.framework in Frameworks */,
 				C7DD106A1F0AFD2F00C7C074 /* pop.framework in Frameworks */,
 				C7A967811F082BFC0002299B /* Alamofire.framework in Frameworks */,
 				C78F49821F08493000FA2275 /* Lottie.framework in Frameworks */,
@@ -1507,6 +1514,7 @@
 				C73585801F09259000B33B55 /* ButtonWithImageAndTextMain.storyboard */,
 				C73585821F0925AD00B33B55 /* ButtonWithImageAndTextViewController.swift */,
 				C73154571F09A62200FAC356 /* LayoutableButton.swift */,
+				C7D526F41F3E5A89002277EE /* LayoutableView.swift */,
 			);
 			path = ButtonWithImageAndTextExample;
 			sourceTree = "<group>";
@@ -1768,6 +1776,7 @@
 		C77E82D51EA25E3B000AC715 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				C7D526B61F3E1E3B002277EE /* CHIPageControl.xcodeproj */,
 				C76020A01F124E0E00EA009E /* RxGesture.xcodeproj */,
 				C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */,
 				C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */,
@@ -1933,7 +1942,6 @@
 			isa = PBXGroup;
 			children = (
 				C7BA591C1F26A52B00E66C53 /* Developers Academy */,
-				C7BA59301F26A52B00E66C53 /* HamburgerMenu.xcodeproj */,
 			);
 			path = Starter;
 			sourceTree = "<group>";
@@ -1941,16 +1949,13 @@
 		C7BA591C1F26A52B00E66C53 /* Developers Academy */ = {
 			isa = PBXGroup;
 			children = (
-				C7BA591D1F26A52B00E66C53 /* AppDelegate.swift */,
-				C7BA591E1F26A52B00E66C53 /* Assets.xcassets */,
-				C7BA591F1F26A52B00E66C53 /* LaunchScreen.storyboard */,
-				C7BA59211F26A52B00E66C53 /* Main.storyboard */,
+				C7BA591E1F26A52B00E66C53 /* DucTranDevelopersAcademyAssets.xcassets */,
+				C7BA59211F26A52B00E66C53 /* DucTranDevelopersAcademy.storyboard */,
 				C7BA59231F26A52B00E66C53 /* Course.swift */,
 				C7BA59241F26A52B00E66C53 /* CourseDetailTableViewController.swift */,
 				C7BA59251F26A52B00E66C53 /* CoursesTableViewController.swift */,
 				C7BA59261F26A52B00E66C53 /* CourseTableViewCell.swift */,
 				C7BA59271F26A52B00E66C53 /* FreeCourseViewController.swift */,
-				C7BA59281F26A52B00E66C53 /* Info.plist */,
 				C7BA59291F26A52B00E66C53 /* PageViewController.swift */,
 				C7BA592A1F26A52B00E66C53 /* ProfileViewController.swift */,
 				C7BA592B1F26A52B00E66C53 /* Program.swift */,
@@ -1960,14 +1965,6 @@
 				C7BA592F1F26A52B00E66C53 /* WebViewController.swift */,
 			);
 			path = "Developers Academy";
-			sourceTree = "<group>";
-		};
-		C7BA59311F26A52B00E66C53 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C7BA59551F26A52B00E66C53 /* HamburgerMenu.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		C7BC88631F07F36E0034B11C /* CarthageExample */ = {
@@ -2212,7 +2209,7 @@
 			children = (
 				C7C2AEA11EF6CB63004F257A /* CustomPageViewController.swift */,
 				C7C2AEA21EF6CB63004F257A /* PageViewMain.storyboard */,
-				C7C2AEA31EF6CB63004F257A /* WalkthroughViewController.swift */,
+				C7C2AEA31EF6CB63004F257A /* WalkthroughPageViewController.swift */,
 				C7C2AEA41EF6CB63004F257A /* WalkthroughZoomViewController.swift */,
 			);
 			path = PageViewExample;
@@ -2457,6 +2454,14 @@
 			path = LearningSwiftCourseExtensionsTests;
 			sourceTree = "<group>";
 		};
+		C7D526B71F3E1E3B002277EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7D526C81F3E1E3C002277EE /* CHIPageControl.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C7DD10371F0AF6B900C7C074 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -2625,6 +2630,7 @@
 				C7DD108F1F0AFE9600C7C074 /* PBXTargetDependency */,
 				C78D45161F0CEE52009B26A7 /* PBXTargetDependency */,
 				C76020DE1F124E1B00EA009E /* PBXTargetDependency */,
+				C7D526F31F3E1E45002277EE /* PBXTargetDependency */,
 			);
 			name = LearningSwiftCourse;
 			productName = LearningSwiftCourse;
@@ -2782,12 +2788,12 @@
 					ProjectRef = C7A967641F082BDD0002299B /* Cartography.xcodeproj */;
 				},
 				{
-					ProductGroup = C78D44D81F0CEE43009B26A7 /* Products */;
-					ProjectRef = C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */;
+					ProductGroup = C7D526B71F3E1E3B002277EE /* Products */;
+					ProjectRef = C7D526B61F3E1E3B002277EE /* CHIPageControl.xcodeproj */;
 				},
 				{
-					ProductGroup = C7BA59311F26A52B00E66C53 /* Products */;
-					ProjectRef = C7BA59301F26A52B00E66C53 /* HamburgerMenu.xcodeproj */;
+					ProductGroup = C78D44D81F0CEE43009B26A7 /* Products */;
+					ProjectRef = C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */;
 				},
 				{
 					ProductGroup = C78F49581F08491400FA2275 /* Products */;
@@ -2969,11 +2975,11 @@
 			remoteRef = C7A967771F082BDE0002299B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C7BA59551F26A52B00E66C53 /* HamburgerMenu.app */ = {
+		C7D526C81F3E1E3C002277EE /* CHIPageControl.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = HamburgerMenu.app;
-			remoteRef = C7BA59541F26A52B00E66C53 /* PBXContainerItemProxy */;
+			fileType = wrapper.framework;
+			path = CHIPageControl.framework;
+			remoteRef = C7D526C71F3E1E3C002277EE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		C7DD103C1F0AF6B900C7C074 /* AKPickerViewSample.app */ = {
@@ -3273,9 +3279,8 @@
 				C7C2AF421EF6CCCE004F257A /* PopUpMain.storyboard in Resources */,
 				C71678E21EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard in Resources */,
 				C72AF49C1F07CCB80023F014 /* ImagePickerCoreMLViewMain.storyboard in Resources */,
-				C7BA59341F26A52B00E66C53 /* Assets.xcassets in Resources */,
+				C7BA59341F26A52B00E66C53 /* DucTranDevelopersAcademyAssets.xcassets in Resources */,
 				C7C2AF381EF6CCA9004F257A /* PageViewMain.storyboard in Resources */,
-				C7BA59351F26A52B00E66C53 /* LaunchScreen.storyboard in Resources */,
 				C73585811F09259000B33B55 /* ButtonWithImageAndTextMain.storyboard in Resources */,
 				C7AE48901EA5327300C2096E /* Main.storyboard in Resources */,
 				C7C2AF4C1EF6CCD7004F257A /* slide18.gif in Resources */,
@@ -3284,7 +3289,7 @@
 				C7752A861F1D032A007B9DA8 /* tile@2x.png in Resources */,
 				C70F09E91F084EDE0049BACC /* buttonOn.json in Resources */,
 				C7CEB7A31F06FD7900CC054B /* CirclePieViewMain.storyboard in Resources */,
-				C7BA59361F26A52B00E66C53 /* Main.storyboard in Resources */,
+				C7BA59361F26A52B00E66C53 /* DucTranDevelopersAcademy.storyboard in Resources */,
 				C7752A821F1D032A007B9DA8 /* btn@2x.png in Resources */,
 				C7C2AEFB1EF6CC17004F257A /* AirbnbMain.storyboard in Resources */,
 				C7C2AF581EF6CD0B004F257A /* SpringBasedDrawerMain.storyboard in Resources */,
@@ -3307,7 +3312,6 @@
 				C70377181EF546B6002E7D9B /* SearchBarMain.storyboard in Resources */,
 				C7752A8A1F1D033A007B9DA8 /* level2.plist in Resources */,
 				C7C2AF4B1EF6CCD7004F257A /* slide17.gif in Resources */,
-				C7BA593C1F26A52B00E66C53 /* Info.plist in Resources */,
 				C7CEB7AB1F07000B00CC054B /* CirclePieIndicatorView.xib in Resources */,
 				C7752A851F1D032A007B9DA8 /* tile.png in Resources */,
 				C7752A7B1F1D031D007B9DA8 /* ding.mp3 in Resources */,
@@ -3389,7 +3393,7 @@
 				C7C2AF731EF6CD70004F257A /* MediaTableViewController.swift in Sources */,
 				C7C2AF231EF6CC78004F257A /* ImageViewerViewController.swift in Sources */,
 				C7C2AF551EF6CD03004F257A /* SlideShowView.swift in Sources */,
-				C7C2AF391EF6CCA9004F257A /* WalkthroughViewController.swift in Sources */,
+				C7C2AF391EF6CCA9004F257A /* WalkthroughPageViewController.swift in Sources */,
 				C7752A881F1D0335007B9DA8 /* AnagramsSet.swift in Sources */,
 				C7BA593E1F26A52B00E66C53 /* ProfileViewController.swift in Sources */,
 				C7C2AF0D1EF6CC62004F257A /* DraggableView.swift in Sources */,
@@ -3418,7 +3422,6 @@
 				C7C2AF0A1EF6CC5C004F257A /* CrossPlatformDefines.swift in Sources */,
 				C7FA25781F0911FE00446935 /* BBCiPlayerStretchyChannelsCollectionViewCell.swift in Sources */,
 				C7C2AEFD1EF6CC17004F257A /* AirbnbNavigationController.swift in Sources */,
-				C7BA59331F26A52B00E66C53 /* AppDelegate.swift in Sources */,
 				C7C2AF2C1EF6CC97004F257A /* MultiSidedBarMenuControllerLeft.swift in Sources */,
 				C72AF49D1F07CCBA0023F014 /* Inceptionv3.mlmodel in Sources */,
 				C7CF31F41EF6B33400114EC1 /* BasicCoreMLwithImagesViewController.swift in Sources */,
@@ -3506,6 +3509,7 @@
 				C7C2AF711EF6CD70004F257A /* ChosenMediaDetailedViewController.swift in Sources */,
 				C7C2AF801EF6CD8A004F257A /* TopMenuTableViewCell.swift in Sources */,
 				C7CF31F21EF6B32F00114EC1 /* ImageProcessor.swift in Sources */,
+				C7D526F51F3E5A89002277EE /* LayoutableView.swift in Sources */,
 				C7C2AE3E1EF6CA93004F257A /* ColorsViewController.swift in Sources */,
 				C7C2AF831EF6CD91004F257A /* CustomInteractionController.swift in Sources */,
 				C7349DEC1EFC226B00B99AE6 /* UINavigationBar+Ext.swift in Sources */,
@@ -3694,6 +3698,11 @@
 			target = C7D3C0F31EF2BB550042E90A /* LearningSwiftCourseExtensions */;
 			targetProxy = C7D3C1071EF2BB550042E90A /* PBXContainerItemProxy */;
 		};
+		C7D526F31F3E1E45002277EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CHIPageControl;
+			targetProxy = C7D526F21F3E1E45002277EE /* PBXContainerItemProxy */;
+		};
 		C7DD10421F0AF6CE00C7C074 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AKPickerView;
@@ -3730,20 +3739,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		C7BA591F1F26A52B00E66C53 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C7BA59201F26A52B00E66C53 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		C7BA59211F26A52B00E66C53 /* Main.storyboard */ = {
+		C7BA59211F26A52B00E66C53 /* DucTranDevelopersAcademy.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C7BA59221F26A52B00E66C53 /* Base */,
 			);
-			name = Main.storyboard;
+			name = DucTranDevelopersAcademy.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

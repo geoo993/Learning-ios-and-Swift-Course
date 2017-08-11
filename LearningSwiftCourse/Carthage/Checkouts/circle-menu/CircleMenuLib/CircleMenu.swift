@@ -115,40 +115,28 @@ open class CircleMenu: UIButton {
               buttonsCount: Int = 3,
               duration: Double = 2,
               distance: Float = 100) {
-        super.init(frame: frame)
+    super.init(frame: frame)
     
-        if let icon = normalIcon {
-          setImage(UIImage(named: icon), for: UIControlState())
-        }
-        
-        if let icon = selectedIcon {
-          setImage(UIImage(named: icon), for: .selected)
-        }
-        
-        self.buttonsCount = buttonsCount
-        self.duration     = duration
-        self.distance     = distance
-        
-        commonInit()
+    if let icon = normalIcon {
+      setImage(UIImage(named: icon), for: UIControlState())
+    }
+    
+    if let icon = selectedIcon {
+      setImage(UIImage(named: icon), for: .selected)
+    }
+    
+    self.buttonsCount = buttonsCount
+    self.duration     = duration
+    self.distance     = distance
+    
+    commonInit()
   }
-    
-    open override func awakeFromNib() { 
-        super.awakeFromNib()
-        
-        commonInit()
-    }
   
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+  required public init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
     
-        commonInit()
-    }
-    
-   
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-        print("layout")
-    }
+    commonInit()
+  }
   
   fileprivate func commonInit() {
     addActions()

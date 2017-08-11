@@ -31,17 +31,17 @@ class FreeCourseViewController: UITableViewController
     
     // MARK: - UITableViewDataSource
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return courses.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Course Cell", forIndexPath: indexPath) as! CourseTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Course Cell", for: indexPath as IndexPath) as! CourseTableViewCell
     
         cell.course = courses[indexPath.row]
         
@@ -50,22 +50,22 @@ class FreeCourseViewController: UITableViewController
     
     // MARK: - UITableViewDelegate
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let course = courses[indexPath.row]
         let url = course.programURL
         
-        showWebsite(url)
+        showWebsite(url: url)
     }
     
     // MARK: - Show Webpage with SFSafariViewController
     
     func showWebsite(url: String)
     {
-        let webVC = SFSafariViewController(URL: NSURL(string: url)!)
+        let webVC = SFSafariViewController(url: NSURL(string: url)! as URL)
         webVC.delegate = self
         
-        self.presentViewController(webVC, animated: true, completion: nil)
+        self.present(webVC, animated: true, completion: nil)
     }
 
 }
@@ -74,6 +74,6 @@ extension FreeCourseViewController : SFSafariViewControllerDelegate
 {
     func safariViewControllerDidFinish(controller: SFSafariViewController)
     {
-        controller.dismissViewControllerAnimated(true, completion: nil)
+        controller.dismiss(animated: true, completion: nil)
     }
 }

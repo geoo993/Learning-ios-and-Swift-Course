@@ -8,34 +8,57 @@
 
 #import "ViewController.h"
 #import <Lottie/Lottie.h>
-
-@interface ViewController ()
-
-@property (nonatomic, strong) LOTAnimationView *lottieLogo;
-
-@end
+#import "LAMainView.h"
+#import "LottieFilesURL.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-
-    self.lottieLogo = [LOTAnimationView animationNamed:@"LottieLogo1"];
-    self.lottieLogo.contentMode = LOTViewContentModeScaleAspectFill;
-    self.lottieLogo.frame = self.view.bounds;
-    self.lottieLogo.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
-    
-    [self.view addSubview:self.lottieLogo];
+  [super viewDidLoad];
 }
 
 - (void)viewDidAppear {
-    [super viewDidAppear];
-    [self.lottieLogo play];
+  [super viewDidAppear];
 }
 
 - (void)viewDidDisappear {
-    [super viewDidDisappear];
-    [self.lottieLogo pause];
+  [super viewDidDisappear];
 }
+
+- (IBAction)_sliderChanged:(NSSlider *)sender {
+  [(LAMainView *)self.view setAnimationProgress:sender.floatValue];
+}
+
+- (IBAction)_rewind:(id)sender {
+  [(LAMainView *)self.view rewindAnimation];
+}
+
+- (IBAction)_play:(id)sender {
+  [(LAMainView *)self.view playAnimation];
+}
+
+- (IBAction)_loops:(id)sender {
+  [(LAMainView *)self.view toggleLoop];
+}
+
+- (void)paste:(id)sender {
+    NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+    NSArray *classes = [[NSArray alloc] initWithObjects:[NSURL class], nil];
+    
+    if ([pasteboard canReadObjectForClasses:classes options:nil]) {
+        NSArray *copiedItems = [pasteboard readObjectsForClasses:classes options:nil];
+        
+        if (copiedItems != nil) {
+            NSURL *url = (NSURL *)[copiedItems firstObject];
+            LottieFilesURL *lottieFile = [[LottieFilesURL alloc] initWithURL:url];
+            
+            if (lottieFile != nil) {
+                [(LAMainView *)self.view openAnimationURL:lottieFile.jsonURL];
+                self.view.window.title =  lottieFile.animationName;
+            }
+        }
+    }
+}
+
 
 @end

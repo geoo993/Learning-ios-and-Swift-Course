@@ -23,10 +23,16 @@ FOUNDATION_EXPORT const unsigned char LottieVersionString[];
 
 #include <TargetConditionals.h>
 
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import "LOTAnimationTransitionController.h"
 #endif
 
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#import "LOTCacheProvider.h"
+#endif
+
 #import "LOTAnimationView.h"
+#import "LOTAnimationCache.h"
+#import "LOTComposition.h"
 
 #endif /* Lottie_h */

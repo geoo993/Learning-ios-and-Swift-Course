@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pn9-tm-qZS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pn9-tm-qZS">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Custom Page View Controller-->
         <scene sceneID="bYx-s1-af7">
@@ -20,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-244" y="74"/>
         </scene>
-        <!--Walkthrough View Controller-->
+        <!--Walkthrough Page View Controller-->
         <scene sceneID="FQp-Em-Owd">
             <objects>
-                <viewController storyboardIdentifier="WalkthroughViewController" id="208-C3-OG9" customClass="WalkthroughViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkthroughPageViewController" id="208-C3-OG9" customClass="WalkthroughPageViewController" customModule="LearningSwiftCourse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7yQ-4w-L4k"/>
                         <viewControllerLayoutGuide type="bottom" id="HqK-gW-vIF"/>
@@ -36,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iH9-UP-jCj">
-                                <rect key="frame" x="182" y="20" width="50" height="30"/>
+                                <rect key="frame" x="182" y="40" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="vUn-25-TKL"/>
                                 </constraints>
@@ -63,7 +67,7 @@
                                             <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </pageControl>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double Tap To Enter Viewer Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8N-8e-iko">
-                                            <rect key="frame" x="77.666666666666657" y="57" width="259.33333333333337" height="21"/>
+                                            <rect key="frame" x="78.333333333333314" y="57" width="258.33333333333337" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="eiW-5u-9pa"/>
                                             </constraints>

@@ -8,3 +8,4 @@ github "facebook/pop"
 github "PureLayout/PureLayout"
 github "Ramotion/circle-menu"
 github "RxSwiftCommunity/RxGesture"
+github "ChiliLabs/CHIPageControl" ~> 0.1.3

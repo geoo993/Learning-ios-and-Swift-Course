@@ -16,7 +16,7 @@ class Course
     var programURL = ""
     var program = ""
     
-    init(title: String, description: String, image: UIImage, programURL: String, program: String)
+    init(title: String, description: String, image: UIImage, programURL: String, program: String = "")
     {
         self.title = title
         self.description = description
