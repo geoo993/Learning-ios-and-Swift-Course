@@ -124,6 +124,10 @@
 		C79DA4711F122A8D00A92704 /* DynamicScrollViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79DA4701F122A8D00A92704 /* DynamicScrollViewMain.storyboard */; };
 		C7A1A2171F079AF2005CF910 /* PieChartWithSubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */; };
 		C7A1A2351F07B4F7005CF910 /* PieChartViewWithBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */; };
+		C7A8ABBC1F4278CD006D386E /* GlidingCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8AB951F42785C006D386E /* GlidingCollection.framework */; };
+		C7A8ABBD1F4278CD006D386E /* GlidingCollection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8AB951F42785C006D386E /* GlidingCollection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7A8ABCC1F4278EB006D386E /* RAMAnimatedTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8ABCB1F4278DD006D386E /* RAMAnimatedTabBarController.framework */; };
+		C7A8ABCD1F4278EB006D386E /* RAMAnimatedTabBarController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8ABCB1F4278DD006D386E /* RAMAnimatedTabBarController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7A967791F082BFC0002299B /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A9676E1F082BDE0002299B /* Cartography.framework */; };
 		C7A9677A1F082BFC0002299B /* Cartography.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7A9676E1F082BDE0002299B /* Cartography.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7A967811F082BFC0002299B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A967391F082BDD0002299B /* Alamofire.framework */; };
@@ -443,6 +447,55 @@
 			proxyType = 1;
 			remoteGlobalIDString = 62CA59B71E3C173B002D7188;
 			remoteInfo = Lottie_iOS;
+		};
+		C7A8AB941F42785C006D386E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7A8AB801F42785B006D386E /* GlidingCollection.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D56EE9F1E6B2D5E008C3698;
+			remoteInfo = GlidingCollection;
+		};
+		C7A8AB961F42785C006D386E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7A8AB801F42785B006D386E /* GlidingCollection.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D56EEAE1E6B2D82008C3698;
+			remoteInfo = GlidingCollectionDemo;
+		};
+		C7A8ABBE1F4278CD006D386E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7A8AB801F42785B006D386E /* GlidingCollection.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D56EE9E1E6B2D5E008C3698;
+			remoteInfo = GlidingCollection;
+		};
+		C7A8ABC61F4278DD006D386E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7A8ABC01F4278DD006D386E /* RAMAnimatedTabBarDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE4146721A1B923D0037F03C;
+			remoteInfo = RAMAnimatedTabBarDemo;
+		};
+		C7A8ABC81F4278DD006D386E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7A8ABC01F4278DD006D386E /* RAMAnimatedTabBarDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE4146871A1B923D0037F03C;
+			remoteInfo = RAMAnimatedTabBarDemoTests;
+		};
+		C7A8ABCA1F4278DD006D386E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7A8ABC01F4278DD006D386E /* RAMAnimatedTabBarDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84D4B79D1DB0D35500EE38C6;
+			remoteInfo = RAMAnimatedTabBarController;
+		};
+		C7A8ABCE1F4278EB006D386E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7A8ABC01F4278DD006D386E /* RAMAnimatedTabBarDemo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 84D4B79C1DB0D35500EE38C6;
+			remoteInfo = RAMAnimatedTabBarController;
 		};
 		C7A967381F082BDD0002299B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -907,9 +960,11 @@
 				C7D3C10A1EF2BB550042E90A /* LearningSwiftCourseExtensions.framework in Embed Frameworks */,
 				C7A9677A1F082BFC0002299B /* Cartography.framework in Embed Frameworks */,
 				C7DD10401F0AF6CE00C7C074 /* AKPickerView.framework in Embed Frameworks */,
+				C7A8ABCD1F4278EB006D386E /* RAMAnimatedTabBarController.framework in Embed Frameworks */,
 				C7F2EE451F0837CB00655CCC /* RxCocoa.framework in Embed Frameworks */,
 				C78D45141F0CEE52009B26A7 /* CircleMenu.framework in Embed Frameworks */,
 				C7A967821F082BFC0002299B /* Alamofire.framework in Embed Frameworks */,
+				C7A8ABBD1F4278CD006D386E /* GlidingCollection.framework in Embed Frameworks */,
 				C76020DC1F124E1B00EA009E /* RxGesture.framework in Embed Frameworks */,
 				C7D526F11F3E1E45002277EE /* CHIPageControl.framework in Embed Frameworks */,
 				C78F49831F08493000FA2275 /* Lottie.framework in Embed Frameworks */,
@@ -1055,6 +1110,8 @@
 		C7A29BF91F0E4B4700C2D9E6 /* Metal2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metal2.swift; sourceTree = "<group>"; };
 		C7A58AE61F0D91610005C0A5 /*  NaturalLanguageProcessingMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = " NaturalLanguageProcessingMain.storyboard"; sourceTree = "<group>"; };
 		C7A58AE81F0D917A0005C0A5 /* NaturalLanguageProcessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalLanguageProcessingViewController.swift; sourceTree = "<group>"; };
+		C7A8AB801F42785B006D386E /* GlidingCollection.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GlidingCollection.xcodeproj; path = "Carthage/Checkouts/gliding-collection/GlidingCollection.xcodeproj"; sourceTree = "<group>"; };
+		C7A8ABC01F4278DD006D386E /* RAMAnimatedTabBarDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RAMAnimatedTabBarDemo.xcodeproj; path = "Carthage/Checkouts/animated-tab-bar/RAMAnimatedTabBarDemo/RAMAnimatedTabBarDemo.xcodeproj"; sourceTree = "<group>"; };
 		C7A9672D1F082BDC0002299B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Carthage/Checkouts/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C7A967641F082BDD0002299B /* Cartography.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cartography.xcodeproj; path = Carthage/Checkouts/Cartography/Cartography.xcodeproj; sourceTree = "<group>"; };
 		C7AE488F1EA5327300C2096E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -1283,6 +1340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7F2EE441F0837CB00655CCC /* RxCocoa.framework in Frameworks */,
+				C7A8ABBC1F4278CD006D386E /* GlidingCollection.framework in Frameworks */,
 				C7F2EE401F0837CB00655CCC /* RxSwift.framework in Frameworks */,
 				C76E0CE81EE9ECB300A66E94 /* MapKit.framework in Frameworks */,
 				C78D45131F0CEE52009B26A7 /* CircleMenu.framework in Frameworks */,
@@ -1291,6 +1349,7 @@
 				C7DD106A1F0AFD2F00C7C074 /* pop.framework in Frameworks */,
 				C7A967811F082BFC0002299B /* Alamofire.framework in Frameworks */,
 				C78F49821F08493000FA2275 /* Lottie.framework in Frameworks */,
+				C7A8ABCC1F4278EB006D386E /* RAMAnimatedTabBarController.framework in Frameworks */,
 				C76020DB1F124E1B00EA009E /* RxGesture.framework in Frameworks */,
 				C7A967791F082BFC0002299B /* Cartography.framework in Frameworks */,
 				C7DD108C1F0AFE9600C7C074 /* PureLayout.framework in Frameworks */,
@@ -1776,6 +1835,8 @@
 		C77E82D51EA25E3B000AC715 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				C7A8ABC01F4278DD006D386E /* RAMAnimatedTabBarDemo.xcodeproj */,
+				C7A8AB801F42785B006D386E /* GlidingCollection.xcodeproj */,
 				C7D526B61F3E1E3B002277EE /* CHIPageControl.xcodeproj */,
 				C76020A01F124E0E00EA009E /* RxGesture.xcodeproj */,
 				C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */,
@@ -1901,6 +1962,25 @@
 				C7A58AE81F0D917A0005C0A5 /* NaturalLanguageProcessingViewController.swift */,
 			);
 			path = " NaturalLanguageProcessing";
+			sourceTree = "<group>";
+		};
+		C7A8AB811F42785B006D386E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7A8AB951F42785C006D386E /* GlidingCollection.framework */,
+				C7A8AB971F42785C006D386E /* GlidingCollectionDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7A8ABC11F4278DD006D386E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7A8ABC71F4278DD006D386E /* RAMAnimatedTabBarDemo.app */,
+				C7A8ABC91F4278DD006D386E /* RAMAnimatedTabBarDemoTests.xctest */,
+				C7A8ABCB1F4278DD006D386E /* RAMAnimatedTabBarController.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		C7A9672E1F082BDC0002299B /* Products */ = {
@@ -2631,6 +2711,8 @@
 				C78D45161F0CEE52009B26A7 /* PBXTargetDependency */,
 				C76020DE1F124E1B00EA009E /* PBXTargetDependency */,
 				C7D526F31F3E1E45002277EE /* PBXTargetDependency */,
+				C7A8ABBF1F4278CD006D386E /* PBXTargetDependency */,
+				C7A8ABCF1F4278EB006D386E /* PBXTargetDependency */,
 			);
 			name = LearningSwiftCourse;
 			productName = LearningSwiftCourse;
@@ -2796,6 +2878,10 @@
 					ProjectRef = C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */;
 				},
 				{
+					ProductGroup = C7A8AB811F42785B006D386E /* Products */;
+					ProjectRef = C7A8AB801F42785B006D386E /* GlidingCollection.xcodeproj */;
+				},
+				{
 					ProductGroup = C78F49581F08491400FA2275 /* Products */;
 					ProjectRef = C78F49571F08491400FA2275 /* Lottie.xcodeproj */;
 				},
@@ -2806,6 +2892,10 @@
 				{
 					ProductGroup = C7DD106F1F0AFE8200C7C074 /* Products */;
 					ProjectRef = C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */;
+				},
+				{
+					ProductGroup = C7A8ABC11F4278DD006D386E /* Products */;
+					ProjectRef = C7A8ABC01F4278DD006D386E /* RAMAnimatedTabBarDemo.xcodeproj */;
 				},
 				{
 					ProductGroup = C7F2EDFF1F0837BC00655CCC /* Products */;
@@ -2882,6 +2972,41 @@
 			fileType = archive.ar;
 			path = libLottie.a;
 			remoteRef = C78F496D1F08491400FA2275 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7A8AB951F42785C006D386E /* GlidingCollection.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GlidingCollection.framework;
+			remoteRef = C7A8AB941F42785C006D386E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7A8AB971F42785C006D386E /* GlidingCollectionDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = GlidingCollectionDemo.app;
+			remoteRef = C7A8AB961F42785C006D386E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7A8ABC71F4278DD006D386E /* RAMAnimatedTabBarDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = RAMAnimatedTabBarDemo.app;
+			remoteRef = C7A8ABC61F4278DD006D386E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7A8ABC91F4278DD006D386E /* RAMAnimatedTabBarDemoTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RAMAnimatedTabBarDemoTests.xctest;
+			remoteRef = C7A8ABC81F4278DD006D386E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7A8ABCB1F4278DD006D386E /* RAMAnimatedTabBarController.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RAMAnimatedTabBarController.framework;
+			remoteRef = C7A8ABCA1F4278DD006D386E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		C7A967391F082BDD0002299B /* Alamofire.framework */ = {
@@ -3672,6 +3797,16 @@
 			isa = PBXTargetDependency;
 			name = Lottie_iOS;
 			targetProxy = C78F49841F08493000FA2275 /* PBXContainerItemProxy */;
+		};
+		C7A8ABBF1F4278CD006D386E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GlidingCollection;
+			targetProxy = C7A8ABBE1F4278CD006D386E /* PBXContainerItemProxy */;
+		};
+		C7A8ABCF1F4278EB006D386E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RAMAnimatedTabBarController;
+			targetProxy = C7A8ABCE1F4278EB006D386E /* PBXContainerItemProxy */;
 		};
 		C7A9677C1F082BFC0002299B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
