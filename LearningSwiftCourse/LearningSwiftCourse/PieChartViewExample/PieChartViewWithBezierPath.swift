@@ -28,7 +28,7 @@ public class DataPoint {
         didSet { setNeedsDisplay() }
     }
     
-    @IBInspectable var lineColor: UIColor = UIColor.randomColor() {
+    @IBInspectable var lineColor: UIColor = UIColor.random {
         didSet { setNeedsDisplay() }
     }
     

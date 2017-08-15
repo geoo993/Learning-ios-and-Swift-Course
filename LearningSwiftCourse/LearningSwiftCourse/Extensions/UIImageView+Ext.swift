@@ -110,6 +110,45 @@ public extension UIImageView {
         self.tintColor = color
     }
     
+}
+
+//image cache
+let imageCache = NSCache<AnyObject, AnyObject>()
+
+public class CustomImageView : UIImageView {
     
+    public var imageUrlString : String?
+    
+    public func loadImageUsingUrlString(with urlString: String ) {
+        
+        imageUrlString = urlString
+        
+        let url = URL(string: urlString)
+        
+        image = nil
+        
+        let objectIncache = urlString as AnyObject
+        if let imageFromCache = imageCache.object(forKey: objectIncache) as? UIImage {
+            image = imageFromCache
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+            if let er = error {
+                print(er)
+                return 
+            }
+            DispatchQueue.main.async {
+                if let dt = data, let imageToCache = UIImage(data: dt ) {
+                    if self.imageUrlString == urlString {
+                        self.image = imageToCache
+                    }
+                    imageCache.setObject(imageToCache, forKey: objectIncache)
+                }
+            }
+        }).resume() 
+    }
     
 }
+
+

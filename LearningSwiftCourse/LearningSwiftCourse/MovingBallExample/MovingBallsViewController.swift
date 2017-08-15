@@ -257,7 +257,7 @@ class MovingBallsViewController: UIViewController {
             let ballFrame = CGRect(origin: ballPosition, size: ballSize)
             let ballView = UIView(frame: ballFrame)
             ballView.tag = i + 1
-            ballView.backgroundColor = UIColor.randomColor()
+            ballView.backgroundColor = UIColor.random
             ballView.layer.cornerRadius = ballSize.width * 0.5
             ballView.layer.borderColor = UIColor.black.cgColor
             ballView.layer.borderWidth = 2.0

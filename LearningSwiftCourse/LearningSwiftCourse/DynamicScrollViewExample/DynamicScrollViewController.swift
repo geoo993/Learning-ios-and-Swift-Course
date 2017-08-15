@@ -39,7 +39,7 @@ class DynamicScrollViewController: UIViewController {
     @IBOutlet weak var panelReadingButton: UIButton!
     
     @IBOutlet weak var panelBBCiPlayerLogoButton: UIButton!
-    let selectedColor = UIColor.randomColor()
+    let selectedColor = UIColor.random
     var buttonsBackgroundView = [UIView]()
     
     var textScrollViewContentWidth : CGFloat = 0
@@ -148,7 +148,7 @@ class DynamicScrollViewController: UIViewController {
         label.text = text
         label.frame.origin.x = xPos
         label.textAlignment = .center
-        label.backgroundColor = UIColor.randomColor()
+        label.backgroundColor = UIColor.random
         label.font = font
         addBorder(to: label)
         return label
@@ -162,7 +162,7 @@ class DynamicScrollViewController: UIViewController {
         button.frame.origin.x = xPos
         button.setTitleColor( UIColor.black, for: .normal)
         button.titleLabel?.textAlignment = .center
-        button.backgroundColor = UIColor.randomColor()
+        button.backgroundColor = UIColor.random
         button.titleLabel?.font = font
         addBorder(to: button)
         return button

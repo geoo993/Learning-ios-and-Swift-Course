@@ -29,7 +29,7 @@ class MainCollectionViewController: UICollectionViewController {
                            //"CustomPageViewController" : "PageViewMain",
                            //"SlideShowViewController" : "SlideShowMain",
                            //"ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
-                           "ParallaxViewController" : "ParallaxMain",
+                           //"ParallaxViewController" : "ParallaxMain",
                            //"ImageViewerViewController" : "ImageViewerMain",
                            //"ImageCropperViewController" : "ImageCropperMain",
                            //"ImagePickerCoreMLViewNavigationController" : "ImagePickerCoreMLViewMain", 
@@ -56,12 +56,13 @@ class MainCollectionViewController: UICollectionViewController {
                             //"PieChartPageViewController" : "CirclePieViewMain",
                             //"CarthageDemoViewController" : "CarthageDemoMain",
                             //"AninmationsWithLottieViewController" : "AninmationsWithLottieMain",
-                            "ButtonWithImageAndTextViewController" : "ButtonWithImageAndTextMain",
+                            //"ButtonWithImageAndTextViewController" : "ButtonWithImageAndTextMain",
                             //"RadialMenuTabBarController" : "RadialMenuMain",
                             //"CircleMenuViewController" : "CircleMenuMain",
-                            "MovingBallsViewController" : "MovingBallsMain",
+                            //"MovingBallsViewController" : "MovingBallsMain",
                             //"AnagramsViewController": "AnagramsMain"
-                            //"ParticleEmittersViewController" : "ParticleEmittersMain"
+                            //"ParticleEmittersViewController" : "ParticleEmittersMain",
+                            "YoutubeHomeNavigationController" : "YoutubeMain",
                            ]
     
     //Mark: - Collection view 

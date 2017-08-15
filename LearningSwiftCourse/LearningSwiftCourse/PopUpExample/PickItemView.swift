@@ -79,7 +79,7 @@ class PickItemView: UIView {
         button.frame.origin.x = xPos
         button.setTitleColor( UIColor.black, for: .normal)
         button.titleLabel?.textAlignment = .center
-        button.backgroundColor = UIColor.randomColor()
+        button.backgroundColor = UIColor.random
         button.titleLabel?.font = font
         button.addBorder()
         return button

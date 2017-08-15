@@ -20,7 +20,7 @@ class MainViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.randomColor()
+        view.backgroundColor = UIColor.random
         // Do any additional setup after loading the view.
         
         let img = mainImageView.bluredImage(radius: 2)

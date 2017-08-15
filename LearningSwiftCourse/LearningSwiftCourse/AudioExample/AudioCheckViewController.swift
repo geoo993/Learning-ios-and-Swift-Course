@@ -39,7 +39,7 @@ class AudioCheckViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bgColor = UIColor.randomColor()
+        bgColor = UIColor.random
         view.backgroundColor = bgColor
         
         if (audioPlayer == nil){

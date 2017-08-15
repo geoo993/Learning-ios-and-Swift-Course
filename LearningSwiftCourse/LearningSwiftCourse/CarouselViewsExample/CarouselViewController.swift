@@ -109,7 +109,7 @@ class CarouselViewController: UIViewController {
         setupInterests()
         
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor.randomColor()
+        view.backgroundColor = UIColor.random
         definesPresentationContext = true
     }
     

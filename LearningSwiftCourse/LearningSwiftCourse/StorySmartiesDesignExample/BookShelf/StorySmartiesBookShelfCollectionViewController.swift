@@ -92,7 +92,7 @@ class StorySmartiesBookShelfCollectionViewController: UICollectionViewController
             
             return StorySmartiesBookShelfCollectionViewCell()
         }
-        cell.backgroundColor = UIColor.randomColor()
+        cell.backgroundColor = UIColor.random
         
 //        cell.bookShelfImageView.image = UIImage(named: "The_Tale_of_Peter_Rabbit") ?? UIImage(named: "noimage")  ?? UIImage()
 //        //cell.addSubview(view: UIView)

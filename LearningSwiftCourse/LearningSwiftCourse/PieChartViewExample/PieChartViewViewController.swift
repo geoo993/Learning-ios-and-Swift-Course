@@ -153,13 +153,13 @@ class PieChartViewViewController: UIViewController {
         
         let frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 300)
         let dataPoints = [
-            DataPoint(text: "Monday", value: 2, color: UIColor.randomColor()),
-            DataPoint(text: "Tuesday", value: 4, color: UIColor.randomColor()),
-            DataPoint(text: "Wednesday", value: 6, color: UIColor.randomColor()),
-            DataPoint(text: "Thursday", value: 8, color: UIColor.randomColor()),
-            DataPoint(text: "Friday", value: 5, color: UIColor.randomColor()),
-            DataPoint(text: "Saturday", value: 3, color: UIColor.randomColor()),
-            DataPoint(text: "Sunday", value: 1, color: UIColor.randomColor()),
+            DataPoint(text: "Monday", value: 2, color: UIColor.random),
+            DataPoint(text: "Tuesday", value: 4, color: UIColor.random),
+            DataPoint(text: "Wednesday", value: 6, color: UIColor.random),
+            DataPoint(text: "Thursday", value: 8, color: UIColor.random),
+            DataPoint(text: "Friday", value: 5, color: UIColor.random),
+            DataPoint(text: "Saturday", value: 3, color: UIColor.random),
+            DataPoint(text: "Sunday", value: 1, color: UIColor.random),
         ]
         
         let pieChart = PieChartViewWithBezierPath(frame: frame, dataPoints: dataPoints)

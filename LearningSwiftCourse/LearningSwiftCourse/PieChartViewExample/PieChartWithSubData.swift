@@ -31,7 +31,7 @@ import UIKit
     }
     
     required init(coder aDecoder: NSCoder) {
-        self.chartColors = [.orange, .cyan, .randomColor(), .yellow, .randomColor(), .randomColor()]
+        self.chartColors = [.orange, .cyan, .random, .yellow, .random, .random]
         self.chartData = ["Alpha":1, "Beta":2, "Charlie":3, "Delta":4, "Echo":2.5, "Foxtrot":1.4] 
         
         super.init(coder:aDecoder)!
@@ -39,7 +39,7 @@ import UIKit
     }
     
     override init(frame: CGRect) {
-        self.chartColors = [.orange, .cyan, .randomColor(), .yellow, .randomColor(), .randomColor()]
+        self.chartColors = [.orange, .cyan, .random, .yellow, .random, .random]
         self.chartData = ["Alpha":1, "Beta":2, "Charlie":3, "Delta":4, "Echo":2.5, "Foxtrot":1.4] 
 
         super.init(frame: frame)

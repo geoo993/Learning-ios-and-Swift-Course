@@ -24,7 +24,7 @@ class ParallaxTableViewCell: UITableViewCell {
         clipsToBounds = true
         parallaxImageView.contentMode = .scaleAspectFill
         parallaxImageView.clipsToBounds = false
-        self.backgroundColor = UIColor.randomColor()
+        self.backgroundColor = UIColor.random
     }
    
     

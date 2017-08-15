@@ -10,7 +10,20 @@ import Foundation
 import UIKit
 
 
+
+struct Number {
+    static let withSeparator: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.groupingSeparator = "," // or possibly "." / "," / " "
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
+}
+
 public extension Int {
+    public var stringWithSepator: String {
+        return Number.withSeparator.string(from: NSNumber(value: hashValue)) ?? ""
+    }
     
     public static func random(min: Int, max:Int) -> Int {
         return min + Int(arc4random_uniform(UInt32(max - min + 1)))

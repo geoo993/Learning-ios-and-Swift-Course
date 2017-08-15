@@ -19,6 +19,18 @@ public struct ColorComponents {
 
 public extension UIColor {
     
+    public static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+        return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
+    }   
+    
+    public static func topMenuRedColor() -> UIColor {
+        return UIColor.rgb(red: 230, green: 32, blue: 31)
+    }   
+    
+    public static func nonSelectedColor() -> UIColor {
+        return UIColor.rgb(red: 91, green: 14, blue: 13)
+    }   
+    
     public static func systemsBlueColor () -> UIColor
     {
         return UIColor.init(red: 0.0, green: 0.4784, blue: 1.0, alpha: 1.0) 
@@ -42,8 +54,8 @@ public extension UIColor {
         _ = self.getRed(&r, green: &g, blue: &b, alpha: &a)
         return (r<0.8 && g<0.8 && b<0.8) ? UIColor.white : UIColor.black
     }
-    public static func randomColor() -> UIColor {
-        
+    
+    public static var random: UIColor {
         return UIColor.init(red: CGFloat.randomF(min: 0.0, max: 1.0), green: CGFloat.randomF(min: 0.0,max: 1.0), blue: CGFloat.randomF(min:0.0,max: 1.0), alpha: 1)
     }
 

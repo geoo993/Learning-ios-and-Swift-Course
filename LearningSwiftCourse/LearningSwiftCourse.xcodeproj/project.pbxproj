@@ -44,6 +44,7 @@
 		C72E27BA1E9ED9EB0064E01B /* LearningSwiftCourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27B91E9ED9EB0064E01B /* LearningSwiftCourseTests.swift */; };
 		C72E27C51E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */; };
 		C73154581F09A62200FAC356 /* LayoutableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73154571F09A62200FAC356 /* LayoutableButton.swift */; };
+		C73182171F43022D000D6EDA /* YoutubeMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76F4E6B1F42FFCF00B5CE6F /* YoutubeMain.storyboard */; };
 		C733BA601F07FE240010AAA7 /* CarthageDemoMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C733BA5F1F07FE240010AAA7 /* CarthageDemoMain.storyboard */; };
 		C7349DEC1EFC226B00B99AE6 /* UINavigationBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349DEB1EFC226B00B99AE6 /* UINavigationBar+Ext.swift */; };
 		C7349E0A1EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349E091EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift */; };
@@ -74,6 +75,16 @@
 		C76F04C81EF5004B0090F71B /* SliderMenuDrawerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76F04C71EF5004B0090F71B /* SliderMenuDrawerMain.storyboard */; };
 		C76F04EE1EF505160090F71B /* SliderMenuDrawerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F04C91EF501D00090F71B /* SliderMenuDrawerBaseViewController.swift */; };
 		C76F04F01EF505E40090F71B /* SliderMenuDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F04EF1EF505E40090F71B /* SliderMenuDrawerViewController.swift */; };
+		C76F4E521F42F58000B5CE6F /* YoutubeHomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E511F42F56100B5CE6F /* YoutubeHomeCollectionViewController.swift */; };
+		C76F4E531F42F58300B5CE6F /* YoutubeHomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E501F42F56100B5CE6F /* YoutubeHomeNavigationController.swift */; };
+		C76F4E611F42F7B000B5CE6F /* YoutubeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E581F42F7A600B5CE6F /* YoutubeVideo.swift */; };
+		C76F4E621F42F7BE00B5CE6F /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E5A1F42F7A600B5CE6F /* AppService.swift */; };
+		C76F4E631F42F7C100B5CE6F /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E5C1F42F7A600B5CE6F /* BaseCell.swift */; };
+		C76F4E641F42F7C500B5CE6F /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E5D1F42F7A600B5CE6F /* FeedCell.swift */; };
+		C76F4E651F42F7C500B5CE6F /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E5E1F42F7A600B5CE6F /* MenuBar.swift */; };
+		C76F4E661F42F7C500B5CE6F /* MenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E5F1F42F7A600B5CE6F /* MenuBarCell.swift */; };
+		C76F4E671F42F7C500B5CE6F /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E601F42F7A600B5CE6F /* VideoCell.swift */; };
+		C76F4E691F42F98700B5CE6F /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E541F42F6C700B5CE6F /* UIViewController+Ext.swift */; };
 		C772C3131F3E18AA003E883C /* RemoveDerivedDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C772C3121F3E18AA003E883C /* RemoveDerivedDataViewController.swift */; };
 		C7752A791F1D0316007B9DA8 /* AnagramsMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7752A1B1F1CFE25007B9DA8 /* AnagramsMain.storyboard */; };
 		C7752A7A1F1D0318007B9DA8 /* AnagramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7752A1C1F1CFE25007B9DA8 /* AnagramsViewController.swift */; };
@@ -1050,6 +1061,18 @@
 		C76F04C71EF5004B0090F71B /* SliderMenuDrawerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SliderMenuDrawerMain.storyboard; sourceTree = "<group>"; };
 		C76F04C91EF501D00090F71B /* SliderMenuDrawerBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerBaseViewController.swift; sourceTree = "<group>"; };
 		C76F04EF1EF505E40090F71B /* SliderMenuDrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerViewController.swift; sourceTree = "<group>"; };
+		C76F4E501F42F56100B5CE6F /* YoutubeHomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeHomeNavigationController.swift; sourceTree = "<group>"; };
+		C76F4E511F42F56100B5CE6F /* YoutubeHomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeHomeCollectionViewController.swift; sourceTree = "<group>"; };
+		C76F4E541F42F6C700B5CE6F /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		C76F4E581F42F7A600B5CE6F /* YoutubeVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideo.swift; sourceTree = "<group>"; };
+		C76F4E5A1F42F7A600B5CE6F /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
+		C76F4E5C1F42F7A600B5CE6F /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		C76F4E5D1F42F7A600B5CE6F /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		C76F4E5E1F42F7A600B5CE6F /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		C76F4E5F1F42F7A600B5CE6F /* MenuBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarCell.swift; sourceTree = "<group>"; };
+		C76F4E601F42F7A600B5CE6F /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		C76F4E6A1F42FAE700B5CE6F /* Junk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk.swift; sourceTree = "<group>"; };
+		C76F4E6B1F42FFCF00B5CE6F /* YoutubeMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YoutubeMain.storyboard; sourceTree = "<group>"; };
 		C772C3121F3E18AA003E883C /* RemoveDerivedDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveDerivedDataViewController.swift; sourceTree = "<group>"; };
 		C7752A1B1F1CFE25007B9DA8 /* AnagramsMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnagramsMain.storyboard; sourceTree = "<group>"; };
 		C7752A1C1F1CFE25007B9DA8 /* AnagramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramsViewController.swift; sourceTree = "<group>"; };
@@ -1535,6 +1558,7 @@
 				C7FC252D1F05019600959765 /* UIPickerExample */,
 				C7D0DE561F053454000CD3D1 /* UIViewSlidesExample */,
 				C7C0D8451F1E0E7C00929300 /* SoundEffect */,
+				C76F4E191F42F3F200B5CE6F /* YoutubeExample */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
 				C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */,
@@ -1543,6 +1567,7 @@
 				C72E27AB1E9ED9EB0064E01B /* Assets.xcassets */,
 				C72E27AD1E9ED9EB0064E01B /* LaunchScreen.storyboard */,
 				C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */,
+				C76F4E6A1F42FAE700B5CE6F /* Junk.swift */,
 				C72E27B01E9ED9EB0064E01B /* Info.plist */,
 				C72E27D21E9EDA0C0064E01B /* LearningSwift.playground */,
 			);
@@ -1687,6 +1712,55 @@
 				C7EE7BDF1EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift */,
 			);
 			path = SliderMenuDrawerMenu;
+			sourceTree = "<group>";
+		};
+		C76F4E191F42F3F200B5CE6F /* YoutubeExample */ = {
+			isa = PBXGroup;
+			children = (
+				C76F4E6B1F42FFCF00B5CE6F /* YoutubeMain.storyboard */,
+				C76F4E571F42F7A600B5CE6F /* Model */,
+				C76F4E591F42F7A600B5CE6F /* Service */,
+				C76F4E5B1F42F7A600B5CE6F /* View */,
+				C76F4E561F42F78200B5CE6F /* Controller */,
+			);
+			path = YoutubeExample;
+			sourceTree = "<group>";
+		};
+		C76F4E561F42F78200B5CE6F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C76F4E511F42F56100B5CE6F /* YoutubeHomeCollectionViewController.swift */,
+				C76F4E501F42F56100B5CE6F /* YoutubeHomeNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C76F4E571F42F7A600B5CE6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C76F4E581F42F7A600B5CE6F /* YoutubeVideo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C76F4E591F42F7A600B5CE6F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C76F4E5A1F42F7A600B5CE6F /* AppService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C76F4E5B1F42F7A600B5CE6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C76F4E5C1F42F7A600B5CE6F /* BaseCell.swift */,
+				C76F4E5D1F42F7A600B5CE6F /* FeedCell.swift */,
+				C76F4E5E1F42F7A600B5CE6F /* MenuBar.swift */,
+				C76F4E5F1F42F7A600B5CE6F /* MenuBarCell.swift */,
+				C76F4E601F42F7A600B5CE6F /* VideoCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C772C2DD1F3E1854003E883C /* RemoveDerivedData */ = {
@@ -2156,6 +2230,7 @@
 				C7C0F8771F0C077E003A4DE2 /* UITextView+Ext.swift */,
 				C74773081F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift */,
 				C7752A991F1D041B007B9DA8 /* CAEmitterCell+Ext.swift */,
+				C76F4E541F42F6C700B5CE6F /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -3472,6 +3547,7 @@
 				C7752A811F1D032A007B9DA8 /* btn.png in Resources */,
 				C7C2AF021EF6CC2C004F257A /* AudioMain.storyboard in Resources */,
 				C7C2AF001EF6CC29004F257A /* brooks.mp3 in Resources */,
+				C73182171F43022D000D6EDA /* YoutubeMain.storyboard in Resources */,
 				C7752A791F1D0316007B9DA8 /* AnagramsMain.storyboard in Resources */,
 				C7C2AF741EF6CD79004F257A /* TableViewMain.storyboard in Resources */,
 				C7C2AF321EF6CCA1004F257A /* NavBarMain.storyboard in Resources */,
@@ -3524,6 +3600,7 @@
 				C7C2AF0D1EF6CC62004F257A /* DraggableView.swift in Sources */,
 				C7C2AF2F1EF6CC97004F257A /* NewsTableViewCell.swift in Sources */,
 				C7752A981F1D037D007B9DA8 /* TileView.swift in Sources */,
+				C76F4E651F42F7C500B5CE6F /* MenuBar.swift in Sources */,
 				C7C2AF4F1EF6CCD7004F257A /* SlidesInfoModel.swift in Sources */,
 				C7C2AF371EF6CCA9004F257A /* CustomPageViewController.swift in Sources */,
 				C7752A8E1F1D0369007B9DA8 /* AudioController.swift in Sources */,
@@ -3531,6 +3608,7 @@
 				C7752A941F1D037D007B9DA8 /* HUDView.swift in Sources */,
 				C7C2AF091EF6CC5A004F257A /* ConstraintPack.swift in Sources */,
 				C7CF31F31EF6B33200114EC1 /* BasicCoreMLwithImagesCollectionViewCell.swift in Sources */,
+				C76F4E611F42F7B000B5CE6F /* YoutubeVideo.swift in Sources */,
 				C7C2AF821EF6CD91004F257A /* CustomDismissAnimationController.swift in Sources */,
 				C75C881F1F1BBB4A00004922 /* CGPoint+Ext.swift in Sources */,
 				C7C2AF631EF6CD2D004F257A /* StorySmartiesBookShelfCollectionViewController.swift in Sources */,
@@ -3547,6 +3625,7 @@
 				C7C2AF0A1EF6CC5C004F257A /* CrossPlatformDefines.swift in Sources */,
 				C7FA25781F0911FE00446935 /* BBCiPlayerStretchyChannelsCollectionViewCell.swift in Sources */,
 				C7C2AEFD1EF6CC17004F257A /* AirbnbNavigationController.swift in Sources */,
+				C76F4E521F42F58000B5CE6F /* YoutubeHomeCollectionViewController.swift in Sources */,
 				C7C2AF2C1EF6CC97004F257A /* MultiSidedBarMenuControllerLeft.swift in Sources */,
 				C72AF49D1F07CCBA0023F014 /* Inceptionv3.mlmodel in Sources */,
 				C7CF31F41EF6B33400114EC1 /* BasicCoreMLwithImagesViewController.swift in Sources */,
@@ -3558,6 +3637,7 @@
 				C7C2AEFE1EF6CC17004F257A /* AirbnbPlacesTableViewCell.swift in Sources */,
 				C7C2AF5C1EF6CD14004F257A /* StorySmartiesScrollMenuViewController.swift in Sources */,
 				C70C154E1F0571B700CE9220 /* AnimatableSideMenuItemCell.swift in Sources */,
+				C76F4E671F42F7C500B5CE6F /* VideoCell.swift in Sources */,
 				C7C2AF7D1EF6CD8A004F257A /* TopMenuNavigationController.swift in Sources */,
 				C73585831F0925AD00B33B55 /* ButtonWithImageAndTextViewController.swift in Sources */,
 				C7BF534A1F058D9200F01E72 /* RedSlideView.swift in Sources */,
@@ -3573,7 +3653,9 @@
 				C7C2AF7B1EF6CD8A004F257A /* AnimationControllerManager.swift in Sources */,
 				C7C2AF281EF6CC8C004F257A /* InspirationalFilmsCollectionViewCell.swift in Sources */,
 				C7CEB7A71F06FE0D00CC054B /* CirclePieView.swift in Sources */,
+				C76F4E661F42F7C500B5CE6F /* MenuBarCell.swift in Sources */,
 				C7C2AF841EF6CD91004F257A /* CustomNavigationAnimationController.swift in Sources */,
+				C76F4E691F42F98700B5CE6F /* UIViewController+Ext.swift in Sources */,
 				C7C0F8781F0C077E003A4DE2 /* UITextView+Ext.swift in Sources */,
 				C7C2AF6A1EF6CD64004F257A /* EmptyViewController.swift in Sources */,
 				C711FF261F016929005AAEA5 /* BBCiPlayerStretchyHeaderViewController.swift in Sources */,
@@ -3606,6 +3688,7 @@
 				C7C2AF061EF6CC46004F257A /* CarouselViewController.swift in Sources */,
 				C71678E41EFF19C700355E41 /* SimpleSpringDrawerViewController.swift in Sources */,
 				C778EDED1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift in Sources */,
+				C76F4E631F42F7C100B5CE6F /* BaseCell.swift in Sources */,
 				C7C2AF681EF6CD35004F257A /* StretchyHeaderTableViewController.swift in Sources */,
 				C7C2AF081EF6CC4A004F257A /* Interest.swift in Sources */,
 				C7C2AF011EF6CC2C004F257A /* AudioCheckViewController.swift in Sources */,
@@ -3620,6 +3703,7 @@
 				C72AF4A11F07CD790023F014 /* ImagePickerCoreMLViewNavigationController.swift in Sources */,
 				C7BA593B1F26A52B00E66C53 /* FreeCourseViewController.swift in Sources */,
 				C703771C1EF5473A002E7D9B /* SearchBarTableViewCell.swift in Sources */,
+				C76F4E621F42F7BE00B5CE6F /* AppService.swift in Sources */,
 				C7C2AF561EF6CD03004F257A /* SlideShowViewController.swift in Sources */,
 				C7C2AF251EF6CC83004F257A /* InspirationalFilmsViewController.swift in Sources */,
 				C7752A901F1D0375007B9DA8 /* GameData.swift in Sources */,
@@ -3670,6 +3754,7 @@
 				C7C2AF341EF6CCA1004F257A /* NavigationViewController.swift in Sources */,
 				C7BA59431F26A52B00E66C53 /* WebViewController.swift in Sources */,
 				C78D451B1F0CEE9A009B26A7 /* CircleMenuViewController.swift in Sources */,
+				C76F4E641F42F7C500B5CE6F /* FeedCell.swift in Sources */,
 				C7CEB7AF1F0709C600CC054B /* PieChartPageViewController.swift in Sources */,
 				C7752A961F1D037D007B9DA8 /* StopwatchView.swift in Sources */,
 				C7C2AF471EF6CCD7004F257A /* Slide.swift in Sources */,
@@ -3699,6 +3784,7 @@
 				C7C2AF431EF6CCCE004F257A /* PopUpNavigationController.swift in Sources */,
 				C7C2AF6F1EF6CD64004F257A /* TabBarViewController.swift in Sources */,
 				C7349E0C1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift in Sources */,
+				C76F4E531F42F58300B5CE6F /* YoutubeHomeNavigationController.swift in Sources */,
 				C7DD104C1F0AFB8500C7C074 /* CircleHelpers.swift in Sources */,
 				C71678E61EFF1A7B00355E41 /* TopDrawerView.swift in Sources */,
 				C764A16F1F1D7265009ACCED /* ParticleEmittersViewController.swift in Sources */,

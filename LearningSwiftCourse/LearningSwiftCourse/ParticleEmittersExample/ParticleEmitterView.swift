@@ -98,9 +98,9 @@ class ParticleEmitterView: UIView {
         assert(texture != nil, "particle image not found")
         
         //3
-        let explosionCell = CAEmitterCell.explosionEmitter(birthRate: 200,texture: texture!, color: UIColor.randomColor())
+        let explosionCell = CAEmitterCell.explosionEmitter(birthRate: 200,texture: texture!, color: UIColor.random)
         
-        let fireworkCell = CAEmitterCell.fireworkEmitter(birthRate: 400,texture: texture!, color: UIColor.randomColor())
+        let fireworkCell = CAEmitterCell.fireworkEmitter(birthRate: 400,texture: texture!, color: UIColor.random)
         
         let red = CAEmitterCell.simpleEmitter(birthRate: 10,texture: texture!, color: UIColor.red)
         let green = CAEmitterCell.simpleEmitter(birthRate: 10,texture: texture!, color: UIColor.green)
@@ -108,7 +108,7 @@ class ParticleEmitterView: UIView {
         
         let snowCell = CAEmitterCell.snowEmitter(birthRate: 50,texture: texture!, color: UIColor.white)
         
-        let rainCell = CAEmitterCell.rainEmitter(birthRate: 50,texture: texture!, color: UIColor.randomColor())
+        let rainCell = CAEmitterCell.rainEmitter(birthRate: 50,texture: texture!, color: UIColor.random)
         //11
         switch particleType {
         case .explosion:
