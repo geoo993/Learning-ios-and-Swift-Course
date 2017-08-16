@@ -63,6 +63,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"AnagramsViewController": "AnagramsMain"
                             //"ParticleEmittersViewController" : "ParticleEmittersMain",
                             "YoutubeHomeNavigationController" : "YoutubeMain",
+                            "OnboardingProcessNavigationController" : "OnboardingProcessMain",
                            ]
     
     //Mark: - Collection view 

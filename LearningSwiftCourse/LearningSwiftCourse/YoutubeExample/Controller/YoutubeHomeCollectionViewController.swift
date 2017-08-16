@@ -72,8 +72,8 @@ class YoutubeHomeCollectionViewController: UICollectionViewController {
         collectionView?.isPagingEnabled = true
     }
 
-    lazy var menuBar : MenuBar = {
-        let mb = MenuBar()
+    lazy var menuBar : YoutubeMenuBar = {
+        let mb = YoutubeMenuBar()
         mb.imageNames = self.menusNames
         mb.homeController = self
         return mb
@@ -173,7 +173,6 @@ extension YoutubeHomeCollectionViewController {
         return cell
     }
     
-
 }
 
 // MARK: UICollectionViewDelegate

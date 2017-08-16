@@ -11,3 +11,4 @@ github "RxSwiftCommunity/RxGesture"
 github "ChiliLabs/CHIPageControl" ~> 0.1.3
 github "Ramotion/animated-tab-bar"
 github "Ramotion/gliding-collection"
+github "evgenyneu/Cosmos" ~> 11.0

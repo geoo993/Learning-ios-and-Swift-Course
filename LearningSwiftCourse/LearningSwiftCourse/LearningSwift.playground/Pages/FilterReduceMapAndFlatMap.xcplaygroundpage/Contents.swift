@@ -83,6 +83,16 @@ let digits = [1,4,10,15,32, 45, 99, 66, 23,33]
 let evenDigits = digits.filter { $0 % 2 == 0 }
 evenDigits// [4, 10,32,66]
 
+let dic1 = ["bear","cat","dog","fish"]
+let dic2 = ["horse","cat","dog","bird"]
+let f = dic1.filter{dic2.contains($0)}
+
+//        let random = [1,5,-3,5,7,2,10]
+//        let drops = 
+//            zip(random, random.dropFirst()).enumerated().filter { $1.1 < $1.0 }.map { $0.offset }
+//        print(drops)
+
+
 //REDUCE
 let summing = a.reduce ( 0, {$0 + $1} )
 summing//45
