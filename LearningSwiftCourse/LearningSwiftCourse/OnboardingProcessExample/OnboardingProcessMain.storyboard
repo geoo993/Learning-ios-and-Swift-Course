@@ -51,13 +51,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qc5-nk-Guy">
-                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDE-Xk-Rdx">
-                                <rect key="frame" x="155" y="352" width="64" height="30"/>
+                                <rect key="frame" x="155.5" y="352" width="64" height="30"/>
                                 <state key="normal" title="Click me!"/>
                                 <connections>
                                     <action selector="didTapLoginButton:" destination="fwz-Od-A5s" eventType="touchUpInside" id="9Q4-Uf-OLj"/>
@@ -267,7 +267,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iW-Zj-GJC" userLabel="Next Button" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
-                                <rect key="frame" x="62" y="587" width="250" height="50"/>
+                                <rect key="frame" x="62.5" y="587" width="250" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8t4-5D-Dpd"/>
@@ -305,8 +305,8 @@
                                     <action selector="nextButtonAction:" destination="ck6-QG-9oP" eventType="touchUpInside" id="xLv-em-oPV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBd-7Y-e8V" userLabel="User Button" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
-                                <rect key="frame" x="62" y="134" width="250" height="80"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBd-7Y-e8V" userLabel="User Button" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="134" width="250" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="CeT-Bj-zq6"/>
@@ -397,7 +397,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M0v-2p-Wsj">
-                                <rect key="frame" x="63" y="186" width="250" height="30"/>
+                                <rect key="frame" x="62.5" y="186" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="tai-Mx-2lF"/>
                                 </constraints>
@@ -406,7 +406,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPv-BF-DXg">
-                                <rect key="frame" x="63" y="226" width="250" height="30"/>
+                                <rect key="frame" x="62.5" y="226" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="37j-9o-SkL"/>
                                 </constraints>
@@ -415,7 +415,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TU2-53-Ps3" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
-                                <rect key="frame" x="62" y="587" width="250" height="50"/>
+                                <rect key="frame" x="62.5" y="587" width="250" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="azm-as-bcG"/>
@@ -454,7 +454,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwJ-pR-uQY">
-                                <rect key="frame" x="63" y="154" width="250" height="22"/>
+                                <rect key="frame" x="62.5" y="154" width="250" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="XJl-0e-fCi"/>
                                 </constraints>
@@ -615,7 +615,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kls-x0-nuT">
-                                <rect key="frame" x="157" y="597" width="60" height="30"/>
+                                <rect key="frame" x="157.5" y="597" width="60" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="Eof-2u-V3b"/>
                                 </constraints>
@@ -691,7 +691,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGC-KQ-o0Y" userLabel="TitleLabel">
-                                                            <rect key="frame" x="47.5" y="48" width="45" height="24"/>
+                                                            <rect key="frame" x="48" y="48" width="44.5" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1072,7 +1072,7 @@
                                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IA4-Vu-9xV">
                                                                                                         <rect key="frame" x="0.0" y="245.5" width="335" height="25"/>
                                                                                                         <subviews>
-                                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xl-xY-np8" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xl-xY-np8" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
                                                                                                                 <rect key="frame" x="185" y="0.0" width="150" height="25"/>
                                                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                                                 <constraints>
@@ -1097,7 +1097,7 @@
                                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zx-nF-ykL">
                                                                                                         <rect key="frame" x="0.0" y="270.5" width="335" height="25"/>
                                                                                                         <subviews>
-                                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYb-YX-oxz" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
+                                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYb-YX-oxz" customClass="LayoutableButton" customModule="LearningSwiftCourse" customModuleProvider="target">
                                                                                                                 <rect key="frame" x="215" y="0.0" width="120" height="25"/>
                                                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                                                 <constraints>
