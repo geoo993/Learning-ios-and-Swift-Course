@@ -9,8 +9,8 @@
 
 import Foundation
 
-extension UIResponder {
-    func getParentViewController() -> UIViewController? {
+public extension UIResponder {
+    public func getParentViewController() -> UIViewController? {
         if self.next is UIViewController {
             return self.next as? UIViewController
         } else {
@@ -23,7 +23,7 @@ extension UIResponder {
         }
     }
     
-    func parentController<T: UIViewController>(of type: T.Type) -> T? {
+    public func parentController<T: UIViewController>(of type: T.Type) -> T? {
         guard let next = self.next else {
             return nil
         }

@@ -11,7 +11,7 @@ import UIKit
 import ImageIO
 
 
-extension UIImage {
+public extension UIImage {
     
     public static func setImageFromURl(stringImageUrl urlString: String) -> UIImage? {
         

@@ -1,27 +1,19 @@
 //
-//  BBCiPlayerContentNavigationController.swift
-//  LearningSwiftCourse
+//  ShapesViewController.swift
+//  CoreGraphicsShapes
 //
-//  Created by GEORGE QUENTIN on 24/06/2017.
-//  Copyright © 2017 LEXI LABS. All rights reserved.
+//  Created by GEORGE QUENTIN on 05/09/2017.
+//  Copyright © 2017 geomakesgames. All rights reserved.
 //
 
 import UIKit
-import LearningSwiftCourseExtensions
 
+class ShapesViewController: UIViewController {
 
-class BBCiPlayerContentNavigationController: UINavigationController {
-
-    var titleName : String = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationBar.topItem?.title = titleName
-        
         // Do any additional setup after loading the view.
-        self.navigationBar.clearNavigationBarBackground(with: UIColor.bbciplayerDark())
-        self.navigationBar.tintColor = UIColor.bbciplayerPink()
     }
 
     override func didReceiveMemoryWarning() {

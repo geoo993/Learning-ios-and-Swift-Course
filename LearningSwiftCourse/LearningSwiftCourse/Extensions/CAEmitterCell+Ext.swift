@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension CAEmitterCell {
+public extension CAEmitterCell {
     
     public static func explosionEmitter(birthRate:Float, texture:UIImage, color:UIColor) -> CAEmitterCell
     {

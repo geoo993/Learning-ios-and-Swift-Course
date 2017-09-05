@@ -43,16 +43,12 @@
 		C72E27C51E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E27C41E9ED9EB0064E01B /* LearningSwiftCourseUITests.swift */; };
 		C73182171F43022D000D6EDA /* YoutubeMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76F4E6B1F42FFCF00B5CE6F /* YoutubeMain.storyboard */; };
 		C733BA601F07FE240010AAA7 /* CarthageDemoMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C733BA5F1F07FE240010AAA7 /* CarthageDemoMain.storyboard */; };
-		C7349DEC1EFC226B00B99AE6 /* UINavigationBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349DEB1EFC226B00B99AE6 /* UINavigationBar+Ext.swift */; };
 		C7349E0A1EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349E091EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift */; };
 		C7349E0C1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349E0B1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift */; };
 		C73585811F09259000B33B55 /* ButtonWithImageAndTextMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73585801F09259000B33B55 /* ButtonWithImageAndTextMain.storyboard */; };
 		C73585831F0925AD00B33B55 /* ButtonWithImageAndTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73585821F0925AD00B33B55 /* ButtonWithImageAndTextViewController.swift */; };
 		C73977D21EEEFFBE005C96C8 /* pListRequestPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73977D11EEEFFBE005C96C8 /* pListRequestPermissions.swift */; };
-		C73DF6D51EFC39FF00DAB515 /* UIResponder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */; };
-		C74773091F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74773081F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift */; };
 		C75144C21F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75144C11F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift */; };
-		C75C881F1F1BBB4A00004922 /* CGPoint+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75C881E1F1BBB4A00004922 /* CGPoint+Ext.swift */; };
 		C76020DB1F124E1B00EA009E /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76020D81F124E0E00EA009E /* RxGesture.framework */; };
 		C76020DC1F124E1B00EA009E /* RxGesture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C76020D81F124E0E00EA009E /* RxGesture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C764A16F1F1D7265009ACCED /* ParticleEmittersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764A16E1F1D7265009ACCED /* ParticleEmittersViewController.swift */; };
@@ -72,7 +68,6 @@
 		C76F4E531F42F58300B5CE6F /* YoutubeHomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E501F42F56100B5CE6F /* YoutubeHomeNavigationController.swift */; };
 		C76F4E611F42F7B000B5CE6F /* YoutubeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E581F42F7A600B5CE6F /* YoutubeVideo.swift */; };
 		C76F4E621F42F7BE00B5CE6F /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E5A1F42F7A600B5CE6F /* AppService.swift */; };
-		C76F4E691F42F98700B5CE6F /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E541F42F6C700B5CE6F /* UIViewController+Ext.swift */; };
 		C772C3131F3E18AA003E883C /* RemoveDerivedDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C772C3121F3E18AA003E883C /* RemoveDerivedDataViewController.swift */; };
 		C7752A791F1D0316007B9DA8 /* AnagramsMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7752A1B1F1CFE25007B9DA8 /* AnagramsMain.storyboard */; };
 		C7752A7A1F1D0318007B9DA8 /* AnagramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7752A1C1F1CFE25007B9DA8 /* AnagramsViewController.swift */; };
@@ -209,7 +204,6 @@
 		C7BF53501F058E7200F01E72 /* UIViewsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF534F1F058E7200F01E72 /* UIViewsContainerViewController.swift */; };
 		C7BF53521F05AFD800F01E72 /* YellowSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF53511F05AFD800F01E72 /* YellowSlideView.swift */; };
 		C7C0D80B1F1E0D0700929300 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = C7C0D8091F1E0D0700929300 /* spark.png */; };
-		C7C0F8781F0C077E003A4DE2 /* UITextView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F8771F0C077E003A4DE2 /* UITextView+Ext.swift */; };
 		C7C2AE3C1EF6CA8D004F257A /* ColorChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE391EF6CA80004F257A /* ColorChangeViewController.swift */; };
 		C7C2AE3D1EF6CA90004F257A /* ColorsMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C2AE3A1EF6CA80004F257A /* ColorsMain.storyboard */; };
 		C7C2AE3E1EF6CA93004F257A /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2AE3B1EF6CA80004F257A /* ColorsViewController.swift */; };
@@ -353,7 +347,6 @@
 		C7CEB7AF1F0709C600CC054B /* PieChartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CEB7AE1F0709C600CC054B /* PieChartPageViewController.swift */; };
 		C7CF31D41EF6B31E00114EC1 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C78F4AB01EF34FDE0001CF94 /* GoogLeNetPlaces.mlmodel */; };
 		C7CF31F11EF6B32100114EC1 /* Places205-GoogLeNet.txt in Resources */ = {isa = PBXBuildFile; fileRef = C78F4AB11EF34FDE0001CF94 /* Places205-GoogLeNet.txt */; };
-		C7CF31F21EF6B32F00114EC1 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F4AB21EF34FDE0001CF94 /* ImageProcessor.swift */; };
 		C7CF31F31EF6B33200114EC1 /* BasicCoreMLwithImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F4AAC1EF34FDE0001CF94 /* BasicCoreMLwithImagesCollectionViewCell.swift */; };
 		C7CF31F41EF6B33400114EC1 /* BasicCoreMLwithImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F4AAE1EF34FDE0001CF94 /* BasicCoreMLwithImagesViewController.swift */; };
 		C7CF31F51EF6B33B00114EC1 /* BasicCoreMLwithImagesMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78F4AAD1EF34FDE0001CF94 /* BasicCoreMLwithImagesMain.storyboard */; };
@@ -382,9 +375,14 @@
 		C7E08ECC1F44691B00207D1C /* Cosmos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E08E9E1F4468F300207D1C /* Cosmos.framework */; };
 		C7E08ECD1F44691B00207D1C /* Cosmos.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7E08E9E1F4468F300207D1C /* Cosmos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7E774041F01542600440E05 /* BBCiPlayerStretchyHeaderMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E774031F01542600440E05 /* BBCiPlayerStretchyHeaderMain.storyboard */; };
-		C7E774061F01560E00440E05 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E774051F01560E00440E05 /* UINavigationController+Ext.swift */; };
 		C7EE7BE01EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7BDF1EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift */; };
 		C7EE7BFE1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7BFD1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift */; };
+		C7F044B01F5EF5E200094122 /* ShapesMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7F044AF1F5EF53D00094122 /* ShapesMain.storyboard */; };
+		C7F044B11F5EF5E700094122 /* AnimatableCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F044741F5EF4FB00094122 /* AnimatableCircleViewController.swift */; };
+		C7F044B21F5EF5EA00094122 /* CirclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F044721F5EF4FB00094122 /* CirclesViewController.swift */; };
+		C7F044B31F5EF5EC00094122 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F044711F5EF4FB00094122 /* CounterViewController.swift */; };
+		C7F044B41F5EF5EE00094122 /* ShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F044731F5EF4FB00094122 /* ShapesViewController.swift */; };
+		C7F044B51F5EF84E00094122 /* NSMutableAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74773081F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift */; };
 		C7F2EE401F0837CB00655CCC /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F2EE171F0837BC00655CCC /* RxSwift.framework */; };
 		C7F2EE411F0837CB00655CCC /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7F2EE171F0837BC00655CCC /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7F2EE441F0837CB00655CCC /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F2EE1F1F0837BC00655CCC /* RxCocoa.framework */; };
@@ -394,6 +392,20 @@
 		C7FA25781F0911FE00446935 /* BBCiPlayerStretchyChannelsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FA25771F0911FE00446935 /* BBCiPlayerStretchyChannelsCollectionViewCell.swift */; };
 		C7FC254B1F0501DC00959765 /* UIPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FC254A1F0501DC00959765 /* UIPickerViewController.swift */; };
 		C7FC254D1F05020200959765 /* UIPickerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FC254C1F05020200959765 /* UIPickerMain.storyboard */; };
+		C7FCEDFA1F5EF35F007FACE4 /* AnimatableCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FCEDF41F5EF358007FACE4 /* AnimatableCircleView.swift */; };
+		C7FCEDFB1F5EF364007FACE4 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FCEDF31F5EF358007FACE4 /* CounterView.swift */; };
+		C7FCEDFC1F5EF367007FACE4 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FCEDF61F5EF358007FACE4 /* DotView.swift */; };
+		C7FCEDFD1F5EF369007FACE4 /* PartialCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FCEDF71F5EF358007FACE4 /* PartialCircleView.swift */; };
+		C7FCEDFE1F5EF36B007FACE4 /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FCEDF51F5EF358007FACE4 /* PushButtonView.swift */; };
+		C7FCEDFF1F5EF36E007FACE4 /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FCEDF91F5EF358007FACE4 /* RoundedCornerView.swift */; };
+		C7FCEE001F5EF398007FACE4 /* ShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FCEDF81F5EF358007FACE4 /* ShapesView.swift */; };
+		C7FCEE011F5EF3F0007FACE4 /* CGPoint+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75C881E1F1BBB4A00004922 /* CGPoint+Ext.swift */; };
+		C7FCEE021F5EF3FA007FACE4 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F4E541F42F6C700B5CE6F /* UIViewController+Ext.swift */; };
+		C7FCEE031F5EF400007FACE4 /* UITextView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0F8771F0C077E003A4DE2 /* UITextView+Ext.swift */; };
+		C7FCEE041F5EF404007FACE4 /* UIResponder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DF6D41EFC39FF00DAB515 /* UIResponder+Ext.swift */; };
+		C7FCEE051F5EF407007FACE4 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E774051F01560E00440E05 /* UINavigationController+Ext.swift */; };
+		C7FCEE061F5EF40C007FACE4 /* UINavigationBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7349DEB1EFC226B00B99AE6 /* UINavigationBar+Ext.swift */; };
+		C7FCEE071F5EF423007FACE4 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F4AB21EF34FDE0001CF94 /* ImageProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1442,12 +1454,24 @@
 		C7E774051F01560E00440E05 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 		C7EE7BDF1EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerNavigationController.swift; sourceTree = "<group>"; };
 		C7EE7BFD1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerCustomViewController.swift; sourceTree = "<group>"; };
+		C7F044711F5EF4FB00094122 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		C7F044721F5EF4FB00094122 /* CirclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesViewController.swift; sourceTree = "<group>"; };
+		C7F044731F5EF4FB00094122 /* ShapesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesViewController.swift; sourceTree = "<group>"; };
+		C7F044741F5EF4FB00094122 /* AnimatableCircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableCircleViewController.swift; sourceTree = "<group>"; };
+		C7F044AF1F5EF53D00094122 /* ShapesMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShapesMain.storyboard; sourceTree = "<group>"; };
 		C7F2EDFE1F0837BC00655CCC /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
 		C7F33C491EF92E9C0096E372 /* BBCiPlayerVideosItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerVideosItems.swift; sourceTree = "<group>"; };
 		C7FA25541F0911E900446935 /* BBCiPlayerStretchyCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerStretchyCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7FA25771F0911FE00446935 /* BBCiPlayerStretchyChannelsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerStretchyChannelsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7FC254A1F0501DC00959765 /* UIPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewController.swift; sourceTree = "<group>"; };
 		C7FC254C1F05020200959765 /* UIPickerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIPickerMain.storyboard; sourceTree = "<group>"; };
+		C7FCEDF31F5EF358007FACE4 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		C7FCEDF41F5EF358007FACE4 /* AnimatableCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableCircleView.swift; sourceTree = "<group>"; };
+		C7FCEDF51F5EF358007FACE4 /* PushButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
+		C7FCEDF61F5EF358007FACE4 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
+		C7FCEDF71F5EF358007FACE4 /* PartialCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialCircleView.swift; sourceTree = "<group>"; };
+		C7FCEDF81F5EF358007FACE4 /* ShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesView.swift; sourceTree = "<group>"; };
+		C7FCEDF91F5EF358007FACE4 /* RoundedCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1609,9 +1633,10 @@
 				C78D45171F0CEE5A009B26A7 /* CircleMenuExample */,
 				C79DA43B1F122A5400A92704 /* DynamicScrollViewExample */,
 				C7BA591A1F26A52B00E66C53 /* DucTran */,
+				C7BC88631F07F36E0034B11C /* CarthageExample */,
 				C7C2AE381EF6CA80004F257A /* ColorsExample */,
 				C7C2AE951EF6CB63004F257A /* ConstraintsPack */,
-				C7BC88631F07F36E0034B11C /* CarthageExample */,
+				C7FCEDB81F5EF2B1007FACE4 /* CoreGraphicsShapesExample */,
 				C7C2AECB1EF6CB63004F257A /* DraggableVerticalMenusExample */,
 				C7C2AE571EF6CB62004F257A /* Extensions */,
 				C7C2AE541EF6CB62004F257A /* ImageCropperExample */,
@@ -2250,6 +2275,13 @@
 		C7B6A8011F44DE3100EEB206 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C7FCEDF41F5EF358007FACE4 /* AnimatableCircleView.swift */,
+				C7FCEDF31F5EF358007FACE4 /* CounterView.swift */,
+				C7FCEDF61F5EF358007FACE4 /* DotView.swift */,
+				C7FCEDF71F5EF358007FACE4 /* PartialCircleView.swift */,
+				C7FCEDF51F5EF358007FACE4 /* PushButtonView.swift */,
+				C7FCEDF91F5EF358007FACE4 /* RoundedCornerView.swift */,
+				C7FCEDF81F5EF358007FACE4 /* ShapesView.swift */,
 				C7B6A8021F44DE3100EEB206 /* AddItemView.swift */,
 				C7B6A8031F44DE3100EEB206 /* AddItemView.xib */,
 				C7B6A8041F44DE3100EEB206 /* AnimatableHamburgerView.swift */,
@@ -2941,6 +2973,18 @@
 				C7FC254C1F05020200959765 /* UIPickerMain.storyboard */,
 			);
 			path = UIPickerExample;
+			sourceTree = "<group>";
+		};
+		C7FCEDB81F5EF2B1007FACE4 /* CoreGraphicsShapesExample */ = {
+			isa = PBXGroup;
+			children = (
+				C7F044AF1F5EF53D00094122 /* ShapesMain.storyboard */,
+				C7F044741F5EF4FB00094122 /* AnimatableCircleViewController.swift */,
+				C7F044721F5EF4FB00094122 /* CirclesViewController.swift */,
+				C7F044711F5EF4FB00094122 /* CounterViewController.swift */,
+				C7F044731F5EF4FB00094122 /* ShapesViewController.swift */,
+			);
+			path = CoreGraphicsShapesExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3734,6 +3778,7 @@
 				C7919B011F1B8F9000913F15 /* MovingBallsMain.storyboard in Resources */,
 				C7752A841F1D032A007B9DA8 /* slot@2x.png in Resources */,
 				C7C2AF221EF6CC78004F257A /* ImageViewerMain.storyboard in Resources */,
+				C7F044B01F5EF5E200094122 /* ShapesMain.storyboard in Resources */,
 				C70C154A1F0571A100CE9220 /* AnimatableSideMenuMain.storyboard in Resources */,
 				C733BA601F07FE240010AAA7 /* CarthageDemoMain.storyboard in Resources */,
 				C7752A7E1F1D0324007B9DA8 /* Comic_Andy.ttf in Resources */,
@@ -3832,6 +3877,7 @@
 				C7A3A5A11F44D48F00A89BE8 /* Services.swift in Sources */,
 				C7752A981F1D037D007B9DA8 /* TileView.swift in Sources */,
 				C7C2AF4F1EF6CCD7004F257A /* SlidesInfoModel.swift in Sources */,
+				C7FCEDFC1F5EF367007FACE4 /* DotView.swift in Sources */,
 				C7C2AF371EF6CCA9004F257A /* CustomPageViewController.swift in Sources */,
 				C7752A8E1F1D0369007B9DA8 /* AudioController.swift in Sources */,
 				C7A1A2171F079AF2005CF910 /* PieChartWithSubData.swift in Sources */,
@@ -3841,7 +3887,6 @@
 				C76F4E611F42F7B000B5CE6F /* YoutubeVideo.swift in Sources */,
 				C7C2AF821EF6CD91004F257A /* CustomDismissAnimationController.swift in Sources */,
 				C7A3A5971F44D46500A89BE8 /* WalkthroughModel.swift in Sources */,
-				C75C881F1F1BBB4A00004922 /* CGPoint+Ext.swift in Sources */,
 				C7B6A8261F44DE3A00EEB206 /* CirclePieView.swift in Sources */,
 				C7C2AF631EF6CD2D004F257A /* StorySmartiesBookShelfCollectionViewController.swift in Sources */,
 				C7C2AF451EF6CCD7004F257A /* ScrollViewController.swift in Sources */,
@@ -3898,8 +3943,6 @@
 				C7A3A59C1F44D47D00A89BE8 /* MyReadingCollectionViewCell.swift in Sources */,
 				C7B6A8291F44DE3A00EEB206 /* DragInView.swift in Sources */,
 				C7C2AF841EF6CD91004F257A /* CustomNavigationAnimationController.swift in Sources */,
-				C76F4E691F42F98700B5CE6F /* UIViewController+Ext.swift in Sources */,
-				C7C0F8781F0C077E003A4DE2 /* UITextView+Ext.swift in Sources */,
 				C7C2AF6A1EF6CD64004F257A /* EmptyViewController.swift in Sources */,
 				C711FF261F016929005AAEA5 /* BBCiPlayerStretchyHeaderViewController.swift in Sources */,
 				C7FC254B1F0501DC00959765 /* UIPickerViewController.swift in Sources */,
@@ -3911,31 +3954,34 @@
 				C7C2AF601EF6CD2A004F257A /* StorySmartiesMenuTableViewController.swift in Sources */,
 				C7C2AF501EF6CCF1004F257A /* SideBarMenu.swift in Sources */,
 				C7752A951F1D037D007B9DA8 /* StardustView.swift in Sources */,
+				C7F044B21F5EF5EA00094122 /* CirclesViewController.swift in Sources */,
 				C7DD104E1F0AFB8B00C7C074 /* RadialSubMenu.swift in Sources */,
 				C7CF31D41EF6B31E00114EC1 /* GoogLeNetPlaces.mlmodel in Sources */,
 				C7C2AE3C1EF6CA8D004F257A /* ColorChangeViewController.swift in Sources */,
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
 				C7CEB7A51F06FD9000CC054B /* PieChartViewViewController.swift in Sources */,
 				C7C2AF361EF6CCA1004F257A /* RootViewController.swift in Sources */,
+				C7FCEE001F5EF398007FACE4 /* ShapesView.swift in Sources */,
 				C75144C21F03031A0062E5EF /* BBCiPlayerStretchyTableView.swift in Sources */,
 				C7C2AF271EF6CC88004F257A /* InspirationalFilmsInfo.swift in Sources */,
 				C7B6A8331F44DE3A00EEB206 /* ParticleEmitterView.swift in Sources */,
 				C7752A931F1D037D007B9DA8 /* ExplodeView.swift in Sources */,
 				C76F04EE1EF505160090F71B /* SliderMenuDrawerBaseViewController.swift in Sources */,
 				C7C2AF5A1EF6CD14004F257A /* PanelDrawerView.swift in Sources */,
+				C7F044B31F5EF5EC00094122 /* CounterViewController.swift in Sources */,
 				C7C2AF3F1EF6CCC3004F257A /* ParallaxHeaderTableViewCell.swift in Sources */,
 				C7BA593F1F26A52B00E66C53 /* Program.swift in Sources */,
 				C7B6A8391F44DE3A00EEB206 /* SlideShowView.swift in Sources */,
 				C7C2AF621EF6CD2D004F257A /* StorySmartiesBookShelfCollectionViewCell.swift in Sources */,
 				C7C2AF761EF6CD7E004F257A /* MediaLayers.swift in Sources */,
 				C7752A921F1D037D007B9DA8 /* CounterLabelView.swift in Sources */,
-				C74773091F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift in Sources */,
 				C7C2AF061EF6CC46004F257A /* CarouselViewController.swift in Sources */,
 				C71678E41EFF19C700355E41 /* SimpleSpringDrawerViewController.swift in Sources */,
 				C778EDED1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift in Sources */,
 				C7C2AF681EF6CD35004F257A /* StretchyHeaderTableViewController.swift in Sources */,
 				C7C2AF081EF6CC4A004F257A /* Interest.swift in Sources */,
 				C7C2AF011EF6CC2C004F257A /* AudioCheckViewController.swift in Sources */,
+				C7F044B41F5EF5EE00094122 /* ShapesViewController.swift in Sources */,
 				C70C154F1F0571BA00CE9220 /* AnimatableSideMenuViewController.swift in Sources */,
 				C7B6A82F1F44DE3A00EEB206 /* MIBadgeButton.swift in Sources */,
 				C7C2AEFF1EF6CC17004F257A /* AirbnbTableViewController.swift in Sources */,
@@ -3944,6 +3990,7 @@
 				C7A3A5921F44D42F00A89BE8 /* OnboardingProcessWalkthroughViewController.swift in Sources */,
 				C7C2AEF51EF6CC0B004F257A /* AirbnbData.swift in Sources */,
 				C7A3A58E1F44D42F00A89BE8 /* LoginViewController.swift in Sources */,
+				C7FCEDFD1F5EF369007FACE4 /* PartialCircleView.swift in Sources */,
 				C7C2AF2D1EF6CC97004F257A /* MultiSidedBarMenuControllerRight.swift in Sources */,
 				C7A3A59F1F44D48F00A89BE8 /* AppServices.swift in Sources */,
 				C7A3A59A1F44D46D00A89BE8 /* OnboardingBookSelectionViewController.swift in Sources */,
@@ -3967,12 +4014,11 @@
 				C7919AFF1F1B8F7500913F15 /* MovingBallsViewController.swift in Sources */,
 				C7C2AF711EF6CD70004F257A /* ChosenMediaDetailedViewController.swift in Sources */,
 				C7C2AF801EF6CD8A004F257A /* TopMenuTableViewCell.swift in Sources */,
-				C7CF31F21EF6B32F00114EC1 /* ImageProcessor.swift in Sources */,
 				C7C2AE3E1EF6CA93004F257A /* ColorsViewController.swift in Sources */,
 				C7C2AF831EF6CD91004F257A /* CustomInteractionController.swift in Sources */,
 				C7A3A5901F44D42F00A89BE8 /* OnboardingProcessNavigationController.swift in Sources */,
-				C7349DEC1EFC226B00B99AE6 /* UINavigationBar+Ext.swift in Sources */,
 				C70C154D1F0571B500CE9220 /* AnimatableSideMenuContainerViewController.swift in Sources */,
+				C7F044B11F5EF5E700094122 /* AnimatableCircleViewController.swift in Sources */,
 				C7349E0A1EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift in Sources */,
 				C7A3A59D1F44D47D00A89BE8 /* MyReadingSectionsCollectionViewCell.swift in Sources */,
 				C7B6A83D1F44DE3A00EEB206 /* YoutubeMenuBarCell.swift in Sources */,
@@ -3995,7 +4041,6 @@
 				C72AF49B1F07CCB30023F014 /* ImagePickerCoreMLViewController.swift in Sources */,
 				C703771E1EF551C0002E7D9B /* SearchBarViewNavigationController.swift in Sources */,
 				C7BB47601F0B9D2600F463BD /* RadialMenuTextViewController.swift in Sources */,
-				C7E774061F01560E00440E05 /* UINavigationController+Ext.swift in Sources */,
 				C7C2AF701EF6CD70004F257A /* AddMediaViewController.swift in Sources */,
 				C7C2AF351EF6CCA1004F257A /* RedViewController.swift in Sources */,
 				C7B6A8381F44DE3A00EEB206 /* SimpleDraggableView.swift in Sources */,
@@ -4010,6 +4055,7 @@
 				C7BA59431F26A52B00E66C53 /* WebViewController.swift in Sources */,
 				C78D451B1F0CEE9A009B26A7 /* CircleMenuViewController.swift in Sources */,
 				C7CEB7AF1F0709C600CC054B /* PieChartPageViewController.swift in Sources */,
+				C7FCEDFF1F5EF36E007FACE4 /* RoundedCornerView.swift in Sources */,
 				C7752A961F1D037D007B9DA8 /* StopwatchView.swift in Sources */,
 				C7C2AF471EF6CCD7004F257A /* Slide.swift in Sources */,
 				C7B6A8311F44DE3A00EEB206 /* MyReadingMenuBarCell.swift in Sources */,
@@ -4017,6 +4063,7 @@
 				C7752A7A1F1D0318007B9DA8 /* AnagramsViewController.swift in Sources */,
 				C7EE7BFE1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift in Sources */,
 				C7B6A82A1F44DE3A00EEB206 /* FeedCell.swift in Sources */,
+				C7FCEDFA1F5EF35F007FACE4 /* AnimatableCircleView.swift in Sources */,
 				C7FA25551F0911E900446935 /* BBCiPlayerStretchyCategoriesCollectionViewCell.swift in Sources */,
 				C72E27A51E9ED9EB0064E01B /* AppDelegate.swift in Sources */,
 				C7C2AF521EF6CCF1004F257A /* SideBarMenuTableViewController.swift in Sources */,
@@ -4035,7 +4082,6 @@
 				C78F49881F0849F900FA2275 /* AninmationsWithLottieViewController.swift in Sources */,
 				C70C154B1F0571AC00CE9220 /* AnimatableDetailViewController.swift in Sources */,
 				C7BF534C1F058DAA00F01E72 /* GreenSlideView.swift in Sources */,
-				C73DF6D51EFC39FF00DAB515 /* UIResponder+Ext.swift in Sources */,
 				C7C2AF401EF6CCC3004F257A /* ParallaxHeaderTableViewController.swift in Sources */,
 				C7C2AF871EF6CD9A004F257A /* VideoPlayerViewController.swift in Sources */,
 				C7C2AF431EF6CCCE004F257A /* PopUpNavigationController.swift in Sources */,
@@ -4053,10 +4099,12 @@
 				C7C2AF3A1EF6CCA9004F257A /* WalkthroughZoomViewController.swift in Sources */,
 				C7752A8F1F1D036B007B9DA8 /* GameController.swift in Sources */,
 				C7C2AF791EF6CD7E004F257A /* Product.swift in Sources */,
+				C7FCEDFE1F5EF36B007FACE4 /* PushButtonView.swift in Sources */,
 				C7BE65E21EE2A22900A05286 /* MainCollectionViewController.swift in Sources */,
 				C7DD104F1F0AFB8E00C7C074 /* RadialMenuColorsViewController.swift in Sources */,
 				C7EE7BE01EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift in Sources */,
 				C7C2AF7E1EF6CD8A004F257A /* TopMenuNewsTableViewCell.swift in Sources */,
+				C7FCEDFB1F5EF364007FACE4 /* CounterView.swift in Sources */,
 				C703771A1EF5471E002E7D9B /* SearchBarTableViewController.swift in Sources */,
 				C7B6A8201F44DE3A00EEB206 /* AddItemView.swift in Sources */,
 				C7C2AF311EF6CC97004F257A /* PhotoViewController.swift in Sources */,
@@ -4086,18 +4134,26 @@
 			files = (
 				C7C2AF191EF6CC68004F257A /* UIImageView+Ext.swift in Sources */,
 				C7C2AF181EF6CC68004F257A /* UIImage+GIF.swift in Sources */,
+				C7F044B51F5EF84E00094122 /* NSMutableAttributedString+Ext.swift in Sources */,
+				C7FCEE071F5EF423007FACE4 /* ImageProcessor.swift in Sources */,
+				C7FCEE021F5EF3FA007FACE4 /* UIViewController+Ext.swift in Sources */,
+				C7FCEE061F5EF40C007FACE4 /* UINavigationBar+Ext.swift in Sources */,
 				C7C2AF1D1EF6CC68004F257A /* UIView+Ext.swift in Sources */,
 				C7C2AF0F1EF6CC68004F257A /* Dictionary+Ext.swift in Sources */,
 				C7C2AF1C1EF6CC68004F257A /* UITextField+Ext.swift in Sources */,
 				C71EDCF61EF6DDB600B69EF9 /* SWRevealViewController.m in Sources */,
 				C7C2AF101EF6CC68004F257A /* Generic+Ext.swift in Sources */,
+				C7FCEE041F5EF404007FACE4 /* UIResponder+Ext.swift in Sources */,
 				C7C2AF151EF6CC68004F257A /* UIButton+Ext.swift in Sources */,
 				C7C2AF1B1EF6CC68004F257A /* UISearchBar+Ext.swift in Sources */,
+				C7FCEE011F5EF3F0007FACE4 /* CGPoint+Ext.swift in Sources */,
 				C7C2AF121EF6CC68004F257A /* String+Ext.swift in Sources */,
+				C7FCEE051F5EF407007FACE4 /* UINavigationController+Ext.swift in Sources */,
 				C7C2AF131EF6CC68004F257A /* UITableView+Ext.swift in Sources */,
 				C7C2AF161EF6CC68004F257A /* UIColor+Ext.swift in Sources */,
 				C7C2AF1A1EF6CC68004F257A /* UIKit+Ext.swift in Sources */,
 				C7C2AF171EF6CC68004F257A /* UIImage+Ext.swift in Sources */,
+				C7FCEE031F5EF400007FACE4 /* UITextView+Ext.swift in Sources */,
 				C7C2AF141EF6CC68004F257A /* UIApplication+Ext.swift in Sources */,
 				C7C2AF111EF6CC68004F257A /* Math+Ext.swift in Sources */,
 				C7752A9B1F1D0489007B9DA8 /* CAEmitterCell+Ext.swift in Sources */,

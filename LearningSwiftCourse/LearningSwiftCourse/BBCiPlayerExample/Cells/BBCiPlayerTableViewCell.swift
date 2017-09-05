@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LearningSwiftCourseExtensions
 
 class BBCiPlayerTableViewCell: UITableViewCell {
 

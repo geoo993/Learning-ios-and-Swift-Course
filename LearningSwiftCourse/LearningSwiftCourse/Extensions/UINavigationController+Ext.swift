@@ -9,13 +9,13 @@
 import Foundation
 
 
-extension UINavigationController {
+public extension UINavigationController {
     
-    var rootViewControllerInNavigationStack : UIViewController? {
+    public var rootViewControllerInNavigationStack : UIViewController? {
         return viewControllers.first 
     }
     
-    func previousViewControllerInNavigationStack() -> UIViewController? {
+    public func previousViewControllerInNavigationStack() -> UIViewController? {
         guard let _ = self.navigationController else {
             return nil
         }

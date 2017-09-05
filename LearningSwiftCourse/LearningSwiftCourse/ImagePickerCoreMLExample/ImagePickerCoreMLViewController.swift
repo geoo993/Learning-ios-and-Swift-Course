@@ -12,6 +12,7 @@
 
 import UIKit
 import CoreML
+import LearningSwiftCourseExtensions
 
 class ImagePickerCoreMLViewController: UIViewController, UINavigationControllerDelegate {
     

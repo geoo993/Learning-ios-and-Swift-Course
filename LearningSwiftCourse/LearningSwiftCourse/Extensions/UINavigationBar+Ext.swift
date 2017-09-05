@@ -9,9 +9,9 @@
 import Foundation
 
 
-extension UINavigationBar {
+public extension UINavigationBar {
     
-    func clearNavigationBarBackground(with color: UIColor){
+    public func clearNavigationBarBackground(with color: UIColor){
         self.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.shadowImage = UIImage()
         self.isTranslucent = true

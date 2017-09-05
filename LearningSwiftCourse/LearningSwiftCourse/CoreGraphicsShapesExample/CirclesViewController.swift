@@ -1,27 +1,26 @@
 //
-//  BBCiPlayerContentNavigationController.swift
-//  LearningSwiftCourse
+//  CirclesViewController.swift
+//  CoreGraphicsShapes
 //
-//  Created by GEORGE QUENTIN on 24/06/2017.
-//  Copyright © 2017 LEXI LABS. All rights reserved.
+//  Created by GEORGE QUENTIN on 05/09/2017.
+//  Copyright © 2017 geomakesgames. All rights reserved.
 //
 
 import UIKit
-import LearningSwiftCourseExtensions
 
+class CirclesViewController: UIViewController {
 
-class BBCiPlayerContentNavigationController: UINavigationController {
-
-    var titleName : String = ""
+    @IBAction func dismissButton(_ sender : UIButton) {
+        //self.navigationController!.popToRootViewController(animated: true)
+        dismiss(animated: true) { 
+            print("view controller dismissed, now going to home page")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationBar.topItem?.title = titleName
-        
         // Do any additional setup after loading the view.
-        self.navigationBar.clearNavigationBarBackground(with: UIColor.bbciplayerDark())
-        self.navigationBar.tintColor = UIColor.bbciplayerPink()
     }
 
     override func didReceiveMemoryWarning() {

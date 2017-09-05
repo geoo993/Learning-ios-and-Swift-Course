@@ -10,7 +10,7 @@
 import Foundation
 import UIKit
 
-extension UITextView {
+public extension UITextView {
 //    @available(iOS, deprecated, message: "Replace call with `range(from textRange: UITextRange) -> Range<Int>`")
     public func textRangeToIntRange(range textRange: UITextRange) -> CountableRange<Int> {
         return self.range(from: textRange)

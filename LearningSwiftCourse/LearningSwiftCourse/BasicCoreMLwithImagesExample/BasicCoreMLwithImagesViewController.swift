@@ -11,6 +11,7 @@
 //http://machinethink.net/blog/ios-11-machine-learning-for-everyone/
 
 import UIKit
+import LearningSwiftCourseExtensions
 
 class BasicCoreMLwithImagesViewController: UIViewController {
 
@@ -33,6 +34,7 @@ class BasicCoreMLwithImagesViewController: UIViewController {
 
     func sceneLabel(forImage image: UIImage) -> String?
     {
+        
         //requires to pass along a CVPixelBuffer
         if let pixelBuffer = ImageProcessor.pixelBuffer(forImage: image) {
             guard let scene = try? googleNetPlacesModel.prediction(sceneImage: pixelBuffer) else { return nil }

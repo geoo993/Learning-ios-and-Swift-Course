@@ -8,10 +8,10 @@
 
 import CoreVideo
 
-struct ImageProcessor {
+public class ImageProcessor {
     
     //this gets an image as a core graphics image and covers that to a CVPixelBuffer
-    static func pixelBuffer (forImage image:UIImage, pixelFormatType: OSType = kCVPixelFormatType_32BGRA, pixelBufferAttributes: CFDictionary? = nil, useBitmapInfo: Bool = true) -> CVPixelBuffer? {
+    public static func pixelBuffer (forImage image:UIImage, pixelFormatType: OSType = kCVPixelFormatType_32BGRA, pixelBufferAttributes: CFDictionary? = nil, useBitmapInfo: Bool = true) -> CVPixelBuffer? {
         
         var pixelBuffer:CVPixelBuffer? = nil
         

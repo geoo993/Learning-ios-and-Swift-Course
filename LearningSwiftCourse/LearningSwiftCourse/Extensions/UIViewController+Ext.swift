@@ -9,9 +9,9 @@
 import Foundation
 
 public extension UIViewController {
-    var controllerAppDelegate : AppDelegate? {
-        return UIApplication.shared.delegate as? AppDelegate
-    }
+//    var controllerAppDelegate : AppDelegate? {
+//        return UIApplication.shared.delegate as? AppDelegate
+//    }
     
     func disableNavBackButton(){
         navigationItem.hidesBackButton = true
