@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='Rx'/>
+        <page name='Rx Using'/>
+        <page name='Lazy'/>
+        <page name='Rx Throttle Sample'/>
+        <page name='Rx sub-un-resubscribe'/>
+        <page name='Statemachine command pipeline'/>
+        <page name='flatMapLatest'/>
+        <page name='single vs take(1)'/>
+        <page name='single bug?'/>
+        <page name='Misc'/>
+        <page name='Timer chaining'/>
+        <page name='BehaviourTree'/>
+        <page name='flatmapLatest with empty'/>
+        <page name='Delay Extension'/>
+        <page name='takeOne flatMap'/>
+        <page name='pairs with wrap'/>
+    </pages>
+</playground>
