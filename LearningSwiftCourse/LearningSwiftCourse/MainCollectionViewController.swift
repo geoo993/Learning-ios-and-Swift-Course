@@ -62,7 +62,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"MovingBallsViewController" : "MovingBallsMain",
                             //"AnagramsViewController": "AnagramsMain"
                             //"ParticleEmittersViewController" : "ParticleEmittersMain",
-                            //"YoutubeHomeNavigationController" : "YoutubeMain",
+                            "YoutubeHomeNavigationController" : "YoutubeMain",
                             //"OnboardingProcessNavigationController" : "OnboardingProcessMain",
                             "ShapesNavigationController" : "ShapesMain",
                            ]

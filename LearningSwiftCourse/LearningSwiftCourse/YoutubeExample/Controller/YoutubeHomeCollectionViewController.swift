@@ -119,6 +119,9 @@ class YoutubeHomeCollectionViewController: UICollectionViewController {
     
     @objc private func moreTapped(_ sender: UIBarButtonItem){
         print("more")
+        dismiss(animated: true) {
+            print("view controller dismissed, now going to home page")
+        }
     }
  
     override func didReceiveMemoryWarning() {
