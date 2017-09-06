@@ -5,8 +5,88 @@ All notable changes to this project will be documented in this file.
 
 ## Master
 
+## [3.6.1](https://github.com/ReactiveX/RxSwift/releases/tag/3.6.1)
 
-## [3.4](https://github.com/ReactiveX/RxSwift/releases/tag/3.4) (Xcode 8.3.1 / Swift 3.1 compatible)
+#### Anomalies
+
+* Fixes compilation issue with Xcode 9b3. #1341
+* Fixes issues with `andThen` operator. #1347
+* Improves locking behavior of `merge` and `switch` operators. #1344
+
+## [3.6.0](https://github.com/ReactiveX/RxSwift/releases/tag/3.6.0)
+
+* Adds `timeout` operator to `PrimitiveSequence` (`Single`, `Maybe`, `Observable`)
+* Adds `delay` operator to `SharedSequence`.
+* Adds `andThen` operator to `Completeable`.
+* Adds `concat` operator to `Completeable`.
+* Adds `RxPickerViewDataSourceType`
+* Adds `UIPickerView` extensions:
+    * `modelSelected`
+    * `itemTitles`
+    * `itemAttributedTitles`
+    * `items`
+* Adds `UITableView` extensions:
+    * `modelDeleted`
+* Adds `UICollectionView` extensions:
+    * `itemHighlighted`
+    * `itemUnhighlighted`
+    * `willDisplayCell`
+    * `didEndDisplayingCell`
+    * `willDisplaySupplementaryView`
+    * `didEndDisplayingSupplementaryView`
+* Adds `UIScrollView` extensions:
+    * `willBeginDecelerating`
+    * `willBeginDragging`
+    * `willBeginZooming`
+    * `didEndZooming`
+
+#### Anomalies
+
+* Fixes deadlock anomaly in `shareReplayWhileLatest`. #1323
+* Removes duplicated events swallowing in `NSControl` on macOS.
+
+## [3.5.0](https://github.com/ReactiveX/RxSwift/releases/tag/3.5.0)
+
+* Adds `from` operator on "SharedSequence"
+* Adds `concat` operator on "Completable"
+* Adds `merge` operator on "Completable"
+* Adds `using` operator on "PrimitiveSequence"
+* Adds `concatMap` operator.
+* Adds `share(replay:scope:)` operator.
+* Adds `multicast(makeSubject:)` operator.
+* Adds `UIButton.image(for:)` extension.
+* Adds `UIButton.backgroundImage(for:)` extension.
+* fixes typos
+
+#### Anomalies
+
+* Improves reentrancy and synchronization checks.
+* Issues with `share()` and `shareReplay(_:)`. #1111
+* `.share()` inconsistent in behavior. #1242
+* Fixes issues with `Driver` sometimes sending initial element async. #1253
+
+## [3.4.1](https://github.com/ReactiveX/RxSwift/releases/tag/3.4.1) (Xcode 8.3.1 / Swift 3.1 compatible)
+
+* Adds `UINavigationController` delegate proxy and extensions:
+    * `willShow`
+    * `didShow`
+* Deprecates `TestScheduler.start(_:create:)` in favor of `TestScheduler.start(disposed:create:)`.
+* Deprecates `TestScheduler.start(_:subscribed:disposed:create:)` in favor of `TestScheduler.start(created:subscribed:disposed:create:)`.
+
+#### Anomalies
+
+* Fixes observable sequence completion in case of empty arrays for `combineLatest` and `zip`. #1205
+* Fixes array version of `merge` operator completing immediately in case one of the observable sequences is empty. #1221
+* Adds RxTest to SPM. #1215
+* Adds tuple version of operator `SharedSequence.zip` (collection).
+* Adds tuple version of operator `SharedSequence.zip`.
+* Adds tuple version of operator `SharedSequence.combineLatest` (collection).
+* Adds tuple version of operator `SharedSequence.combineLatest`.
+* Adds missing `trimOutput` parameter to `SharedSequence.debug`.
+* Makes `RxImagePickerDelegateProxy` subclass of `RxNavigationControllerDelegateProxy`.
+
+
+## [3.4.0](https://github.com/ReactiveX/RxSwift/releases/tag/3.4.0) (Xcode 8.3.1 / Swift 3.1 compatible)
 
 * Xcode 8.3.1 / Swift 3.1 compatibility.
 * Add subscription closures for Single, Maybe and Completable (`onSuccess`, `onError`, `onCompleted`).
@@ -14,7 +94,6 @@ All notable changes to this project will be documented in this file.
 * Deprecates `bindTo` in favor of `bind(to:)`.
 * Adds [`materialize`](http://reactivex.io/documentation/operators/materialize-dematerialize.html) operator
 * Adds [`dematerialize`](http://reactivex.io/documentation/operators/materialize-dematerialize.html) operator
-* Renames units to traits.
 * Adds `latest` parameter to `SharedSequence.throttle` operator.
 * Adds `debug` operator to `PrimitiveSequence`.
 

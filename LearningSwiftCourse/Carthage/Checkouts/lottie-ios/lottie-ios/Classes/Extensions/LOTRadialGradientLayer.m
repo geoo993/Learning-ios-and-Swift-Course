@@ -29,8 +29,12 @@
 }
 
 - (id)actionForKey:(NSString *)key {
-  if (self.actions[key]) {
-    return self.actions[key];
+  id action = self.actions[key];
+  if (action) {
+    if (action == [NSNull null]) {
+      return nil;
+    }
+    return action;
   }
   
   if ([key isEqualToString:@"startPoint"] ||
