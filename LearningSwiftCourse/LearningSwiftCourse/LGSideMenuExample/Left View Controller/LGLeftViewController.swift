@@ -13,7 +13,11 @@ class LGLeftViewController: UITableViewController {
                                "News",
                                "Articles",
                                "Video",
-                               "Music"]
+                               "Music",      
+                               "Dismiss",
+        
+        
+    ]
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +81,12 @@ class LGLeftViewController: UITableViewController {
             // Rarely you can get some visual bugs when you change view hierarchy and toggle side views in the same iteration
             // You can use delay to avoid this and probably other unexpected visual bugs
             mainViewController.hideLeftView(animated: true, delay: 0.0, completionHandler: nil)
+        }
+        else if indexPath.row == 9 {
+        //Mark: - Dismiss controller
+            dismiss(animated: true) { 
+                print("view controller dismissed, now going to home page")
+            }
         }
         else {
             let viewController = UIViewController()

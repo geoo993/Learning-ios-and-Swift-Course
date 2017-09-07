@@ -66,6 +66,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"OnboardingProcessNavigationController" : "OnboardingProcessMain",
                             //"ShapesNavigationController" : "ShapesMain",
                             "LGMainMenuViewController" : "LGMain",
+                            "CompassNavigationController" : "CompassMain",
                            ]
     
     //Mark: - Collection view 

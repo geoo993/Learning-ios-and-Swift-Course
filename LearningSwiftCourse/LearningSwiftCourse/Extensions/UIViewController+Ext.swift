@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Compass
 
 public extension UIViewController {
 //    var controllerAppDelegate : AppDelegate? {
@@ -16,6 +17,8 @@ public extension UIViewController {
     func disableNavBackButton(){
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = nil
+        //self.navigationItem.setLeftBarButton(nil, animated: true)
+        //self.navigationItem.leftBarButtonItems = []
     }
     
     func addMenuButton(with target: Any?, selector: Selector?){
@@ -38,6 +41,7 @@ public extension UIViewController {
         //let menu1 = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: selector)
         //let menu2 = UIBarButtonItem(image: image, style: .plain, target: target, action: selector  )
         //navigationItem.rightBarButtonItem = menu2
+
     }
     
 }

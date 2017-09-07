@@ -66,6 +66,15 @@
 		C767866F1EF915E9005C159F /* BBCiPlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767866E1EF915E9005C159F /* BBCiPlayerTableViewController.swift */; };
 		C767868D1EF91600005C159F /* BBCiPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767868C1EF91600005C159F /* BBCiPlayerTableViewCell.swift */; };
 		C767868F1EF91C3F005C159F /* BBCiPlayerTableviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767868E1EF91C3F005C159F /* BBCiPlayerTableviewCollectionViewCell.swift */; };
+		C7694E871F616762008034D5 /* CompassMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7694E3C1F61674B008034D5 /* CompassMain.storyboard */; };
+		C7694E881F616767008034D5 /* CompassBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7694E841F616757008034D5 /* CompassBaseViewController.swift */; };
+		C7694E891F616767008034D5 /* CompassBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7694E811F616757008034D5 /* CompassBookViewController.swift */; };
+		C7694E8A1F616767008034D5 /* CompassConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7694E831F616757008034D5 /* CompassConfirmViewController.swift */; };
+		C7694E8B1F616767008034D5 /* CompassLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7694E861F616757008034D5 /* CompassLoginViewController.swift */; };
+		C7694E8C1F616767008034D5 /* CompassLogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7694E801F616757008034D5 /* CompassLogoutViewController.swift */; };
+		C7694E8D1F616767008034D5 /* CompassNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7694E821F616757008034D5 /* CompassNavigationController.swift */; };
+		C7694E8E1F616767008034D5 /* CompassProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7694E851F616757008034D5 /* CompassProfileViewController.swift */; };
+		C7694E8F1F616767008034D5 /* CompassRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7694E7F1F616757008034D5 /* CompassRootViewController.swift */; };
 		C769A5DA1F6152ED0095FE7A /* BridgingHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = C769A5D91F6152CB0095FE7A /* BridgingHeader.h */; };
 		C769A5DB1F6152FC0095FE7A /* LGMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C769A5D81F6152CB0095FE7A /* LGMain.storyboard */; };
 		C769A5DC1F6153060095FE7A /* LGMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C769A5D71F6152BC0095FE7A /* LGMainMenuViewController.swift */; };
@@ -1243,6 +1252,15 @@
 		C767866E1EF915E9005C159F /* BBCiPlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerTableViewController.swift; sourceTree = "<group>"; };
 		C767868C1EF91600005C159F /* BBCiPlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerTableViewCell.swift; sourceTree = "<group>"; };
 		C767868E1EF91C3F005C159F /* BBCiPlayerTableviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerTableviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7694E3C1F61674B008034D5 /* CompassMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompassMain.storyboard; sourceTree = "<group>"; };
+		C7694E7F1F616757008034D5 /* CompassRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassRootViewController.swift; sourceTree = "<group>"; };
+		C7694E801F616757008034D5 /* CompassLogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassLogoutViewController.swift; sourceTree = "<group>"; };
+		C7694E811F616757008034D5 /* CompassBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassBookViewController.swift; sourceTree = "<group>"; };
+		C7694E821F616757008034D5 /* CompassNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassNavigationController.swift; sourceTree = "<group>"; };
+		C7694E831F616757008034D5 /* CompassConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassConfirmViewController.swift; sourceTree = "<group>"; };
+		C7694E841F616757008034D5 /* CompassBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassBaseViewController.swift; sourceTree = "<group>"; };
+		C7694E851F616757008034D5 /* CompassProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassProfileViewController.swift; sourceTree = "<group>"; };
+		C7694E861F616757008034D5 /* CompassLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassLoginViewController.swift; sourceTree = "<group>"; };
 		C769A58F1F6152A60095FE7A /* LGLeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGLeftViewController.swift; sourceTree = "<group>"; };
 		C769A5901F6152A60095FE7A /* LGLeftViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGLeftViewCell.swift; sourceTree = "<group>"; };
 		C769A5D31F6152AD0095FE7A /* LGRightViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGRightViewCell.swift; sourceTree = "<group>"; };
@@ -1767,6 +1785,7 @@
 				C7BC88631F07F36E0034B11C /* CarthageExample */,
 				C7C2AE381EF6CA80004F257A /* ColorsExample */,
 				C7C2AE951EF6CB63004F257A /* ConstraintsPack */,
+				C7694DE81F6166D4008034D5 /* CompassRouterExample */,
 				C7FCEDB81F5EF2B1007FACE4 /* CoreGraphicsShapesExample */,
 				C79DA43B1F122A5400A92704 /* DynamicScrollViewExample */,
 				C7C2AECB1EF6CB63004F257A /* DraggableVerticalMenusExample */,
@@ -1971,6 +1990,30 @@
 				C76786611EF90DE1005C159F /* BBCiPlayerMain.storyboard */,
 			);
 			path = BBCiPlayerExample;
+			sourceTree = "<group>";
+		};
+		C7694DE81F6166D4008034D5 /* CompassRouterExample */ = {
+			isa = PBXGroup;
+			children = (
+				C7694E2B1F6166EE008034D5 /* Controllers */,
+				C7694E3C1F61674B008034D5 /* CompassMain.storyboard */,
+			);
+			path = CompassRouterExample;
+			sourceTree = "<group>";
+		};
+		C7694E2B1F6166EE008034D5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C7694E841F616757008034D5 /* CompassBaseViewController.swift */,
+				C7694E811F616757008034D5 /* CompassBookViewController.swift */,
+				C7694E831F616757008034D5 /* CompassConfirmViewController.swift */,
+				C7694E861F616757008034D5 /* CompassLoginViewController.swift */,
+				C7694E801F616757008034D5 /* CompassLogoutViewController.swift */,
+				C7694E821F616757008034D5 /* CompassNavigationController.swift */,
+				C7694E851F616757008034D5 /* CompassProfileViewController.swift */,
+				C7694E7F1F616757008034D5 /* CompassRootViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		C769A5381F6150420095FE7A /* LGSideMenuExample */ = {
@@ -4070,6 +4113,7 @@
 				C7C2AF421EF6CCCE004F257A /* PopUpMain.storyboard in Resources */,
 				C71678E21EFF19B100355E41 /* SimpleSpringDrawerMain.storyboard in Resources */,
 				C72AF49C1F07CCB80023F014 /* ImagePickerCoreMLViewMain.storyboard in Resources */,
+				C7694E871F616762008034D5 /* CompassMain.storyboard in Resources */,
 				C7BA59341F26A52B00E66C53 /* DucTranDevelopersAcademyAssets.xcassets in Resources */,
 				C7C2AF381EF6CCA9004F257A /* PageViewMain.storyboard in Resources */,
 				C73585811F09259000B33B55 /* ButtonWithImageAndTextMain.storyboard in Resources */,
@@ -4230,6 +4274,7 @@
 				C7A3A58F1F44D42F00A89BE8 /* MicrophonePermisionsViewController.swift in Sources */,
 				C7C2AF2C1EF6CC97004F257A /* MultiSidedBarMenuControllerLeft.swift in Sources */,
 				C72AF49D1F07CCBA0023F014 /* Inceptionv3.mlmodel in Sources */,
+				C7694E8F1F616767008034D5 /* CompassRootViewController.swift in Sources */,
 				C7A3A5951F44D46500A89BE8 /* BookModel.swift in Sources */,
 				C7B6A8241F44DE3A00EEB206 /* CirclePieIndicatorView.swift in Sources */,
 				C7CF31F41EF6B33400114EC1 /* BasicCoreMLwithImagesViewController.swift in Sources */,
@@ -4307,6 +4352,7 @@
 				C70C154F1F0571BA00CE9220 /* AnimatableSideMenuViewController.swift in Sources */,
 				C7B6A82F1F44DE3A00EEB206 /* MIBadgeButton.swift in Sources */,
 				C7C2AEFF1EF6CC17004F257A /* AirbnbTableViewController.swift in Sources */,
+				C7694E8C1F616767008034D5 /* CompassLogoutViewController.swift in Sources */,
 				C7C2AF261EF6CC88004F257A /* InspirationalFilms.swift in Sources */,
 				C7C2AF6C1EF6CD64004F257A /* MetricViewController.swift in Sources */,
 				C7A3A5921F44D42F00A89BE8 /* OnboardingProcessWalkthroughViewController.swift in Sources */,
@@ -4330,11 +4376,13 @@
 				C7C2AF671EF6CD35004F257A /* StretchyHeaderTableViewCell.swift in Sources */,
 				C7B6A8301F44DE3A00EEB206 /* MyReadingMenuBar.swift in Sources */,
 				C76F04C61EF500370090F71B /* SliderMenuDrawerMenuViewController.swift in Sources */,
+				C7694E8D1F616767008034D5 /* CompassNavigationController.swift in Sources */,
 				C7C2AF441EF6CCCE004F257A /* PopUpViewController.swift in Sources */,
 				C72AF49F1F07CD3C0023F014 /* Resnet50.mlmodel in Sources */,
 				C7C2AF781EF6CD7E004F257A /* MediaType.swift in Sources */,
 				C7919AFF1F1B8F7500913F15 /* MovingBallsViewController.swift in Sources */,
 				C7C2AF711EF6CD70004F257A /* ChosenMediaDetailedViewController.swift in Sources */,
+				C7694E8E1F616767008034D5 /* CompassProfileViewController.swift in Sources */,
 				C7C2AF801EF6CD8A004F257A /* TopMenuTableViewCell.swift in Sources */,
 				C7C2AE3E1EF6CA93004F257A /* ColorsViewController.swift in Sources */,
 				C7C2AF831EF6CD91004F257A /* CustomInteractionController.swift in Sources */,
@@ -4363,6 +4411,7 @@
 				C7C2AF751EF6CD79004F257A /* TableViewNavigationViewController.swift in Sources */,
 				C72AF49B1F07CCB30023F014 /* ImagePickerCoreMLViewController.swift in Sources */,
 				C769A5DC1F6153060095FE7A /* LGMainMenuViewController.swift in Sources */,
+				C7694E8B1F616767008034D5 /* CompassLoginViewController.swift in Sources */,
 				C703771E1EF551C0002E7D9B /* SearchBarViewNavigationController.swift in Sources */,
 				C7BB47601F0B9D2600F463BD /* RadialMenuTextViewController.swift in Sources */,
 				C7C2AF701EF6CD70004F257A /* AddMediaViewController.swift in Sources */,
@@ -4402,6 +4451,7 @@
 				C7B6A83C1F44DE3A00EEB206 /* YoutubeMenuBar.swift in Sources */,
 				C7BE65E41EE2A23E00A05286 /* MainCollectionViewCell.swift in Sources */,
 				C7C2AF851EF6CD91004F257A /* CustomPresentAnimationController.swift in Sources */,
+				C7694E881F616767008034D5 /* CompassBaseViewController.swift in Sources */,
 				C7B6A8221F44DE3A00EEB206 /* AnimatableHamburgerView.swift in Sources */,
 				C7C2AF611EF6CD2A004F257A /* StorySmartiesMenuViewController.swift in Sources */,
 				C78F49881F0849F900FA2275 /* AninmationsWithLottieViewController.swift in Sources */,
@@ -4422,6 +4472,7 @@
 				C7BF534E1F058DC300F01E72 /* BlueSlideView.swift in Sources */,
 				C7C2AF7F1EF6CD8A004F257A /* TopMenuNewsTableViewController.swift in Sources */,
 				C7C2AF071EF6CC46004F257A /* InterestCollectionViewCell.swift in Sources */,
+				C7694E891F616767008034D5 /* CompassBookViewController.swift in Sources */,
 				C7C2AF3A1EF6CCA9004F257A /* WalkthroughZoomViewController.swift in Sources */,
 				C7752A8F1F1D036B007B9DA8 /* GameController.swift in Sources */,
 				C7C2AF791EF6CD7E004F257A /* Product.swift in Sources */,
@@ -4433,6 +4484,7 @@
 				C7FCEDFB1F5EF364007FACE4 /* CounterView.swift in Sources */,
 				C703771A1EF5471E002E7D9B /* SearchBarTableViewController.swift in Sources */,
 				C7B6A8201F44DE3A00EEB206 /* AddItemView.swift in Sources */,
+				C7694E8A1F616767008034D5 /* CompassConfirmViewController.swift in Sources */,
 				C7C2AF311EF6CC97004F257A /* PhotoViewController.swift in Sources */,
 				C7BA593A1F26A52B00E66C53 /* CourseTableViewCell.swift in Sources */,
 			);
