@@ -29,6 +29,8 @@ class AnimatableDetailViewController: UIViewController {
         hamburgerView = AnimatableHamburgerView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         hamburgerView!.addGestureRecognizer(tapGestureRecognizer)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: hamburgerView!)
+        
+        
     }
   
     @objc func hamburgerViewTapped() {
