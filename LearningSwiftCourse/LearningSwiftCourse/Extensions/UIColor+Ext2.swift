@@ -171,6 +171,9 @@ public extension UIColor {
     public static var lightSlateGray : UIColor { return  UIColor(hex: 0x778899)}
     public static var slateGray : UIColor { return  UIColor(hex: 0x708090)}
     public static var darkSlateGray : UIColor { return  UIColor(hex: 0x2F4F4F)}
+    public static var searchBarColor : UIColor {
+        return UIColor.init(red: 197/255, green: 187/255, blue: 187/255, alpha: 1.0)
+    }
     
     public static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
@@ -291,15 +294,7 @@ public extension UIColor {
         
         return nil
     }
-    
-    static func color(_ red: Int, green: Int, blue: Int, alpha: Float) -> UIColor {
-        return UIColor(
-            colorLiteralRed: Float(1.0) / Float(255.0) * Float(red),
-            green: Float(1.0) / Float(255.0) * Float(green),
-            blue: Float(1.0) / Float(255.0) * Float(blue),
-            alpha: alpha)
-    }
-    
+
     public convenience init(red: Int, green: Int, blue: Int, a: CGFloat = 1.0) {
         self.init(
             red: CGFloat(red) / 255.0,

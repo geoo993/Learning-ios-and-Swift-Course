@@ -28,14 +28,14 @@ class AppCoordinator {
     
     func setupNavigationBar(){
         navigator.isNavigationBarHidden = true
-        navigator.navigationBar.titleTextAttributes = [NSAttributedStringKey.font.rawValue: UIFont.init(name:"HelveticaNeue-Bold", size: 20.0) ?? UIFont.boldSystemFont(ofSize:20.0)]
+        navigator.navigationBar.titleTextAttributes = [NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont.init(name:"HelveticaNeue-Bold", size: 20.0) ?? UIFont.boldSystemFont(ofSize:20.0)]
     }
     
     let bag = DisposeBag()
     
     func start() -> Observable<Void> {
         
-        return Observable.just(Any)
+        return Observable.just((Any).self)
         .flatMap({ _ -> Observable<String> in 
         
             let vc = self.storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController

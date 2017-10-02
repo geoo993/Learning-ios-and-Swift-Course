@@ -10,6 +10,15 @@ import Foundation
 import UIKit
 
 public extension UITextField {
+    
+    public func cornerRadius(with color : UIColor, value: CGFloat) {
+        self.layer.cornerRadius = value
+        self.layer.borderWidth = 1.0
+        self.layer.borderColor = color.cgColor
+        self.layer.masksToBounds = true
+        self.clipsToBounds = true
+    }
+    
     public var placeHolderColor: UIColor? {
         get {
             return self.placeHolderColor

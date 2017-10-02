@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Compass
 
 public extension UIViewController {
 //    var controllerAppDelegate : AppDelegate? {

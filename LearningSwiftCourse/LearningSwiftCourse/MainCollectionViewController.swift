@@ -67,6 +67,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"ShapesNavigationController" : "ShapesMain",
                             "LGMainMenuViewController" : "LGMain",
                             "CompassNavigationController" : "CompassMain",
+                            "DogsNavigationController" : "DogsMain",
                            ]
     
     //Mark: - Collection view 

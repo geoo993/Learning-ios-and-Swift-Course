@@ -185,7 +185,7 @@ public extension UIView {
             let xPos = -(cropBy/half)
             let yPos = -(cropBy/half)
             let boundingRect = CGRect(x: xPos, y:yPos, width:imageWidth + cropBy, height: imageHeight + cropBy)
-            let cropped:CIImage = resultImage.cropping(to: boundingRect)
+            let cropped:CIImage = resultImage.cropped(to: boundingRect)
             blurredImage = UIImage(ciImage: cropped)
             return blurredImage
             

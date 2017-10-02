@@ -222,6 +222,13 @@ class LGMainMenuViewController: LGSideMenuController {
         
     }
     
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "right" {
+            let rightViewController = segue.destination as! LGRightViewController
+            rightViewController.mainViewController = self
+        }
+    }
     
     deinit {
         print("MainViewController deinitialized")

@@ -5,6 +5,8 @@
 
 class LGRightViewController: UITableViewController {
     
+    public var mainViewController : LGMainMenuViewController?
+    
     private let titlesArray = ["Open Left View",
                                "",
                                "1",
@@ -60,8 +62,9 @@ class LGRightViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let mainViewController = UIApplication.shared.delegate!.window!!.rootViewController! as! LGMainMenuViewController
-
+        //let mainViewController = UIApplication.shared.delegate!.window!!.rootViewController! as! LGMainMenuViewController
+        guard let mainViewController = self.mainViewController else { return }
+        
         if indexPath.row == 0 {
             if mainViewController.isRightViewAlwaysVisibleForCurrentOrientation {
                 mainViewController.showLeftView(animated: true, completionHandler: nil)

@@ -24,7 +24,7 @@ class OnboardingCoordinator {
     
     func start() -> Observable<Void> {
         
-        return Observable.just(Any)
+        return Observable.just((Any).self)
         .flatMap { _ -> Observable<Void> in 
             
             

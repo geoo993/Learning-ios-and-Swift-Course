@@ -398,6 +398,12 @@
 		C7DD10911F0AFF3A00C7C074 /* RadialMenuMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD10901F0AFF3200C7C074 /* RadialMenuMain.storyboard */; };
 		C7E08ECC1F44691B00207D1C /* Cosmos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E08E9E1F4468F300207D1C /* Cosmos.framework */; };
 		C7E08ECD1F44691B00207D1C /* Cosmos.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7E08E9E1F4468F300207D1C /* Cosmos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7E35BBF1F82D1D30045BAF6 /* DogsResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E35B781F82D1D20045BAF6 /* DogsResultsTableViewCell.swift */; };
+		C7E35BC01F82D1D30045BAF6 /* DogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E35BBB1F82D1D20045BAF6 /* DogsTableViewController.swift */; };
+		C7E35BC11F82D1D30045BAF6 /* DogsResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E35BBC1F82D1D20045BAF6 /* DogsResultsTableViewController.swift */; };
+		C7E35BC21F82D1D30045BAF6 /* DogsMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E35BBD1F82D1D20045BAF6 /* DogsMain.storyboard */; };
+		C7E35BC31F82D1D30045BAF6 /* DogsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E35BBE1F82D1D20045BAF6 /* DogsTableViewCell.swift */; };
+		C7E35BC51F82D3F10045BAF6 /* DogsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E35BC41F82D3F10045BAF6 /* DogsNavigationController.swift */; };
 		C7E774041F01542600440E05 /* BBCiPlayerStretchyHeaderMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E774031F01542600440E05 /* BBCiPlayerStretchyHeaderMain.storyboard */; };
 		C7EE7BE01EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7BDF1EF50AB400DF84B3 /* SliderMenuDrawerNavigationController.swift */; };
 		C7EE7BFE1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE7BFD1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift */; };
@@ -1595,6 +1601,12 @@
 		C7DD106E1F0AFE8200C7C074 /* PureLayout.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PureLayout.xcodeproj; path = Carthage/Checkouts/PureLayout/PureLayout/PureLayout.xcodeproj; sourceTree = "<group>"; };
 		C7DD10901F0AFF3200C7C074 /* RadialMenuMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RadialMenuMain.storyboard; sourceTree = "<group>"; };
 		C7E08E861F4468F200207D1C /* Cosmos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cosmos.xcodeproj; path = Carthage/Checkouts/Cosmos/Cosmos.xcodeproj; sourceTree = "<group>"; };
+		C7E35B781F82D1D20045BAF6 /* DogsResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogsResultsTableViewCell.swift; sourceTree = "<group>"; };
+		C7E35BBB1F82D1D20045BAF6 /* DogsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogsTableViewController.swift; sourceTree = "<group>"; };
+		C7E35BBC1F82D1D20045BAF6 /* DogsResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogsResultsTableViewController.swift; sourceTree = "<group>"; };
+		C7E35BBD1F82D1D20045BAF6 /* DogsMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogsMain.storyboard; sourceTree = "<group>"; };
+		C7E35BBE1F82D1D20045BAF6 /* DogsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogsTableViewCell.swift; sourceTree = "<group>"; };
+		C7E35BC41F82D3F10045BAF6 /* DogsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsNavigationController.swift; sourceTree = "<group>"; };
 		C7E3886E1ED3055F000DCE15 /* LearningSwiftCourse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearningSwiftCourse.entitlements; sourceTree = "<group>"; };
 		C7E774031F01542600440E05 /* BBCiPlayerStretchyHeaderMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BBCiPlayerStretchyHeaderMain.storyboard; sourceTree = "<group>"; };
 		C7E774051F01560E00440E05 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
@@ -1787,8 +1799,9 @@
 				C7C2AE951EF6CB63004F257A /* ConstraintsPack */,
 				C7694DE81F6166D4008034D5 /* CompassRouterExample */,
 				C7FCEDB81F5EF2B1007FACE4 /* CoreGraphicsShapesExample */,
-				C79DA43B1F122A5400A92704 /* DynamicScrollViewExample */,
+				C7E35B671F82D04F0045BAF6 /* DogsTableView */,
 				C7C2AECB1EF6CB63004F257A /* DraggableVerticalMenusExample */,
+				C79DA43B1F122A5400A92704 /* DynamicScrollViewExample */,
 				C7C2AE571EF6CB62004F257A /* Extensions */,
 				C7C2AE541EF6CB62004F257A /* ImageCropperExample */,
 				C72AF47B1F07CC9E0023F014 /* ImagePickerCoreMLExample */,
@@ -3155,6 +3168,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C7E35B671F82D04F0045BAF6 /* DogsTableView */ = {
+			isa = PBXGroup;
+			children = (
+				C7E35BBD1F82D1D20045BAF6 /* DogsMain.storyboard */,
+				C7E35B781F82D1D20045BAF6 /* DogsResultsTableViewCell.swift */,
+				C7E35BBC1F82D1D20045BAF6 /* DogsResultsTableViewController.swift */,
+				C7E35BBE1F82D1D20045BAF6 /* DogsTableViewCell.swift */,
+				C7E35BBB1F82D1D20045BAF6 /* DogsTableViewController.swift */,
+				C7E35BC41F82D3F10045BAF6 /* DogsNavigationController.swift */,
+			);
+			path = DogsTableView;
+			sourceTree = "<group>";
+		};
 		C7E3886B1ED3055F000DCE15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3393,7 +3419,6 @@
 				TargetAttributes = {
 					C72E27A01E9ED9EB0064E01B = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 4Q93294747;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -3421,7 +3446,6 @@
 					};
 					C7D3C0F31EF2BB550042E90A = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 4Q93294747;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -4120,6 +4144,7 @@
 				C7AE48901EA5327300C2096E /* Main.storyboard in Resources */,
 				C7C2AF4C1EF6CCD7004F257A /* slide18.gif in Resources */,
 				C7752A8B1F1D033A007B9DA8 /* level3.plist in Resources */,
+				C7E35BC21F82D1D30045BAF6 /* DogsMain.storyboard in Resources */,
 				C7752A831F1D032A007B9DA8 /* slot.png in Resources */,
 				C7752A861F1D032A007B9DA8 /* tile@2x.png in Resources */,
 				C70F09E91F084EDE0049BACC /* buttonOn.json in Resources */,
@@ -4281,6 +4306,7 @@
 				C7A3A5861F44D42200A89BE8 /* MyBookViewController.swift in Sources */,
 				C7C2AF721EF6CD70004F257A /* ChosenMediaTableViewController.swift in Sources */,
 				C7C2AF2A1EF6CC8C004F257A /* InspirationalFilmsMediaScrollView.swift in Sources */,
+				C7E35BC51F82D3F10045BAF6 /* DogsNavigationController.swift in Sources */,
 				C7752A911F1D0378007B9DA8 /* Level.swift in Sources */,
 				C7C2AF661EF6CD35004F257A /* StretchyHeaderMenuTableViewController.swift in Sources */,
 				C7C2AEFE1EF6CC17004F257A /* AirbnbPlacesTableViewCell.swift in Sources */,
@@ -4294,6 +4320,7 @@
 				C7BF534A1F058D9200F01E72 /* RedSlideView.swift in Sources */,
 				C7B6A82B1F44DE3A00EEB206 /* ImageScrollView.swift in Sources */,
 				C7C2AF201EF6CC71004F257A /* ImageCropperViewController.swift in Sources */,
+				C7E35BBF1F82D1D30045BAF6 /* DogsResultsTableViewCell.swift in Sources */,
 				C7C2AF291EF6CC8C004F257A /* InspirationalFilmsLabelsScrollView.swift in Sources */,
 				C767868F1EF91C3F005C159F /* BBCiPlayerTableviewCollectionViewCell.swift in Sources */,
 				C7F33C4A1EF92E9C0096E372 /* BBCiPlayerVideosItems.swift in Sources */,
@@ -4324,6 +4351,7 @@
 				C7DD104E1F0AFB8B00C7C074 /* RadialSubMenu.swift in Sources */,
 				C7CF31D41EF6B31E00114EC1 /* GoogLeNetPlaces.mlmodel in Sources */,
 				C769A5DD1F61530B0095FE7A /* LGNavigationController.swift in Sources */,
+				C7E35BC01F82D1D30045BAF6 /* DogsTableViewController.swift in Sources */,
 				C7C2AE3C1EF6CA8D004F257A /* ColorChangeViewController.swift in Sources */,
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
 				C7CEB7A51F06FD9000CC054B /* PieChartViewViewController.swift in Sources */,
@@ -4338,6 +4366,7 @@
 				C7F044B31F5EF5EC00094122 /* CounterViewController.swift in Sources */,
 				C7C2AF3F1EF6CCC3004F257A /* ParallaxHeaderTableViewCell.swift in Sources */,
 				C7BA593F1F26A52B00E66C53 /* Program.swift in Sources */,
+				C7E35BC11F82D1D30045BAF6 /* DogsResultsTableViewController.swift in Sources */,
 				C7B6A8391F44DE3A00EEB206 /* SlideShowView.swift in Sources */,
 				C7C2AF621EF6CD2D004F257A /* StorySmartiesBookShelfCollectionViewCell.swift in Sources */,
 				C7C2AF761EF6CD7E004F257A /* MediaLayers.swift in Sources */,
@@ -4414,6 +4443,7 @@
 				C7694E8B1F616767008034D5 /* CompassLoginViewController.swift in Sources */,
 				C703771E1EF551C0002E7D9B /* SearchBarViewNavigationController.swift in Sources */,
 				C7BB47601F0B9D2600F463BD /* RadialMenuTextViewController.swift in Sources */,
+				C7E35BC31F82D1D30045BAF6 /* DogsTableViewCell.swift in Sources */,
 				C7C2AF701EF6CD70004F257A /* AddMediaViewController.swift in Sources */,
 				C7C2AF351EF6CCA1004F257A /* RedViewController.swift in Sources */,
 				C7B6A8381F44DE3A00EEB206 /* SimpleDraggableView.swift in Sources */,
@@ -4783,12 +4813,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 4Q93294747;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LearningSwiftCourse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.lexilabs.LearningSwiftCourse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4807,12 +4838,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 4Q93294747;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LearningSwiftCourse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.lexilabs.LearningSwiftCourse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4892,7 +4924,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4Q93294747;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4915,7 +4947,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4Q93294747;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
