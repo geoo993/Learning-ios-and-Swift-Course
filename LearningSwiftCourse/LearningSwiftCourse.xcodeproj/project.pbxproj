@@ -141,6 +141,7 @@
 		C7919B011F1B8F9000913F15 /* MovingBallsMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7919B001F1B8F9000913F15 /* MovingBallsMain.storyboard */; };
 		C79DA46F1F122A7700A92704 /* DynamicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DA46E1F122A7700A92704 /* DynamicScrollViewController.swift */; };
 		C79DA4711F122A8D00A92704 /* DynamicScrollViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79DA4701F122A8D00A92704 /* DynamicScrollViewMain.storyboard */; };
+		C79EFA8E1F83854B00438247 /* UITableViewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79EFA4B1F83854B00438247 /* UITableViewCell+Ext.swift */; };
 		C7A1A2171F079AF2005CF910 /* PieChartWithSubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */; };
 		C7A1A2351F07B4F7005CF910 /* PieChartViewWithBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */; };
 		C7A3A5851F44D3E500A89BE8 /* OnboardingProcessMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A3A5841F44D3D600A89BE8 /* OnboardingProcessMain.storyboard */; };
@@ -1344,6 +1345,7 @@
 		C79798871F60092C00D5841E /* Rx.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Rx.playground; sourceTree = "<group>"; };
 		C79DA46E1F122A7700A92704 /* DynamicScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicScrollViewController.swift; sourceTree = "<group>"; };
 		C79DA4701F122A8D00A92704 /* DynamicScrollViewMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DynamicScrollViewMain.storyboard; sourceTree = "<group>"; };
+		C79EFA4B1F83854B00438247 /* UITableViewCell+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Ext.swift"; sourceTree = "<group>"; };
 		C7A1A2161F079AF2005CF910 /* PieChartWithSubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartWithSubData.swift; sourceTree = "<group>"; };
 		C7A1A2341F07B4F7005CF910 /* PieChartViewWithBezierPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewWithBezierPath.swift; sourceTree = "<group>"; };
 		C7A29BF91F0E4B4700C2D9E6 /* Metal2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metal2.swift; sourceTree = "<group>"; };
@@ -2711,6 +2713,7 @@
 				C7C2AE621EF6CB62004F257A /* UIImageView+Ext.swift */,
 				C7C2AE641EF6CB62004F257A /* UISearchBar+Ext.swift */,
 				C7C2AE651EF6CB62004F257A /* UITextField+Ext.swift */,
+				C79EFA4B1F83854B00438247 /* UITableViewCell+Ext.swift */,
 				C7C2AE661EF6CB62004F257A /* UIView+Ext.swift */,
 				C7C2AE671EF6CB62004F257A /* UIWindow+Ext.swift */,
 				C7349DEB1EFC226B00B99AE6 /* UINavigationBar+Ext.swift */,
@@ -4351,6 +4354,7 @@
 				C7DD104E1F0AFB8B00C7C074 /* RadialSubMenu.swift in Sources */,
 				C7CF31D41EF6B31E00114EC1 /* GoogLeNetPlaces.mlmodel in Sources */,
 				C769A5DD1F61530B0095FE7A /* LGNavigationController.swift in Sources */,
+				C79EFA8E1F83854B00438247 /* UITableViewCell+Ext.swift in Sources */,
 				C7E35BC01F82D1D30045BAF6 /* DogsTableViewController.swift in Sources */,
 				C7C2AE3C1EF6CA8D004F257A /* ColorChangeViewController.swift in Sources */,
 				C7AE48921EA5328B00C2096E /* MainViewController.swift in Sources */,
