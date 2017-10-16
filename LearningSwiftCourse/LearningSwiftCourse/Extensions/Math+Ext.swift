@@ -20,6 +20,7 @@ struct Number {
     }()
 }
 
+
 public extension Int {
     
     public var degreesToRadians: Double { return Double(self) * .pi / 180 }
@@ -68,6 +69,10 @@ public extension Float {
 }
 
 public extension CGFloat {
+    
+    public var f: Double {
+        return Double(self)
+    }
     
     public static func overrideHeightSizeF(size:CGFloat) -> CGFloat {
         let bounds = UIScreen.main.bounds

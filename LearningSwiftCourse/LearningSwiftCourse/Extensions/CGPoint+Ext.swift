@@ -9,6 +9,16 @@
 import Foundation
 
 public extension CGPoint {
+    
+    public func RotatePointAboutOrigin( angle: CGFloat) -> CGPoint
+    {
+        // https://stackoverflow.com/questions/1595285/what-is-the-best-way-to-rotate-a-cgpoint-on-a-grid
+        let s : CGFloat = CGFloat(sinf(Float(angle)))
+        let c : CGFloat = CGFloat(cosf(Float(angle)))
+        return CGPoint(x: c * self.x - s * self.y, y: s * self.x + c * self.y);
+    }
+    
+    
     /**
      * Creates a new CGPoint given a CGVector.
      */

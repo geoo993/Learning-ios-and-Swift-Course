@@ -129,6 +129,13 @@
 		C7752A981F1D037D007B9DA8 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7752A3D1F1CFE25007B9DA8 /* TileView.swift */; };
 		C7752A9B1F1D0489007B9DA8 /* CAEmitterCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7752A991F1D041B007B9DA8 /* CAEmitterCell+Ext.swift */; };
 		C778EDED1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778EDEC1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift */; };
+		C779877C1F952FCC00A524BF /* BezierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77987361F952FCA00A524BF /* BezierView.swift */; };
+		C779877E1F952FCC00A524BF /* BezierCubicCurveAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C779877A1F952FCB00A524BF /* BezierCubicCurveAlgorithm.swift */; };
+		C779877F1F952FCC00A524BF /* ZIgZagScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C779877B1F952FCB00A524BF /* ZIgZagScrollView.swift */; };
+		C77987811F952FF500A524BF /* JourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77987791F952FCB00A524BF /* JourneyView.swift */; };
+		C77987841F95301500A524BF /* ZigZagScrollViewHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77987831F95301400A524BF /* ZigZagScrollViewHomeViewController.swift */; };
+		C77987861F95304200A524BF /* ZigZagScrollViewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77987851F95304200A524BF /* ZigZagScrollViewMain.storyboard */; };
+		C77987871F95315700A524BF /* UIScrollView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C734D8D51F950094007048EA /* UIScrollView+Ext.swift */; };
 		C78D45131F0CEE52009B26A7 /* CircleMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78D44EF1F0CEE43009B26A7 /* CircleMenu.framework */; };
 		C78D45141F0CEE52009B26A7 /* CircleMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C78D44EF1F0CEE43009B26A7 /* CircleMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C78D45191F0CEE8A009B26A7 /* CircleMenuMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78D45181F0CEE8A009B26A7 /* CircleMenuMain.storyboard */; };
@@ -1239,6 +1246,7 @@
 		C7349DEB1EFC226B00B99AE6 /* UINavigationBar+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Ext.swift"; sourceTree = "<group>"; };
 		C7349E091EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentTableViewController.swift; sourceTree = "<group>"; };
 		C7349E0B1EFC2F3A00B99AE6 /* BBCiPlayerContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerContentTableViewCell.swift; sourceTree = "<group>"; };
+		C734D8D51F950094007048EA /* UIScrollView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Ext.swift"; sourceTree = "<group>"; };
 		C73585801F09259000B33B55 /* ButtonWithImageAndTextMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ButtonWithImageAndTextMain.storyboard; sourceTree = "<group>"; };
 		C73585821F0925AD00B33B55 /* ButtonWithImageAndTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithImageAndTextViewController.swift; sourceTree = "<group>"; };
 		C737E9A11F0B893200DAD971 /* MachineLearningForiOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineLearningForiOSViewController.swift; sourceTree = "<group>"; };
@@ -1325,6 +1333,12 @@
 		C7752A451F1CFE25007B9DA8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C7752A991F1D041B007B9DA8 /* CAEmitterCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAEmitterCell+Ext.swift"; sourceTree = "<group>"; };
 		C778EDEC1EFBD1480056E385 /* BBCiPlayerSectionsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCiPlayerSectionsHeaderView.swift; sourceTree = "<group>"; };
+		C77987361F952FCA00A524BF /* BezierView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierView.swift; sourceTree = "<group>"; };
+		C77987791F952FCB00A524BF /* JourneyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyView.swift; sourceTree = "<group>"; };
+		C779877A1F952FCB00A524BF /* BezierCubicCurveAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierCubicCurveAlgorithm.swift; sourceTree = "<group>"; };
+		C779877B1F952FCB00A524BF /* ZIgZagScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZIgZagScrollView.swift; sourceTree = "<group>"; };
+		C77987831F95301400A524BF /* ZigZagScrollViewHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZigZagScrollViewHomeViewController.swift; sourceTree = "<group>"; };
+		C77987851F95304200A524BF /* ZigZagScrollViewMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ZigZagScrollViewMain.storyboard; sourceTree = "<group>"; };
 		C78D44D71F0CEE43009B26A7 /* CircleMenu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CircleMenu.xcodeproj; path = "Carthage/Checkouts/circle-menu/CircleMenu.xcodeproj"; sourceTree = "<group>"; };
 		C78D45181F0CEE8A009B26A7 /* CircleMenuMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CircleMenuMain.storyboard; sourceTree = "<group>"; };
 		C78D451A1F0CEE9A009B26A7 /* CircleMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleMenuViewController.swift; sourceTree = "<group>"; };
@@ -1845,6 +1859,7 @@
 				C7D0DE561F053454000CD3D1 /* UIViewSlidesExample */,
 				C7C0D8451F1E0E7C00929300 /* SoundEffect */,
 				C76F4E191F42F3F200B5CE6F /* YoutubeExample */,
+				C77987821F95301400A524BF /* ZigZagScrollViewExample */,
 				C72E27A41E9ED9EB0064E01B /* AppDelegate.swift */,
 				C7AE48911EA5328B00C2096E /* MainViewController.swift */,
 				C7BE65E11EE2A22900A05286 /* MainCollectionViewController.swift */,
@@ -2272,6 +2287,15 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		C77987821F95301400A524BF /* ZigZagScrollViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				C77987851F95304200A524BF /* ZigZagScrollViewMain.storyboard */,
+				C77987831F95301400A524BF /* ZigZagScrollViewHomeViewController.swift */,
+			);
+			path = ZigZagScrollViewExample;
+			sourceTree = "<group>";
+		};
 		C77E82D51EA25E3B000AC715 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
@@ -2536,6 +2560,8 @@
 			isa = PBXGroup;
 			children = (
 				C7FCEDF41F5EF358007FACE4 /* AnimatableCircleView.swift */,
+				C779877A1F952FCB00A524BF /* BezierCubicCurveAlgorithm.swift */,
+				C77987361F952FCA00A524BF /* BezierView.swift */,
 				C7FCEDF31F5EF358007FACE4 /* CounterView.swift */,
 				C7FCEDF61F5EF358007FACE4 /* DotView.swift */,
 				C7FCEDF71F5EF358007FACE4 /* PartialCircleView.swift */,
@@ -2554,6 +2580,7 @@
 				C7B6A80B1F44DE3100EEB206 /* DragInView.swift */,
 				C7B6A80C1F44DE3100EEB206 /* FeedCell.swift */,
 				C7B6A80D1F44DE3100EEB206 /* ImageScrollView.swift */,
+				C77987791F952FCB00A524BF /* JourneyView.swift */,
 				C7B6A80E1F44DE3100EEB206 /* LayoutableButton.swift */,
 				C7B6A80F1F44DE3100EEB206 /* LayoutableImageView.swift */,
 				C7B6A8101F44DE3100EEB206 /* LayoutableView.swift */,
@@ -2572,6 +2599,7 @@
 				C7B6A81D1F44DE3100EEB206 /* VideoCell.swift */,
 				C7B6A81E1F44DE3100EEB206 /* YoutubeMenuBar.swift */,
 				C7B6A81F1F44DE3100EEB206 /* YoutubeMenuBarCell.swift */,
+				C779877B1F952FCB00A524BF /* ZIgZagScrollView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2723,6 +2751,7 @@
 				C74773081F0CCF0A00CFEB26 /* NSMutableAttributedString+Ext.swift */,
 				C7752A991F1D041B007B9DA8 /* CAEmitterCell+Ext.swift */,
 				C76F4E541F42F6C700B5CE6F /* UIViewController+Ext.swift */,
+				C734D8D51F950094007048EA /* UIScrollView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -4149,6 +4178,7 @@
 				C7752A8B1F1D033A007B9DA8 /* level3.plist in Resources */,
 				C7E35BC21F82D1D30045BAF6 /* DogsMain.storyboard in Resources */,
 				C7752A831F1D032A007B9DA8 /* slot.png in Resources */,
+				C77987861F95304200A524BF /* ZigZagScrollViewMain.storyboard in Resources */,
 				C7752A861F1D032A007B9DA8 /* tile@2x.png in Resources */,
 				C70F09E91F084EDE0049BACC /* buttonOn.json in Resources */,
 				C7CEB7A31F06FD7900CC054B /* CirclePieViewMain.storyboard in Resources */,
@@ -4266,6 +4296,7 @@
 				C7752A881F1D0335007B9DA8 /* AnagramsSet.swift in Sources */,
 				C7BA593E1F26A52B00E66C53 /* ProfileViewController.swift in Sources */,
 				C7C2AF2F1EF6CC97004F257A /* NewsTableViewCell.swift in Sources */,
+				C779877E1F952FCC00A524BF /* BezierCubicCurveAlgorithm.swift in Sources */,
 				C7A3A5A11F44D48F00A89BE8 /* Services.swift in Sources */,
 				C7752A981F1D037D007B9DA8 /* TileView.swift in Sources */,
 				C7C2AF4F1EF6CCD7004F257A /* SlidesInfoModel.swift in Sources */,
@@ -4365,6 +4396,7 @@
 				C7C2AF271EF6CC88004F257A /* InspirationalFilmsInfo.swift in Sources */,
 				C7B6A8331F44DE3A00EEB206 /* ParticleEmitterView.swift in Sources */,
 				C7752A931F1D037D007B9DA8 /* ExplodeView.swift in Sources */,
+				C779877F1F952FCC00A524BF /* ZIgZagScrollView.swift in Sources */,
 				C76F04EE1EF505160090F71B /* SliderMenuDrawerBaseViewController.swift in Sources */,
 				C7C2AF5A1EF6CD14004F257A /* PanelDrawerView.swift in Sources */,
 				C7F044B31F5EF5EC00094122 /* CounterViewController.swift in Sources */,
@@ -4388,10 +4420,12 @@
 				C7694E8C1F616767008034D5 /* CompassLogoutViewController.swift in Sources */,
 				C7C2AF261EF6CC88004F257A /* InspirationalFilms.swift in Sources */,
 				C7C2AF6C1EF6CD64004F257A /* MetricViewController.swift in Sources */,
+				C779877C1F952FCC00A524BF /* BezierView.swift in Sources */,
 				C7A3A5921F44D42F00A89BE8 /* OnboardingProcessWalkthroughViewController.swift in Sources */,
 				C7C2AEF51EF6CC0B004F257A /* AirbnbData.swift in Sources */,
 				C7A3A58E1F44D42F00A89BE8 /* LoginViewController.swift in Sources */,
 				C7FCEDFD1F5EF369007FACE4 /* PartialCircleView.swift in Sources */,
+				C77987811F952FF500A524BF /* JourneyView.swift in Sources */,
 				C7C2AF2D1EF6CC97004F257A /* MultiSidedBarMenuControllerRight.swift in Sources */,
 				C7A3A59F1F44D48F00A89BE8 /* AppServices.swift in Sources */,
 				C7A3A59A1F44D46D00A89BE8 /* OnboardingBookSelectionViewController.swift in Sources */,
@@ -4402,6 +4436,7 @@
 				C703771C1EF5473A002E7D9B /* SearchBarTableViewCell.swift in Sources */,
 				C76F4E621F42F7BE00B5CE6F /* AppService.swift in Sources */,
 				C7C2AF561EF6CD03004F257A /* SlideShowViewController.swift in Sources */,
+				C77987841F95301500A524BF /* ZigZagScrollViewHomeViewController.swift in Sources */,
 				C7A3A5991F44D46D00A89BE8 /* OnboardingBookSelectionViewCell.swift in Sources */,
 				C7C2AF251EF6CC83004F257A /* InspirationalFilmsViewController.swift in Sources */,
 				C7752A901F1D0375007B9DA8 /* GameData.swift in Sources */,
@@ -4570,6 +4605,7 @@
 				C7C2AF111EF6CC68004F257A /* Math+Ext.swift in Sources */,
 				C7752A9B1F1D0489007B9DA8 /* CAEmitterCell+Ext.swift in Sources */,
 				C7C2AF1E1EF6CC68004F257A /* UIWindow+Ext.swift in Sources */,
+				C77987871F95315700A524BF /* UIScrollView+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

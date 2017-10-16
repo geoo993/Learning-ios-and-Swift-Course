@@ -65,9 +65,10 @@ class MainCollectionViewController: UICollectionViewController {
                             //"YoutubeHomeNavigationController" : "YoutubeMain",
                             //"OnboardingProcessNavigationController" : "OnboardingProcessMain",
                             //"ShapesNavigationController" : "ShapesMain",
-                            "LGMainMenuViewController" : "LGMain",
-                            "CompassNavigationController" : "CompassMain",
-                            "DogsNavigationController" : "DogsMain",
+                            //"LGMainMenuViewController" : "LGMain",
+                            //"CompassNavigationController" : "CompassMain",
+                            //"DogsNavigationController" : "DogsMain",
+                            "ZigZagScrollViewHomeViewController" : "ZigZagScrollViewMain",
                            ]
     
     //Mark: - Collection view 

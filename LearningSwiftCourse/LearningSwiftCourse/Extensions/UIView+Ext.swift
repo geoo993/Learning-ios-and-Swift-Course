@@ -277,6 +277,46 @@ public extension UIView {
         layer.addSublayer(borderLayer)
     }
     
+    func addDashedBorder(with color: UIColor, lineWidth: CGFloat = 2) {
+        // https://stackoverflow.com/questions/13679923/dashed-line-border-around-uiview
+        let shapeLayer:CAShapeLayer = CAShapeLayer()
+        let frameSize = self.frame.size
+        let shapeRect = CGRect(x: 0, y: 0, width: frameSize.width, height: frameSize.height)
+        
+        shapeLayer.bounds = shapeRect
+        shapeLayer.position = CGPoint(x: frameSize.width/2, y: frameSize.height/2)
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = color.cgColor
+        shapeLayer.lineWidth = lineWidth
+        shapeLayer.lineJoin = kCALineJoinRound
+        shapeLayer.lineDashPattern = [6,3]
+        shapeLayer.path = UIBezierPath(roundedRect: shapeRect, cornerRadius: 5).cgPath
+        
+        self.layer.addSublayer(shapeLayer)
+    }
+    func addDashedLine(color: UIColor = .lightGray, lineWidth: CGFloat = 1) {
+        // https://stackoverflow.com/questions/12091916/uiview-with-a-dashed-line
+        layer.sublayers?.filter({ $0.name == "DashedTopLine" }).map({ $0.removeFromSuperlayer() })
+        backgroundColor = .clear
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.name = "DashedTopLine"
+        shapeLayer.bounds = bounds
+        shapeLayer.position = CGPoint(x: frame.width / 2, y: frame.height / 2)
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = color.cgColor
+        shapeLayer.lineWidth = lineWidth
+        shapeLayer.lineJoin = kCALineJoinRound
+        shapeLayer.lineDashPattern = [4, 4]
+        
+        let path = CGMutablePath()
+        path.move(to: CGPoint.zero)
+        path.addLine(to: CGPoint(x: frame.width, y: 0))
+        shapeLayer.path = path
+        
+        layer.addSublayer(shapeLayer)
+    }
+    
     public func fadeIn(_ duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
         UIView.animate(withDuration: duration, delay: delay, options: UIViewAnimationOptions.curveEaseIn, animations: {
             self.alpha = 1.0
