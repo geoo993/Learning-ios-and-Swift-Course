@@ -68,7 +68,7 @@ class MainCollectionViewController: UICollectionViewController {
                             //"LGMainMenuViewController" : "LGMain",
                             //"CompassNavigationController" : "CompassMain",
                             //"DogsNavigationController" : "DogsMain",
-                            "ZigZagScrollViewHomeViewController" : "ZigZagScrollViewMain",
+                            //"ZigZagScrollViewHomeViewController" : "ZigZagScrollViewMain",
                            ]
     
     //Mark: - Collection view 
