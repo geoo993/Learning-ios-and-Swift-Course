@@ -17,6 +17,11 @@ public class ZIgZagScrollView: UIScrollView {
         }
     }
     
+    fileprivate var animatableView = UIView()
+    fileprivate var animationCounter = 0
+    fileprivate var generatedPointFromPath : [CGPoint] = []
+    
+    var images : [UIImage?] = []
     var controlPoints = [CGPoint]()
     
     fileprivate var screenSize : CGRect {
@@ -25,18 +30,12 @@ public class ZIgZagScrollView: UIScrollView {
     
     fileprivate var inverse = false
     
-    @IBInspectable var maxViews: Int = 30
-    
-    @IBInspectable var viewSize : CGFloat = 50 {
-        didSet {
-            print(viewSize)
-        }
-    }
+    @IBInspectable var maxButtons: Int = 30
     
     fileprivate var xOffset : CGFloat = 100
     @IBInspectable var horizontalGap : CGFloat = 80 { 
         didSet {
-            print (horizontalGap)
+            print ("horizontalGap:",horizontalGap)
             xOffset = horizontalGap
         }
     }
@@ -44,7 +43,7 @@ public class ZIgZagScrollView: UIScrollView {
     fileprivate var yOffset : CGFloat = 50
     @IBInspectable var verticalGap : CGFloat = 50 { 
         didSet {
-            print (verticalGap)
+            print ("verticalGap:",verticalGap)
             yOffset = verticalGap
         }
     }
@@ -77,11 +76,11 @@ public class ZIgZagScrollView: UIScrollView {
 
     @IBInspectable var background: UIColor = UIColor.clear {
         didSet {
-            print (background)
+            print ("background:",background)
         }
     }
     
-    @IBInspectable var image: UIImage = UIImage() {
+    @IBInspectable var backgroundImage: UIImage = UIImage() {
         didSet {
         }
     }
@@ -93,43 +92,80 @@ public class ZIgZagScrollView: UIScrollView {
     
     @IBInspectable var dashLines : Bool = true {
         didSet {
-            print (dashLines)
+            print ("dashLines:",dashLines)
         }
     }
     
     @IBInspectable var dashLinesWidth: CGFloat = 3{
         didSet {
-            print (dashLinesWidth)
+            print ("dashLinesWidth:",dashLinesWidth)
         }
     }
     @IBInspectable var dashLinesHeight: CGFloat = 2{
         didSet {
-            print (dashLinesHeight)
+            print ("dashLinesHeight:",dashLinesHeight)
         }
     }
     
     @IBInspectable var lineColor: UIColor = UIColor.blue {
         didSet {
-            print (lineColor)
+            print ("lineColor:",lineColor)
         }
     }
     
     @IBInspectable var lineWidth: CGFloat = 10{
         didSet {
-            print (lineWidth)
+            print ("lineWidth:",lineWidth)
+        }
+    }
+    
+    @IBInspectable var makeRoad: Bool = true{
+        didSet {
+            print ("makeRoad:",makeRoad)
+        }
+    }
+    @IBInspectable var roadOutlineWidth: CGFloat = 1{
+        didSet {
+            print ("roadOutlineWidth:",roadOutlineWidth)
+        }
+    }
+    @IBInspectable var roadlineWidth: CGFloat = 10{
+        didSet {
+            print ("roadlineWidth:",roadlineWidth)
         }
     }
     
     
+    @IBInspectable var buttonsRandColors: Bool = true {
+        didSet {
+        }
+    }
+    
+    @IBInspectable var buttonsColor: UIColor = UIColor.white {
+        didSet {
+        }
+    }
+    
+    @IBInspectable var buttonsTitle: String = String() {
+        didSet {
+        }
+    }
+    
+    @IBInspectable var buttonsImage: UIImage = UIImage() {
+        didSet {
+        }
+    }
+    @IBInspectable var buttonsImageSize: CGSize = CGSize(width: 20, height: 20) {
+        didSet {
+        }
+    }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        //setup()
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        //setup()
     }
     
     // Only override draw() if you perform custom drawing.
@@ -142,14 +178,85 @@ public class ZIgZagScrollView: UIScrollView {
     
     func setup(){
         
-        // Add the Views
-        for i in 0..<maxViews {
-            addViewToZigZag(at: i)
-        }
+        self.removeEverything()
         
-        setupBezierView()
+        self.setControlPoints(with: maxButtons)
+        
+        self.setupBezierView()
+        //moveAlongPath()
         
     }
+    
+    func moveAlongPath(){
+        animatableView = UIView(frame:CGRect(origin: CGPoint.zero, size: CGSize(width: 40, height: 40)))
+        animatableView.backgroundColor = .orange
+        animatableView.layer.cornerRadius = 30
+        animatableView.clipsToBounds = true
+        self.addSubview(animatableView)
+        
+        guard let path = bezierView?.getBezierPath() else { return }
+        print("magnitude = \(path.magnitude())")
+        /*
+         animatableView.center = path.point(atPercentOfLength: 0.01)
+         
+         generatedPointFromPath = [0..<300]
+         .flatMap({ $0 })
+         .map { index -> CGPoint in
+         let percent: CGFloat = CGFloat(index) / 100.0
+         //print("point at [\(percent)] = \(path.point(atPercentOfLength: percent)) ")
+         return path.point(atPercentOfLength: percent)
+         }
+         */
+        
+        //let panRecognizer = UIPanGestureRecognizer(target: self, action:#selector(self.handleAnimatableViewPanGesture) )
+        //self.isUserInteractionEnabled = true
+        //self.addGestureRecognizer(panRecognizer)
+        
+        //animate(with: 200, path: path)
+        
+        if let points = bezierView?.getPathInterpolationPoints() {
+            animate(with: points)
+        }
+        
+        //keyAnimation(with : path.cgPath)
+    }
+    
+    func keyAnimation(with path : CGPath) {
+        let keyFrameAnimation = CAKeyframeAnimation(keyPath:"position")
+        keyFrameAnimation.path = path
+        keyFrameAnimation.duration = 20.0  // How long to animate 
+        keyFrameAnimation.speed = 1  // How fast to animate want
+        keyFrameAnimation.fillMode = kCAFillModeForwards
+        keyFrameAnimation.isRemovedOnCompletion = false
+        keyFrameAnimation.calculationMode = kCAAnimationPaced // This give the animation an even pace
+        keyFrameAnimation.repeatCount = Float(CGFloat.infinity) // This makes the animation repeat forever
+        keyFrameAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        
+        animatableView.layer.add(keyFrameAnimation, forKey: "animation")
+        
+    }
+    
+    func animate(with max: CGFloat, path: UIBezierPath){
+        let percentage = (CGFloat(self.animationCounter) / max )
+        UIView.animate(withDuration: 1.0, animations: { 
+            let point = path.point(atPercentOfLength: percentage)
+            self.animatableView.center = point
+        }, completion: { (completed) in
+            if (self.animationCounter >= Int(max)) { self.animationCounter = 0 }
+            self.animationCounter += 1
+            self.animate(with: max, path: path)
+        })
+    }
+    
+    func animate(with points: [CGPoint]){
+        UIView.animate(withDuration: 1.0, animations: { 
+            self.animatableView.center = points[self.animationCounter % points.count]
+        }, completion: { (completed) in
+            self.animationCounter += 1
+            self.animate(with: points)
+        })
+    }
+    
     
     func clearBezierView(){
         
@@ -172,7 +279,7 @@ public class ZIgZagScrollView: UIScrollView {
             self.sendSubview(toBack: bView)
             
             let bgImage = UIImageView(frame: frame)
-            bgImage.image = image.imageWithSize(size: self.contentSize)
+            bgImage.image = backgroundImage.imageWithSize(size: self.contentSize)
             bgImage.contentMode = imageContentMode
             self.addSubview(bgImage)
             self.sendSubview(toBack: bgImage)
@@ -182,6 +289,9 @@ public class ZIgZagScrollView: UIScrollView {
             bView.dashLinesPattern = [NSNumber(value:Float(dashLinesWidth)), NSNumber(value:Float(dashLinesHeight))]
             bView.lineColor = lineColor
             bView.lineWidth = lineWidth
+            bView.makeRoad = makeRoad
+            bView.outlineWidth = roadOutlineWidth
+            bView.roadlineWidth = roadlineWidth
             bView.dataSource = self
         }
         updateBezierView()
@@ -201,11 +311,24 @@ public class ZIgZagScrollView: UIScrollView {
         }
     }
     
-    func addViewToZigZag(at index: Int){
+    func setControlPoints(with buttons: Int){
         
-        if (currentViewX > (rightMargin - viewSize)){
+        // Add a first point at the top of screen
+        let screenSize = UIScreen.main.bounds.size
+        let firstPoint = CGPoint(x: screenSize.width / 2, y: -screenSize.height)
+        controlPoints.append(firstPoint)
+        
+        // Add the button Views
+        for i in 0..<buttons {
+            addViewToZigZag(at: i, with: i+1) // plus 1 includes the first point added above
+        }
+    }
+    
+    func addViewToZigZag(at index: Int, with tag: Int){
+        
+        if (currentViewX > (rightMargin - buttonsImageSize.width)){
             inverse = true
-        } else if (currentViewX < (leftMargin + viewSize)){
+        } else if (currentViewX < (leftMargin + buttonsImageSize.width)){
             inverse = false
         }
         
@@ -217,19 +340,47 @@ public class ZIgZagScrollView: UIScrollView {
         let point = CGPoint(x:pointX,y:pointY)
         controlPoints.append(point)
         
-        let frame = CGRect(origin: CGPoint.zero, size:CGSize(width: viewSize, height: viewSize))
-    
-        let newView = JourneyView(frame: frame)
-        newView.center = point
-        newView.tag = index
-        newView.setupPanGesture(target: self, panSelector: #selector(self.handlePanGesture))
-        newView.setupTapGesture(target: self, tapSelector: #selector(self.handleTapGesture))
-        self.addSubview(newView)
+        addJourneyView(at: index, with: point, tag: tag, size: buttonsImageSize)
         
         xOffset = CGFloat.randomF(min: horizontalGap, max: horizontalGap + 20)
-        //yOffset = CGFloat.randomF(lower: verticalGap, verticalGap + 10)
+        //yOffset = CGFloat.randomF(min: verticalGap, max: verticalGap + 2)
         
         updateScrollView()
+    }
+    
+    func addJourneyView(at index: Int, with point: CGPoint, tag: Int, size: CGSize){
+        
+        let frame = CGRect(origin: CGPoint.zero, size: size)
+        
+        let newView = JourneyView(frame: frame)
+        newView.contentMode = .scaleAspectFill
+        newView.originalColor = buttonsRandColors ? UIColor.random : buttonsColor
+        newView.originalPoint = point
+        newView.center = point
+        newView.tag = tag
+        newView.title = buttonsTitle
+        newView.image = buttonsImage//images[index]
+        newView.imageSize = buttonsImageSize
+        let isLocked = (index > 30)//(images[index] == nil)
+        newView.isLocked = isLocked
+        newView.setupPanGesture(target: self, panSelector: #selector(self.handlePanGesture))
+        //newView.setupTapGesture(target: self, tapSelector: #selector(self.handleTapGesture))
+        newView.setupTouchGestures(target: self, touchDown: #selector(self.buttonTouchDown), touchUpInside: #selector(self.buttonTouchUpInside))
+        self.addSubview(newView)
+        
+    }
+    
+    
+    @objc func buttonTouchDown(_ sender: UIControl) {
+        if let jView = sender as? JourneyView{
+            jView.isSelect = true
+        }
+    }
+    
+    @objc func buttonTouchUpInside(_ sender: UIControl) {
+        if let jView = sender as? JourneyView{
+            jView.isSelect = false
+        }
     }
     
     @objc func handleTapGesture(_ tapGestureRecognizer: UITapGestureRecognizer) {
@@ -244,19 +395,68 @@ public class ZIgZagScrollView: UIScrollView {
             
             superView.bringSubview(toFront: jView)
             
+            let _ /* velocityInView */ = panGestureRecognizer.velocity(in: superView)
             let translation = panGestureRecognizer.translation(in: superView)
             
+            
             let newPoint = CGPoint(x: jView.center.x + translation.x, y: jView.center.y + translation.y)
+            let _ /* distanceAway */ = jView.center.distance(to: jView.originalPoint)
+            
+            //print(distanceAway, velocityInView.normalized())
+            
             jView.center = newPoint
             controlPoints[jView.tag] = newPoint
             
             panGestureRecognizer.setTranslation(CGPoint.zero, in: superView)
             
+            switch panGestureRecognizer.state {
+            case .began:
+                jView.isHeld = true
+                break
+            case .changed:
+                jView.isHeld = true
+                break
+            case .ended:
+                jView.isHeld = false
+                break
+            default:
+                break
+            }
+            
             // update bezier curve
             updateBezierView()
         }
-        
     }
+    
+    
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        /* // touch to find point on bezier
+         if let touch = touches.first {
+         let location = touch.location(in: self)
+         //self.center = CGPoint(x: location.x, y: location.y)
+         animatableView.center = location.findClosestPointOnPath(within: generatedPointFromPath)
+         }
+         */
+    }
+    
+    @objc func handleAnimatableViewPanGesture(_ panGestureRecognizer: UIPanGestureRecognizer) {
+        
+        let location = panGestureRecognizer.location(in: self)
+        
+        switch panGestureRecognizer.state {
+        case .began:
+            break
+        case .changed:
+            animatableView.center = location.findClosestPointOnPath(within: generatedPointFromPath)
+            break
+        case .ended:
+            break
+        default:
+            break
+        }
+    }
+    
     
 
 }

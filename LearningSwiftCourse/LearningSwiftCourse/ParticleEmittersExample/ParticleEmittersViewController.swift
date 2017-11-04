@@ -13,6 +13,7 @@
 //https://www.youtube.com/watch?v=Cg5GzKsMF7M&feature=share
 
 import UIKit
+import LearningSwiftCourseExtensions
 
 public class ParticleEmittersViewController: UIViewController {
 
@@ -56,11 +57,63 @@ public class ParticleEmittersViewController: UIViewController {
         view.sendSubview(toBack: particlesView)
     }
     
+    // background color interpolation
+    var colorTransSwitch : String = ""
+    var colorTransNum : CGFloat = 0
+    var curveValue : CGFloat = 0
+    
+    var startColor : UIColor = .random
+    var endColor : UIColor = .random
+    
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let gameLoop = GameLoop()
+        var deltaTime = 0
+        gameLoop.framesPerInterval = 360
+        gameLoop.doSomething = { [weak self] () -> () in
+            deltaTime += 1
+            
+            self?.view.backgroundColor = self?.backgroundColorTransition(with : 1)
+            
+            print()
+            print(deltaTime)
+        }
+        gameLoop.start()
     }
+ 
+    func backgroundColorTransition( with interval: CGFloat) -> UIColor
+    {
+        
+        if(colorTransSwitch == "goingUp")
+        {
+            colorTransNum += interval;
+        }
+        if(colorTransSwitch == "goingDown")
+        {
+            colorTransNum -= interval;
+        }
+        
+        if(curveValue <= 0)
+        {
+            colorTransSwitch = "goingUp";
+            endColor = .random;
+        }
+        if(curveValue >= 1)
+        {
+            startColor = .random;
+            colorTransSwitch = "goingDown"
+        }
+        
+        curveValue = CGFloat(colorTransNum / 255.0)
+        let color = UIColor.interpolate(from: startColor, to: endColor,with: curveValue)
+        print(curveValue, colorTransNum,  colorTransSwitch)
+        
+        return color
+    }
+    
+    
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

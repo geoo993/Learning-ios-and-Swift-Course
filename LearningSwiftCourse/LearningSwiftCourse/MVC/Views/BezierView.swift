@@ -27,10 +27,18 @@ public class BezierView: UIView {
     var dashLinesPattern : [NSNumber] = []
     var animates = false
     
+    fileprivate var currentBezierPath = UIBezierPath()
     var pointLayers = [CAShapeLayer]()
     
-    var lineLayer = CAShapeLayer()
-    var lineWidth : CGFloat = 10
+    var makeRoad = false
+    fileprivate var lineLayer = CAShapeLayer()
+    var lineWidth : CGFloat = 1
+    
+    fileprivate var outlineLayer = CAShapeLayer()
+    var outlineWidth : CGFloat = 1
+    
+    fileprivate var roadlineLayer = CAShapeLayer()
+    var roadlineWidth : CGFloat = 10
     
     //MARK: Private members
     
@@ -51,6 +59,10 @@ public class BezierView: UIView {
     override public func layoutSubviews() {
         super.layoutSubviews()
         
+        lineLayer.removeFromSuperlayer()
+        outlineLayer.removeFromSuperlayer()
+        roadlineLayer.removeFromSuperlayer()
+        self.removeEverything()
         self.layer.sublayers?.forEach({ (layer: CALayer) -> () in
             layer.removeFromSuperlayer()
         })
@@ -101,18 +113,55 @@ public class BezierView: UIView {
     
         let controlPoints = cubicCurveAlgorithm.controlPointsFromPoints(dataPoints: points)
         
-        let linePath = UIBezierPath()
+        let bezierPath = UIBezierPath()
         
         for i in 0..<points.count {
             
             let point = points[i];
             
             if i==0 {
-                linePath.move(to: point)
+                bezierPath.move(to: point)
             } else {
                 
                 let segment = controlPoints[i-1]
-                linePath.addCurve(to: point, controlPoint1: segment.controlPoint1, controlPoint2: segment.controlPoint2)
+                bezierPath.addCurve(to: point, controlPoint1: segment.controlPoint1, controlPoint2: segment.controlPoint2)
+            }
+        }
+        
+        currentBezierPath = bezierPath
+        
+        if (makeRoad) {
+            
+            // outside outline
+            outlineLayer = CAShapeLayer()
+            outlineLayer.path = bezierPath.cgPath
+            outlineLayer.fillColor = UIColor.clear.cgColor
+            outlineLayer.strokeColor = lineColor.cgColor
+            outlineLayer.lineWidth = roadlineWidth + outlineWidth
+            
+            outlineLayer.shadowColor = shadowColor.cgColor
+            outlineLayer.shadowOffset = CGSize(width: 0, height: 8)
+            outlineLayer.shadowOpacity = 0.5
+            outlineLayer.shadowRadius = 6.0
+            
+            layer.addSublayer(outlineLayer)
+            if animates {
+                outlineLayer.strokeEnd = 0
+            }else{
+                outlineLayer.strokeEnd = 1
+            }
+            
+            // black road line
+            roadlineLayer = CAShapeLayer()
+            roadlineLayer.path = bezierPath.cgPath
+            roadlineLayer.fillColor = UIColor.clear.cgColor
+            roadlineLayer.strokeColor = UIColor.black.cgColor
+            roadlineLayer.lineWidth = roadlineWidth
+            layer.addSublayer(roadlineLayer)
+            if animates {
+                roadlineLayer.strokeEnd = 0
+            }else{
+                roadlineLayer.strokeEnd = 1
             }
         }
         
@@ -120,22 +169,24 @@ public class BezierView: UIView {
         // https://stackoverflow.com/questions/13679923/dashed-line-border-around-uiview
         // https://stackoverflow.com/questions/26018302/draw-dotted-not-dashed-line-with-ibdesignable-in-2017
         lineLayer = CAShapeLayer()
-        lineLayer.path = linePath.cgPath
+        lineLayer.path = bezierPath.cgPath
         lineLayer.fillColor = UIColor.clear.cgColor
         lineLayer.strokeColor = lineColor.cgColor
         lineLayer.lineWidth = lineWidth
         
-        if dashLines {
+        if dashLines || makeRoad {
             lineLayer.lineJoin = kCALineJoinRound
             lineLayer.lineDashPattern = dashLinesPattern // adjust to your liking [width, height]
             //lineLayer.lineCap = kCALineCapRound
         }
         
-        lineLayer.shadowColor = shadowColor.cgColor
-        lineLayer.shadowOffset = CGSize(width: 0, height: 8)
-        lineLayer.shadowOpacity = 0.5
-        lineLayer.shadowRadius = 6.0
-       
+        if (makeRoad == false) {
+            lineLayer.shadowColor = shadowColor.cgColor
+            lineLayer.shadowOffset = CGSize(width: 0, height: 8)
+            lineLayer.shadowOpacity = 0.5
+            lineLayer.shadowRadius = 6.0
+        }
+        
         layer.addSublayer(lineLayer)
         
         if animates {
@@ -145,6 +196,13 @@ public class BezierView: UIView {
         }
     }
     
+    public func getBezierPath() -> UIBezierPath{
+        return currentBezierPath
+    }
+    
+    public func getPathInterpolationPoints() -> [CGPoint]{
+        return currentBezierPath.cgPath.getPathElementsPoints()
+    }
     
 }
 

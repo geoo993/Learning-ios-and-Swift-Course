@@ -214,18 +214,6 @@ public extension UIColor {
     public static var random: UIColor {
         return UIColor.init(red: CGFloat.randomF(min: 0.0, max: 1.0), green: CGFloat.randomF(min: 0.0,max: 1.0), blue: CGFloat.randomF(min:0.0,max: 1.0), alpha: 1)
     }
-
-    public func getComponents() -> ColorComponents {
-        if (self.cgColor.numberOfComponents == 2) {
-            let cc = self.cgColor.components;
-            return ColorComponents(r:cc![0], g:cc![0], b:cc![0], a:cc![1])
-        }
-        else {
-            let cc = self.cgColor.components;
-            return ColorComponents(r:cc![0], g:cc![1], b:cc![2], a:cc![3])
-        }
-    }
-    
     public  var redValue: CGFloat{
         return cgColor.components! [0]
     }
@@ -246,6 +234,28 @@ public extension UIColor {
         return (r:redValue, g:greenValue, b: blueValue, a:alphaValue)
     }
     
+    public func getComponents() -> ColorComponents {
+        if (self.cgColor.numberOfComponents == 2) {
+            let cc = self.cgColor.components;
+            return ColorComponents(r:cc![0], g:cc![0], b:cc![0], a:cc![1])
+        }
+        else {
+            let cc = self.cgColor.components;
+            return ColorComponents(r:cc![0], g:cc![1], b:cc![2], a:cc![3])
+        }
+    }
+    
+    /// The RGBA components associated with a `UIColor` instance.
+    public var colorComponents: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) {
+        let components = self.cgColor.components!
+        
+        switch components.count == 2 {
+        case true : return (r: components[0], g: components[0], b: components[0], a: components[1])
+        case false: return (r: components[0], g: components[1], b: components[2], a: components[3])
+        }
+    }
+    
+    
     public static func interpolateRGBColorWithWhite(start:UIColor,end:UIColor, fraction:CGFloat) -> UIColor
     {
         var f = max(0, fraction)
@@ -258,6 +268,18 @@ public extension UIColor {
         let g: CGFloat = CGFloat(c1.g + (c2.g - c1.g) * f)
         let b: CGFloat = CGFloat(c1.b + (c2.b - c1.b) * f)
         let a: CGFloat = CGFloat(c1.a + (c2.a - c1.a) * f)
+        
+        return UIColor.init(red: r, green: g, blue: b, alpha: a)
+    }
+    
+    public static func interpolate(from fromColor: UIColor, to toColor: UIColor, with progress: CGFloat) -> UIColor {
+        let fromComponents = fromColor.colorComponents
+        let toComponents = toColor.colorComponents
+        
+        let r = (1 - progress) * fromComponents.r + progress * toComponents.r
+        let g = (1 - progress) * fromComponents.g + progress * toComponents.g
+        let b = (1 - progress) * fromComponents.b + progress * toComponents.b
+        let a = (1 - progress) * fromComponents.a + progress * toComponents.a
         
         return UIColor.init(red: r, green: g, blue: b, alpha: a)
     }

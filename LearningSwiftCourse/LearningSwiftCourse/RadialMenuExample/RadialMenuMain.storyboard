@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -45,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3060" y="8"/>
+            <point key="canvasLocation" x="1759" y="440"/>
         </scene>
         <!--iOS 8-->
         <scene sceneID="wg7-f3-ORb">
@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2394" y="1955"/>
+            <point key="canvasLocation" x="1759" y="1208"/>
         </scene>
         <!--Smilies-->
         <scene sceneID="ICA-gz-ovW">
@@ -128,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4b-zP-dqz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3320.625" y="1699.6478873239437"/>
+            <point key="canvasLocation" x="2443" y="1207"/>
         </scene>
         <!--Text-->
         <scene sceneID="dcN-Lt-4Bi">
@@ -184,7 +184,7 @@ When you create a linguistic tagger, you specify what kind of information you're
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxc-lu-ibZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3661.5999999999999" y="799.2503748125938"/>
+            <point key="canvasLocation" x="2441" y="439"/>
         </scene>
         <!--Radial Menu Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -205,7 +205,7 @@ When you create a linguistic tagger, you specify what kind of information you're
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2283" y="965"/>
+            <point key="canvasLocation" x="898" y="835"/>
         </scene>
     </scenes>
     <resources>

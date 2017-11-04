@@ -84,6 +84,10 @@
 		C769A5E01F6153130095FE7A /* LGRightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C769A5D41F6152AD0095FE7A /* LGRightViewController.swift */; };
 		C769A5E11F61531C0095FE7A /* LGLeftViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C769A5901F6152A60095FE7A /* LGLeftViewCell.swift */; };
 		C769A5E21F61531C0095FE7A /* LGLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C769A58F1F6152A60095FE7A /* LGLeftViewController.swift */; };
+		C76CD8611FAD20A900761072 /* GameLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76CD8601FAD20A900761072 /* GameLoop.swift */; };
+		C76CD8A81FAD3F1400761072 /* CGPoint+Ext2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76CD8A41FAD3F1300761072 /* CGPoint+Ext2.swift */; };
+		C76CD8AA1FAD3F1400761072 /* UIBezierPath+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76CD8A61FAD3F1300761072 /* UIBezierPath+Ext.swift */; };
+		C76CD8AB1FAD3F1400761072 /* CGPath+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76CD8A71FAD3F1300761072 /* CGPath+Ext.swift */; };
 		C76E0CE81EE9ECB300A66E94 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76E0CE71EE9ECB300A66E94 /* MapKit.framework */; };
 		C76F04C41EF5001D0090F71B /* SliderMenuDrawerMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F04C31EF5001D0090F71B /* SliderMenuDrawerMenuTableViewCell.swift */; };
 		C76F04C61EF500370090F71B /* SliderMenuDrawerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F04C51EF500370090F71B /* SliderMenuDrawerMenuViewController.swift */; };
@@ -1285,6 +1289,10 @@
 		C769A5D71F6152BC0095FE7A /* LGMainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGMainMenuViewController.swift; sourceTree = "<group>"; };
 		C769A5D81F6152CB0095FE7A /* LGMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LGMain.storyboard; sourceTree = "<group>"; };
 		C769A5D91F6152CB0095FE7A /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		C76CD8601FAD20A900761072 /* GameLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLoop.swift; sourceTree = "<group>"; };
+		C76CD8A41FAD3F1300761072 /* CGPoint+Ext2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Ext2.swift"; sourceTree = "<group>"; };
+		C76CD8A61FAD3F1300761072 /* UIBezierPath+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Ext.swift"; sourceTree = "<group>"; };
+		C76CD8A71FAD3F1300761072 /* CGPath+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPath+Ext.swift"; sourceTree = "<group>"; };
 		C76E0CE71EE9ECB300A66E94 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C76F04C31EF5001D0090F71B /* SliderMenuDrawerMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerMenuTableViewCell.swift; sourceTree = "<group>"; };
 		C76F04C51EF500370090F71B /* SliderMenuDrawerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuDrawerMenuViewController.swift; sourceTree = "<group>"; };
@@ -2725,11 +2733,14 @@
 		C7C2AE571EF6CB62004F257A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C76CD8A71FAD3F1300761072 /* CGPath+Ext.swift */,
+				C76CD8A61FAD3F1300761072 /* UIBezierPath+Ext.swift */,
 				C78F4AB21EF34FDE0001CF94 /* ImageProcessor.swift */,
 				C7C2AE581EF6CB62004F257A /* Dictionary+Ext.swift */,
 				C7C2AE591EF6CB62004F257A /* Generic+Ext.swift */,
 				C7C2AE5A1EF6CB62004F257A /* Math+Ext.swift */,
 				C75C881E1F1BBB4A00004922 /* CGPoint+Ext.swift */,
+				C76CD8A41FAD3F1300761072 /* CGPoint+Ext2.swift */,
 				C7C2AE5B1EF6CB62004F257A /* String+Ext.swift */,
 				C7C2AE5C1EF6CB62004F257A /* UITableView+Ext.swift */,
 				C7C2AE5D1EF6CB62004F257A /* UIApplication+Ext.swift */,
@@ -2752,6 +2763,7 @@
 				C7752A991F1D041B007B9DA8 /* CAEmitterCell+Ext.swift */,
 				C76F4E541F42F6C700B5CE6F /* UIViewController+Ext.swift */,
 				C734D8D51F950094007048EA /* UIScrollView+Ext.swift */,
+				C76CD8601FAD20A900761072 /* GameLoop.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -4455,6 +4467,7 @@
 				C7C2AE3E1EF6CA93004F257A /* ColorsViewController.swift in Sources */,
 				C7C2AF831EF6CD91004F257A /* CustomInteractionController.swift in Sources */,
 				C7A3A5901F44D42F00A89BE8 /* OnboardingProcessNavigationController.swift in Sources */,
+				C76CD8AA1FAD3F1400761072 /* UIBezierPath+Ext.swift in Sources */,
 				C70C154D1F0571B500CE9220 /* AnimatableSideMenuContainerViewController.swift in Sources */,
 				C7F044B11F5EF5E700094122 /* AnimatableCircleViewController.swift in Sources */,
 				C7349E0A1EFC2F1E00B99AE6 /* BBCiPlayerContentTableViewController.swift in Sources */,
@@ -4502,6 +4515,7 @@
 				C7752A961F1D037D007B9DA8 /* StopwatchView.swift in Sources */,
 				C7C2AF471EF6CCD7004F257A /* Slide.swift in Sources */,
 				C7B6A8311F44DE3A00EEB206 /* MyReadingMenuBarCell.swift in Sources */,
+				C76CD8A81FAD3F1400761072 /* CGPoint+Ext2.swift in Sources */,
 				C7C2AF301EF6CC97004F257A /* NewsTableViewController.swift in Sources */,
 				C7752A7A1F1D0318007B9DA8 /* AnagramsViewController.swift in Sources */,
 				C7EE7BFE1EF517A000DF84B3 /* SliderMenuDrawerCustomViewController.swift in Sources */,
@@ -4516,6 +4530,7 @@
 				C7C2AF641EF6CD35004F257A /* NewStretchyHeaderItem.swift in Sources */,
 				C7C2AF591EF6CD0B004F257A /* SpringBasedDrawerViewController.swift in Sources */,
 				C7D0DE741F0534DF000CD3D1 /* UIViewSlidesViewController.swift in Sources */,
+				C76CD8AB1FAD3F1400761072 /* CGPath+Ext.swift in Sources */,
 				C76F04F01EF505E40090F71B /* SliderMenuDrawerViewController.swift in Sources */,
 				C7B6A83C1F44DE3A00EEB206 /* YoutubeMenuBar.swift in Sources */,
 				C7BE65E41EE2A23E00A05286 /* MainCollectionViewCell.swift in Sources */,
@@ -4604,6 +4619,7 @@
 				C7C2AF141EF6CC68004F257A /* UIApplication+Ext.swift in Sources */,
 				C7C2AF111EF6CC68004F257A /* Math+Ext.swift in Sources */,
 				C7752A9B1F1D0489007B9DA8 /* CAEmitterCell+Ext.swift in Sources */,
+				C76CD8611FAD20A900761072 /* GameLoop.swift in Sources */,
 				C7C2AF1E1EF6CC68004F257A /* UIWindow+Ext.swift in Sources */,
 				C77987871F95315700A524BF /* UIScrollView+Ext.swift in Sources */,
 			);
