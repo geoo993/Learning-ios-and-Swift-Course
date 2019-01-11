@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import LearningSwiftCourseExtensions
 
 private let reuseIdentifier = "MainCell"
 
@@ -27,9 +27,9 @@ class MainCollectionViewController: UICollectionViewController {
                            //"ColorsViewController": "ColorsMain",
                            //"ScrollViewController": "ScrollViewMain",
                            //"CustomPageViewController" : "PageViewMain",
-                           //"SlideShowViewController" : "SlideShowMain",
+                           "SlideShowViewController" : "SlideShowMain",
                            //"ParallaxHeaderTableViewController" : "ParallaxHeaderMain",
-                           //"ParallaxViewController" : "ParallaxMain",
+                           "ParallaxViewController" : "ParallaxMain",
                            //"ImageViewerViewController" : "ImageViewerMain",
                            //"ImageCropperViewController" : "ImageCropperMain",
                            //"ImagePickerCoreMLViewNavigationController" : "ImagePickerCoreMLViewMain", 
@@ -46,7 +46,7 @@ class MainCollectionViewController: UICollectionViewController {
            //                "SliderMenuDrawerNavigationController" : "SliderMenuDrawerMain",
                             //"SearchBarViewNavigationController" : "SearchBarMain",
            //                 "StretchyHeaderRevealViewController" : "StretchyHeaderMain",
-                            //"BBCiPlayerTableViewController" : "BBCiPlayerMain",
+                            "BBCiPlayerTableViewController" : "BBCiPlayerMain",
                             //"SimpleSpringDrawerViewController" : "SimpleSpringDrawerMain",
                             //"BBCiPlayerStretchyHeaderViewController" : "BBCiPlayerStretchyHeaderMain",
                             //"UIPickerViewController" : "UIPickerMain",
@@ -63,13 +63,13 @@ class MainCollectionViewController: UICollectionViewController {
                             //"MovingBallsViewController" : "MovingBallsMain",
                             //"AnagramsViewController": "AnagramsMain",
                             //"ParticleEmittersViewController" : "ParticleEmittersMain",
-                            //"YoutubeHomeNavigationController" : "YoutubeMain",
+                            "YoutubeHomeNavigationController" : "YoutubeMain",
                             //"OnboardingProcessNavigationController" : "OnboardingProcessMain",
                             //"ShapesNavigationController" : "ShapesMain",
                             //"LGMainMenuViewController" : "LGMain",
                             //"CompassNavigationController" : "CompassMain",
                             //"DogsNavigationController" : "DogsMain",
-                            "ZigZagScrollViewHomeViewController" : "ZigZagScrollViewMain",
+                            //"ZigZagScrollViewHomeViewController" : "ZigZagScrollViewMain",
  
                            ]
     
@@ -80,9 +80,9 @@ class MainCollectionViewController: UICollectionViewController {
     //Mark: - Set cell width and content inset
     var cellColorName = [String]()
     var contentInset = UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10) 
-    var screenWidth : CGFloat = {
+    var screenWidth : CGFloat {
         return UIScreen.main.bounds.width
-    }()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,7 +94,7 @@ class MainCollectionViewController: UICollectionViewController {
         //self.collectionView!.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
-        cellColorName = UIColor.cssString.take(views.count)
+        cellColorName = ColorsCSS.cssString.take(views.count)
     }
     
     /*
@@ -172,8 +172,6 @@ class MainCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
-    
     
     //did select item (cell) with tap gesture
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
