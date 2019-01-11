@@ -66,7 +66,7 @@ class VideoPlayerViewController: UIViewController {
         
         ///part3
         playerViewController.view.frame = videoView.frame
-        self.addChildViewController(playerViewController)
+        self.addChild(playerViewController)
         self.view.addSubview(playerViewController.view)
         
         
@@ -124,7 +124,7 @@ class VideoPlayerViewController: UIViewController {
     
     // maybe add this loop at the end, after viewDidLoad
      func loopVideo() { 
-        player?.seek(to: kCMTimeZero) 
+        player?.seek(to: CMTime.zero) 
         player?.play()
     }
     

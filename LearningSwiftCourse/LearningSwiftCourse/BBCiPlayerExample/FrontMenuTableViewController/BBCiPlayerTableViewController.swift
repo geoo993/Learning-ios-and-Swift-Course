@@ -78,8 +78,8 @@ class BBCiPlayerTableViewController: UIViewController {
     
     var cellSpacing : CGFloat = 2
     var cellVerticalInsect : CGFloat = 4
-    var cellHeight : CGFloat = CGFloat.overrideHeightSizeF(size: 260)
-    var cellHeaderHeight = CGFloat.overrideHeightSizeF(size: 400)
+    var cellHeight : CGFloat = CGFloat.recommenedHeight(withReferencedDevice: UIDevice.current.modelName, desiredHeight: 260)
+    var cellHeaderHeight = CGFloat.recommenedHeight(withReferencedDevice: UIDevice.current.modelName, desiredHeight: 400)
     
     var disposable = DisposeBag()
     
@@ -94,7 +94,7 @@ class BBCiPlayerTableViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.bbciplayerDark()
+        view.backgroundColor = UIColor.bbciplayerDark
     }
 
     override func didReceiveMemoryWarning() {
@@ -156,7 +156,7 @@ class BBCiPlayerTableViewController: UIViewController {
             bbcparliamentItems[2],
             bbcfourItems[8],
             bbcthreeItems[4],
-        ].flatMap{ $0.image }
+            ].compactMap{ $0.image }
     }
     
 //    func getTopAreaHeight() -> CGFloat
@@ -222,7 +222,7 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
         //cell.tag = indexPath.section
         cell.collectionData = mainMenuData[indexPath.section]
         //cell.collectionView.collectionViewLayout.invalidateLayout()
-        cell.backgroundColor = UIColor.bbciplayerDark()
+        cell.backgroundColor = UIColor.bbciplayerDark
         cell.collectionViewCellHeight = cellHeight
         cell.cellLineSpacing = cellSpacing
         cell.cellVerticalInsect = cellVerticalInsect
@@ -246,7 +246,7 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
         let sectionHeaderFrame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: cellHeaderHeight)
         let sectionHeader = UIView(frame: sectionHeaderFrame)
         
-        sectionHeader.backgroundColor = UIColor.bbciplayerDark()
+        sectionHeader.backgroundColor = UIColor.bbciplayerDark
         addItemsInSectionHeader(with: sectionHeader, section: section)
         
         //add button above items
@@ -305,7 +305,7 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
         let captionText = mainSectionsItems[section].item.caption.rawValue
         captionLabel.text = captionText
         captionLabel.textColor = UIColor.white
-        captionLabel.backgroundColor = (captionText == "") ? UIColor.clear : UIColor.bbciplayerPink()
+        captionLabel.backgroundColor = (captionText == "") ? UIColor.clear : UIColor.bbciplayerPink
         captionLabel.font = UIFont(name: FamilyName.helvetica.rawValue, size: 8)
         view.addSubview(captionLabel)
         
@@ -324,7 +324,7 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
                    width: screen.width - 10, 
                    height: bottomViewHeight * 0.3))
         channelLabel.text = mainSectionsItems[section].channel
-        channelLabel.textColor = UIColor.bbciplayerWhiteGray()
+        channelLabel.textColor = UIColor.bbciplayerWhiteGray
         channelLabel.font = UIFont(name: FamilyName.arialHebrewLight.rawValue, size: 12)
         
         let contentTitleLabel = UILabel(frame: 
@@ -343,7 +343,7 @@ extension BBCiPlayerTableViewController: UITableViewDataSource, UITableViewDeleg
                    width: screen.width - 10, 
                    height: bottomViewHeight * 0.3))
         contentDescriptionLabel.text = mainSectionsItems[section].description
-        contentDescriptionLabel.textColor = UIColor.bbciplayerWhiteGray()
+        contentDescriptionLabel.textColor = UIColor.bbciplayerWhiteGray
         contentDescriptionLabel.numberOfLines = 2
         contentDescriptionLabel.font = UIFont(name: FamilyName.arialHebrewLight.rawValue, size: 12)
 

@@ -10,12 +10,91 @@ import Foundation
 
 public extension CGPoint {
     
-    public func RotatePointAboutOrigin( angle: CGFloat) -> CGPoint
+    public static func point(_ x: CGFloat, _ y: CGFloat) -> CGPoint {
+        return CGPoint(x: x, y: y)
+    }
+    
+    public func distance(from rect: CGRect) -> CGFloat {
+        let dx = max(rect.minX - x, x - rect.maxX, 0)
+        let dy = max(rect.minY - y, y - rect.maxY, 0)
+        return dx * dy == 0 ? max(dx, dy) : hypot(dx, dy)
+    }
+    
+    public func distance(to point:CGPoint) -> CGFloat {
+        let dx = pow(point.x - self.x, 2)
+        let dy = pow(point.y - self.y, 2)
+        return sqrt(dx+dy)
+    }
+    
+    public func rotatePointAboutOrigin( angle: CGFloat) -> CGPoint
     {
         // https://stackoverflow.com/questions/1595285/what-is-the-best-way-to-rotate-a-cgpoint-on-a-grid
         let s : CGFloat = CGFloat(sinf(Float(angle)))
         let c : CGFloat = CGFloat(cosf(Float(angle)))
         return CGPoint(x: c * self.x - s * self.y, y: s * self.x + c * self.y);
+    }
+    
+    
+    /// Finds the closest `t` value on path for a given point.
+    ///
+    /// - Parameter fromPoint: A given point
+    /// - Returns: The closest point on the path within the lookup table.
+    public func findClosestPointOnPath(within points: [CGPoint]) -> CGPoint {
+        
+        let lookupTable = points
+        let fromPoint = self
+        if (lookupTable.count <= 0){ return fromPoint }
+        let end = lookupTable.count
+        var dd = fromPoint.distanceTo( lookupTable.first!)
+        var d: CGFloat = 0
+        var f = 0
+        for i in 1..<end {
+            d = fromPoint.distanceTo( lookupTable[i])
+            if d < dd {
+                f = i
+                dd = d
+            }
+        }
+        return lookupTable[f]
+    }
+    
+    /// Calculates a point at given t value, where t in 0.0...1.0
+    public func calculateLinear(t: CGFloat, p1: CGPoint, p2: CGPoint) -> CGPoint {
+        let mt : CGFloat = 1.0 - t
+        let x = mt * p1.x + t * p2.x
+        let y = mt * p1.y + t * p2.y
+        return CGPoint(x: x, y: y)
+    }
+    
+    /// Calculates a point at given t value, where t in 0.0...1.0
+    public func calculateCube(t: CGFloat, p1: CGPoint, p2: CGPoint, p3: CGPoint, p4: CGPoint) -> CGPoint {
+        let mt : CGFloat = 1.0 - t
+        let mt2 = mt * mt
+        let t2 = t * t
+        
+        let a = mt2 * mt
+        let b = mt2 * t * 3
+        let c = mt * t2 * 3
+        let d = t * t2
+        
+        let x = a * p1.x + b * p2.x + c * p3.x + d * p4.x
+        let y = a * p1.y + b * p2.y + c * p3.y + d * p4.y
+        return CGPoint(x: x, y: y)
+    }
+    
+    /// Calculates a point at given t value, where t in 0.0...1.0
+    public func calculateQuad(t: CGFloat, p1: CGPoint, p2: CGPoint, p3: CGPoint) -> CGPoint {
+        let mt : CGFloat = 1.0 - t
+        let mt2 = mt * mt
+        let t2 = t * t
+        
+        let a = mt2
+        let b = mt * t * 2.0
+        let c = t2
+        
+        let x = a * p1.x + b * p2.x + c * p3.x
+        let y = a * p1.y + b * p2.y + c * p3.y
+        return CGPoint(x: x, y: y)
     }
     
     
@@ -43,7 +122,7 @@ public extension CGPoint {
         return self
     }
     
-  
+    
     /**
      * Returns the length (magnitude) of the vector described by the CGPoint.
      */
@@ -97,13 +176,13 @@ public extension CGPoint {
     {
         return self + point
     }
-   
+    
 }
 
 #if !(arch(x86_64) || arch(arm64))
-    func sqrt(a: CGFloat) -> CGFloat {
-        return CGFloat(sqrtf(Float(a)))
-    }
+func sqrt(a: CGFloat) -> CGFloat {
+    return CGFloat(sqrtf(Float(a)))
+}
 #endif
 
 /**

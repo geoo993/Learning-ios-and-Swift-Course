@@ -43,12 +43,12 @@ public class GameLoop : NSObject {
          * at the requested rate.
          */
         displayLink.preferredFramesPerSecond = framesPerInterval
-        displayLink.add(to: RunLoop.main, forMode: RunLoopMode.commonModes)
+        displayLink.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
     }
     
     public func stop() {
         displayLink.invalidate()
-        displayLink.remove(from: RunLoop.main, forMode: RunLoopMode.commonModes)
+        displayLink.remove(from: RunLoop.main, forMode: RunLoop.Mode.common)
         displayLink = nil
     }
     

@@ -180,7 +180,7 @@ class LGMainMenuViewController: LGSideMenuController {
         if (!isRightViewStatusBarHidden ||
             (rightViewAlwaysVisibleOptions.contains(.onPadLandscape) &&
                 UI_USER_INTERFACE_IDIOM() == .pad &&
-                UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation))) {
+               UIApplication.shared.statusBarOrientation.isLandscape)) {
             rightView?.frame = CGRect(x: 0.0, y: 20.0, width: size.width, height: size.height - 20.0)
         }
     }

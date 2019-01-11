@@ -62,21 +62,21 @@ class ButtonsTypesViewController: UIViewController {
         button.layer.cornerRadius = 0.05 * button.bounds.size.width
         button.adjustsImageWhenHighlighted = true
         //button.titleLabel?.font = button.titleLabel?.font.withSize(15) 
-        button.setTitle("Systems Code Button", for: UIControlState.normal)
+        button.setTitle("Systems Code Button", for: UIControl.State.normal)
         
         //load images
         var defaultImage = UIImage(named: "buttonWhiteBackground")
         defaultImage = defaultImage?.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5))
         let highlighedImage = UIImage(named: "buttonWhiteBackHighlighted")
-        button.setBackgroundImage(defaultImage, for: UIControlState.normal)
-        button.setBackgroundImage(highlighedImage, for: UIControlState.highlighted)
-        button.setBackgroundImage(highlighedImage, for: UIControlState.selected)
+        button.setBackgroundImage(defaultImage, for: UIControl.State.normal)
+        button.setBackgroundImage(highlighedImage, for: UIControl.State.highlighted)
+        button.setBackgroundImage(highlighedImage, for: UIControl.State.selected)
         self.view.addSubview(button)
         
         //set gestures target actions
-        button.addTarget(self, action: #selector(systemsButtonDown), for: UIControlEvents.touchDown)
-        button.addTarget(self, action: #selector(systemsButtonTouchUpInside), for: UIControlEvents.touchUpInside)
-        button.addTarget(self, action: #selector(systemsButtonTouchUpOutside), for: UIControlEvents.touchUpOutside)
+        button.addTarget(self, action: #selector(systemsButtonDown), for: UIControl.Event.touchDown)
+        button.addTarget(self, action: #selector(systemsButtonTouchUpInside), for: UIControl.Event.touchUpInside)
+        button.addTarget(self, action: #selector(systemsButtonTouchUpOutside), for: UIControl.Event.touchUpOutside)
     }
     @objc func systemsButtonDown(_ sender : UIButton){
         print("Systems Button Touch Down")
@@ -106,14 +106,14 @@ class ButtonsTypesViewController: UIViewController {
         //add background images
         let defaultImage = UIImage(named: "buttonBlueBackground")
         let highlighedImage = UIImage(named: "buttonBlueBackHighlighted")
-        button.setBackgroundImage(defaultImage, for: UIControlState.normal)
-        button.setBackgroundImage(highlighedImage, for: UIControlState.highlighted)
+        button.setBackgroundImage(defaultImage, for: UIControl.State.normal)
+        button.setBackgroundImage(highlighedImage, for: UIControl.State.highlighted)
         self.view.addSubview(button)
         
         //set gestures target actions
-        button.addTarget(self, action: #selector(customButtonDown), for: UIControlEvents.touchDown)
-        button.addTarget(self, action: #selector(customButtonTouchUpInside), for: UIControlEvents.touchUpInside)
-        button.addTarget(self, action: #selector(customButtonTouchUpOutside), for: UIControlEvents.touchUpOutside)
+        button.addTarget(self, action: #selector(customButtonDown), for: UIControl.Event.touchDown)
+        button.addTarget(self, action: #selector(customButtonTouchUpInside), for: UIControl.Event.touchUpInside)
+        button.addTarget(self, action: #selector(customButtonTouchUpOutside), for: UIControl.Event.touchUpOutside)
     }
     
     @objc func customButtonDown(_ sender : UIButton){

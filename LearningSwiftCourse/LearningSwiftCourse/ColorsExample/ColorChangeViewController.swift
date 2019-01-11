@@ -29,9 +29,9 @@ class ColorChangeViewController: UIViewController {
             colorViewDuplicate.backgroundColor = colorView.backgroundColor
             colorViewDuplicate.center = CGPoint(x: self.view.center.x, y: colorView.center.y + colorView.frame.height)
             self.view.addSubview(colorViewDuplicate)
-            sender.setTitle("Hide", for: UIControlState.normal)
+            sender.setTitle("Hide", for: UIControl.State.normal)
         }else{
-            sender.setTitle("Show", for: UIControlState.normal)
+            sender.setTitle("Show", for: UIControl.State.normal)
             colorViewDuplicate.removeFromSuperview()
             colorViewDuplicate = nil
         }

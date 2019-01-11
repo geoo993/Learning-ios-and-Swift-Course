@@ -40,7 +40,7 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate, UIN
         self.navigationController?.delegate = self
         self.navigationItem.title = media
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
-        self.tableView.rowHeight = UITableViewAutomaticDimension 
+        self.tableView.rowHeight = UITableView.automaticDimension 
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         //self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -120,9 +120,9 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate, UIN
             return UITableViewCell()
         }
         cell.isUserInteractionEnabled = true
-        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-        cell.selectionStyle = UITableViewCellSelectionStyle.blue
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+        cell.selectionStyle = UITableViewCell.SelectionStyle.blue
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
         
         cell.tag = indexPath.row
         
@@ -156,14 +156,14 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate, UIN
     }
     
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
             
             sections[indexPath.section].remove(at: indexPath.row)
             //MediaLayers.getProducts.remove(at: indexPath.row)
             // Delete the row from the data source
-            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            self.tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -189,7 +189,7 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate, UIN
             return 0.0 
         }
         
-        let size: CGSize = cell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        let size: CGSize = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
         let height = size.height
         
         return height 
@@ -268,7 +268,7 @@ class ChosenMediaTableViewController: UITableViewController, AddingDelegate, UIN
 extension ChosenMediaTableViewController: UIViewControllerTransitioningDelegate 
 {
     
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if operation == .push {
             customInteractionController.attachToViewController(toVC)
         }

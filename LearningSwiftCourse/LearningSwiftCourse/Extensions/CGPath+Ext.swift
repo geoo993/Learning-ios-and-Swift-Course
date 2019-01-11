@@ -1,26 +1,49 @@
-//
-//  CGPath+Ext.swift
-//  StorySmartiesView
-//
-//  Created by GEORGE QUENTIN on 25/10/2017.
-//  Copyright © 2017 LEXI LABS. All rights reserved.
-//
 
 import Foundation
-import UIKit
-
 
 public extension CGPath {
     
-    public func forEach( body: @convention(block) (CGPathElement) -> Void) {
-        typealias Body = @convention(block) (CGPathElement) -> Void
-        let callback: @convention(c) (UnsafeMutableRawPointer, UnsafePointer<CGPathElement>) -> Void = { (info, element) in
-            let body = unsafeBitCast(info, to: Body.self)
-            body(element.pointee)
+    typealias PathApplier = @convention(block) (UnsafePointer<CGPathElement>) -> Void
+    
+    public func apply(with applier: PathApplier) {
+        
+        let callback: @convention(c)(UnsafeMutableRawPointer, UnsafePointer<CGPathElement>) -> Void = { (info, element) in
+            
+            let block = unsafeBitCast(info, to: PathApplier.self)
+            block(element)
+            
         }
-        print("path element memory: ", MemoryLayout.size(ofValue: body))
-        let unsafeBody = unsafeBitCast(body, to: UnsafeMutableRawPointer.self)
-        self.apply(info: unsafeBody, function: unsafeBitCast(callback, to: CGPathApplierFunction.self))
+        let info = withoutActuallyEscaping(applier) { escapableApplier in
+            unsafeBitCast(escapableApplier, to: UnsafeMutableRawPointer.self)
+        }
+        self.apply(info: info, function: unsafeBitCast(callback, to: CGPathApplierFunction.self))
+    }
+    
+    public var elements: [PathElement] {
+        var pathElements = [PathElement]()
+        
+        apply { (element) in
+            
+            let pathElement = PathElement(element: element.pointee)
+            pathElements.append(pathElement)
+        }
+        
+        return pathElements
+    }
+    
+    public func forEach(body: @convention(block) (CGPathElement) -> Void) {
+        typealias Body = @convention(block) (CGPathElement) -> Void
+        let callback: @convention(c) (UnsafeMutableRawPointer, UnsafePointer<CGPathElement>)
+            -> Void = { info, element in
+                let body = unsafeBitCast(info, to: Body.self)
+                body(element.pointee)
+        }
+        // print("path element memory: ", MemoryLayout.size(ofValue: body))
+        let safeBody = withoutActuallyEscaping(body) { escapableBody in
+            unsafeBitCast(escapableBody, to: UnsafeMutableRawPointer.self)
+        }
+        //        let unsafeBody = unsafeBitCast(body, to: UnsafeMutableRawPointer.self)
+        apply(info: safeBody, function: unsafeBitCast(callback, to: CGPathApplierFunction.self))
     }
     
     public func getPathElementsPoints() -> [CGPoint] {
@@ -44,7 +67,7 @@ public extension CGPath {
         return arrayPoints
     }
     
-    func getPathElementsPointsAndTypes() -> ([CGPoint],[CGPathElementType]) {
+    public func getPathElementsPointsAndTypes() -> ([CGPoint],[CGPathElementType]) {
         var arrayPoints : [CGPoint]! = [CGPoint]()
         var arrayTypes : [CGPathElementType]! = [CGPathElementType]()
         self.forEach { element in
@@ -72,36 +95,36 @@ public extension CGPath {
         }
         return (arrayPoints,arrayTypes)
     }
-}
-
-public extension CGPathElement{
     
-    public var point: CGPoint{
-        switch type {
-        case .moveToPoint, .addLineToPoint:
-            return self.points[0]
-        case .addQuadCurveToPoint:
-            return self.points[1]
-        case .addCurveToPoint:
-            return self.points[2]
-        case .closeSubpath:
-            return CGRect.null.origin
+    public func subpath(toPercentOfLength toPercent: CGFloat) -> UIBezierPath {
+        
+        let length: CGFloat = CGFloat(self.elements.count)
+        let subpathlenth: Int = Int(length.value(with: toPercent))
+        var currentLength: Int = 0
+        let bezierPath = UIBezierPath()
+        
+        for type in self.elements {
+            if currentLength >= subpathlenth {
+                break
+            }
+            
+            switch type {
+            case .move(to: let point):
+                bezierPath.move(to: point)
+            case .addLine(to: let point):
+                bezierPath.addLine(to: point)
+            case .addQuadCurve(let point, to: let controlPoint):
+                bezierPath.addQuadCurve(to: controlPoint, controlPoint: point)
+            case .addCurve(let controlPoint1, let controlPoint2, to: let point):
+                bezierPath.addCurve(to: point, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
+            case .closeSubpath:
+                bezierPath.close()
+                
+            }
+            currentLength += 1
+            
         }
-    }
-    
-    public func distance(to point: CGPoint, startPoint: CGPoint ) -> CGFloat{
-        switch type {
-        case .moveToPoint:
-            return 0.0
-        case .closeSubpath:
-            return point.distance(to:startPoint)
-        case .addLineToPoint:
-            return point.distance(to:self.points[0])
-        case .addCurveToPoint:
-            return UIBezierPath.BezierCurveLength(p0: point, c1: self.points[0], c2: self.points[1], p1: self.points[2])
-        case .addQuadCurveToPoint:
-            return UIBezierPath.BezierCurveLength(p0: point, c1: self.points[0], p1: self.points[1])
-        }
+        return bezierPath
     }
 }
 

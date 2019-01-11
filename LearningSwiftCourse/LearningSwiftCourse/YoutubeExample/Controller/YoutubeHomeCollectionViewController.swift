@@ -83,7 +83,7 @@ class YoutubeHomeCollectionViewController: UICollectionViewController {
         navigationController?.hidesBarsOnSwipe = true
         
         let redView = UIView()
-        redView.backgroundColor = UIColor.topMenuRedColor()
+        redView.backgroundColor = UIColor.topMenuRedColor
         view.addSubview(redView)
         view.addConstraints(with: "H:|[v0]|", views: redView)
         view.addConstraints(with: "V:[v0(50)]", views: redView) // Nav Bar Height

@@ -92,7 +92,7 @@ public class AnimatableCircleView: UIView {
             animation.toValue = 1
             
             // Do a EaseInEaseOut animation (i.e. the speed of the animation stays the same)
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
             
 //            // Do a linear animation (i.e. the speed of the animation stays the same)
 //            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
@@ -127,7 +127,7 @@ public class AnimatableCircleView: UIView {
             animation.toValue = 0
             
             // Do a EaseInEaseOut animation (i.e. the speed of the animation stays the same)
-            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
             
             // Set the circleLayer's strokeEnd property to 0.0 now so that it's the
             // right value when the animation ends.

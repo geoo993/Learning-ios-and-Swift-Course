@@ -40,12 +40,12 @@ class SlideShowViewController: UIViewController {
         
         if containerView == nil {
             let frame = self.view.frame
-            let images = imageNames.flatMap{ UIImage(named: $0)! }
+            let images = imageNames.compactMap{ UIImage(named: $0)! }
             
             containerView = SlideShowView(frame: frame, parentView: view, images: images) 
             if let container = containerView {
                 view.addSubview(container)
-                view.bringSubview(toFront: homebutton) 
+                view.bringSubviewToFront(homebutton) 
             }
         }
         

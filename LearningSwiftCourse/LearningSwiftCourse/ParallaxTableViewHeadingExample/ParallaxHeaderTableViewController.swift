@@ -10,6 +10,7 @@
 //https://blog.frozenfirestudios.com/how-to-add-a-stretchy-flair-to-your-uicollectionview-e403822e0f33
 
 import UIKit
+import LearningSwiftCourseExtensions
 
 class ParallaxHeaderTableViewController: UITableViewController {
 
@@ -20,7 +21,7 @@ class ParallaxHeaderTableViewController: UITableViewController {
     let imageNames = ["autumnlandscape", "desert", "GoldenGateBridge", "happiness","japanvillage", "pexels", "treesfallredleaves", "bg-header"] 
     
     let colorItems = {
-        return UIColor.cssString.sorted()
+        return ColorsCSS.cssString.sorted()
     }()
     
     //Mark: - Status bar
@@ -48,7 +49,7 @@ class ParallaxHeaderTableViewController: UITableViewController {
     
         if containerView == nil {
             if let frame = tableView.tableHeaderView?.frame {
-                let images = imageNames.flatMap{ UIImage(named: $0)! }
+                let images = imageNames.compactMap{ UIImage(named: $0)! }
                 
                 containerView = SlideShowView(frame: frame, parentView: tableView.tableHeaderView!, images: images) 
                 containerView?.moveToDistance = 30
@@ -98,11 +99,11 @@ class ParallaxHeaderTableViewController: UITableViewController {
         let index = indexPath.row
         let colorName = colorItems[index]
         let color = UIColor(hex: colorName)
-        let hexValue = color.toHexString()
-        let redComponents = color.getRBGValues().r.round(to: 2)
-        let greenComponents = color.getRBGValues().g.round(to: 2)
-        let blueComponents = color.getRBGValues().b.round(to: 2)
-        let alphaComponents = color.getRBGValues().a.round(to: 2)
+        let hexValue = color.toHexString
+        let redComponents = color.rgbValues.r.round(to: 2)
+        let greenComponents = color.rgbValues.g.round(to: 2)
+        let blueComponents = color.rgbValues.b.round(to: 2)
+        let alphaComponents = color.rgbValues.a.round(to: 2)
         
         cell.colorLabel.text = colorName
         cell.colorHexLabel.text = hexValue
@@ -127,7 +128,7 @@ class ParallaxHeaderTableViewController: UITableViewController {
     
 
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     /*
     // Override to support conditional editing of the table view.

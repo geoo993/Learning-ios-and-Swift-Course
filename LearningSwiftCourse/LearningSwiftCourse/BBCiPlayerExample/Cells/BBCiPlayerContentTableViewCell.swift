@@ -20,7 +20,7 @@ class BBCiPlayerContentTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.selectedBackgroundView = UIView()
-        channelLabel.textColor = UIColor.bbciplayerPink()
+        channelLabel.textColor = UIColor.bbciplayerPink
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -117,7 +117,7 @@ class DynamicScrollViewController: UIViewController {
             let buttonBackgroundView = UIView(frame: CGRect(x: buttonBackgroundViewX, y: 0, width: buttonBackgroundViewWidth, height: scrollViewHeight))
             buttonBackgroundView.backgroundColor = UIColor.clear
             panelSrollView.addSubview(buttonBackgroundView)
-            panelSrollView.sendSubview(toBack: buttonBackgroundView)
+            panelSrollView.sendSubviewToBack(buttonBackgroundView)
             buttonsBackgroundView.append(buttonBackgroundView)
         }
         
@@ -135,7 +135,7 @@ class DynamicScrollViewController: UIViewController {
     func addBorder(to view: UIView){
         view.clipsToBounds = true
         view.layer.cornerRadius = 14
-        view.layer.borderColor = UIColor.systemsBlueColor().cgColor
+        view.layer.borderColor = UIColor.systemsBlueColor.cgColor
         view.layer.borderWidth = 2.0
     }
     
@@ -177,7 +177,7 @@ class DynamicScrollViewController: UIViewController {
                 if let index = self.getIndex(with: button) {
                     self.changeButtonColor(at: index, color: self.selectedColor)
                 }
-            }).addDisposableTo(disposable)
+            }).disposed(by: disposable)
         }
         clearButtonsBackgroundViewColor()
         
@@ -188,14 +188,14 @@ class DynamicScrollViewController: UIViewController {
         let text = "UIApplicationDelegate"
         
         let labelframe = fontTestLabel.frame
-        let labelfont = text.getFontSize(inFrame: labelframe, desiredFontSize: 100, reduceBy: 1)
-        fontTestLabel.font = UIFont.systemFont(ofSize: labelfont)
+        let labelfont = text.getFontSize(fromFont: self.font, inFrame: labelframe, desiredFontSize: 100, reduceBy: 1)
+        fontTestLabel.font = labelfont
         fontTestLabel.text = text
         addBorder(to:fontTestLabel)
         
         let buttonframe = fontTestButton.frame
-        let buttonfont = text.getFontSize(inFrame: buttonframe, desiredFontSize: 100, reduceBy: 1)
-        fontTestButton.titleLabel?.font = UIFont.systemFont(ofSize: buttonfont)
+        let buttonfont = text.getFontSize(fromFont: self.font, inFrame: buttonframe, desiredFontSize: 100, reduceBy: 1)
+        fontTestButton.titleLabel?.font = buttonfont
         fontTestButton.setTitle(text, for: .normal)
         addBorder(to:fontTestButton)
         
@@ -213,7 +213,7 @@ class DynamicScrollViewController: UIViewController {
             
             let text = textScrollViewElements[i] 
             
-            elementwidth = text.getWidth(constrainedBy: elementheight, with: font)
+            elementwidth = text.width(withConstraintedHeight: elementheight, font: font)
             let elementwidthWithSpacing = (elementwidth + innerSpacing)
             let frame = CGRect(x: 0, y: 0, width: elementwidthWithSpacing, height: elementheight )
             
@@ -251,7 +251,7 @@ class DynamicScrollViewController: UIViewController {
         let elementheight = textScrollView.frame.size.height
         let numberOfElements = textScrollViewElements.count
         
-        elementwidth = text.getWidth(constrainedBy: elementheight, with: font)
+        elementwidth = text.width(withConstraintedHeight: elementheight, font: font)
         let elementwidthWithSpacing = (elementwidth + innerSpacing)
         let frame = CGRect(x: 0, y: 0, width: elementwidthWithSpacing, height: elementheight )
        
@@ -267,7 +267,7 @@ class DynamicScrollViewController: UIViewController {
                 xPos = beginSpace
             }else {
                 let offset = newTexts.map{ text -> CGFloat in
-                    let width = text.getWidth(constrainedBy: elementheight, with: font)
+                    let width = text.width(withConstraintedHeight: elementheight, font: font)
                     return (width + innerSpacing + outerSpacing)
                 }.reduce(0, +)
                 xPos = beginSpace + offset

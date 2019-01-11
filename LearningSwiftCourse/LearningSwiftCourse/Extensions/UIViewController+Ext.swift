@@ -22,12 +22,12 @@ public extension UIViewController {
     
     func addMenuButton(with target: Any?, selector: Selector?){
         var image = UIImage(named: "hamburger_icon")
-        image = image?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        image = image?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         
         //create a new button
         let button: UIButton = UIButton(type: .system)
         //set image for button
-        button.setImage(image, for: UIControlState.normal)
+        button.setImage(image, for: UIControl.State.normal)
         //add function for button
         button.addTarget(target, action: selector!, for: .touchUpInside)
         //set frame

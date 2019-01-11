@@ -30,7 +30,7 @@ public extension UINavigationController {
     }
     
     
-    func setRootViewController (_ vc : UIViewController){
+    public func setRootViewController (_ vc : UIViewController){
         viewControllers = [vc]
     }
     
@@ -54,7 +54,7 @@ public extension UINavigationController {
         }
     }
     
-    func unwindBack(to viewController: Swift.AnyClass, animated: Bool = false) {
+    public func unwindBack(to viewController: Swift.AnyClass, animated: Bool = false) {
         
         for element in self.viewControllers as Array {
             if element.isKind(of: viewController) {
@@ -75,15 +75,13 @@ public extension UINavigationController {
         }
     }
     
-    
-    func pushOrPop( to viewController: UIViewController){
-        
+    public func pushOrPop(to viewController: UIViewController) {
         if self.viewControllers.contains(viewController) {
             let fullType = type(of: viewController)
             print("view controller \(fullType), is in the navigation stack. \(self.viewControllers)")
             //self.unwindBack(to: fullType, animated: true)
             self.pop(to: fullType, animated: true)
-        }else {
+        } else {
             self.pushViewController(viewController, animated: true)
         }
     }

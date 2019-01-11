@@ -57,8 +57,8 @@ class AudioCheckViewController: UIViewController {
             
             let audioSession = AVAudioSession.sharedInstance()
             do {
-                try audioSession.setCategory(AVAudioSessionCategoryPlayback)
-            }catch let error {
+            try audioSession.setCategory(AVAudioSession.Category.playback, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
+            } catch let error {
                 print(error.localizedDescription)
             }
         }
@@ -72,7 +72,7 @@ class AudioCheckViewController: UIViewController {
             guard let this = self else { return }
             this.audioPlayer?.play()
                 
-        }).addDisposableTo(disposeBag)
+        }).disposed(by: disposeBag)
         
         pause.backgroundColor = bgColor
         pause.rx.tap
@@ -87,7 +87,7 @@ class AudioCheckViewController: UIViewController {
                 }
             }
             
-        }).addDisposableTo(disposeBag)
+        }).disposed(by: disposeBag)
         
         restart.backgroundColor = bgColor
         restart.rx.tap
@@ -103,7 +103,7 @@ class AudioCheckViewController: UIViewController {
                     this.audioPlayer?.play()
                 }
             }
-        }).addDisposableTo(disposeBag)
+        }).disposed(by: disposeBag)
         
         stop.backgroundColor = bgColor
         stop.rx.tap
@@ -118,7 +118,7 @@ class AudioCheckViewController: UIViewController {
                     this.audioPlayer?.currentTime = 0
                 }
             }
-        }).addDisposableTo(disposeBag)
+        }).disposed(by: disposeBag)
         
     }
 

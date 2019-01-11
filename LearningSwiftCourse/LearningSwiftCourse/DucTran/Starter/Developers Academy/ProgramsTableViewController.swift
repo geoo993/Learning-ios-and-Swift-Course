@@ -23,7 +23,7 @@ class ProgramsTableViewController: UITableViewController
         
         // Make the row height dynamic
         tableView.estimatedRowHeight = tableView.rowHeight
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         
         // burger side bar menu
         

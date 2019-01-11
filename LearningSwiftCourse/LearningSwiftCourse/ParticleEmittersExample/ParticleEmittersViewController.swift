@@ -54,7 +54,7 @@ public class ParticleEmittersViewController: UIViewController {
         
         particlesView = ParticleEmitterView(frame: CGRect(x: xPosition, y: yPosition, width: width,height: 10), type: type)
         view.addSubview(particlesView)
-        view.sendSubview(toBack: particlesView)
+        view.sendSubviewToBack(particlesView)
     }
     
     // background color interpolation

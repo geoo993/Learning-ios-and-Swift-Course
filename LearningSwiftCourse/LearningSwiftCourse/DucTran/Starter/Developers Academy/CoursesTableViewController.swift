@@ -25,7 +25,7 @@ class CoursesTableViewController: UITableViewController
         
         // Make the row height dynamic
         tableView.estimatedRowHeight = tableView.rowHeight
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
     
         displayWalkthroughs()
         
@@ -72,11 +72,11 @@ class CoursesTableViewController: UITableViewController
         
         let course = programs[indexPath.section].courses[indexPath.row]
         
-        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.normal, title: "Share") { (action, indexPath) -> Void in
+        let shareAction = UITableViewRowAction(style:UITableViewRowAction.Style.normal, title: "Share") { (action, indexPath) -> Void in
             let shareActionSheet = UIAlertController(title: nil, message: "Share with", preferredStyle: .actionSheet)
             
             // twitter sharing action
-            let twitterShareAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.default) { (action) -> Void in
+            let twitterShareAction = UIAlertAction(title: "Twitter", style: UIAlertAction.Style.default) { (action) -> Void in
                 if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
                     // good to go, let's show the twitter composer
                     let tweetComposer = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
@@ -91,7 +91,7 @@ class CoursesTableViewController: UITableViewController
             }
             
             // facebook sharing action
-            let facebookShareAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.default) { (action) -> Void in
+            let facebookShareAction = UIAlertAction(title: "Facebook", style: UIAlertAction.Style.default) { (action) -> Void in
                 if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
                     // good to go, let's show the twitter composer
                     let facebookComposer = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
@@ -106,7 +106,7 @@ class CoursesTableViewController: UITableViewController
                 }
             }
 
-            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
             
             shareActionSheet.addAction(twitterShareAction)
             shareActionSheet.addAction(facebookShareAction)
@@ -189,7 +189,7 @@ class CoursesTableViewController: UITableViewController
             })
         } else {
             // device doesn't support touch id 
-            print(authError?.localizedDescription)
+            print(authError?.localizedDescription as Any)
             
             // show other methods to login
         }
@@ -206,9 +206,9 @@ class CoursesTableViewController: UITableViewController
             print("authentication was canceled by the system")
         case LAError.Code.userCancel.rawValue:
             print("user cancel auth")
-        case LAError.Code.touchIDNotEnrolled.rawValue:
+        case LAError.Code.biometryNotAvailable.rawValue:
             print("user hasn't enrolled any finger with touch id")
-        case LAError.Code.touchIDNotAvailable.rawValue:
+        case LAError.Code.biometryNotAvailable.rawValue:
             print("touch id is not available")
         case LAError.Code.userFallback.rawValue:
             print("user tapped enter password")
@@ -222,7 +222,7 @@ class CoursesTableViewController: UITableViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Show Course Detail" {
             let courseDetailTVC = segue.destination as! CourseDetailTableViewController
-            courseDetailTVC.course = sender as! Course
+            courseDetailTVC.course = sender as? Course
         }
     }
 }

@@ -17,7 +17,7 @@ import ObjectiveC
 #endif
 
 public let SkipConstraint = CGRect.null.origin.x
-public let SkipOptions = NSLayoutFormatOptions(rawValue: 0)
+public let SkipOptions = NSLayoutConstraint.FormatOptions(rawValue: 0)
 
 // **************************************
 // MARK: Convenience
@@ -160,7 +160,7 @@ public extension View {
 // **************************************
 public func InstallLayoutFormats(
     formats : [String],
-    options : NSLayoutFormatOptions,
+    options : NSLayoutConstraint.FormatOptions,
     metrics : [String : Any]?,
     bindings : [String : Any],
     priority : LayoutPriority) {
@@ -264,7 +264,7 @@ public func StretchViewToSuperview(view : View, inset : CGSize, priority : Layou
 // **************************************
 
 // Aligning
-public func AlignViewInSuperview(view : View, attribute : NSLayoutAttribute, inset : CGFloat, priority : LayoutPriority) {
+public func AlignViewInSuperview(view : View, attribute : NSLayoutConstraint.Attribute, inset : CGFloat, priority : LayoutPriority) {
     if view.superview == nil {return}
     var actualInset : CGFloat
     switch attribute {
@@ -279,7 +279,7 @@ public func AlignViewInSuperview(view : View, attribute : NSLayoutAttribute, ins
     constraint.isActive = true
 }
 
-public func AlignViews(priority : LayoutPriority, view1 : View, view2 : View, attribute : NSLayoutAttribute) {
+public func AlignViews(priority : LayoutPriority, view1 : View, view2 : View, attribute : NSLayoutConstraint.Attribute) {
     let constraint : NSLayoutConstraint = NSLayoutConstraint(item: view1, attribute: attribute, relatedBy: .equal, toItem: view2, attribute: attribute, multiplier: 1, constant: 0)
     constraint.priority = priority
     constraint.isActive = true
@@ -607,7 +607,7 @@ public func AddConstraint(request : String, view1 : View, view2 : View, m : CGFl
     let relationString = components[1].substring(from: index)
     
     #if os(iOS)
-        let attributes : [String : NSLayoutAttribute] = [
+    let attributes : [String : NSLayoutConstraint.Attribute] = [
         "l":.left, "r":.right, "t":.top, "b":.bottom,
         "cx":.centerX, "cy":.centerY,"w":.width,"h":.height,
         "left":.left, "right":.right, "top":.top, "bottom":.bottom,
@@ -634,7 +634,7 @@ public func AddConstraint(request : String, view1 : View, view2 : View, m : CGFl
         ]
     #endif
     
-    let relations : [String : NSLayoutRelation] = [
+    let relations : [String : NSLayoutConstraint.Relation] = [
         "<":.lessThanOrEqual, "=":.equal, ">":.greaterThanOrEqual]
     
     let firstAttribute = attributes[firstAttributeString] ?? .notAnAttribute

@@ -41,7 +41,7 @@ class AnagramsViewController: UIViewController {
         // Force the device in portrait mode when the view controller gets loaded
         UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
         
-        view.bringSubview(toFront: homeB)
+        view.bringSubviewToFront(homeB)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +62,7 @@ class AnagramsViewController: UIViewController {
         
         controller.onAnagramSolved = self.showLevelMenu
         
-        view.bringSubview(toFront: homeB)
+        view.bringSubviewToFront(homeB)
     }
   
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -90,7 +90,7 @@ class AnagramsViewController: UIViewController {
         //1 show the level selector menu
         let alertController = UIAlertController(title: "Choose Difficulty Level",
           message: nil,
-          preferredStyle:UIAlertControllerStyle.alert)
+          preferredStyle:UIAlertController.Style.alert)
         
         //2 set up the menu actions
         let easy = UIAlertAction(title: "Easy-peasy", style:.default,

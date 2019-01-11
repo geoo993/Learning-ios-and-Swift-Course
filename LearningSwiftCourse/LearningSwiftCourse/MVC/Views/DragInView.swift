@@ -10,6 +10,7 @@
 
 import Foundation
 import UIKit
+import LearningSwiftCourseExtensions
 
 class DragInView : UIView {
     
@@ -28,7 +29,7 @@ class DragInView : UIView {
     fileprivate var kHandleInset :CGFloat = 5
     
     fileprivate var handleView: UIImageView!
-    fileprivate var side = NSLayoutAttribute.notAnAttribute
+    fileprivate var side = NSLayoutConstraint.Attribute.notAnAttribute
     fileprivate var c = NSLayoutConstraint()
 
     @objc func handleCloseTapGesture(_ tapGestureRecognizer: UITapGestureRecognizer) {
@@ -102,7 +103,7 @@ class DragInView : UIView {
 
     }
 
-    init(parent: UIViewController, side: NSLayoutAttribute) {
+    init(parent: UIViewController, side: NSLayoutConstraint.Attribute) {
         super.init(frame: parent.view.frame)
         
         if ![(.left), (.leading), (.right), (.trailing), (.top), (.bottom)].contains((side)) {

@@ -32,7 +32,7 @@ class AnimatableHamburgerView: UIView {
     // MARK: Private
   
     private func configure() {
-        imageView.contentMode = UIViewContentMode.center
+        imageView.contentMode = UIView.ContentMode.center
         addSubview(imageView)
     }
   

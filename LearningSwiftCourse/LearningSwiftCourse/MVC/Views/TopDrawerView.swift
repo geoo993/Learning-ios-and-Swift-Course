@@ -132,7 +132,7 @@ class TopDrawerView: UIView {
     
     func setupSwipeUpGesture(){
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.swiped))
-        swipeUp.direction = UISwipeGestureRecognizerDirection.up
+        swipeUp.direction = UISwipeGestureRecognizer.Direction.up
         self.addGestureRecognizer(swipeUp)
     }
     
@@ -169,7 +169,7 @@ class TopDrawerView: UIView {
     
     @objc func swiped(swipeGestureRecognizer: UISwipeGestureRecognizer)
     {
-        if swipeGestureRecognizer.direction ==  UISwipeGestureRecognizerDirection.up {
+        if swipeGestureRecognizer.direction ==  UISwipeGestureRecognizer.Direction.up {
             
             removePanGestures()
             removeSwipeUpGesture(swipeGestureRecognizer)
@@ -249,7 +249,7 @@ class TopDrawerView: UIView {
         // stiffness is from 0 to 1
         
         let distance = (panMovement + drawerHeight + handleViewInset / 2)
-        let springStiffness = distance.percentageWithF(maxValue: maximumStretch, minValue: drawerHeight) / 100
+        let springStiffness = distance.percentageBetween(maxValue: maximumStretch, minValue: drawerHeight) / 100
         let newPanMovement = panMovement * (1 - springStiffness)
         
         switch panGestureRecognizer.state {

@@ -38,7 +38,7 @@ public extension UITableViewCell
     
     public func removeSeparator(width: CGFloat)
     {
-        self.separatorInset = UIEdgeInsetsMake(0.0, width, 0.0, 0.0)
+        self.separatorInset = UIEdgeInsets(top: 0.0, left: width, bottom: 0.0, right: 0.0)
     }
     
 }

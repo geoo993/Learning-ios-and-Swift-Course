@@ -36,12 +36,12 @@ final class ParallaxHeaderView: UIView {
         
         self.addSubview(containerView)
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[containerView]|",
-                                                           options: NSLayoutFormatOptions(rawValue: 0),
+                                                           options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                                                            metrics: nil,
                                                            views: ["containerView" : containerView]))
         
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[containerView]|",
-                                                           options: NSLayoutFormatOptions(rawValue: 0),
+                                                           options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                                                            metrics: nil,
                                                            views: ["containerView" : containerView]))
         
@@ -63,7 +63,7 @@ final class ParallaxHeaderView: UIView {
         
         containerView.addSubview(imageView)
         containerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[imageView]|",
-                                                                    options: NSLayoutFormatOptions(rawValue: 0),
+                                                                    options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                                                                     metrics: nil,
                                                                     views: ["imageView" : imageView]))
         

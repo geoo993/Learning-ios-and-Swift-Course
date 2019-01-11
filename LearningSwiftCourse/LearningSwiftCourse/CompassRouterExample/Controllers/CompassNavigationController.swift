@@ -23,8 +23,8 @@ struct LoginRoute: Routable {
         loginController.title = username
         
         //currentController.navigationController?.pushViewController(loginController, animated: true)
-        //currentController.navigationController?.pushOrPop(to: loginController)
-        currentController.pushOrPop(to:loginController)
+        currentController.navigationController?.pushOrPop(to: loginController)
+        //currentController.pushOrPop(to:loginController)
         
     }
 }
@@ -39,8 +39,8 @@ struct HomeRoute: Routable {
         rootviewcontroller.title = username
         
         //currentController.navigationController?.pushViewController(rootviewcontroller, animated: true)
-        //currentController.navigationController?.pushOrPop(to: rootviewcontroller)
-        currentController.pushOrPop(to:rootviewcontroller)
+        currentController.navigationController?.pushOrPop(to: rootviewcontroller)
+        //currentController.pushOrPop(to:rootviewcontroller)
     }
 }
 
@@ -56,8 +56,8 @@ struct ProfileRoute: Routable {
         profileController.title = username
         //currentController.navigationController?.pushViewController(profileController, animated: true)
         
-        //currentController.navigationController?.pushOrPop(to:profileController)
-        currentController.pushOrPop(to:profileController)
+        currentController.navigationController?.pushOrPop(to:profileController)
+        //currentController.pushOrPop(to:profileController)
         
     }
     
@@ -75,8 +75,8 @@ struct BookRoute: Routable {
         bookController.numberOfPages = amount
         
         //currentController.navigationController?.pushViewController(bookController, animated: true)
-        //currentController.navigationController?.pushOrPop(to:bookController)
-        currentController.pushOrPop(to:bookController)
+        currentController.navigationController?.pushOrPop(to:bookController)
+        //currentController.pushOrPop(to:bookController)
     }
     
 }
@@ -91,8 +91,8 @@ struct LogoutRoute: Routable {
         logoutController.title = "Logout"
         
         //currentController.navigationController?.pushViewController(logoutController, animated: true)
-        //currentController.navigationController?.pushOrPop(to: logoutController)
-        currentController.pushOrPop(to:logoutController)
+        currentController.navigationController?.pushOrPop(to: logoutController)
+        //currentController.pushOrPop(to:logoutController)
     }
 }
 
@@ -105,8 +105,8 @@ struct ConfirmRoute: Routable {
         confirmController.title = "Confirm"
         
         //currentController.navigationController?.pushViewController(confirmController, animated: true)
-        //currentController.navigationController?.pushOrPop(to: confirmController)
-        currentController.pushOrPop(to:confirmController)
+        currentController.navigationController?.pushOrPop(to: confirmController)
+        //currentController.pushOrPop(to:confirmController)
     }
 }
 

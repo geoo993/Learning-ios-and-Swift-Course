@@ -191,7 +191,7 @@ open class RadialSubMenu: UIView, POPAnimationDelegate {
             existingAnim.toValue = toValue
         } else {
             let anim = POPBasicAnimation(propertyNamed:kPOPViewAlpha)
-            anim?.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+            anim?.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
             anim?.name = RadialSubMenuFadeOutAnimation
             anim?.toValue = toValue
             anim?.duration = closeDuration

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import LearningSwiftCourseExtensions
 
 
 public struct AnagramsSet {
@@ -15,8 +16,8 @@ public struct AnagramsSet {
     //UI Constants
     static let TileMargin: CGFloat = 20.0
 
-    static let FontHUD = UIFont(name:"comic andy", size: CGFloat.overrideHeightSizeF(size: 50.0) )
-    static let FontHUDBig = UIFont(name:"comic andy", size: CGFloat.overrideHeightSizeF(size: 100.0) )
+    static let FontHUD = UIFont(name:"comic andy", size: CGFloat.recommenedHeight(withReferencedDevice: UIDevice.current.modelName, desiredHeight: 50) )
+    static let FontHUDBig = UIFont(name:"comic andy", size: CGFloat.recommenedHeight(withReferencedDevice: UIDevice.current.modelName, desiredHeight: 100) )
 
     // Sound effects
     static let SoundDing = "ding.mp3"

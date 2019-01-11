@@ -25,7 +25,7 @@ func LoadSlidesPropertyListFile ()-> [SlidesInfoModel]{
     let url = URL.init(fileURLWithPath: path)
     let arrayOfInfo = NSArray.init(contentsOf: url) as! [NSDictionary]
     
-    return arrayOfInfo.flatMap{ dic -> SlidesInfoModel in
+    return arrayOfInfo.compactMap{ dic -> SlidesInfoModel in
         let title = dic["title"] as! String
         let description = dic["description"] as! String
         let imageName = dic["imageName"] as! String

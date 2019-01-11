@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import LearningSwiftCourseExtensions
 
 struct BezierCubicCurveSegment
 {
@@ -105,8 +106,8 @@ class BezierCubicCurveAlgorithm
                 let b1 = b[i] - m * c[i-1];
                 b[i] = b1
                 
-                let r2x = rhsValueX.f - m * prevRhsValueX.f
-                let r2y = rhsValueY.f - m * prevRhsValueY.f
+                let r2x = rhsValueX - m.toCGFloat * prevRhsValueX
+                let r2y = rhsValueY - m.toCGFloat * prevRhsValueY
                 
                 rhsArray[i] = CGPoint(x: r2x, y: r2y)
                 
@@ -115,16 +116,16 @@ class BezierCubicCurveAlgorithm
             //Get First Control Points
             
             //Last control Point
-            let lastControlPointX = rhsArray[count-1].x.f/b[count-1]
-            let lastControlPointY = rhsArray[count-1].y.f/b[count-1]
+            let lastControlPointX = rhsArray[count-1].x / b[count-1].toCGFloat
+            let lastControlPointY = rhsArray[count-1].y / b[count-1].toCGFloat
             
             firstControlPoints[count-1] = CGPoint(x: lastControlPointX, y: lastControlPointY)
             
             for i in (0...(count-2)).reversed() {
             //for var i=count-2; i>=0; --i {
                 if let nextControlPoint = firstControlPoints[i+1] {
-                    let controlPointX = (rhsArray[i].x.f - c[i] * nextControlPoint.x.f)/b[i]
-                    let controlPointY = (rhsArray[i].y.f - c[i] * nextControlPoint.y.f)/b[i]
+                    let controlPointX = (rhsArray[i].x - c[i].toCGFloat * nextControlPoint.x) / b[i].toCGFloat
+                    let controlPointY = (rhsArray[i].y - c[i].toCGFloat * nextControlPoint.y) / b[i].toCGFloat
                     
                     firstControlPoints[i] = CGPoint(x: controlPointX, y: controlPointY)
                     

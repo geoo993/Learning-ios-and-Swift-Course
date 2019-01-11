@@ -117,12 +117,13 @@ class RadialMenuTextViewController: UIViewController, UIGestureRecognizerDelegat
         let characterIndex = layoutManager.characterIndex(for: location, in: textView.textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
         
         if let tapPosition = textView.closestPosition(to:location),
-            let textRange = textView.tokenizer.rangeEnclosingPosition(tapPosition, with: UITextGranularity.word, inDirection: UITextDirection.min) {
+            let textRange = textView.tokenizer
+                .rangeEnclosingPosition(tapPosition, with: UITextGranularity.word, inDirection: /* UITextDirection.min */ UITextDirection.init(rawValue: 0)) {
             let wordRange = textView.range(from: textRange)
             
             let selectedWord = textView.text(in: textRange)
             let rect = textView.rect(for: wordRange)
-            let rangeIndex = textView.rangeToIndex(from: Range(wordRange))
+            let rangeIndex = textView.rangeToIndex(from: wordRange.toRangeInt)
             let nsRange = NSRange(rangeIndex, in: textView.text)
             
             // if index is valid then do something.
@@ -153,7 +154,7 @@ class RadialMenuTextViewController: UIViewController, UIGestureRecognizerDelegat
                 
                 //font
                 let font = UIFont.systemFont(ofSize: 20)
-                var attribute = NSMutableAttributedString(string: textView.text, attributes: [NSAttributedStringKey.font : font])
+                var attribute = NSMutableAttributedString(string: textView.text, attributes: [NSAttributedString.Key.font : font])
                 //attributedString.setAttributes([NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 20), NSAttributedStringKey.foregroundColor : UIColor.red], range: nsRange)
                 
                 //color
@@ -235,7 +236,7 @@ class RadialMenuTextViewController: UIViewController, UIGestureRecognizerDelegat
             //use button
             let textFont = UIFont.systemFont(ofSize: 14)
             let spacing : CGFloat = 20
-            let extimatedWidth = title?.getWidth(constrainedBy: dimension, with: textFont)
+            let extimatedWidth = title?.width(withConstraintedHeight: dimension, font: textFont)
             let width = adjustWidth ? (spacing + extimatedWidth!) : dimension
             frame = CGRect(x: 0.0, y: 0.0, width: width, height: dimension)
             let button = UIButton(frame: frame)
@@ -265,7 +266,7 @@ class RadialMenuTextViewController: UIViewController, UIGestureRecognizerDelegat
     
     func colorForSubMenu(_ subMenu: RadialSubMenu) -> UIColor {
         let pos = subMenu.tag % colors.count
-        return colors[pos] as UIColor!
+        return colors[pos] as UIColor
     }
     
     func highlightSubMenu(_ subMenu: RadialSubMenu) {

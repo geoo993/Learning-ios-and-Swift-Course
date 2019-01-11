@@ -50,7 +50,7 @@ class SideBarMenuTableViewController: UITableViewController {
         var cell : UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "cell")
 
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+            cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
             cell?.backgroundColor = UIColor.clear
             cell?.textLabel?.textColor = UIColor.darkText
             

@@ -65,7 +65,7 @@ class UIViewSlidesViewController: UIViewController {
     
     @objc func handleSwipeGesture(gesture: UISwipeGestureRecognizer) -> Void {
         
-        if gesture.direction == UISwipeGestureRecognizerDirection.right {
+        if gesture.direction == UISwipeGestureRecognizer.Direction.right {
             if currentViewIndex >= (pageControl.numberOfPages - 1) {
                 currentViewIndex = (pageControl.numberOfPages - 1)
             }else{
@@ -73,7 +73,7 @@ class UIViewSlidesViewController: UIViewController {
                 segmentedControl.selectedSegmentIndex = currentViewIndex
                 transitionView(with: currentViewIndex )
             }
-        }else if gesture.direction == UISwipeGestureRecognizerDirection.left {
+        }else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
             if currentViewIndex <= 0 {
                 currentViewIndex = 0
             }else{

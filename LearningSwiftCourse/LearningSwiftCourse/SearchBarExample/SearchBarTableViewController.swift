@@ -23,7 +23,7 @@ class SearchBarTableViewController: UITableViewController {
     }
     
     var colorNamesItems = {
-        return UIColor.cssString.filter{ $0 != "" }.sorted()
+        return ColorsCSS.cssString.filter{ $0 != "" }.sorted()
     }()
     
     //Mark: - Status bar
@@ -36,7 +36,7 @@ class SearchBarTableViewController: UITableViewController {
     var resultsTableViewController = UITableViewController()
     
     //Mark: - Search bar 
-    var searchTextsColor = UIColor.systemsBlueColor()
+    var searchTextsColor = UIColor.systemsBlueColor
     var searchBarFiltered:[String] = []
     var searchBar: UISearchBar?
     var selectedColorFromSearch = 0 
@@ -152,7 +152,7 @@ class SearchBarTableViewController: UITableViewController {
             let colorName = colorNamesItems[index]
             let color = UIColor(hex: colorName)
             cell.titleTextLabel.text = colorName
-            cell.titleTextLabel.textColor = color.getTextColor()
+            cell.titleTextLabel.textColor = color.getTextColor
             cell.titleTextLabel.backgroundColor = color
             
             self.tableView.reloadData()

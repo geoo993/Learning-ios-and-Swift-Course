@@ -129,11 +129,11 @@ class SliderMenuDrawerBaseViewController: UIViewController, SlideMenuDelegate {
     }
     
     func addSlideMenuButton(){
-        let btnShowMenu = UIButton(type: UIButtonType.system)
+        let btnShowMenu = UIButton(type: UIButton.ButtonType.system)
         //btnShowMenu.setImage(self.defaultMenuImage(), for: UIControlState.normal)
-        btnShowMenu.setImage(UIImage(named: "menu_black"), for: UIControlState.normal) 
+        btnShowMenu.setImage(UIImage(named: "menu_black"), for: UIControl.State.normal)
         btnShowMenu.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        btnShowMenu.addTarget(self, action: #selector(SliderMenuDrawerBaseViewController.onSlideMenuButtonPressed(_:)), for: UIControlEvents.touchUpInside)
+        btnShowMenu.addTarget(self, action: #selector(SliderMenuDrawerBaseViewController.onSlideMenuButtonPressed(_:)), for: UIControl.Event.touchUpInside)
         let customBarItem = UIBarButtonItem(customView: btnShowMenu)
         self.navigationItem.leftBarButtonItem = customBarItem;
     }
@@ -191,7 +191,7 @@ class SliderMenuDrawerBaseViewController: UIViewController, SlideMenuDelegate {
         menuVC.btnMenu = sender
         menuVC.delegate = self
         self.view.addSubview(menuVC.view)
-        self.addChildViewController(menuVC)
+        self.addChild(menuVC)
         menuVC.view.layoutIfNeeded()
         
         menuVC.view.frame = CGRect(x: 0 - UIScreen.main.bounds.size.width, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height);

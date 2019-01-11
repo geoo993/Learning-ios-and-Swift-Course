@@ -46,7 +46,7 @@ class MetricViewController: UIViewController {
         super.viewDidLoad()
 
         //downcast on tab bar view controller class
-        tabs = tabBarController as! TabBarViewController
+        tabs = (tabBarController as! TabBarViewController)
         
         // Do any additional setup after loading the view.
     }

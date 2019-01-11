@@ -90,12 +90,12 @@ extension BBCiPlayerTableViewCell: UICollectionViewDataSource {
         
         let captionText = collectionData[indexPath.row].caption.rawValue
         cell.imageHeadingLabel.text = captionText
-        cell.imageHeadingLabel.backgroundColor = (captionText == "") ? UIColor.clear : UIColor.bbciplayerPink()
+        cell.imageHeadingLabel.backgroundColor = (captionText == "") ? UIColor.clear : UIColor.bbciplayerPink
             
         cell.imageHeadingView.image = collectionData[indexPath.row].image
         cell.titleLabel.text = collectionData[indexPath.row].title 
         cell.descriptionLabel.text = collectionData[indexPath.row].summary
-        cell.backgroundColor = UIColor.bbciplayerDark()
+        cell.backgroundColor = UIColor.bbciplayerDark
         
         return cell
     }

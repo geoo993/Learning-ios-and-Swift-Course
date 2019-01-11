@@ -28,7 +28,7 @@ class OnboardingBookSelectionViewCell: BaseCell {
     
     func setImage(with selected : Bool){
         let imageName = selected ? "heart" : "heart_transparent"
-        favouriteBookImageView.image = UIImage(named: imageName)?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        favouriteBookImageView.image = UIImage(named: imageName)?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         favouriteBookImageView.tintColor = selected ? UIColor.white : UIColor.gray
     }
     

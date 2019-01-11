@@ -21,11 +21,11 @@ public class ExplodeView: UIView {
         super.init(frame:frame)
         
         //initialize the emitter
-        emitter = self.layer as! CAEmitterLayer
+        emitter = (self.layer as! CAEmitterLayer)
         emitter.emitterPosition = CGPoint(x: self.bounds.size.width/2, y: self.bounds.size.height/2)
         emitter.emitterSize = self.bounds.size
-        emitter.emitterMode = kCAEmitterLayerAdditive
-        emitter.emitterShape = kCAEmitterLayerRectangle
+        emitter.emitterMode = CAEmitterLayerEmitterMode.surface
+        emitter.emitterShape = CAEmitterLayerEmitterShape.rectangle
       }
       
       //2 configure the UIView to have an emitter layer

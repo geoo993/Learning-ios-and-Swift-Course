@@ -135,7 +135,7 @@ public class DogsTableViewController: UITableViewController {
         if index < dogs.count {
             
             let indexPath = IndexPath(row: index, section: 0)
-            self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableViewScrollPosition.top)
+            self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.top)
         }
     }
     
@@ -208,7 +208,7 @@ extension DogsTableViewController {
     
     
     // Override to support editing the table view.
-    override public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
             // Delete the row from the data source

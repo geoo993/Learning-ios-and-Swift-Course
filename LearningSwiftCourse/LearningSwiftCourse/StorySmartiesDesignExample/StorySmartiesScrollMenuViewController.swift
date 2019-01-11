@@ -76,7 +76,7 @@ class StorySmartiesScrollMenuViewController: UIViewController {
         panelView.setup()
         
         
-        studentButton.layer.borderColor = UIColor.systemsBlueColor().cgColor
+        studentButton.layer.borderColor = UIColor.systemsBlueColor.cgColor
         studentButton.layer.borderWidth = 1
         studentButton.rx.tap.subscribe(onNext: { tap in
             
@@ -89,7 +89,7 @@ class StorySmartiesScrollMenuViewController: UIViewController {
             
             self.openStudentInfo()
             
-        }).addDisposableTo(disposable)
+        }).disposed(by: disposable)
         
         studentInfo.rx.tap.subscribe(onNext: { tap in
             

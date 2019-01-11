@@ -15,7 +15,7 @@ import UIKit
 
 public extension UIImageView {
     
-    public func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    public func downloadedFrom(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard
@@ -29,7 +29,7 @@ public extension UIImageView {
             }
             }.resume()
     }
-    public func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    public func downloadedFrom(link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         guard let url = URL(string: link) else { return }
         downloadedFrom(url: url, contentMode: mode)
     }
@@ -90,9 +90,9 @@ public extension UIImageView {
         
         var blurEffect:UIBlurEffect = UIBlurEffect()
         if #available(iOS 10.0, *) { //iOS 10.0 and above
-            blurEffect = UIBlurEffect(style: UIBlurEffectStyle.prominent)//prominent,regular,extraLight, light, dark
+            blurEffect = UIBlurEffect(style: UIBlurEffect.Style.prominent)//prominent,regular,extraLight, light, dark
         } else { //iOS 8.0 and above
-            blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark) //extraLight, light, dark
+            blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark) //extraLight, light, dark
         }
         
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -106,7 +106,7 @@ public extension UIImageView {
     }
     
     public func tintImageColor(color : UIColor) {
-        self.image = self.image!.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        self.image = self.image!.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         self.tintColor = color
     }
     

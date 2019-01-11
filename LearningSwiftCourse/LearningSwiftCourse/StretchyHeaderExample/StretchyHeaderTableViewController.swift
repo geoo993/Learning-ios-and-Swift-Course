@@ -100,10 +100,10 @@ class StretchyHeaderTableViewController: UITableViewController {
         if slideShowView == nil {
             let headerFrame = headerView.frame
             let frame = CGRect(x: 0, y: 0, width: headerFrame.size.width, height: headerFrame.size.height)
-            let images = imageNames.flatMap{ UIImage(named: $0)! }
+            let images = imageNames.compactMap{ UIImage(named: $0)! }
             slideShowView = SlideShowView(frame: frame, parentView: headerImageView, images: images) 
             headerImageView.addSubview(slideShowView!)
-            headerImageView.bringSubview(toFront: slideShowView!)
+            headerImageView.bringSubviewToFront(slideShowView!)
         }
     }
     
@@ -262,11 +262,11 @@ extension StretchyHeaderTableViewController {
 extension StretchyHeaderTableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
 
 

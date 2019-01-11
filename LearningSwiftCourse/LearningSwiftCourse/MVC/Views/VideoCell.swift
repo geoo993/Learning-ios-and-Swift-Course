@@ -27,7 +27,7 @@ class VideoCell: BaseCell {
                 titleLabel.text = title
                 let size = CGSize(width: frame.width - leftSpacing - userProfileImageView.frame.width - midSpacing - rightSpacing, height: 1000)
                 let option = NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin)
-                let estimatedSize = NSString(string: title).boundingRect(with: size, options: option, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)], context: nil)
+                let estimatedSize = NSString(string: title).boundingRect(with: size, options: option, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)], context: nil)
                 
                 titleLabelHeightConstraint?.constant = estimatedSize.size.height > 20 ? 44 : 20
                 

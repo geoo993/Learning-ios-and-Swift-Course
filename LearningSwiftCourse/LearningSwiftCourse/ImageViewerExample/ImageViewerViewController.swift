@@ -110,10 +110,10 @@ class ImageViewerViewController: UIViewController {
             scrollView?.isUserInteractionEnabled = true
             scrollView?.clipsToBounds = true
             scrollView?.layer.masksToBounds = true
-            scrollView?.decelerationRate = UIScrollViewDecelerationRateFast
+            scrollView?.decelerationRate = UIScrollView.DecelerationRate.fast
             scrollView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             scrollView?.backgroundColor = UIColor.black
-            scrollView?.decelerationRate = UIScrollViewDecelerationRateNormal//scroll view speed
+            scrollView?.decelerationRate = UIScrollView.DecelerationRate.normal//scroll view speed
             scrollView?.delegate = self 
             
             view.addSubview(scrollView!)
@@ -142,7 +142,7 @@ class ImageViewerViewController: UIViewController {
             pageControl?.tintColor = UIColor.red
             
             view.insertSubview(pageControl!, at: 0)
-            view.bringSubview(toFront: pageControl!)
+            view.bringSubviewToFront(pageControl!)
             
             
             constrain(pageControl!) { view1 in
@@ -201,7 +201,7 @@ class ImageViewerViewController: UIViewController {
         view.addGestureRecognizer(tap!)
     }
 
-    func handleDoubleTap(_ recognizer: UITapGestureRecognizer)
+    @objc func handleDoubleTap(_ recognizer: UITapGestureRecognizer)
     {
         
         isZoomMode = !isZoomMode
@@ -284,7 +284,7 @@ class ImageViewerViewController: UIViewController {
                     print("view controller dismissed, now going to home page")
                 }
             }
-        }.addDisposableTo(disposable)
+            }.disposed(by: disposable)
         
         constrain(homeButton) { view1 in
             view1.centerX == view1.superview!.centerX

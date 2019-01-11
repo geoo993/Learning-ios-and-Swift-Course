@@ -62,7 +62,7 @@ class ParallaxViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
        
-        images = imageNames.flatMap{ UIImage(named: $0)! }
+        images = imageNames.compactMap{ UIImage(named: $0)! }
         
     }
 

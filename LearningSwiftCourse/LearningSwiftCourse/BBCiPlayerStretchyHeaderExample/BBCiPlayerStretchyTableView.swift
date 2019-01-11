@@ -55,8 +55,8 @@ class BBCiPlayerStretchyTableView: UITableView {
             button.tintColor = UIColor.white
             button.setTitleColor(.white, for: .normal)
         }
-        sender.tintColor = UIColor.bbciplayerPink()
-        sender.setTitleColor(.bbciplayerPink(), for: .normal)
+        sender.tintColor = UIColor.bbciplayerPink
+        sender.setTitleColor(.bbciplayerPink, for: .normal)
     }
     
     var allTopButtons = [UIButton]()
@@ -113,7 +113,7 @@ class BBCiPlayerStretchyTableView: UITableView {
     func updateBottomNavBarVisibility (){
         
         let yPosition = self.frame.origin.y
-        let difference = yPosition.percentageWithF(maxValue: -280, minValue: -284) / 100
+        let difference = yPosition.percentageBetween(maxValue: -280, minValue: -284) / 100
         bottomNavBar.alpha = 1 - abs(difference)
         bottomNavBarUpArrowIcon.alpha = abs(difference)
         bottomNavBar.isHidden = (bottomNavBar.alpha < 0.05)
@@ -224,14 +224,16 @@ extension BBCiPlayerStretchyTableView : UICollectionViewDelegateFlowLayout {
         
         if collectionView == categoriesCollectionView{
             //let size: CGSize = categoriesItems[indexPath.row].rawValue.size(withAttributes: [NSAttributedStringKey.font: textFont])
-            let extimatedWidth = categoriesItems[indexPath.row].rawValue.getWidth(constrainedBy: itemHeight, with: textFont!)
+            let extimatedWidth = categoriesItems[indexPath.row].rawValue
+                .width(withConstraintedHeight: itemHeight, font: textFont!)
             let categoryWidth = collectionViewSpacing + extimatedWidth //size.width
             return CGSize(width: categoryWidth, height: itemHeight)
         }
         
         if collectionView == channelsCollectionView{
             //let size: CGSize = channelsItems[indexPath.row].rawValue.size(withAttributes: [NSAttributedStringKey.font: textFont])
-            let extimatedWidth = channelsItems[indexPath.row].channel.rawValue.getWidth(constrainedBy: itemHeight, with: textFont!)
+            let extimatedWidth = channelsItems[indexPath.row].channel.rawValue
+                .width(withConstraintedHeight: itemHeight, font: textFont!)
             let channelWidth = collectionViewSpacing + extimatedWidth //size.width
             return CGSize(width: channelWidth, height: itemHeight)
         }

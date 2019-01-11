@@ -10,15 +10,18 @@ import UIKit
 
 class YoutubeHomeNavigationController: UINavigationController {
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationBar.barTintColor = UIColor.topMenuRedColor()
+        navigationBar.barTintColor = UIColor.topMenuRedColor
         
         //get rid of black bar underneath navigation bar 
         navigationBar.shadowImage = UIImage()
         navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        UIApplication.shared.statusBarStyle = .lightContent
         
         let statusBarBackgroundView = UIView(frame: CGRect.zero)
         statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 194, green: 31, blue: 31)
@@ -34,11 +37,6 @@ class YoutubeHomeNavigationController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
-    }
-
     /*
     // MARK: - Navigation
 

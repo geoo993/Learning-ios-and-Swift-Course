@@ -94,9 +94,8 @@ class RatingsView: CosmosView {
         }
     }
     
-    //Needed to avoid IB crash during autolayout
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(frame: CGRect, settings: CosmosSettings) {
+        super.init(frame: frame, settings: settings)
         updateStarsRating()
     }
     

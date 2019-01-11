@@ -1,10 +1,3 @@
-//
-//  Generic+Ext.swift
-//  LearningSwiftCourse
-//
-//  Created by GEORGE QUENTIN on 03/06/2017.
-//  Copyright © 2017 LEXI LABS. All rights reserved.
-//
 
 import Foundation
 import UIKit
@@ -27,29 +20,12 @@ public func pathToDocumentFile(filename: String) -> String? {
     return url?.path
 }
 
-public extension NSRange {
-    public var toRange : Range<Int> {
-        return location ..< (location + length)
-    }
+public func arc4random <T: ExpressibleByIntegerLiteral> (_ type: T.Type) -> T {
+    var r: T = 0
+    arc4random_buf(&r, Int(MemoryLayout<T>.size))
+    return r
 }
 
-
-//public extension Sequence where Iterator.Element: Hashable {
-//    var uniqueElements: [Iterator.Element] {
-//        return Array( Set(self) )
-//    }
-//}
-//public extension Sequence where Iterator.Element: Equatable {
-//    var uniqueElements: [Iterator.Element] {
-//        return self.reduce([]){
-//            uniqueElements, element in
-//            
-//            uniqueElements.contains(element)
-//                ? uniqueElements
-//                : uniqueElements + [element]
-//        }
-//    }
-//}
 
 public protocol GameSequenceExtensions : RangeReplaceableCollection {}
 
@@ -165,44 +141,5 @@ public extension GameSequenceExtensions where Self.Iterator.Element: Hashable {
        
 }
 
-public extension Array {
-    
-    subscript (safe index: Int) -> Element? {
-        return indices ~= index ? self[index] : nil
-    }
-   
-    func shuffled() -> [Element] {
-        
-        guard let list = (self as? [Array.Iterator.Element]), list.count > 0 else { return [] }
-        
-        var results : [Array.Iterator.Element] = []
-        var indexes = (0 ..< count).map { $0 }
-        while indexes.count > 0 {
-            let indexOfIndexes = Int(arc4random_uniform(UInt32(indexes.count)))
-            let index = indexes[indexOfIndexes]
-            results.append(list[index])
-            indexes.remove(at: indexOfIndexes)
-        }
-        return results
-    }
-    
-    public func take(_ amount: Int) -> [Element] {
-        guard var list = (self as? [Array.Iterator.Element]), list.count > 1, amount <= list.count else { return [] }
-        
-        var temp : [Array.Iterator.Element] = []
-        var count = amount
-        
-        while count > 0 {
-            let index = Int(arc4random_uniform(UInt32(list.count - 1)))
-            temp.append(list[index])
-            list.remove(at: index)
-            
-            count -= 1
-        }
-        
-        return temp
-    }
-    
-}
 
 

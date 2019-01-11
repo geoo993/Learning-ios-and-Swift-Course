@@ -91,8 +91,8 @@ class MovingBallsViewController: UIViewController {
   
     func push(ball ballView : UIView, addToPusher: Bool, pushVector: CGVector? = nil ){
        
-        let randX = CGFloat.randomF(min: -1.0, max: 1.0)
-        let randY = CGFloat.randomF(min: -1.0, max: 1.0)
+        let randX = CGFloat.random(min: -1.0, max: 1.0)
+        let randY = CGFloat.random(min: -1.0, max: 1.0)
         
         if (addToPusher){
             
@@ -213,8 +213,8 @@ class MovingBallsViewController: UIViewController {
         attacher = nil
         
         for ballView in ballViews{
-            let x = CGFloat.randomF(min: 0, max: view.frame.width - ballSize.width)
-            let y = CGFloat.randomF(min: 0, max: view.frame.height - ballSize.height)
+            let x = CGFloat.random(min: 0, max: view.frame.width - ballSize.width)
+            let y = CGFloat.random(min: 0, max: view.frame.height - ballSize.height)
             let ballPosition = CGPoint(x: x, y: y)
             let ballFrame = CGRect(origin: ballPosition, size: ballSize)
             ballView.frame = ballFrame
@@ -251,8 +251,8 @@ class MovingBallsViewController: UIViewController {
         
         for i in 0..<numberOfBalls{
             
-            let x = CGFloat.randomF(min: 0, max: view.frame.width - ballSize.width)
-            let y = CGFloat.randomF(min: 0, max: view.frame.height - ballSize.height)
+            let x = CGFloat.random(min: 0, max: view.frame.width - ballSize.width)
+            let y = CGFloat.random(min: 0, max: view.frame.height - ballSize.height)
             let ballPosition = CGPoint(x: x, y: y)
             let ballFrame = CGRect(origin: ballPosition, size: ballSize)
             let ballView = UIView(frame: ballFrame)
@@ -280,7 +280,7 @@ class MovingBallsViewController: UIViewController {
         paddleView?.layer.cornerRadius = 8.0
         paddleView?.badgeString = "150"
         paddleView?.badgeTextColor = UIColor.white
-        paddleView?.badgeEdgeInsets = UIEdgeInsetsMake(5, 0, 0, 0)
+        paddleView?.badgeEdgeInsets = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0)
         view.addSubview(paddleView!)
         paddleView?.addShadow(with: 1, height: 2, opacity: 0.7, maskToBounds: false)
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapGesture))

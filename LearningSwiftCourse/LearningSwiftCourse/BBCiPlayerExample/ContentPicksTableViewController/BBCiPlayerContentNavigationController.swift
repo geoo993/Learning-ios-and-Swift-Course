@@ -20,8 +20,8 @@ class BBCiPlayerContentNavigationController: UINavigationController {
         self.navigationBar.topItem?.title = titleName
         
         // Do any additional setup after loading the view.
-        self.navigationBar.clearNavigationBarBackground(with: UIColor.bbciplayerDark())
-        self.navigationBar.tintColor = UIColor.bbciplayerPink()
+        self.navigationBar.clearNavigationBarBackground(with: UIColor.bbciplayerDark)
+        self.navigationBar.tintColor = UIColor.bbciplayerPink
     }
 
     override func didReceiveMemoryWarning() {

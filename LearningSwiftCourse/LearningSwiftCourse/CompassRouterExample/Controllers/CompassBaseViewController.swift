@@ -76,7 +76,7 @@ public class CompassBaseViewController: UIViewController {
    
     
     func changeBackButton (){
-        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: navigationController, action: nil)
+        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: navigationController, action: nil)
         navigationItem.leftBarButtonItem = backButton
     }
    

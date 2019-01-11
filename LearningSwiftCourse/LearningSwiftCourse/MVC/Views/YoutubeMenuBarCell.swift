@@ -7,25 +7,26 @@
 //
 
 import UIKit
+import LearningSwiftCourseExtensions
 
 class YoutubeMenuBarCell: BaseCell {
 
     let imageView : UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "home")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
-        iv.tintColor = UIColor.nonSelectedColor()
+        iv.image = UIImage(named: "home")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+        iv.tintColor = UIColor.nonSelectedColor
         return iv
     }()
     
     override var isHighlighted : Bool {
         didSet {
-            imageView.tintColor = isHighlighted ? UIColor.white : UIColor.nonSelectedColor()
+            imageView.tintColor = isHighlighted ? UIColor.white : UIColor.nonSelectedColor
         }
     }
     
     override var isSelected: Bool {
         didSet {
-            imageView.tintColor = isSelected ? UIColor.white : UIColor.nonSelectedColor()
+            imageView.tintColor = isSelected ? UIColor.white : UIColor.nonSelectedColor
         }
     }
     
@@ -50,7 +51,7 @@ class YoutubeMenuBarCell: BaseCell {
     func setImage(with name : String){
         
         print(name)
-        let img = UIImage(named: name)?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        let img = UIImage(named: name)?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         imageView.image = img
     }
     

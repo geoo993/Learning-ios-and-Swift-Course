@@ -175,7 +175,7 @@ public class BezierView: UIView {
         lineLayer.lineWidth = lineWidth
         
         if dashLines || makeRoad {
-            lineLayer.lineJoin = kCALineJoinRound
+            lineLayer.lineJoin = CAShapeLayerLineJoin.round
             lineLayer.lineDashPattern = dashLinesPattern // adjust to your liking [width, height]
             //lineLayer.lineCap = kCALineCapRound
         }
@@ -223,8 +223,8 @@ extension BezierView {
             fadeAnimation.toValue = 1
             fadeAnimation.beginTime = CACurrentMediaTime() + delay
             fadeAnimation.duration = 0.2
-            fadeAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-            fadeAnimation.fillMode = kCAFillModeForwards
+            fadeAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+            fadeAnimation.fillMode = CAMediaTimingFillMode.forwards
             fadeAnimation.isRemovedOnCompletion = false
             point.add(fadeAnimation, forKey: kFadeAnimationKey)
             
@@ -238,8 +238,8 @@ extension BezierView {
         growAnimation.toValue = 1
         growAnimation.beginTime = CACurrentMediaTime() + 0.5
         growAnimation.duration = 1.5
-        growAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-        growAnimation.fillMode = kCAFillModeForwards
+        growAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        growAnimation.fillMode = CAMediaTimingFillMode.forwards
         growAnimation.isRemovedOnCompletion = false
         lineLayer.add(growAnimation, forKey: kStrokeAnimationKey)
     }

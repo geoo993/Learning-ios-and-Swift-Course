@@ -110,9 +110,9 @@ class ImageCropperViewController: UIViewController {
     
     func openCamera()
     {
-        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.camera))
+        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera))
         {
-            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
             imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         }
@@ -126,7 +126,7 @@ class ImageCropperViewController: UIViewController {
     
     func openGallary()
     {
-        imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
         imagePicker.allowsEditing = true
         self.present(imagePicker, animated: true, completion: nil)
     }
@@ -162,9 +162,9 @@ class ImageCropperViewController: UIViewController {
 
 extension ImageCropperViewController: UIImagePickerControllerDelegate {
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage 
+        let image = info[UIImagePickerController.InfoKey.originalImage.rawValue] as! UIImage
         imageView?.image = image
         imageView?.contentMode = .center
         imageView?.frame = CGRect(origin: CGPoint.zero, size: image.size)

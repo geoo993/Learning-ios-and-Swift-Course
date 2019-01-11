@@ -92,7 +92,7 @@ class SliderMenuDrawerMenuViewController: UIViewController, UITableViewDataSourc
             self?.view.backgroundColor = UIColor.clear
         }, completion: { [weak self] (finished) -> Void in
             self?.view.removeFromSuperview()
-            self?.removeFromParentViewController()
+            self?.removeFromParent()
         })
     }
     
@@ -100,7 +100,7 @@ class SliderMenuDrawerMenuViewController: UIViewController, UITableViewDataSourc
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellMenu", for: indexPath) as! SliderMenuDrawerMenuTableViewCell
         
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.layoutMargins = UIEdgeInsets.zero
         cell.preservesSuperviewLayoutMargins = false
         cell.backgroundColor = UIColor.clear
@@ -111,7 +111,7 @@ class SliderMenuDrawerMenuViewController: UIViewController, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let btn = UIButton(type: UIButtonType.custom)
+        let btn = UIButton(type: UIButton.ButtonType.custom)
         btn.tag = indexPath.row
         self.onCloseMenuClick(btn)
     }
@@ -138,7 +138,7 @@ class SliderMenuDrawerMenuViewController: UIViewController, UITableViewDataSourc
     func clearAll(){
         arrayMenuOptions = []
         
-        tblMenuOptions.getAllCells().map{ $0.removeEverything() }
+        _ = tblMenuOptions.getAllCells().map{ $0.removeEverything() }
         tblMenuOptions.removeEverything()
         tblMenuOptions = nil
         btnCloseMenuOverlay.removeEverything()

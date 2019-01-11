@@ -29,7 +29,7 @@ class BBCiPlayerContentTableViewController: UIViewController {
         
         let allchannelsItems = BBCiPlayerVideosItems.allChannelsItems()
         let shuffled = allchannelsItems.shuffled()
-        let amount = shuffled.take(10)
+        let amount = shuffled.takeRandom(10)
         return amount
     }()
     
@@ -94,7 +94,7 @@ extension BBCiPlayerContentTableViewController: UITableViewDataSource {
         cell.titleLabel.text = mixedItems[indexPath.row].title
         cell.descriptionLabel.text = mixedItems[indexPath.row].summary
         
-        cell.imageHeadingLabel.backgroundColor = (captionText == "") ? UIColor.clear : UIColor.bbciplayerPink()
+        cell.imageHeadingLabel.backgroundColor = (captionText == "") ? UIColor.clear : UIColor.bbciplayerPink
         
         return cell
     }

@@ -51,11 +51,11 @@ class WalkthroughZoomViewController: UIViewController {
         self.view.addGestureRecognizer(doubleTap)
         
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
-        swipeLeft.direction = UISwipeGestureRecognizerDirection.down
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.down
         self.view.addGestureRecognizer(swipeLeft)
     }
     
-    func handleDoubleTap(_ recognizer: UITapGestureRecognizer)
+    @objc func handleDoubleTap(_ recognizer: UITapGestureRecognizer)
     {
         
         
@@ -86,9 +86,9 @@ class WalkthroughZoomViewController: UIViewController {
         
     }
 
-    func handleSwipe(_ recognizer: UISwipeGestureRecognizer)
+    @objc func handleSwipe(_ recognizer: UISwipeGestureRecognizer)
     {
-        if recognizer.direction == UISwipeGestureRecognizerDirection.down{
+        if recognizer.direction == UISwipeGestureRecognizer.Direction.down{
             self.dismiss(animated: true) { 
                 print("view controller dismissed, now going to home page")
             }

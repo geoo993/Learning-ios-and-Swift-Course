@@ -106,7 +106,7 @@ class InspirationalFilmsViewController: UIViewController {
             guard let this = self else { return }
             this.setFilm(filmTitle)
             
-        }).addDisposableTo(disposeBag)
+        }).disposed(by: disposeBag)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -422,7 +422,7 @@ extension InspirationalFilmsViewController : UICollectionViewDelegateFlowLayout 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize { 
         
-        let autoResize = CGFloat.overrideHeightSizeF(size: 1.2)
+        let autoResize = CGFloat.recommenedHeight(withReferencedDevice: UIDevice.current.modelName, desiredHeight: 1.2)
         let itemWidth = screenWidth * 0.3
         let itemHeight = (collectionView.contentSize.height * autoResize) 
         

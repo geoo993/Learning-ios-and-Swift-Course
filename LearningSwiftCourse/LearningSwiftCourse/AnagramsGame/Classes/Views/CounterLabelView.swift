@@ -23,7 +23,7 @@ public class CounterLabelView: UILabel {
     self.backgroundColor = UIColor.clear
   }
   
-  func updateValue(_ timer:Timer) {
+    @objc func updateValue(_ timer:Timer) {
     //1 update the value
     if (endValue < value) {
       value -= 1

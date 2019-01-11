@@ -26,7 +26,7 @@ class FreeCourseViewController: UITableViewController
         
         // Make the row height dynamic
         tableView.estimatedRowHeight = tableView.rowHeight
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     // MARK: - UITableViewDataSource
@@ -72,7 +72,7 @@ class FreeCourseViewController: UITableViewController
 
 extension FreeCourseViewController : SFSafariViewControllerDelegate
 {
-    func safariViewControllerDidFinish(controller: SFSafariViewController)
+    @nonobjc func safariViewControllerDidFinish(controller: SFSafariViewController)
     {
         controller.dismiss(animated: true, completion: nil)
     }

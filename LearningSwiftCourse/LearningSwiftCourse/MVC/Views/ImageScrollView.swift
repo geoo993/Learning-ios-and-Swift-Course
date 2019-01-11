@@ -61,7 +61,7 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
         self.bouncesZoom = true
-        self.decelerationRate = UIScrollViewDecelerationRateFast
+        self.decelerationRate = UIScrollView.DecelerationRate.fast
         self.delegate = self
         self.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.backgroundColor = UIColor.black

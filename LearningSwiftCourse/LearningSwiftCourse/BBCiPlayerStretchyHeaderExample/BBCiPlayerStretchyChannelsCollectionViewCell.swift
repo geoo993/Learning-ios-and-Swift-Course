@@ -14,7 +14,7 @@ class BBCiPlayerStretchyChannelsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var channelImage: UIImageView!
     
     /// same with UITableViewCell's selected backgroundColor
-    private let highlightedColor = UIColor.bbciplayerPink() 
+    private let highlightedColor = UIColor.bbciplayerPink 
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder) 

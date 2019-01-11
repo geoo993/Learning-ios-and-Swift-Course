@@ -75,9 +75,9 @@ class MediaTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier:"Media Type Cell", for: indexPath)
         
-        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-        cell.selectionStyle = UITableViewCellSelectionStyle.blue
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+        cell.selectionStyle = UITableViewCell.SelectionStyle.blue
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
         
         cell.tag = indexPath.row
         
@@ -107,13 +107,13 @@ class MediaTableViewController: UITableViewController {
     }
     
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
             
             MediaLayers.mediaTypes.remove(at: indexPath.row)
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

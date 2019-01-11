@@ -25,7 +25,7 @@ class YoutubeMenuBar: UIView {
         layout.itemSize = CGSize(width:50,height: 50)
         
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout )
-        cv.backgroundColor = UIColor.topMenuRedColor()
+        cv.backgroundColor = UIColor.topMenuRedColor
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.delegate = self 
         cv.dataSource = self 
@@ -69,7 +69,7 @@ class YoutubeMenuBar: UIView {
     func selectItem(with index: Int){
         // Select
         let selectedIndexPath = IndexPath(item: index, section: 0)
-        collectionView.selectItem(at: selectedIndexPath, animated: true, scrollPosition:UICollectionViewScrollPosition.centeredVertically)
+        collectionView.selectItem(at: selectedIndexPath, animated: true, scrollPosition:UICollectionView.ScrollPosition.centeredVertically)
         //collectionView(collectionView, didSelectItemAt: selectedIndexPath) 
     }
     

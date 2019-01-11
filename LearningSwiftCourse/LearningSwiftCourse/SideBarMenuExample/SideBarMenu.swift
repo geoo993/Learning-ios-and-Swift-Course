@@ -46,12 +46,12 @@ class SideBarMenu: NSObject, SideBarMenuTableViewControllerDelegate {
         
         //gesture recogniser of right swipe
         let showGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
-        showGestureRecognizer.direction = UISwipeGestureRecognizerDirection.right
+        showGestureRecognizer.direction = UISwipeGestureRecognizer.Direction.right
         originView.addGestureRecognizer(showGestureRecognizer)
         
         //gesture recogniser of left swipe
         let hideGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
-        hideGestureRecognizer.direction = UISwipeGestureRecognizerDirection.left
+        hideGestureRecognizer.direction = UISwipeGestureRecognizer.Direction.left
         originView.addGestureRecognizer(hideGestureRecognizer)
     }
     
@@ -66,7 +66,7 @@ class SideBarMenu: NSObject, SideBarMenuTableViewControllerDelegate {
             sideBarMenuContainerView.clipsToBounds = false
             sideBarMenuOriginView?.addSubview(sideBarMenuContainerView)
             
-            sideBarMenuContainerView.blurNewView(newChild: UIView(), effect: UIBlurEffectStyle.light)
+            sideBarMenuContainerView.blurNewView(newChild: UIView(), effect: UIBlurEffect.Style.light)
             sideBarMenuTableViewController.sideBarMenuDelegate = self
             sideBarMenuTableViewController.tableView.frame = sideBarMenuContainerView.bounds
             sideBarMenuTableViewController.tableView.clipsToBounds = false
@@ -81,7 +81,7 @@ class SideBarMenu: NSObject, SideBarMenuTableViewControllerDelegate {
         }
     }
 
-    func handleSwipe(recongizer: UISwipeGestureRecognizer){
+    @objc func handleSwipe(recongizer: UISwipeGestureRecognizer){
         
         if recongizer.direction == .right{
             //show
@@ -111,7 +111,7 @@ class SideBarMenu: NSObject, SideBarMenuTableViewControllerDelegate {
         containerBoundary.addBoundary(withIdentifier: ("sideBarBoundary" as NSCopying) , from: CGPoint(x:leftBoundary,y:20), to: CGPoint(x:leftBoundary,y:height))
         sideBarMenuAnimator?.addBehavior(containerBoundary)
         
-        let pushBehavior = UIPushBehavior(items: [sideBarMenuContainerView], mode: UIPushBehaviorMode.instantaneous) 
+        let pushBehavior = UIPushBehavior(items: [sideBarMenuContainerView], mode: UIPushBehavior.Mode.instantaneous) 
         pushBehavior.magnitude = magnitude
         sideBarMenuAnimator?.addBehavior(pushBehavior)
         

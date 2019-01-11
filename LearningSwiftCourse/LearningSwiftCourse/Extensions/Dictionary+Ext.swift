@@ -1,11 +1,3 @@
-//
-//  Dictionary+Ext.swift
-//  LearningSwiftCourse
-//
-//  Created by GEORGE QUENTIN on 03/06/2017.
-//  Copyright © 2017 LEXI LABS. All rights reserved.
-//
-
 import Foundation
 
 public extension Dictionary where Value: Equatable {
@@ -30,5 +22,31 @@ public extension Dictionary where Value: Equatable {
     
     public func getValueInt(index : Int) -> Int {
         return Array(self)[index].value as? Int ?? 0
+    }
+}
+
+public extension Dictionary where Value: Any {
+    
+    public func isEqual(to otherDict: [Key: Any], 
+                        allPossibleValueTypesAreKnown: Bool = false) -> Bool? {
+        guard allPossibleValueTypesAreKnown else { return nil }
+        guard self.count == otherDict.count else { return false }
+        for (k1,v1) in self {
+            guard let v2 = otherDict[k1] else { return false }
+            switch (v1, v2) {
+            case (let v1 as Double, let v2 as Double) : if !(v1.isEqual(to: v2)) { return false }
+            case (let v1 as Int, let v2 as Int) : if !(v1==v2) { return false }
+            case (let v1 as String, let v2 as String): if !(v1==v2) { return false }
+            // ... 
+            case (_ as Double, let v2): if !(v2 is Double) { return false }
+            case (_, _ as Double): return false
+            case (_ as Int, let v2): if !(v2 is Int) { return false }
+            case (_, _ as Int): return false
+            case (_ as String, let v2): if !(v2 is String) { return false }
+            case (_, _ as String): return false
+            default: return nil
+            }
+        }
+        return true
     }
 }

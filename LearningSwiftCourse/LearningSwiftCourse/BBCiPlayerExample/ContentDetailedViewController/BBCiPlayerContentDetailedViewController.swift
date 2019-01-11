@@ -44,14 +44,14 @@ class BBCiPlayerContentDetailedViewController: UIViewController, UINavigationBar
     var mixedItems : [BBCiPlayerVideosItems] =  {
         let allchannelsItems = BBCiPlayerVideosItems.allChannelsItems()
         let shuffled = allchannelsItems.shuffled()
-        let amount = shuffled.take(6)
+        let amount = shuffled.takeRandom(6)
         return amount
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.bbciplayerDark()
+        view.backgroundColor = UIColor.bbciplayerDark
         navBar.clearNavigationBarBackground(with: UIColor.clear)
         
         detailedContentTableView.tableFooterView = nil

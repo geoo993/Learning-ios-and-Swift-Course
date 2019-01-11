@@ -65,7 +65,7 @@ open class RadialMenu: UIView, RadialSubMenuDelegate {
     
     // FIXME: Is it possible to scale a view without changing it's children? Couldn't get that
     // working so put bg on it's own view
-    open let backgroundView = UIView()
+    public let backgroundView = UIView()
     
     // FIXME: Make private when Swift adds access controls
     open var subMenus: [RadialSubMenu]

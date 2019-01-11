@@ -260,17 +260,21 @@ public extension UIBezierPath {
             return point(atPercent: t, of: subpathContainingPoint)
         }
     }
-
-    func forEachPathElement( body: @convention(block) (CGPathElement) -> Void) {
+    
+    func forEachPathElement(body: @convention(block) (CGPathElement) -> Void) {
         typealias Body = @convention(block) (CGPathElement) -> Void
-        let callback: @convention(c) (UnsafeMutableRawPointer, UnsafePointer<CGPathElement>) -> Void = { (info, element) in
-            let body = unsafeBitCast(info, to: Body.self)
-            body(element.pointee)
+        let callback: @convention(c) (UnsafeMutableRawPointer, UnsafePointer<CGPathElement>)
+            -> Void = { info, element in
+                let body = unsafeBitCast(info, to: Body.self)
+                body(element.pointee)
         }
-        //print("path element memory: ", MemoryLayout.size(ofValue: body))
-        let unsafeBody = unsafeBitCast(body, to: UnsafeMutableRawPointer.self)
-        self.cgPath.apply(info: unsafeBody, function: unsafeBitCast(callback, to: CGPathApplierFunction.self))
+        // print("path element memory: ", MemoryLayout.size(ofValue: body))
+        let safeBody = withoutActuallyEscaping(body) { escapableBody in
+            unsafeBitCast(escapableBody, to: UnsafeMutableRawPointer.self)
+        }
+        cgPath.apply(info: safeBody, function: unsafeBitCast(callback, to: CGPathApplierFunction.self))
     }
+
     
     public func countSubpaths() -> Int {
         var count: Int = 0

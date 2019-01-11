@@ -42,8 +42,8 @@ class CourseDetailTableViewController: UITableViewController
         self.courseImageView.image = course.image
         self.courseTitleTextLabel.text = course.title
         self.courseDescriptionTextLabel.text = course.description
-        self.watchProgramVideoButton.setTitle("Watch \(course.program) video", for: UIControlState())
-        self.enrollInProgramButton.setTitle("Enroll in \(course.program)", for: UIControlState())
+        self.watchProgramVideoButton.setTitle("Watch \(course.program) video", for: UIControl.State())
+        self.enrollInProgramButton.setTitle("Enroll in \(course.program)", for: UIControl.State())
     }
     
     // MARK: - Target / Action
@@ -133,7 +133,7 @@ class CourseDetailTableViewController: UITableViewController
             let activityController = UIActivityViewController(activityItems: imagesToShare, applicationActivities: nil)
             
             // optional
-            let excludedActivities = [UIActivityType.postToFlickr, UIActivityType.postToWeibo, UIActivityType.message, UIActivityType.mail, UIActivityType.print, UIActivityType.copyToPasteboard, UIActivityType.assignToContact, UIActivityType.saveToCameraRoll, UIActivityType.addToReadingList, UIActivityType.postToFlickr, UIActivityType.postToVimeo, UIActivityType.postToTencentWeibo]
+            let excludedActivities = [UIActivity.ActivityType.postToFlickr, UIActivity.ActivityType.postToWeibo, UIActivity.ActivityType.message, UIActivity.ActivityType.mail, UIActivity.ActivityType.print, UIActivity.ActivityType.copyToPasteboard, UIActivity.ActivityType.assignToContact, UIActivity.ActivityType.saveToCameraRoll, UIActivity.ActivityType.addToReadingList, UIActivity.ActivityType.postToFlickr, UIActivity.ActivityType.postToVimeo, UIActivity.ActivityType.postToTencentWeibo]
             activityController.excludedActivityTypes = excludedActivities
             
             
@@ -160,7 +160,7 @@ class CourseDetailTableViewController: UITableViewController
         
         // in the first section and the first row
         if indexPath.section == 0 && indexPath.row == 0 {
-            rowHeight = UITableViewAutomaticDimension
+            rowHeight = UITableView.automaticDimension
         }
         
         return rowHeight

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import LearningSwiftCourseExtensions
 
 public class GameController {
   var gameView: UIView!
@@ -57,8 +58,8 @@ public class GameController {
     let anagram2 = anagramPair[1] as! String
     
     //4
-    let anagram1length = anagram1.characters.count
-    let anagram2length = anagram2.characters.count
+    let anagram1length = anagram1.count
+    let anagram2length = anagram2.count
     
     //5
     print("phrase1[\(anagram1length)]: \(anagram1)")
@@ -81,7 +82,7 @@ public class GameController {
     
     //create targets
     //for (index) in 0..<anagram2.characters.indices //enumerate(anagram2) {
-    for index in 0..<anagram2.characters.count 
+    for index in 0..<anagram2.count
     {
         let letter = anagram2[index]
           if letter != " " {
@@ -97,7 +98,7 @@ public class GameController {
     tiles = []
     
     //2 create tiles
-    for index in 0..<anagram1.characters.count {
+    for index in 0..<anagram1.count {
         let letter = anagram1[index]
       //3
       if letter != " " {
@@ -151,7 +152,7 @@ public class GameController {
         //3
         UIView.animate(withDuration: 0.35,
           delay:0.00,
-          options:UIViewAnimationOptions.curveEaseOut,
+          options:UIView.AnimationOptions.curveEaseOut,
           //4
           animations: {
             tileView.center = targetView.center
@@ -165,7 +166,7 @@ public class GameController {
 
         let explode = ExplodeView(frame:CGRect(x: tileView.center.x, y: tileView.center.y, width: 10,height: 10))
         tileView.superview?.addSubview(explode)
-        tileView.superview?.sendSubview(toBack: explode)
+        tileView.superview?.sendSubviewToBack(explode)
     }
   
   
@@ -196,11 +197,11 @@ public class GameController {
     
     let stars = StardustView(frame: CGRect(x: startX, y: startY, width: 10, height: 10))
     gameView.addSubview(stars)
-    gameView.sendSubview(toBack: stars)
+    gameView.sendSubviewToBack(stars)
     
     UIView.animate(withDuration: 3.0,
       delay:0.0,
-      options:UIViewAnimationOptions.curveEaseOut,
+      options:UIView.AnimationOptions.curveEaseOut,
       animations:{
         stars.center = CGPoint(x: endX, y: startY)
       }, completion: {(value:Bool) in
@@ -266,12 +267,12 @@ public class GameController {
     if let target = foundTarget, let tile = foundTile {
       
       //5 don't want the tile sliding under other tiles
-      gameView.bringSubview(toFront: tile)
+        gameView.bringSubviewToFront(tile)
       
       //6 show the animation to the user
       UIView.animate(withDuration: 1.5,
         delay:0.0,
-        options:UIViewAnimationOptions.curveEaseOut,
+        options:UIView.AnimationOptions.curveEaseOut,
         animations:{
           tile.center = target.center
         }, completion: {
@@ -342,10 +343,10 @@ extension GameController:TileDragDelegateProtocol {
         //2
         UIView.animate(withDuration:0.35,
           delay:0.00,
-          options:UIViewAnimationOptions.curveEaseOut,
+          options:UIView.AnimationOptions.curveEaseOut,
           animations: {
-            tileView.center = CGPoint(x: tileView.center.x + CGFloat(CGFloat.randomF(min:0, max:40) - 20) ,
-              y: tileView.center.y + CGFloat.randomF(min:20, max:30) )
+            tileView.center = CGPoint(x: tileView.center.x + CGFloat(CGFloat.random(min:0, max:40) - 20) ,
+              y: tileView.center.y + CGFloat.random(min:20, max:30) )
           },
           completion: nil)
         

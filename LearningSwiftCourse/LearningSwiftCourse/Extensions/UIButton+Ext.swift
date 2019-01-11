@@ -33,7 +33,7 @@ public extension UIButton {
         return image!
     }
     
-    public func setBackgroundColor(color: UIColor, for state: UIControlState) {
+    public func setBackgroundColor(color: UIColor, for state: UIControl.State) {
         self.setBackgroundImage(imageWithColor(color: color), for: state)
     }
     
@@ -47,22 +47,22 @@ public extension UIButton {
                 let image = imageView.image {
                 let titleString:NSString = NSString(string: buttonTitle)
                 let titleSize = titleString.size(withAttributes: [
-                    NSAttributedStringKey.font : titleLabel.font
+                    NSAttributedString.Key.font : titleLabel.font
                     ])
                 let buttonImageSize = image.size
                 
                 let topImageOffset = (buttonSize.height - (titleSize.height + buttonImageSize.height + offset)) / 2
                 let leftImageOffset = (buttonSize.width - buttonImageSize.width) / 2
-                imageEdgeInsets = UIEdgeInsetsMake(topImageOffset,
-                                                   leftImageOffset,
-                                                   0,0)
+                imageEdgeInsets = UIEdgeInsets(top: topImageOffset,
+                                               left: leftImageOffset,
+                                               bottom: 0,right: 0)
                 
                 let titleTopOffset = topImageOffset + offset + buttonImageSize.height
                 let leftTitleOffset = (buttonSize.width - titleSize.width) / 2 - image.size.width
                 
-                titleEdgeInsets = UIEdgeInsetsMake(titleTopOffset,
-                                                   leftTitleOffset,
-                                                   0,0)
+                titleEdgeInsets = UIEdgeInsets(top: titleTopOffset,
+                                               left: leftTitleOffset,
+                                               bottom: 0,right: 0)
             }
         }
     }

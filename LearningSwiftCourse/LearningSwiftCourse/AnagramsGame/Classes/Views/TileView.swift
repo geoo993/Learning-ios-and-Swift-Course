@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import LearningSwiftCourseExtensions
 
 protocol TileDragDelegateProtocol {
   func tileView(_ tileView: TileView, didDragToPoint: CGPoint)
@@ -76,12 +77,12 @@ public class TileView:UIImageView {
     //1
     //set random rotation of the tile
     //anywhere between -0.2 and 0.3 radians
-    let rotation = CGFloat(CGFloat.randomF(min:0, max:50)) / 100.0 - 0.2
+    let rotation = CGFloat(CGFloat.random(min:0, max:50)) / 100.0 - 0.2
     self.transform = CGAffineTransform(rotationAngle: rotation)
     
     //2
     //move randomly upwards
-    let yOffset = CGFloat(CGFloat.randomF(min: 0, max: 10) - 10)
+    let yOffset = CGFloat.random(min: 0, max: 10) - 10
     self.center = CGPoint(x: self.center.x, y: self.center.y + yOffset)
   }
   
@@ -102,7 +103,7 @@ public class TileView:UIImageView {
         //enlarge the tile
         self.transform = self.transform.scaledBy(x: 1.2, y: 1.2)
 
-        self.superview?.bringSubview(toFront: self)
+        self.superview?.bringSubviewToFront(self)
     }
   
     //2

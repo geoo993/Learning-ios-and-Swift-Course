@@ -62,8 +62,8 @@ import UIKit
         let fieldColor: UIColor = UIColor.darkGray
         let fieldFont = UIFont(name: "Georgia",size: 12.0)
         var fieldAttributes: NSDictionary = [
-            NSAttributedStringKey.foregroundColor: fieldColor,
-            NSAttributedStringKey.font: fieldFont!
+            NSAttributedString.Key.foregroundColor: fieldColor,
+            NSAttributedString.Key.font: fieldFont!
         ]
         
         // get the graphics context and prepare an inset box for the pie
@@ -123,7 +123,7 @@ import UIKit
             context.fillPath()
             
             //drae name next to circle
-            keyName.draw(in: CGRect(x:keyX + 12,y:keyY-8,width:self.bounds.width/3,height:16), withAttributes: fieldAttributes as? [NSAttributedStringKey : Any])
+            keyName.draw(in: CGRect(x:keyX + 12,y:keyY-8,width:self.bounds.width/3,height:16), withAttributes: fieldAttributes as? [NSAttributedString.Key : Any])
         }
         
         

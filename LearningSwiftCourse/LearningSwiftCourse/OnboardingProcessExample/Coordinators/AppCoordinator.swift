@@ -28,7 +28,7 @@ class AppCoordinator {
     
     func setupNavigationBar(){
         navigator.isNavigationBarHidden = true
-        navigator.navigationBar.titleTextAttributes = [NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont.init(name:"HelveticaNeue-Bold", size: 20.0) ?? UIFont.boldSystemFont(ofSize:20.0)]
+        navigator.navigationBar.titleTextAttributes = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): UIFont.init(name:"HelveticaNeue-Bold", size: 20.0) ?? UIFont.boldSystemFont(ofSize:20.0)]
     }
     
     let bag = DisposeBag()
@@ -78,7 +78,7 @@ class AppCoordinator {
             .subscribe(onNext: { _ in
                 print("A student has been added")
                 
-            }).addDisposableTo(self.bag)
+            }).disposed(by: self.bag)
             
             return vc.didSelectStudent
         })

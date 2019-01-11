@@ -1,6 +1,7 @@
 
 
 import UIKit
+import LearningSwiftCourseExtensions
 
 public class HUDView: UIView {
   
@@ -46,9 +47,9 @@ public class HUDView: UIView {
         let hintButtonImage = UIImage(named: "btn")!
         //the help button
         self.hintButton = UIButton(type: .custom)
-        hintButton.setTitle("Hint!", for:UIControlState())
+        hintButton.setTitle("Hint!", for:UIControl.State())
         hintButton.titleLabel?.font = AnagramsSet.FontHUD
-        hintButton.setBackgroundImage(hintButtonImage, for: UIControlState())
+        hintButton.setBackgroundImage(hintButtonImage, for: UIControl.State())
         hintButton.alpha = 0.8
         self.addSubview(hintButton)
         
@@ -59,8 +60,7 @@ public class HUDView: UIView {
         
         let screenWidth = UIScreen.main.bounds.width
         let yPos : CGFloat = 10
-        let height = CGFloat.overrideHeightSizeF(size: 80)
-        print(screenWidth)
+        let height = CGFloat.recommenedHeight(withReferencedDevice: UIDevice.current.modelName, desiredHeight: 80)
         
         let stopwatchWidth = screenWidth * stopwatchVWidthRatio
         let stopwatchXpos : CGFloat = ( screenWidth - stopwatchWidth) * CGFloat(0.5)
