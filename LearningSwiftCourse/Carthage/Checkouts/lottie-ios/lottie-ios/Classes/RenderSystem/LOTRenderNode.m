@@ -10,7 +10,7 @@
 
 @implementation LOTRenderNode
 
-- (instancetype _Nonnull )initWithInputNode:(LOTAnimatorNode *_Nullable)inputNode
+- (instancetype _Nonnull)initWithInputNode:(LOTAnimatorNode *_Nullable)inputNode
                                     keyName:(NSString * _Nullable)keyname {
   self = [super initWithInputNode:inputNode keyName:keyname];
   if (self) {
@@ -25,7 +25,7 @@
   return @{@"path": [NSNull null]};
 }
 
-/// Local interpolatores have changed. Update layer specific properties.
+/// Local interpolators have changed. Update layer specific properties.
 - (void)performLocalUpdate {
   
 }

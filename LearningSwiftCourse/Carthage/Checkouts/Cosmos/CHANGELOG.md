@@ -1,5 +1,39 @@
 # Cosmos version history
 
+## 18.0.0 (2018-12-24)
+
+* Add setting `passTouchesToSuperview` to prevent passing touches to superview ([yuravake](https://github.com/yuravake)).
+
+
+## 17.0.0 (2018-09-19)
+
+* Update for Swift 4.2 and Xcode 10.0 ([chlumik](https://github.com/chlumik)).
+
+
+## 16.0.0 (2018-05-12)
+
+* Added ability to customize the Cosmos view from the interface builder with Carthage setup method ([jsahoo](https://github.com/jsahoo)).
+
+
+## 15.0.0 (2018-02-16)
+
+* Added `prepareForReuse` function to help recycle Cosmos views in table cells.
+
+
+## 14.0.0 (2018-01-31)
+
+* Added ability to reuse settings in multiple cosmos views.
+
+
+## 13.0.0 (2017-12-18)
+
+* Call `didFinishTouchingCosmos` when touches are canceled (this can happen if user scrolls Cosmos in a scroll view).
+
+
+## 12.0.0 (2017-09-23)
+
+* Update for Swift 4.0 and Xcode 9.0.
+
 
 ## 11.0.0 (2017-07-14)
 

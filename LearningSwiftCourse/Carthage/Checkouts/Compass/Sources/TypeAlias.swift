@@ -7,5 +7,5 @@
 #if os(OSX)
   public typealias CurrentController = NSViewController
 #else
-  public typealias CurrentController = UINavigationController //UIViewController
+  public typealias CurrentController = UIViewController
 #endif

@@ -23,7 +23,7 @@
   CGFloat _offsetT;
 }
 
-- (instancetype _Nonnull )initWithInputNode:(LOTAnimatorNode *_Nullable)inputNode
+- (instancetype _Nonnull)initWithInputNode:(LOTAnimatorNode *_Nullable)inputNode
                                    trimPath:(LOTShapeTrimPath *_Nonnull)trimPath {
   self = [super initWithInputNode:inputNode keyName:trimPath.keyname];
   if (self) {
@@ -63,7 +63,7 @@
     if ([inputNode isKindOfClass:[LOTPathAnimator class]] ||
         [inputNode isKindOfClass:[LOTCircleAnimator class]] ||
         [inputNode isKindOfClass:[LOTRoundedRectAnimator class]]) {
-      [inputNode.localPath trimPathFromT:_startT toT:_endT offset:_offsetT];
+      [inputNode.localPath trimPathFromT:self->_startT toT:self->_endT offset:self->_offsetT];
     }
     if (modifier) {
       modifier(inputNode);

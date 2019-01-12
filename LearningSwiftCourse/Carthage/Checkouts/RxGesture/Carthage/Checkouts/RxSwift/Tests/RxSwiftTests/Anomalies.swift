@@ -43,7 +43,7 @@ extension AnomaliesTest {
                             return makeSequence(label: "nested", period: 0.02).map { (index, $0) }
                         }
                         .take(10)
-                        .mapWithIndex { ($1, $0.0, $0.1) }
+                        .enumerated().map { ($0, $1.0, $1.1) }
                         .subscribe(
                             onNext: { _ in },
                             onCompleted: {
@@ -59,10 +59,9 @@ extension AnomaliesTest {
         }
 
         for op in [
-                { $0.shareReplay(1) },
+                { $0.share(replay: 1) },
                 { $0.replay(1).refCount() },
-                { $0.publish().refCount() },
-                { $0.shareReplayLatestWhileConnected() }
+                { $0.publish().refCount() }
             ] as [(Observable<Int>) -> Observable<Int>] {
             performSharingOperatorsTest(share: op)
         }

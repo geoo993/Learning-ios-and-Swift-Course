@@ -39,17 +39,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let steps: [Step] = [
+        navigationController?.navigationBar.shadowImage = UIImage()
+        var steps: [Step] = [
             tapStep,
             doubleTapStep,
             swipeDownStep,
             swipeHorizontallyStep,
             longPressStep,
+            touchDownStep,
             panStep,
             pinchStep,
             rotateStep,
             transformStep
         ]
+
+        if #available(iOS 9.0, *), let index = steps.index(where: { $0 === panStep }) {
+            steps.insert(forceTouchStep, at: index)
+        }
 
         func newIndex(for index: Int, action: Step.Action) -> Int {
             switch action {
@@ -68,8 +74,24 @@ class ViewController: UIViewController {
             .disposed(by: bag)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard #available(iOS 9.0, *),
+            let superview = myView.superview,
+            let window = view.window
+            else { return }
+
+        window.addSubview(myView)
+        myView.centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
+        myView.centerYAnchor.constraint(equalTo: superview.centerYAnchor).isActive = true
+    }
+
     @IBAction func previousStep(_ sender: Any) {
         nextStepObserver.onNext(.previous)
+    }
+
+    @IBAction func nextStep(_ sender: Any) {
+        nextStepObserver.onNext(.next)
     }
 
     func updateStep(_ step: Step, at index: Int) {
@@ -86,7 +108,15 @@ class ViewController: UIViewController {
 
     lazy var tapStep: Step = Step(
         title: "Tap the red square",
-        code: "view.rx\n\t.tapGesture()\n\t.when(.recognized)\n\t.subscribe(onNext: {...})",
+        code: """
+        view.rx
+            .tapGesture()
+            .when(.recognized)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, _, nextStep, stepBag in
 
             view.animateTransform(to: .identity)
@@ -103,14 +133,26 @@ class ViewController: UIViewController {
 
     lazy var doubleTapStep: Step = Step(
         title: "Double tap the green square",
-        code: "view.rx\n\t.tapGesture(numberOfTapsRequired: 2)\n\t.when(.recognized)\n\t.subscribe(onNext: {...})",
+        code: """
+        view.rx
+            .tapGesture() { gesture, _ in
+                gesture.numberOfTapsRequired = 2
+            }
+            .when(.recognized)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, _, nextStep, stepBag in
 
             view.animateTransform(to: .identity)
             view.animateBackgroundColor(to: .green)
 
             view.rx
-                .tapGesture(numberOfTapsRequired: 2)
+                .tapGesture() { gesture, _ in
+                    gesture.numberOfTapsRequired = 2
+                }
                 .when(.recognized)
                 .subscribe(onNext: { _ in
                     nextStep.onNext(.next)
@@ -120,7 +162,15 @@ class ViewController: UIViewController {
 
     lazy var swipeDownStep: Step = Step(
         title: "Swipe the blue square down",
-        code: "view.rx\n\t.swipeGesture(.down)\n\t.when(.recognized)\n\t.subscribe(onNext: {...})",
+        code: """
+        view.rx
+            .swipeGesture(.down)
+            .when(.recognized)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, _, nextStep, stepBag in
 
             view.animateTransform(to: .identity)
@@ -137,14 +187,22 @@ class ViewController: UIViewController {
 
     lazy var swipeHorizontallyStep: Step = Step(
         title: "Swipe horizontally the blue square (e.g. left or right)",
-        code: "view.rx\n\t.swipeGesture([.left, .right])\n\t.when(.recognized)\n\t.subscribeNext {",
+        code: """
+        view.rx
+            .swipeGesture(.left, .right)
+            .when(.recognized)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, _, nextStep, stepBag in
 
             view.animateTransform(to: CGAffineTransform(scaleX: 1.0, y: 2.0))
             view.animateBackgroundColor(to: .blue)
 
             view.rx
-                .swipeGesture([.left, .right])
+                .swipeGesture(.left, .right)
                 .when(.recognized)
                 .subscribe(onNext: { _ in
                     nextStep.onNext(.next)
@@ -154,7 +212,15 @@ class ViewController: UIViewController {
 
     lazy var longPressStep: Step = Step(
         title: "Do a long press",
-        code: "view.rx\n\t.longPressGesture()\n\t.when(.began)\n\t.subscribe(onNext: {...})",
+        code: """
+        view.rx
+            .longPressGesture()
+            .when(.began)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, _, nextStep, stepBag in
 
             view.animateTransform(to: CGAffineTransform(scaleX: 2.0, y: 2.0))
@@ -163,28 +229,125 @@ class ViewController: UIViewController {
             view.rx
                 .longPressGesture()
                 .when(.began)
-                .observeOn(MainScheduler.asyncInstance)
                 .subscribe(onNext: { _ in
                     nextStep.onNext(.next)
                 })
                 .disposed(by: stepBag)
     })
 
+    lazy var touchDownStep: Step = Step(
+        title: "Touch down the view",
+        code: """
+        view.rx
+            .touchDownGesture()
+            .when(.began)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
+        install: { view, _, nextStep, stepBag in
+
+            view.animateTransform(to: .identity)
+            view.animateBackgroundColor(to: .green)
+
+            view.rx
+                .touchDownGesture()
+                .when(.began)
+                .subscribe(onNext: { _ in
+                    nextStep.onNext(.next)
+                })
+                .disposed(by: stepBag)
+    })
+
+    @available(iOS 9.0, *)
+    lazy var forceTouchStep: Step = Step(
+        title: "Force Touch the view",
+        code: """
+        let forceTouch = view.rx
+            .forceTouchGesture()
+            .share(replay: 1)
+
+        forceTouch
+            .asForce()
+            .subscribe(onNext: { force in
+                // Do something
+            })
+            .disposed(by: stepBag)
+
+        forceTouch
+            .when(.ended)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: stepBag)
+        """,
+        install: { view, label, nextStep, stepBag in
+
+            view.animateTransform(to: .identity)
+            view.animateBackgroundColor(to: .red)
+
+            let forceTouch = view.rx
+                .forceTouchGesture()
+                .share(replay: 1)
+
+            forceTouch
+                .when(.possible, .began, .changed)
+                .subscribe(onNext: { [unowned view] touch in
+                    let max =  touch.maximumPossibleForce
+                    let percent = max > 0 ? touch.force / max : 0
+                    view.alpha = percent > 0.75 ? 1.0 : 0.25 + (0.5 * percent)
+                    label.text = String(format: "%.0f%%", percent * 100)
+                })
+                .disposed(by: stepBag)
+
+            forceTouch
+                .when(.ended)
+                .subscribe(onNext: { [unowned view] _ in
+                    view.alpha = 1
+                    nextStep.onNext(.next)
+                })
+                .disposed(by: stepBag)
+
+            self.makeImpact(on: forceTouch, stepBag: stepBag)
+    })
+
     lazy var panStep: Step = Step(
         title: "Drag the square to a different location",
-        code: "let panGesture = view.rx\n\t.panGesture()\n\t.shareReplay(1)\n\npanGesture\n\t.when(.changed)\n\t.asTranslation()\n\t.subscribe(onNext: {...})\n\npanGesture\n\t.when(.ended)\n\t.subscribe(onNext: {...})",
+        code: """
+        let panGesture = view.rx
+            .panGesture()
+            .share(replay: 1)
+
+        panGesture
+            .when(.changed)
+            .asTranslation()
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+
+        panGesture
+            .when(.ended)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, label, nextStep, stepBag in
 
             view.animateTransform(to: .identity)
             view.animateBackgroundColor(to: .blue)
 
-            let panGesture = view.rx.panGesture().shareReplay(1)
+            let panGesture = view.rx
+                .panGesture()
+                .share(replay: 1)
 
             panGesture
-                .when(.changed)
+                .when(.possible, .began, .changed)
                 .asTranslation()
                 .subscribe(onNext: { [unowned self] translation, _ in
-                    label.text = String(format: "(%.2f, %.2f)",translation.x, translation.y)
+                    label.text = String(format: "(%.2f, %.2f)", translation.x, translation.y)
                     view.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
                 })
                 .disposed(by: stepBag)
@@ -199,16 +362,37 @@ class ViewController: UIViewController {
 
     lazy var rotateStep: Step = Step(
         title: "Rotate the square",
-        code: "let rotationGesture = view.rx\n\t.rotationGesture()\n\t.shareReplay(1)\n\nrotationGesture\n\t.when(.changed)\n\t.asRotation()\n\t.subscribe(onNext: {...})\n\nrotationGesture\n\t.when(.ended)\n\t.subscribe(onNext: {...})",
+        code: """
+        let rotationGesture = view.rx
+            .rotationGesture()
+            .share(replay: 1)
+
+        rotationGesture
+            .when(.changed)
+            .asRotation()
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+
+        rotationGesture
+            .when(.ended)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, label, nextStep, stepBag in
 
             view.animateTransform(to: .identity)
             view.animateBackgroundColor(to: .blue)
 
-            let rotationGesture = view.rx.rotationGesture().shareReplay(1)
+            let rotationGesture = view.rx
+                .rotationGesture()
+                .share(replay: 1)
 
             rotationGesture
-                .when(.changed)
+                .when(.possible, .began, .changed)
                 .asRotation()
                 .subscribe(onNext: { [unowned self] rotation, _ in
                     label.text = String(format: "%.2f rad", rotation)
@@ -226,16 +410,33 @@ class ViewController: UIViewController {
 
     lazy var pinchStep: Step = Step(
         title: "Pinch the square",
-        code: "let pinchGesture = view.rx\n\t.pinchGesture()\n\t.shareReplay(1)\n\npinchGesture\n\t.when(.changed)\n\t.asScale()\n\t.subscribe(onNext: {...})\n\npinchGesture\n\t.when(.ended)\n\t.subscribe(onNext: {...})",
+        code: """
+        let pinchGesture = view.rx.pinchGesture().share(replay: 1)
+
+        pinchGesture
+            .when(.changed)
+            .asScale()
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+
+        pinchGesture
+            .when(.ended)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, label, nextStep, stepBag in
 
             view.animateTransform(to: .identity)
             view.animateBackgroundColor(to: .blue)
 
-            let pinchGesture = view.rx.pinchGesture().shareReplay(1)
+            let pinchGesture = view.rx.pinchGesture().share(replay: 1)
 
             pinchGesture
-                .when(.changed)
+                .when(.possible, .began, .changed)
                 .asScale()
                 .subscribe(onNext: { scale, _ in
                     label.text = String(format: "x%.2f", scale)
@@ -253,16 +454,33 @@ class ViewController: UIViewController {
 
     lazy var transformStep: Step = Step(
         title: "Transform the square",
-        code: "let transformGestures = view.rx\n\t.transformGestures()\n\t.shareReplay(1)\n\ntransformGestures\n\t.when(.changed)\n\t.asTransform()\n\t.subscribe(onNext: {...})\n\ntransformGestures\n\t.when(.ended)\n\t.subscribe(onNext: {...})",
+        code: """
+        let transformGestures = view.rx.transformGestures().share(replay: 1)
+
+        transformGestures
+            .when(.changed)
+            .asTransform()
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+
+        transformGestures
+            .when(.ended)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, label, nextStep, stepBag in
 
             view.animateTransform(to: .identity)
             view.animateBackgroundColor(to: .blue)
 
-            let transformGestures = view.rx.transformGestures().shareReplay(1)
+            let transformGestures = view.rx.transformGestures().share(replay: 1)
 
             transformGestures
-                .when(.changed)
+                .when(.possible, .began, .changed)
                 .asTransform()
                 .subscribe(onNext: { transform, _ in
                     label.numberOfLines = 3
@@ -279,6 +497,21 @@ class ViewController: UIViewController {
                 })
                 .disposed(by: stepBag)
     })
+
+    @available(iOS 9, *)
+    private func makeImpact(on forceTouch: Observable<ForceTouchGestureRecognizer>, stepBag: DisposeBag) {
+        // It looks like #available(iOS 10.0, *) is ignored in the lazy var declaration ¯\_(ツ)_/¯
+
+        guard #available(iOS 10.0, *) else { return }
+        forceTouch
+            .map { ($0.force / $0.maximumPossibleForce) > 0.75 ? UIImpactFeedbackGenerator.FeedbackStyle.medium : .light }
+            .distinctUntilChanged()
+            .skip(1)
+            .subscribe(onNext: { style in
+                UIImpactFeedbackGenerator(style: style).impactOccurred()
+            })
+            .disposed(by: stepBag)
+    }
 }
 
 private extension UIView {

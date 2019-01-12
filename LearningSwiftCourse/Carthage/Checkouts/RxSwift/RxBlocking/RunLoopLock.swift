@@ -8,9 +8,7 @@
 
 import CoreFoundation
 
-#if !RX_NO_MODULE
-    import RxSwift
-#endif
+import RxSwift
 
 #if os(Linux)
     import Foundation
@@ -24,8 +22,8 @@ import CoreFoundation
 final class RunLoopLock {
     let _currentRunLoop: CFRunLoop
 
-    var _calledRun: AtomicInt = 0
-    var _calledStop: AtomicInt = 0
+    var _calledRun = AtomicInt(0)
+    var _calledStop = AtomicInt(0)
     var _timeout: RxTimeInterval?
 
     init(timeout: RxTimeInterval?) {
@@ -49,7 +47,7 @@ final class RunLoopLock {
     }
 
     func stop() {
-        if AtomicIncrement(&_calledStop) != 1 {
+        if _calledStop.decrement() > 1 {
             return
         }
         CFRunLoopPerformBlock(_currentRunLoop, runLoopModeRaw) {
@@ -59,7 +57,7 @@ final class RunLoopLock {
     }
 
     func run() throws {
-        if AtomicIncrement(&_calledRun) != 1 {
+        if _calledRun.increment() != 0 {
             fatalError("Run can be only called once")
         }
         if let timeout = _timeout {

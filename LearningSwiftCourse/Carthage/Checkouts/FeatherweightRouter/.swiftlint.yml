@@ -1,5 +1,0 @@
-included:
-  - Sources
-  - Tests
-excluded:
-  - Carthage

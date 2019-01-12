@@ -18,8 +18,8 @@
   NSArray *_dashPatternInterpolators;
 }
 
-- (instancetype _Nonnull )initWithInputNode:(LOTAnimatorNode *_Nonnull)inputNode
-                                shapeStroke:(LOTShapeStroke *_Nonnull)stroke {
+- (instancetype)initWithInputNode:(LOTAnimatorNode *)inputNode
+                                shapeStroke:(LOTShapeStroke *)stroke {
   self = [super initWithInputNode:inputNode keyName:stroke.keyname];
   if (self) {
     _colorInterpolator = [[LOTColorInterpolator alloc] initWithKeyframes:stroke.color.keyframes];
@@ -104,7 +104,7 @@
 
 - (void)performLocalUpdate {
   self.outputLayer.lineDashPhase = [_dashOffsetInterpolator floatValueForFrame:self.currentFrame];
-  self.outputLayer.strokeColor = [_colorInterpolator colorForFrame:self.currentFrame].CGColor;
+  self.outputLayer.strokeColor = [_colorInterpolator colorForFrame:self.currentFrame];
   self.outputLayer.lineWidth = [_widthInterpolator floatValueForFrame:self.currentFrame];
   self.outputLayer.opacity = [_opacityInterpolator floatValueForFrame:self.currentFrame];
 }

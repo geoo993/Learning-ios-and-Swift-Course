@@ -29,10 +29,10 @@ extension Reactive where Base: View {
      The value the `Observable` emits is the gesture recognizer itself.
 
      rx.anyGesture can't error and is subscribed/observed on main scheduler.
-     - parameter factories: a `(GestureRecognizerFactory + state)` collection you want to use to create the `GestureRecognizers` to add and observe
+     - parameter factories: a `(Factory + state)` collection you want to use to create the `GestureRecognizers` to add and observe
      - returns: a `ControlEvent<G>` that re-emit the gesture recognizer itself
      */
-    public func anyGesture(_ factories: (AnyGestureRecognizerFactory, when: GestureRecognizerState)...) -> ControlEvent<GestureRecognizer> {
+    public func anyGesture(_ factories: (AnyFactory, when: GestureRecognizerState)...) -> ControlEvent<GestureRecognizer> {
         let observables = factories.map { gesture, state in
             self.gesture(gesture).when(state).asObservable() as Observable<GestureRecognizer>
         }
@@ -46,12 +46,12 @@ extension Reactive where Base: View {
      The value the `Observable` emits is the gesture recognizer itself.
 
      rx.anyGesture can't error and is subscribed/observed on main scheduler.
-     - parameter factories: a `GestureRecognizerFactory` collection you want to use to create the `GestureRecognizers` to add and observe
+     - parameter factories: a `Factory` collection you want to use to create the `GestureRecognizers` to add and observe
      - returns: a `ControlEvent<G>` that re-emit the gesture recognizer itself
      */
-    public func anyGesture(_ factories: AnyGestureRecognizerFactory...) -> ControlEvent<GestureRecognizer> {
-        let observables = factories.map { gesture in
-            self.gesture(gesture).asObservable() as Observable<GestureRecognizer>
+    public func anyGesture(_ factories: AnyFactory...) -> ControlEvent<GestureRecognizer> {
+        let observables = factories.map { factory in
+            self.gesture(factory).asObservable() as Observable<GestureRecognizer>
         }
         let source = Observable.from(observables).merge()
         return ControlEvent(events: source)
@@ -63,12 +63,11 @@ extension Reactive where Base: View {
      The value the `Observable` emits is the gesture recognizer itself.
 
      rx.gesture can't error and is subscribed/observed on main scheduler.
-     - parameter factory: a `GestureRecognizerFactory` you want to use to create the `GestureRecognizer` to add and observe
+     - parameter factory: a `Factory` you want to use to create the `GestureRecognizer` to add and observe
      - returns: a `ControlEvent<G>` that re-emit the gesture recognizer itself
      */
-    public func gesture<GF: GestureRecognizerFactory, G: GestureRecognizer>(_ factory: GF) -> ControlEvent<G>
-        where GF.Gesture == G {
-        return self.gesture(factory.make())
+    public func gesture<G>(_ factory: Factory<G>) -> ControlEvent<G> {
+        return self.gesture(factory.gesture)
     }
 
     /**
@@ -82,30 +81,29 @@ extension Reactive where Base: View {
      */
     public func gesture<G: GestureRecognizer>(_ gesture: G) -> ControlEvent<G> {
 
-        let control = self.base
-        let genericGesture = gesture as GestureRecognizer
+        let source = Observable.deferred {
+            [weak control = self.base] () -> Observable<G> in
+            MainScheduler.ensureExecutingOnScheduler()
 
-        #if os(iOS)
-            control.isUserInteractionEnabled = true
-        #endif
+            guard let control = control else { return .empty() }
 
-        let source: Observable<G> = Observable
-            .create { observer in
-                MainScheduler.ensureExecutingOnScheduler()
+            let genericGesture = gesture as GestureRecognizer
 
-                control.addGestureRecognizer(gesture)
+            #if os(iOS)
+                control.isUserInteractionEnabled = true
+            #endif
 
-                let disposable = genericGesture.rx.event
-                    .map { $0 as! G }
-                    .startWith(gesture)
-                    .bind(onNext: observer.onNext)
+            control.addGestureRecognizer(gesture)
 
-                return Disposables.create {
-                    control.removeGestureRecognizer(gesture)
-                    disposable.dispose()
-                }
-            }
-            .takeUntil(deallocated)
+            return genericGesture.rx.event
+                .map { $0 as! G }
+                .startWith(gesture)
+                .do(onDispose: { [weak control, weak gesture] () in
+                    guard let gesture = gesture else { return }
+                    control?.removeGestureRecognizer(gesture)
+                })
+                .takeUntil(control.rx.deallocated)
+        }
 
         return ControlEvent(events: source)
     }

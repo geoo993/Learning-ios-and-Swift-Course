@@ -57,8 +57,8 @@ class CosmosViewTests: XCTestCase {
     obj.rating = 4
     obj.text = "123"
     
-    let sizeAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 15)]
-    let textSize = NSString(string: "123").size(attributes: sizeAttributes)
+    let sizeAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)]
+    let textSize = NSString(string: "123").size(withAttributes: sizeAttributes)
     
     let size = obj.intrinsicContentSize
     
@@ -88,8 +88,8 @@ class CosmosViewTests: XCTestCase {
       obj.rating = 4
       obj.text = "123"
       
-      let sizeAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 15)]
-      let textSize = NSString(string: "123").size(attributes: sizeAttributes)
+      let sizeAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)]
+      let textSize = NSString(string: "123").size(withAttributes: sizeAttributes)
       
       let size = obj.intrinsicContentSize
       
@@ -221,7 +221,7 @@ class CosmosViewTests: XCTestCase {
     obj.settings.updateOnTouch = false
     XCTAssertEqual("Rating", obj.accessibilityLabel)
     XCTAssertEqual("2.5", obj.accessibilityValue)
-    XCTAssertEqual(UIAccessibilityTraitNone, obj.accessibilityTraits)
+    XCTAssertEqual(UIAccessibilityTraits.none, obj.accessibilityTraits)
   }
   
   func testAccessibilityIncrement() {

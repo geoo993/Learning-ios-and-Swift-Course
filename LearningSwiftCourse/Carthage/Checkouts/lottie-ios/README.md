@@ -1,10 +1,10 @@
-# Lottie for iOS, MacOS (and [Android](https://github.com/airbnb/lottie-android) and [React Native](https://github.com/airbnb/lottie-react-native))
+# Lottie for iOS, macOS (and [Android](https://github.com/airbnb/lottie-android) and [React Native](https://github.com/airbnb/lottie-react-native))
 
 ### Table of Contents
 - [Introduction](#introduction)
 - [Installing Lottie](#installing-lottie)
 - [iOS Sample App](#ios-sample-app)
-- [MacOS Sample App](#macos-sample-app)
+- [macOS Sample App](#macos-sample-app)
 - [Objective C Examples](#objective-c-examples)
 - [Swift Examples](#swift-examples)
 - [Debugging Lottie](#debugging)
@@ -82,7 +82,7 @@ In your application targets “General” tab under the “Linked Frameworks and
 ## iOS Sample App
 
 Clone this repo and try out [the Sample App](https://github.com/airbnb/lottie-ios/tree/master/Example)
-The repo can build a MacOS Example and an iOS Example
+The repo can build a macOS Example and an iOS Example
 
 The iOS Example App demos several of the features of Lottie
 
@@ -92,14 +92,14 @@ The iOS Example App demos several of the features of Lottie
 The animation Explorer allows you to scrub, play, loop, and resize animations.
 Animations can be loaded from the app bundle or from [Lottie Files](http://www.lottiefiles.com) using the built in QR Code reader.
 
-## MacOS Sample App
+## macOS Sample App
 
 Clone this repo and try out [the Sample App](https://github.com/airbnb/lottie-ios/tree/master/Example)
-The repo can build a MacOS Example and an iOS Example
+The repo can build a macOS Example and an iOS Example
 
 ![Lottie Viewer](_Gifs/macexample.png)
 
-The Lottie Viewer for MacOS allows you to drag and drop JSON files to open, play, scrub and loop animations. This app is backed by the same animation code as the iOS app, so you will get an accurate representation of Mac and iOS animations.
+The Lottie Viewer for macOS allows you to drag and drop JSON files to open, play, scrub and loop animations. This app is backed by the same animation code as the iOS app, so you will get an accurate representation of Mac and iOS animations.
 
 
 ## Objective C Examples
@@ -162,7 +162,7 @@ animationView.play{ (finished) in
 
 If your animation is in another bundle you can use
 ```swift
-let animationView = LOTAnimationView(name: "LottieLogo" bundle:yourBundle)
+let animationView = LOTAnimationView(name: "LottieLogo", bundle: yourBundle)
 self.view.addSubview(animationView)
 animationView.play()
 ```
@@ -177,7 +177,7 @@ animationView.play()
 You can also set the animation progress interactively.
 ```swift
 let translation = gesture.getTranslationInView(self.view)
-let progress = translation.y / self.view.bounds.size.height;
+let progress = translation.y / self.view.bounds.size.height
 animationView.animationProgress = progress
 ```
 
@@ -220,7 +220,7 @@ And implement the delegate methods with a `LOTAnimationTransitionController`
 
 ```
 
-By setting `applyAnimationTransform` to YES you can make the Lottie animation move the from and to view controllers. They will be positioned at the origin of the layer. When set to NO Lottie just masks the view controller with the specified layer while resepecting z order.
+By setting `applyAnimationTransform` to YES you can make the Lottie animation move the from and to view controllers. They will be positioned at the origin of the layer. When set to NO Lottie just masks the view controller with the specified layer while respecting z order.
 
 ## Debugging
 Lottie has a couple of debugging features to know about. 
@@ -233,7 +233,7 @@ If you checkout LOTHelpers.h you will see two debug flags. `ENABLE_DEBUG_LOGGING
 
 ### Keypaths
 
-LOTAnimationView provides `- (void)logHierarchyKeypaths` which will recursively log all settable keypaths for the animation. This is helpful for changing animationations at runtime.
+LOTAnimationView provides `- (void)logHierarchyKeypaths` which will recursively log all settable keypaths for the animation. This is helpful for changing animations at runtime.
 
 ## Adding Views to an Animation at Runtime
 
@@ -271,13 +271,13 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Setup our animaiton view
+    // Setup our animation view
     animationView.contentMode = .scaleAspectFill
     animationView.frame = CGRect(x: 20, y: 20, width: 200, height: 200)
 
     self.view.addSubview(animationView)
     // Lets change some of the properties of the animation
-    // We arent going to use the MaskLayer, so lets just hide it
+    // We aren't going to use the MaskLayer, so let's just hide it
     animationView.setValue(0, forKeypath: "MaskLayer.Ellipse 1.Transform.Opacity", atFrame: 0)
     // All of the strokes and fills are white, lets make them DarkGrey
     animationView.setValue(UIColor.darkGray, forKeypath: "OuterRing.Stroke.Color", atFrame: 0)
@@ -375,14 +375,30 @@ animationView4.play()
 ```
 ### Now lets change their colors
 ![Recolored Toggle](_Gifs/switch_BgColors.gif)
-```swift
-animationView2.setValue(UIColor.green, forKeypath: "BG-On.Group 1.Fill 1.Color", atFrame: 0)
-animationView3.setValue(UIColor.red, forKeypath: "BG-On.Group 1.Fill 1.Color", atFrame: 0)
-animationView4.setValue(UIColor.orange, forKeypath: "BG-On.Group 1.Fill 1.Color", atFrame: 0)
-```
 
-```objective-c
-[animationView2 setValue:[UIColor greenColor] forKeypath:@"BG-On.Group 1.Fill 1.Color" atFrame:@0];
+**NB**: `animationView.setValue(YOUR_COLOR, forKeypath: "YOUR_PATH.Color", atFrame: 0)` is now deprecated.
+
+```swift
+class GreenDelegate : NSObject, LOTColorValueDelegate {
+	func color(forFrame currentFrame: CGFloat, startKeyframe: CGFloat, endKeyframe: CGFloat, interpolatedProgress: CGFloat, start startColor: CGColor!, end endColor: CGColor!, currentColor interpolatedColor: CGColor!) -> Unmanaged<CGColor>! {
+		return  Unmanaged.passRetained(UIColor.green.cgColor)
+	}
+}
+animationView2.setValueDelegate(GreenDelegate(), for: LOTKeypath(string: "BG-On.Group 1.Fill 1.Color"))
+
+class RedDelegate : NSObject, LOTColorValueDelegate {
+	func color(forFrame currentFrame: CGFloat, startKeyframe: CGFloat, endKeyframe: CGFloat, interpolatedProgress: CGFloat, start startColor: CGColor!, end endColor: CGColor!, currentColor interpolatedColor: CGColor!) -> Unmanaged<CGColor>! {
+		return  Unmanaged.passRetained(UIColor.red.cgColor)
+	}
+}
+animationView3.setValueDelegate(RedDelegate(), for: LOTKeypath(string: "BG-On.Group 1.Fill 1.Color"))
+
+class OrangeDelegate : NSObject, LOTColorValueDelegate {
+	func color(forFrame currentFrame: CGFloat, startKeyframe: CGFloat, endKeyframe: CGFloat, interpolatedProgress: CGFloat, start startColor: CGColor!, end endColor: CGColor!, currentColor interpolatedColor: CGColor!) -> Unmanaged<CGColor>! {
+		return  Unmanaged.passRetained(UIColor.orange.cgColor)
+	}
+}
+animationView4.setValueDelegate(OrangeDelegate(), for: LOTKeypath(string: "BG-On.Group 1.Fill 1.Color"))
 ```
 The keyPath is a dot separated path of layer and property names from After Effects.
 LOTAnimationView provides `- (void)logHierarchyKeypaths` which will recursively log all settable keypaths for the animation.
@@ -391,12 +407,19 @@ LOTAnimationView provides `- (void)logHierarchyKeypaths` which will recursively 
 
 ### Now lets change a couple of properties
 ![Multiple Colors](_Gifs/switch_MultipleBgs.gif)
+
 ```swift
-animationView2.setValue(UIColor.green, forKeypath: "BG-On.Group 1.Fill 1.Color", atFrame: 0)
-animationView2.setValue(UIColor.red, forKeypath: "BG-Off.Group 1.Fill 1.Color", atFrame: 0)
+animationView2.setValueDelegate(delegate, for: LOTKeypath(string: YOUR_PATH))
 ```
 
 Lottie allows you to change **any** property that is animatable in After Effects. If a keyframe does not exist, a linear keyframe is created for you. If a keyframe does exist then just its data is replaced.
+
+For this you need to use a `LOTValueDelegate` there are many already available:
+* `LOTColorValueDelegate`
+* `LOTNumberValueDelegate`
+* `LOTPointValueDelegate`
+* `LOTSizeValueDelegate`
+* `LOTPathValueDelegate`
 
 ## Animated Controls and Switches
 
@@ -405,7 +428,7 @@ Lottie allows you to change **any** property that is animatable in After Effects
 Lottie also has a custom subclass of UIControl for creating custom animatable interactive controls.
 Currently Lottie has `LOTAnimatedSwitch` which is a toggle style switch control. Tapping on the switch plays either the On-Off or Off-On animation and sends out a UIControlStateValueChanged broadcast to all targets. It is used in the same way UISwitch is used with a few additions to setup the animation with Lottie.
 
-You initialize the switch either using the conveneince method or by supplying the animation directly.
+You initialize the switch either using the convenience method or by supplying the animation directly.
 
 ```
 // Convenience
@@ -584,7 +607,7 @@ statefulSwitch.enabled = YES;
  * [Xamarin bindings](https://github.com/martijn00/LottieXamarin)
  * [NativeScript bindings](https://github.com/bradmartin/nativescript-lottie)
  * [Appcelerator Titanium bindings](https://github.com/m1ga/ti.animation)
- * MacOS Support added by [Alex Pawlowski](https://github.com/pawlowskialex)
+ * macOS Support added by [Alex Pawlowski](https://github.com/pawlowskialex)
 
 ## Alternatives
 1. Build animations by hand. Building animations by hand is a huge time commitment for design and engineering across Android and iOS. It's often hard or even impossible to justify spending so much time to get an animation right.
@@ -602,7 +625,7 @@ Contributors are more than welcome. Just upload a PR with a description of your 
 If you would like to add more JSON files feel free to do so!
 
 ## Issues or feature requests?
-File github issues for anything that is unexpectedly broken. If an After Effects file is not working, please attach it to your issue. Debugging without the original file is much more difficult. Lottie is developed and maintained by [Brandon Withrow](mailto:brandon.withrow@airbnb.com). Feel free to reach out via email or [Twitter](https://twitter.com/theWithra)
+File github issues for anything that is unexpectedly broken. If an After Effects file is not working, please attach it to your issue. Debugging without the original file is much more difficult. Lottie is developed and maintained by [Brandon Withrow](mailto:brandon@withrow.io). Feel free to reach out via email or [Twitter](https://twitter.com/theWithra)
 
 ## Roadmap (In no particular order)
 - Add support for interactive animated transitions

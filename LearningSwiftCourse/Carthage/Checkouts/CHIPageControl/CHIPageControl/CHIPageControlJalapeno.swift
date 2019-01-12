@@ -97,7 +97,7 @@ open class CHIPageControlJalapeno: CHIBasePageControl {
             middleX = rightX
         }
         
-        let top = (self.frame.size.height - self.diameter)*0.5
+        let top = (self.bounds.size.height - self.diameter)*0.5
         
         let points:[CGPoint] = [
             CGPoint(x:leftX, y:radius + top),
@@ -129,11 +129,11 @@ open class CHIPageControlJalapeno: CHIBasePageControl {
         let y = (self.bounds.size.height - self.diameter)*0.5
         var frame = CGRect(x: x, y: y, width: self.diameter, height: self.diameter)
         
-        inactive.forEach() { layer in
-            layer.backgroundColor = self.tintColor.withAlphaComponent(self.inactiveTransparency).cgColor
+        inactive.enumerated().forEach() { index, layer in
+            layer.backgroundColor = self.tintColor(position: index).withAlphaComponent(self.inactiveTransparency).cgColor
             if self.borderWidth > 0 {
                 layer.borderWidth = self.borderWidth
-                layer.borderColor = self.tintColor.cgColor
+                layer.borderColor = self.tintColor(position: index).cgColor
             }
             layer.cornerRadius = self.radius
             layer.frame = frame

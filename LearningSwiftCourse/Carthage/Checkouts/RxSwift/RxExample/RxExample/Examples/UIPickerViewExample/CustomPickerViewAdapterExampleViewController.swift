@@ -7,10 +7,8 @@
 //
 
 import UIKit
-#if !RX_NO_MODULE
-    import RxSwift
-    import RxCocoa
-#endif
+import RxSwift
+import RxCocoa
 
 final class CustomPickerViewAdapterExampleViewController: ViewController {
     @IBOutlet weak var pickerView: UIPickerView!
@@ -61,10 +59,10 @@ final class PickerViewViewAdapter
     }
     
     func pickerView(_ pickerView: UIPickerView, observedEvent: Event<Element>) {
-        UIBindingObserver(UIElement: self) { (adapter, items) in
+        Binder(self) { (adapter, items) in
             adapter.items = items
             pickerView.reloadAllComponents()
-            }.on(observedEvent)
+        }.on(observedEvent)
     }
 }
 

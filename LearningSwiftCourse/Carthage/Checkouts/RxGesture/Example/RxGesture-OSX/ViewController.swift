@@ -12,7 +12,6 @@ import RxSwift
 import RxCocoa
 import RxGesture
 
-
 class Step {
     enum Action { case previous, next }
 
@@ -42,7 +41,6 @@ class MacViewController: NSViewController {
         super.viewWillAppear()
 
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor.white.cgColor
 
         myView.wantsLayer = true
         myView.layer?.backgroundColor = NSColor.red.cgColor
@@ -73,7 +71,7 @@ class MacViewController: NSViewController {
             .startWith(0)
             .map { (steps[$0], $0) }
             .subscribe(onNext: { [unowned self] in self.updateStep($0, at: $1) })
-            .addDisposableTo(bag)
+            .disposed(by: bag)
     }
 
     override func viewDidAppear() {
@@ -91,6 +89,10 @@ class MacViewController: NSViewController {
         nextStepObserver.onNext(.previous)
     }
 
+    @IBAction func nextStep(_ sender: Any) {
+        nextStepObserver.onNext(.next)
+    }
+
     func updateStep(_ step: Step, at index: Int) {
         stepBag = DisposeBag()
 
@@ -105,41 +107,69 @@ class MacViewController: NSViewController {
 
     lazy var clickStep: Step = Step(
         title: "Click the square",
-        code: "view.rx\n\t.clickGesture()\n\t.when(.recognized)\n\t.subscribe(onNext: {...})",
+        code: """
+        view.rx
+            .leftClickGesture()
+            .when(.recognized)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, _, nextStep, stepBag in
 
             view.animateTransform(to: CATransform3DIdentity)
             view.animateBackgroundColor(to: .red)
 
             view.rx
-                .clickGesture()
+                .leftClickGesture()
                 .when(.recognized)
                 .subscribe(onNext: { _ in
                     nextStep.onNext(.next)
                 })
-                .addDisposableTo(stepBag)
+                .disposed(by: stepBag)
     })
 
     lazy var doubleClickStep: Step = Step(
         title: "Double click the square",
-        code: "view.rx\n\t.clickGesture(numberOfClicksRequired: 2)\n\t.when(.recognized)\n\t.subscribe(onNext: {...})",
+        code: """
+        view.rx
+            .leftClickGesture { gesture, _ in
+                gesture.numberOfClicksRequired = 2
+            }
+            .when(.recognized)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, _, nextStep, stepBag in
 
             view.animateTransform(to: CATransform3DIdentity)
             view.animateBackgroundColor(to: .green)
 
             view.rx
-                .clickGesture(numberOfClicksRequired: 2)
+                .leftClickGesture { gesture, _ in
+                    gesture.numberOfClicksRequired = 2
+                }
                 .when(.recognized)
                 .subscribe(onNext: { _ in
                     nextStep.onNext(.next)
                 })
-                .addDisposableTo(stepBag)
+                .disposed(by: stepBag)
     })
 
     lazy var rightClickStep: Step = Step(
         title: "Right click the square",
-        code: "view.rx\n\t.rightClickGesture()\n\t.when(.recognized)\n\t.subscribe(onNext: {...})",
+        code: """
+        view.rx
+            .rightClickGesture()
+            .when(.recognized)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, _, nextStep, stepBag in
 
             view.animateTransform(to: CATransform3DIdentity)
@@ -151,28 +181,45 @@ class MacViewController: NSViewController {
                 .subscribe(onNext: { _ in
                     nextStep.onNext(.next)
                 })
-                .addDisposableTo(stepBag)
+                .disposed(by: stepBag)
     })
 
     lazy var anyClickStep: Step = Step(
         title: "Click any button (left or right)",
-        code: "view.rx\n\t.anyGesture(.click(), .rightClick())\n\t.when(.recognized)\n\t.subscribe(onNext: {...})",
+        code: """
+        view.rx
+            .anyGesture(.leftClick(), .rightClick())
+            .when(.recognized)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, _, nextStep, stepBag in
 
             view.animateTransform(to: CATransform3DMakeScale(1.5, 1.5, 1.0))
             view.animateBackgroundColor(to: .red)
 
             view.rx
-                .anyGesture(.click(), .rightClick())
+                .anyGesture(.leftClick(), .rightClick())
                 .when(.recognized)
                 .subscribe(onNext: { _ in
                     nextStep.onNext(.next)
-                }).addDisposableTo(stepBag)
+                })
+                .disposed(by: stepBag)
     })
 
     lazy var pressStep: Step = Step(
         title: "Long press the square",
-        code: "view.rx\n\t.pressGesture()\n\t.when(.began)\n\t.subscribe(onNext: {...})",
+        code: """
+        view.rx
+            .pressGesture()
+            .when(.began)
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, _, nextStep, stepBag in
 
             view.animateBackgroundColor(to: .red)
@@ -184,12 +231,31 @@ class MacViewController: NSViewController {
                 .subscribe(onNext: { _ in
                     nextStep.onNext(.next)
                 })
-                .addDisposableTo(stepBag)
+                .disposed(by: stepBag)
     })
 
     lazy var panStep: Step = Step(
         title: "Drag the square around",
-        code: "view.rx\n\t.panGesture()\n\t.when(.changed)\n\t.asTranslation()\n\t.subscribe(onNext: {...})\n\nview.rx\n\t.anyGesture(\n\t\t(.pan(), state: .ended),\n\t\t(.click(), state: .recognized)\n\t)\n\t.subscribe(onNext: {...})",
+        code: """
+        view.rx
+            .panGesture()
+            .when(.changed)
+            .asTranslation()
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+
+        view.rx
+            .anyGesture(
+                (.pan(), when: .ended),
+                (.click(), when: .recognized)
+            )
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, label, nextStep, stepBag in
 
             view.animateTransform(to: CATransform3DIdentity)
@@ -202,22 +268,41 @@ class MacViewController: NSViewController {
                     label.stringValue = String(format: "(%.f, %.f)", arguments: [translation.x, translation.y])
                     view.layer!.transform = CATransform3DMakeTranslation(translation.x, translation.y, 0.0)
                 })
-                .addDisposableTo(stepBag)
+                .disposed(by: stepBag)
 
             view.rx
                 .anyGesture(
                     (.pan(), when: .ended),
-                    (.click(), when: .recognized)
+                    (.leftClick(), when: .recognized)
                 )
                 .subscribe(onNext: { _ in
                     nextStep.onNext(.next)
                 })
-                .addDisposableTo(stepBag)
+                .disposed(by: stepBag)
     })
 
     lazy var rotateStep: Step = Step(
         title: "Rotate the square with your trackpad, or click if you do not have a trackpad",
-        code: "view.rx\n\t.rotationGesture()\n\t.when(.changed)\n\t.asRotation()\n\t.subscribe(onNext: {...})\n\nview.rx\n\t.anyGesture(\n\t\t(.rotation(), state: .ended),\n\t\t(.click(), state: .recognized)\n\t)\n\t.subscribe(onNext: {...})",
+        code: """
+        view.rx
+            .rotationGesture()
+            .when(.changed)
+            .asRotation()
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+
+        view.rx
+            .anyGesture(
+                (.rotation(), when: .ended),
+                (.click(), when: .recognized)
+            )
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, label, nextStep, stepBag in
 
             view.animateTransform(to: CATransform3DIdentity)
@@ -230,22 +315,41 @@ class MacViewController: NSViewController {
                     label.stringValue = String(format: "angle: %.2f", rotation)
                     view.layer!.transform = CATransform3DMakeRotation(rotation, 0, 0, 1)
                 })
-                .addDisposableTo(stepBag)
+                .disposed(by: stepBag)
 
             view.rx
                 .anyGesture(
                     (.rotation(), when: .ended),
-                    (.click(), when: .recognized)
+                    (.leftClick(), when: .recognized)
                 )
                 .subscribe(onNext: { _ in
                     nextStep.onNext(.next)
                 })
-                .addDisposableTo(stepBag)
+                .disposed(by: stepBag)
     })
 
     lazy var magnificationStep: Step = Step(
         title: "Pinch the square with your trackpad, or click if you do not have a trackpad",
-        code: "view.rx\n\t.magnificationGesture()\n\t.when(.changed)\n\t.asScale()\n\t.subscribe(onNext: {...})\n\nview.rx\n\t.anyGesture(\n\t\t(.magnification(), state: .ended),\n\t\t(.click(), state: .recognized)\n\t)\n\t.subscribe(onNext: {...})",
+        code: """
+        view.rx
+            .magnificationGesture()
+            .when(.changed)
+            .asScale()
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+
+        view.rx
+            .anyGesture(
+                (.magnification(), when: .ended),
+                (.click(), when: .recognized)
+            )
+            .subscribe(onNext: { _ in
+                // Do something
+            })
+            .disposed(by: disposeBag)
+        """,
         install: { view, label, nextStep, stepBag in
 
             view.animateTransform(to: CATransform3DIdentity)
@@ -258,17 +362,17 @@ class MacViewController: NSViewController {
                     label.stringValue = String(format: "scale: %.2f", scale)
                     view.layer!.transform = CATransform3DMakeScale(scale, scale, 1)
                 })
-                .addDisposableTo(stepBag)
+                .disposed(by: stepBag)
 
             view.rx
                 .anyGesture(
                     (.magnification(), when: .ended),
-                    (.click(), when: .recognized)
+                    (.leftClick(), when: .recognized)
                 )
                 .subscribe(onNext: { _ in
                     nextStep.onNext(.next)
                 })
-                .addDisposableTo(stepBag)
+                .disposed(by: stepBag)
     })
 
 }

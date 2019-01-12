@@ -6,7 +6,7 @@ os:
 language: generic
 sudo: required
 dist: trusty
-osx_image: xcode8.3
+osx_image: xcode9.3
 env:
   - DANGER=1
   - TEST=iOS
@@ -31,13 +31,39 @@ matrix:
 
       - os: linux
         env: TEST=iOS-Example
+
     include:
-      - os: osx
-        osx_image: xcode8.2
-        env: TEST=iOS
-      - os: osx
-        osx_image: xcode9
-        env: TEST=iOS
+      - osx_image: xcode10
+        os: osx
+        env: BUILD="pod lib lint --swift-version=4 RxSwift.podspec"
+
+      - osx_image: xcode10
+        os: osx
+        env: BUILD="pod lib lint --swift-version=4 RxCocoa.podspec"
+
+      - osx_image: xcode10
+        os: osx
+        env: BUILD="pod lib lint --swift-version=4 RxBlocking.podspec"
+
+      - osx_image: xcode10
+        os: osx
+        env: BUILD="pod lib lint --swift-version=4 RxTest.podspec"
+
+      - osx_image: xcode10
+        os: osx
+        env: BUILD="pod lib lint --swift-version=4.2 RxSwift.podspec"
+
+      - osx_image: xcode10
+        os: osx
+        env: BUILD="pod lib lint --swift-version=4.2 RxCocoa.podspec"
+
+      - osx_image: xcode10
+        os: osx
+        env: BUILD="pod lib lint --swift-version=4.2 RxBlocking.podspec"
+
+      - osx_image: xcode10
+        os: osx
+        env: BUILD="pod lib lint --swift-version=4.2 RxTest.podspec"
 
 notifications:
   slack: rxswift:3ykt2Z61f8GkdvhCZTYPduOL
@@ -45,24 +71,33 @@ notifications:
 
 install:
   - if [ `uname` == "Linux" ] ; then 
-        curl -sL https://gist.github.com/kylef/5c0475ff02b7c7671d2a/raw/621ef9b29bbb852fdfd2e10ed147b321d792c1e4/swiftenv-install.sh | bash ;
+        eval "$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)";
     fi
 
 script: 
   - if [[ `uname` == "Linux" ]] ; then
-        . ~/.swiftenv/init;
-        swiftenv install 3.1 || true;
+        swiftenv install swift-4.2 || true;
     fi
-  - if [[ "${DANGER}" -eq 1 ]] ; then
-       bundle install --path vendor/bundle;
-       bundle exec danger --verbose;
+  - 
+    if [[ ! -z "${BUILD}" ]] ; then
+      if [[ "${BUILD}" =~ ^pod[[:space:]].* ]]; then
+        gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet;
+        pod repo update;
+      fi;
+      eval "${BUILD}";
     else
-      if [[ `uname` == "Darwin" ]] ; then
+      if [[ "${DANGER}" -eq 1 ]] ; then
+        bundle install --path vendor/bundle;
+        bundle exec danger --verbose;
+      else
+        if [[ `uname` == "Darwin" ]] ; then
           xcodebuild -version;
           xcodebuild -showsdks;
+        fi;
+        swift --version;
+        TRAVIS=1 ./scripts/all-tests.sh "${TEST}";
       fi;
-      TRAVIS=1 ./scripts/all-tests.sh "${TEST}";
-    fi
+    fi;
 
 after_success:
   - sleep 5 # workaround https://github.com/travis-ci/travis-ci/issues/4725

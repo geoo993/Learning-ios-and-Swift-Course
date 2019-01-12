@@ -4,7 +4,7 @@ import XCTest
 class CosmosAccessibilityTests: XCTestCase {
   var view: UIView!
   var settings: CosmosSettings!
-  
+
   override func setUp() {
     super.setUp()
     
@@ -33,21 +33,21 @@ class CosmosAccessibilityTests: XCTestCase {
     settings.updateOnTouch = false
     CosmosAccessibility.update(view, rating: 5, text: nil, settings: settings)
 
-    XCTAssertEqual(UIAccessibilityTraitNone, view.accessibilityTraits)
+    XCTAssertEqual(UIAccessibilityTraits.none, view.accessibilityTraits)
   }
   
   func testAccesibilityTrait_adjustable() {
     settings.updateOnTouch = true
     CosmosAccessibility.update(view, rating: 5, text: nil, settings: settings)
     
-    XCTAssertEqual(UIAccessibilityTraitAdjustable, view.accessibilityTraits)
+    XCTAssertEqual(UIAccessibilityTraits.adjustable, view.accessibilityTraits)
   }
   
   // MARK: Accessibility value
   
   func testAccesibilityValue_full() {
     settings.fillMode = .full
-
+    
     CosmosAccessibility.update(view, rating: 5, text: nil, settings: settings)
     XCTAssertEqual("5", view.accessibilityValue)
     
@@ -63,7 +63,7 @@ class CosmosAccessibilityTests: XCTestCase {
   
   func testAccesibilityValue_half() {
     settings.fillMode = .half
-
+    
     CosmosAccessibility.update(view, rating: 5, text: nil, settings: settings)
     XCTAssertEqual("5", view.accessibilityValue)
     
@@ -95,7 +95,7 @@ class CosmosAccessibilityTests: XCTestCase {
     var result = CosmosAccessibility.accessibilityIncrement(4.7, settings: settings)
     
     // ---
-
+    
     result = CosmosAccessibility.accessibilityIncrement(4.1, settings: settings)
     XCTAssertEqual("0.9", "\(result)")
     
@@ -152,10 +152,10 @@ class CosmosAccessibilityTests: XCTestCase {
     result = CosmosAccessibility.accessibilityIncrement(5.7, settings: settings)
     XCTAssertEqual("0.0", "\(result)")
   }
-
+  
   func testIncrement_precise() {
     settings.fillMode = .precise
-
+    
     var result = CosmosAccessibility.accessibilityIncrement(4.2, settings: settings)
     XCTAssertEqual("0.3", "\(result)")
     
@@ -195,7 +195,7 @@ class CosmosAccessibilityTests: XCTestCase {
     XCTAssertEqual("0.7", "\(result)")
     
     // ---
-
+    
     result = CosmosAccessibility.accessibilityDecrement(4.2, settings: settings)
     XCTAssertEqual("0.2", "\(result)")
     

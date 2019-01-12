@@ -15,7 +15,8 @@
 }
 
 - (instancetype _Nonnull)initWithJSON:(NSArray * _Nonnull)jsonArray
-                      withAssetBundle:(NSBundle *_Nullable)bundle {
+                      withAssetBundle:(NSBundle * _Nullable)bundle
+                        withFramerate:(NSNumber * _Nonnull)framerate {
   self = [super init];
   if (self) {
     _assetBundle = bundle;
@@ -32,7 +33,8 @@
   return self;
 }
 
-- (void)buildAssetNamed:(NSString *)refID {
+- (void)buildAssetNamed:(NSString *)refID
+          withFramerate:(NSNumber * _Nonnull)framerate {
   
   if ([self assetModelForID:refID]) {
     return;
@@ -42,14 +44,15 @@
   if (assetDictionary) {
     LOTAsset *asset = [[LOTAsset alloc] initWithJSON:assetDictionary
                                       withAssetGroup:self
-                                     withAssetBundle:_assetBundle];
+                                     withAssetBundle:_assetBundle
+                                       withFramerate:framerate];
     _assetMap[refID] = asset;
   }
 }
 
-- (void)finalizeInitialization {
+- (void)finalizeInitializationWithFramerate:(NSNumber * _Nonnull)framerate {
   for (NSString *refID in _assetJSONMap.allKeys) {
-    [self buildAssetNamed:refID];
+    [self buildAssetNamed:refID withFramerate:framerate];
   }
   _assetJSONMap = nil;
 }
@@ -57,7 +60,8 @@
 - (LOTAsset *)assetModelForID:(NSString *)assetID {
   return _assetMap[assetID];
 }
-- (void)setRootDirectory:(NSString *)rootDirectory{
+
+- (void)setRootDirectory:(NSString *)rootDirectory {
     _rootDirectory = rootDirectory;
     [_assetMap enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, LOTAsset * _Nonnull obj, BOOL * _Nonnull stop) {
         obj.rootDirectory = rootDirectory;
