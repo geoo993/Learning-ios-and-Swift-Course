@@ -1,17 +1,39 @@
+# carthage bootstrap [RepositoryName] --no-use-binaries --platform ios --cache-builds
+# or (beware!)
+# carthage update [RepositoryName] --no-use-binaries --platform ios  --cache-builds
 github "Alamofire/Alamofire" ~> 4.5
-github "robb/Cartography" ~> 1.0
-github "ReactiveX/RxSwift" ~> 3.6
+github "SVProgressHUD/SVProgressHUD"
+github "SwiftyJSON/SwiftyJSON"
+github "realm/realm-cocoa"
+github "ReactiveX/RxSwift"
+github "RxSwiftCommunity/RxDataSources"
+github "RxSwiftCommunity/RxGesture"
+github "RxSwiftCommunity/RxSegue"
+github "RxSwiftCommunity/RxSwiftExt"
+github "NoTests/RxFeedback.swift"
+github "mac-cain13/R.swift.Library"
+github "DaveWoodCom/XCGLogger"
+github "ViccAlexander/Chameleon"
+github "SwipeCellKit/SwipeCellKit"
 github "watson-developer-cloud/swift-sdk"
-github "airbnb/lottie-ios" "master"
-github "Akkyie/AKPickerView-Swift"
+github "rs/SDWebImage"
+github "robb/Cartography"
+github "Haneke/HanekeSwift"
 github "facebook/pop"
+github "Friend-LGA/LGSideMenuController"
+# github "johnsundell/require"
+github "onevcat/Kingfisher"
+github "krzyzanowskim/CryptoSwift"
+
+github "airbnb/lottie-ios"
+github "Akkyie/AKPickerView-Swift"
 github "PureLayout/PureLayout"
 github "Ramotion/circle-menu"
-github "RxSwiftCommunity/RxGesture"
-github "ChiliLabs/CHIPageControl" ~> 0.1.3
-github "Ramotion/animated-tab-bar"
-github "Ramotion/gliding-collection"
-github "evgenyneu/Cosmos" ~> 11.0
-github "Friend-LGA/LGSideMenuController"
+
+github "ChiliLabs/CHIPageControl"
+# github "Ramotion/animated-tab-bar"
+# github "Ramotion/gliding-collection"
+github "evgenyneu/Cosmos"
 github "hyperoslo/Compass"
-github "FeatherweightLabs/FeatherweightRouter"
+# github "FeatherweightLabs/FeatherweightRouter"
+
