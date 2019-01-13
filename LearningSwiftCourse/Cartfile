@@ -1,6 +1,7 @@
 # carthage bootstrap [RepositoryName] --no-use-binaries --platform ios --cache-builds
 # or (beware!)
 # carthage update [RepositoryName] --no-use-binaries --platform ios  --cache-builds
+
 github "Alamofire/Alamofire" ~> 4.5
 github "SVProgressHUD/SVProgressHUD"
 github "SwiftyJSON/SwiftyJSON"
