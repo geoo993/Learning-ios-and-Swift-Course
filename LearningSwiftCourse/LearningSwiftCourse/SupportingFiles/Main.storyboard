@@ -72,7 +72,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Nuq-TL-xQL">
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" id="Nuq-TL-xQL">
                             <rect key="frame" x="0.0" y="180" width="320" height="10"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </collectionReusableView>
