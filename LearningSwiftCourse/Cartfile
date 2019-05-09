@@ -2,7 +2,7 @@
 # or (beware!)
 # carthage update [RepositoryName] --no-use-binaries --platform ios  --cache-builds
 
-github "Alamofire/Alamofire" ~> 4.5
+github "Alamofire/Alamofire"
 github "SVProgressHUD/SVProgressHUD"
 github "SwiftyJSON/SwiftyJSON"
 github "realm/realm-cocoa"
